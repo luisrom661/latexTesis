@@ -1,0 +1,65 @@
+\documentclass[a4paper,12pt]{report}
+
+% =================== PAQUETES BÁSICOS ===================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{array, booktabs, longtable}
+\usepackage{caption}
+\usepackage{comment}
+\usepackage{csquotes} % Recomendado para biblatex con babel/polyglossia
+
+% =================== REFERENCIAS ===================
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{references.bib}
+
+% =================== ESTILO DE TÍTULOS ===================
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]
+  {\normalfont\bfseries\large\centering}   % Estilo más pequeño y centrado
+  {CAPÍTULO\ \thechapter.}                 % Numeración del capítulo
+  {1em}
+  {\MakeUppercase}                         % Título en mayúsculas
+
+% =================== DOCUMENTO ===================
+\begin{document}
+
+% --------- PORTADA ---------
+\input{complementos/portadas.tex}
+
+% --------- AGRADECIMIENTOS ---------
+\chapter*{Agradecimientos}
+\vspace{1em}
+Texto de ejemplo para agradecimientos.
+
+% --------- TABLA DE CONTENIDO Y LISTAS ---------
+\renewcommand{\contentsname}{TABLA DE CONTENIDO}
+\tableofcontents
+\clearpage
+
+\listoffigures
+\listoftables
+\clearpage
+
+% =================== CONTENIDO ===================
+\input{complementos/resumen}
+\input{complementos/introduccion.tex}
+\input{capitulos/capitulo1}
+\input{capitulos/capitulo2.tex}
+\input{capitulos/capitulo3.tex}
+\input{capitulos/capitulo4.tex}
+\input{capitulos/capitulo5.tex}
+
+% =================== BIBLIOGRAFÍA ===================
+\cleardoublepage
+\renewcommand*{\bibname}{REFERENCIAS BIBLIOGRÁFICAS}
+\addcontentsline{toc}{chapter}{\MakeUppercase{REFERENCIAS BIBLIOGRÁFICAS}}
+\printbibliography
+
+\end{document}

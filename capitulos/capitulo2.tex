@@ -1,0 +1,100 @@
+\chapter*{CAPÍTULO 2. PROCESO ÁGIL PARA LA GESTIÓN DE LA DEUDA SOCIAL}
+\addcontentsline{toc}{chapter}{CAPÍTULO 2. PROCESO ÁGIL PARA LA GESTIÓN DE LA DEUDA SOCIAL}
+\setcounter{chapter}{2}
+\setcounter{section}{0}
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+Este capítulo para su mejor comprensión se encuentra dividido en 3 ítems. En el primer ítem, se describe de manera general la adaptación de Scrum para la gestión de la deuda social, enfocando en los elementos clave, los valores y el diseño del proceso para lograr esta adaptación.
+    
+
+\section{Adaptación de Scrum para la gestión de la deuda social}
+
+En esta sección se explicará cómo Scrum, pese a su énfasis en transparencia e inspección adaptiva~\cite{schwaber2020}, no prevé la ``deuda social'', la cual actúa como un Leviatán silencioso: crece progresivamente y mina el bienestar colectivo~\cite{espinosa2021}. Esta limitación motivó el diseño de \textit{SocialScrum}, un marco extendido que integra:
+\begin{itemize}
+    \item Eventos modificados (e.g., Sprint Planning Social)
+    \item Artefactos ajustados (e.g., inclusión de métricas de bienestar en el backlog)
+    \item Un nuevo rol (Social Guide)
+\end{itemize}
+Dicho de otro modo, SocialScrum no reemplaza Scrum, sino que lo complementa mediante un enfoque dual: técnico \textit{y} social.
+
+\subsection{Introducción a la adaptación de Scrum}
+
+Scrum es un marco utilizado en proyectos de desarrollo ágil cuyo objetivo es la entrega incremental de productos software y valor a través de ciclos iterativos llamados Sprints~\cite{schwaber2020}. Aunque aborda aspectos técnicos como pruebas, integración continua, refactorización y la gestión de impedimentos~\cite{kanbanScrum, scrumXP, disenoAgilTDD}, no ofrece un enfoque específico para gestionar la deuda social. Esta surge de decisiones sociotécnicas deficientes, problemas interpersonales, falta de comunicación, colaboración y coordinación, y la acumulación de obligaciones pendientes que afectan el bienestar del equipo y la calidad~\cite{espinosa2021, otroReferencia}.
+
+Como un "Leviatán", la deuda social no identificada crece silenciosamente, afectando la cohesión, comunicación y el éxito del proyecto~\cite{espinosa2021}. SocialScrum ajusta e integra eventos y artefactos de Scrum, centrado en problemas interpersonales, comunicación transparente y bienestar del equipo.
+
+\section{Elementos clave de SocialScrum}
+
+Scrum se basa en transparencia, inspección y adaptación~\cite{schwaber2020}. Estos pilares, adaptados para afrontar la deuda social, incorporan nuevas prácticas específicas para la identificación, gestión y mitigación de problemas interpersonales y organizacionales.
+
+\subsection{Transparencia}
+La transparencia implica visibilizar no solo los aspectos técnicos sino también los sociales del equipo. Según la guía Scrum 2020~\cite{schwaber2020}:
+\begin{quote}
+``La transparencia es esencial porque facilita la inspección.''
+\end{quote}
+Para gestionar la deuda social, factores como la comunicación, colaboración y coordinación deben ser visibles.
+\begin{itemize}
+    \item \textbf{Sprint Planning Social:} Se incluye evaluación de la deuda social.
+    \item \textbf{Daily Scrum Social:} Se agrega una pregunta sobre la deuda social.
+    \item \textbf{Sprint Review Social:} Se muestra avance en mitigación de deuda social.
+    \item \textbf{Sprint Retrospective Social:} Reflexión sobre deuda social.
+\end{itemize}
+
+\subsection{Inspección}
+En SocialScrum, se inspeccionan tanto artefactos técnicos como sociales. Los eventos promueven identificar desviaciones o deficiencias en flujos de trabajo, calidad, dinámica y bienestar~\cite{kanbanScrum, scrumXP, disenoAgilTDD}.
+\begin{itemize}
+    \item \textbf{Sprint Planning Social:} Inspección de la deuda social.
+    \item \textbf{Daily Scrum Social:} Identificación de problemas sociales emergentes.
+    \item \textbf{Sprint Review Social:} Evaluación de acciones para mitigar la deuda social.
+    \item \textbf{Sprint Retrospective Social:} Análisis de efectividad de acciones sociales.
+\end{itemize}
+
+\subsection{Adaptación}
+La adaptación implica ajustes técnicos y sociales para minimizar variaciones y mejorar la cohesión. Requiere autoeficacia~\cite{bandura1997}, autonomía y sentido de agencia~\cite{eagly2002, pardo2025}.
+\begin{itemize}
+    \item \textbf{Sprint Retrospective Social:} Planificación de acciones correctivas.
+    \item \textbf{Social Update:} Espacios para tratar temas sociales y bienestar.
+\end{itemize}
+
+\section{Valores de SocialScrum}
+
+Los valores en Scrum son clave para el éxito, pues guían el trabajo y comportamiento del equipo~\cite{schwaber2020}. En SocialScrum, se adaptan usando la pirámide de Maslow como marco teórico para alinear valores con motivaciones humanas~\cite{maslow1943}:
+\begin{itemize}
+    \item \textbf{Base (Respeto y Apertura):} Sin ellos no hay ambiente saludable.
+    \item \textbf{Seguridad (Compromiso):} Genera confianza y estabilidad.
+    \item \textbf{Pertenencia (Enfoque):} Refuerza el sentido de pertenencia y cohesión.
+    \item \textbf{Estima (Coraje):} Refleja autoestima y capacidad de superar desafíos.
+    \item \textbf{Autorrealización (Mejora continua):} Búsqueda de la excelencia integral.
+\end{itemize}
+
+\subsection{Tabla de equivalencias entre Maslow y SocialScrum}
+
+\tiny
+\begin{longtable}{@{}p{0.6cm} p{3cm} p{4.3cm} p{2.7cm} p{5cm}@{}}
+\caption{Correspondencia entre los niveles de la Pirámide de Maslow y los valores de SocialScrum}
+
+\\ \toprule
+\textbf{No.} & \textbf{Nivel en la pirámide de Maslow} & \textbf{Definición original de Maslow} & \textbf{Equivalente en SocialScrum} & \textbf{Definición/Explicación en SocialScrum} \\
+\midrule
+1 & Necesidades fisiológicas & Necesidades básicas para la supervivencia física: comida, agua, descanso, refugio. & Respeto y apertura & Forman la base para equipos saludables, facilitando identificación y resolución de problemas sociales. \\
+2 & Seguridad & Sentirse seguro y protegido, física y emocionalmente. Estabilidad, ausencia de miedo. & Compromiso & Transmite estabilidad y confianza. Saber que todos trabajan juntos genera ambiente seguro para resolver conflictos sociales. \\
+3 & Pertenencia y amor & Necesidad de aceptación, pertenencia, amistades, relaciones de confianza. & Enfoque & Enfocarse en objetivos sociales refuerza pertenencia y cohesión grupal. \\
+4 & Estima & Respeto propio, reconocimiento de los demás, autoestima, logro, confianza. & Coraje & Afrontar problemas sociales refleja autoestima y empodera al equipo a superar desafíos. \\
+5 & Autorrealización & Desarrollo del potencial máximo, crecimiento personal y creatividad. & Mejora continua & Búsqueda constante de excelencia social y técnica para prevenir conflictos y fomentar el crecimiento. \\
+\bottomrule
+
+\end{longtable}
+
+\normalsize
+
+\section{Diseño del proceso propuesto: Eventos y roles en SocialScrum}
+
+\textbf{1. Social Sprint Planning:} Incluye evaluación de la deuda social y preguntas breves para identificar tensiones, promoviendo análisis y pronta intervención si el tema es relevante.
+
+\textbf{2. Daily Social Scrum:} Añade la pregunta “¿Hay algo que esté afectando negativamente la colaboración o la comunicación del equipo hoy?”, para tomar medidas inmediatas si es necesario.
+
+\textbf{3. Inclusión en el Product Backlog:} Elementos relacionados con deuda social como “mejorar la comunicación”, “acciones correctivas”, “métricas de bienestar” deben priorizarse junto con aspectos técnicos.
+
+\textbf{4. Nuevos roles:} Se incorpora el `Social Guide` como responsable de la gestión de la deuda social, trabajando junto al Scrum Máster y el Product Owner para el bienestar del equipo.
