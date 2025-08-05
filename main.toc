@@ -3,22 +3,35 @@
 \contentsline {chapter}{\MakeUppercase []{INTRODUCCIÓN}}{8}{chapter*.6}%
 \contentsline {chapter}{CAPÍTULO 1. BASES CONCEPTUALES}{11}{chapter*.7}%
 \contentsline {section}{\numberline {1.1}Deuda social en el desarrollo de software}{11}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Comunicación, colaboración y coordinación (3C)}{11}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Compromiso organizacional}{12}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Síndrome de Burnout}{12}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Goal Question Metric (GQM)}{12}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Scrum}{13}{section.1.6}%
-\contentsline {chapter}{CAPÍTULO 2. PROCESO ÁGIL PARA LA GESTIÓN DE LA DEUDA SOCIAL}{14}{chapter*.8}%
-\contentsline {section}{\numberline {2.1}Adaptación de Scrum para la gestión de la deuda social}{14}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Introducción a la adaptación de Scrum}{14}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Elementos clave de SocialScrum}{15}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Transparencia}{15}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Inspección}{15}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Adaptación}{16}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Valores de SocialScrum}{16}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Tabla de equivalencias entre Maslow y SocialScrum}{16}{subsection.2.3.1}%
-\contentsline {section}{\numberline {2.4}Diseño del proceso propuesto: Eventos y roles en SocialScrum}{17}{section.2.4}%
-\contentsline {chapter}{CAPÍTULO 3. APLICACIÓN DE SOCIALSCRUM EN EQUIPOS DE DESARROLLO DE SOFTWARE ÁGIL}{18}{chapter*.9}%
-\contentsline {chapter}{CAPÍTULO 4. HERRAMIENTAS PARA LA APLICACIÓN DE SOCIALSCRUM}{19}{chapter*.10}%
-\contentsline {chapter}{CAPÍTULO 5. CONCLUSIONES, RECOMENDACIONES Y TRABAJOS FUTUROS}{20}{chapter*.11}%
-\contentsline {chapter}{\MakeUppercase []{REFERENCIAS BIBLIOGRÁFICAS}}{21}{chapter*.11}%
+\contentsline {subsection}{\numberline {1.1.1}Analogía y Distinción con la Deuda Técnica}{11}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Las ``Community Smells'' como Fuente Directa de Deuda Social}{12}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}El Impacto de la Deuda Social en el Entorno Ágil}{12}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Desafíos en la Medición y Gestión de la Deuda Social}{13}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}Comunicación, colaboración y coordinación (3C)}{13}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Comunicación}{14}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Colaboración}{14}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Coordinación}{15}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Conclusión sobre las 3C}{15}{subsection.1.2.4}%
+\contentsline {section}{\numberline {1.3}Compromiso organizacional y resistencia al cambio}{15}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Síndrome de Burnout como síntoma de deuda social}{16}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Modelos de evaluación y medición}{16}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Goal-Question-Metric (GQM)}{16}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Modelos existentes: DAHLIA, CAFFEA y GEEZMO}{16}{subsection.1.5.2}%
+\contentsline {subsubsection}{DAHLIA}{16}{subsection.1.5.2}%
+\contentsline {subsubsection}{CAFFEA}{17}{subsection.1.5.2}%
+\contentsline {subsubsection}{GEEZMO}{17}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.6}Scrum como marco base para la adaptación}{17}{section.1.6}%
+\contentsline {chapter}{CAPÍTULO 2. PROCESO ÁGIL PARA LA GESTIÓN DE LA DEUDA SOCIAL}{18}{chapter*.8}%
+\contentsline {section}{\numberline {2.1}Adaptación de Scrum para la gestión de la deuda social}{18}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Introducción a la adaptación de Scrum}{18}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Elementos clave de SocialScrum}{19}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Transparencia}{19}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Inspección}{19}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Adaptación}{20}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Valores de SocialScrum}{20}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Tabla de equivalencias entre Maslow y SocialScrum}{20}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}Diseño del proceso propuesto: Eventos y roles en SocialScrum}{21}{section.2.4}%
+\contentsline {chapter}{CAPÍTULO 3. APLICACIÓN DE SOCIALSCRUM EN EQUIPOS DE DESARROLLO DE SOFTWARE ÁGIL}{22}{chapter*.9}%
+\contentsline {chapter}{CAPÍTULO 4. HERRAMIENTAS PARA LA APLICACIÓN DE SOCIALSCRUM}{23}{chapter*.10}%
+\contentsline {chapter}{CAPÍTULO 5. CONCLUSIONES, RECOMENDACIONES Y TRABAJOS FUTUROS}{24}{chapter*.11}%
+\contentsline {chapter}{\MakeUppercase []{REFERENCIAS BIBLIOGRÁFICAS}}{25}{chapter*.11}%
