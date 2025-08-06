@@ -123,27 +123,28 @@ El marco \textbf{DAHLIA} (Debt-Aimed Architecture-Level Incommunicability Analys
 \subsubsection{YOSHI}
 Finalmente, la herramienta \textbf{YOSHI} se erige como un recurso para identificar y caracterizar los tipos de comunidades de ingeniería de software a partir de datos de repositorios de proyectos \cite{caballero2022communitysmells}, \cite{maelstromdat2014yoshi}. Su funcionalidad principal se basa en la medición de seis características decisivas: cohesión, formalidad, geo dispersión, longevidad, compromiso de las personas y la estructura de la red de desarrolladores \cite{caballero2022communitysmells}, \cite{maelstromdat2014yoshi}. Al comparar estas mediciones con umbrales empíricos, \textbf{YOSHI} puede determinar los niveles de cada característica y clasificar las comunidades en diferentes tipos, como Comunidades de Práctica (CoP) o Grupos de Trabajo (WG), entre otros \cite{caballero2022communitysmells}, \cite{maelstromdat2014yoshi}. Las organizaciones pueden aprovechar los resultados de \textbf{YOSHI} para monitorear las relaciones sociales y organizacionales de los desarrolladores, identificando posibles problemas que, como se ha señalado, podrían conducir a ``olores comunitarios’’ como el ``silencio de radio’’ \cite{caballero2022communitysmells}. Es una herramienta prometedora para la conciencia de la comunidad social en el código abierto \cite{maelstromdat2014yoshi}.
 
-Para una visión sinóptica de estas herramientas y marcos, la siguiente tabla resume sus principales características y contribuciones.
-% Tabla de herramientas y marcos para la gestión de la deuda social
+\subsection{Tabla de herramientas y marcos para la gestión de la deuda social}
+Para una visión sinóptica de estas herramientas y marcos, la siguiente tabla resume sus principales características y contribuciones a la gestión de la deuda social y técnica en el desarrollo de software:
+
 \tiny
-\begin{longtable}{@{}p{0.6cm} p{2.5cm} p{2cm} p{4.5cm} p{6.5cm}@{}}
+\begin{longtable}{@{}p{0.6cm} p{2cm} p{2cm} p{4.7cm} p{6.5cm}@{}}
 \caption{Herramientas y marcos para la gestión de la deuda social en el desarrollo de software}
 
 \\ \toprule
-\textbf{No.} & \textbf{Herramienta/Marco} & \textbf{Tipo} & \textbf{Enfoque Principal} & \textbf{Contribución a la DNT/DS} \\
+\textbf{No.} & \textbf{Modelos} & \textbf{Tipo} & \textbf{Enfoque} & \textbf{Contribución a la DNT/DS} \\
 \midrule
 \endfirsthead
 
 \toprule
-\textbf{No.} & \textbf{Herramienta/Marco} & \textbf{Tipo} & \textbf{Enfoque Principal} & \textbf{Contribución a la DNT/DS} \\
+\textbf{No.} & \textbf{Modelos} & \textbf{Tipo} & \textbf{Enfoque} & \textbf{Contribución a la DNT/DS} \\
 \midrule
 \endhead
 
-1 & GEEZMO & Herramienta & Monitoreo del estado de ánimo y el bienestar de los miembros del equipo & Alerta temprana sobre circunstancias que afectan el ambiente de trabajo, previniendo la acumulación de deuda social al abordar problemas interpersonales. \\
-2 & CAFFEA & Marco & Organización de responsabilidades arquitectónicas en la estructura de la empresa & Revela puntos débiles en la estructura social de la organización, lo que ayuda a prevenir la deuda social y a reducir la deuda técnica arquitectónica (DTA). \\
-3 & CodeFace4Smell & Herramienta & Detección de ``olores de la comunidad'' específicos (ej., silos, lobo solitario) & Identifica anomalías socio-técnicas que impactan negativamente la comunicación y colaboración del equipo, lo que previene la acumulación de deuda social. \\
-4 & DAHLIA & Marco & Cuantificación de la incomunicabilidad en las decisiones arquitectónicas & Mide el costo monetario de la deuda social derivada de la falta de comunicación de decisiones arquitectónicas, permitiendo su gestión explícita. \\
-5 & YOSHI & Herramienta & Identificación y caracterización de tipos de comunidades de ingeniería de software & Monitorea las características de las comunidades para detectar posibles problemas sociales y organizacionales que podrían generar ``olores de la comunidad''. \\
+1 & GEEZMO & Herramienta & Monitoreo del estado de ánimo y el bienestar de los miembros del equipo & Alerta temprana sobre circunstancias que afectan el ambiente de trabajo, previniendo la acumulación de deuda social al abordar problemas interpersonales \cite{saeeda2024nontechnicaldebt}. \\
+2 & CAFFEA & Marco & Organización de responsabilidades arquitectónicas en la estructura de la empresa & Revela puntos débiles en la estructura social de la organización, lo que ayuda a prevenir la deuda social y a reducir la deuda técnica arquitectónica (DTA) \cite{martini2017caffea}. \\
+3 & CodeFace4Smell & Herramienta & Detección de ``olores de la comunidad'' específicos (ej., silos, lobo solitario) & Identifica anomalías sociotécnicas que impactan negativamente la comunicación y colaboración del equipo, lo que previene la acumulación de deuda social \cite{caballero2022communitysmells}, \cite{saeeda2024nontechnicaldebt}. \\
+4 & DAHLIA & Marco & Cuantificación de la incomunicabilidad en las decisiones arquitectónicas & Mide el costo monetario de la deuda social derivada de la falta de comunicación de decisiones arquitectónicas, permitiendo su gestión explícita \cite{caballero2022communitysmells}, \cite{tamburri2019software}. \\
+5 & YOSHI & Herramienta & Identificación y caracterización de tipos de comunidades de ingeniería de software & Monitorea las características de las comunidades para detectar posibles problemas sociales y organizacionales que podrían generar ``olores comunitarios'' \cite{caballero2022communitysmells}, \cite{maelstromdat2014yoshi}. \\
 
 \bottomrule
 \end{longtable}
