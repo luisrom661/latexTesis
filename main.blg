@@ -1,25 +1,25 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
-[111] biber-MSWIN64:342> INFO - === 
-[161] Biber.pm:421> INFO - Reading 'main.bcf'
-[280] Biber.pm:1002> INFO - Found 25 citekeys in bib section 0
-[292] Biber.pm:4487> INFO - Processing section 0
-[302] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
-[377] bibtex.pm:1713> INFO - LaTeX decoding ...
-[406] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[491] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[491] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[491] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
-[503] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[512] bbl.pm:779> INFO - Output to main.bbl
-[518] Biber.pm:132> WARN - I didn't find a database entry for 'schwaber2020' (section 0)
-[519] Biber.pm:132> WARN - I didn't find a database entry for 'espinosa2021' (section 0)
-[519] Biber.pm:132> WARN - I didn't find a database entry for 'kanbanScrum' (section 0)
-[519] Biber.pm:132> WARN - I didn't find a database entry for 'scrumXP' (section 0)
-[519] Biber.pm:132> WARN - I didn't find a database entry for 'disenoAgilTDD' (section 0)
-[519] Biber.pm:132> WARN - I didn't find a database entry for 'otroReferencia' (section 0)
-[519] Biber.pm:132> WARN - I didn't find a database entry for 'bandura1997' (section 0)
-[519] Biber.pm:132> WARN - I didn't find a database entry for 'eagly2002' (section 0)
-[519] Biber.pm:132> WARN - I didn't find a database entry for 'pardo2025' (section 0)
-[519] Biber.pm:132> WARN - I didn't find a database entry for 'maslow1943' (section 0)
-[519] Biber.pm:134> INFO - WARNINGS: 10
+[113] biber-MSWIN64:342> INFO - === 
+[166] Biber.pm:421> INFO - Reading 'main.bcf'
+[297] Biber.pm:1002> INFO - Found 27 citekeys in bib section 0
+[310] Biber.pm:4487> INFO - Processing section 0
+[320] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
+[404] bibtex.pm:1713> INFO - LaTeX decoding ...
+[434] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[524] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[525] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[525] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[538] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[547] bbl.pm:779> INFO - Output to main.bbl
+[553] Biber.pm:132> WARN - I didn't find a database entry for 'schwaber2020' (section 0)
+[553] Biber.pm:132> WARN - I didn't find a database entry for 'espinosa2021' (section 0)
+[554] Biber.pm:132> WARN - I didn't find a database entry for 'kanbanScrum' (section 0)
+[554] Biber.pm:132> WARN - I didn't find a database entry for 'scrumXP' (section 0)
+[554] Biber.pm:132> WARN - I didn't find a database entry for 'disenoAgilTDD' (section 0)
+[554] Biber.pm:132> WARN - I didn't find a database entry for 'otroReferencia' (section 0)
+[554] Biber.pm:132> WARN - I didn't find a database entry for 'bandura1997' (section 0)
+[554] Biber.pm:132> WARN - I didn't find a database entry for 'eagly2002' (section 0)
+[554] Biber.pm:132> WARN - I didn't find a database entry for 'pardo2025' (section 0)
+[554] Biber.pm:132> WARN - I didn't find a database entry for 'maslow1943' (section 0)
+[554] Biber.pm:134> INFO - WARNINGS: 10

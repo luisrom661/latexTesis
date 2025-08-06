@@ -449,7 +449,7 @@
       \field{pages}{240101}
       \range{pages}{1}
     \endentry
-    \entry{dignan2020organizationaldebt}{online}{}{}
+    \entry{dignan2016eliminateorgdebt}{online}{}{}
       \name{author}{1}{}{%
         {{hash=fd97f1917c85af74ff46294413b29de8}{%
            family={Dignan},
@@ -469,9 +469,9 @@
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Medium. Accedido el 24 de septiembre de 2024}
+      \field{note}{Accedido el 24 de septiembre de 2024}
       \field{title}{How to eliminate organizational debt}
-      \field{year}{2020}
+      \field{year}{2016}
       \verb{urlraw}
       \verb https://medium.com/the-ready/how-to-eliminate-organizational-debt-8a949c06b61b
       \endverb
@@ -554,8 +554,8 @@
       \strng{authornamehash}{6faa5953181134ebfab48bb7e6975b0a}
       \strng{authorfullhash}{157499a1eac45fa1861ae7b9da2e9967}
       \strng{authorfullhashraw}{157499a1eac45fa1861ae7b9da2e9967}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Information and Software Technology}
@@ -597,8 +597,8 @@
       \strng{authornamehash}{de45370f471717c72d9d54a18170878b}
       \strng{authorfullhash}{de45370f471717c72d9d54a18170878b}
       \strng{authorfullhashraw}{de45370f471717c72d9d54a18170878b}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Encyclopedia of Software Engineering}
@@ -606,6 +606,77 @@
       \field{year}{1994}
       \field{pages}{528\bibrangedash 532}
       \range{pages}{5}
+    \endentry
+    \entry{martini2017caffea}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=dcf31c5b01f10053d4c4827bca085783}{%
+           family={Martini},
+           familyi={M\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3903018fc17327f32ca2eb9248c90100}{%
+           family={Bosch},
+           familyi={B\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{f734abf43afbd68da92dab6558aaa495}
+      \strng{fullhash}{f734abf43afbd68da92dab6558aaa495}
+      \strng{fullhashraw}{f734abf43afbd68da92dab6558aaa495}
+      \strng{bibnamehash}{f734abf43afbd68da92dab6558aaa495}
+      \strng{authorbibnamehash}{f734abf43afbd68da92dab6558aaa495}
+      \strng{authornamehash}{f734abf43afbd68da92dab6558aaa495}
+      \strng{authorfullhash}{f734abf43afbd68da92dab6558aaa495}
+      \strng{authorfullhashraw}{f734abf43afbd68da92dab6558aaa495}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings - 2017 IEEE International Conference on Software Architecture Workshops (ICSAW)}
+      \field{note}{Accedido el 6 de agosto de 2025}
+      \field{title}{Revealing Social Debt with the CAFFEA Framework: An Antidote to Architectural Debt}
+      \field{year}{2017}
+      \field{pages}{179\bibrangedash 181}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1109/ICSAW.2017.38
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/7958479/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/7958479/
+      \endverb
+    \endentry
+    \entry{maelstromdat2014yoshi}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=09c5eb1ea6af96cde768e0983ca84c33}{%
+           family={{Maelstromdat}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{09c5eb1ea6af96cde768e0983ca84c33}
+      \strng{fullhash}{09c5eb1ea6af96cde768e0983ca84c33}
+      \strng{fullhashraw}{09c5eb1ea6af96cde768e0983ca84c33}
+      \strng{bibnamehash}{09c5eb1ea6af96cde768e0983ca84c33}
+      \strng{authorbibnamehash}{09c5eb1ea6af96cde768e0983ca84c33}
+      \strng{authornamehash}{09c5eb1ea6af96cde768e0983ca84c33}
+      \strng{authorfullhash}{09c5eb1ea6af96cde768e0983ca84c33}
+      \strng{authorfullhashraw}{09c5eb1ea6af96cde768e0983ca84c33}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{YOSHI: a tool to study online software development communities}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://github.com/maelstromdat/YOSHI
+      \endverb
+      \verb{url}
+      \verb https://github.com/maelstromdat/YOSHI
+      \endverb
     \endentry
     \entry{schwaber2020scrum}{book}{}{}
       \name{author}{2}{}{%
@@ -628,8 +699,8 @@
       \strng{authornamehash}{303ea1dc92fd8c772eac56316b2074ef}
       \strng{authorfullhash}{303ea1dc92fd8c772eac56316b2074ef}
       \strng{authorfullhashraw}{303ea1dc92fd8c772eac56316b2074ef}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Accedido el 4 de agosto de 2025}
@@ -663,8 +734,8 @@
       \strng{authornamehash}{ea2740a98c6a2a2cbf5e240a66cee399}
       \strng{authorfullhash}{ea2740a98c6a2a2cbf5e240a66cee399}
       \strng{authorfullhashraw}{ea2740a98c6a2a2cbf5e240a66cee399}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Harvard Business Review}
