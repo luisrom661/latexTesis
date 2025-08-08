@@ -18,7 +18,154 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global/global}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{muir1962socialdebt}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=1948e8da5d78a2ffa6417979a6c7d329}{%
+           family={Muir},
+           familyi={M\bibinitperiod},
+           given={D.\bibnamedelimi E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=50f3ab3fcedf71f2232bd520b262d484}{%
+           family={Weinstein},
+           familyi={W\bibinitperiod},
+           given={E.\bibnamedelimi A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e52885fc6a683c57f24fc1a2f082158}
+      \strng{fullhash}{0e52885fc6a683c57f24fc1a2f082158}
+      \strng{fullhashraw}{0e52885fc6a683c57f24fc1a2f082158}
+      \strng{bibnamehash}{0e52885fc6a683c57f24fc1a2f082158}
+      \strng{authorbibnamehash}{0e52885fc6a683c57f24fc1a2f082158}
+      \strng{authornamehash}{0e52885fc6a683c57f24fc1a2f082158}
+      \strng{authorfullhash}{0e52885fc6a683c57f24fc1a2f082158}
+      \strng{authorfullhashraw}{0e52885fc6a683c57f24fc1a2f082158}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Sociological Review}
+      \field{note}{Accedido el 24 de septiembre de 2024}
+      \field{title}{The social debt: An investigation of lower-class and middle-class norms of social obligation}
+      \field{volume}{27}
+      \field{year}{1962}
+      \field{pages}{532\bibrangedash 539}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.2307/2090036
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2307/2090036
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2307/2090036
+      \endverb
+    \endentry
+    \entry{caballero2022communitysmells}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=58534b7001e8f3ef948fc06c621f6ce3}{%
+           family={Caballero\bibnamedelima Espinosa},
+           familyi={C\bibinitperiod\bibinitdelim E\bibinitperiod},
+           given={Elizabeth\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=de2403ab2ee8a31d396d2f2a5b13ae61}{%
+           family={Carver},
+           familyi={C\bibinitperiod},
+           given={Jeffrey\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=58c0173103676c50881289df389886cb}{%
+           family={Stowers},
+           familyi={S\bibinitperiod},
+           given={Kayla},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{00b40985b9364834ac42316fe29543d9}
+      \strng{fullhash}{c59475a883a83f53d67748a25d99f38a}
+      \strng{fullhashraw}{c59475a883a83f53d67748a25d99f38a}
+      \strng{bibnamehash}{c59475a883a83f53d67748a25d99f38a}
+      \strng{authorbibnamehash}{c59475a883a83f53d67748a25d99f38a}
+      \strng{authornamehash}{00b40985b9364834ac42316fe29543d9}
+      \strng{authorfullhash}{c59475a883a83f53d67748a25d99f38a}
+      \strng{authorfullhashraw}{c59475a883a83f53d67748a25d99f38a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information and Software Technology}
+      \field{month}{9}
+      \field{note}{Accedido el 24 de septiembre de 2024}
+      \field{title}{Community smells—The sources of social debt: A systematic literature review}
+      \field{volume}{153}
+      \field{year}{2022}
+      \field{pages}{107078}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.infsof.2022.107078
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.infsof.2022.107078
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.infsof.2022.107078
+      \endverb
+    \endentry
+    \entry{tamburri2013socialdebt}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=7dd165e6796a350dad22ea50cd178c9a}{%
+           family={Tamburri},
+           familyi={T\bibinitperiod},
+           given={Damian\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=1d00515fe991ba26ce9b4c5ca06934fa}{%
+           family={Kruchten},
+           familyi={K\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b7e3fc29bccdf8a7639daddb302e1545}{%
+           family={Lago},
+           familyi={L\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e09d7b792fa1cc8b058030bfc8fabbff}{%
+           family={Vliet},
+           familyi={V\bibinitperiod},
+           given={Hans},
+           giveni={H\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {San Francisco, CA, USA}%
+      }
+      \strng{namehash}{bff97ae90eb3da85021eeb023d3f58d9}
+      \strng{fullhash}{43fb63f3a4bc6d626ba5e5e811f8edf8}
+      \strng{fullhashraw}{43fb63f3a4bc6d626ba5e5e811f8edf8}
+      \strng{bibnamehash}{43fb63f3a4bc6d626ba5e5e811f8edf8}
+      \strng{authorbibnamehash}{43fb63f3a4bc6d626ba5e5e811f8edf8}
+      \strng{authornamehash}{bff97ae90eb3da85021eeb023d3f58d9}
+      \strng{authorfullhash}{43fb63f3a4bc6d626ba5e5e811f8edf8}
+      \strng{authorfullhashraw}{43fb63f3a4bc6d626ba5e5e811f8edf8}
+      \field{extraname}{1}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2013 6th International Workshop on Cooperative and Human Aspects of Software Engineering (CHASE)}
+      \field{note}{Accedido el 24 de septiembre de 2024}
+      \field{title}{What is social debt in software engineering?}
+      \field{year}{2013}
+      \field{pages}{93\bibrangedash 96}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/chase.2013.6614739
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/chase.2013.6614739
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/chase.2013.6614739
+      \endverb
+    \endentry
     \entry{caballero2021thesis}{thesis}{}{}
       \name{author}{1}{}{%
         {{hash=58534b7001e8f3ef948fc06c621f6ce3}{%
@@ -41,8 +188,8 @@
       \strng{authornamehash}{58534b7001e8f3ef948fc06c621f6ce3}
       \strng{authorfullhash}{58534b7001e8f3ef948fc06c621f6ce3}
       \strng{authorfullhashraw}{58534b7001e8f3ef948fc06c621f6ce3}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Tesis doctoral. Accedido el 24 de septiembre de 2024}
@@ -54,115 +201,6 @@
       \endverb
       \verb{url}
       \verb http://ir.ua.edu/handle/123456789/8278
-      \endverb
-    \endentry
-    \entry{caballero2022communitysmells}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=58534b7001e8f3ef948fc06c621f6ce3}{%
-           family={Caballero\bibnamedelima Espinosa},
-           familyi={C\bibinitperiod\bibinitdelim E\bibinitperiod},
-           given={Elizabeth\bibnamedelima A.},
-           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=de2403ab2ee8a31d396d2f2a5b13ae61}{%
-           family={Carver},
-           familyi={C\bibinitperiod},
-           given={Jeffrey\bibnamedelima C.},
-           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=58c0173103676c50881289df389886cb}{%
-           family={Stowers},
-           familyi={S\bibinitperiod},
-           given={Kayla},
-           giveni={K\bibinitperiod}}}%
-      }
-      \strng{namehash}{c59475a883a83f53d67748a25d99f38a}
-      \strng{fullhash}{c59475a883a83f53d67748a25d99f38a}
-      \strng{fullhashraw}{c59475a883a83f53d67748a25d99f38a}
-      \strng{bibnamehash}{c59475a883a83f53d67748a25d99f38a}
-      \strng{authorbibnamehash}{c59475a883a83f53d67748a25d99f38a}
-      \strng{authornamehash}{c59475a883a83f53d67748a25d99f38a}
-      \strng{authorfullhash}{c59475a883a83f53d67748a25d99f38a}
-      \strng{authorfullhashraw}{c59475a883a83f53d67748a25d99f38a}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Information and Software Technology}
-      \field{month}{9}
-      \field{note}{Accedido el 24 de septiembre de 2024}
-      \field{title}{Community smells—The sources of social debt: A systematic literature review}
-      \field{volume}{153}
-      \field{year}{2022}
-      \field{pages}{107078}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1016/j.infsof.2022.107078
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1016/j.infsof.2022.107078
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1016/j.infsof.2022.107078
-      \endverb
-    \endentry
-    \entry{caldiera1994gqm}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=451bbf2dc0f311a565d6d8267e43f530}{%
-           family={Caldiera},
-           familyi={C\bibinitperiod},
-           given={Victor\bibnamedelimb R.\bibnamedelimi Basili},
-           giveni={V\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
-        {{hash=a601e384768f4f11c00bd5544be2ae9b}{%
-           family={Rombach},
-           familyi={R\bibinitperiod},
-           given={H.\bibnamedelimi Dieter},
-           giveni={H\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-      }
-      \strng{namehash}{de45370f471717c72d9d54a18170878b}
-      \strng{fullhash}{de45370f471717c72d9d54a18170878b}
-      \strng{fullhashraw}{de45370f471717c72d9d54a18170878b}
-      \strng{bibnamehash}{de45370f471717c72d9d54a18170878b}
-      \strng{authorbibnamehash}{de45370f471717c72d9d54a18170878b}
-      \strng{authornamehash}{de45370f471717c72d9d54a18170878b}
-      \strng{authorfullhash}{de45370f471717c72d9d54a18170878b}
-      \strng{authorfullhashraw}{de45370f471717c72d9d54a18170878b}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Encyclopedia of Software Engineering}
-      \field{title}{The goal question metric approach}
-      \field{year}{1994}
-      \field{pages}{528\bibrangedash 532}
-      \range{pages}{5}
-    \endentry
-    \entry{dignan2020organizationaldebt}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=fd97f1917c85af74ff46294413b29de8}{%
-           family={Dignan},
-           familyi={D\bibinitperiod},
-           given={Aaron},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{fd97f1917c85af74ff46294413b29de8}
-      \strng{fullhash}{fd97f1917c85af74ff46294413b29de8}
-      \strng{fullhashraw}{fd97f1917c85af74ff46294413b29de8}
-      \strng{bibnamehash}{fd97f1917c85af74ff46294413b29de8}
-      \strng{authorbibnamehash}{fd97f1917c85af74ff46294413b29de8}
-      \strng{authornamehash}{fd97f1917c85af74ff46294413b29de8}
-      \strng{authorfullhash}{fd97f1917c85af74ff46294413b29de8}
-      \strng{authorfullhashraw}{fd97f1917c85af74ff46294413b29de8}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Medium. Accedido el 24 de septiembre de 2024}
-      \field{title}{How to eliminate organizational debt}
-      \field{year}{2020}
-      \verb{urlraw}
-      \verb https://medium.com/the-ready/how-to-eliminate-organizational-debt-8a949c06b61b
-      \endverb
-      \verb{url}
-      \verb https://medium.com/the-ready/how-to-eliminate-organizational-debt-8a949c06b61b
       \endverb
     \endentry
     \entry{dreesen2021socialdebt}{inproceedings}{}{}
@@ -191,13 +229,13 @@
       \strng{namehash}{2282d3b116fe9ac98baa21cfedf35e63}
       \strng{fullhash}{073d34c661d5f26d87b8cfcb2331a77b}
       \strng{fullhashraw}{073d34c661d5f26d87b8cfcb2331a77b}
-      \strng{bibnamehash}{2282d3b116fe9ac98baa21cfedf35e63}
-      \strng{authorbibnamehash}{2282d3b116fe9ac98baa21cfedf35e63}
+      \strng{bibnamehash}{073d34c661d5f26d87b8cfcb2331a77b}
+      \strng{authorbibnamehash}{073d34c661d5f26d87b8cfcb2331a77b}
       \strng{authornamehash}{2282d3b116fe9ac98baa21cfedf35e63}
       \strng{authorfullhash}{073d34c661d5f26d87b8cfcb2331a77b}
       \strng{authorfullhashraw}{073d34c661d5f26d87b8cfcb2331a77b}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Hawaii International Conference on System Sciences}
@@ -214,6 +252,63 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.24251/hicss.2021.818
+      \endverb
+    \endentry
+    \entry{tamburri2015insights}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=7dd165e6796a350dad22ea50cd178c9a}{%
+           family={Tamburri},
+           familyi={T\bibinitperiod},
+           given={Damian\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=1d00515fe991ba26ce9b4c5ca06934fa}{%
+           family={Kruchten},
+           familyi={K\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b7e3fc29bccdf8a7639daddb302e1545}{%
+           family={Lago},
+           familyi={L\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e09d7b792fa1cc8b058030bfc8fabbff}{%
+           family={Vliet},
+           familyi={V\bibinitperiod},
+           given={Hans},
+           giveni={H\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{bff97ae90eb3da85021eeb023d3f58d9}
+      \strng{fullhash}{43fb63f3a4bc6d626ba5e5e811f8edf8}
+      \strng{fullhashraw}{43fb63f3a4bc6d626ba5e5e811f8edf8}
+      \strng{bibnamehash}{43fb63f3a4bc6d626ba5e5e811f8edf8}
+      \strng{authorbibnamehash}{43fb63f3a4bc6d626ba5e5e811f8edf8}
+      \strng{authornamehash}{bff97ae90eb3da85021eeb023d3f58d9}
+      \strng{authorfullhash}{43fb63f3a4bc6d626ba5e5e811f8edf8}
+      \strng{authorfullhashraw}{43fb63f3a4bc6d626ba5e5e811f8edf8}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Internet Services and Applications}
+      \field{month}{5}
+      \field{note}{Accedido el 24 de septiembre de 2024}
+      \field{number}{1}
+      \field{title}{Social debt in software engineering: Insights from industry}
+      \field{volume}{6}
+      \field{year}{2015}
+      \field{pages}{10}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1186/s13174-015-0024-6
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1186/s13174-015-0024-6
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1186/s13174-015-0024-6
       \endverb
     \endentry
     \entry{martini2019agiledebt}{incollection}{}{}
@@ -252,20 +347,20 @@
       \list{publisher}{1}{%
         {Springer International Publishing}%
       }
-      \strng{namehash}{4d8095a35b925054f61cb4e8d6a525fb}
+      \strng{namehash}{3301c895414d201677c6a92897eb1d93}
       \strng{fullhash}{4d8095a35b925054f61cb4e8d6a525fb}
       \strng{fullhashraw}{4d8095a35b925054f61cb4e8d6a525fb}
       \strng{bibnamehash}{4d8095a35b925054f61cb4e8d6a525fb}
       \strng{authorbibnamehash}{4d8095a35b925054f61cb4e8d6a525fb}
-      \strng{authornamehash}{4d8095a35b925054f61cb4e8d6a525fb}
+      \strng{authornamehash}{3301c895414d201677c6a92897eb1d93}
       \strng{authorfullhash}{4d8095a35b925054f61cb4e8d6a525fb}
       \strng{authorfullhashraw}{4d8095a35b925054f61cb4e8d6a525fb}
       \strng{editorbibnamehash}{fbd19bb7f1625542f88941dbb7342712}
       \strng{editornamehash}{fbd19bb7f1625542f88941dbb7342712}
       \strng{editorfullhash}{fbd19bb7f1625542f88941dbb7342712}
       \strng{editorfullhashraw}{fbd19bb7f1625542f88941dbb7342712}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Agile Processes in Software Engineering and Extreme Programming – Workshops}
@@ -284,46 +379,104 @@
       \verb https://doi.org/10.1007/978-3-030-30126-2_14
       \endverb
     \endentry
-    \entry{muir1962socialdebt}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=1948e8da5d78a2ffa6417979a6c7d329}{%
-           family={Muir},
-           familyi={M\bibinitperiod},
-           given={D.\bibnamedelimi E.},
-           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=50f3ab3fcedf71f2232bd520b262d484}{%
-           family={Weinstein},
-           familyi={W\bibinitperiod},
-           given={E.\bibnamedelimi A.},
-           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+    \entry{tamburri2019software}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=7dd165e6796a350dad22ea50cd178c9a}{%
+           family={Tamburri},
+           familyi={T\bibinitperiod},
+           given={Damian\bibnamedelima A},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
-      \strng{namehash}{0e52885fc6a683c57f24fc1a2f082158}
-      \strng{fullhash}{0e52885fc6a683c57f24fc1a2f082158}
-      \strng{fullhashraw}{0e52885fc6a683c57f24fc1a2f082158}
-      \strng{bibnamehash}{0e52885fc6a683c57f24fc1a2f082158}
-      \strng{authorbibnamehash}{0e52885fc6a683c57f24fc1a2f082158}
-      \strng{authornamehash}{0e52885fc6a683c57f24fc1a2f082158}
-      \strng{authorfullhash}{0e52885fc6a683c57f24fc1a2f082158}
-      \strng{authorfullhashraw}{0e52885fc6a683c57f24fc1a2f082158}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{7dd165e6796a350dad22ea50cd178c9a}
+      \strng{fullhash}{7dd165e6796a350dad22ea50cd178c9a}
+      \strng{fullhashraw}{7dd165e6796a350dad22ea50cd178c9a}
+      \strng{bibnamehash}{7dd165e6796a350dad22ea50cd178c9a}
+      \strng{authorbibnamehash}{7dd165e6796a350dad22ea50cd178c9a}
+      \strng{authornamehash}{7dd165e6796a350dad22ea50cd178c9a}
+      \strng{authorfullhash}{7dd165e6796a350dad22ea50cd178c9a}
+      \strng{authorfullhashraw}{7dd165e6796a350dad22ea50cd178c9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{American Sociological Review}
+      \field{journaltitle}{IEEE Transactions on Computational Social Systems}
+      \field{number}{1}
+      \field{title}{Software architecture social debt: Managing the incommunicability factor}
+      \field{volume}{6}
+      \field{year}{2019}
+      \field{pages}{20\bibrangedash 37}
+      \range{pages}{18}
+    \endentry
+    \entry{saeeda2024multivocal}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=12332ac086a505174a183c8632a34d68}{%
+           family={Saeeda},
+           familyi={S\bibinitperiod},
+           given={Hina},
+           giveni={H\bibinitperiod}}}%
+        {{hash=1e6cb0723db6d5cbc6619288ef82287a}{%
+           family={Ahamd},
+           familyi={A\bibinitperiod},
+           given={Muhammad\bibnamedelima Ovais},
+           giveni={M\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=dc1ac0103790a4e6dfe996f089a6c219}{%
+           family={Gustavsson},
+           familyi={G\bibinitperiod},
+           given={Tomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{401b286ba49f9eff97d5b06f8036666a}
+      \strng{fullhash}{9bc30c1828f4b3fac87aa6b19f5598b8}
+      \strng{fullhashraw}{9bc30c1828f4b3fac87aa6b19f5598b8}
+      \strng{bibnamehash}{9bc30c1828f4b3fac87aa6b19f5598b8}
+      \strng{authorbibnamehash}{9bc30c1828f4b3fac87aa6b19f5598b8}
+      \strng{authornamehash}{401b286ba49f9eff97d5b06f8036666a}
+      \strng{authorfullhash}{9bc30c1828f4b3fac87aa6b19f5598b8}
+      \strng{authorfullhashraw}{9bc30c1828f4b3fac87aa6b19f5598b8}
+      \field{extraname}{1}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{e-Informatica Software Engineering Journal}
+      \field{number}{1}
+      \field{title}{A Multivocal Literature Review on Non-Technical Debt in Software Development: An Insight into Process, Social, People, Organizational, and Culture Debt}
+      \field{volume}{18}
+      \field{year}{2024}
+      \field{pages}{240101}
+      \range{pages}{1}
+    \endentry
+    \entry{dignan2016eliminateorgdebt}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=fd97f1917c85af74ff46294413b29de8}{%
+           family={Dignan},
+           familyi={D\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd97f1917c85af74ff46294413b29de8}
+      \strng{fullhash}{fd97f1917c85af74ff46294413b29de8}
+      \strng{fullhashraw}{fd97f1917c85af74ff46294413b29de8}
+      \strng{bibnamehash}{fd97f1917c85af74ff46294413b29de8}
+      \strng{authorbibnamehash}{fd97f1917c85af74ff46294413b29de8}
+      \strng{authornamehash}{fd97f1917c85af74ff46294413b29de8}
+      \strng{authorfullhash}{fd97f1917c85af74ff46294413b29de8}
+      \strng{authorfullhashraw}{fd97f1917c85af74ff46294413b29de8}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
       \field{note}{Accedido el 24 de septiembre de 2024}
-      \field{title}{The social debt: An investigation of lower-class and middle-class norms of social obligation}
-      \field{volume}{27}
-      \field{year}{1962}
-      \field{pages}{532\bibrangedash 539}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.2307/2090036
-      \endverb
+      \field{title}{How to eliminate organizational debt}
+      \field{year}{2016}
       \verb{urlraw}
-      \verb https://doi.org/10.2307/2090036
+      \verb https://medium.com/the-ready/how-to-eliminate-organizational-debt-8a949c06b61b
       \endverb
       \verb{url}
-      \verb https://doi.org/10.2307/2090036
+      \verb https://medium.com/the-ready/how-to-eliminate-organizational-debt-8a949c06b61b
       \endverb
     \endentry
     \entry{saeeda2024nontechnicaldebt}{article}{}{}
@@ -344,16 +497,17 @@
            given={Tomas},
            giveni={T\bibinitperiod}}}%
       }
-      \strng{namehash}{cbafc60f49f9b5df4b393c0930e95884}
+      \strng{namehash}{104874c62a1246b53e4b22c03450aeb0}
       \strng{fullhash}{cbafc60f49f9b5df4b393c0930e95884}
       \strng{fullhashraw}{cbafc60f49f9b5df4b393c0930e95884}
       \strng{bibnamehash}{cbafc60f49f9b5df4b393c0930e95884}
       \strng{authorbibnamehash}{cbafc60f49f9b5df4b393c0930e95884}
-      \strng{authornamehash}{cbafc60f49f9b5df4b393c0930e95884}
+      \strng{authornamehash}{104874c62a1246b53e4b22c03450aeb0}
       \strng{authorfullhash}{cbafc60f49f9b5df4b393c0930e95884}
       \strng{authorfullhashraw}{cbafc60f49f9b5df4b393c0930e95884}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extraname}{2}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{e-Informatica Software Engineering Journal}
@@ -372,6 +526,156 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.37190/e-inf240101
+      \endverb
+    \endentry
+    \entry{tulili2022burnout}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=3fe8830a356aac0e242b11da38ddda83}{%
+           family={Tulili},
+           familyi={T\bibinitperiod},
+           given={Taufik\bibnamedelima R.},
+           giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=44ca95c923d5add46d6b2f39e1e816a8}{%
+           family={Capiluppi},
+           familyi={C\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a087e3e2919b6ed5752dda7170228955}{%
+           family={Rastogi},
+           familyi={R\bibinitperiod},
+           given={Abhay},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6faa5953181134ebfab48bb7e6975b0a}
+      \strng{fullhash}{157499a1eac45fa1861ae7b9da2e9967}
+      \strng{fullhashraw}{157499a1eac45fa1861ae7b9da2e9967}
+      \strng{bibnamehash}{157499a1eac45fa1861ae7b9da2e9967}
+      \strng{authorbibnamehash}{157499a1eac45fa1861ae7b9da2e9967}
+      \strng{authornamehash}{6faa5953181134ebfab48bb7e6975b0a}
+      \strng{authorfullhash}{157499a1eac45fa1861ae7b9da2e9967}
+      \strng{authorfullhashraw}{157499a1eac45fa1861ae7b9da2e9967}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information and Software Technology}
+      \field{month}{11}
+      \field{note}{Accedido el 24 de septiembre de 2024}
+      \field{title}{Burnout in software engineering: A systematic mapping study}
+      \field{volume}{155}
+      \field{year}{2022}
+      \field{pages}{107116}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.infsof.2022.107116
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.infsof.2022.107116
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.infsof.2022.107116
+      \endverb
+    \endentry
+    \entry{caldiera1994gqm}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=451bbf2dc0f311a565d6d8267e43f530}{%
+           family={Caldiera},
+           familyi={C\bibinitperiod},
+           given={Victor\bibnamedelimb R.\bibnamedelimi Basili},
+           giveni={V\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=a601e384768f4f11c00bd5544be2ae9b}{%
+           family={Rombach},
+           familyi={R\bibinitperiod},
+           given={H.\bibnamedelimi Dieter},
+           giveni={H\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{de45370f471717c72d9d54a18170878b}
+      \strng{fullhash}{de45370f471717c72d9d54a18170878b}
+      \strng{fullhashraw}{de45370f471717c72d9d54a18170878b}
+      \strng{bibnamehash}{de45370f471717c72d9d54a18170878b}
+      \strng{authorbibnamehash}{de45370f471717c72d9d54a18170878b}
+      \strng{authornamehash}{de45370f471717c72d9d54a18170878b}
+      \strng{authorfullhash}{de45370f471717c72d9d54a18170878b}
+      \strng{authorfullhashraw}{de45370f471717c72d9d54a18170878b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Encyclopedia of Software Engineering}
+      \field{title}{The goal question metric approach}
+      \field{year}{1994}
+      \field{pages}{528\bibrangedash 532}
+      \range{pages}{5}
+    \endentry
+    \entry{martini2017caffea}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=dcf31c5b01f10053d4c4827bca085783}{%
+           family={Martini},
+           familyi={M\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3903018fc17327f32ca2eb9248c90100}{%
+           family={Bosch},
+           familyi={B\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{f734abf43afbd68da92dab6558aaa495}
+      \strng{fullhash}{f734abf43afbd68da92dab6558aaa495}
+      \strng{fullhashraw}{f734abf43afbd68da92dab6558aaa495}
+      \strng{bibnamehash}{f734abf43afbd68da92dab6558aaa495}
+      \strng{authorbibnamehash}{f734abf43afbd68da92dab6558aaa495}
+      \strng{authornamehash}{f734abf43afbd68da92dab6558aaa495}
+      \strng{authorfullhash}{f734abf43afbd68da92dab6558aaa495}
+      \strng{authorfullhashraw}{f734abf43afbd68da92dab6558aaa495}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings - 2017 IEEE International Conference on Software Architecture Workshops (ICSAW)}
+      \field{note}{Accedido el 6 de agosto de 2025}
+      \field{title}{Revealing Social Debt with the CAFFEA Framework: An Antidote to Architectural Debt}
+      \field{year}{2017}
+      \field{pages}{179\bibrangedash 181}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1109/ICSAW.2017.38
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/7958479/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/7958479/
+      \endverb
+    \endentry
+    \entry{maelstromdat2014yoshi}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=09c5eb1ea6af96cde768e0983ca84c33}{%
+           family={{Maelstromdat}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{09c5eb1ea6af96cde768e0983ca84c33}
+      \strng{fullhash}{09c5eb1ea6af96cde768e0983ca84c33}
+      \strng{fullhashraw}{09c5eb1ea6af96cde768e0983ca84c33}
+      \strng{bibnamehash}{09c5eb1ea6af96cde768e0983ca84c33}
+      \strng{authorbibnamehash}{09c5eb1ea6af96cde768e0983ca84c33}
+      \strng{authornamehash}{09c5eb1ea6af96cde768e0983ca84c33}
+      \strng{authorfullhash}{09c5eb1ea6af96cde768e0983ca84c33}
+      \strng{authorfullhashraw}{09c5eb1ea6af96cde768e0983ca84c33}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{YOSHI: a tool to study online software development communities}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://github.com/maelstromdat/YOSHI
+      \endverb
+      \verb{url}
+      \verb https://github.com/maelstromdat/YOSHI
       \endverb
     \endentry
     \entry{schwaber2020scrum}{book}{}{}
@@ -395,18 +699,18 @@
       \strng{authornamehash}{303ea1dc92fd8c772eac56316b2074ef}
       \strng{authorfullhash}{303ea1dc92fd8c772eac56316b2074ef}
       \strng{authorfullhashraw}{303ea1dc92fd8c772eac56316b2074ef}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Accedido el 4 de agosto de 2025}
       \field{title}{La guía de Scrum: Las Reglas del Juego}
       \field{year}{2020}
       \verb{urlraw}
-      \verb https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf
+      \verb https://repositorio.uvm.edu.ve/handle/123456789/59
       \endverb
       \verb{url}
-      \verb https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf
+      \verb https://repositorio.uvm.edu.ve/handle/123456789/59
       \endverb
     \endentry
     \entry{takeuchi1986new}{article}{}{}
@@ -430,8 +734,8 @@
       \strng{authornamehash}{ea2740a98c6a2a2cbf5e240a66cee399}
       \strng{authorfullhash}{ea2740a98c6a2a2cbf5e240a66cee399}
       \strng{authorfullhashraw}{ea2740a98c6a2a2cbf5e240a66cee399}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Harvard Business Review}
@@ -449,179 +753,276 @@
       \verb https://hbr.org/1986/01/the-new-new-product-development-game
       \endverb
     \endentry
-    \entry{tamburri2015insights}{article}{}{}
-      \name{author}{4}{}{%
-        {{hash=7dd165e6796a350dad22ea50cd178c9a}{%
-           family={Tamburri},
-           familyi={T\bibinitperiod},
-           given={Damian\bibnamedelima A.},
-           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=1d00515fe991ba26ce9b4c5ca06934fa}{%
-           family={Kruchten},
+    \entry{kniberg2010kanban}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=21b4b0b95d2e23cb807ae277c60489e0}{%
+           family={Kniberg},
            familyi={K\bibinitperiod},
-           given={Philippe},
-           giveni={P\bibinitperiod}}}%
-        {{hash=b7e3fc29bccdf8a7639daddb302e1545}{%
-           family={Lago},
-           familyi={L\bibinitperiod},
-           given={Patricia},
-           giveni={P\bibinitperiod}}}%
-        {{hash=e09d7b792fa1cc8b058030bfc8fabbff}{%
-           family={Vliet},
-           familyi={V\bibinitperiod},
-           given={Hans},
-           giveni={H\bibinitperiod},
-           prefix={van},
-           prefixi={v\bibinitperiod}}}%
+           given={Henrik},
+           giveni={H\bibinitperiod}}}%
+        {{hash=201bfab8350b1edfed6a04041fb4c595}{%
+           family={Skarin},
+           familyi={S\bibinitperiod},
+           given={Mattias},
+           giveni={M\bibinitperiod}}}%
       }
-      \strng{namehash}{bff97ae90eb3da85021eeb023d3f58d9}
-      \strng{fullhash}{43fb63f3a4bc6d626ba5e5e811f8edf8}
-      \strng{fullhashraw}{43fb63f3a4bc6d626ba5e5e811f8edf8}
-      \strng{bibnamehash}{bff97ae90eb3da85021eeb023d3f58d9}
-      \strng{authorbibnamehash}{bff97ae90eb3da85021eeb023d3f58d9}
-      \strng{authornamehash}{bff97ae90eb3da85021eeb023d3f58d9}
-      \strng{authorfullhash}{43fb63f3a4bc6d626ba5e5e811f8edf8}
-      \strng{authorfullhashraw}{43fb63f3a4bc6d626ba5e5e811f8edf8}
-      \field{extraname}{1}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \list{publisher}{1}{%
+        {InfoQ.com}%
+      }
+      \strng{namehash}{8111e8a68ebcf77fe13bc10d9f64066d}
+      \strng{fullhash}{8111e8a68ebcf77fe13bc10d9f64066d}
+      \strng{fullhashraw}{8111e8a68ebcf77fe13bc10d9f64066d}
+      \strng{bibnamehash}{8111e8a68ebcf77fe13bc10d9f64066d}
+      \strng{authorbibnamehash}{8111e8a68ebcf77fe13bc10d9f64066d}
+      \strng{authornamehash}{8111e8a68ebcf77fe13bc10d9f64066d}
+      \strng{authorfullhash}{8111e8a68ebcf77fe13bc10d9f64066d}
+      \strng{authorfullhashraw}{8111e8a68ebcf77fe13bc10d9f64066d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Internet Services and Applications}
-      \field{month}{5}
-      \field{note}{Accedido el 24 de septiembre de 2024}
-      \field{number}{1}
-      \field{title}{Social debt in software engineering: Insights from industry}
-      \field{volume}{6}
-      \field{year}{2015}
-      \field{pages}{10}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1186/s13174-015-0024-6
-      \endverb
+      \field{isbn}{978-0-557-13832-6}
+      \field{note}{Accedido el 6 de agosto de 2025}
+      \field{title}{Kanban and Scrum: Making the Most of Both}
+      \field{year}{2010}
       \verb{urlraw}
-      \verb https://doi.org/10.1186/s13174-015-0024-6
+      \verb https://ress.infoq.com/minibooks/kanban-scrum-minibook/en/pdf/KanbanAndScrumInfoQVersionFINAL.pdf
       \endverb
       \verb{url}
-      \verb https://doi.org/10.1186/s13174-015-0024-6
+      \verb https://ress.infoq.com/minibooks/kanban-scrum-minibook/en/pdf/KanbanAndScrumInfoQVersionFINAL.pdf
       \endverb
     \endentry
-    \entry{tamburri2013socialdebt}{inproceedings}{}{}
-      \name{author}{4}{}{%
-        {{hash=7dd165e6796a350dad22ea50cd178c9a}{%
-           family={Tamburri},
-           familyi={T\bibinitperiod},
-           given={Damian\bibnamedelima A.},
-           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=1d00515fe991ba26ce9b4c5ca06934fa}{%
-           family={Kruchten},
+    \entry{kniberg2015scrumxp}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=21b4b0b95d2e23cb807ae277c60489e0}{%
+           family={Kniberg},
            familyi={K\bibinitperiod},
-           given={Philippe},
-           giveni={P\bibinitperiod}}}%
-        {{hash=b7e3fc29bccdf8a7639daddb302e1545}{%
-           family={Lago},
-           familyi={L\bibinitperiod},
-           given={Patricia},
-           giveni={P\bibinitperiod}}}%
-        {{hash=e09d7b792fa1cc8b058030bfc8fabbff}{%
-           family={Vliet},
-           familyi={V\bibinitperiod},
-           given={Hans},
-           giveni={H\bibinitperiod},
-           prefix={van},
-           prefixi={v\bibinitperiod}}}%
+           given={Henrik},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {InfoQ / C4Media}%
+      }
+      \strng{namehash}{21b4b0b95d2e23cb807ae277c60489e0}
+      \strng{fullhash}{21b4b0b95d2e23cb807ae277c60489e0}
+      \strng{fullhashraw}{21b4b0b95d2e23cb807ae277c60489e0}
+      \strng{bibnamehash}{21b4b0b95d2e23cb807ae277c60489e0}
+      \strng{authorbibnamehash}{21b4b0b95d2e23cb807ae277c60489e0}
+      \strng{authornamehash}{21b4b0b95d2e23cb807ae277c60489e0}
+      \strng{authorfullhash}{21b4b0b95d2e23cb807ae277c60489e0}
+      \strng{authorfullhashraw}{21b4b0b95d2e23cb807ae277c60489e0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{1329224272}
+      \field{note}{Accedido el 6 de agosto de 2025}
+      \field{title}{Scrum and XP from the Trenches - 2nd Edition}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://ress.infoq.com/minibooks/scrum-xp-from-the-trenches-2/en/pdf/Scrum-and-XP-from-the-Trenches-2nd-edition.pdf
+      \endverb
+      \verb{url}
+      \verb https://ress.infoq.com/minibooks/scrum-xp-from-the-trenches-2/en/pdf/Scrum-and-XP-from-the-Trenches-2nd-edition.pdf
+      \endverb
+    \endentry
+    \entry{ble2023disenoagil}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7cf1956d20b227bcdfbfd61a0be3afbe}{%
+           family={Blé\bibnamedelima Jurado},
+           familyi={B\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Savvily, S.L.}%
+      }
+      \strng{namehash}{7cf1956d20b227bcdfbfd61a0be3afbe}
+      \strng{fullhash}{7cf1956d20b227bcdfbfd61a0be3afbe}
+      \strng{fullhashraw}{7cf1956d20b227bcdfbfd61a0be3afbe}
+      \strng{bibnamehash}{7cf1956d20b227bcdfbfd61a0be3afbe}
+      \strng{authorbibnamehash}{7cf1956d20b227bcdfbfd61a0be3afbe}
+      \strng{authornamehash}{7cf1956d20b227bcdfbfd61a0be3afbe}
+      \strng{authorfullhash}{7cf1956d20b227bcdfbfd61a0be3afbe}
+      \strng{authorfullhashraw}{7cf1956d20b227bcdfbfd61a0be3afbe}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-84-127-1924-6}
+      \field{note}{Accedido el 6 de agosto de 2025; Edición digital}
+      \field{title}{Diseño Ágil con TDD}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.academia.edu/download/64224869/disenoAgilConTdd_ebook.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.academia.edu/download/64224869/disenoAgilConTdd_ebook.pdf
+      \endverb
+    \endentry
+    \entry{bandura1997selfefficacy}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=3dda0f93a5c43e1392668692b92f8231}{%
+           family={Bandura},
+           familyi={B\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
       }
       \list{location}{1}{%
-        {San Francisco, CA, USA}%
+        {New York}%
       }
-      \strng{namehash}{bff97ae90eb3da85021eeb023d3f58d9}
-      \strng{fullhash}{43fb63f3a4bc6d626ba5e5e811f8edf8}
-      \strng{fullhashraw}{43fb63f3a4bc6d626ba5e5e811f8edf8}
-      \strng{bibnamehash}{bff97ae90eb3da85021eeb023d3f58d9}
-      \strng{authorbibnamehash}{bff97ae90eb3da85021eeb023d3f58d9}
-      \strng{authornamehash}{bff97ae90eb3da85021eeb023d3f58d9}
-      \strng{authorfullhash}{43fb63f3a4bc6d626ba5e5e811f8edf8}
-      \strng{authorfullhashraw}{43fb63f3a4bc6d626ba5e5e811f8edf8}
-      \field{extraname}{2}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \list{publisher}{2}{%
+        {W.H. Freeman}%
+        {Company}%
+      }
+      \strng{namehash}{3dda0f93a5c43e1392668692b92f8231}
+      \strng{fullhash}{3dda0f93a5c43e1392668692b92f8231}
+      \strng{fullhashraw}{3dda0f93a5c43e1392668692b92f8231}
+      \strng{bibnamehash}{3dda0f93a5c43e1392668692b92f8231}
+      \strng{authorbibnamehash}{3dda0f93a5c43e1392668692b92f8231}
+      \strng{authornamehash}{3dda0f93a5c43e1392668692b92f8231}
+      \strng{authorfullhash}{3dda0f93a5c43e1392668692b92f8231}
+      \strng{authorfullhashraw}{3dda0f93a5c43e1392668692b92f8231}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{2013 6th International Workshop on Cooperative and Human Aspects of Software Engineering (CHASE)}
-      \field{note}{Accedido el 24 de septiembre de 2024}
-      \field{title}{What is social debt in software engineering?}
-      \field{year}{2013}
-      \field{pages}{93\bibrangedash 96}
-      \range{pages}{4}
-      \verb{doi}
-      \verb 10.1109/chase.2013.6614739
-      \endverb
+      \field{isbn}{0716728508}
+      \field{note}{Accedido el 6 de agosto de 2025}
+      \field{title}{Self-Efficacy: The Exercise of Control}
+      \field{year}{1997}
       \verb{urlraw}
-      \verb https://doi.org/10.1109/chase.2013.6614739
+      \verb https://www.worldcat.org/title/self-efficacy-the-exercise-of-control/oclc/36074515
       \endverb
       \verb{url}
-      \verb https://doi.org/10.1109/chase.2013.6614739
+      \verb https://www.worldcat.org/title/self-efficacy-the-exercise-of-control/oclc/36074515
       \endverb
     \endentry
-    \entry{tulili2022burnout}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=3fe8830a356aac0e242b11da38ddda83}{%
-           family={Tulili},
-           familyi={T\bibinitperiod},
-           given={Taufik\bibnamedelima R.},
-           giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=44ca95c923d5add46d6b2f39e1e816a8}{%
-           family={Capiluppi},
-           familyi={C\bibinitperiod},
-           given={Andrea},
-           giveni={A\bibinitperiod}}}%
-        {{hash=a087e3e2919b6ed5752dda7170228955}{%
-           family={Rastogi},
-           familyi={R\bibinitperiod},
-           given={Abhay},
-           giveni={A\bibinitperiod}}}%
+    \entry{eagly2002role}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=865bd978cd1f1642d3ed39ca8d9dd91f}{%
+           family={Eagly},
+           familyi={E\bibinitperiod},
+           given={Alice\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=d630e52ca2156c664a50335c079d5ca7}{%
+           family={Karau},
+           familyi={K\bibinitperiod},
+           given={Steven\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
       }
-      \strng{namehash}{157499a1eac45fa1861ae7b9da2e9967}
-      \strng{fullhash}{157499a1eac45fa1861ae7b9da2e9967}
-      \strng{fullhashraw}{157499a1eac45fa1861ae7b9da2e9967}
-      \strng{bibnamehash}{157499a1eac45fa1861ae7b9da2e9967}
-      \strng{authorbibnamehash}{157499a1eac45fa1861ae7b9da2e9967}
-      \strng{authornamehash}{157499a1eac45fa1861ae7b9da2e9967}
-      \strng{authorfullhash}{157499a1eac45fa1861ae7b9da2e9967}
-      \strng{authorfullhashraw}{157499a1eac45fa1861ae7b9da2e9967}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \strng{namehash}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
+      \strng{fullhash}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
+      \strng{fullhashraw}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
+      \strng{bibnamehash}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
+      \strng{authorbibnamehash}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
+      \strng{authornamehash}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
+      \strng{authorfullhash}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
+      \strng{authorfullhashraw}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Information and Software Technology}
-      \field{month}{11}
-      \field{note}{Accedido el 24 de septiembre de 2024}
-      \field{title}{Burnout in software engineering: A systematic mapping study}
-      \field{volume}{155}
-      \field{year}{2022}
-      \field{pages}{107116}
-      \range{pages}{1}
+      \field{journaltitle}{Psychological Review}
+      \field{note}{Accedido el 6 de agosto de 2025}
+      \field{number}{3}
+      \field{title}{Role Congruity Theory of Prejudice Toward Female Leaders}
+      \field{volume}{109}
+      \field{year}{2002}
+      \field{pages}{573\bibrangedash 598}
+      \range{pages}{26}
       \verb{doi}
-      \verb 10.1016/j.infsof.2022.107116
+      \verb 10.1037/0033-295X.109.3.573
       \endverb
       \verb{urlraw}
-      \verb https://doi.org/10.1016/j.infsof.2022.107116
+      \verb https://www.women-unlimited.com/wp-content/uploads/prejudice_against_women.pdf
       \endverb
       \verb{url}
-      \verb https://doi.org/10.1016/j.infsof.2022.107116
+      \verb https://www.women-unlimited.com/wp-content/uploads/prejudice_against_women.pdf
+      \endverb
+    \endentry
+    \entry{pardo2024igualdad}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=8739885bb40ff561439fa21c507965ec}{%
+           family={Pardo\bibnamedelima Calvache},
+           familyi={P\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={César\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=0788498bf9a9f88d05e23efeb63ce8f7}{%
+           family={Orozco\bibnamedelima Garcés},
+           familyi={O\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Carlos\bibnamedelima E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=b4d24e5dea5f2028f4a6e7078ff308ee}{%
+           family={Narváez\bibnamedelima Narváez},
+           familyi={N\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Juan\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Popayán, Colombia}%
+      }
+      \list{publisher}{1}{%
+        {Universidad del Cauca}%
+      }
+      \strng{namehash}{95339e81c53c61d31d67931cb36dcbb2}
+      \strng{fullhash}{2ab82bf243312cd9d3f42b015169ab10}
+      \strng{fullhashraw}{2ab82bf243312cd9d3f42b015169ab10}
+      \strng{bibnamehash}{2ab82bf243312cd9d3f42b015169ab10}
+      \strng{authorbibnamehash}{2ab82bf243312cd9d3f42b015169ab10}
+      \strng{authornamehash}{95339e81c53c61d31d67931cb36dcbb2}
+      \strng{authorfullhash}{2ab82bf243312cd9d3f42b015169ab10}
+      \strng{authorfullhashraw}{2ab82bf243312cd9d3f42b015169ab10}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accedido el 6 de agosto de 2025; Edición digital en ResearchGate}
+      \field{title}{Igualdad, inclusión y liderazgo de género: percepciones de estudiantes universitarios. Primera edición}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/profile/Cesar-Pardo-5/publication/374053613_Igualdad_inclusion_y_liderazgo_de_genero_Percepciones_de_estudiantes_universitarios_primera_edicion/links/65b921811bed776ae31821fd/Igualdad-inclusion-y-liderazgo-de-genero-Percepciones-de-estudiantes-universitarios-primera-edicion.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/profile/Cesar-Pardo-5/publication/374053613_Igualdad_inclusion_y_liderazgo_de_genero_Percepciones_de_estudiantes_universitarios_primera_edicion/links/65b921811bed776ae31821fd/Igualdad-inclusion-y-liderazgo-de-genero-Percepciones-de-estudiantes-universitarios-primera-edicion.pdf
+      \endverb
+    \endentry
+    \entry{maslow1943motivation}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=b8962a7e859e705d2af2f259315da06d}{%
+           family={Maslow},
+           familyi={M\bibinitperiod},
+           given={Abraham\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{b8962a7e859e705d2af2f259315da06d}
+      \strng{fullhash}{b8962a7e859e705d2af2f259315da06d}
+      \strng{fullhashraw}{b8962a7e859e705d2af2f259315da06d}
+      \strng{bibnamehash}{b8962a7e859e705d2af2f259315da06d}
+      \strng{authorbibnamehash}{b8962a7e859e705d2af2f259315da06d}
+      \strng{authornamehash}{b8962a7e859e705d2af2f259315da06d}
+      \strng{authorfullhash}{b8962a7e859e705d2af2f259315da06d}
+      \strng{authorfullhashraw}{b8962a7e859e705d2af2f259315da06d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychological Review}
+      \field{note}{Accedido el 6 de agosto de 2025}
+      \field{number}{4}
+      \field{title}{A Theory of Human Motivation}
+      \field{volume}{50}
+      \field{year}{1943}
+      \field{pages}{370\bibrangedash 396}
+      \range{pages}{27}
+      \verb{urlraw}
+      \verb https://psychclassics.yorku.ca/Maslow/motivation.htm
+      \endverb
+      \verb{url}
+      \verb https://psychclassics.yorku.ca/Maslow/motivation.htm
       \endverb
     \endentry
   \enddatalist
-  \missing{bandura1997}
-  \missing{disenoAgilTDD}
-  \missing{eagly2002}
-  \missing{espinosa2021}
-  \missing{kanbanScrum}
-  \missing{maslow1943}
-  \missing{otroReferencia}
-  \missing{pardo2025}
-  \missing{schwaber2020}
-  \missing{scrumXP}
 \endrefsection
 \endinput
 

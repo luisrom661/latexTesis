@@ -16,7 +16,7 @@
 \usepackage{csquotes} % Recomendado para biblatex con babel/polyglossia
 
 % =================== REFERENCIAS ===================
-\usepackage[backend=biber,style=numeric]{biblatex}
+\usepackage[backend=biber,style=ieee]{biblatex}
 \addbibresource{references.bib}
 
 % =================== ESTILO DE TÍTULOS ===================
@@ -26,6 +26,23 @@
   {CAPÍTULO\ \thechapter.}                 % Numeración del capítulo
   {1em}
   {\MakeUppercase}                         % Título en mayúsculas
+
+% =================== CONFIGURACIÓN DE ÍNDICE ===================
+% Mostrar hasta subsubsection (nivel 3) en la tabla de contenido
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}
+  {\thesubsubsection}{1em}{}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 
 % =================== DOCUMENTO ===================
 \begin{document}
