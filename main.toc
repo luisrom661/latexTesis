@@ -34,20 +34,21 @@
 \contentsline {subsection}{\numberline {1.6.2}Adaptación de Scrum para la gestión de la deuda social}{22}{subsection.1.6.2}%
 \contentsline {chapter}{CAPÍTULO 2. PROCESO ÁGIL PARA LA GESTIÓN DE LA DEUDA SOCIAL}{24}{chapter*.8}%
 \contentsline {section}{\numberline {2.1}Adaptación de Scrum para la gestión de la deuda social}{24}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Motivación para la adaptación de Scrum}{24}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Fundamentos del modelo SocialScrum}{25}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Principios adaptados de Scrum}{26}{subsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.1}Transparencia}{26}{subsubsection.2.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.2}Inspección}{26}{subsubsection.2.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.2.1.3}Adaptación}{27}{subsubsection.2.2.1.3}%
-\contentsline {subsection}{\numberline {2.2.2}Valores complementarios propuestos}{27}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Tabla de equivalencias entre Maslow y SocialScrum}{27}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Diseño del proceso propuestos}{28}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Eventos modificados}{28}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Artefactos ajustados}{28}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Nuevo rol: Social Guide}{29}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Mapa general del proceso SocialScrum}{29}{section.2.4}%
-\contentsline {chapter}{CAPÍTULO 3. APLICACIÓN DE SOCIALSCRUM EN EQUIPOS DE DESARROLLO DE SOFTWARE ÁGIL}{30}{chapter*.9}%
-\contentsline {chapter}{CAPÍTULO 4. HERRAMIENTAS PARA LA APLICACIÓN DE SOCIALSCRUM}{31}{chapter*.10}%
-\contentsline {chapter}{CAPÍTULO 5. CONCLUSIONES, RECOMENDACIONES Y TRABAJOS FUTUROS}{32}{chapter*.11}%
-\contentsline {chapter}{\MakeUppercase []{REFERENCIAS BIBLIOGRÁFICAS}}{33}{chapter*.11}%
+\contentsline {subsection}{\numberline {2.1.1}Motivación para la adaptación de Scrum}{25}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Eventos y artefactos de Scrum adaptados}{25}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Fundamentos del modelo SocialScrum}{28}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Principios adaptados de Scrum}{28}{subsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.1}Transparencia: Esclareciendo la Deuda Social Oculta}{29}{subsubsection.2.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.2}Inspección: Evaluando las Interacciones Sociales}{30}{subsubsection.2.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.2.1.3}Adaptación: Ajustando el Rumbo Social}{31}{subsubsection.2.2.1.3}%
+\contentsline {subsection}{\numberline {2.2.2}Valores complementarios propuestos}{32}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Tabla de equivalencias entre Maslow y SocialScrum}{32}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Diseño del proceso propuestos}{33}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Eventos modificados}{33}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Artefactos ajustados}{33}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Nuevo rol: Social Guide}{34}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Mapa general del proceso SocialScrum}{34}{section.2.4}%
+\contentsline {chapter}{CAPÍTULO 3. APLICACIÓN DE SOCIALSCRUM EN EQUIPOS DE DESARROLLO DE SOFTWARE ÁGIL}{35}{chapter*.9}%
+\contentsline {chapter}{CAPÍTULO 4. HERRAMIENTAS PARA LA APLICACIÓN DE SOCIALSCRUM}{36}{chapter*.10}%
+\contentsline {chapter}{CAPÍTULO 5. CONCLUSIONES, RECOMENDACIONES Y TRABAJOS FUTUROS}{37}{chapter*.11}%
+\contentsline {chapter}{\MakeUppercase []{REFERENCIAS BIBLIOGRÁFICAS}}{38}{chapter*.11}%

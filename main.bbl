@@ -860,133 +860,6 @@
       \verb https://www.academia.edu/download/64224869/disenoAgilConTdd_ebook.pdf
       \endverb
     \endentry
-    \entry{bandura1997selfefficacy}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=3dda0f93a5c43e1392668692b92f8231}{%
-           family={Bandura},
-           familyi={B\bibinitperiod},
-           given={Albert},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {New York}%
-      }
-      \list{publisher}{2}{%
-        {W.H. Freeman}%
-        {Company}%
-      }
-      \strng{namehash}{3dda0f93a5c43e1392668692b92f8231}
-      \strng{fullhash}{3dda0f93a5c43e1392668692b92f8231}
-      \strng{fullhashraw}{3dda0f93a5c43e1392668692b92f8231}
-      \strng{bibnamehash}{3dda0f93a5c43e1392668692b92f8231}
-      \strng{authorbibnamehash}{3dda0f93a5c43e1392668692b92f8231}
-      \strng{authornamehash}{3dda0f93a5c43e1392668692b92f8231}
-      \strng{authorfullhash}{3dda0f93a5c43e1392668692b92f8231}
-      \strng{authorfullhashraw}{3dda0f93a5c43e1392668692b92f8231}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{0716728508}
-      \field{note}{Accedido el 6 de agosto de 2025}
-      \field{title}{Self-Efficacy: The Exercise of Control}
-      \field{year}{1997}
-      \verb{urlraw}
-      \verb https://www.worldcat.org/title/self-efficacy-the-exercise-of-control/oclc/36074515
-      \endverb
-      \verb{url}
-      \verb https://www.worldcat.org/title/self-efficacy-the-exercise-of-control/oclc/36074515
-      \endverb
-    \endentry
-    \entry{eagly2002role}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=865bd978cd1f1642d3ed39ca8d9dd91f}{%
-           family={Eagly},
-           familyi={E\bibinitperiod},
-           given={Alice\bibnamedelima H.},
-           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-        {{hash=d630e52ca2156c664a50335c079d5ca7}{%
-           family={Karau},
-           familyi={K\bibinitperiod},
-           given={Steven\bibnamedelima J.},
-           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \strng{namehash}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
-      \strng{fullhash}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
-      \strng{fullhashraw}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
-      \strng{bibnamehash}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
-      \strng{authorbibnamehash}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
-      \strng{authornamehash}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
-      \strng{authorfullhash}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
-      \strng{authorfullhashraw}{ef2ac0ccfe17affbe79aa42a7dc06c5f}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Psychological Review}
-      \field{note}{Accedido el 6 de agosto de 2025}
-      \field{number}{3}
-      \field{title}{Role Congruity Theory of Prejudice Toward Female Leaders}
-      \field{volume}{109}
-      \field{year}{2002}
-      \field{pages}{573\bibrangedash 598}
-      \range{pages}{26}
-      \verb{doi}
-      \verb 10.1037/0033-295X.109.3.573
-      \endverb
-      \verb{urlraw}
-      \verb https://www.women-unlimited.com/wp-content/uploads/prejudice_against_women.pdf
-      \endverb
-      \verb{url}
-      \verb https://www.women-unlimited.com/wp-content/uploads/prejudice_against_women.pdf
-      \endverb
-    \endentry
-    \entry{pardo2024igualdad}{book}{}{}
-      \name{author}{3}{}{%
-        {{hash=8739885bb40ff561439fa21c507965ec}{%
-           family={Pardo\bibnamedelima Calvache},
-           familyi={P\bibinitperiod\bibinitdelim C\bibinitperiod},
-           given={César\bibnamedelima J.},
-           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=0788498bf9a9f88d05e23efeb63ce8f7}{%
-           family={Orozco\bibnamedelima Garcés},
-           familyi={O\bibinitperiod\bibinitdelim G\bibinitperiod},
-           given={Carlos\bibnamedelima E.},
-           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=b4d24e5dea5f2028f4a6e7078ff308ee}{%
-           family={Narváez\bibnamedelima Narváez},
-           familyi={N\bibinitperiod\bibinitdelim N\bibinitperiod},
-           given={Juan\bibnamedelima C.},
-           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Popayán, Colombia}%
-      }
-      \list{publisher}{1}{%
-        {Universidad del Cauca}%
-      }
-      \strng{namehash}{95339e81c53c61d31d67931cb36dcbb2}
-      \strng{fullhash}{2ab82bf243312cd9d3f42b015169ab10}
-      \strng{fullhashraw}{2ab82bf243312cd9d3f42b015169ab10}
-      \strng{bibnamehash}{2ab82bf243312cd9d3f42b015169ab10}
-      \strng{authorbibnamehash}{2ab82bf243312cd9d3f42b015169ab10}
-      \strng{authornamehash}{95339e81c53c61d31d67931cb36dcbb2}
-      \strng{authorfullhash}{2ab82bf243312cd9d3f42b015169ab10}
-      \strng{authorfullhashraw}{2ab82bf243312cd9d3f42b015169ab10}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accedido el 6 de agosto de 2025; Edición digital en ResearchGate}
-      \field{title}{Igualdad, inclusión y liderazgo de género: percepciones de estudiantes universitarios. Primera edición}
-      \field{year}{2024}
-      \verb{urlraw}
-      \verb https://www.researchgate.net/profile/Cesar-Pardo-5/publication/374053613_Igualdad_inclusion_y_liderazgo_de_genero_Percepciones_de_estudiantes_universitarios_primera_edicion/links/65b921811bed776ae31821fd/Igualdad-inclusion-y-liderazgo-de-genero-Percepciones-de-estudiantes-universitarios-primera-edicion.pdf
-      \endverb
-      \verb{url}
-      \verb https://www.researchgate.net/profile/Cesar-Pardo-5/publication/374053613_Igualdad_inclusion_y_liderazgo_de_genero_Percepciones_de_estudiantes_universitarios_primera_edicion/links/65b921811bed776ae31821fd/Igualdad-inclusion-y-liderazgo-de-genero-Percepciones-de-estudiantes-universitarios-primera-edicion.pdf
-      \endverb
-    \endentry
     \entry{maslow1943motivation}{article}{}{}
       \name{author}{1}{}{%
         {{hash=b8962a7e859e705d2af2f259315da06d}{%
@@ -1003,8 +876,8 @@
       \strng{authornamehash}{b8962a7e859e705d2af2f259315da06d}
       \strng{authorfullhash}{b8962a7e859e705d2af2f259315da06d}
       \strng{authorfullhashraw}{b8962a7e859e705d2af2f259315da06d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Psychological Review}

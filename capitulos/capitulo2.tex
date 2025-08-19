@@ -9,68 +9,131 @@
 \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
 
 Este capítulo para su mejor comprensión se encuentra dividido en 3 ítems. En el primer ítem, se describe de manera general la adaptación de Scrum para la gestión de la deuda social, enfocando en los elementos clave, los valores y el diseño del proceso para lograr esta adaptación. \textbf{ACTUALIZAR}
-    
+
+% INICIO SECCIÓN 1
+
 \section{Adaptación de Scrum para la gestión de la deuda social}
 
-Scrum, como marco de trabajo, no solo aborda la complejidad inherente al desarrollo de software, sino que también ofrece un terreno fértil para la adaptación y gestión de la deuda no técnica (NTD), incluyendo de manera crucial la deuda social \cite{saeeda2024nontechnicaldebt}. Dicho de otro modo, su estructura liviana y su énfasis en la flexibilidad lo posicionan como una base sólida para identificar y mitigar los ``olores’’ (smells) subyacentes en las dinámicas humanas y organizacionales que contribuyen a esta deuda.
-Dicho de otro modo, SocialScrum no reemplaza Scrum, sino que lo complementa mediante un enfoque dual: técnico \textit{y} social.
-
-\subsection{Motivación para la adaptación de Scrum}
-
-Scrum es un marco utilizado en proyectos de desarrollo ágil cuyo objetivo es la entrega incremental de productos software y valor a través de ciclos iterativos llamados Sprints \cite{schwaber2020scrum}. Aunque aborda aspectos técnicos como pruebas, integración continua, refactorización y la gestión de impedimentos \cite{kniberg2010kanban, kniberg2015scrumxp, ble2023disenoagil}, no ofrece un enfoque específico para gestionar la deuda social. Esta surge de decisiones sociotécnicas deficientes, problemas interpersonales, falta de comunicación, colaboración y coordinación, y la acumulación de obligaciones pendientes que afectan el bienestar del equipo y la calidad \cite{caballero2022communitysmells, tamburri2013socialdebt}.
-
-Como un "Leviatán", la deuda social no identificada crece silenciosamente, afectando la cohesión, comunicación y el éxito del proyecto \cite{caballero2022communitysmells}. SocialScrum ajusta e integra eventos y artefactos de Scrum, centrado en problemas interpersonales, comunicación transparente y bienestar del equipo.
-
-\section{Fundamentos del modelo SocialScrum}
-
-Como es sabido, Scrum se fundamenta en el \textbf{empirismo} y el \textbf{pensamiento Lean} \cite{schwaber2020scrum}. Esto implica que el conocimiento se deriva de la experiencia y las decisiones se toman basándose en lo observado, mientras se busca reducir el desperdicio y enfocarse en lo esencial \cite{schwaber2020scrum}. Estos principios son particularmente pertinentes para la deuda social, que a menudo se manifiesta a través de efectos ``invisibles'' y negativos dentro de una comunidad de desarrollo \cite{saeeda2024nontechnicaldebt,caballero2022communitysmells}. 
-
-PONER QUE SCRUM TIENE EVENTOS, ARTEFACTOS, ROLES Y VALORES, YA PUSE LOS PRINCIPIOS PERO TOCA RE ORGANIZARLOS.
-DE AHÍ HABLAR SOBRE LOS PRINCIPIOS Y VALORES.
-
-\begin{itemize}
-    \item \textbf{Daily Scrum:} Aunque breve, esta reunión de 15 minutos para los desarrolladores mejora la comunicación e identifica impedimentos diarios \cite{schwaber2020scrum}. Este es un punto clave para detectar rápidamente los ``olores comunitarios'' que afectan la comunicación y la coordinación, como la ``radio silence’’ o el ``organizational silo’’ \cite{caballero2022communitysmells}.
-    \item \textbf{Sprint Review:} Permite al Scrum Team y a los interesados inspeccionar los resultados y determinar futuras adaptaciones \cite{schwaber2020scrum}. Este evento es una oportunidad para que las ``decisiones sociotécnicas incorrectas'' que dieron origen a la deuda social se hagan visibles y se aborden \cite{caballero2022communitysmells}.
-    \item \textbf{Sprint Retrospective:} Este es quizás el evento más directamente vinculado a la gestión de la deuda no técnica. Aquí, el equipo inspecciona el último Sprint con respecto \textbf{a las personas, las interacciones, los procesos y las herramientas} \cite{schwaber2020scrum}. Se analizan los problemas encontrados y cómo se resolvieron, identificando cambios para mejorar la efectividad del equipo \cite{saeeda2024nontechnicaldebt}. Esto permite abordar directamente las causas de la deuda de proceso (ej., procesos ineficientes u obsoletos \cite{saeeda2024nontechnicaldebt}) y la deuda social (ej., falta de comunicación efectiva \cite{saeeda2024nontechnicaldebt}).
-\end{itemize}
+Scrum, como marco de trabajo, no solo aborda la complejidad inherente al desarrollo de software, sino que también ofrece un terreno fértil para la adaptación y gestión de la deuda no técnica (NTD), incluyendo de manera crucial la deuda social \cite{saeeda2024nontechnicaldebt}. Dicho de otro modo, su estructura liviana y su énfasis en la flexibilidad lo posicionan como una base sólida para identificar y mitigar los ``olores’’ (\textit{smells}) subyacentes en las dinámicas humanas y organizacionales que contribuyen a esta deuda. 
 
 En Scrum existen principios —\textbf{Transparencia, Inspección y Adaptación}— que son esenciales para abordar la deuda social. Estos principios permiten que el equipo identifique y aborde problemas interpersonales y organizacionales de manera efectiva, asegurando que la deuda social no se convierta en un obstáculo para el éxito del proyecto \cite{schwaber2020scrum, saeeda2024nontechnicaldebt}; además, también están los valores de Scrum —\textbf{Compromiso, Foco, Franqueza, Respeto y Coraje}— , que son fundamentales para el éxito del equipo y la gestión de la deuda social \cite{schwaber2020scrum}.
 
+\textbf{Scrum} integra eventos y artefactos específicos para abordar la deuda social, que en este contexto, la idea es que se centre en problemas interpersonales, comunicación transparente y bienestar del equipo \cite{schwaber2020scrum}. Esta adaptación busca mejorar la cohesión del equipo y la calidad del producto, al tiempo que se gestionan las dinámicas sociales que pueden afectar el rendimiento y la satisfacción del equipo. Dicho de otro modo, el modelo propuesto no reemplaza Scrum, sino que lo complementa mediante un enfoque dual: técnico \textit{y} social.
 
-—EN DESARROLLO—
+% FIN SECCIÓN 1
+% -------------------------------------
+% INICIO SUBSECCIÓN 1
 
+\subsection{Motivación para la adaptación de Scrum}
 
+% Menciona vacíos actuales de Scrum (que gestiona aspectos técnicos pero no sociales).
+
+Scrum es un marco de trabajo ágil ampliamente adoptado en proyectos de desarrollo de software por su capacidad para abordar problemas complejos mediante la entrega incremental de valor en ciclos iterativos llamados \textit{Sprints} \cite{schwaber2020scrum}. Aunque contempla aspectos técnicos como pruebas, integración continua, refactorización y la gestión de impedimentos \cite{kniberg2010kanban, kniberg2015scrumxp, ble2023disenoagil}, su ligereza metodológica implica que no ofrece un enfoque específico para tratar de manera estructurada las dinámicas sociales y organizacionales dentro de los equipos.
+
+El marco, con sus principios de transparencia-inspección-adaptación \cite{schwaber2020scrum}, teje una red sólida para el progreso del producto. Sin embargo, su naturaleza deliberadamente ligera —esa misma que lo hace tan adaptable— no incluye herramientas específicas para desentrañar las complejidades sociales. Dicho de otro modo, aunque define roles y ceremonias con precisión, carece de mecanismos para diagnosticar esos roces invisibles entre desarrolladores o tensiones estructurales silenciosas \cite{schwaber2020scrum}. Esta brecha, comprensible en un marco centrado en ejecución, puede dejar crecer sin control lo que ahora llamamos deuda no técnica o deuda social: esa carga oculta de fricciones humanas y organizativas que, como bien señala Saeeda \cite{saeeda2024nontechnicaldebt}, termina lastrando proyectos aparentemente bien dirigidos.
+
+Como un ``Leviatán'', la deuda social no identificada crece silenciosamente, afectando la cohesión, comunicación y el éxito del proyecto \cite{caballero2022communitysmells}. Por lo tanto, este marco de trabajo adaptado de Scrum ha sido nombrado como \textbf{SocialScrum} que ajusta e integra eventos y artefactos de Scrum, centrado en problemas interpersonales, comunicación transparente y bienestar del equipo.
+% Explica riesgos de no gestionar la deuda social (impacto en cohesión, comunicación, productividad).
+
+% Presenta el concepto y nombre SocialScrum como propuesta de solución.
+
+% Usa un párrafo final que enlace con los eventos y artefactos adaptados.
+
+\subsection{Eventos y artefactos de Scrum adaptados}
+% Los eventos y artefactos de Scrum se adaptan para incluir la gestión de la deuda social, asegurando que el equipo pueda identificar y abordar problemas interpersonales y organizacionales de manera efectiva. Estos eventos y artefactos adaptados permiten al equipo enfocarse en la mejora continua del bienestar del equipo, la comunicación y la colaboración, lo que contribuye a reducir la deuda social acumulada.
+\subsubsection*{Adaptación de Eventos y Artefactos de Scrum para la Gestión de la Deuda Social}
+
+La efectividad de Scrum para enfrentar la complejidad y entregar valor de forma iterativa es indiscutible. Sin embargo, su carácter ligero y flexible implica que no contemple de manera explícita las complejidades sociales propias del desarrollo de software \cite{schwaber2020scrum}. \textbf{Como es sabido}, esta actividad es eminentemente sociotécnica: no basta con la pericia técnica, el éxito también se apoya en la calidad de las interacciones humanas y en las dinámicas organizacionales \cite{saeeda2024nontechnicaldebt,caballero2022communitysmells}. La propuesta de SocialScrum se orienta precisamente a \textbf{reforzar esa dimensión social} mediante la adaptación de los elementos esenciales de Scrum, de modo que la deuda social pueda identificarse y mitigarse de manera más temprana. En lo que sigue se describe cómo los eventos y artefactos del marco pueden reconfigurarse para integrar esta mirada, dejando los detalles de implementación para apartados posteriores.
+
+\subsubsection*{Reconfiguración de Eventos de Scrum para la Detección y Resolución de Problemas Sociales}
+
+Los eventos de Scrum actúan como oportunidades formales para la inspección y adaptación de los artefactos \cite{schwaber2020scrum}. \textbf{Dicho de otro modo}, constituyen momentos clave para que el equipo Scrum y los interesados evalúen el progreso y ajusten el rumbo. La adaptación de estos eventos bajo \textbf{SocialScrum} permite una mirada más profunda a las interacciones humanas y los ``olores comunitarios'' \cite{caballero2022communitysmells} que pueden estar generando deuda social.
+
+\begin{itemize}
+    \item \textbf{Daily Scrum (Daily):} Tradicionalmente, este evento de 15 minutos se centra en la inspección del progreso hacia el Objetivo del Sprint y la adaptación del \textit{Sprint Backlog} para el día siguiente, mejorando la comunicación e identificando impedimentos técnicos \cite{schwaber2020scrum}. En el contexto de \textbf{SocialScrum}, la \textit{Daily Scrum} puede modificarse para \textbf{incluir una inspección breve pero intencionada de los ``impedimentos sociales'' o ``fricciones interpersonales''} que impactan directamente el progreso o la cohesión del equipo. Por ejemplo, un desarrollador podría mencionar ``falta de comunicación efectiva con el equipo de operaciones'' \cite{saeeda2024nontechnicaldebt} como un impedimento, lo que cataliza una discusión temprana. \textbf{Cabe señalar} que esta adaptación mantiene la brevedad del evento, pero amplía su foco para que los desarrolladores puedan ser transparentes sobre los desafíos no técnicos que enfrentan, facilitando su detección temprana y promoviendo la autogestión en la búsqueda de soluciones.
+    \item \textbf{Sprint Review:} Este evento se dedica a inspeccionar el resultado del Sprint y a determinar futuras adaptaciones, con el \textit{Scrum Team} presentando el \textit{Increment} a los interesados clave \cite{schwaber2020scrum}. Para \textbf{SocialScrum}, la \textit{Sprint Review} puede extenderse para \textbf{fomentar una discusión explícita sobre cómo las dinámicas sociales influyeron en la capacidad del equipo para entregar valor}. En otras palabras, más allá de la demostración del producto, se podría incluir una breve reflexión sobre la calidad de la colaboración, la comunicación o la cohesión del equipo durante el Sprint. Si, por ejemplo, el equipo experimentó un ``silo organizacional'' (\textit{Organizational Silo}) \cite{caballero2022communitysmells} que afectó la entrega, este evento sería el foro para hacer visible ese impacto a los interesados y recabar su perspectiva, alineándose con la idea de que la deuda social puede ``sabotear la calidad del software'' \cite{caballero2022communitysmells}.
+    \item \textbf{Sprint Retrospective:} Este es, con diferencia, el evento más idóneo para la integración de SocialScrum, ya que su propósito inherente es ``planificar formas de aumentar la calidad y la efectividad'' mediante la inspección de ``las personas, las interacciones, los procesos, las herramientas y su \textit{Definición de Terminado}'' \cite{schwaber2020scrum}. \textbf{En contraste} con un enfoque puramente técnico, la \textit{Sprint Retrospective} adaptada se convertiría en el \textbf{espacio principal para diagnosticar y abordar la deuda social y los \textit{community smells}}. El equipo podría utilizarlo para identificar patrones sociotécnicos adversos, como la ``falta de resolución de conflictos'' (\textit{Lack of Conflict Resolution}) \cite{dreesen2021socialdebt} o el ``lobo solitario'' (\textit{Lone Wolf}) \cite{caballero2022communitysmells}, y generar acciones concretas para mitigarlos. Las acciones para abordar la deuda social podrían incluso ser añadidas al \textit{Sprint Backlog} del siguiente Sprint \cite{schwaber2020scrum}, formalizando el compromiso del equipo con su salud sociotécnica.
+\end{itemize}
+
+\subsubsection*{Inclusión de Ítems de Deuda Social en los Artefactos de Scrum}
+
+Los artefactos de Scrum —\textit{Product Backlog, Sprint Backlog e Increment}— representan el trabajo o el valor, diseñados para maximizar la transparencia de la información clave \cite{schwaber2020scrum}. La adaptación de estos artefactos en SocialScrum permite que la deuda social no sea un problema ``invisible'' \cite{saeeda2024nontechnicaldebt,tamburri2015insights}, sino un elemento gestionable dentro del proceso de desarrollo.
+
+\begin{itemize}
+    \item \textbf{Product Backlog:} Si bien es la ``única fuente del trabajo realizado por el \textit{Scrum Team}'' para mejorar el producto \cite{schwaber2020scrum}, el \textit{Product Backlog} en SocialScrum podría incluir \textbf{elementos de alto nivel relacionados con la mitigación de la deuda social o la mejora de la cultura organizacional}, siempre que se entienda que estos contribuyen directamente al valor del producto a largo plazo. Por ejemplo, una iniciativa para ``mejorar la comunicación inter-equipos'' \cite{saeeda2024nontechnicaldebt} que es vital para la entrega continua de valor podría figurar como un elemento del \textit{Product Backlog}. Esto se justifica al considerar que descuidar los aspectos no técnicos puede tener implicaciones significativas para el éxito del desarrollo de software \cite{saeeda2024nontechnicaldebt}, y que la deuda no técnica, incluida la social, contribuye a la acumulación de deuda técnica \cite{saeeda2024nontechnicaldebt}. El \textit{Product Owner}, responsable de maximizar el valor del producto \cite{schwaber2020scrum}, jugaría un papel crucial en priorizar estas iniciativas no técnicas junto con las características del producto.
+    \item \textbf{Sprint Backlog:} Este artefacto representa el plan del \textit{Sprint} y contiene los elementos seleccionados del \textit{Product Backlog} junto con el plan para entregarlos \cite{schwaber2020scrum}. En SocialScrum, el \textit{Sprint Backlog} podría incluir \textbf{tareas específicas derivadas de la \textit{Sprint Retrospective} orientadas a abordar la deuda social}. Por ejemplo, si la retrospectiva identifica la necesidad de ``establecer canales de comunicación más claros'' \cite{dreesen2021socialdebt} para combatir el ``silencio de radio'' (\textit{Radio Silence}) \cite{caballero2022communitysmells}, la creación y adopción de una herramienta de comunicación específica podría convertirse en una tarea explícita en el \textit{Sprint Backlog}. Esto asegura que la gestión de la deuda social no sea una actividad extralimitada, sino una parte integral del compromiso del equipo para ese \textit{Sprint}.
+    \item \textbf{Increment:} Un \textit{Increment} es un ``peldaño concreto hacia el Objetivo del Producto'' que debe ser utilizable y se suma a los \textit{Increments} anteriores \cite{schwaber2020scrum}. En SocialScrum, el \textit{Increment} no solo se refiere a la funcionalidad del software, sino también al \textbf{valor tangible de un entorno de equipo más saludable}. Aunque la ``deuda social'' y los ``olores comunitarios'' impactan directamente en la calidad del software \cite{caballero2022communitysmells,saeeda2024nontechnicaldebt}, la mitigación de estos problemas puede traducirse en un \textit{Increment} que, si bien no presenta una nueva funcionalidad de software, sí representa un ``producto'' entregado por un equipo más eficiente, cohesionado y productivo. Esto se refleja, por ejemplo, en una reducción de defectos atribuibles a la falta de comunicación o coordinación, o en una mayor satisfacción del equipo y de los interesados. La \textit{Definición de Terminado} \cite{schwaber2020scrum} podría evolucionar para incluir, de manera implícita, aspectos de la calidad del proceso sociotécnico que contribuyen a un producto final robusto y sostenible.
+\end{itemize}
+
+En síntesis, la adaptación de los eventos y artefactos de Scrum para incorporar la dimensión de la deuda social permite que el marco aborde de manera más integral los desafíos inherentes al desarrollo de software, reconociendo que la salud de la comunidad de desarrollo es tan crítica como la calidad del código.
+
+% Lista los eventos de Scrum que se pueden modificar (Daily, Sprint Review, Retrospective) y cómo ayudan a la detección y solución de problemas sociales.
+
+% Lista los artefactos (Product Backlog, Sprint Backlog, Incremento) y cómo incluyen ítems de deuda social.
+
+% No profundices aún en el diseño exacto (eso se deja para la sección 3), solo describe qué parte de Scrum se toca y por qué.
+
+\section{Fundamentos del modelo SocialScrum}
+
+% Aquí justificas teóricamente tu propuesta. Debe responder a:
+
+% En qué principios y valores se basa.
+
+% Qué teorías y marcos respaldan la adaptación (empirismo, Lean, Maslow).
+
+Tenemos que, Scrum se fundamenta en el \textbf{empirismo} y el \textbf{pensamiento Lean} \cite{schwaber2020scrum}. Esto implica que el conocimiento se deriva de la experiencia y las decisiones se toman basándose en lo observado, mientras se busca reducir el desperdicio y enfocarse en lo esencial \cite{schwaber2020scrum}. Estos principios son particularmente pertinentes para la deuda social, que a menudo se manifiesta a través de efectos ``invisibles'' y negativos dentro de una comunidad de desarrollo \cite{saeeda2024nontechnicaldebt,caballero2022communitysmells}. 
 
 \subsection{Principios adaptados de Scrum}
 Los principios de Scrum se adaptan para abordar la deuda social, enfatizando la importancia de la transparencia, inspección y adaptación en el contexto social del equipo.
 
 Para desarrollar la idea, iniciaremos con los principios de Scrum, empezando por la \textbf{transparencia}, que es uno de los tres pilares del empirismo de Scrum, exige que el proceso y el trabajo sean visibles para todos los involucrados \cite{schwaber2020scrum}. En este sentido, la falta de transparencia en aspectos no técnicos, como las interacciones o las decisiones sociotécnicas, puede conducir a la acumulación de deuda \cite{schwaber2020scrum}. La \textbf{inspección} regular, facilitada por los eventos de Scrum, permite detectar variaciones y problemas tempranamente \cite{schwaber2020scrum}. Finalmente, la \textbf{adaptación} asegura que, si algo se desvía, se realicen ajustes de manera expedita para minimizar mayores desviaciones \cite{schwaber2020scrum}. Esta capacidad de adaptación constante es vital para abordar una deuda que es ``más difícil de arreglar que la deuda técnica'' y cuyas ``consecuencias contribuyen a la acumulación de deuda técnica'' \cite{saeeda2024nontechnicaldebt}.
 
-\subsubsection{Transparencia}
-La transparencia implica visibilizar no solo los aspectos técnicos sino también los sociales del equipo. Según la guía Scrum 2020 \cite{schwaber2020scrum}: ``La transparencia es esencial porque facilita la inspección.''
+A continuación, se desarrolla cómo cada pilar de Scrum se amolda al contexto social de SocialScrum, delineando su aplicación y la justificación teórica subyacente.
 
+\subsubsection{Transparencia: Esclareciendo la Deuda Social Oculta}
+En Scrum, la transparencia es fundamental; el proceso y el trabajo en curso deben ser visibles para todos los involucrados, permitiendo que las decisiones críticas se basen en una comprensión compartida de los artefactos \cite{schwaber2020scrum}. Dicho de otro modo, la falta de transparencia en los artefactos puede llevar a decisiones que reduzcan el valor y aumenten el riesgo \cite{schwaber2020scrum}. En el contexto de SocialScrum, este principio se extiende a la \textbf{visibilización de los aspectos sociales y relacionales del equipo}, incluyendo los \textit{community smells} \cite{caballero2022communitysmells}, que a menudo permanecen invisibles pero impactan directamente la calidad del software y el bienestar del equipo \cite{caballero2022communitysmells}.
+
+\subsubsection*{\textbf{Aplicación en SocialScrum:}}
 \begin{itemize}
-    \item \textbf{Sprint Planning Social:} Se incluye evaluación de la deuda social.
-    \item \textbf{Daily Scrum Social:} Se agrega una pregunta sobre la deuda social.
-    \item \textbf{Sprint Review Social:} Se muestra avance en mitigación de deuda social.
-    \item \textbf{Sprint Retrospective Social:} Reflexión sobre deuda social.
+    \item \textbf{Product Backlog Social:} El \textit{Product Backlog}, tradicionalmente la única fuente de trabajo para el \textit{Scrum Team} \cite{schwaber2020scrum}, se adapta para incluir \textbf{ítems de deuda social} de alto nivel. Por ejemplo, una entrada como ``Mejorar la comunicación inter-equipos para reducir la duplicación de esfuerzos'' podría ser un ítem del \textit{Product Backlog}. Esto asegura que la mitigación de la deuda social, reconocida como un factor que puede ``sabotear la calidad del software'' \cite{caballero2022communitysmells} y contribuir a la \textit{deuda técnica} \cite{saeeda2024nontechnicaldebt,caballero2022communitysmells,tamburri2015insights}, sea priorizada y gestionada explícitamente por el \textit{Product Owner} \cite{schwaber2020scrum}. La transparencia en este artefacto garantiza que los interesados y el equipo sean conscientes de la importancia de abordar estas cuestiones no técnicas para el valor a largo plazo del producto \cite{schwaber2020scrum}.
+    \item \textbf{Sprint Backlog Social:} El \textit{Sprint Backlog}, que detalla el plan del \textit{Sprint} \cite{schwaber2020scrum}, reflejaría las tareas específicas para abordar la deuda social. Si una \textit{Retrospective} identifica un ``radio-silence'' o ``cuello de botella'' (\textit{bottleneck}) \cite{caballero2022communitysmells,tamburri2015insights} debido a una comunicación deficiente, se podrían añadir tareas como ``Investigar herramientas de comunicación colaborativa'' o ``Organizar una sesión de alineación con el equipo de operaciones''. Esta incorporación asegura que las acciones para mitigar la deuda social no sean opcionales, sino compromisos tangibles que el equipo se propone completar en el \textit{Sprint}, manteniendo el foco y la visibilidad del progreso diario \cite{schwaber2020scrum}.
 \end{itemize}
 
-\subsubsection{Inspección}
-En SocialScrum, se inspeccionan tanto artefactos técnicos como sociales. Los eventos promueven identificar desviaciones o deficiencias en flujos de trabajo, calidad, dinámica y bienestar~\cite{kniberg2010kanban, kniberg2015scrumxp, ble2023disenoagil}.
+\textbf{Justificación Teórica:} La NTD es más difícil de rectificar que la deuda técnica (TD) y sus consecuencias contribuyen a la acumulación de TD \cite{saeeda2024nontechnicaldebt}. Al hacer transparentes los \textit{community smells} y la deuda social, se permite su detección temprana, previniendo que se conviertan en problemas crónicos que ralentizan el desarrollo, disminuyen la productividad y aumentan los costos \cite{caballero2022communitysmells,tamburri2015insights}. La falta de transparencia puede llevar a decisiones subóptimas y a la proliferación de efectos negativos como ``retrasos de comunicación'' o ``malinterpretación de expectativas'' \cite{caballero2022communitysmells}.
+
+\subsubsection{Inspección: Evaluando las Interacciones Sociales}
+
+La \textbf{inspección} en Scrum implica revisar los artefactos y el progreso hacia los objetivos acordados de forma frecuente y diligente para detectar desviaciones o problemas \cite{schwaber2020scrum}. Los eventos de Scrum están diseñados para proporcionar esta cadencia de inspección \cite{schwaber2020scrum}. En SocialScrum, la inspección se amplía para incluir una evaluación continua de las \textbf{interacciones sociales, el comportamiento del equipo y los \textit{community smells}} \cite{caballero2022communitysmells,tamburri2015insights} que puedan estar afectando el rendimiento y el bienestar.
+
+\subsubsection*{\textbf{Aplicación en SocialScrum:}}
 \begin{itemize}
-    \item \textbf{Sprint Planning Social:} Inspección de la deuda social.
-    \item \textbf{Daily Scrum Social:} Identificación de problemas sociales emergentes.
-    \item \textbf{Sprint Review Social:} Evaluación de acciones para mitigar la deuda social.
-    \item \textbf{Sprint Retrospective Social:} Análisis de efectividad de acciones sociales.
+    \item \textbf{Daily Social Scrum:} La \textit{Daily Scrum}, un evento de 15 minutos para que los \textit{Developers} inspeccionen el progreso y adapten el \textit{Sprint Backlog} \cite{schwaber2020scrum}, se convierte en un punto de inspección crucial para los \textbf{impedimentos sociales}. Además de preguntas sobre el progreso técnico, el equipo podría brevemente inspeccionar si existen ``fricciones interpersonales'' o ``impedimentos'' relacionados con la colaboración o la comunicación. Si bien se mantiene la brevedad, esta inspección focalizada permite identificar problemas como la ``falta de comunicación efectiva'' o la ``pobre coordinación inter-equipo'' \cite{saeeda2024nontechnicaldebt}, que son causas directas de la deuda de personas (\textit{people debt}) \cite{saeeda2024nontechnicaldebt}.
+    \item \textbf{Sprint Review Social:} Este evento, donde el \textit{Scrum Team} y los interesados inspeccionan el \textit{Increment} y determinan futuras adaptaciones \cite{schwaber2020scrum}, se extiende para incluir una \textbf{reflexión sobre cómo las dinámicas sociales influyeron en la capacidad de entrega de valor}. Más allá de la demostración del producto, se podría discutir si los ``silos organizacionales'' (\textit{organizational silos}) \cite{caballero2022communitysmells,tamburri2015insights} o la ``falta de cooperación'' \cite{caballero2022communitysmells,tamburri2015insights} afectaron la finalización de los ítems. Esto permite a los interesados entender los desafíos no técnicos y aunar esfuerzos para mitigarlos, ya que los \textit{community smells} son ``observables'' y persisten en el tiempo, manifestándose en ``conflictos'' y ``mala conducta profesional'' \cite{caballero2022communitysmells}.
 \end{itemize}
 
-\subsubsection{Adaptación}
-La adaptación implica ajustes técnicos y sociales para minimizar variaciones y mejorar la cohesión. Requiere autoeficacia \cite{bandura1997selfefficacy}, autonomía y sentido de agencia \cite{eagly2002role,pardo2024igualdad}.
+\textbf{Justificación Teórica:} La detección temprana del \textit{burnout} y de las relaciones poco saludables (\textit{unhealthy relationships}) entre desarrolladores es crucial para prevenir la disminución de la productividad y la calidad del software \cite{tulili2022burnout}. La inspección constante de los factores sociales permite identificar a tiempo elementos como el ``cansancio laboral'' (\textit{work exhaustion}), el ``cinismo'' y la ``ineficacia profesional'' \cite{tulili2022burnout}, que son consecuencias directas del \textit{burnout}. La investigación ha demostrado que los \textit{community smells} son fuentes de deuda social que impactan el trabajo en equipo, los procesos de desarrollo y los resultados \cite{schwaber2020scrum}.
+
+\subsubsection{Adaptación: Ajustando el Rumbo Social}
+
+La \textbf{adaptación} es el tercer pilar empírico de Scrum; si algo se desvía de los límites aceptables, el proceso o el producto deben ajustarse lo antes posible \cite{schwaber2020scrum}. Se espera que el \textit{Scrum Team} se adapte tan pronto como aprenda algo nuevo a través de la inspección \cite{schwaber2020scrum}. En SocialScrum, la adaptación se centra en la \textbf{implementación de cambios proactivos y correctivos en las personas, interacciones, procesos y herramientas} \cite{schwaber2020scrum} para mitigar la deuda social y mejorar la salud del equipo.
+
+\subsubsection*{\textbf{Aplicación en SocialScrum:}}
+
 \begin{itemize}
-    \item \textbf{Sprint Retrospective Social:} Planificación de acciones correctivas.
-    \item \textbf{Social Update:} Espacios para tratar temas sociales y bienestar.
+    \item \textbf{Sprint Retrospective Social:} Este es el evento más adecuado para la adaptación sociotécnica, ya que su propósito es ``planificar formas de aumentar la calidad y la efectividad'' \cite{schwaber2020scrum}. Aquí, el \textit{Scrum Team} puede inspeccionar ``las personas, las interacciones, los procesos, las herramientas y su \textit{Definición de Terminado}'' \cite{schwaber2020scrum} desde una perspectiva de deuda social. Si se identifica el patrón de un ``lobo solitario'' (\textit{lone wolf}) \cite{tamburri2015insights,caballero2022communitysmells,saeeda2024nontechnicaldebt} o ``miembros pedantes'' (\textit{priggish members}) \cite{saeeda2024nontechnicaldebt,caballero2022communitysmells} que afectan la colaboración, el equipo puede diseñar acciones específicas, como sesiones de emparejamiento forzado o talleres de resolución de conflictos. Las mejoras más impactantes pueden incluso ser añadidas al \textit{Sprint Backlog} del siguiente \textit{Sprint}, formalizando el compromiso de adaptación \cite{schwaber2020scrum}.
+    \item \textbf{Definición de Terminado (DoD) Social:} Aunque la \textit{Definición de Terminado} se centra en la calidad del \textit{Incremento} funcional \cite{schwaber2020scrum}, en SocialScrum podría \textbf{evolucionar implícitamente para incluir aspectos de la calidad del proceso sociotécnico}. Por ejemplo, un \textit{Incremento} ``terminado'' no solo significa que el software cumple con los requisitos técnicos, sino también que fue desarrollado en un entorno de equipo saludable, con una comunicación fluida y sin conflictos importantes no resueltos. La mitigación de la deuda social puede no ser un ``incremento de funcionalidad de software, sí representa un 'producto' entregado por un equipo más eficiente, cohesionado y productivo'' \cite{saeeda2024nontechnicaldebt}, lo que se traduciría en una reducción de defectos atribuibles a la falta de coordinación \cite{schwaber2020scrum}.
 \end{itemize}
+
+\textbf{Justificación Teórica:} Rectificar la deuda no técnica es más desafiante que la deuda técnica, y sus consecuencias contribuyen a la acumulación de TD, haciendo crucial un enfoque integral que aborde ambas de manera concurrente \cite{saeeda2024nontechnicaldebt}. Estrategias de mitigación como la ``comunicación colaborativa'', ``fomentar la comunicación abierta'' y ``respetar las opiniones diversas'' \cite{saeeda2024nontechnicaldebt} son esenciales para gestionar la deuda social. La adaptación continua es vital porque el ``impacto de los \textit{community smells} difiere'' entre organizaciones y ``la manifestación de los efectos de los \textit{community smells} depende de cómo las personas se adapten a cada contexto y a los cambios de comportamiento'' \cite{caballero2022communitysmells}. Un \textit{Scrum Team} empoderado para autogestionarse tiene la capacidad de realizar ajustes inmediatos y minimizar desviaciones \cite{schwaber2020scrum}.
+
+En resumen, la adaptación de los pilares empíricos de Scrum al modelo SocialScrum no es una mera formalidad, sino una necesidad imperativa para garantizar el éxito de los proyectos de software en un entorno intrínsecamente sociotécnico. Al hacer visibles, inspeccionables y adaptables las complejidades humanas y organizacionales, SocialScrum busca gestionar de forma proactiva la deuda social, lo que a su vez previene la acumulación de deuda técnica y fomenta un entorno de desarrollo más saludable y productivo.
+
+
+% Desarrolla cómo se adaptan Transparencia, Inspección y Adaptación al contexto social.
+
+% Para cada principio, menciona ejemplos de aplicación en SocialScrum (Sprint Planning Social, Daily Social Scrum, etc.).
+
+% Incluye la justificación teórica (por qué ese principio es útil para detectar y mitigar deuda social).
 
 \subsection{Valores complementarios propuestos}
 
@@ -85,6 +148,12 @@ Los valores en Scrum son clave para el éxito, pues guían el trabajo y comporta
     \item \textbf{Estima (Coraje):} Refleja autoestima y capacidad de superar desafíos.
     \item \textbf{Autorrealización (Mejora continua):} Búsqueda de la excelencia integral.
 \end{itemize}
+
+% Describe cómo los valores oficiales de Scrum (Compromiso, Foco, Franqueza, Respeto y Coraje) se alinean con la gestión de deuda social.
+
+% Explica si agregas valores nuevos o cambias su interpretación.
+
+% Usa ejemplos de “olores comunitarios” que se evitan aplicando estos valores.
 
 \subsection{Tabla de equivalencias entre Maslow y SocialScrum}
 
@@ -105,6 +174,12 @@ Los valores en Scrum son clave para el éxito, pues guían el trabajo y comporta
 \end{longtable}
 
 \normalsize
+
+% Presenta la tabla que ya tienes.
+
+% Explica brevemente por qué Maslow es un buen marco para alinear valores de equipo con necesidades humanas.
+
+% Relaciona cada nivel de Maslow con un valor adaptado en SocialScrum.
 
 \section{Diseño del proceso propuestos}
 El proceso SocialScrum se basa en la adaptación de Scrum para abordar la deuda social, integrando eventos y roles específicos. A continuación se describen los elementos clave del proceso:
@@ -151,8 +226,6 @@ Se introduce el `Social Guide`, un nuevo rol responsable de gestionar la deuda s
 \section*{Síntesis}
     % Cierre con una reflexión crítica: por qué SocialScrum responde a la deuda social, cómo supera lo que existe, y cómo se enlaza con el Capítulo 3 (aplicación práctica)
 
+\textbf{3. Inclusión en el Product Backlog:} Elementos relacionados con deuda social como “mejorar la comunicación”, “acciones correctivas”, “métricas de bienestar” deben priorizarse junto con aspectos técnicos.
 
-
-%\textbf{3. Inclusión en el Product Backlog:} Elementos relacionados con deuda social como “mejorar la comunicación”, “acciones correctivas”, “métricas de bienestar” deben priorizarse junto con aspectos técnicos.
-
-%\textbf{4. Nuevos roles:} Se incorpora el `Social Guide` como responsable de la gestión de la deuda social, trabajando junto al Scrum Máster y el Product Owner para el bienestar del equipo.
+\textbf{4. Nuevos roles:} Se incorpora el `Social Guide` como responsable de la gestión de la deuda social, trabajando junto al Scrum Máster y el Product Owner para el bienestar del equipo.

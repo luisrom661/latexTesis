@@ -1,3 +1,28 @@
 {
-  "latex-workshop.intellisense.citation.backend": "biblatex"
+  "latex-workshop.intellisense.citation.backend": "biblatex",
+  "latex-workshop.formatting.latex": "tex-fmt",
+  "cSpell.words": [
+    "autoeficacia",
+    "autogestionarse",
+    "Autorrealización",
+    "empodera",
+    "empoderado",
+    "franquesa",
+    "gestionable",
+    "inspeccionables",
+    "malinterpretación",
+    "Maslow",
+    "Reconfiguración",
+    "reconfigurarse",
+    "refactorización",
+    "Saeeda",
+    "sociotécnica",
+    "sociotécnicas",
+    "sociotécnico",
+    "sociotécnicos",
+    "statu",
+    "subóptimas",
+    "SUBSECCIÓN",
+    "visibilización"
+  ]
 }
