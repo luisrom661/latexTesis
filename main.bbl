@@ -678,6 +678,66 @@
       \verb https://github.com/maelstromdat/YOSHI
       \endverb
     \endentry
+    \entry{almarimi2021csDetector}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=f845387211bcb4de75be0f82d9ef3add}{%
+           family={Almarimi},
+           familyi={A\bibinitperiod},
+           given={Nuri},
+           giveni={N\bibinitperiod}}}%
+        {{hash=d5e038ab5b739b52966db4d9998f760b}{%
+           family={Ouni},
+           familyi={O\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=275176609f437906be969a3d05cf0e00}{%
+           family={Chouchen},
+           familyi={C\bibinitperiod},
+           given={Moataz},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f5bdb337e646f4d206603ae7dbc66eb2}{%
+           family={Mkaouer},
+           familyi={M\bibinitperiod},
+           given={Mohamed\bibnamedelima Wiem},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Athens, Greece}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{8bf639bf40457793b10d189b94e46937}
+      \strng{fullhash}{409fa192bdb917b094561ff0dd16ae45}
+      \strng{fullhashraw}{409fa192bdb917b094561ff0dd16ae45}
+      \strng{bibnamehash}{409fa192bdb917b094561ff0dd16ae45}
+      \strng{authorbibnamehash}{409fa192bdb917b094561ff0dd16ae45}
+      \strng{authornamehash}{8bf639bf40457793b10d189b94e46937}
+      \strng{authorfullhash}{409fa192bdb917b094561ff0dd16ae45}
+      \strng{authorfullhashraw}{409fa192bdb917b094561ff0dd16ae45}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Community smells represent symptoms of sub-optimal organizational and social issues within software development communities that often lead to additional project costs and reduced software quality. Previous research identified a variety of community smells that are connected to sub-optimal patterns under different perspectives of organizational-social structures in the software development community. To detect community smells and understanding the characteristics of such organizational-social structures in a project, we propose csDetector, an open source tool that is able to automatically detect community smells within a project and provide relevant socio-technical metrics. csDetector uses a machine learning based detection approach that learns from various existing bad community development practices to provide automated support in detecting related community smells. We evaluate the effectiveness of csDetector on a benchmark of 143 open source projects from GitHub. Our results show that the csDetector tool can detect ten commonly occurring community smells in open software projects with an average F1 score of 84\%. csDetector is publicly available, with a demo video, at: https://github.com/Nuri22/csDetector.}
+      \field{booktitle}{Proceedings of the 29th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering}
+      \field{isbn}{9781450385626}
+      \field{series}{ESEC/FSE 2021}
+      \field{title}{csDetector: an open source tool for community smells detection}
+      \field{year}{2021}
+      \field{pages}{1560\bibrangedash 1564}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1145/3468264.3473121
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3468264.3473121
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3468264.3473121
+      \endverb
+      \keyw{Detection Tool,Software projects,community smells}
+    \endentry
     \entry{schwaber2020scrum}{book}{}{}
       \name{author}{2}{}{%
         {{hash=ee6f08fcba839e09471a0bc69152b6a5}{%
