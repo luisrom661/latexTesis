@@ -12,26 +12,27 @@
 \contentsline {subsection}{\numberline {1.2.2}Colaboración}{14}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Coordinación}{15}{subsection.1.2.3}%
 \contentsline {subsection}{\numberline {1.2.4}Conclusión sobre las 3C}{15}{subsection.1.2.4}%
-\contentsline {section}{\numberline {1.3}Compromiso organizacional y resistencia al cambio}{15}{section.1.3}%
+\contentsline {section}{\numberline {1.3}Compromiso organizacional y resistencia al cambio}{16}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}Compromiso organizacional}{16}{subsection.1.3.1}%
 \contentsline {subsubsection}{\numberline {1.3.1.1}Deuda de personas}{16}{subsubsection.1.3.1.1}%
 \contentsline {subsubsection}{\numberline {1.3.1.2}Deuda cultural}{16}{subsubsection.1.3.1.2}%
-\contentsline {subsection}{\numberline {1.3.2}Resistencia organizacional al cambio}{16}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.2}Resistencia organizacional al cambio}{17}{subsection.1.3.2}%
 \contentsline {subsubsection}{\numberline {1.3.2.1}Deuda basada en la obsolescencia}{17}{subsubsection.1.3.2.1}%
 \contentsline {subsubsection}{\numberline {1.3.2.2}Deuda basada en la acumulación}{17}{subsubsection.1.3.2.2}%
-\contentsline {section}{\numberline {1.4}Síndrome de Burnout como síntoma de deuda social}{17}{section.1.4}%
+\contentsline {section}{\numberline {1.4}Síndrome de Burnout como síntoma de deuda social}{18}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Modelos de evaluación y medición}{19}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Modelos existentes}{19}{subsection.1.5.1}%
 \contentsline {subsubsection}{\numberline {1.5.1.1}Goal-Question-Metric (GQM)}{19}{subsubsection.1.5.1.1}%
-\contentsline {subsubsection}{\numberline {1.5.1.2}GEEZMO}{19}{subsubsection.1.5.1.2}%
+\contentsline {subsubsection}{\numberline {1.5.1.2}GEEZMO}{20}{subsubsection.1.5.1.2}%
 \contentsline {subsubsection}{\numberline {1.5.1.3}CAFFEA}{20}{subsubsection.1.5.1.3}%
 \contentsline {subsubsection}{\numberline {1.5.1.4}CodeFace4Smell}{20}{subsubsection.1.5.1.4}%
-\contentsline {subsubsection}{\numberline {1.5.1.5}DAHLIA}{20}{subsubsection.1.5.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1.5}DAHLIA}{21}{subsubsection.1.5.1.5}%
 \contentsline {subsubsection}{\numberline {1.5.1.6}YOSHI}{21}{subsubsection.1.5.1.6}%
-\contentsline {subsection}{\numberline {1.5.2}Tabla de herramientas y marcos para la gestión de la deuda social}{21}{subsection.1.5.2}%
+\contentsline {subsubsection}{\numberline {1.5.1.7}csDetector}{22}{subsubsection.1.5.1.7}%
+\contentsline {subsection}{\numberline {1.5.2}Tabla de herramientas y marcos para la gestión de la deuda social}{22}{subsection.1.5.2}%
 \contentsline {section}{\numberline {1.6}Scrum como marco base para la adaptación}{22}{section.1.6}%
 \contentsline {subsection}{\numberline {1.6.1}Definición de Scrum}{22}{subsection.1.6.1}%
-\contentsline {subsection}{\numberline {1.6.2}Adaptación de Scrum para la gestión de la deuda social}{22}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.2}Adaptación de Scrum para la gestión de la deuda social}{23}{subsection.1.6.2}%
 \contentsline {chapter}{CAPÍTULO 2. PROCESO ÁGIL PARA LA GESTIÓN DE LA DEUDA SOCIAL}{24}{chapter*.8}%
 \contentsline {section}{\numberline {2.1}Adaptación de Scrum para la gestión de la deuda social}{24}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Motivación para la adaptación de Scrum}{24}{subsection.2.1.1}%
