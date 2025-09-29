@@ -9,3 +9,40 @@
 \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
 
 Este capítulo presenta herramientas y técnicas que facilitan la implementación de SocialScrum, un proceso ágil adaptado para gestionar la deuda social en equipos de desarrollo de software. Se enfoca en la aplicación práctica de los eventos y artefactos modificados, así como en el rol del Social Guide, para abordar problemas interpersonales y mejorar el bienestar del equipo.
+
+% ------------------------------------------------------------
+\section{Plan de validación mediante juicio de expertos}
+\label{sec:juicio-expertos}
+
+\subsection{Objetivo y diseño}
+Validar \emph{claridad}, \emph{pertinencia} y \emph{suficiencia} de instrumentos y plantillas de SocialScrum.
+
+\subsection{Muestra y perfil}
+6--10 expertos en ingeniería de software, \textit{community smells}, psicología organizacional o agilidad.
+
+\subsection{Material y criterios de calidad}
+\begin{itemize}[leftmargin=*,nosep]
+  \item Instrumento de encuestas (Tabla~\ref{tab:likert-ejemplo}) y guías de aplicación.
+  \item Rúbrica/escala de calidad (claridad, relevancia, cobertura).
+\end{itemize}
+
+\subsection{Análisis de concordancia (coeficiente Kappa)}
+\begin{table}[H]
+  \centering
+  \caption{Plantilla de reporte de coeficiente Kappa (por categoría).}
+  \label{tab:kappa}
+  \begin{tabular}{@{}lccc@{}}
+    \toprule
+    \textbf{Categoría} & \textbf{Kappa} & \textbf{IC 95\%} & \textbf{Interpretación} \\
+    \midrule
+    Claridad & 0.78 & [0.65, 0.90] & Sustancial \\
+    Pertinencia & 0.72 & [0.58, 0.86] & Sustancial \\
+    Suficiencia & 0.69 & [0.54, 0.84] & Moderada--Sustancial \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection{Acciones de mejora}
+Registrar cambios propuestos por los expertos y actualizar instrumentos/plantillas (\textit{v1.1, v1.2}, etc.).

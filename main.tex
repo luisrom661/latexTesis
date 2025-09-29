@@ -14,6 +14,12 @@
 \usepackage{caption}
 \usepackage{comment}
 \usepackage{csquotes} % Recomendado para biblatex con babel/polyglossia
+\usepackage{booktabs,subcaption,tabularx,siunitx,enumitem,pgfplots,pgfkeys,tikz}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{pgfplots}
 
 % =================== REFERENCIAS ===================
 \usepackage[backend=biber,style=ieee]{biblatex}
@@ -26,6 +32,21 @@
   {CAPÍTULO\ \thechapter.}                 % Numeración del capítulo
   {1em}
   {\MakeUppercase}                         % Título en mayúsculas
+
+% =================== CONFIGURACIÓN DE FLOTANTES ===================
+% Mejor control de posicionamiento de figuras y tablas
+\usepackage{float}
+\restylefloat{table}
+\restylefloat{figure}
+
+% Parámetros para controlar la flotación
+\setcounter{topnumber}{3}           % máximo 3 flotantes en la parte superior
+\setcounter{bottomnumber}{2}        % máximo 2 flotantes en la parte inferior  
+\setcounter{totalnumber}{4}         % máximo 4 flotantes por página
+\renewcommand{\topfraction}{0.8}    % máximo 80% de la página para flotantes superiores
+\renewcommand{\bottomfraction}{0.6} % máximo 60% de la página para flotantes inferiores
+\renewcommand{\textfraction}{0.1}   % mínimo 10% de la página debe ser texto
+\renewcommand{\floatpagefraction}{0.8} % umbral para páginas dedicadas solo a flotantes
 
 % =================== CONFIGURACIÓN DE ÍNDICE ===================
 % Mostrar hasta subsubsection (nivel 3) en la tabla de contenido
@@ -69,7 +90,8 @@ Texto de ejemplo para agradecimientos.
 \input{complementos/introduccion.tex}
 \input{capitulos/capitulo1}
 \input{capitulos/capitulo2.tex}
-\input{capitulos/capitulo3.tex}
+%\input{capitulos/capitulo3.tex}
+\input{capitulos/pruebas.tex}
 \input{capitulos/capitulo4.tex}
 \input{capitulos/capitulo5.tex}
 
