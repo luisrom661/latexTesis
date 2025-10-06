@@ -1,11 +1,17 @@
 {
   "latex-workshop.intellisense.citation.backend": "biblatex",
+  "cSpell.language": "es,en",
+  "cSpell.dictionaries": [
+    "es-es",
+    "en-us"
+  ],
   "cSpell.words": [
     "antipatrones",
     "autogestionados",
     "Basili",
     "CAFFEA",
     "Caldiera",
+    "chatbots",
     "cofacilitaría",
     "conceptualización",
     "conductuales",
@@ -47,9 +53,11 @@
     "subóptimo",
     "subóptimos",
     "tecnoestrés",
+    "TEÓRICO",
     "transactiva",
     "tríada",
     "visibilización",
+    "Xplore",
     "YOSHI"
   ]
 }
