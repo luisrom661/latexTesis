@@ -16,23 +16,23 @@ En este capítulo se presentan las bases conceptuales que sustentan la investiga
 
 La deuda social se describe como la acumulación de costos imprevistos, o potenciales costos, en proyectos de software generando así un conjunto de decisiones sociotécnicas deficientes que resultan de procesos de desarrollo subóptimos \cite{caballero2022communitysmells}. Dicho de otro modo, a medida que se toman decisiones erróneas de manera constante, los efectos negativos de la deuda social en los equipos de desarrollo de software se vuelven más pronunciados, y mientras estas malas decisiones persistan, sus efectos se intensificarán con el tiempo \cite{caballero2021thesis}. Este concepto, que proviene de la sociología —donde originalmente se usaba para explicar cómo las obligaciones sociales pueden afectar las relaciones interpersonales— ha sido adoptado por los investigadores en ingeniería de software para describir fenómenos similares dentro de los equipos de desarrollo y sus organizaciones \cite{caballero2022communitysmells}.
 
-\subsubsection{Analogía y distinción con la Deuda Técnica}
+\subsubsection{Analogía y distinción con la deuda técnica}
 La deuda social es, en muchos sentidos, análoga a la deuda técnica \cite{tamburri2015insights}. Ambas representan el estado de las organizaciones de software como resultado de decisiones acumuladas —que, si bien pueden ofrecer beneficios a corto plazo— generan un ``interés'' que se manifiesta como costos adicionales a medio y largo plazo \cite{martini2019agiledebt}. No obstante, existe una diferencia fundamental:
 \begin{itemize}
-\item La deuda técnica se centra en decisiones técnicas postergadas, como refactorizaciones de código o decisiones arquitectónicas que afectan la calidad del software \cite{caballero2022communitysmells}.
-\item En contraste, la deuda social se enfoca en decisiones sociotécnicas incorrectas que moldean el entorno de trabajo y que influyen directamente en el bienestar, las interacciones sociales y el rendimiento de los desarrolladores \cite{caballero2022communitysmells}, \cite{caballero2021thesis}. Por lo tanto, mientras la deuda técnica se ocupa de la parte técnica del software, la deuda social pone el foco en las ``personas''. Cabe señalar que, de forma recíproca, la deuda social puede ser una causa subyacente de la deuda técnica \cite{caballero2022communitysmells}, \cite{caballero2021thesis}.
+    \item La deuda técnica se centra en decisiones técnicas postergadas, como refactorizaciones de código o decisiones arquitectónicas que afectan la calidad del software \cite{caballero2022communitysmells}.
+    \item En contraste, la deuda social se enfoca en decisiones sociotécnicas incorrectas que moldean el entorno de trabajo y que influyen directamente en el bienestar, las interacciones sociales y el rendimiento de los desarrolladores \cite{caballero2022communitysmells}, \cite{caballero2021thesis}. Por lo tanto, mientras la deuda técnica se ocupa de la parte técnica del software, la deuda social pone el foco en las ``personas''. Cabe señalar que, de forma recíproca, la deuda social puede ser una causa subyacente de la deuda técnica \cite{caballero2022communitysmells}, \cite{caballero2021thesis}.
 \end{itemize}
 
-\subsubsection{``Community Smells''}
+\subsubsection{Community smells (olores comunitarios)}
 La acumulación de deuda social se inicia con una o más decisiones sociotécnicas equivocadas \cite{caballero2022communitysmells}. La presencia de ``community smells’’ (olores comunitarios) es un indicador clave de que algo no funciona correctamente dentro de los equipos \cite{caballero2022communitysmells}. Estos ``olores comunitarios’’ son, en esencia, antipatrones sociotécnicos \cite{caballero2022communitysmells}, definidos como ``conjuntos de circunstancias organizacionales y sociales, con relaciones causales implícitas’’ \cite{caballero2022communitysmells}, \cite{tamburri2015insights}. Cuando estos ``community smells'' persisten, se genera una acumulación de deuda social \cite{caballero2022communitysmells}. Las fuentes identificadas de estos ``olores’’ son diversas y se manifiestan a través de modelos de causa y efecto, por ejemplo:
 \begin{itemize}
-\item Decisiones inadecuadas de gestión de la información que resultan en una arquitectura por ósmosis, donde los desarrolladores no tienen acceso a información arquitectónica clave, lo que lleva a la frustración y al desperdicio de tiempo \cite{caballero2022communitysmells}.
-\item Problemas de coordinación de tareas en equipos aislados, conocidos como ``organizational silo’’, que dificultan la comunicación y la cooperación efectiva \cite{caballero2022communitysmells}.
-\item Comportamientos individuales desafiantes, como el ``lone wolf’’ —también conocido como ``Lobo solitario’’— donde un desarrollador trabaja de forma independiente sin comunicarse con sus compañeros, generando decisiones arquitectónicas no sancionadas y retrasos en el proyecto \cite{caballero2022communitysmells}.
-\item Estructuras organizacionales excesivamente formales o complejas que dan lugar al ``radio silence’’ o ``bottleneck’’, creando cuellos de botella en la comunicación y retrasos masivos. Estos ``community smells’’ impactan principalmente en las emociones, estresan las interacciones sociales, afectan el rendimiento del equipo y disminuyen la calidad del software \cite{caballero2022communitysmells}.
+    \item Decisiones inadecuadas de gestión de la información que resultan en una arquitectura por ósmosis, donde los desarrolladores no tienen acceso a información arquitectónica clave, lo que lleva a la frustración y al desperdicio de tiempo \cite{caballero2022communitysmells}.
+    \item Problemas de coordinación de tareas en equipos aislados, conocidos como ``organizational silo’’, que dificultan la comunicación y la cooperación efectiva \cite{caballero2022communitysmells}.
+    \item Comportamientos individuales desafiantes, como el ``lone wolf’’ —también conocido como ``Lobo solitario’’— donde un desarrollador trabaja de forma independiente sin comunicarse con sus compañeros, generando decisiones arquitectónicas no sancionadas y retrasos en el proyecto \cite{caballero2022communitysmells}.
+    \item Estructuras organizacionales excesivamente formales o complejas que dan lugar al ``radio silence’’ o ``bottleneck’’, creando cuellos de botella en la comunicación y retrasos masivos. Estos ``community smells’’ impactan principalmente en las emociones, estresan las interacciones sociales, afectan el rendimiento del equipo y disminuyen la calidad del software \cite{caballero2022communitysmells}.
 \end{itemize}
 
-\subsubsection{El Impacto de la deuda social en el entorno ágil}
+\subsubsection{El impacto de la deuda social en el entorno ágil}
 La deuda social tiene un impacto profundo y multifacético en los equipos de desarrollo ágil y sus organizaciones \cite{caballero2022communitysmells}. Entre las consecuencias más notables se incluyen:
 \begin{itemize}
     \item Reacciones humanas adversas y un deterioro del bienestar de los individuos \cite{caballero2022communitysmells}.
@@ -85,7 +85,7 @@ Adicionalmente, las fuentes identifican causas directas de esta resistencia, com
 
 % ------- SECCIÓN 4: SÍNDROME DE BURNOUT -------
 
-\subsection{Síndrome de Burnout como síntoma de deuda social}
+\subsection{Síndrome de Burnout}
 
 El Síndrome de Burnout, descrito inicialmente en 1974 por el psicólogo Herbert Freudenberger \cite{tulili2022burnout}, es un síndrome relacionado con el trabajo que se manifiesta como agotamiento emocional, despersonalización, sobrecarga laboral y una percepción de escasez de logros personales \cite{tulili2022burnout}. Como bien señalan las investigaciones, su alcance trasciende ámbitos específicos —arquitectura, sector educativo, administración pública o ventas— \cite{tulili2022burnout}, para manifestarse como un fenómeno epidémico en entornos STEM (Science, Technology, Engineering y Mathematics). Dicho de otro modo, su omnipresencia y sus repercusiones son un factor crítico que obstaculiza el avance profesional y subyace al estrés laboral en los diversos campos en general \cite{tulili2022burnout}.
 En la ingeniería de software (SE) y, sobre todo con respecto a la deuda social, el burnout no es una excepción. De hecho, informes recientes, especialmente tras la pandemia de COVID-19, han puesto de manifiesto que más del 80\% de los desarrolladores encuestados han experimentado o están experimentando alguna forma de burnout \cite{tulili2022burnout}. La Organización Mundial de la Salud (OMS) ha clasificado el burnout como un fenómeno ocupacional en las ediciones 10ª y 11ª de la Clasificación Internacional de Enfermedades (ICD-10, ICD-11), lo que intensifica su gravedad y el reconocimiento de su impacto en la salud mental en el ámbito laboral \cite{tulili2022burnout}.
@@ -133,26 +133,26 @@ Para una visión sinóptica de estas herramientas y marcos, la siguiente tabla r
 
 \tiny
 \begin{longtable}{@{}p{0.6cm} p{2cm} p{2cm} p{4.7cm} p{6.5cm}@{}}
-\caption{Herramientas y marcos para la gestión de la deuda social en el desarrollo de software}
+    \caption{Herramientas y marcos para la gestión de la deuda social en el desarrollo de software}
 
-\\ \toprule
-\textbf{No.} & \textbf{Modelos} & \textbf{Tipo} & \textbf{Enfoque} & \textbf{Contribución a la DNT/DS} \\
-\midrule
-\endfirsthead
+    \\ \toprule
+    \textbf{No.} & \textbf{Modelos} & \textbf{Tipo} & \textbf{Enfoque}                                                                           & \textbf{Contribución a la DNT/DS}                                                                                                                                                                                               \\
+    \midrule
+    \endfirsthead
 
-\toprule
-\textbf{No.} & \textbf{Modelos} & \textbf{Tipo} & \textbf{Enfoque} & \textbf{Contribución a la DNT/DS} \\
-\midrule
-\endhead
+    \toprule
+    \textbf{No.} & \textbf{Modelos} & \textbf{Tipo} & \textbf{Enfoque}                                                                           & \textbf{Contribución a la DNT/DS}                                                                                                                                                                                               \\
+    \midrule
+    \endhead
 
-1 & GEEZMO & Herramienta & Monitoreo del estado de ánimo y el bienestar de los miembros del equipo & Alerta temprana sobre circunstancias que afectan el ambiente de trabajo, previniendo la acumulación de deuda social al abordar problemas interpersonales \cite{saeeda2024nontechnicaldebt}. \\
-2 & CAFFEA & Marco & Organización de responsabilidades arquitectónicas en la estructura de la empresa & Revela puntos débiles en la estructura social de la organización, lo que ayuda a prevenir la deuda social y a reducir la deuda técnica arquitectónica (DTA) \cite{martini2017caffea}. \\
-3 & CodeFace4Smell & Herramienta & Detección de ``olores comunitarios'' específicos (ej., silos, lobo solitario) & Identifica anomalías sociotécnicas que impactan negativamente la comunicación y colaboración del equipo, lo que previene la acumulación de deuda social \cite{caballero2022communitysmells}, \cite{saeeda2024nontechnicaldebt}. \\
-4 & DAHLIA & Marco & Cuantificación de la incomunicabilidad en las decisiones arquitectónicas & Mide el costo monetario de la deuda social derivada de la falta de comunicación de decisiones arquitectónicas, permitiendo su gestión explícita \cite{caballero2022communitysmells}, \cite{tamburri2019software}. \\
-5 & YOSHI & Herramienta & Identificación y caracterización de tipos de comunidades de ingeniería de software & Monitorea las características de las comunidades para detectar posibles problemas sociales y organizacionales que podrían generar ``olores comunitarios'' \cite{caballero2022communitysmells}, \cite{maelstromdat2014yoshi}. \\
-6 & csDetector & Herramienta & Permite la detección automática de ``olores comunitarios'' mediante aprendizaje automático & Identifica problemas organizacionales y sociales que afectan la calidad del software, ayudando a mitigar la deuda social en proyectos colaborativos \cite{almarimi2021csDetector}. \\
+    1            & GEEZMO           & Herramienta   & Monitoreo del estado de ánimo y el bienestar de los miembros del equipo                    & Alerta temprana sobre circunstancias que afectan el ambiente de trabajo, previniendo la acumulación de deuda social al abordar problemas interpersonales \cite{saeeda2024nontechnicaldebt}.                                     \\
+    2            & CAFFEA           & Marco         & Organización de responsabilidades arquitectónicas en la estructura de la empresa           & Revela puntos débiles en la estructura social de la organización, lo que ayuda a prevenir la deuda social y a reducir la deuda técnica arquitectónica (DTA) \cite{martini2017caffea}.                                           \\
+    3            & CodeFace4Smell   & Herramienta   & Detección de ``olores comunitarios'' específicos (ej., silos, lobo solitario)              & Identifica anomalías sociotécnicas que impactan negativamente la comunicación y colaboración del equipo, lo que previene la acumulación de deuda social \cite{caballero2022communitysmells}, \cite{saeeda2024nontechnicaldebt}. \\
+    4            & DAHLIA           & Marco         & Cuantificación de la incomunicabilidad en las decisiones arquitectónicas                   & Mide el costo monetario de la deuda social derivada de la falta de comunicación de decisiones arquitectónicas, permitiendo su gestión explícita \cite{caballero2022communitysmells}, \cite{tamburri2019software}.               \\
+    5            & YOSHI            & Herramienta   & Identificación y caracterización de tipos de comunidades de ingeniería de software         & Monitorea las características de las comunidades para detectar posibles problemas sociales y organizacionales que podrían generar ``olores comunitarios'' \cite{caballero2022communitysmells}, \cite{maelstromdat2014yoshi}.    \\
+    6            & csDetector       & Herramienta   & Permite la detección automática de ``olores comunitarios'' mediante aprendizaje automático & Identifica problemas organizacionales y sociales que afectan la calidad del software, ayudando a mitigar la deuda social en proyectos colaborativos \cite{almarimi2021csDetector}.                                              \\
 
-\bottomrule
+    \bottomrule
 \end{longtable}
 \normalsize
 \end{comment}
@@ -166,11 +166,88 @@ Scrum es un marco de trabajo que ayuda a las personas, equipos y organizaciones 
 En el siguiente capítulo entraremos a definir a fondo cómo Scrum puede ser adaptado para abordar la deuda social. Sin embargo, es importante destacar que Scrum, en su esencia, no está diseñado específicamente para gestionar la deuda social. No obstante, su estructura y principios pueden ser adaptados para abordar este tipo de deuda de manera efectiva. Por ejemplo, los eventos de Scrum, como las reuniones diarias y las retrospectivas del Sprint, pueden ser utilizados para identificar y discutir problemas relacionados con la deuda social. Además, el rol del Scrum Master puede ser clave en la facilitación de la comunicación y colaboración entre los miembros del equipo, lo que puede ayudar a mitigar la deuda social \cite{schwaber2020scrum}.
 
 \section{Trabajos relacionados}
-A continuación, se presentan algunos hallazgos documentados en la Revisión Sistemática de la Literatura (RSL), que identifican las brechas existentes, los objetivos del proyecto y los aportes encontrados. La RSL se llevó a cabo siguiendo el protocolo detallado en [12] y [13], que incluye las siguientes actividades: (i) aplicación del enfoque GQM (Goal-Question-Metric), (ii) definición de la estrategia de búsqueda y selección, (iii) realización de la revisión, y (iv) elaboración del informe de la revisión. La RSL completa está disponible en el Anexo A. Este proceso se realizó con el objetivo de recopilar y categorizar la información existente sobre el tema de investigación.
-Para llevar a cabo la RSL, se utilizaron herramientas tecnológicas de inteligencia artificial, como ChatGPT [14] y Microsoft Copilot [15], con el objetivo de obtener diversas formas de definir un mismo concepto y construir la cadena de búsqueda básica. Los documentos a menudo presentan temas de manera dispersa y poco clara, lo que puede generar sesgos y dudas. En este contexto, los chatbots con inteligencia artificial (CIA) resultaron ser recursos valiosos, ya que, mediante prompts específicos, permitieron iniciar conversaciones y obtener información más precisa. A partir de los términos identificados con la ayuda de los CIA, se definió una versión inicial de la cadena de búsqueda básica: “social debt” OR “social software engineering” AND “agile software development” OR “software development teams”. 
+A continuación, se presentan algunos hallazgos documentados en la Revisión Sistemática de la Literatura (RSL) realizada por **nosotros**, que identifican las brechas existentes, los objetivos del proyecto y los aportes encontrados. La RSL se llevó a cabo siguiendo el protocolo detallado en \cite{jalali2012systematic} y \cite{palomba2021communitysmells}, que incluye las siguientes actividades: (i) aplicación del enfoque GQM (Goal-Question-Metric) \cite{caldiera1994gqm} y el marco de trabajo S.M.A.R.T (Specific, Measurable, Achievable, Realistic, Time-bound) \cite{Doran1981}, (ii) definición de la estrategia de búsqueda y selección, (iii) realización de la revisión, y (iv) elaboración del informe de la revisión. La RSL completa está disponible en el Anexo A. Este proceso se realizó con el objetivo de recopilar y categorizar la información existente sobre el tema de investigación. A continuación, en la figura \ref{fig:smart-gqm} se puede observar la secuencia de actividades realizadas para la RSL:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{recursos/smart-gqm.png}
+    \caption{Secuencia de actividades realizadas para la RSL}
+    \label{fig:smart-gqm}
+\end{figure}
+
+\subsection{Protocolo de investigación}
+Para llevar a cabo la RSL, se utilizaron herramientas tecnológicas de inteligencia artificial, como ChatGPT \cite{openai2022chatgpt} y Microsoft Copilot \cite{microsoft2023copilot}, con el objetivo de obtener diversas formas de definir un mismo concepto y construir la cadena de búsqueda básica. Los documentos a menudo presentan temas de manera dispersa y poco clara, lo que puede generar sesgos y dudas. En este contexto, los chatbots con inteligencia artificial (CIA) resultaron ser recursos valiosos, ya que, mediante prompts específicos, permitieron iniciar conversaciones y obtener información más precisa. A partir de los términos identificados con la ayuda de los CIA, se definió una versión inicial de la cadena de búsqueda básica: “social debt” OR “social software engineering” AND “agile software development” OR “software development teams”.
 Posteriormente, se seleccionó Google Scholar como la base de datos principal para obtener información o estudios relacionados. Esta elección se basó en varias razones:
-1.	Amplia cobertura: Google Scholar indexa una gran variedad de fuentes académicas, incluyendo artículos, tesis, libros y conferencias, lo que permite ac-ceder a una amplia gama de literatura relevante.
-2.	Accesibilidad: Es una herramienta de acceso abierto y gratuito, lo que facilita su uso para investigadores con recursos limitados.
-3.	Relevancia: Google Scholar utiliza algoritmos que priorizan artículos altamente citados y relevantes, lo que ayuda a identificar estudios influyentes en el campo de la deuda social y el desarrollo ágil.
-4.	Integración con otras bases de datos: Aunque Google Scholar fue la base principal, también se complementó con otras bases de datos especializadas, como IEEE Xplore, SpringerLink y Science Direct, para asegurar una revisión exhaustiva.
-La búsqueda manual reveló que las frases clave “social debt” y “agile software development” eran esenciales para definir la cadena de búsqueda básica. Por esta razón, se decidió utilizar el conector lógico “AND” para unir estas dos frases, ya que los artículos relevantes para la investigación las mencionaban conjuntamente. De esta manera, la cadena de búsqueda básica: “social debt” AND “agile software development” se aplicó inicialmente a seis bases de datos científicas: Google Scholar, IEEE Xplore, SpringerLink y Science Direct, como se observa en la Tabla 1.
+\begin{itemize}
+    \item Amplia cobertura: Google Scholar indexa una gran variedad de fuentes académicas, incluyendo artículos, tesis, libros y conferencias, lo que permite acceder a una amplia gama de literatura relevante.
+    \item Accesibilidad: Es una herramienta de acceso abierto y gratuito, lo que facilita su uso para investigadores con recursos limitados.
+    \item Relevancia: Google Scholar utiliza algoritmos que priorizan artículos altamente citados y relevantes, lo que ayuda a identificar estudios influyentes en el campo de la deuda social y el desarrollo ágil.
+    \item Integración con otras bases de datos: Aunque Google Scholar fue la base principal, también se complementó con otras bases de datos especializadas, como IEEE Xplore, SpringerLink y Science Direct, para asegurar una revisión exhaustiva.
+\end{itemize}
+La búsqueda manual reveló que las frases clave “social debt” y “agile software development” eran esenciales para definir la cadena de búsqueda básica. Por esta razón, se decidió utilizar el conector lógico “AND” para unir estas dos frases, ya que los artículos relevantes para la investigación las mencionaban conjuntamente. De esta manera, la cadena de búsqueda básica: “social debt” AND “agile software development” se aplicó inicialmente a seis bases de datos científicas: Google Scholar, IEEE Xplore, SpringerLink y Science Direct, como se observa en la Tabla \ref{tab:cadenas-busqueda}.
+
+\begin{table}[H]
+    \centering
+    \caption{Cadenas de búsqueda utilizadas en la revisión sistemática}
+    \label{tab:cadenas-busqueda}
+    \begin{tabularx}{\textwidth}{@{}c X l l@{}}
+        \toprule
+        \textbf{No.} & \textbf{Cadena de búsqueda}                                                      & \textbf{Fuente} & \textbf{Estado} \\
+        \midrule
+        1            & “social debt” AND “agile software development”                                   & Google Scholar  & Incluida        \\
+        2            & (“Full Text Only”:social debt) AND (“Full Text Only”:agile software development) & IEEE Xplore     & Incluida        \\
+        3            & ‘‘social debt’ AND ‘agile software development’’                                 & SpringerLink    & Incluida        \\
+        4            & ‘social debt’ AND ‘agile software development’                                   & Science Direct  & Incluida        \\
+        \bottomrule
+    \end{tabularx}
+    \smallskip
+    \raggedright
+    \textit{Acrónimos utilizados: Identificador (No).}
+\end{table}
+
+La cadena de búsqueda se aplicó a una ventana de tiempo desde 2013 hasta 2024, adaptándose a los filtros y parámetros específicos de cada motor de búsqueda. Tras realizar las modificaciones necesarias a la cadena de búsqueda básica, se inició la búsqueda en cada motor. La Tabla \ref{tab:resultados-busqueda} muestra el total de artículos encontrados, relevantes, repetidos y primarios.
+
+\begin{table}[H]
+    \centering
+    \caption{Resultados por motor de búsqueda en la revisión sistemática}
+    \label{tab:resultados-busqueda}
+    \begin{tabularx}{\textwidth}{@{}c p{2.0cm} c c >{\centering\arraybackslash}p{2.0cm} >{\centering\arraybackslash}p{4.0cm}@{}}
+        \toprule
+        \textbf{No.}   & \textbf{Motor de búsqueda} & \textbf{Encontrados} & \textbf{Relevantes} & \textbf{Relevantes repetidos} & \textbf{Primarios seleccionados} \\
+        \midrule
+        1              & Google Scholar             & 130                  & 15                  & 0                  & 8                  \\
+        2              & IEEE Xplore                & 28                   & 3                   & 0                  & 0                  \\
+        3              & Science Direct             & 5                    & 0                   & 0                  & 0                  \\
+        4              & SpringerLink               & 35                   & 2                   & 0                  & 0                  \\
+        \midrule
+        \textbf{Total} &                            & \textbf{198}         & \textbf{20}         & \textbf{0}         & \textbf{8}         \\
+        \bottomrule
+    \end{tabularx}
+    \smallskip
+    \raggedright
+    \textit{Acrónimos utilizados: Identificador (No).}
+\end{table}
+
+En la Tabla \ref{tab:preguntas-investigacion} se presentan las preguntas de investigación definidas que ayudaron a segmentar la información identificada en los artículos primarios, su motivación y la relación que tienen con los objetivos propuestos en la RSL. Debido a la limitación de espacio, la RSL se puede consultar en detalle en el Anexo A.
+
+\begin{table}[H]
+    \centering
+    \caption{Preguntas de investigación definidas}
+    \label{tab:preguntas-investigacion}
+    \begin{tabularx}{\textwidth}{@{}c p{7.0cm} p{7.0cm}@{}}
+        \toprule
+        \textbf{Id.} & \textbf{Pregunta de investigación} & \textbf{Motivación} \\
+        \midrule
+        PI1 & ¿Cuáles son los estudios primarios más citados que han proporcionado según la evidencia aportes importantes e influyentes en el contexto de la gestión de la deuda social en el desarrollo de software ágil? & Identificar y evaluar los estudios fundamentales que han tenido un impacto significativo en el campo de la gestión de la deuda social en el desarrollo de software ágil. \\
+        PI2 & ¿Cuál es la distribución de tiempo de publicación de los estudios primarios relevantes con respecto a la deuda social en el desarrollo de software ágil? & Comprender cómo ha evolucionado el interés y el cono-cimiento sobre la deuda social en el contexto del desarrollo de software ágil a lo largo del tiempo. \\
+        PI3 & ¿Cuáles son las investigaciones o propuestas desarrolladas cuya idea central sea la gestión de la deuda social en el desarrollo de software ágil hasta la fecha? & Identificar y analizar las contribuciones académicas y propuestas prácticas que se han centrado específicamente en la gestión de la deuda social en el desarrollo de software ágil. \\
+        PI4 & ¿Cuáles son los principales desafíos y oportunidades para la investigación futura sobre la deuda social en el desarrollo de software ágil? & Identificar las barreras y las posibles áreas de crecimiento en el estudio de la deuda social en el desarrollo de software ágil. \\
+        PI5 & ¿Cuáles son las practicas o enfoques que abordan de manera exitosa la gestión de la deuda social en el desarrollo de software ágil? & Identificar y evaluar las prácticas y enfoques que han demostrado ser efectivos en la gestión de la deuda social dentro de proyectos de desarrollo de software ágil. \\
+        \bottomrule
+    \end{tabularx}
+    \smallskip
+    \raggedright
+    \textit{Acrónimos utilizados: Identificador (Id.), Pregunta de investigación (PI).}
+\end{table}
+
+----- EN PROCESO -----

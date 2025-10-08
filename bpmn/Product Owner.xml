@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  id="Defs_PO" targetNamespace="http://example.com/socialscrum/po">
+
+  <bpmn:message id="MSG_SIGNALS_DAILY" name="Señales Sociales Diarias (SG→PO)"/>
+  <bpmn:message id="MSG_REVIEW_INVITE" name="Invitación Review (SM→PO)"/>
+  <bpmn:message id="MSG_SPRINT_KICKOFF" name="Sprint Kickoff (PO→SM)"/>
+
+  <bpmn:collaboration id="Collab_PO">
+    <bpmn:participant id="Part_PO" name="Product Owner" processRef="Proc_PO"/>
+    <bpmn:participant id="Part_SM" name="Scrum Master"/>
+    <bpmn:participant id="Part_SG" name="Social Guide"/>
+    <bpmn:participant id="Part_DEV" name="Developers"/>
+
+    <bpmn:messageFlow id="MF_Kickoff_PO_SM" sourceRef="Task_PO_AnunciarKickoff" targetRef="Part_SM" messageRef="MSG_SPRINT_KICKOFF"/>
+    <bpmn:messageFlow id="MF_Signals_PO" sourceRef="Ev_RecibirSenales" targetRef="Part_SG" messageRef="MSG_SIGNALS_DAILY"/>
+    <bpmn:messageFlow id="MF_ReviewInvite_PO" sourceRef="Ev_InvitacionReview" targetRef="Part_SM" messageRef="MSG_REVIEW_INVITE"/>
+  </bpmn:collaboration>
+
+  <bpmn:process id="Proc_PO" name="Gestión del Valor Social (PO)" isExecutable="false">
+    <bpmn:startEvent id="Ev_Start" name="Preparación de Sprint"/>
+
+    <bpmn:dataStoreReference id="DS_PB_Social" name="Product Backlog Social"/>
+    <bpmn:userTask id="Task_PO_Priorizar" name="Priorizar/ordenar PB Social"/>
+    <bpmn:association id="Assoc_PB" sourceRef="Task_PO_Priorizar" targetRef="DS_PB_Social"/>
+
+    <bpmn:userTask id="Task_PO_DefObjetivo" name="Definir Objetivo + Riesgos Sociales"/>
+    <bpmn:textAnnotation id="Note_Obj"><bpmn:text>Objetivo alineado con impacto social esperado</bpmn:text></bpmn:textAnnotation>
+    <bpmn:association id="Assoc_Obj" sourceRef="Task_PO_DefObjetivo" targetRef="Note_Obj"/>
+
+    <bpmn:exclusiveGateway id="GW_Capacidad" name="¿Capacidad/alcance válido?"/>
+    <bpmn:userTask id="Task_PO_Rescope" name="Repriorizar/Rescope (reduce alcance)"/>
+
+    <bpmn:sendTask id="Task_PO_AnunciarKickoff" name="Anunciar Sprint a SM">
+      <bpmn:messageRef>MSG_SPRINT_KICKOFF</bpmn:messageRef>
+    </bpmn:sendTask>
+
+    <!-- DURANTE EL SPRINT -->
+    <bpmn:receiveTask id="Ev_RecibirSenales" name="Recibir señales SG">
+      <bpmn:messageRef>MSG_SIGNALS_DAILY</bpmn:messageRef>
+    </bpmn:receiveTask>
+    <bpmn:exclusiveGateway id="GW_Ajuste" name="¿Ajustar PB/Riesgos?"/>
+    <bpmn:userTask id="Task_PO_Ajustar" name="Actualizar PB Social / Riesgos"/>
+
+    <!-- REVIEW -->
+    <bpmn:receiveTask id="Ev_InvitacionReview" name="Invitación Review (SM)">
+      <bpmn:messageRef>MSG_REVIEW_INVITE</bpmn:messageRef>
+    </bpmn:receiveTask>
+    <bpmn:userTask id="Task_PO_Review" name="Participar en Sprint Review Social"/>
+    <bpmn:userTask id="Task_PO_Roadmap" name="Actualizar Roadmap Social"/>
+    <bpmn:endEvent id="Ev_End" name="Cierre / Próximo Sprint"/>
+
+    <!-- EVENT SUB-PROCESS: CAMBIO URGENTE STAKEHOLDER -->
+    <bpmn:subProcess id="ESP_UrgenciaStake" name="Cambio urgente de stakeholder" triggeredByEvent="true">
+      <bpmn:startEvent id="EvSub_Urgencia" name="Condición: cambio crítico">
+        <bpmn:conditionalEventDefinition/>
+      </bpmn:startEvent>
+      <bpmn:userTask id="Task_PO_Negociar" name="Negociar alcance/tiempos"/>
+      <bpmn:endEvent id="EvSub_Urgencia_End"/>
+      <bpmn:sequenceFlow id="F_ES1" sourceRef="EvSub_Urgencia" targetRef="Task_PO_Negociar"/>
+      <bpmn:sequenceFlow id="F_ES2" sourceRef="Task_PO_Negociar" targetRef="EvSub_Urgencia_End"/>
+    </bpmn:subProcess>
+
+    <!-- FLUJO -->
+    <bpmn:sequenceFlow id="F1" sourceRef="Ev_Start" targetRef="Task_PO_Priorizar"/>
+    <bpmn:sequenceFlow id="F2" sourceRef="Task_PO_Priorizar" targetRef="Task_PO_DefObjetivo"/>
+    <bpmn:sequenceFlow id="F3" sourceRef="Task_PO_DefObjetivo" targetRef="GW_Capacidad"/>
+    <bpmn:sequenceFlow id="F4" sourceRef="GW_Capacidad" targetRef="Task_PO_Rescope">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${false}]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="F5" sourceRef="Task_PO_Rescope" targetRef="Task_PO_DefObjetivo"/>
+    <bpmn:sequenceFlow id="F6" sourceRef="GW_Capacidad" targetRef="Task_PO_AnunciarKickoff">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${true}]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+
+    <bpmn:sequenceFlow id="F7" sourceRef="Task_PO_AnunciarKickoff" targetRef="Ev_RecibirSenales"/>
+    <bpmn:sequenceFlow id="F8" sourceRef="Ev_RecibirSenales" targetRef="GW_Ajuste"/>
+    <bpmn:sequenceFlow id="F9" sourceRef="GW_Ajuste" targetRef="Task_PO_Ajustar">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${true}]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="F10" sourceRef="Task_PO_Ajustar" targetRef="Ev_InvitacionReview"/>
+    <bpmn:sequenceFlow id="F11" sourceRef="GW_Ajuste" targetRef="Ev_InvitacionReview">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${false}]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+
+    <bpmn:sequenceFlow id="F12" sourceRef="Ev_InvitacionReview" targetRef="Task_PO_Review"/>
+    <bpmn:sequenceFlow id="F13" sourceRef="Task_PO_Review" targetRef="Task_PO_Roadmap"/>
+    <bpmn:sequenceFlow id="F14" sourceRef="Task_PO_Roadmap" targetRef="Ev_End"/>
+  </bpmn:process>
+
+  <!-- DI -->
+  <bpmndi:BPMNDiagram id="DI_PO">
+    <bpmndi:BPMNPlane id="Plane_PO" bpmnElement="Collab_PO">
+      <bpmndi:BPMNShape id="DI_Part_PO" bpmnElement="Part_PO" isHorizontal="true"><dc:Bounds x="160" y="60" width="1720" height="330"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_Part_SM" bpmnElement="Part_SM" isHorizontal="true"><dc:Bounds x="160" y="400" width="1720" height="70"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_Part_SG" bpmnElement="Part_SG" isHorizontal="true"><dc:Bounds x="160" y="480" width="1720" height="70"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_Part_DEV" bpmnElement="Part_DEV" isHorizontal="true"><dc:Bounds x="160" y="560" width="1720" height="70"/></bpmndi:BPMNShape>
+
+      <!-- Nodes -->
+      <bpmndi:BPMNShape id="DI_EvStart" bpmnElement="Ev_Start"><dc:Bounds x="190" y="200" width="36" height="36"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_TaskPriorizar" bpmnElement="Task_PO_Priorizar"><dc:Bounds x="250" y="180" width="280" height="60"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_TaskDef" bpmnElement="Task_PO_DefObjetivo"><dc:Bounds x="550" y="180" width="310" height="60"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_GWCap" bpmnElement="GW_Capacidad"><dc:Bounds x="880" y="198" width="40" height="40"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_TaskRescope" bpmnElement="Task_PO_Rescope"><dc:Bounds x="840" y="260" width="220" height="60"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_TaskKick" bpmnElement="Task_PO_AnunciarKickoff"><dc:Bounds x="950" y="180" width="250" height="60"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_EvRecSig" bpmnElement="Ev_RecibirSenales"><dc:Bounds x="1220" y="196" width="36" height="36"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_GWAjuste" bpmnElement="GW_Ajuste"><dc:Bounds x="1270" y="198" width="40" height="40"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_TaskAjustar" bpmnElement="Task_PO_Ajustar"><dc:Bounds x="1330" y="260" width="250" height="60"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_EvInv" bpmnElement="Ev_InvitacionReview"><dc:Bounds x="1610" y="196" width="36" height="36"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_TaskReview" bpmnElement="Task_PO_Review"><dc:Bounds x="1660" y="180" width="240" height="60"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_TaskRoadmap" bpmnElement="Task_PO_Roadmap"><dc:Bounds x="1910" y="180" width="260" height="60"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_End" bpmnElement="Ev_End"><dc:Bounds x="2180" y="196" width="36" height="36"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_DS_PB" bpmnElement="DS_PB_Social"><dc:Bounds x="280" y="250" width="55" height="40"/></bpmndi:BPMNShape>
+
+      <!-- Edges -->
+      <bpmndi:BPMNEdge id="E_F1" bpmnElement="F1"><di:waypoint x="226" y="218"/><di:waypoint x="250" y="210"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_F2" bpmnElement="F2"><di:waypoint x="530" y="210"/><di:waypoint x="550" y="210"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_F3" bpmnElement="F3"><di:waypoint x="860" y="210"/><di:waypoint x="880" y="218"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_F4" bpmnElement="F4"><di:waypoint x="900" y="238"/><di:waypoint x="900" y="260"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_F5" bpmnElement="F5"><di:waypoint x="1060" y="290"/><di:waypoint x="1020" y="210"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_F6" bpmnElement="F6"><di:waypoint x="900" y="218"/><di:waypoint x="950" y="210"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_F7" bpmnElement="F7"><di:waypoint x="1200" y="210"/><di:waypoint x="1220" y="214"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_F8" bpmnElement="F8"><di:waypoint x="1256" y="214"/><di:waypoint x="1270" y="218"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_F9" bpmnElement="F9"><di:waypoint x="1290" y="238"/><di:waypoint x="1330" y="290"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_F10" bpmnElement="F10"><di:waypoint x="1580" y="290"/><di:waypoint x="1610" y="214"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_F11" bpmnElement="F11"><di:waypoint x="1290" y="218"/><di:waypoint x="1610" y="214"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_F12" bpmnElement="F12"><di:waypoint x="1646" y="214"/><di:waypoint x="1660" y="210"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_F13" bpmnElement="F13"><di:waypoint x="1900" y="210"/><di:waypoint x="1910" y="210"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_F14" bpmnElement="F14"><di:waypoint x="2170" y="210"/><di:waypoint x="2180" y="214"/></bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

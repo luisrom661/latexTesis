@@ -68,14 +68,15 @@
 
 % =================== DOCUMENTO ===================
 \begin{document}
-
+\pagenumbering{roman}
 % --------- PORTADA ---------
 \input{complementos/portadas.tex}
 
 % --------- AGRADECIMIENTOS ---------
-\chapter*{Agradecimientos}
-\vspace{1em}
-Texto de ejemplo para agradecimientos.
+\input{complementos/agradecimientos-luis.tex}
+\input{complementos/agradecimientos-santiago.tex}
+\input{complementos/resumen}
+\input{complementos/abstract}
 
 % --------- TABLA DE CONTENIDO Y LISTAS ---------
 \renewcommand{\contentsname}{TABLA DE CONTENIDO}
@@ -83,11 +84,14 @@ Texto de ejemplo para agradecimientos.
 \clearpage
 
 \listoffigures
+\renewcommand{\listtablename}{ÍNDICE DE TABLAS}
+\renewcommand{\tablename}{Tabla}
 \listoftables
 \clearpage
 
 % =================== CONTENIDO ===================
-\input{complementos/resumen}
+\pagenumbering{arabic}
+
 \input{capitulos/capitulo1.tex}
 \input{capitulos/capitulo2.tex}
 \input{capitulos/capitulo3.tex}

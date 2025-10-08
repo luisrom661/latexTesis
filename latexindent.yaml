@@ -1,0 +1,31 @@
+# Configuración básica de latexindent para formateo seguro (sin reflujo de líneas)
+# Referencia: latexindent (https://ctan.org/pkg/latexindent)
+
+# Indenta también el preámbulo
+indentPreamble: 1
+
+# Indentación por defecto: 2 espacios
+defaultIndent: '  '
+
+# No realinear delimitadores automáticamente
+lookForAlignDelims:
+  alignDelims: 0
+
+# No reenvolver texto; mantener saltos de línea existentes
+modifyLineBreaks:
+  textWrapOptions:
+    columns: 0  # 0 desactiva el ajuste de texto
+  oneSentencePerLine: 0
+
+# No eliminar espacios finales para evitar cambios ruidosos
+removeTrailingWhitespace: 0
+
+# Preservar líneas en blanco y comentarios
+preserveBlankLines: 1
+
+# No tocar contenido dentro de entornos verbatim/listings
+verbatimEnvironments:
+  Verbatim: 1
+  verbatim: 1
+  lstlisting: 1
+  minted: 1

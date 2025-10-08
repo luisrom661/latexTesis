@@ -1,6 +1,16 @@
 \chapter*{CAPÍTULO 1. INTRODUCCIÓN}
-\addcontentsline{toc}{chapter}{\MakeUppercase{CAPÍTULO 1. INTRODUCCIÓN}}
+\addcontentsline{toc}{chapter}{CAPÍTULO 1. INTRODUCCIÓN}
+\setcounter{chapter}{1}
+\setcounter{section}{0}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
 
+En este capítulo se explica, paso a paso, cuál es el problema que se aborda en la investigación, qué objetivos se buscan alcanzar y cuál fue el método que se usó para hacerlo posible. Además, se presenta cómo está organizado el resto del documento para que el lector tenga una idea clara de su estructura y del camino que sigue el trabajo.
+
+\section{Planteamiento del problema}
 El término “deuda social” se acuñó por primera vez hace más de 50 años \cite{muir1962socialdebt}, con un enfoque económico para explicar las obligaciones sociales derivadas del intercambio de favores entre personas en una transacción, es decir, entre acreedores y deudores. En otras palabras, cuanto mayor sea el número de relaciones tensas, mayor será la deuda social \cite{caballero2022communitysmells}. Sin embargo, este concepto no se limita a aspectos económicos, ya que su estudio se ha extendido a otros ámbitos, como el desarrollo de software \cite{caballero2022communitysmells}. En este contexto, la deuda social se refiere a las obligaciones pendientes que afectan la calidad, la colaboración y el bienestar en los proyectos de desarrollo \cite{caballero2022communitysmells} \cite{tamburri2013socialdebt}. En esencia, la deuda social encapsula las repercusiones no técnicas derivadas de decisiones apresuradas o inadecuadas en la gestión de equipos y proyectos, lo que impacta negativamente en la cultura organizacional, la comunicación interna, el bienestar del equipo y, en última instancia, en el éxito del proyecto.
 La deuda social puede compararse con un “Leviatán”, un término que evoca la imagen de un monstruo poderoso y temible que crece de manera progresiva y silenciosa, volviéndose cada vez más difícil de ignorar. En el contexto del desarrollo de software, este “Leviatán” representa la acumulación de obligaciones pendientes y tensiones interpersonales que surgen de decisiones apresuradas o inadecuadas en la gestión de equipos y proyectos. Este fenómeno genera un daño colateral que afecta a toda la estructura jerárquica de desarrollo, causando costos y deudas en múltiples aspectos \cite{caballero2022communitysmells}. Uno de los pilares fundamentales de una organización de desarrollo de software, el talento humano, se ve directamente impactado por la deuda social. Las afectaciones se manifiestan sin importar el cargo o función de una persona, evidenciándose principalmente en su rendimiento y calidad de trabajo, los cuales dependen de un estado de bienestar mental y físico, así como de un ambiente laboral justo y motivador \cite{caballero2022communitysmells}. Una mala gestión de estos factores es la causa principal de la alta rotación de personal, la toma de decisiones erróneas y la entrega de productos de baja calidad.
 La deuda social surge principalmente cuando se priorizan objetivos a corto plazo, como cumplir con fechas de entrega ajustadas, reducir costos operativos de manera indiscriminada o incorporar requisitos imprevistos en la planificación estratégica inicial, sacrificando las buenas prácticas de gestión y deteriorando las relaciones interpersonales \cite{caballero2021thesis}. Esto conduce a un ambiente de trabajo tóxico, estrés crónico y problemas de salud mental y física, lo que a su vez disminuye la motivación, la productividad y la calidad del trabajo, limitando la capacidad de innovación y creatividad \cite{caballero2022communitysmells}, \cite{tamburri2013socialdebt}, \cite{caballero2021thesis}, \cite{dreesen2021socialdebt}. Para mitigar o gestionar esta deuda, es crucial adoptar un enfoque holístico que promueva la comunicación efectiva, el equilibrio entre trabajo y vida personal, el reconocimiento profesional y un liderazgo que priorice el bienestar del equipo, fomentando un ambiente de trabajo positivo y motivador.
@@ -8,3 +18,64 @@ Identificar y comprender la naturaleza y el impacto de la deuda social permite a
 Con el fin de comprender mejor esta problemática, se realizó una Revisión Sistemática de la Literatura (RSL) orientada a recopilar, identificar y priorizar estudios relevantes sobre la gestión de la deuda social en equipos de desarrollo de software ágil, dicha RSL permitió realizar un análisis para reconocer algunas metodologías y herramientas que intentan mitigar sus efectos, como prácticas de comunicación efectiva, sesiones de retroalimentación y dinámicas de equipo, no obstante, los resultados evidenciaron una limitada producción científica en este campo, lo que pone de manifiesto una brecha significativa en la atención académica y práctica hacia este tipo de deuda. Esta carencia sugiere la necesidad urgente de desarrollar estrategias concretas que aborden no solo los aspectos técnicos del desarrollo, sino también las dimensiones humanas y organizacionales que influyen directamente en el rendimiento y la salud del equipo.
 En este trabajo de investigación, surge la siguiente pregunta: ¿Cómo gestionar la deuda social que surge en equipos de desarrollo de software ágil? Para dar respuesta a este interrogante, se propone una adaptación del marco de trabajo Scrum, orientada a incorporar mecanismos explícitos para la gestión de la deuda social. Esta propuesta contempla la inclusión de sesiones de retrospectiva focalizadas en aspectos sociales del equipo, así como la implementación de sprints dedicados exclusivamente a identificar y resolver conflictos interpersonales y organizacionales. El objetivo es promover un entorno de trabajo más saludable, colaborativo y productivo, en el que la calidad técnica y humana del desarrollo de software se integren de manera armónica.
 Esta tesis busca, por tanto, contribuir al cuerpo de conocimiento sobre metodologías ágiles, proponiendo un enfoque innovador que permita gestionar de forma efectiva la deuda social en proyectos de software. A través de la adaptación del marco Scrum, se pretende ofrecer una herramienta práctica que fortalezca las relaciones dentro del equipo, mejore la comunicación y fomente una cultura de trabajo más empática y sostenible.
+
+\section{Objetivos}
+A continuación, se muestran tanto el objetivo general como los objetivos específicos de este proyecto de investigación. Todos ellos fueron aprobados en el anteproyecto según la resolución 8.4.3-4.4/104 de 2025, emitida el 14 de marzo del mismo año.
+
+\begin{itemize}
+    \item \textbf{Objetivo general:} Definir un proceso ágil para gestionar la deuda social generada en proyectos de desarrollo de software ágil, a partir de aspectos fundamentales propuestos en la literatura y de la adaptación de los elementos del enfoque ágil para la gestión de proyectos conocido como Scrum.
+    \item \textbf{Objetivos específicos:} A continuación, se presentan los objetivos específicos de acuerdo con las palabras claves para la definición de objetivos propuestas en la taxonomía de Bloom \cite{bloom1956taxonomy}:
+    \item \textbf{Objetivo específico 1:} Identificar los elementos fundamentales para la gestión de la deuda social en el desarrollo de software ágil mediante un análisis de la literatura encontrada en diferentes bases científicas, el cual permita entender y organizar el conocimiento relacionado con la gestión de la deuda social en equipos de desarrollo de software.
+    \item \textbf{Objetivo específico 2:} Construir un proceso basado en Scrum que permita gestionar la deuda social en proyectos de desarrollo de software ágil, incorporando los elementos identificados en el objetivo específico 1 y aquellos aspectos que se consideren fundamentales.
+    \item \textbf{Objetivo específico 3:} Evaluar el proceso propuesto en el objetivo específico 2 mediante la técnica de validación de juicio de expertos, y determinar oportunidades de mejora a partir de un coeficiente estadístico.
+\end{itemize}
+
+\section{Método de investigación}
+El proyecto se llevará a cabo utilizando el método de Investigación-Acción en múltiples ciclos \cite{baskerville1999actionresearch} y la evaluación de la propuesta se efectuará a través de un estudio de caso \cite{Adillah2022}, esto permitió evaluar y analizar este fenómeno con el fin de encontrar soluciones efectivas para su gestión. Siguiendo esta metodología, se llevarán a cabo cuatro ciclos de investigación, que se describen a continuación de manera secuencial e incremental junto con las actividades correspondientes:
+\begin{itemize}
+    \item \textbf{Ciclo 1: Análisis conceptual.} En esta etapa se realizará una revisión sistemática de la literatura relacionada con la gestión de la deuda social en el desarrollo de software ágil. El objetivo es identificar propuestas y elementos clave para la definición de una solución efectiva.
+    \begin{itemize}
+        \item \textbf{Actividad 1.1: Investigar la literatura:} Se llevará a cabo una investigación exhaustiva de las propuestas vinculadas con la gestión de la deuda social en el desarrollo de software ágil.
+        \item \textbf{Actividad 1.2: Analizar la literatura:} Se identificarán causas, consecuencias, desafíos y futuras líneas de investigación en relación con la gestión de la deuda social en estas comunidades.
+        \item \textbf{Actividad 1.3: Resumir la literatura seleccionada:} Se analizarán y sintetizarán los estudios relevantes que aborden la gestión de la deuda social en el desarrollo de software ágil.
+    \end{itemize}
+    \item \textbf{Ciclo 2: Elaboración de la propuesta.} En esta fase se desarrollará una solución basada en Scrum para gestionar la deuda social en el desarrollo de software ágil, promoviendo la sostenibilidad y el bienestar de sus profesionales.
+    \begin{itemize}
+        \item \textbf{Actividad 2.1: Análisis de la información:} Identificación, análisis y categorización de los elementos que influyen en la gestión de la deuda social en el desarrollo de software ágil.
+        \item \textbf{Actividad 2.2: Definición de la propuesta:} Desarrollo de un proceso basado en Scrum para gestionar la deuda social en el desarrollo de software ágil. Se explorará la utilización de soluciones para la definición de procesos, uno de ellos puede ser el propuesto por D. A. Quintana Guzmán \cite{quintana2017metodo}.
+    \end{itemize}
+    \item \textbf{Ciclo 3: Evaluación de la propuesta.} En esta fase se llevará a cabo una evaluación utilizando el juicio de expertos como una técnica de estudio cualitativa. Esta técnica contará con la colaboración de un grupo de profesionales y/o especialistas compuestos por expertos en desarrollo de software ágil.
+    \begin{itemize}
+        \item \textbf{Actividad 3.1: Planificación:} Se llevará a cabo la capacitación, coordinación, organización y diseño de los expertos.
+        \item \textbf{Actividad 3.2: Acción:} Se llevará a cabo el juicio de expertos según la planificación y el diseño establecidos en la actividad 3.1.
+        \item \textbf{Actividad 3.3: Observación:} Recopilación de datos sobre la ejecución e intervención de los expertos.
+        \item \textbf{Actividad 3.4: Reflexión:} Generación de un informe basado en el análisis de los datos obtenidos durante la ejecución de los expertos.
+    \end{itemize}
+    \item \textbf{Ciclo 4: Documentación y socialización.} Este ciclo se llevará a cabo de manera transversal a lo largo del proyecto, incluyendo las siguientes actividades:
+    \begin{itemize}
+        \item \textbf{Actividad 4.1: Elaboración de la monografía:} Desarrollo de la monografía y los anexos resultantes del trabajo de grado o documento final.
+        \item \textbf{Actividad 4.2: Elaboración del artículo de investigación:} Creación de un artículo que describa los resultados obtenidos durante la implementación de la propuesta.
+        \item \textbf{Actividad 4.3: Sustentación:} Presentación y defensa de los resultados obtenidos a lo largo del desarrollo del proyecto.
+    \end{itemize}
+\end{itemize}
+
+\section{Estructura del documento}
+Este documento está organizado por seis capítulos, cada uno de ellos con sus respectivas secciones y subsecciones, de la siguiente manera:
+
+\begin{itemize}
+    \item \textbf{\textit{Capítulo 1: Introducción:}} En este capítulo se presenta el planteamiento del problema, los objetivos, el método de investigación y la estructura del documento.
+    \item \textbf{\textit{Capítulo 2: Marco teórico y trabajos relacionados:}} En este capítulo se presentan las bases conceptuales que sustentan la investigación, abordando los conceptos clave relacionados con la deuda social, el síndrome de Burnout y el marco de trabajo Scrum. Estos conceptos son fundamentales para comprender el contexto en el que se desarrolla la aplicación de ``SocialScrum'' en equipos de desarrollo de software ágil.
+    \item \textbf{\textit{Capítulo 3: Proceso ágil para la gestión de la deuda social:}} En este capítulo se presenta el proceso ágil para la gestión de la deuda social donde se desarrolla la adaptación de Scrum para la gestión de la deuda social, se abordará su filosofía, los principios y valores, los eventos y artefactos adaptados, así como el rol del Social Guide. También se presenta el proceso SocialScrum, el cual se integra con los sprints existentes.
+    \item \textbf{\textit{Capítulo 4: Aplicación de SocialScrum en equipos de desarrollo de software ágil:}} En este capítulo se presenta la aplicación de SocialScrum en equipos de desarrollo de software ágil. Se presentan un proceso operativo por fases, instrumentos y métricas, ejemplos teórico–prácticos, recomendaciones de herramientas, visualizaciones, un plan de validación (juicio de expertos) y una discusión crítica con limitaciones y amenazas a la validez.
+    \item \textbf{\textit{Capítulo 5: Juicio de expertos para la aplicación de SocialScrum:}} En este capítulo se presenta el juicio de expertos para la aplicación de SocialScrum. Se presenta el objetivo y diseño, la muestra y perfil, el material y criterios de calidad, el análisis de concordancia (coeficiente Kappa) y el análisis de los resultados.
+    \item \textbf{\textit{Capítulo 6: Conclusiones, recomendaciones y trabajos futuros:}} En este capítulo se presentan las conclusiones, recomendaciones y trabajos futuros derivados de la investigación sobre SocialScrum y su aplicación en la gestión de la deuda social en equipos de desarrollo de software.
+    \item \textbf{\textit{Referencias bibliográficas:}} En esta sección se presentan la lista de referencias bibliográficas utilizadas en la elaboración de la investigación.
+    \item \textbf{\textit{Anexos:}} En esta sección se presentan los anexos del documento los cuales son:
+    \begin{itemize}
+        \item \textbf{Anexo A:} Revisión sistemática de la literatura (RSL) sobre la gestión de la deuda social en el desarrollo de software ágil.
+        \item \textbf{Anexo B:} Artículo publicado y aceptado en el evento internacional IEEE AmITIC 2025: Social Debt in Agile Software Development.
+        \item \textbf{Anexo C:} ----.
+        \item \textbf{Anexo D:} Reporte de juicio de expertos para la aplicación de SocialScrum.
+        \item \textbf{Anexo E:} Consentimiento ético para la participación de los expertos.
+    \end{itemize}
+\end{itemize}

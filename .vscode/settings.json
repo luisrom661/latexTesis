@@ -11,6 +11,7 @@
     "Basili",
     "CAFFEA",
     "Caldiera",
+    "Calvache",
     "chatbots",
     "cofacilitaría",
     "conceptualización",
@@ -22,6 +23,8 @@
     "experticia",
     "facilitación",
     "Freudenberger",
+    "Galíndez",
+    "Garcés",
     "GEEZMO",
     "gestionable",
     "gestionables",
@@ -32,6 +35,8 @@
     "monetización",
     "Monitorea",
     "multifacético",
+    "Narváez",
+    "Popayán",
     "proactivamente",
     "Qube",
     "refactorización",
@@ -52,6 +57,7 @@
     "subóptimas",
     "subóptimo",
     "subóptimos",
+    "subsecciones",
     "tecnoestrés",
     "TEÓRICO",
     "transactiva",
@@ -59,5 +65,15 @@
     "visibilización",
     "Xplore",
     "YOSHI"
+  ],
+  "latex-workshop.formatting.latex": "latexindent",
+  "[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
+    "editor.formatOnSave": true
+  },
+  "latex-workshop.latexindent.path": "latexindent.exe",
+  "latex-workshop.latexindent.args": [
+    "-m",
+    "-w"
   ]
 }
