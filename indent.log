@@ -1,8 +1,8 @@
 INFO:  ANSI Code Page: 1252
 INFO:  latexindent.exe version 3.24.5, 2025-03-13, a script to indent .tex files
        latexindent.exe lives here: C:/texlive/2025/bin/windows/
-       Tue Oct  7 21:19:15 2025
-       Filename: c:/Users/luis.romero/Documents/U/Latex/pruebas/capitulos/__latexindent_temp_capitulo2.tex
+       Wed Oct  8 09:49:47 2025
+       Filename: c:/Users/luis.romero/Documents/U/Latex/pruebas/capitulos/__latexindent_temp_capitulo1.tex
 INFO:  Processing switches:
        -y|--yaml: YAML settings specified via command line
        -c|--cruft: cruft directory
