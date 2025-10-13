@@ -1,14 +1,28 @@
-main.aux
-main.bbl
-main.bcf
-main.blg
-main.fdb_latexmk
-main.fls
-main.lof
-main.log
-main.lot
-main.out
-main.run.xml
-main.synctex.gz
-main.toc
+# Archivos temporales de LaTeX
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
 pdflatex*.fls
+
+# Directorio de compilación
+build/
+
+# Logs temporales
+indent.log
+*_test.log
+
+# Archivos del editor
+.vscode/settings.json
