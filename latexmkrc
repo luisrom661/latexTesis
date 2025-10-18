@@ -17,3 +17,6 @@ $clean_ext = 'aux bbl bcf blg brf fdb_latexmk fls glg glo gls idx ilg ind ist lo
 # Configuración PDF
 $pdf_mode = 1;
 $clean_full_ext = $clean_ext;
+
+# Habilitar shell escape para paquetes como svg, minted, etc.
+$pdflatex = 'pdflatex -shell-escape -interaction=nonstopmode %O %S';

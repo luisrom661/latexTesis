@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                   xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                   xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                   xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                   id="Definitions_SocialScrum"
+                   targetNamespace="http://bpmn.io/schema/bpmn">
+  
+  <bpmn:collaboration id="Collaboration_SocialScrum">
+    <bpmn:participant id="Participant_SocialScrum" name="Proceso SocialScrum - Ciclo de Sprint" processRef="Process_SocialScrum"/>
+  </bpmn:collaboration>
+  
+  <bpmn:process id="Process_SocialScrum" isExecutable="false">
+    
+    <!-- INICIO -->
+    <bpmn:startEvent id="StartEvent_Sprint" name="Inicio del Sprint">
+      <bpmn:outgoing>Flow_to_planning</bpmn:outgoing>
+    </bpmn:startEvent>
+    
+    <!-- ARTEFACTO: Product Backlog Social -->
+    <bpmn:dataObjectReference id="DataObject_ProductBacklog" name="Product Backlog Social" dataObjectRef="DataObject_PB"/>
+    <bpmn:dataObject id="DataObject_PB"/>
+    
+    <!-- SPRINT PLANNING SOCIAL -->
+    <bpmn:task id="Task_PO_Presentar" name="PO: Presentar ítems del Product Backlog">
+      <bpmn:incoming>Flow_to_planning</bpmn:incoming>
+      <bpmn:outgoing>Flow_to_sg_revision</bpmn:outgoing>
+      <bpmn:property id="Property_role_po" name="__role__"/>
+    </bpmn:task>
+    
+    <bpmn:task id="Task_SG_Revision" name="Social Guide: Revisar riesgos sociales y community smells ⚠️">
+      <bpmn:incoming>Flow_to_sg_revision</bpmn:incoming>
+      <bpmn:outgoing>Flow_to_team_planning</bpmn:outgoing>
+      <bpmn:property id="Property_role_sg1" name="__role__"/>
+    </bpmn:task>
+    
+    <bpmn:task id="Task_Team_Planning" name="Equipo: Seleccionar ítems y crear Sprint Backlog (técnico + social)">
+      <bpmn:incoming>Flow_to_team_planning</bpmn:incoming>
+      <bpmn:outgoing>Flow_to_daily</bpmn:outgoing>
+      <bpmn:property id="Property_role_team1" name="__role__"/>
+    </bpmn:task>
+    
+    <!-- ARTEFACTO: Sprint Backlog Social -->
+    <bpmn:dataObjectReference id="DataObject_SprintBacklog" name="Sprint Backlog Social (técnico + social)" dataObjectRef="DataObject_SB"/>
+    <bpmn:dataObject id="DataObject_SB"/>
+    
+    <!-- DAILY SOCIAL SCRUM -->
+    <bpmn:subProcess id="SubProcess_Daily" name="Daily Social Scrum (ciclo diario)">
+      <bpmn:incoming>Flow_to_daily</bpmn:incoming>
+      <bpmn:outgoing>Flow_to_review</bpmn:outgoing>
+      
+      <bpmn:startEvent id="StartEvent_Daily" name="Inicio Daily">
+        <bpmn:outgoing>Flow_daily_inspect</bpmn:outgoing>
+      </bpmn:startEvent>
+      
+      <bpmn:task id="Task_Daily_Inspect" name="Equipo: Inspeccionar progreso técnico">
+        <bpmn:incoming>Flow_daily_inspect</bpmn:incoming>
+        <bpmn:outgoing>Flow_daily_question</bpmn:outgoing>
+      </bpmn:task>
+      
+      <bpmn:task id="Task_Daily_Question" name="Social Guide facilita: ¿Hay impedimentos sociales? 👥">
+        <bpmn:incoming>Flow_daily_question</bpmn:incoming>
+        <bpmn:outgoing>Flow_daily_gateway</bpmn:outgoing>
+      </bpmn:task>
+      
+      <bpmn:exclusiveGateway id="Gateway_Daily" name="¿Impedimentos sociales detectados?">
+        <bpmn:incoming>Flow_daily_gateway</bpmn:incoming>
+        <bpmn:outgoing>Flow_daily_yes</bpmn:outgoing>
+        <bpmn:outgoing>Flow_daily_no</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      
+      <bpmn:task id="Task_Daily_Register" name="Social Guide: Registrar y apoyar resolución">
+        <bpmn:incoming>Flow_daily_yes</bpmn:incoming>
+        <bpmn:outgoing>Flow_daily_merge</bpmn:outgoing>
+      </bpmn:task>
+      
+      <bpmn:exclusiveGateway id="Gateway_Daily_Merge">
+        <bpmn:incoming>Flow_daily_merge</bpmn:incoming>
+        <bpmn:incoming>Flow_daily_no</bpmn:incoming>
+        <bpmn:outgoing>Flow_daily_end</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      
+      <bpmn:endEvent id="EndEvent_Daily" name="Fin Daily">
+        <bpmn:incoming>Flow_daily_end</bpmn:incoming>
+      </bpmn:endEvent>
+      
+      <!-- Flujos internos del Daily -->
+      <bpmn:sequenceFlow id="Flow_daily_inspect" sourceRef="StartEvent_Daily" targetRef="Task_Daily_Inspect"/>
+      <bpmn:sequenceFlow id="Flow_daily_question" sourceRef="Task_Daily_Inspect" targetRef="Task_Daily_Question"/>
+      <bpmn:sequenceFlow id="Flow_daily_gateway" sourceRef="Task_Daily_Question" targetRef="Gateway_Daily"/>
+      <bpmn:sequenceFlow id="Flow_daily_yes" name="Sí" sourceRef="Gateway_Daily" targetRef="Task_Daily_Register"/>
+      <bpmn:sequenceFlow id="Flow_daily_no" name="No" sourceRef="Gateway_Daily" targetRef="Gateway_Daily_Merge"/>
+      <bpmn:sequenceFlow id="Flow_daily_merge" sourceRef="Task_Daily_Register" targetRef="Gateway_Daily_Merge"/>
+      <bpmn:sequenceFlow id="Flow_daily_end" sourceRef="Gateway_Daily_Merge" targetRef="EndEvent_Daily"/>
+    </bpmn:subProcess>
+    
+    <!-- ARTEFACTO: Registro de Community Smells -->
+    <bpmn:dataObjectReference id="DataObject_CommunitySmells" name="Registro de Community Smells 🔍" dataObjectRef="DataObject_CS"/>
+    <bpmn:dataObject id="DataObject_CS"/>
+    
+    <!-- SPRINT REVIEW SOCIAL -->
+    <bpmn:task id="Task_Team_Demo" name="Equipo: Demostrar incremento funcional">
+      <bpmn:incoming>Flow_to_review</bpmn:incoming>
+      <bpmn:outgoing>Flow_to_sg_presentation</bpmn:outgoing>
+      <bpmn:property id="Property_role_team2" name="__role__"/>
+    </bpmn:task>
+    
+    <bpmn:task id="Task_SG_Presentation" name="Social Guide: Presentar resumen de dinámica del equipo 📊">
+      <bpmn:incoming>Flow_to_sg_presentation</bpmn:incoming>
+      <bpmn:outgoing>Flow_to_po_review</bpmn:outgoing>
+      <bpmn:property id="Property_role_sg2" name="__role__"/>
+    </bpmn:task>
+    
+    <bpmn:task id="Task_PO_Review" name="PO: Revisar con stakeholders y adaptar Product Backlog">
+      <bpmn:incoming>Flow_to_po_review</bpmn:incoming>
+      <bpmn:outgoing>Flow_to_retro</bpmn:outgoing>
+      <bpmn:property id="Property_role_po2" name="__role__"/>
+    </bpmn:task>
+    
+    <!-- ARTEFACTO: Incremento + Evaluación Social -->
+    <bpmn:dataObjectReference id="DataObject_Increment" name="Incremento + Evaluación de Salud Social" dataObjectRef="DataObject_Inc"/>
+    <bpmn:dataObject id="DataObject_Inc"/>
+    
+    <!-- SPRINT RETROSPECTIVE SOCIAL -->
+    <bpmn:task id="Task_SM_Facilitate" name="Scrum Master: Facilitar retrospectiva general">
+      <bpmn:incoming>Flow_to_retro</bpmn:incoming>
+      <bpmn:outgoing>Flow_to_sg_analysis</bpmn:outgoing>
+      <bpmn:property id="Property_role_sm" name="__role__"/>
+    </bpmn:task>
+    
+    <bpmn:task id="Task_SG_Analysis" name="Social Guide: Identificar y analizar community smells 🔍">
+      <bpmn:incoming>Flow_to_sg_analysis</bpmn:incoming>
+      <bpmn:outgoing>Flow_to_team_improve</bpmn:outgoing>
+      <bpmn:property id="Property_role_sg3" name="__role__"/>
+    </bpmn:task>
+    
+    <bpmn:task id="Task_Team_Improve" name="Equipo: Discutir y crear plan de mejora integral (técnico + social)">
+      <bpmn:incoming>Flow_to_team_improve</bpmn:incoming>
+      <bpmn:outgoing>Flow_to_end</bpmn:outgoing>
+      <bpmn:property id="Property_role_team3" name="__role__"/>
+    </bpmn:task>
+    
+    <!-- ARTEFACTO: Plan de Acción -->
+    <bpmn:dataObjectReference id="DataObject_ActionPlan" name="Plan de Acción (mejoras técnicas + sociales)" dataObjectRef="DataObject_AP"/>
+    <bpmn:dataObject id="DataObject_AP"/>
+    
+    <!-- FIN -->
+    <bpmn:endEvent id="EndEvent_Sprint" name="Fin del Sprint / Inicio del siguiente">
+      <bpmn:incoming>Flow_to_end</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <!-- FLUJOS PRINCIPALES -->
+    <bpmn:sequenceFlow id="Flow_to_planning" sourceRef="StartEvent_Sprint" targetRef="Task_PO_Presentar"/>
+    <bpmn:sequenceFlow id="Flow_to_sg_revision" sourceRef="Task_PO_Presentar" targetRef="Task_SG_Revision"/>
+    <bpmn:sequenceFlow id="Flow_to_team_planning" sourceRef="Task_SG_Revision" targetRef="Task_Team_Planning"/>
+    <bpmn:sequenceFlow id="Flow_to_daily" sourceRef="Task_Team_Planning" targetRef="SubProcess_Daily"/>
+    <bpmn:sequenceFlow id="Flow_to_review" sourceRef="SubProcess_Daily" targetRef="Task_Team_Demo"/>
+    <bpmn:sequenceFlow id="Flow_to_sg_presentation" sourceRef="Task_Team_Demo" targetRef="Task_SG_Presentation"/>
+    <bpmn:sequenceFlow id="Flow_to_po_review" sourceRef="Task_SG_Presentation" targetRef="Task_PO_Review"/>
+    <bpmn:sequenceFlow id="Flow_to_retro" sourceRef="Task_PO_Review" targetRef="Task_SM_Facilitate"/>
+    <bpmn:sequenceFlow id="Flow_to_sg_analysis" sourceRef="Task_SM_Facilitate" targetRef="Task_SG_Analysis"/>
+    <bpmn:sequenceFlow id="Flow_to_team_improve" sourceRef="Task_SG_Analysis" targetRef="Task_Team_Improve"/>
+    <bpmn:sequenceFlow id="Flow_to_end" sourceRef="Task_Team_Improve" targetRef="EndEvent_Sprint"/>
+    
+    <!-- ASOCIACIONES DE DATOS -->
+    <bpmn:dataInputAssociation id="DataInputAssociation_PB">
+      <bpmn:sourceRef>DataObject_ProductBacklog</bpmn:sourceRef>
+      <bpmn:targetRef>Task_PO_Presentar</bpmn:targetRef>
+    </bpmn:dataInputAssociation>
+    
+    <bpmn:dataOutputAssociation id="DataOutputAssociation_SB">
+      <bpmn:sourceRef>Task_Team_Planning</bpmn:sourceRef>
+      <bpmn:targetRef>DataObject_SprintBacklog</bpmn:targetRef>
+    </bpmn:dataOutputAssociation>
+    
+    <bpmn:dataOutputAssociation id="DataOutputAssociation_CS">
+      <bpmn:sourceRef>SubProcess_Daily</bpmn:sourceRef>
+      <bpmn:targetRef>DataObject_CommunitySmells</bpmn:targetRef>
+    </bpmn:dataOutputAssociation>
+    
+    <bpmn:dataOutputAssociation id="DataOutputAssociation_Inc">
+      <bpmn:sourceRef>Task_SG_Presentation</bpmn:sourceRef>
+      <bpmn:targetRef>DataObject_Increment</bpmn:targetRef>
+    </bpmn:dataOutputAssociation>
+    
+    <bpmn:dataOutputAssociation id="DataOutputAssociation_AP">
+      <bpmn:sourceRef>Task_Team_Improve</bpmn:sourceRef>
+      <bpmn:targetRef>DataObject_ActionPlan</bpmn:targetRef>
+    </bpmn:dataOutputAssociation>
+    
+  </bpmn:process>
+  
+  <!-- DIAGRAMA (Layout básico - ajustar en editor visual) -->
+  <bpmndi:BPMNDiagram id="BPMNDiagram_SocialScrum">
+    <bpmndi:BPMNPlane id="BPMNPlane_SocialScrum" bpmnElement="Collaboration_SocialScrum">
+      
+      <!-- Pool -->
+      <bpmndi:BPMNShape id="Shape_Participant" bpmnElement="Participant_SocialScrum" isHorizontal="true">
+        <dc:Bounds x="150" y="80" width="2500" height="600"/>
+      </bpmndi:BPMNShape>
+      
+      <!-- Eventos y tareas (posicionamiento aproximado) -->
+      <bpmndi:BPMNShape id="Shape_Start" bpmnElement="StartEvent_Sprint">
+        <dc:Bounds x="200" y="300" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="180" y="343" width="76" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Shape_Task_PO" bpmnElement="Task_PO_Presentar">
+        <dc:Bounds x="280" y="278" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Shape_Task_SG1" bpmnElement="Task_SG_Revision">
+        <dc:Bounds x="420" y="278" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Shape_Task_Team1" bpmnElement="Task_Team_Planning">
+        <dc:Bounds x="560" y="278" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Shape_SubProcess_Daily" bpmnElement="SubProcess_Daily" isExpanded="true">
+        <dc:Bounds x="700" y="200" width="400" height="236"/>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Shape_Task_Demo" bpmnElement="Task_Team_Demo">
+        <dc:Bounds x="1140" y="278" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Shape_Task_SG2" bpmnElement="Task_SG_Presentation">
+        <dc:Bounds x="1280" y="278" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Shape_Task_PO2" bpmnElement="Task_PO_Review">
+        <dc:Bounds x="1420" y="278" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Shape_Task_SM" bpmnElement="Task_SM_Facilitate">
+        <dc:Bounds x="1560" y="278" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Shape_Task_SG3" bpmnElement="Task_SG_Analysis">
+        <dc:Bounds x="1700" y="278" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Shape_Task_Team3" bpmnElement="Task_Team_Improve">
+        <dc:Bounds x="1840" y="278" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Shape_End" bpmnElement="EndEvent_Sprint">
+        <dc:Bounds x="1980" y="300" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1960" y="343" width="76" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <!-- Data Objects -->
+      <bpmndi:BPMNShape id="Shape_Data_PB" bpmnElement="DataObject_ProductBacklog">
+        <dc:Bounds x="310" y="150" width="36" height="50"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="285" y="120" width="86" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Shape_Data_SB" bpmnElement="DataObject_SprintBacklog">
+        <dc:Bounds x="590" y="450" width="36" height="50"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="565" y="507" width="86" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Shape_Data_CS" bpmnElement="DataObject_CommunitySmells">
+        <dc:Bounds x="900" y="450" width="36" height="50"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="875" y="507" width="86" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Shape_Data_Inc" bpmnElement="DataObject_Increment">
+        <dc:Bounds x="1310" y="450" width="36" height="50"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1285" y="507" width="86" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Shape_Data_AP" bpmnElement="DataObject_ActionPlan">
+        <dc:Bounds x="1870" y="450" width="36" height="50"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1845" y="507" width="86" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <!-- Edges (Flujos principales) -->
+      <bpmndi:BPMNEdge id="Edge_to_planning" bpmnElement="Flow_to_planning">
+        <di:waypoint x="236" y="318"/>
+        <di:waypoint x="280" y="318"/>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Edge_to_sg_revision" bpmnElement="Flow_to_sg_revision">
+        <di:waypoint x="380" y="318"/>
+        <di:waypoint x="420" y="318"/>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Edge_to_team_planning" bpmnElement="Flow_to_team_planning">
+        <di:waypoint x="520" y="318"/>
+        <di:waypoint x="560" y="318"/>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Edge_to_daily" bpmnElement="Flow_to_daily">
+        <di:waypoint x="660" y="318"/>
+        <di:waypoint x="700" y="318"/>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Edge_to_review" bpmnElement="Flow_to_review">
+        <di:waypoint x="1100" y="318"/>
+        <di:waypoint x="1140" y="318"/>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Edge_to_sg_presentation" bpmnElement="Flow_to_sg_presentation">
+        <di:waypoint x="1240" y="318"/>
+        <di:waypoint x="1280" y="318"/>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Edge_to_po_review" bpmnElement="Flow_to_po_review">
+        <di:waypoint x="1380" y="318"/>
+        <di:waypoint x="1420" y="318"/>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Edge_to_retro" bpmnElement="Flow_to_retro">
+        <di:waypoint x="1520" y="318"/>
+        <di:waypoint x="1560" y="318"/>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Edge_to_sg_analysis" bpmnElement="Flow_to_sg_analysis">
+        <di:waypoint x="1660" y="318"/>
+        <di:waypoint x="1700" y="318"/>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Edge_to_team_improve" bpmnElement="Flow_to_team_improve">
+        <di:waypoint x="1800" y="318"/>
+        <di:waypoint x="1840" y="318"/>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Edge_to_end" bpmnElement="Flow_to_end">
+        <di:waypoint x="1940" y="318"/>
+        <di:waypoint x="1980" y="318"/>
+      </bpmndi:BPMNEdge>
+      
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  
+</bpmn:definitions>
