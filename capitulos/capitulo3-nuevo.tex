@@ -8,9 +8,14 @@
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
 
-Para facilitar su comprensión, este capítulo está dividido en cuatro secciones principales. En la primera sección, se introduce el término ``SocialScrum'', explicando su origen, propósito y la necesidad de implementarlo en los equipos de desarrollo de software, junto con una visión general del proceso ágil que se propone. La segunda sección presenta el modelo propuesto y describe de manera general sus componentes principales. En la tercera sección, se profundiza en los fundamentos teóricos y filosóficos que dan sustento al modelo, además de la justificación de su desarrollo. Finalmente, en la cuarta sección, se detalla el diseño completo de SocialScrum, acompañado de gráficos y diagramas que ilustran sus componentes y muestran cómo estos se integran para abordar la deuda social dentro de los equipos de desarrollo.
+Este capítulo introduce SocialScrum, un proceso ágil que nace como una adaptación del marco Scrum, pensado especialmente para abordar la deuda social que suele surgir dentro de los equipos de desarrollo de software.
+A lo largo de las siguientes páginas, se exploran las razones que dieron origen a esta propuesta, el modelo conceptual que la respalda, los fundamentos teóricos que la sostienen y, finalmente, el diseño completo del proceso: sus roles, eventos y artefactos.
 
 \section{Introducción a SocialScrum}
+Aunque Scrum ha demostrado ser una herramienta muy efectiva para gestionar proyectos ágiles, su mirada suele centrarse en lo técnico y deja de lado un aspecto igual de importante: las dinámicas sociales que influyen directamente en la colaboración y el rendimiento del equipo. Con el tiempo, esas tensiones —conocidas como deuda social— pueden acumularse y terminar afectando no solo la calidad del producto, sino también el bienestar y la conexión entre los miembros del equipo \cite{tamburri2013socialdebt}.
+
+En respuesta a esta necesidad, surge SocialScrum, un proceso que amplía los principios de Scrum para integrar, de manera explícita, la gestión consciente de la deuda social dentro del propio ciclo ágil.
+
 SocialScrum es un proceso ágil que adapta los principios, eventos y artefactos de Scrum para identificar, priorizar y mitigar la deuda social en equipos de desarrollo de software. Su propósito es hacer visibles las decisiones socio-técnicas subóptimas que impactan la productividad, calidad del software y cohesión del equipo \cite{tamburri2013socialdebt}, integrando prácticas de inspección y adaptación en el plano humano y organizacional \cite{saeeda2024nontechnicaldebt}. En síntesis, promueve un entorno de trabajo saludable y sostenible donde las mejoras sociales y del producto evolucionan de forma armónica. Para ello, SocialScrum introduce roles, eventos y artefactos específicos que complementan los de Scrum, enfocándose en aspectos como la comunicación, colaboración, confianza y bienestar del equipo. A continuación, se presenta un diagrama general del proceso SocialScrum en la figura \ref{fig:socialscrum_overview}.
 
 \begin{figure}[htb]
@@ -21,6 +26,163 @@ SocialScrum es un proceso ágil que adapta los principios, eventos y artefactos 
 \end{figure}
 
 \section{Modelo SocialScrum}
+
+Si bien el modelo conserva la estructura fundamental de Scrum, incorpora elementos diseñados específicamente para abordar de frente la deuda social dentro del equipo. Para ello, se basa en los tres pilares empíricos de Scrum: transparencia, inspección y adaptación, y los aplicamos directamente al contexto social de los miembros del equipo \cite{schwaber2020scrum}.
+
+A diferencia del Scrum tradicional, que suele centrarse en los aspectos técnicos y del producto, SocialScrum se enfoca en las dinámicas humanas, no solo las visibiliza y las analiza de forma sistemática, sino que también promueve planes de mejora específicos para enfrentar los \textit{community smells} y reducir la deuda social \cite{caballero2022communitysmells, tamburri2015insights}.
+
+El modelo SocialScrum se construye sobre tres dimensiones que se complementan entre sí: Primero, adapta los roles tradicionales de Scrum e incorpora un nuevo actor: el Social Guide, encargado de velar por el equilibrio y la dinámica grupal del equipo. Segundo, redefine los eventos clave del marco para incluir espacios de inspección y mejora social, donde se reflexiona sobre las relaciones, la comunicación y el clima grupal. Y tercero, amplía los artefactos existentes para registrar y hacer seguimiento al estado de la salud social del equipo.
+En conjunto, estas tres dimensiones buscan que las dinámicas humanas reciban la misma atención sistemática que los aspectos técnicos del desarrollo.
+
+\subsection{Componentes del Modelo SocialScrum}
+
+El modelo SocialScrum se construye sobre tres componentes que se integran al marco Scrum tradicional: roles especializados, eventos adaptados y artefactos enriquecidos con una dimensión social. Estos elementos funcionan de manera coordinada para identificar, analizar y gestionar la deuda social, fortaleciendo tanto el desempeño técnico como el bienestar colectivo del equipo.
+
+\subsubsection{Roles en SocialScrum}
+
+SocialScrum mantiene los tres roles esenciales del marco original: el Product Owner, encargado de maximizar el valor del producto; el Scrum Master, responsable de facilitar el proceso y eliminar impedimentos; y los Developers, quienes transforman los elementos del Product Backlog en incrementos de valor \cite{schwaber2020scrum}.
+No obstante, el modelo da un paso más allá al incorporar un cuarto rol especializado, el Social Guide, enfocado en atender la dimensión social del equipo y velar por su equilibrio humano y organizacional.
+
+\paragraph{Product Owner}
+En SocialScrum, el Product Owner conserva su función central de maximizar el valor del producto \cite{schwaber2020scrum}, pero ahora cuenta con una visión más amplia gracias a la colaboración con el Social Guide.
+Este le proporciona información sobre cómo la deuda social puede afectar la capacidad predictiva o la velocidad del equipo, lo que le permite tomar decisiones de priorización más informadas, cuando el Social Guide identifica iniciativas críticas relacionadas con la salud del equipo, el Product Owner las evalúa y prioriza según su impacto en el valor a largo plazo \cite{saeeda2024nontechnicaldebt}.
+De este modo, contribuye al equilibrio entre productividad y bienestar, sin involucrarse directamente en la gestión operativa de las dinámicas sociales.
+
+\paragraph{Scrum Master}
+El Scrum Master mantiene su papel como facilitador del proceso y protector del equipo frente a interrupciones externas \cite{schwaber2020scrum}. En SocialScrum, trabaja de la mano con el Social Guide para detectar de forma temprana los impedimentos sociales que puedan surgir durante el Sprint, mientras el Social Guide aporta un enfoque analítico basado en datos —por ejemplo, usando análisis de redes sociales (SNA) o métricas socio-técnicas—, el Scrum Master ofrece una comprensión más vivencial del grupo, ayudando a abrir conversaciones difíciles y facilitar la resolución de conflictos \cite{saeeda2024nontechnicaldebt}. Ambos diseñan estrategias conjuntas que fortalecen la cohesión del equipo, siempre respetando su autoorganización.
+
+\paragraph{Developers}
+Los Developers conservan su responsabilidad sobre la implementación técnica y la autogestión del trabajo del Sprint \cite{schwaber2020scrum}, sin embargo, en SocialScrum asumen también un papel activo en el monitoreo de la salud social del equipo donde deben participar en la detección de community smells durante las ceremonias, proponer acciones de mejora social para el Sprint Backlog y colaborar con el Social Guide brindando retroalimentación sobre la comunicación, la colaboración o la distribución del conocimiento \cite{saeeda2024nontechnicaldebt}. Su participación asegura que las intervenciones sociales sean realistas, aplicables y sostenibles dentro del propio equipo.
+
+\paragraph{Social Guide}
+El Social Guide es la figura central de SocialScrum y su misión es cuidar la dimensión social del equipo. No ocupa un rol jerárquico; más bien, actúa como facilitador y consultor en temas humanos y organizacionales. Su objetivo principal es mantener el equilibrio emocional y relacional del grupo, garantizando que la confianza, la comunicación y la cooperación sean pilares constantes del trabajo.
+
+Sus responsabilidades principales incluyen:
+
+\begin{itemize}
+    \item \textbf{Identificación y análisis de \textit{community smells}:} Detecta patrones como el aislamiento, la falta de cooperación o decisiones socio-técnicas poco informadas \cite{saeeda2024nontechnicaldebt}. Para ello, utiliza herramientas como el análisis de redes sociales (SNA) y otras técnicas que ayudan a evaluar la salud de la comunidad de desarrollo.
+
+    \item \textbf{Facilitación de estrategias de mitigación:} Diseña y aplica acciones específicas para atender los problemas detectados, fomentando una comunicación abierta, un entorno de seguridad psicológica y relaciones basadas en el respeto mutuo \cite{saeeda2024nontechnicaldebt, martini2019agiledebt}.
+
+    \item \textbf{Educación y concientización:} Promueve la comprensión colectiva sobre qué es la \textbf{deuda social} y cómo impacta en la productividad y calidad del software \cite{tamburri2015insights}.
+
+    \item \textbf{Colaboración con el Scrum Master:} Trabaja codo a codo con el Scrum Master para identificar y resolver impedimentos sociales, aportando una mirada especializada en la cohesión grupal y la resolución de conflictos \cite{schwaber2020scrum}.
+
+    \item \textbf{Colaboración con el Product Owner:} Informa al Product Owner sobre los efectos de la deuda social en el valor del producto, facilitando una priorización equilibrada entre resultados técnicos y salud del equipo \cite{saeeda2024nontechnicaldebt, tulili2022burnout}.
+
+\end{itemize}
+
+Es importante resaltar que el Social Guide no toma decisiones sobre el producto, no evalúa el desempeño individual y no reemplaza las funciones del Scrum Master en la facilitación del proceso \cite{schwaber2020scrum}. Su rol es consultivo y de acompañamiento: analiza, orienta y educa al equipo para que tome decisiones informadas, siempre desde la autonomía colectiva, además, tampoco cumple funciones propias de recursos humanos, como evaluaciones de desempeño o medidas disciplinarias; su foco está en la salud colectiva del equipo, no en la gestión individual.
+
+\subsubsection{Eventos Adaptados en SocialScrum}
+
+En SocialScrum, los eventos del marco original se ajustan para integrar la gestión de la deuda social, sin perder su esencia ni propósito principal, estas adaptaciones buscan que el equipo pueda inspeccionar, conversar y actuar de manera consciente sobre los aspectos humanos que influyen en su desempeño colectivo.
+La Tabla \ref{tab:eventos_adaptados} muestra de forma resumida cómo cada evento incorpora esta nueva dimensión:
+
+\begin{adjustwidth}{\parindent}{0pt}
+    \begin{table}[htb]
+        \caption{Eventos de Scrum adaptados en SocialScrum}
+        \label{tab:eventos_adaptados}
+        \centering
+        \renewcommand{\arraystretch}{1.6} % espacio vertical entre filas
+        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}{@{}p{3.7cm}X@{}}
+            \toprule
+            \textbf{Evento Scrum} & \textbf{Adaptación en SocialScrum}                               \\
+            \midrule
+            Sprint Planning       &
+            Se incluye una \textbf{Revisión de Riesgos Sociales}, liderada por el Social Guide.
+            El equipo identifica posibles \textit{community smells} que puedan afectar el objetivo del Sprint
+            y define acciones preventivas o elementos de salud social que se integran al Sprint Backlog
+            \cite{schwaber2020scrum}.                                                                \\[3pt]
+
+            Daily Scrum           &
+            Se añade una pregunta para detectar impedimentos sociales:
+            “¿Hay algo que esté afectando la colaboración o comunicación del equipo hoy?”
+            Si surgen dificultades, el Social Guide facilita la conversación para resolverlas
+            de forma temprana \cite{saeeda2024nontechnicaldebt}.                                     \\[3pt]
+
+            Sprint Review         &
+            Además de revisar el Increment, se realiza una \textbf{Evaluación de la Dinámica del Equipo}.
+            El Social Guide presenta un breve reporte sobre la salud social del grupo durante el Sprint,
+            resaltando cómo las interacciones influyeron en los resultados \cite{schwaber2020scrum}. \\[3pt]
+
+            Sprint Retrospective  &
+            Se convierte en el espacio principal para la gestión activa de la deuda social.
+            El Social Guide lidera o cofacilita una sección dedicada a la identificación y análisis de
+            \textit{community smells}, explorando sus causas, efectos y posibles soluciones.
+            Las acciones de mejora derivadas pueden incluirse en el Sprint Backlog siguiente
+            \cite{martini2019agiledebt}.                                                             \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+\end{adjustwidth}
+
+El evento \textit{Sprint Retrospective Social} es el punto culminante del ciclo SocialScrum, pues permite al equipo reflexionar sobre los aspectos humanos que influyeron en el Sprint y convertir los hallazgos sociales en acciones concretas. La Figura \ref{fig:sprint_retrospective_social1} muestra el flujo detallado de este evento.
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth]{recursos/sprint-retrospective.png}
+    \caption{Flujo detallado del evento Sprint Retrospective Social en el modelo SocialScrum.}
+    \label{fig:sprint_retrospective_social1}
+\end{figure}
+
+Como se observa en la Figura \ref{fig:sprint_retrospective_social1}, el \textit{Social Guide} lidera la revisión del registro de \textit{community smells}, mientras que el equipo analiza sus causas y propone acciones de mejora. El \textit{Scrum Master} apoya la planificación del seguimiento de conflictos críticos, y el \textit{Product Owner} actualiza el \textit{Product Backlog Social} con los ítems resultantes. Este flujo refleja la integración explícita de la gestión de la deuda social dentro del ciclo de mejora continua de SocialScrum.
+
+\subsubsection{Artefactos Adaptados en SocialScrum}
+
+En SocialScrum, los artefactos del marco original se amplían para incorporar la dimensión social del trabajo en equipo, buscando una mayor transparencia sobre los aspectos socio-técnicos que influyen en los resultados.
+La Tabla \ref{tab:artefactos_adaptados} presenta cómo cada artefacto se adapta para visibilizar, medir y gestionar la deuda social dentro del proceso ágil:
+
+\begin{adjustwidth}{\parindent}{0pt}
+    \begin{table}[htb]
+        \caption{Artefactos de Scrum adaptados en SocialScrum}
+        \label{tab:artefactos_adaptados}
+        \centering
+        \renewcommand{\arraystretch}{1.6} % espacio vertical entre filas
+        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}{@{}p{3.5cm}X@{}}
+            \toprule
+            \textbf{Artefacto Scrum} & \textbf{Adaptación en SocialScrum}                                                                                                                                                                                                                                                                                                                                                                            \\
+            \midrule
+            Product Backlog          & Incorpora ``Elementos de Deuda Social'' o ``Habilitadores de Salud del Equipo'': iniciativas orientadas a fortalecer la comunicación, mejorar dinámicas internas o eliminar community smells. El Product Owner las prioriza en conjunto con el Social Guide, considerando su impacto tanto en el valor del producto como en el bienestar del equipo \cite{saeeda2024nontechnicaldebt, schwaber2020scrum}.     \\[3pt]
+
+            Sprint Backlog           & Incluye de forma explícita las acciones de mitigación social definidas durante el Sprint Planning o la Retrospectiva. Estas acciones son visibles, cuentan con tiempo asignado y se monitorean junto con las tareas técnicas, garantizando que la gestión de la deuda social forme parte integral del trabajo del Sprint \cite{saeeda2024nontechnicaldebt}.                                                   \\[3pt]
+
+            Incremento               & Además de cumplir con la Definition of Done (DoD), o Definición de Terminado, el Increment también puede evaluarse en función de su impacto en la salud social del equipo. El Social Guide colabora en la definición de métricas e indicadores que reflejen mejoras en cohesión, comunicación, reducción de community smells y detección temprana de impedimentos sociales \cite{saeeda2024nontechnicaldebt}. \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+\end{adjustwidth}
+
+En resumen, las Tablas \ref{tab:artefactos_socialscrum} y \ref{tab:eventos_socialscrum} sintetizan las adaptaciones clave de los artefactos y eventos de Scrum en el modelo SocialScrum, destacando cómo cada componente se enriquece con una perspectiva social para gestionar de manera efectiva la deuda social dentro del equipo.
+
+\begin{table}[H]
+    \centering
+    \caption{Adaptación de los artefactos de Scrum en el modelo SocialScrum.}
+    \label{tab:artefactos_socialscrum}
+    \begin{tabular}{|p{4cm}|p{10cm}|}
+        \hline
+        \textbf{Artefacto de Scrum} & \textbf{Adaptación en SocialScrum}                                                                                  \\ \hline
+        \textbf{Product Backlog}    & Incluye elementos de mejora de clima de equipo y factores de cohesión social.                                       \\ \hline
+        \textbf{Sprint Backlog}     & Contiene acciones específicas para mitigar la deuda social y monitorear la salud del equipo.                        \\ \hline
+        \textbf{Incremento}         & Se evalúa no solo por su funcionalidad, sino también por su impacto social (colaboración, satisfacción, confianza). \\ \hline
+    \end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \caption{Adaptación de los eventos de Scrum en el modelo SocialScrum.}
+    \label{tab:eventos_socialscrum}
+    \begin{tabular}{|p{4cm}|p{10cm}|}
+        \hline
+        \textbf{Evento de Scrum}      & \textbf{Adaptación en SocialScrum}                                                                                                               \\ \hline
+        \textbf{Sprint Planning}      & Se agrega una revisión de riesgos sociales liderada por el \textit{Social Guide}; el equipo incorpora “ítems de salud social” al Sprint Backlog. \\ \hline
+        \textbf{Daily Scrum}          & Se incluye una pregunta adicional sobre impedimentos sociales (e.g., conflictos de comunicación o desmotivación).                                \\ \hline
+        \textbf{Sprint Review}        & Además de revisar el incremento, el \textit{Social Guide} presenta un resumen del clima y la cohesión del equipo.                                \\ \hline
+        \textbf{Sprint Retrospective} & Se dedica un espacio específico a discutir \textit{community smells}, sus causas y las acciones correctivas planificadas.                        \\ \hline
+    \end{tabular}
+\end{table}
+
 
 \section{Fundamentos teóricos y valores}
 
