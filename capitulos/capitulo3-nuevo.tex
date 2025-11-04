@@ -44,9 +44,9 @@ SocialScrum mantiene los tres roles esenciales del marco original: el Product Ow
 No obstante, el modelo da un paso más allá al incorporar un cuarto rol especializado, el Social Guide, enfocado en atender la dimensión social del equipo y velar por su equilibrio humano y organizacional.
 
 \paragraph{Product Owner}
-En SocialScrum, el Product Owner conserva su función central de maximizar el valor del producto \cite{schwaber2020scrum}, pero ahora cuenta con una visión más amplia gracias a la colaboración con el Social Guide.
-Este le proporciona información sobre cómo la deuda social puede afectar la capacidad predictiva o la velocidad del equipo, lo que le permite tomar decisiones de priorización más informadas, cuando el Social Guide identifica iniciativas críticas relacionadas con la salud del equipo, el Product Owner las evalúa y prioriza según su impacto en el valor a largo plazo \cite{saeeda2024nontechnicaldebt}.
-De este modo, contribuye al equilibrio entre productividad y bienestar, sin involucrarse directamente en la gestión operativa de las dinámicas sociales.
+En SocialScrum, el Product Owner conserva su función central de maximizar el valor del producto \cite{schwaber2020scrum}, Sin embargo, el Product Owner recibe del Social Guide información sobre cómo la deuda social puede influir en la predictibilidad y velocidad del equipo. Esa perspectiva le permite tomar decisiones de priorización más conscientes y equilibradas, considerando no solo el valor del producto, sino también la salud del equipo que lo construye.
+Su papel en este ámbito se limita a estar informado y valorar las recomendaciones del Social Guide cuando sea pertinente para la planificación del producto, pero sin involucrarse directamente en la gestión o resolución de las dinámicas sociales internas \cite{saeeda2024nontechnicaldebt}.
+En otras palabras, el Product Owner se convierte en un aliado informado, no en un actor operativo dentro de la gestión social del equipo.
 
 \paragraph{Scrum Master}
 El Scrum Master mantiene su papel como facilitador del proceso y protector del equipo frente a interrupciones externas \cite{schwaber2020scrum}. En SocialScrum, trabaja de la mano con el Social Guide para detectar de forma temprana los impedimentos sociales que puedan surgir durante el Sprint, mientras el Social Guide aporta un enfoque analítico basado en datos —por ejemplo, usando análisis de redes sociales (SNA) o métricas socio-técnicas—, el Scrum Master ofrece una comprensión más vivencial del grupo, ayudando a abrir conversaciones difíciles y facilitar la resolución de conflictos \cite{saeeda2024nontechnicaldebt}. Ambos diseñan estrategias conjuntas que fortalecen la cohesión del equipo, siempre respetando su autoorganización.
@@ -153,38 +153,200 @@ La Tabla \ref{tab:artefactos_adaptados} presenta cómo cada artefacto se adapta 
     \end{table}
 \end{adjustwidth}
 
-En resumen, las Tablas \ref{tab:artefactos_socialscrum} y \ref{tab:eventos_socialscrum} sintetizan las adaptaciones clave de los artefactos y eventos de Scrum en el modelo SocialScrum, destacando cómo cada componente se enriquece con una perspectiva social para gestionar de manera efectiva la deuda social dentro del equipo.
+\section{Fundamentos ágiles, psicológicos, teóricos y valores}
 
-\begin{table}[H]
-    \centering
-    \caption{Adaptación de los artefactos de Scrum en el modelo SocialScrum.}
-    \label{tab:artefactos_socialscrum}
-    \begin{tabular}{|p{4cm}|p{10cm}|}
-        \hline
-        \textbf{Artefacto de Scrum} & \textbf{Adaptación en SocialScrum}                                                                                  \\ \hline
-        \textbf{Product Backlog}    & Incluye elementos de mejora de clima de equipo y factores de cohesión social.                                       \\ \hline
-        \textbf{Sprint Backlog}     & Contiene acciones específicas para mitigar la deuda social y monitorear la salud del equipo.                        \\ \hline
-        \textbf{Incremento}         & Se evalúa no solo por su funcionalidad, sino también por su impacto social (colaboración, satisfacción, confianza). \\ \hline
-    \end{tabular}
-\end{table}
+La gestión de la deuda social en equipos de desarrollo de software plantea tres desafíos fundamentales que requieren fundamentos teóricos específicos:
 
+\begin{enumerate}
+    \item \textbf{Desafío motivacional:} ¿Qué impulsa a los desarrolladores a participar activamente en la identificación y mitigación de problemas sociales, más allá de sus responsabilidades técnicas?
+    \item \textbf{Desafío relacional:} ¿Qué mecanismos sostienen la colaboración efectiva en entornos donde la interdependencia es alta pero los controles tradicionales son limitados?
+    \item \textbf{Desafío preventivo:} ¿Cómo se puede prevenir el deterioro progresivo de las dinámicas sociales antes de que se conviertan en deuda social consolidada?
+\end{enumerate}
 
-\begin{table}[H]
-    \centering
-    \caption{Adaptación de los eventos de Scrum en el modelo SocialScrum.}
-    \label{tab:eventos_socialscrum}
-    \begin{tabular}{|p{4cm}|p{10cm}|}
-        \hline
-        \textbf{Evento de Scrum}      & \textbf{Adaptación en SocialScrum}                                                                                                               \\ \hline
-        \textbf{Sprint Planning}      & Se agrega una revisión de riesgos sociales liderada por el \textit{Social Guide}; el equipo incorpora “ítems de salud social” al Sprint Backlog. \\ \hline
-        \textbf{Daily Scrum}          & Se incluye una pregunta adicional sobre impedimentos sociales (e.g., conflictos de comunicación o desmotivación).                                \\ \hline
-        \textbf{Sprint Review}        & Además de revisar el incremento, el \textit{Social Guide} presenta un resumen del clima y la cohesión del equipo.                                \\ \hline
-        \textbf{Sprint Retrospective} & Se dedica un espacio específico a discutir \textit{community smells}, sus causas y las acciones correctivas planificadas.                        \\ \hline
-    \end{tabular}
-\end{table}
+Para abordar estos desafíos, SocialScrum se fundamenta en dos marcos teóricos complementarios: la Teoría de la Autodeterminación (TAD) \cite{ryan_self-determination_2000} y el Modelo Integrador de Confianza de Mayer et al. \cite{mayer_integrative_1995}. La selección de estos marcos no es arbitraria; responde a criterios específicos de aplicabilidad al contexto de la deuda social.
 
+\subsection{Justificación de la Teoría de la Autodeterminación}
 
-\section{Fundamentos teóricos y valores}
+La TAD fue seleccionada sobre otras teorías motivacionales por tres razones fundamentales:
+
+\paragraph{1. Diferenciación entre motivación intrínseca y extrínseca}
+A diferencia de teorías como la Teoría de Expectativas de Vroom \cite{vroom1964work} o la Teoría de Metas de Locke \cite{locke1990theory}, que se centran primordialmente en motivadores externos (recompensas, incentivos, metas explícitas), la TAD explica por qué las personas se involucran en comportamientos sin necesidad de recompensas externas \cite{ryan_self-determination_2000}. Esto es crítico para la deuda social porque:
+
+\begin{itemize}
+    \item Los \textit{community smells} no se detectan mediante KPIs tradicionales ni sistemas de recompensas
+    \item La identificación de problemas sociales requiere vulnerabilidad voluntaria, no cumplimiento de objetivos
+    \item La mitigación sostenible de deuda social demanda compromiso genuino, no compliance superficial
+\end{itemize}
+
+\textbf{Lo que NO se puede explicar sin TAD:} ¿Por qué un desarrollador reportaría voluntariamente una dinámica tóxica si no recibe incentivos explícitos por hacerlo? ¿Por qué participaría activamente en una Sprint Retrospective Social si no impacta directamente su evaluación de desempeño?
+
+\paragraph{2. Conexión directa con síndrome de Burnout}
+La investigación empírica ha demostrado que la frustración de las necesidades básicas de la TAD (autonomía, competencia y relacionalidad) predice directamente el desarrollo de Burnout \cite{tulili2022burnout}, una de las manifestaciones más costosas de la deuda social. Específicamente:
+
+\begin{itemize}
+    \item La falta de \textbf{autonomía} genera el agotamiento emocional característico del Burnout
+    \item La falta de \textbf{competencia} produce la ineficacia profesional (tercer componente del Burnout)
+    \item La falta de \textbf{relacionalidad} alimenta el cinismo y el distanciamiento del equipo
+\end{itemize}
+
+Otras teorías motivacionales no ofrecen este vínculo empírico directo con los resultados negativos de la deuda social \cite{tulili2022burnout,wilson_all_2006}.
+
+\paragraph{3. Aplicabilidad demostrada en contextos de desarrollo de software}
+A diferencia de teorías diseñadas para contextos industriales o de manufactura, la TAD ha sido validada empíricamente en equipos de conocimiento y entornos complejos \cite{ryan_self-determination_2000}, donde la autoorganización es esencial—precisamente el contexto de Scrum. La Teoría de Metas, por ejemplo, funciona bien en tareas con objetivos claros y medibles, pero no explica la motivación en actividades ambiguas o socialmente complejas como "mejorar la cohesión del equipo" o "reducir el aislamiento social".
+
+\subsection{Justificación del Modelo Integrador de Confianza}
+
+El modelo de Mayer et al. \cite{mayer_integrative_1995} fue seleccionado sobre otros modelos de confianza organizacional (como los de Rousseau et al. \cite{rousseau1998not} o McAllister \cite{mcallister1995affect}) por cuatro razones:
+
+\paragraph{1. Integración de dimensiones cognitivas y afectivas}
+Mientras que modelos anteriores separaban la confianza basada en competencia (cognitiva) de la confianza basada en afecto (emocional), Mayer et al. ofrecen un modelo integrador con tres dimensiones—habilidad, benevolencia e integridad—que captura ambos aspectos \cite{mayer_integrative_1995}. Esto es esencial porque:
+
+\begin{itemize}
+    \item Los \textit{community smells} afectan tanto la confianza técnica ("¿puede este colega hacer el trabajo?") como la confianza social ("¿se preocupa por el equipo?")
+    \item La deuda social no se genera únicamente por incompetencia técnica ni únicamente por problemas interpersonales, sino por la interacción de ambos
+\end{itemize}
+
+\paragraph{2. Diferenciación entre confianza y cooperación}
+El modelo distingue explícitamente la confianza (que implica vulnerabilidad) de la mera cooperación (que puede ocurrir por control o conveniencia) \cite{mayer_integrative_1995}. Esta distinción es crucial para SocialScrum porque:
+
+\begin{itemize}
+    \item Un equipo puede aparentar colaboración (cooperación forzada) mientras acumula deuda social
+    \item La detección de \textit{community smells} requiere genuina confianza, no solo coordinación superficial
+    \item La \textit{seguridad psicológica}—prerequisito para reportar problemas sociales—es una forma de confianza, no de simple cooperación
+\end{itemize}
+
+\textbf{Lo que NO se puede explicar sin este modelo:} ¿Por qué dos equipos con igual productividad técnica tienen niveles radicalmente diferentes de deuda social? ¿Cómo distinguir entre un equipo que funciona por control/monitoreo versus uno que funciona por confianza genuina?
+
+\paragraph{3. Validación empírica en equipos mediados por tecnología}
+La investigación de Wilson et al. \cite{wilson_all_2006} demostró que este modelo de confianza explica efectivamente la evolución de relaciones en equipos virtuales y distribuidos—cada vez más comunes en desarrollo de software. Específicamente, demostraron que:
+
+\begin{itemize}
+    \item La confianza inicial basada en \textbf{habilidad} (competencia técnica) puede desarrollarse rápidamente
+    \item La confianza basada en \textbf{benevolencia} e \textbf{integridad} requiere más tiempo y experiencias compartidas
+    \item La calidad de la comunicación (tono, empatía, consistencia) impacta directamente el desarrollo de confianza en entornos remotos
+\end{itemize}
+
+Esto explica por qué los \textit{community smells} como \textit{Radio Silence} o \textit{Organizational Silo} son particularmente dañinos: rompen precisamente los mecanismos de construcción de confianza en equipos distribuidos.
+
+\paragraph{4. Operacionalización clara para intervención}
+A diferencia de modelos abstractos de confianza organizacional, el modelo de Mayer et al. define dimensiones específicas y medibles (H-B-I) que permiten diagnóstico e intervención \cite{mayer_integrative_1995}. En SocialScrum:
+
+\begin{itemize}
+    \item El \textit{Social Guide} puede evaluar qué dimensión de confianza está comprometida
+    \item Las acciones de mitigación pueden diseñarse específicamente (e.g., sesiones de pair programming para aumentar percepción de habilidad; retrospectivas honestas para fortalecer benevolencia)
+    \item El progreso puede monitorearse a través de cada dimensión
+\end{itemize}
+
+\subsection{Complementariedad de ambos marcos}
+
+La combinación de TAD y Confianza no es redundante; son complementarios:
+
+\begin{itemize}
+    \item \textbf{TAD} explica \textit{qué necesitan} los individuos para mantener motivación sostenible
+    \item \textbf{Confianza} explica \textit{qué sostiene} las relaciones de interdependencia en el equipo
+    \item \textbf{Juntos} explican \textit{cómo prevenir y mitigar} la deuda social: satisfaciendo necesidades individuales (TAD) dentro de relaciones de confianza (Mayer) mediante valores compartidos (Scrum)
+\end{itemize}
+
+Esta integración teórica permite a SocialScrum abordar la deuda social de manera holística: desde la motivación individual hasta las dinámicas colectivas, desde la prevención hasta la intervención, desde el diagnóstico hasta la acción.
+
+\subsection{Fundamentos ágiles}
+
+Tenemos que, Scrum se fundamenta en el empirismo y el pensamiento Lean \cite{schwaber2020scrum}. Esto implica que el conocimiento se deriva de la experiencia y las decisiones se toman basándose en lo observado, mientras se busca reducir el desperdicio y enfocarse en lo esencial \cite{schwaber2020scrum}. Estos principios son particularmente pertinentes para la deuda social, que a menudo se manifiesta a través de efectos ``invisibles'' y negativos dentro de una comunidad de desarrollo \cite{saeeda2024nontechnicaldebt,caballero2022communitysmells}.
+
+El marco SocialScrum utiliza los tres pilares empíricos de Scrum (Transparencia, Inspección y Adaptación) y sus cinco valores fundamentales (Compromiso, Foco, Apertura, Respeto y Coraje) \cite{schwaber2020scrum}, como una brújula indispensable para la gestión proactiva de la deuda social
+
+\subsection{Fundamentos psicológicos}
+
+Para abordar la deuda social, que con frecuencia se manifiesta en estrés crónico y síndrome de Burnout \cite{wilson_all_2006,tulili2022burnout}, SocialScrum se fundamenta en la Teoría de la Autodeterminación (TAD) \cite{ryan_self-determination_2000}.
+Esta teoría, considerada un macro modelo de motivación humana y personalidad, se enfoca en las tendencias naturales de crecimiento y en las necesidades psicológicas básicas que todas las personas comparten \cite{ryan_self-determination_2000}.
+
+Cuando esas necesidades se satisfacen, las personas experimentan mayor vitalidad, bienestar y salud mental \cite{ryan_self-determination_2000}.
+Esto resulta esencial en los equipos de desarrollo, donde el equilibrio emocional y la motivación interna son pilares que la deuda social suele debilitar.
+
+En este marco, la TAD identifica tres necesidades psicológicas universales, cuya satisfacción sostiene tanto la motivación intrínseca como el bienestar colectivo del equipo:
+
+\paragraph{Autonomía}
+La autonomía se refiere a la necesidad de sentir que uno tiene control sobre sus propias acciones y decisiones, lo que implica auto-iniciativa y autorregulación \cite{ryan_self-determination_2000}.
+En el contexto de SocialScrum, esta autonomía se promueve al ofrecer opciones reales y permitir que los desarrolladores gestionen su propio trabajo, fortaleciendo la autoorganización del equipo, un principio esencial dentro de Scrum \cite{ryan_self-determination_2000}.
+Cuando una persona siente que tiene control sobre lo que hace, surge la motivación intrínseca —esa que impulsa a actuar por gusto, interés o satisfacción personal—, en lugar de depender únicamente de recompensas externas.
+De hecho, la investigación muestra que una dependencia excesiva de recompensas extrínsecas puede debilitar el sentido de autonomía y, con ello, afectar la motivación genuina \cite{ryan_self-determination_2000}.
+
+\paragraph{Competencia}
+La competencia representa el deseo fundamental de sentirse eficaz, capaz y en crecimiento dentro de las propias acciones \cite{ryan_self-determination_2000}. Supone contar con las habilidades necesarias para interactuar con el entorno de manera efectiva y alcanzar las metas propuestas \cite{ryan_self-determination_2000}.
+Esta sensación de competencia se fortalece cuando las exigencias del trabajo están en equilibrio con las capacidades de la persona, y cuando se recibe una retroalimentación positiva y constructiva que reconoce los logros y orienta las mejoras \cite{ryan_self-determination_2000}.
+En ese sentido, SocialScrum busca precisamente reforzar esa percepción de eficacia, ayudando a prevenir la ineficacia profesional, uno de los síntomas más comunes del Burnout \cite{tulili2022burnout}.
+
+\paragraph{Relacionalidad}
+La relacionalidad hace referencia a la necesidad humana de conectar con otros, de construir vínculos cercanos y afectuosos, y de sentirse parte de un grupo o comunidad \cite{ryan_self-determination_2000}. Esta conexión se fortalece cuando las personas se sienten respetadas, escuchadas y valoradas dentro de un entorno inclusivo y empático \cite{ryan_self-determination_2000}.
+En SocialScrum, esta necesidad se aborda de forma explícita al fomentar la cohesión del equipo y reducir los \textit{community smells} relacionados con el aislamiento, como el conocido \textit{lone wolf} o “lobo solitario” \cite{caballero2022communitysmells}.
+Cada intervención social busca construir un ambiente de seguridad psicológica, donde las personas puedan expresarse sin temor y las relaciones se basen en la confianza y el respeto mutuo.
+
+En esencia, al integrar los principios de la Teoría de la Autodeterminación (TAD), SocialScrum busca que los equipos desarrollen una motivación intrínseca genuina y asuman la responsabilidad de sus propias acciones, fortaleciendo así su locus de control interno \cite{ryan_self-determination_2000}.
+De acuerdo con esta teoría, cuando las personas sienten que actúan por decisión propia y desde el compromiso interno, aumentan su claridad emocional, su autoconfianza y su satisfacción general con el trabajo y con el equipo \cite{ryan_self-determination_2000}.
+
+\subsection{Fundamentos relacionales y teóricos}
+
+La gestión de la deuda social es, en el fondo, una forma de gestionar la confianza dentro de las interacciones humanas y organizacionales.
+La confianza es un elemento esencial en los entornos de trabajo donde las tareas dependen unas de otras \cite{wilson_all_2006,mayer_integrative_1995}, y cobra aún más relevancia en equipos ágiles o distribuidos, donde los mecanismos tradicionales de control y supervisión son limitados \cite{wilson_all_2006}.
+Cuando la confianza se debilita, el equipo suele incurrir en costos adicionales, como un exceso de monitoreo, la duplicación innecesaria de tareas o una comunicación fragmentada. Todo ello termina afectando directamente la efectividad colectiva y la cohesión del grupo \cite{wilson_all_2006}.
+El proceso SocialScrum se apoya en la confianza como uno de sus pilares teóricos fundamentales.
+Siguiendo la definición clásica, la confianza se entiende como la disposición de una persona a ser vulnerable ante las acciones de otra, basada en la expectativa de que esa otra parte actuará de manera favorable o responsable, incluso cuando no exista posibilidad de supervisarla o controlarla directamente \cite{mayer_integrative_1995}.
+Este concepto permite diferenciar la confianza de la simple cooperación, ya que cooperar no siempre implica vulnerabilidad; en muchos casos, la cooperación puede darse por mecanismos de control, presión o conveniencia, sin que exista una verdadera relación de confianza \cite{mayer_integrative_1995}.
+En este marco, el nivel de confianza que un miembro (el trustor) deposita en otro (el trustee) depende de la percepción que tenga sobre tres factores clave de confiabilidad \cite{mayer_integrative_1995}:
+
+\paragraph{Habilidad}
+La habilidad se refiere al conjunto de competencias, conocimientos y destrezas que permiten a una persona influir de manera efectiva dentro de un dominio específico \cite{mayer_integrative_1995}.
+En SocialScrum, la percepción de esta habilidad —tanto en los \textit{Developers} como en los demás roles— refuerza la confianza en la capacidad técnica y social del equipo para alcanzar los objetivos propuestos \cite{mayer_integrative_1995}.
+Esta dimensión constituye la base de la confianza cognitiva, también llamada confianza basada en la competencia o fiabilidad, que se construye cuando los miembros del equipo reconocen que pueden depender de las capacidades y el profesionalismo de los demás \cite{wilson_all_2006}.
+
+\paragraph{Benevolencia}
+La benevolencia se entiende como la creencia de que el \textit{trustee} actúa con una intención genuina de bienestar hacia el otro, es decir, que busca hacer el bien al \textit{trustor} sin guiarse únicamente por intereses personales o de beneficio propio \cite{mayer_integrative_1995}.
+Esta dimensión es clave para la confianza afectiva, aquella que se basa en los lazos emocionales, la empatía y la preocupación mutua entre los miembros del equipo \cite{wilson_all_2006}.
+En SocialScrum, la benevolencia se refleja en el valor de respeto y en las estrategias orientadas a reducir el cinismo y la desconexión emocional que suelen acompañar al Burnout \cite{tulili2022burnout}.
+
+\paragraph{Integridad}
+La integridad se refiere a la percepción de que el \textit{trustee} actúa de acuerdo con principios y valores coherentes, manteniendo una consistencia entre lo que dice y lo que hace \cite{mayer_integrative_1995}.
+En otras palabras, la confianza se fortalece cuando las acciones reflejan de forma constante los compromisos y valores compartidos por el equipo.
+Junto con la habilidad y la benevolencia, la integridad conforma un marco equilibrado y comprobado empíricamente para evaluar la confianza dentro de los equipos \cite{mayer_integrative_1995}.
+
+El estudio sobre el desarrollo de la confianza en equipos \cite{wilson_all_2006} respalda la idea de que la confianza no surge de inmediato, sino que evoluciona con el tiempo —un proceso de adaptación constante.
+Si bien los equipos que trabajan de forma remota o mediada suelen partir con niveles más bajos de confianza, las investigaciones muestran que esta aumenta progresivamente hasta alcanzar niveles similares a los de los equipos que colaboran cara a cara \cite{wilson_all_2006}.
+Este desarrollo gradual pone de relieve la importancia de contar con procesos iterativos, como SocialScrum, que favorezcan el cultivo y fortalecimiento continuo de las bases sociales sobre las que se sostiene la colaboración efectiva.
+
+\subsection{Aplicación de los valores de Scrum en SocialScrum}
+
+La gestión de la deuda social se integra plenamente con los valores de Scrum, que sirven como guía ética y cultural para el equipo \cite{schwaber2020scrum}. A continuación, se describe cómo cada valor se aplica en el contexto de SocialScrum:
+
+\paragraph{Coraje (Courage)}
+El coraje es la base emocional que permite al equipo asumir riesgos y mostrarse vulnerable frente a los demás.
+Dado que la confianza implica precisamente esa disposición a la vulnerabilidad \cite{mayer_integrative_1995}, el coraje se convierte en un requisito indispensable para tomar acciones valientes dentro de las relaciones interpersonales, conocidas en la literatura como Risk Taking in Relationship (RTR) \cite{mayer_integrative_1995}.
+En SocialScrum, este valor cobra especial importancia durante la \textit{Sprint Retrospective Social}, donde se necesita el coraje para abrir conversaciones difíciles, enfrentar tensiones o conflictos personales, y expresar de manera honesta lo que afecta la dinámica del equipo. Solo a través de esa valentía compartida se construye una confianza real y sostenible.
+
+\paragraph{Apertura (Openness)}
+La apertura está estrechamente ligada al principio de transparencia, uno de los pilares fundamentales de Scrum, que exige que tanto el proceso como el trabajo sean visibles para todos los involucrados \cite{wilson_all_2006,schwaber2020scrum}.
+Este valor resulta esencial para prevenir la acumulación de deuda social, ya que dicha deuda suele crecer cuando se pierde la transparencia en los aspectos no técnicos, como las interacciones humanas o las decisiones socio-técnicas que afectan la colaboración \cite{schwaber2020scrum,tamburri2013socialdebt}.
+Además, el modo en que se comunica el equipo también influye en la confianza: los mensajes cargados de tensión o tono negativo tienden a ralentizar el desarrollo de la confianza en entornos mediados por tecnología, mientras que una comunicación de apoyo, empática y coherente la fortalece \cite{wilson_all_2006}.
+En este sentido, SocialScrum promueve la apertura al hacer visibles los \textit{community smells}, las fricciones interpersonales y cualquier señal de deterioro en las relaciones, convirtiendo lo invisible en un punto de reflexión y mejora compartida.
+
+\paragraph{Respeto (Respect)}
+El respeto se conecta directamente con la necesidad de relacionalidad propuesta por la Teoría de la Autodeterminación (TAD) y con la benevolencia del modelo de confianza.
+Es un valor esencial para construir un entorno inclusivo y seguro, donde cada miembro del equipo se sienta escuchado, valorado y cuidado \cite{ryan_self-determination_2000}.
+En SocialScrum, el \textit{Social Guide} desempeña un papel clave en la promoción de este valor, fomentando interacciones basadas en la empatía y el reconocimiento mutuo.
+Asimismo, el respeto actúa como un antídoto frente al lenguaje descortés y las relaciones tóxicas, factores que suelen detonar tanto el Burnout como la deuda social dentro de los equipos \cite{tulili2022burnout}.
+
+\paragraph{Compromiso (Commitment)}
+El compromiso del equipo con los objetivos del Sprint y con la mejora continua es un pilar fundamental para prevenir y abordar la deuda social.
+En SocialScrum, este compromiso va más allá del cumplimiento técnico: implica una participación activa y genuina en la identificación y mitigación de los \textit{community smells}, así como en el fortalecimiento del bienestar colectivo \cite{caballero2022communitysmells}.
+Cuando todos los miembros del equipo se comprometen con un propósito común —no solo con las metas del producto, sino también con la salud emocional del grupo—, se genera un sentido compartido de responsabilidad que refuerza la cohesión, la confianza y la resiliencia del equipo frente a los desafíos cotidianos.
+
+\paragraph{Foco (Focus)}
+Mantener el foco en la salud social del equipo es tan esencial como concentrarse en la entrega del producto.
+En este sentido, SocialScrum ayuda a los equipos a equilibrar ambas prioridades, garantizando que las dinámicas humanas no queden relegadas frente a las demandas técnicas \cite{saeeda2024nontechnicaldebt}.
+Al mantener este enfoque, el equipo puede identificar y resolver tempranamente los problemas sociales que podrían afectar la productividad, la motivación o la calidad del software \cite{saeeda2024nontechnicaldebt}.
+De esta forma, el foco deja de ser únicamente un asunto de cumplimiento técnico y se convierte en un compromiso integral con el bienestar y la sostenibilidad del trabajo en equipo.
+
+Al integrar los fundamentos de la Confianza y la Autodeterminación, SocialScrum se convierte en una estructura metodológica que no solo visibiliza la deuda social, sino que también brinda las palancas teóricas necesarias —como la Autonomía, la Competencia y la Benevolencia— para que los equipos se sientan motivados a repararla activamente.
+De esta manera, el modelo promueve un equilibrio duradero entre alto rendimiento y bienestar colectivo, permitiendo que el trabajo en equipo sea tanto productivo como humano de forma sostenible en el tiempo.
 
 \section{Diseño del modelo SocialScrum}
 
