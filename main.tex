@@ -1,133 +1,250 @@
+% ==============================================================================
+% CLASE DEL DOCUMENTO
+% ==============================================================================
 \documentclass[a4paper,12pt]{report}
 
-% =================== PAQUETES BÁSICOS ===================
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[spanish]{babel}
+
+% ==============================================================================
+% PAQUETES BÁSICOS Y CONFIGURACIÓN DE IDIOMA
+% ==============================================================================
+
+% --- Codificación y fuentes ---
+\usepackage[utf8]{inputenc}          % Codificación de entrada UTF-8
+\usepackage[T1]{fontenc}             % Codificación de fuentes
+\usepackage[spanish]{babel}          % Idioma español
+\usepackage{csquotes}                % Manejo avanzado de comillas (para biblatex)
+
+% --- Geometría de página y espaciado ---
 \usepackage{geometry}
-\geometry{margin=2.5cm}
+\geometry{margin=2.5cm}              % Márgenes de 2.5cm en todos los lados
 \usepackage{setspace}
-\onehalfspacing
+\onehalfspacing                      % Interlineado de 1.5
 
-% =================== SUPRESIÓN DE WARNINGS DE ESPACIADO ===================
-% Suprime warnings de underfull/overfull hbox (problemas de espaciado menores)
-\hbadness=10000
-\vbadness=10000
-\hfuzz=2pt        % Tolera hasta 2pt de desbordamiento horizontal sin warning
-\vfuzz=2pt        % Tolera hasta 2pt de desbordamiento vertical sin warning
-\usepackage{hyperref}
-\usepackage{graphicx}
+% --- Supresión de warnings de espaciado ---
+% Tolera pequeños problemas de espaciado sin generar warnings
+\hbadness=10000                      % Suprime warnings de underfull hbox
+\vbadness=10000                      % Suprime warnings de underfull vbox
+\hfuzz=2pt                           % Tolera 2pt de desbordamiento horizontal
+\vfuzz=2pt                           % Tolera 2pt de desbordamiento vertical
 
-% =================== SOPORTE PARA IMÁGENES SVG ===================
-% Permite usar archivos SVG directamente sin necesidad de convertirlos manualmente
-% NOTA: Requiere Inkscape instalado (https://inkscape.org)
-% Descomenta las siguientes líneas después de instalar Inkscape:
+
+% ==============================================================================
+% PAQUETES PARA GRÁFICOS E IMÁGENES
+% ==============================================================================
+
+\usepackage{graphicx}                % Inclusión de imágenes
+\graphicspath{{recursos/}}           % Ruta predeterminada para imágenes
+
+% --- Soporte para SVG (requiere Inkscape instalado) ---
+% Descomenta las siguientes líneas si tienes Inkscape instalado:
 % \usepackage{svg}
 % \svgsetup{
 %     inkscapearea=page,
 %     inkscapelatex=false
 % }
-% Ruta donde se guardan las imágenes (opcional, puedes especificar una ruta específica)
-\graphicspath{{recursos/}}
 
-\usepackage{array, booktabs, longtable}
-\usepackage{caption}
-\usepackage{comment}
-\usepackage{csquotes} % Recomendado para biblatex con babel/polyglossia
-\usepackage{booktabs,subcaption,tabularx,siunitx,enumitem,pgfplots,pgfkeys,tikz}
-\pgfplotsset{compat=1.18}
+\usepackage{caption}                 % Personalización de leyendas
+\usepackage{subcaption}              % Subfiguras y subtablas
+\usepackage{pdflscape}               % Páginas en orientación horizontal
+
+
+% ==============================================================================
+% PAQUETES PARA TABLAS
+% ==============================================================================
+
+\usepackage{array}                   % Mejoras para tablas
+\usepackage{booktabs}                % Líneas profesionales en tablas
+\usepackage{longtable}               % Tablas que ocupan múltiples páginas
+\usepackage{tabularx}                % Tablas con ancho ajustable
+\usepackage{siunitx}                 % Alineación de números y unidades
+
+
+% ==============================================================================
+% PAQUETES MATEMÁTICOS Y DE SÍMBOLOS
+% ==============================================================================
+
+\usepackage{amssymb}                 % Símbolos matemáticos adicionales
+
+
+% ==============================================================================
+% PAQUETES PARA GRÁFICOS Y DIAGRAMAS
+% ==============================================================================
+
+\usepackage{tikz}                    % Creación de gráficos vectoriales
 \usetikzlibrary{arrows.meta,positioning,shapes.geometric}
-\usepackage{pdflscape} % Para entornos landscape
-\usepackage{amssymb}
-\usepackage{tikz}
-\usepackage{pgfplots}
-\usepackage{comment}
-\usepackage{changepage}
 
-% =================== REFERENCIAS ===================
-\usepackage[backend=biber,style=ieee]{biblatex}
-\addbibresource{references.bib}
+\usepackage{pgfplots}                % Gráficos y plots avanzados
+\pgfplotsset{compat=1.18}
+\usepackage{pgfkeys}
 
-% =================== ESTILO DE TÍTULOS ===================
-\usepackage{titlesec}
-\titleformat{\chapter}[hang]
-  {\normalfont\bfseries\large\centering}   % Estilo más pequeño y centrado
-  {CAPÍTULO\ \thechapter.}                 % Numeración del capítulo
-  {1em}
-  {\MakeUppercase}                         % Título en mayúsculas
 
-% =================== CONFIGURACIÓN DE FLOTANTES ===================
-% Mejor control de posicionamiento de figuras y tablas
-\usepackage{float}
+% ==============================================================================
+% PAQUETES DE UTILIDAD
+% ==============================================================================
+
+\usepackage{enumitem}                % Personalización de listas
+\usepackage{comment}                 % Bloques de comentarios
+\usepackage{changepage}              % Ajuste temporal de márgenes
+\usepackage{tcolorbox}               % Cajas de color decorativas
+\usepackage{hyperref}                % Enlaces e hipervínculos (debe ir al final)
+
+
+% ==============================================================================
+% CONFIGURACIÓN DE FLOTANTES (FIGURAS Y TABLAS)
+% ==============================================================================
+
+\usepackage{float}                   % Control preciso de posicionamiento
+\usepackage[section]{placeins}       % Evita que flotantes crucen secciones
 \restylefloat{table}
 \restylefloat{figure}
 
-% Parámetros para controlar la flotación
-\setcounter{topnumber}{3}           % máximo 3 flotantes en la parte superior
-\setcounter{bottomnumber}{2}        % máximo 2 flotantes en la parte inferior  
-\setcounter{totalnumber}{4}         % máximo 4 flotantes por página
-\renewcommand{\topfraction}{0.8}    % máximo 80% de la página para flotantes superiores
-\renewcommand{\bottomfraction}{0.6} % máximo 60% de la página para flotantes inferiores
-\renewcommand{\textfraction}{0.1}   % mínimo 10% de la página debe ser texto
-\renewcommand{\floatpagefraction}{0.8} % umbral para páginas dedicadas solo a flotantes
+% --- Parámetros de colocación de flotantes ---
+\setcounter{topnumber}{3}            % Máximo 3 flotantes en la parte superior
+\setcounter{bottomnumber}{2}         % Máximo 2 flotantes en la parte inferior
+\setcounter{totalnumber}{5}          % Máximo 5 flotantes por página
 
-% =================== CONFIGURACIÓN DE ÍNDICE ===================
-% Mostrar hasta subsubsection (nivel 3) en la tabla de contenido
+\renewcommand{\topfraction}{0.90}    % Hasta 90% superior para flotantes
+\renewcommand{\bottomfraction}{0.80} % Hasta 80% inferior para flotantes
+\renewcommand{\textfraction}{0.07}   % Mínimo 7% debe ser texto
+\renewcommand{\floatpagefraction}{0.85} % Umbral para páginas solo de flotantes
 
+% --- Espaciado alrededor de flotantes ---
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+
+
+% ==============================================================================
+% BIBLIOGRAFÍA Y REFERENCIAS
+% ==============================================================================
+
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{references.bib}
+
+
+% ==============================================================================
+% FORMATO DE TÍTULOS Y SECCIONES
+% ==============================================================================
+
+\usepackage{titlesec}
+
+% --- Formato de capítulos ---
+\titleformat{\chapter}[hang]
+  {\normalfont\bfseries\large\centering}
+  {CAPÍTULO\ \thechapter.}
+  {1em}
+  {\MakeUppercase}
+
+% --- Formato de secciones ---
 \titleformat{\section}
   {\normalfont\Large\bfseries}
   {\thesection}{1em}{}
 
+% --- Formato de subsecciones ---
 \titleformat{\subsection}
   {\normalfont\large\bfseries}
   {\thesubsection}{1em}{}
 
+% --- Formato de subsubsecciones ---
 \titleformat{\subsubsection}
   {\normalfont\normalsize\bfseries}
   {\thesubsubsection}{1em}{}
-\setcounter{tocdepth}{3}
-\setcounter{secnumdepth}{3}
 
-% =================== DOCUMENTO ===================
+
+% ==============================================================================
+% CONFIGURACIÓN DE ÍNDICES Y TABLA DE CONTENIDO
+% ==============================================================================
+
+% Mostrar hasta subsubsection (nivel 3) en tabla de contenido y numeración
+\setcounter{tocdepth}{3}             % Profundidad de tabla de contenido
+\setcounter{secnumdepth}{3}          % Profundidad de numeración de secciones
+
+
+% ==============================================================================
+% ==============================================================================
+%                            INICIO DEL DOCUMENTO
+% ==============================================================================
+% ==============================================================================
+
 \begin{document}
+
+
+% ==============================================================================
+% SECCIONES PRELIMINARES (Numeración romana)
+% ==============================================================================
+
 \pagenumbering{roman}
-% --------- PORTADA ---------
+
+% --- Portada ---
 \input{complementos/portadas.tex}
 
-% --------- AGRADECIMIENTOS ---------
+% --- Agradecimientos ---
 \input{complementos/agradecimientos-luis.tex}
 \input{complementos/agradecimientos-santiago.tex}
+
+% --- Resumen y Abstract ---
 \input{complementos/resumen}
 \input{complementos/abstract}
 
-% --------- TABLA DE CONTENIDO Y LISTAS ---------
+% --- Tabla de Contenido ---
 \renewcommand{\contentsname}{TABLA DE CONTENIDO}
 \tableofcontents
 \clearpage
 
+% --- Lista de Figuras ---
 \listoffigures
+\clearpage
+
+% --- Lista de Tablas ---
 \renewcommand{\listtablename}{ÍNDICE DE TABLAS}
 \renewcommand{\tablename}{Tabla}
 \listoftables
 \clearpage
 
-% =================== CONTENIDO ===================
+
+% ==============================================================================
+% CUERPO PRINCIPAL DEL DOCUMENTO (Numeración arábiga)
+% ==============================================================================
+
 \pagenumbering{arabic}
 
+% --- Capítulo 1 ---
 \input{capitulos/capitulo1.tex}
-\input{capitulos/capitulo2.tex}
-%\input{capitulos/capitulo3.tex}
-\input{capitulos/capitulo3-nuevo.tex}
-\input{capitulos/capitulo4.tex}
-\input{capitulos/pruebas.tex}
-\input{capitulos/capitulo5.tex}
-\input{capitulos/capitulo6.tex}
-%\input{capitulos/socialscrum-expanded.tex}
 
-% =================== BIBLIOGRAFÍA ===================
+% --- Capítulo 2 ---
+\input{capitulos/capitulo2.tex}
+
+% --- Capítulo 3 ---
+% \input{capitulos/capitulo3.tex}    % Versión anterior (comentado)
+\input{capitulos/capitulo3-nuevo.tex}
+
+% --- Capítulo 4 ---
+\input{capitulos/capitulo4.tex}
+
+% --- Pruebas ---
+\input{capitulos/pruebas.tex}
+
+% --- Capítulo 5 ---
+\input{capitulos/capitulo5.tex}
+
+% --- Capítulo 6 ---
+\input{capitulos/capitulo6.tex}
+
+% --- Otros capítulos (comentados) ---
+% \input{capitulos/socialscrum-expanded.tex}
+
+
+% ==============================================================================
+% BIBLIOGRAFÍA Y REFERENCIAS
+% ==============================================================================
+
 \cleardoublepage
 \renewcommand*{\bibname}{REFERENCIAS BIBLIOGRÁFICAS}
 \addcontentsline{toc}{chapter}{\MakeUppercase{REFERENCIAS BIBLIOGRÁFICAS}}
 \printbibliography
+
+
+% ==============================================================================
+%                              FIN DEL DOCUMENTO
+% ==============================================================================
 
 \end{document}
