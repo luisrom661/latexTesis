@@ -269,6 +269,10 @@ Gracias a esta integración teórica, SocialScrum logra abordar la deuda social 
 Al integrar los fundamentos de la Confianza y la Autodeterminación, SocialScrum se convierte en una estructura metodológica que no solo visibiliza la deuda social, sino que también brinda las palancas teóricas necesarias —como la Autonomía, la Competencia y la Benevolencia— para que los equipos se sientan motivados a repararla activamente.
 De esta manera, el modelo promueve un equilibrio duradero entre alto rendimiento y bienestar colectivo, permitiendo que el trabajo en equipo sea tanto productivo como humano de forma sostenible en el tiempo.
 
+//TODO Agrega párrafo explicando TAD + Mayer son complementarios (no redundantes)
+//TODO Agrega subsección corta (1-2 páginas) comparando TAD vs. Bandura/Csikszentmihalyi
+//TODO Al final de cada sección, agrega: "La operacionalización se desarrolla en Cap 4, Sección X"
+
 \subsection{Fundamentos psicológicos}
 
 Para abordar la deuda social, que con frecuencia se manifiesta en estrés crónico y síndrome de Burnout \cite{wilson_all_2006,tulili2022burnout}, SocialScrum se fundamenta en la Teoría de la Autodeterminación (TAD) \cite{ryan_self-determination_2000}.
@@ -582,5 +586,448 @@ El ciclo empírico de SocialScrum no garantiza ausencia de deuda social—tal ga
 \FloatBarrier
 
 \section{Diseño del modelo SocialScrum}
+
+La Figura \ref{fig:arquitectura_socialscrum} presenta la arquitectura conceptual de SocialScrum, organizando el modelo en cuatro capas interdependientes que muestran cómo los fundamentos teóricos se traducen en mecanismos operacionales que previenen y mitigan la deuda social.
+
+\textbf{Capa 1 (Fundamentos)} integra tres marcos teóricos complementarios: la Teoría de Autodeterminación (TAD) explica qué necesitan los individuos para mantener motivación sostenible; el modelo de Confianza de Mayer et al. explica qué sostiene las relaciones de interdependencia; y los Valores de Scrum proporcionan la brújula ética y cultural. Estos fundamentos convergen para habilitar los principios empíricos, se puede observar en la Figura \ref{fig:fundamentos_teoricos}.
+
+% --- DIAGRAMA FUNDAMENTOS TEÓRICOS ---
+\begin{figure}[!htbp]
+    \centering
+    \begin{tikzpicture}[
+        node distance=1.5cm, auto,
+        component/.style={rectangle, draw, fill=white, text width=3.0cm, minimum height=4.2cm,
+                rounded corners, align=center, font=\scriptsize, inner sep=3pt},
+        arrow/.style={-{Stealth}, thick}
+        ]
+
+        % Tres bloques - centrados y con altura uniforme
+        \node[component] (tad) {%
+            \centering\textbf{TAD}\\[3pt]\rule{\linewidth}{0.4pt}\\[4pt]
+            Autonomía\\[2pt]
+            Competencia\\[2pt]
+            Relacionalidad
+        };
+
+        \node[component, right=0.5cm of tad] (conf) {%
+            \centering\textbf{Confianza}\\[3pt]\rule{\linewidth}{0.4pt}\\[4pt]
+            Habilidad\\[2pt]
+            Benevolencia\\[2pt]
+            Integridad
+        };
+
+        \node[component, right=0.5cm of conf] (vals) {%
+            \centering\textbf{Valores de Scrum}\\[3pt]\rule{\linewidth}{0.4pt}\\[4pt]
+            Coraje\\[2pt]
+            Apertura\\[2pt]
+            Respeto\\[2pt]
+            Compromiso\\[2pt]
+            Foco
+        };
+
+        % Barra superior - alineada con los bordes de los 3 bloques
+        \node[rectangle, draw, fill=blue!10, minimum height=1.5cm, rounded corners,
+            align=center, font=\small\bfseries, above=0.5cm of conf,
+            fit={(tad.north west) (vals.north east)}, inner sep=0pt,
+            anchor=south] (hdr) {FUNDAMENTOS TEÓRICOS};
+
+        % Etiquetas inferiores
+        \node[below=0.6cm of tad, font=\scriptsize] (mot) {Motivación intrínseca};
+        \node[below=0.6cm of conf, font=\scriptsize] (col) {Colaboración eficaz};
+        \node[below=0.6cm of vals, font=\scriptsize] (cul) {Cultura de mejora};
+
+        % Flechas
+        \draw[arrow] (tad.south) -- (mot.north);
+        \draw[arrow] (conf.south) -- (col.north);
+        \draw[arrow] (vals.south) -- (cul.north);
+
+    \end{tikzpicture}
+    \caption{Fundamentos teóricos de SocialScrum}
+    \label{fig:fundamentos_teoricos}
+\end{figure}
+
+\textbf{Capa 2 (Principios Empíricos)} muestra el ciclo de retroalimentación continua donde la Transparencia convierte fenómenos sociales difusos en objetos observables, la Inspección monitorea su evolución en múltiples cadencias, y la Adaptación interviene mediante experimentación controlada. Los resultados de adaptación generan nueva transparencia, cerrando el ciclo.
+
+% --- PRINCIPIOS EMPÍRICOS (Ciclo de Retroalimentación) ---
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}[
+        scale=1.15, transform shape,
+        node distance=2.2cm,
+        princ/.style={rectangle, draw=blue!75, fill=blue!12, text width=4.2cm, minimum height=3.2cm, rounded corners=4mm, align=center, font=\normalsize\bfseries, line width=1.2pt},
+        arrow/.style={-{Stealth[length=3mm]}, very thick, blue!80},
+        feedback/.style={-{Stealth[length=3mm]}, very thick, red!80, dashed},
+        labeltext/.style={font=\small\itshape, text=black!80}
+        ]
+
+        % Nodos principales
+        \node[princ] (transp) at (0,0) {
+        TRANSPARENCIA\\[6pt]
+        {\normalfont\small Convierte lo invisible en observable}
+        };
+
+        \node[princ] (insp) at (7.5,0) {
+        INSPECCIÓN\\[6pt]
+        {\normalfont\small Monitorea evolución continua}
+        };
+
+        \node[princ] (adapt) at (3.75,-5.0) {
+        ADAPTACIÓN\\[6pt]
+        {\normalfont\small Experimenta e interviene}
+        };
+
+        % Flechas del ciclo
+        \draw[arrow] (transp.east) -- node[midway, above, labeltext, yshift=6pt] {hace visible} (insp.west);
+        \draw[arrow] (insp.south) -- node[pos=0.55, above, labeltext, yshift=4pt, text width=3.2cm, align=center] {detecta desviaciones} (adapt.north);
+        \draw[arrow] (adapt.north) -- node[pos=0.45, above, labeltext, yshift=4pt, text width=3.2cm, align=center] {genera cambios} (transp.south);
+
+        % Feedback loop
+        \draw[feedback] (adapt.east) .. controls +(2,-1) and +(0.5,-1) .. node[right, labeltext, text width=2cm, align=center] {nueva transparencia} (insp.south);
+
+        % Etiqueta de cadencias
+        \node[below=0.5cm of adapt, draw, fill=yellow!10, rounded corners, text width=9.5cm, align=center, font=\small] {
+            \textbf{Cadencias múltiples:} \mbox{Diaria} $\mid$ Sprint $\mid$ Release $\mid$ Continua
+        };
+
+        % Título superior
+        \node[above=0.5cm of transp, xshift=3.75cm, font=\bfseries\Large] {
+            Ciclo Empírico de Gestión Social
+        };
+
+    \end{tikzpicture}
+    \caption{Principios empíricos de SocialScrum: ciclo de retroalimentación continua}
+    \label{fig:principios_empiricos}
+\end{figure}
+
+
+\textbf{Capa 3 (Componentes Operacionales)} especifica los mecanismos concretos que implementan los principios: roles especializados (destacando el Social Guide como integrador), eventos adaptados para incluir dimensiones sociales (siendo la Retrospective Social el núcleo), y artefactos que formalizan la gestión de deuda social.
+
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}[
+        node distance=0.3cm,
+        colbox/.style={rectangle, draw=black!50, fill=#1, text width=3.5cm, minimum height=5cm, rounded corners=2mm, align=center, font=\small, line width=0.8pt},
+        header/.style={font=\small\bfseries},
+        item/.style={font=\scriptsize},
+        connector/.style={{Stealth[length=3mm]}-{Stealth[length=3mm]}, thick, gray!60}
+        ]
+
+        % Columna 1: ROLES
+        \node[colbox=green!10] (roles) at (0,0) {
+            \textcolor{black}{\textbf{ROLES}}\\[8pt]
+            \begin{tabular}{l}
+                \textbf{Social Guide}       \\
+                {\scriptsize (integrador)}  \\[4pt]
+                \textbf{Scrum Master}       \\
+                {\scriptsize (facilitador)} \\[4pt]
+                \textbf{Product Owner}      \\
+                {\scriptsize (priorizador)} \\[4pt]
+                \textbf{Developers}         \\
+                {\scriptsize (ejecutores)}
+            \end{tabular}
+        };
+
+        % Columna 2: EVENTOS
+        \node[colbox=orange!10, right=1.5cm of roles] (eventos) {
+            \textcolor{black}{\textbf{EVENTOS}}\\[8pt]
+            \begin{tabular}{l}
+                • Daily Social    \\[2pt]
+                • Sprint Planning \\
+                \quad Social      \\[2pt]
+                • Sprint Review   \\
+                \quad Social      \\[2pt]
+                • Retrospective   \\
+                \quad \textbf{Social (núcleo)}
+            \end{tabular}
+        };
+
+        % Columna 3: ARTEFACTOS
+        \node[colbox=purple!10, right=1.5cm of eventos] (artef) {
+            \textcolor{black}{\textbf{ARTEFACTOS}}\\[8pt]
+            \begin{tabular}{l}
+                • Product Backlog \\
+                \quad Social      \\[2pt]
+                • Sprint Backlog  \\
+                \quad Social      \\[2pt]
+                • Registro de     \\
+                \quad Smells      \\[2pt]
+                • Métricas        \\
+                \quad Sociales
+            \end{tabular}
+        };
+
+        % Conectores bidireccionales
+        \draw[connector] (roles.east) -- (eventos.west);
+        \draw[connector] (eventos.east) -- (artef.west);
+
+        % Etiquetas debajo
+        \node[below=0.1cm of roles, font=\scriptsize\itshape, text=gray] {Responsabilidad};
+        \node[below=0.1cm of eventos, font=\scriptsize\itshape, text=gray] {Cadencias};
+        \node[below=0.1cm of artef, font=\scriptsize\itshape, text=gray] {Transparencia};
+
+        % Título superior
+        \node[above=0.5cm of eventos, font=\bfseries\large] {
+            Componentes Operacionales de SocialScrum
+        };
+
+        % Subtítulo
+        \node[below=0.8cm of eventos, font=\scriptsize\itshape, text width=10cm, align=center] {
+            Mecanismos que implementan los principios empíricos
+        };
+
+    \end{tikzpicture}
+    \caption{Componentes operacionales: roles, eventos y artefactos adaptados}
+    \label{fig:componentes_operacionales}
+\end{figure}
+
+\textbf{Capa 4 (Outcomes)} documenta qué se previene específicamente (community smells por categoría) y qué mejora sistémicamente (reducción de deuda social, aumento de confianza y cohesión, prevención de burnout, mayor sostenibilidad).
+
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}[
+        node distance=1cm,
+        bigbox/.style={rectangle, draw=black!70, fill=#1, text width=12cm, minimum height=2.5cm, rounded corners=3mm, align=left, font=\small, line width=1pt},
+        arrow/.style={-{Stealth[length=3mm]}, ultra thick, blue!50}
+        ]
+
+        % Caja superior: Prevención
+        \node[bigbox=red!5] (prev) at (0,0) {
+            \textbf{\large Prevención de Community Smells}\\[8pt]
+            \begin{tabular}{@{}ll@{}}
+                \textbf{Comunicación:}   & Radio Silence, Bottleneck                   \\
+                \textbf{Conocimiento:}   & Black Cloud, Sharing Villainy               \\
+                \textbf{Relacional:}     & Lone Wolf, Toxic Relationships, Burnout     \\
+                \textbf{Organizacional:} & Organizational Silo, Sluggish Organizations
+            \end{tabular}
+        };
+
+        % Flecha central
+        \draw[arrow] (prev.south) -- ++(0,-0.8);
+
+        % Caja inferior: Resultados sistémicos
+        \node[bigbox=green!5, below=1.5cm of prev] (result) {
+            \textbf{\large Resultados Sistémicos}\\[8pt]
+            \begin{tabular}{@{}ccc@{}}
+                \textcolor{red!70}{$\downarrow$ Deuda Social} &
+                \textcolor{blue!70}{$\uparrow$ Confianza}     &
+                \textcolor{green!70}{$\uparrow$ Sostenibilidad} \\[4pt]
+                \textcolor{green!70}{$\uparrow$ Cohesión}     &
+                \textcolor{blue!70}{$\uparrow$ Autonomía}     &
+                \textcolor{red!70}{$\downarrow$ Burnout}
+            \end{tabular}
+        };
+
+        % Título superior
+        \node[above=0.5cm of prev, font=\bfseries\Large] {
+            Outcomes de SocialScrum
+        };
+
+        % Subtítulo
+        \node[above=0.2cm of prev, font=\scriptsize\itshape] {
+            Qué se previene y qué mejora sistémicamente
+        };
+
+        % Nota al pie
+        \node[below=0.3cm of result, font=\scriptsize\itshape, text width=12cm, align=center, text=gray!70] {
+        La gestión sistemática de deuda social genera impactos tanto específicos\\(prevención de smells) como emergentes (mejora de propiedades sistémicas)
+        };
+
+    \end{tikzpicture}
+    \caption{Outcomes del modelo SocialScrum: prevención y mejora sistémica}
+    \label{fig:outcomes_socialscrum}
+\end{figure}
+
+Los feedback loops (líneas discontinuas) muestran que el sistema es reflexivo: los outcomes exitosos refuerzan los valores que los habilitaron, y el ciclo empírico se auto-perfecciona continuamente. Esta arquitectura en capas permite que SocialScrum escale desde fundamentos teóricos hasta impacto medible, manteniendo coherencia conceptual en cada nivel.
+
+\begin{figure}[p]  % [p] = página completa
+    \centering
+    \begin{tikzpicture}[
+        node distance=0.8cm,
+        layer/.style={rectangle, draw=black!60, fill=#1, text width=13cm, minimum height=1cm, rounded corners=2mm, align=center, font=\small\bfseries, line width=1pt},
+        component/.style={rectangle, draw, fill=white, text width=3.8cm, minimum height=1.8cm, rounded corners=1.5mm, align=center, font=\scriptsize},
+        arrow/.style={-{Stealth[length=3mm]}, thick, blue!60},
+        feedback/.style={-{Stealth[length=3mm]}, dashed, thick, red!60}
+        ]
+
+        % ========== CAPA 2: PRINCIPIOS ==========
+        \node[layer=blue!10] (capa2) at (0,0) {CAPA 2: PRINCIPIOS EMPÍRICOS};
+
+        \node[component, below=0.2cm of capa2, xshift=-4cm] (transp) {
+        \textbf{Transparencia}\\[4pt]
+        {\tiny Convierte invisible\\en observable}
+        };
+        \node[component, below=0.2cm of capa2, xshift=4cm] (insp) {
+        \textbf{Inspección}\\[4pt]
+        {\tiny Monitorea evolución\\continua}
+        };
+        \node[component, below=1.2cm of capa2] (adapt) {
+        \textbf{Adaptación}\\[4pt]
+        {\tiny Experimenta e\\interviene}
+        };
+
+        \draw[arrow] (transp) -- (insp);
+        \draw[arrow] (insp) -- (adapt);
+        \draw[arrow] (adapt) -- (transp);
+        \draw[feedback] (adapt.east) to[bend right=25] (insp.south);
+
+        % ========== CAPA 3: COMPONENTES ==========
+        \node[layer=green!10, below=3.5cm of capa2] (capa3) {CAPA 3: COMPONENTES OPERACIONALES};
+
+        \node[component, below=0.2cm of capa3, xshift=-4.5cm] (roles) {
+        \textbf{Roles}\\[2pt]
+        {\tiny • Social Guide\\
+        • Scrum Master\\
+        • Product Owner\\
+        • Developers}
+        };
+        \node[component, below=0.2cm of capa3] (eventos) {
+        \textbf{Eventos}\\[2pt]
+        {\tiny • Daily Social\\
+        • Planning Social\\
+        • Review Social\\
+        • Retro Social}
+        };
+        \node[component, below=0.2cm of capa3, xshift=4.5cm] (artef) {
+        \textbf{Artefactos}\\[2pt]
+        {\tiny • Backlog Social\\
+        • Registro Smells\\
+        • Métricas}
+        };
+
+        \draw[arrow] (adapt) -- (roles);
+        \draw[arrow] (adapt) -- (eventos);
+        \draw[arrow] (adapt) -- (artef);
+
+        % ========== CAPA 4: OUTCOMES ==========
+        \node[layer=orange!10, below=3.5cm of capa3] (capa4) {CAPA 4: OUTCOMES};
+
+        \node[component, below=0.2cm of capa4, text width=12cm, minimum height=2cm] (outcomes) {
+            \textbf{Prevención:} Radio Silence, Black Cloud, Burnout, Silos\\[4pt]
+            \textbf{Mejoras:} {\tiny $\downarrow$ Deuda Social $\mid$ $\uparrow$ Confianza $\mid$ $\uparrow$ Cohesión $\mid$ $\uparrow$ Sostenibilidad}
+        };
+
+        \draw[arrow] (roles) -- (outcomes);
+        \draw[arrow] (eventos) -- (outcomes);
+        \draw[arrow] (artef) -- (outcomes);
+
+        % Feedback loop general
+        \draw[feedback] (outcomes.east) to[bend left=60] node[right, font=\tiny, text=red!70, text width=1.6cm, align=center] {Refuerza sistema} (transp.east);
+
+        % Etiquetas laterales
+        \node[rotate=90, font=\scriptsize, anchor=south, text=gray] at (-7.5, -1) {Cómo se aborda};
+        \node[rotate=90, font=\scriptsize, anchor=south, text=gray] at (-7.5, -4.5) {Qué implementa};
+        \node[rotate=90, font=\scriptsize, anchor=south, text=gray] at (-7.5, -8) {Qué mejora};
+
+    \end{tikzpicture}
+    \caption{Arquitectura integrada del modelo SocialScrum (Capas 2-4)}
+    \label{fig:arquitectura_integrada}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}[node distance=1.5cm, auto,
+        layer/.style={rectangle, draw, fill=blue!10, text width=13cm, minimum height=1.5cm, rounded corners, align=center, font=\small\bfseries},
+        component/.style={rectangle, draw, fill=white, text width=3.5cm, minimum height=2cm, rounded corners, align=center, font=\scriptsize},
+        arrow/.style={-{Stealth}, thick},
+        feedback/.style={-{Stealth}, dashed, thick, red}
+        ]
+
+        % CAPA 1: FUNDAMENTOS
+        \node[layer] (fund) at (0,0) {CAPA 1: FUNDAMENTOS TEÓRICOS};
+        \node[component, below=0.3cm of fund, xshift=-4cm] (tad) {
+            \textbf{TAD}\\[2pt]
+            • Autonomía\\
+            • Competencia\\
+            • Relacionalidad
+        };
+        \node[component, below=0.3cm of fund] (conf) {
+            \textbf{Confianza}\\[2pt]
+            • Habilidad\\
+            • Benevolencia\\
+            • Integridad
+        };
+        \node[component, below=0.3cm of fund, xshift=4cm] (val) {
+            \textbf{Valores Scrum}\\[2pt]
+            • Coraje\\
+            • Apertura\\
+            • Respeto\\
+            • Compromiso\\
+            • Foco
+        };
+
+        % CAPA 2: PRINCIPIOS
+        \node[layer, below=3cm of fund] (princ) {CAPA 2: PRINCIPIOS EMPÍRICOS (Ciclo)};
+        \node[component, below=0.3cm of princ, xshift=-3cm] (transp) {
+            \textbf{Transparencia}\\[4pt]
+            Convierte invisible\\
+            en observable
+        };
+        \node[component, below=0.3cm of princ, xshift=3cm] (insp) {
+            \textbf{Inspección}\\[4pt]
+            Monitorea evolución\\
+            continua
+        };
+        \node[component, below=1.5cm of princ] (adapt) {
+            \textbf{Adaptación}\\[4pt]
+            Experimenta e\\
+            interviene
+        };
+
+        % CAPA 3: COMPONENTES
+        \node[layer, below=5.5cm of princ] (comp) {CAPA 3: COMPONENTES OPERACIONALES};
+        \node[component, below=0.3cm of comp, xshift=-4cm] (roles) {
+            \textbf{Roles}\\[2pt]
+            • Social Guide\\
+            • Scrum Master\\
+            • Product Owner\\
+            • Developers
+        };
+        \node[component, below=0.3cm of comp] (eventos) {
+            \textbf{Eventos}\\[2pt]
+            • Daily Social\\
+            • Planning Social\\
+            • Review Social\\
+            • Retro Social
+        };
+        \node[component, below=0.3cm of comp, xshift=4cm] (artef) {
+            \textbf{Artefactos}\\[2pt]
+            • Backlog Social\\
+            • Registro Smells\\
+            • Métricas Sociales
+        };
+
+        % CAPA 4: OUTCOMES
+        \node[layer, below=3cm of comp] (outc) {CAPA 4: OUTCOMES};
+        \node[component, below=0.3cm of outc, text width=12cm, minimum height=1.5cm] (results) {
+            \textbf{Prevención:} Radio Silence, Black Cloud, Burnout, Silos\\
+            \textbf{Mejoras:} ↓ Deuda Social | ↑ Confianza | ↑ Cohesión | ↑ Sostenibilidad
+        };
+
+        % FLECHAS PRINCIPALES (descendentes)
+        \draw[arrow] (tad) -- (transp);
+        \draw[arrow] (conf) -- (insp);
+        \draw[arrow] (val) -- (adapt);
+
+        \draw[arrow] (transp) -- (insp);
+        \draw[arrow] (insp) -- (adapt);
+        \draw[arrow] (adapt) -- (roles);
+
+        \draw[arrow] (roles) -- (results);
+        \draw[arrow] (eventos) -- (results);
+        \draw[arrow] (artef) -- (results);
+
+        % FEEDBACK LOOPS (ascendentes, discontinuas)
+        \draw[feedback] (adapt) to[bend right=45] (transp);
+        \draw[feedback] (results.east) to[bend left=60] node[right, font=\tiny] {Refuerza valores} (val.east);
+
+        % ETIQUETAS LATERALES
+        \node[rotate=90, font=\scriptsize, anchor=south] at (-7, -2) {Fundamentación};
+        \node[rotate=90, font=\scriptsize, anchor=south] at (-7, -6) {Operacionalización};
+        \node[rotate=90, font=\scriptsize, anchor=south] at (-7, -10) {Impacto};
+
+    \end{tikzpicture}
+    \caption{Arquitectura conceptual del modelo SocialScrum}
+    \label{fig:arquitectura_socialscrum}
+\end{figure}
 
 \section{Conclusiones}

@@ -895,51 +895,6 @@
       \verb https://doi.org/10.37190/e-inf240101
       \endverb
     \endentry
-    \entry{wilson_all_2006}{article}{}
-      \name{author}{3}{}{%
-        {{hash=d1bafb83ec7921606e4cf7b2e8b4a738}{%
-           family={Wilson},
-           familyi={W\bibinitperiod},
-           given={Jeanne\bibnamedelima M.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=9a4c3754059314e5e5250f258d552e1c}{%
-           family={Straus},
-           familyi={S\bibinitperiod},
-           given={Susan\bibnamedelima G.},
-           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=4eca1db8210ff3b456fd50c05ffbcbd8}{%
-           family={McEvily},
-           familyi={M\bibinitperiod},
-           given={Bill},
-           giveni={B\bibinitperiod}}}%
-      }
-      \strng{namehash}{f7b37c21fc28eae3160a42cf4525ec3c}
-      \strng{fullhash}{0f3859d77c2916bf94ea1739b7686567}
-      \strng{bibnamehash}{0f3859d77c2916bf94ea1739b7686567}
-      \strng{authorbibnamehash}{0f3859d77c2916bf94ea1739b7686567}
-      \strng{authornamehash}{f7b37c21fc28eae3160a42cf4525ec3c}
-      \strng{authorfullhash}{0f3859d77c2916bf94ea1739b7686567}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Organizational Behavior and Human Decision Processes}
-      \field{number}{1}
-      \field{title}{All in Due Time: The Development of Trust in Computer-Mediated and Face-to-Face Teams}
-      \field{volume}{99}
-      \field{year}{2006}
-      \field{pages}{16\bibrangedash 33}
-      \range{pages}{18}
-      \verb{doi}
-      \verb 10.1016/j.obhdp.2005.08.001
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1016/j.obhdp.2005.08.001
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1016/j.obhdp.2005.08.001
-      \endverb
-    \endentry
     \entry{ryan_self-determination_2000}{article}{}
       \name{author}{2}{}{%
         {{hash=49ad03aeb3155f395016c49dd507c027}{%
@@ -1025,6 +980,192 @@
       \verb https://journals.aom.org/doi/abs/10.5465/amr.1995.9508080335
       \endverb
     \endentry
+    \entry{vroom1964work}{book}{}
+      \name{author}{1}{}{%
+        {{hash=967a6deba5465a06c6514697e605ee5d}{%
+           family={Vroom},
+           familyi={V\bibinitperiod},
+           given={Victor\bibnamedelima Harold},
+           giveni={V\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{967a6deba5465a06c6514697e605ee5d}
+      \strng{fullhash}{967a6deba5465a06c6514697e605ee5d}
+      \strng{bibnamehash}{967a6deba5465a06c6514697e605ee5d}
+      \strng{authorbibnamehash}{967a6deba5465a06c6514697e605ee5d}
+      \strng{authornamehash}{967a6deba5465a06c6514697e605ee5d}
+      \strng{authorfullhash}{967a6deba5465a06c6514697e605ee5d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0471963078}
+      \field{title}{Work and Motivation}
+      \field{year}{1964}
+    \endentry
+    \entry{locke1990theory}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3a235aa304a8139ad5907617ac24fb76}{%
+           family={Locke},
+           familyi={L\bibinitperiod},
+           given={Edwin\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=874820129bd8a88281624b367a49a1bc}{%
+           family={Latham},
+           familyi={L\bibinitperiod},
+           given={Gary\bibnamedelima P.},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{02e3ae51b1aa605fae9a2fa779c8a802}
+      \strng{fullhash}{02e3ae51b1aa605fae9a2fa779c8a802}
+      \strng{bibnamehash}{02e3ae51b1aa605fae9a2fa779c8a802}
+      \strng{authorbibnamehash}{02e3ae51b1aa605fae9a2fa779c8a802}
+      \strng{authornamehash}{02e3ae51b1aa605fae9a2fa779c8a802}
+      \strng{authorfullhash}{02e3ae51b1aa605fae9a2fa779c8a802}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0139131387}
+      \field{journaltitle}{Prentice-Hall, Inc.}
+      \field{title}{A Theory of Goal Setting and Task Performance}
+      \field{year}{1990}
+    \endentry
+    \entry{wilson_all_2006}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d1bafb83ec7921606e4cf7b2e8b4a738}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Jeanne\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=9a4c3754059314e5e5250f258d552e1c}{%
+           family={Straus},
+           familyi={S\bibinitperiod},
+           given={Susan\bibnamedelima G.},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=4eca1db8210ff3b456fd50c05ffbcbd8}{%
+           family={McEvily},
+           familyi={M\bibinitperiod},
+           given={Bill},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7b37c21fc28eae3160a42cf4525ec3c}
+      \strng{fullhash}{0f3859d77c2916bf94ea1739b7686567}
+      \strng{bibnamehash}{0f3859d77c2916bf94ea1739b7686567}
+      \strng{authorbibnamehash}{0f3859d77c2916bf94ea1739b7686567}
+      \strng{authornamehash}{f7b37c21fc28eae3160a42cf4525ec3c}
+      \strng{authorfullhash}{0f3859d77c2916bf94ea1739b7686567}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Organizational Behavior and Human Decision Processes}
+      \field{number}{1}
+      \field{title}{All in Due Time: The Development of Trust in Computer-Mediated and Face-to-Face Teams}
+      \field{volume}{99}
+      \field{year}{2006}
+      \field{pages}{16\bibrangedash 33}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1016/j.obhdp.2005.08.001
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.obhdp.2005.08.001
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.obhdp.2005.08.001
+      \endverb
+    \endentry
+    \entry{rousseau1998not}{article}{}
+      \name{author}{4}{}{%
+        {{hash=385cb42371df2cace6f9c749b94a4496}{%
+           family={Rousseau},
+           familyi={R\bibinitperiod},
+           given={Denise\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=c7d04dc111439b31057065fa605cf9f8}{%
+           family={Sitkin},
+           familyi={S\bibinitperiod},
+           given={Sim\bibnamedelima B.},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=fd355c0061f6dee85bc26b7564b0e4c0}{%
+           family={Burt},
+           familyi={B\bibinitperiod},
+           given={Ronald\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=1dd7907f2e73bf06388a41e10690fef7}{%
+           family={Camerer},
+           familyi={C\bibinitperiod},
+           given={Colin},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{8c14a21d54e6eeff812398142cc81ac4}
+      \strng{fullhash}{6e347d2144b8df6b2b6aaa7bc74accae}
+      \strng{bibnamehash}{6e347d2144b8df6b2b6aaa7bc74accae}
+      \strng{authorbibnamehash}{6e347d2144b8df6b2b6aaa7bc74accae}
+      \strng{authornamehash}{8c14a21d54e6eeff812398142cc81ac4}
+      \strng{authorfullhash}{6e347d2144b8df6b2b6aaa7bc74accae}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Academy of Management Review}
+      \field{number}{3}
+      \field{title}{Not So Different After All: A Cross-Discipline View Of Trust}
+      \field{volume}{23}
+      \field{year}{1998}
+      \field{pages}{393\bibrangedash 404}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.5465/amr.1998.926617
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5465/amr.1998.926617
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5465/amr.1998.926617
+      \endverb
+    \endentry
+    \entry{mcallister1995affect}{article}{}
+      \name{author}{1}{}{%
+        {{hash=712e56735b2051f7461b47546ecd8e47}{%
+           family={McAllister},
+           familyi={M\bibinitperiod},
+           given={Daniel\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{712e56735b2051f7461b47546ecd8e47}
+      \strng{fullhash}{712e56735b2051f7461b47546ecd8e47}
+      \strng{bibnamehash}{712e56735b2051f7461b47546ecd8e47}
+      \strng{authorbibnamehash}{712e56735b2051f7461b47546ecd8e47}
+      \strng{authornamehash}{712e56735b2051f7461b47546ecd8e47}
+      \strng{authorfullhash}{712e56735b2051f7461b47546ecd8e47}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Academy of Management Journal}
+      \field{number}{1}
+      \field{title}{Affect- and Cognition-Based Trust as Foundations for Interpersonal Cooperation in Organizations}
+      \field{volume}{38}
+      \field{year}{1995}
+      \field{pages}{24\bibrangedash 59}
+      \range{pages}{36}
+      \verb{doi}
+      \verb 10.2307/256727
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2307/256727
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2307/256727
+      \endverb
+    \endentry
     \entry{almarimi2021csDetector}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=f845387211bcb4de75be0f82d9ef3add}{%
@@ -1060,8 +1201,8 @@
       \strng{authorbibnamehash}{409fa192bdb917b094561ff0dd16ae45}
       \strng{authornamehash}{8bf639bf40457793b10d189b94e46937}
       \strng{authorfullhash}{409fa192bdb917b094561ff0dd16ae45}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Community smells represent symptoms of sub-optimal organizational and social issues within software development communities that often lead to additional project costs and reduced software quality. Previous research identified a variety of community smells that are connected to sub-optimal patterns under different perspectives of organizational-social structures in the software development community. To detect community smells and understanding the characteristics of such organizational-social structures in a project, we propose csDetector, an open source tool that is able to automatically detect community smells within a project and provide relevant socio-technical metrics. csDetector uses a machine learning based detection approach that learns from various existing bad community development practices to provide automated support in detecting related community smells. We evaluate the effectiveness of csDetector on a benchmark of 143 open source projects from GitHub. Our results show that the csDetector tool can detect ten commonly occurring community smells in open software projects with an average F1 score of 84\%. csDetector is publicly available, with a demo video, at: https://github.com/Nuri22/csDetector.}
@@ -1095,8 +1236,8 @@
       \strng{authorbibnamehash}{09c5eb1ea6af96cde768e0983ca84c33}
       \strng{authornamehash}{09c5eb1ea6af96cde768e0983ca84c33}
       \strng{authorfullhash}{09c5eb1ea6af96cde768e0983ca84c33}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{YOSHI: a tool to study online software development communities}
@@ -1133,8 +1274,8 @@
       \strng{authornamehash}{401b286ba49f9eff97d5b06f8036666a}
       \strng{authorfullhash}{9bc30c1828f4b3fac87aa6b19f5598b8}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{e-Informatica Software Engineering Journal}
@@ -1164,8 +1305,8 @@
       \strng{authorbibnamehash}{6585b610adaa66372fc80904a0597f12}
       \strng{authornamehash}{6585b610adaa66372fc80904a0597f12}
       \strng{authorfullhash}{6585b610adaa66372fc80904a0597f12}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2021 IEEE/ACM International Conference on Technical Debt (TechDebt)}
@@ -1200,8 +1341,8 @@
       \strng{authorbibnamehash}{f734abf43afbd68da92dab6558aaa495}
       \strng{authornamehash}{f734abf43afbd68da92dab6558aaa495}
       \strng{authorfullhash}{f734abf43afbd68da92dab6558aaa495}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings - 2017 IEEE International Conference on Software Architecture Workshops (ICSAW)}
@@ -1234,8 +1375,8 @@
       \strng{authorbibnamehash}{b8962a7e859e705d2af2f259315da06d}
       \strng{authornamehash}{b8962a7e859e705d2af2f259315da06d}
       \strng{authorfullhash}{b8962a7e859e705d2af2f259315da06d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Psychological Review}
