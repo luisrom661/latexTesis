@@ -88,6 +88,8 @@
 \usepackage{changepage}              % Ajuste temporal de márgenes
 \usepackage{tcolorbox}               % Cajas de color decorativas
 \usepackage{hyperref}                % Enlaces e hipervínculos (debe ir al final)
+\usepackage[toc,acronym]{glossaries}  % Glosarios y acrónimos (usar makeindex por compatibilidad Windows)
+\makeglossaries
 
 
 % ==============================================================================
@@ -208,6 +210,9 @@
 
 \pagenumbering{arabic}
 
+% --- Glosario ---
+\input{complementos/glosario.tex}
+
 % --- Capítulo 1 ---
 \input{capitulos/capitulo1.tex}
 
@@ -239,11 +244,11 @@
 % ==============================================================================
 
 \cleardoublepage
-\renewcommand*{\bibname}{REFERENCIAS BIBLIOGRÁFICAS}
 \addcontentsline{toc}{chapter}{\MakeUppercase{REFERENCIAS BIBLIOGRÁFICAS}}
 \printbibliography
 
 
+% ==============================================================================
 % ==============================================================================
 %                              FIN DEL DOCUMENTO
 % ==============================================================================

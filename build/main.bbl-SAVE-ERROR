@@ -980,6 +980,97 @@
       \verb https://journals.aom.org/doi/abs/10.5465/amr.1995.9508080335
       \endverb
     \endentry
+    \entry{bandura1997self}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3dda0f93a5c43e1392668692b92f8231}{%
+           family={Bandura},
+           familyi={B\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {W.H. Freeman}%
+      }
+      \strng{namehash}{3dda0f93a5c43e1392668692b92f8231}
+      \strng{fullhash}{3dda0f93a5c43e1392668692b92f8231}
+      \strng{bibnamehash}{3dda0f93a5c43e1392668692b92f8231}
+      \strng{authorbibnamehash}{3dda0f93a5c43e1392668692b92f8231}
+      \strng{authornamehash}{3dda0f93a5c43e1392668692b92f8231}
+      \strng{authorfullhash}{3dda0f93a5c43e1392668692b92f8231}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-7167-2850-4}
+      \field{title}{Self-Efficacy: The Exercise of Control}
+      \field{year}{1997}
+      \field{pages}{604}
+      \range{pages}{1}
+    \endentry
+    \entry{csikszentmihalyi1990flow}{book}{}
+      \name{author}{1}{}{%
+        {{hash=4102f9749c0a86a4a970e9b54bfb1b29}{%
+           family={Csikszentmihalyi},
+           familyi={C\bibinitperiod},
+           given={Mihaly},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Harper \& Row}%
+      }
+      \strng{namehash}{4102f9749c0a86a4a970e9b54bfb1b29}
+      \strng{fullhash}{4102f9749c0a86a4a970e9b54bfb1b29}
+      \strng{bibnamehash}{4102f9749c0a86a4a970e9b54bfb1b29}
+      \strng{authorbibnamehash}{4102f9749c0a86a4a970e9b54bfb1b29}
+      \strng{authornamehash}{4102f9749c0a86a4a970e9b54bfb1b29}
+      \strng{authorfullhash}{4102f9749c0a86a4a970e9b54bfb1b29}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-06-016253-5}
+      \field{title}{Flow: The Psychology of Optimal Experience}
+      \field{year}{1990}
+      \field{pages}{320}
+      \range{pages}{1}
+    \endentry
+    \entry{arndt2020agile}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d6c2073638cb048c579940dbbf11cbc3}{%
+           family={Arndt},
+           familyi={A\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{d6c2073638cb048c579940dbbf11cbc3}
+      \strng{fullhash}{d6c2073638cb048c579940dbbf11cbc3}
+      \strng{bibnamehash}{d6c2073638cb048c579940dbbf11cbc3}
+      \strng{authorbibnamehash}{d6c2073638cb048c579940dbbf11cbc3}
+      \strng{authornamehash}{d6c2073638cb048c579940dbbf11cbc3}
+      \strng{authorfullhash}{d6c2073638cb048c579940dbbf11cbc3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Leadership and Management}
+      \field{title}{Individual Motivation Factors in Agile Teams}
+      \field{volume}{8}
+      \field{year}{2020}
+      \field{pages}{54\bibrangedash 71}
+      \range{pages}{18}
+      \verb{urlraw}
+      \verb https://www.journal-alm.org/article/view/21153
+      \endverb
+      \verb{url}
+      \verb https://www.journal-alm.org/article/view/21153
+      \endverb
+    \endentry
     \entry{vroom1964work}{book}{}
       \name{author}{1}{}{%
         {{hash=967a6deba5465a06c6514697e605ee5d}{%
@@ -1164,6 +1255,56 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.2307/256727
+      \endverb
+    \endentry
+    \entry{kim2009individual}{article}{}
+      \name{author}{4}{}{%
+        {{hash=fe9c32be0be1a74188bb31d8d8f95ef0}{%
+           family={Robert},
+           familyi={R\bibinitperiod},
+           given={Lionel\bibnamedelima Peter},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=a5768706e9194204cbb8260e4ea2c5f3}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Sharon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d85db5c8d364ad26ab0d1dfccef7caef}{%
+           family={Dennis},
+           familyi={D\bibinitperiod},
+           given={Alan\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=5aba77dcb87a2df21f1c42037707fdb8}{%
+           family={Hung},
+           familyi={H\bibinitperiod},
+           given={Yu-Ting\bibnamedelima Caisy},
+           giveni={Y\bibinithyphendelim T\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{45bac51a68e4b3a84de20e43713ae59d}
+      \strng{fullhash}{78cfcf7f78f3fa35fdce9287558f8500}
+      \strng{bibnamehash}{78cfcf7f78f3fa35fdce9287558f8500}
+      \strng{authorbibnamehash}{78cfcf7f78f3fa35fdce9287558f8500}
+      \strng{authornamehash}{45bac51a68e4b3a84de20e43713ae59d}
+      \strng{authorfullhash}{78cfcf7f78f3fa35fdce9287558f8500}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Management Information Systems}
+      \field{number}{2}
+      \field{title}{Individual Swift Trust and Knowledge-Based Trust in Face-to-Face and Virtual Team Members}
+      \field{volume}{26}
+      \field{year}{2009}
+      \field{pages}{241\bibrangedash 279}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.2753/MIS0742-1222260209
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2753/MIS0742-1222260209
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2753/MIS0742-1222260209
       \endverb
     \endentry
     \entry{almarimi2021csDetector}{inproceedings}{}

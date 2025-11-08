@@ -1,0 +1,224 @@
+\glsdefs@newdocentry{tad}%
+{%
+name={\acronymfont {\glsentryshort {tad}}},%
+sort={TAD},%
+type={acronym},%
+first={TAD},%
+firstplural={TADs},%
+text={TAD},%
+plural={TADs},%
+description={Teoría de la Autodeterminación},%
+descriptionplural={Teoría de la Autodeterminación},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Teoría de la Autodeterminación},%
+longplural={Teoría de la Autodeterminacións},%
+short={TAD},%
+shortplural={TADs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{rsl}%
+{%
+name={\acronymfont {\glsentryshort {rsl}}},%
+sort={RSL},%
+type={acronym},%
+first={RSL},%
+firstplural={RSLs},%
+text={RSL},%
+plural={RSLs},%
+description={Revisión Sistemática de la Literatura},%
+descriptionplural={Revisión Sistemática de la Literatura},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Revisión Sistemática de la Literatura},%
+longplural={Revisión Sistemática de la Literaturas},%
+short={RSL},%
+shortplural={RSLs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{scrum}%
+{%
+name={\acronymfont {\glsentryshort {scrum}}},%
+sort={SCRUM},%
+type={acronym},%
+first={SCRUM},%
+firstplural={SCRUMs},%
+text={SCRUM},%
+plural={SCRUMs},%
+description={Scrum Framework},%
+descriptionplural={Scrum Framework},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Scrum Framework},%
+longplural={Scrum Frameworks},%
+short={SCRUM},%
+shortplural={SCRUMs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{dnt}%
+{%
+name={\acronymfont {\glsentryshort {dnt}}},%
+sort={DNT},%
+type={acronym},%
+first={DNT},%
+firstplural={DNTs},%
+text={DNT},%
+plural={DNTs},%
+description={Deuda No Técnica},%
+descriptionplural={Deuda No Técnica},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Deuda No Técnica},%
+longplural={Deuda No Técnicas},%
+short={DNT},%
+shortplural={DNTs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{burnout}%
+{%
+name={\acronymfont {\glsentryshort {burnout}}},%
+sort={BURNOUT},%
+type={acronym},%
+first={BURNOUT},%
+firstplural={BURNOUTs},%
+text={BURNOUT},%
+plural={BURNOUTs},%
+description={Síndrome de Agotamiento},%
+descriptionplural={Síndrome de Agotamiento},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Síndrome de Agotamiento},%
+longplural={Síndrome de Agotamientos},%
+short={BURNOUT},%
+shortplural={BURNOUTs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{deuda_social}%
+{%
+name={Deuda Social},%
+sort={Deuda Social},%
+type={main},%
+first={Deuda Social},%
+firstplural={Deuda Socials},%
+text={Deuda Social},%
+plural={Deuda Socials},%
+description={Decisiones sociotécnicas subóptimas que generan costos en equipos},%
+descriptionplural={Decisiones sociotécnicas subóptimas que generan costos en equipos},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{socialscrum}%
+{%
+name={SocialScrum},%
+sort={SocialScrum},%
+type={main},%
+first={SocialScrum},%
+firstplural={SocialScrums},%
+text={SocialScrum},%
+plural={SocialScrums},%
+description={Proceso ágil que adapta Scrum para gestionar la deuda social en equipos de desarrollo},%
+descriptionplural={Proceso ágil que adapta Scrum para gestionar la deuda social en equipos de desarrollo},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{community_smells}%
+{%
+name={Community Smells},%
+sort={Community Smells},%
+type={main},%
+first={Community Smells},%
+firstplural={Community Smellss},%
+text={Community Smells},%
+plural={Community Smellss},%
+description={Antipatrones sociotécnicos indicadores de problemas},%
+descriptionplural={Antipatrones sociotécnicos indicadores de problemas},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+

@@ -1,0 +1,264 @@
+% ============================================================================
+% GLOSARIO DE COMMUNITY SMELLS PARA TESIS DE DEUDA SOCIAL
+% ============================================================================
+% Basado en: Caballero-Espinosa et al. (2023) "Community Smells: The Sources
+% of Social Debt - A Systematic Literature Review"
+% + Literatura reciente (Tahsin et al. 2024, Almarimi et al. 2023)
+%
+% Paquete requerido: \usepackage[toc]{glossaries}
+% En preámbulo: \makeglossaries
+% Después de \begin{document}: \printglossaries
+% ============================================================================
+
+% ACRÓNIMOS Y TÉRMINOS GENERALES
+\newacronym{tad}{TAD}{Teoría de la Autodeterminación}
+\newacronym{rsl}{RSL}{Revisión Sistemática de la Literatura}
+\newacronym{scrum}{SCRUM}{Scrum Framework}
+\newacronym{dnt}{DNT}{Deuda No Técnica}
+\newacronym{burnout}{BURNOUT}{Síndrome de Agotamiento}
+\newacronym{kpis}{KPIs}{Key Performance Indicators (Indicadores Clave de Desempeño)}
+
+% TÉRMINOS PRINCIPALES
+
+\newglossaryentry{deuda-social}{
+    name={Deuda Social},
+    description={Decisiones socio-técnicas subóptimas que generan costos no previstos en equipos de desarrollo de software. Acumulación de efectos adversos derivados de problemas organizacionales y sociales que impactan el desempeño del equipo y la calidad del software.}
+}
+
+\newglossaryentry{socialscrum}{
+    name={SocialScrum},
+    description={Proceso ágil que extiende el Scrum Framework para gestionar explícitamente la deuda social en equipos de desarrollo. Incorpora eventos, roles y artefactos dedicados a identificar y mitigar community smells.}
+}
+
+\newglossaryentry{community-smells}{
+    name={Community Smells},
+    description={Antipatrones socio-técnicos que representan síntomas de problemas organizacionales y sociales en comunidades de desarrollo de software. Son fuentes de deuda social que afectan la comunicación, coordinación, confianza y desempeño del equipo.},
+    plural={Community Smells}
+}
+
+\newglossaryentry{social-debt-debt}{
+    name={Deuda No Técnica},
+    description={Subcategoría de deuda social que se manifiesta en problemas técnicos (documentación deficiente, componentes frágiles) resultantes de decisiones socio-técnicas pobres.}
+}
+
+% ============================================================================
+% COMMUNITY SMELLS CANÓNICOS (30 de Caballero-Espinosa et al. 2023)
+% ============================================================================
+
+\newglossaryentry{cs-arch-osmosis}{
+    name={Architecture by osmosis},
+    description={Decisiones de arquitectura se corrigen a posteriori basadas en información incompleta filtrada por múltiples canales de comunicación indefinidos. Sin protocolos claros de documentación, las decisiones arquitectónicas se reconstruyen mediante presión de clientes y operaciones. Resulta en erosión arquitectónica, documentación inconsistente, falta de trazabilidad de decisiones y degradación sostenida de la calidad arquitectónica.},
+    plural={Arquitecturas por ósmosis}
+}
+
+\newglossaryentry{cs-arch-hood}{
+    name={Architecture hood},
+    description={Equipos de arquitectura distribuidos geográficamente o alejados del equipo principal toman decisiones sin colaboración efectiva con desarrolladores que las implementarán. Dificulta la comunicación bidireccional, genera conductas no cooperativas en la implementación, causa rechazo a soluciones acordadas y resulta en problemas de implementación y desalineación técnica.},
+    plural={Capuchas arquitectónicas}
+}
+
+\newglossaryentry{cs-black-cloud}{
+    name={Black cloud},
+    description={Ausencia de boundary spanners (conectores entre grupos) y protocolos formales de intercambio de información genera desconfianza e información ofuscada. Impide el intercambio efectivo de conocimiento, experiencia profesional y contexto de proyecto entre miembros del equipo. Resulta en iniciativas no sancionadas, comportamiento egotista y fragmentación.},
+    plural={Nubes negras}
+}
+
+\newglossaryentry{cs-class-cognition}{
+    name={Class cognition},
+    description={Estructuras modulares refactorizadas se vuelven significativamente más difíciles de entender para desarrolladores actuales y recién llegados. Incrementa la carga cognitiva necesaria para contribuir, eleva la barrera de entrada para nuevos miembros, dispersa el conocimiento de la arquitectura y ralentiza la contribución técnica.},
+    plural={Cogniciones de clases}
+}
+
+\newglossaryentry{cs-code-red}{
+    name={Code red},
+    description={Componentes o clases extremadamente complejas que pueden ser mantenidas únicamente por 1 a 2 desarrolladores especializados. Genera cuellos de botella críticos de conocimiento, fragilidad organizacional ante ausencia de expertos, y riesgo de pérdida de capacidad técnica.},
+    plural={Códigos rojos}
+}
+
+\newglossaryentry{cs-cognitive-distance}{
+    name={Cognitive distance},
+    description={Divergencia perceptible entre desarrolladores en niveles físico, técnico, social y cultural. Diferencias de experiencia generan ``mundos de pensamiento'' incompatibles que causan malentendidos, conflictos interpersonales, desperdicio de recursos, generación de code smells y erosión progresiva de confianza entre pares.},
+    plural={Distancias cognitivas}
+}
+
+\newglossaryentry{cs-cookbook}{
+    name={Cookbook development},
+    description={Pensamiento anclado en marcos de trabajo obsoletos (cascada, modelos secuenciales) que rechaza innovaciones y nuevas metodologías ágiles. El equipo mantiene ``recetas'' de trabajo anticuadas que desajustan expectativas cliente-equipo, bloquean evolución técnica y generan fricción con cambios organizacionales.},
+    plural={Desarrollos de recetario}
+}
+
+\newglossaryentry{cs-devops-clash}{
+    name={DevOps clash},
+    description={Dispersión geográfica y diferencias culturales profundas entre equipos de desarrollo y operaciones generan mundos de pensamiento incompatibles. Causa choques culturales recurrentes, baja confianza entre áreas, procesos lentificados, ineficiencia operacional y costos incrementados.},
+    plural={Choques DevOps}
+}
+
+\newglossaryentry{cs-disengagement}{
+    name={Disengagement},
+    description={Desarrolladores perciben el producto como suficientemente maduro y lo envían a producción prematuramente sin completar funcionalidades. Refleja baja curiosidad e involucramiento del equipo, supuestos salvajes sin validación, falta de contexto compartido y genera software con deficiencias funcionales.},
+    plural={Desenganches}
+}
+
+\newglossaryentry{cs-dispersion}{
+    name={Dispersion},
+    description={Refactorización, reestructuración o cambios organizacionales que fragmentan grupos cohesionados previamente y rompían redes colaborativas funcionales. Resulta en trabajo haphazard y desorganizado, dificulta coordinación efectiva y ralentiza las actividades cotidianas de mantenimiento.},
+    plural={Dispersiones}
+}
+
+\newglossaryentry{cs-dissensus}{
+    name={Dissensus},
+    description={Incapacidad persistente de alcanzar consenso pese a múltiples intentos deliberados de alcanzar acuerdos. Las decisiones técnicas se quedan sin resolución, code smells permanecen sin ajustes aplicados, hay paralización en procesos de toma de decisiones y acumulación de problemas pospuestos.},
+    plural={Disensos persistentes}
+}
+
+\newglossaryentry{cs-hyper-community}{
+    name={Hyper community},
+    description={Comunidad altamente conectada y sensible al groupthink donde dinámicas dominantes influencian fuertemente subcomunidades menores. Genera turbulencia organizacional elevada, dinámicas caóticas de toma de decisiones, software con fallos recurrentes y vulnerabilidad a presiones sociales irracionales.},
+    plural={Hipercomunidades}
+}
+
+\newglossaryentry{cs-informality-excess}{
+    name={Informality excess},
+    description={Ausencia relativa de protocolos formales de gestión y control de información sin estructuras claras de gobernanza. Resulta en derrames incontrolados de información sensible, ambigüedad en responsabilidades, baja rendición de cuentas y caos en trazabilidad de decisiones.},
+    plural={Excesos de informalidad}
+}
+
+\newglossaryentry{cs-institutional-isomorphism}{
+    name={Institutional isomorphism},
+    description={Similaridad excesiva de procesos, estructuras y prácticas con otras organizaciones por imitación ciega o imposición de restricciones comunes. Rigidiza el pensamiento organizacional, sofoca innovación genuina, reduce colaboración efectiva y genera estancamiento progresivo.},
+    plural={Isomorfismos institucionales}
+}
+
+\newglossaryentry{cs-invisible-architecting}{
+    name={Invisible architecting},
+    description={Decisiones arquitectónicas documentadas inconsistentemente, compartidas por canales informales o directamente no difundidas. Genera falta de consciencia de decisiones previas, desalineación entre versiones implementadas y documentadas, conflictos recurrentes y redecisiones costosas.},
+    plural={Arquitecturas invisibles}
+}
+
+\newglossaryentry{cs-leftover-techie}{
+    name={Leftover techie},
+    description={Red colaborativa rota entre desarrolladores y personal técnico de soporte (help desk, operaciones, mantenimiento) sin comunicación efectiva. Genera aislamiento de silos funcionales, comportamiento egotista motivado por diferencias de status y conocimiento, y falta de comprensión compartida de características del software.},
+    plural={Técnicos rezagados}
+}
+
+\newglossaryentry{cs-lone-wolf}{
+    name={Lone wolf},
+    description={Desarrollador que trabaja independientemente sin considerar genuinamente a sus pares e ignora sistemáticamente necesidades explícitas del proyecto. Toma decisiones no sancionadas, genera duplicación de trabajo, causa churn de código frecuente, retrasos de proyecto y reduce confianza del equipo.},
+    plural={Lobos solitarios}
+}
+
+\newglossaryentry{cs-lonesome-architecting}{
+    name={Lonesome architecting},
+    description={Arquitectos son muy pocos o están distantes físicamente de desarrolladores, obligando a no-arquitectos a tomar decisiones arquitectónicas críticas sin consultoría experta. Causa incompatibilidades técnicas no previstas, falta de consciencia de restricciones arquitectónicas, decisiones apresuradas y arquitectura frágil.},
+    plural={Arquitecturas solitarias}
+}
+
+\newglossaryentry{cs-newbie-free-riding}{
+    name={Newbie free-riding},
+    description={Recién llegados deben auto-descubrir tareas, responsabilidades y contexto sin mentoría sistemática, permitiendo que desarrolladores senior se retiren progresivamente del apoyo. Genera presión laboral excesiva en nuevos miembros, irritación del equipo por ineficiencia, desmotivación y ciclos de onboarding pobres.},
+    plural={Polizones novatos}
+}
+
+\newglossaryentry{cs-obfuscated-architecting}{
+    name={Obfuscated architecting},
+    description={Múltiples subequipos de una red de desarrollo carecen de visión organizacional y socio-técnica armonizada para operaciones conjuntas. Convivencia no coordinada entre sistemas legacy y nuevos con puntos únicos de comunicación genera churn socio-técnico constante, desperdicio de tiempo y frustración organizacional.},
+    plural={Arquitecturas ofuscadas}
+}
+
+\newglossaryentry{cs-org-silo}{
+    name={Organizational silo},
+    description={Alto desacople lógico de tareas con baja comunicación y colaboración entre equipos o departamentos. Dificulta verificación de dependencias entre componentes, impide comunicación efectiva entre equipos que deben colaborar, genera decisiones locales óptimas pero globalmente subóptimas y pone en riesgo la congruencia socio-técnica general.},
+    plural={Silos organizacionales}
+}
+
+\newglossaryentry{cs-org-skirmish}{
+    name={Organizational skirmish},
+    description={Diferencias sustanciales de cultura organizacional, expertise valorado y procesos de trabajo entre equipos crean conflictos constantes en gestión de proyectos. Impacta directamente en productividad, planificación efectiva, causando retrasos de proyecto y fallos en la entrega.},
+    plural={Escaramuzas organizacionales}
+}
+
+\newglossaryentry{cs-power-distance}{
+    name={Power distance},
+    description={Percepción de distancia de poder entre desarrolladores menos poderosos y aquellos con autoridad formal, experiencia significativa o roles decisorios. Interrumpe procesos técnicos, reduce intercambio genuino de conocimiento, genera inhibición en comunicación y tiene impacto negativo en finanzas organizacionales.},
+    plural={Distancias de poder}
+}
+
+\newglossaryentry{cs-priggish-members}{
+    name={Priggish members},
+    description={Miembros del equipo con actitudes presuntuosas y exigentes que demandan conformidad excesiva e inapropiada de otros miembros. Genera frustración recurrente en el equipo, ralentización de procesos por imposición de criterios puntillosos, degradación del clima laboral y fricción interpersonal.},
+    plural={Miembros remilgados}
+}
+
+\newglossaryentry{cs-prima-donnas}{
+    name={Prima donnas},
+    description={Miembros que trabajan en aislamiento deliberado, rechazan cambios evolutivos en productos legacy y rehúsan proporcionar soporte genuino a colegas. Bloquean activamente innovación organizacional, impiden comunicación y colaboración efectiva, generan dependencias negativas y erosionan cohesión.},
+    plural={Prima donnas}
+}
+
+\newglossaryentry{cs-radio-silence}{
+    name={Radio silence (Bottleneck)},
+    description={En organizaciones formales y complejas, nodos clave de comunicación se saturan como únicos intermediarios de información entre múltiples equipos. La información debe transitar por protocolos altamente regularizados generando compresión, causando retrasos comunicacionales severos, sobrecarga de intermediarios y estancamiento del flujo de trabajo.},
+    plural={Silencios radiales, Cuellos de botella}
+}
+
+\newglossaryentry{cs-sharing-villainy}{
+    name={Sharing villainy},
+    description={Retención deliberada u ofuscación intencional de conocimiento técnico e información valiosa por parte de miembros del equipo. Daña la cooperación organizacional, reduce coordinación efectiva, obstaculiza el cumplimiento de objetivos compartidos y genera ciclos de reinvención costosos.},
+    plural={Vilanas del compartir}
+}
+
+\newglossaryentry{cs-solution-defiance}{
+    name={Solution defiance},
+    description={Resistencia activa y persistente de grupos con factores profundos similares (background técnico, valores organizacionales) a decisiones y soluciones acordadas formalmente. Mina alineación técnica y social, genera conflictos recurrentes en reuniones de decisión, reduce cohesión organizacional y paraliza avance.},
+    plural={Desafíos a la solución}
+}
+
+\newglossaryentry{cs-time-warp}{
+    name={Time warp},
+    description={Tras cambios organizacionales significativos, equipos asumen marcos de tiempo incorrectos o ya obsoletos para comunicación sin coordinación explícita actualizada. Causa esperas prolongadas, re-trabajo costoso, expectativas cliente insatisfechas cronológicamente y software defectuoso en contexto temporal.},
+    plural={Deformaciones temporales}
+}
+
+\newglossaryentry{cs-unlearning}{
+    name={Unlearning},
+    description={Pérdida gradual y progresiva de conocimiento técnico colectivo y best practices cuando se comparte con equipos de muy alta diversidad de experiencia. Erosiona conocimiento colectivo institucional, empeora coordinación técnica a largo plazo, incrementa complejidad de mantenimiento y reduce capacidad de respuesta.},
+    plural={Desaprendizajes}
+}
+
+% ============================================================================
+% COMMUNITY SMELLS ADICIONALES (Literatura reciente 2023-2024)
+% ============================================================================
+
+\newglossaryentry{cs-missing-link}{
+    name={Missing link},
+    description={Falta de conectores, mediadores o boundary spanners clave entre subgrupos del equipo que faciliten comunicación efectiva. Resulta en aislamiento progresivo de grupos, información fragmentada sin integración, pérdida de contexto compartido y ruptura de redes colaborativas funcionales.},
+    plural={Eslabones perdidos}
+}
+
+\newglossaryentry{cs-truck-factor}{
+    name={Truck factor (Key person dependency)},
+    description={Conocimiento técnico crítico y habilidades esenciales están concentradas en pocas personas cuyos ausencias, desvinculación laboral o sobrecarga amenazan directamente la continuidad operativa del proyecto. Genera fragilidad organizacional extrema, riesgo sistémico de pérdida de capacidad técnica y vulnerabilidad ante contingencias.},
+    plural={Factores camión}
+}
+
+\newglossaryentry{cs-knowledge-hoarding}{
+    name={Knowledge hoarding},
+    description={Individuos retienen deliberadamente información técnica valiosa, habilidades especializadas o know-how de sistema para mantener poder político o status organizacional. Impide transferencia de conocimiento institucional, bloquea crecimiento profesional del equipo, reduce redundancia segura y perpetúa dependencias destructivas.},
+    plural={Acapamientos de conocimiento}
+}
+
+\newglossaryentry{cs-tribal-knowledge}{
+    name={Tribal knowledge},
+    description={Información crítica del sistema, decisiones arquitectónicas previas y racionales de diseño existen únicamente en mentes de desarrolladores específicos sin documentación formal. Causa vulnerabilidad extrema ante rotación de personal, dificulta significativamente el onboarding de nuevos miembros y genera riesgo de pérdida irreversible de información.},
+    plural={Conocimientos tribales}
+}
+
+\newglossaryentry{cs-leadership-vacuum}{
+    name={Leadership vacuum},
+    description={Ausencia de liderazgo claro, mentorship estructurado y dirección explícita en el equipo genera falta de claridad en objetivos organizacionales. Resulta en desorganización operativa, baja motivación del equipo, toma de decisiones inconsistente y fragmentación de esfuerzos.},
+    plural={Vacíos de liderazgo}
+}
+
+% ============================================================================
+% FIN DEL GLOSARIO
+% ============================================================================
