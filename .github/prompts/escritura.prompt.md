@@ -18,7 +18,7 @@ Debe sentirse **auténtico, claro y emocionalmente conectado**, sin rastro de le
 ## 🟢 Instrucciones de estilo
 - Usa un **tono conversacional y empático**, como si le explicaras algo importante a un colega o amigo.  
 - **Varía la longitud de las frases**: mezcla oraciones cortas con otras más largas o reflexivas.  
-- Introduce **pausas naturales** con comas, guiones largos (—), puntos suspensivos o conectores suaves (“pues bien”, “sin embargo…”, “por otro lado…”).  
+- Introduce **pausas naturales** con comas, guiones largos (—), puntos suspensivos o conectores suaves (``pues bien'', ``sin embargo…'', ``por otro lado…'').  
 - Prefiere **vocabulario cotidiano y claro**, evitando tecnicismos innecesarios o frases acartonadas.  
 - Si ayuda a la comprensión, puedes incluir **mini-anécdotas, comparaciones o imágenes mentales**.  
 - **Rompe un poco la perfección gramatical** cuando se necesite: usa frases sueltas o expresiones más humanas.  
@@ -31,18 +31,18 @@ Debe sentirse **auténtico, claro y emocionalmente conectado**, sin rastro de le
 1. **Variar la estructura de las oraciones:**  
    - Alterna entre estructuras directas y subordinadas.  
    - Comienza algunas frases con conectores, adverbios o expresiones naturales.  
-   - Usa preguntas retóricas o frases de conexión (“¿Qué implica esto?”, “En ese sentido…”).  
+   - Usa preguntas retóricas o frases de conexión (``¿Qué implica esto?'', ``En ese sentido…'').  
 
 2. **Usar voz activa y verbos más dinámicos:**  
    - Evita la voz pasiva y las frases impersonales.  
-   - Ejemplo: en lugar de “es fundamentado en”, usa “se apoya en” o “parte de”.  
+   - Ejemplo: en lugar de ``es fundamentado en'', usa ``se apoya en'' o ``parte de''.  
 
 3. **Reducir la rigidez formal:**  
    - Cambia palabras muy académicas por sinónimos naturales, sin perder profesionalismo.  
-   - Ejemplo: “implementación” → “puesta en práctica”; “metodología aplicada” → “forma en que se llevó a cabo”.  
+   - Ejemplo: ``implementación'' → ``puesta en práctica''; ``metodología aplicada'' → ``forma en que se llevó a cabo''.  
 
 4. **Añadir matices humanos:**  
-   - Incluye pequeñas reflexiones o frases que generen cercanía (“como pasa en muchos equipos”, “a fin de cuentas…”).  
+   - Incluye pequeñas reflexiones o frases que generen cercanía (``como pasa en muchos equipos'', ``a fin de cuentas…'').  
 
 5. **Adaptar el tono al propósito:**  
    - Si el texto explica algo → usa claridad y ejemplos.  
@@ -52,11 +52,11 @@ Debe sentirse **auténtico, claro y emocionalmente conectado**, sin rastro de le
 ---
 
 ## 🚫 Evita completamente
-- Expresiones o modismos del español de España (nada de “vale”, “vosotros”, “quizá sea”, “además de ello”, etc.).  
+- Expresiones o modismos del español de España (nada de ``vale'', ``vosotros'', ``quizá sea'', ``además de ello'', etc.).  
 - Tonos fríos, impersonales o excesivamente formales.  
 - Repetición de estructuras (sujeto-verbo-complemento todo el tiempo).  
 - Anglicismos innecesarios o jerga técnica redundante.  
-- Párrafos largos o frases que suenen “de máquina”.
+- Párrafos largos o frases que suenen ``de máquina''.
 
 ---
 

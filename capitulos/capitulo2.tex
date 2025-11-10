@@ -176,7 +176,7 @@ A continuación, se presentan algunos hallazgos documentados en la Revisión Sis
 \end{figure}
 
 \subsection{Protocolo de investigación}
-Para llevar a cabo la RSL, se utilizaron herramientas tecnológicas de inteligencia artificial, como ChatGPT \cite{openai2022chatgpt} y Microsoft Copilot \cite{microsoft2023copilot}, con el objetivo de obtener diversas formas de definir un mismo concepto y construir la cadena de búsqueda básica. Los documentos a menudo presentan temas de manera dispersa y poco clara, lo que puede generar sesgos y dudas. En este contexto, los chatbots con inteligencia artificial (CIA) resultaron ser recursos valiosos, ya que, mediante prompts específicos, permitieron iniciar conversaciones y obtener información más precisa. A partir de los términos identificados con la ayuda de los CIA, se definió una versión inicial de la cadena de búsqueda básica: “social debt” OR “social software engineering” AND “agile software development” OR “software development teams”.
+Para llevar a cabo la RSL, se utilizaron herramientas tecnológicas de inteligencia artificial, como ChatGPT \cite{openai2022chatgpt} y Microsoft Copilot \cite{microsoft2023copilot}, con el objetivo de obtener diversas formas de definir un mismo concepto y construir la cadena de búsqueda básica. Los documentos a menudo presentan temas de manera dispersa y poco clara, lo que puede generar sesgos y dudas. En este contexto, los chatbots con inteligencia artificial (CIA) resultaron ser recursos valiosos, ya que, mediante prompts específicos, permitieron iniciar conversaciones y obtener información más precisa. A partir de los términos identificados con la ayuda de los CIA, se definió una versión inicial de la cadena de búsqueda básica: ``social debt'' OR ``social software engineering'' AND ``agile software development'' OR ``software development teams''.
 Posteriormente, se seleccionó Google Scholar como la base de datos principal para obtener información o estudios relacionados. Esta elección se basó en varias razones:
 \begin{itemize}
     \item Amplia cobertura: Google Scholar indexa una gran variedad de fuentes académicas, incluyendo artículos, tesis, libros y conferencias, lo que permite acceder a una amplia gama de literatura relevante.
@@ -184,7 +184,7 @@ Posteriormente, se seleccionó Google Scholar como la base de datos principal pa
     \item Relevancia: Google Scholar utiliza algoritmos que priorizan artículos altamente citados y relevantes, lo que ayuda a identificar estudios influyentes en el campo de la deuda social y el desarrollo ágil.
     \item Integración con otras bases de datos: Aunque Google Scholar fue la base principal, también se complementó con otras bases de datos especializadas, como IEEE Xplore, SpringerLink y Science Direct, para asegurar una revisión exhaustiva.
 \end{itemize}
-La búsqueda manual reveló que las frases clave “social debt” y “agile software development” eran esenciales para definir la cadena de búsqueda básica. Por esta razón, se decidió utilizar el conector lógico “AND” para unir estas dos frases, ya que los artículos relevantes para la investigación las mencionaban conjuntamente. De esta manera, la cadena de búsqueda básica: “social debt” AND “agile software development” se aplicó inicialmente a seis bases de datos científicas: Google Scholar, IEEE Xplore, SpringerLink y Science Direct, como se observa en la Tabla \ref{tab:cadenas-busqueda}.
+La búsqueda manual reveló que las frases clave ``social debt'' y ``agile software development'' eran esenciales para definir la cadena de búsqueda básica. Por esta razón, se decidió utilizar el conector lógico ``AND'' para unir estas dos frases, ya que los artículos relevantes para la investigación las mencionaban conjuntamente. De esta manera, la cadena de búsqueda básica: ``social debt'' AND ``agile software development'' se aplicó inicialmente a seis bases de datos científicas: Google Scholar, IEEE Xplore, SpringerLink y Science Direct, como se observa en la Tabla \ref{tab:cadenas-busqueda}.
 
 \begin{table}[H]
     \centering
@@ -192,12 +192,12 @@ La búsqueda manual reveló que las frases clave “social debt” y “agile so
     \label{tab:cadenas-busqueda}
     \begin{tabularx}{\textwidth}{@{}c X l l@{}}
         \toprule
-        \textbf{No.} & \textbf{Cadena de búsqueda}                                                      & \textbf{Fuente} & \textbf{Estado} \\
+        \textbf{No.} & \textbf{Cadena de búsqueda}                                                          & \textbf{Fuente} & \textbf{Estado} \\
         \midrule
-        1            & “social debt” AND “agile software development”                                   & Google Scholar  & Incluida        \\
-        2            & (“Full Text Only”:social debt) AND (“Full Text Only”:agile software development) & IEEE Xplore     & Incluida        \\
-        3            & ‘‘social debt’ AND ‘agile software development’’                                 & SpringerLink    & Incluida        \\
-        4            & ‘social debt’ AND ‘agile software development’                                   & Science Direct  & Incluida        \\
+        1            & ``social debt'' AND ``agile software development''                                   & Google Scholar  & Incluida        \\
+        2            & (``Full Text Only'':social debt) AND (``Full Text Only'':agile software development) & IEEE Xplore     & Incluida        \\
+        3            & ‘‘social debt’ AND ‘agile software development’’                                     & SpringerLink    & Incluida        \\
+        4            & ‘social debt’ AND ‘agile software development’                                       & Science Direct  & Incluida        \\
         \bottomrule
     \end{tabularx}
     \smallskip
@@ -215,12 +215,12 @@ La cadena de búsqueda se aplicó a una ventana de tiempo desde 2013 hasta 2024,
         \toprule
         \textbf{No.}   & \textbf{Motor de búsqueda} & \textbf{Encontrados} & \textbf{Relevantes} & \textbf{Relevantes repetidos} & \textbf{Primarios seleccionados} \\
         \midrule
-        1              & Google Scholar             & 130                  & 15                  & 0                  & 8                  \\
-        2              & IEEE Xplore                & 28                   & 3                   & 0                  & 0                  \\
-        3              & Science Direct             & 5                    & 0                   & 0                  & 0                  \\
-        4              & SpringerLink               & 35                   & 2                   & 0                  & 0                  \\
+        1              & Google Scholar             & 130                  & 15                  & 0                             & 8                                \\
+        2              & IEEE Xplore                & 28                   & 3                   & 0                             & 0                                \\
+        3              & Science Direct             & 5                    & 0                   & 0                             & 0                                \\
+        4              & SpringerLink               & 35                   & 2                   & 0                             & 0                                \\
         \midrule
-        \textbf{Total} &                            & \textbf{198}         & \textbf{20}         & \textbf{0}         & \textbf{8}         \\
+        \textbf{Total} &                            & \textbf{198}         & \textbf{20}         & \textbf{0}                    & \textbf{8}                       \\
         \bottomrule
     \end{tabularx}
     \smallskip
@@ -236,13 +236,13 @@ En la Tabla \ref{tab:preguntas-investigacion} se presentan las preguntas de inve
     \label{tab:preguntas-investigacion}
     \begin{tabularx}{\textwidth}{@{}c p{7.0cm} p{7.0cm}@{}}
         \toprule
-        \textbf{Id.} & \textbf{Pregunta de investigación} & \textbf{Motivación} \\
+        \textbf{Id.} & \textbf{Pregunta de investigación}                                                                                                                                                                           & \textbf{Motivación}                                                                                                                                                                 \\
         \midrule
-        PI1 & ¿Cuáles son los estudios primarios más citados que han proporcionado según la evidencia aportes importantes e influyentes en el contexto de la gestión de la deuda social en el desarrollo de software ágil? & Identificar y evaluar los estudios fundamentales que han tenido un impacto significativo en el campo de la gestión de la deuda social en el desarrollo de software ágil. \\
-        PI2 & ¿Cuál es la distribución de tiempo de publicación de los estudios primarios relevantes con respecto a la deuda social en el desarrollo de software ágil? & Comprender cómo ha evolucionado el interés y el cono-cimiento sobre la deuda social en el contexto del desarrollo de software ágil a lo largo del tiempo. \\
-        PI3 & ¿Cuáles son las investigaciones o propuestas desarrolladas cuya idea central sea la gestión de la deuda social en el desarrollo de software ágil hasta la fecha? & Identificar y analizar las contribuciones académicas y propuestas prácticas que se han centrado específicamente en la gestión de la deuda social en el desarrollo de software ágil. \\
-        PI4 & ¿Cuáles son los principales desafíos y oportunidades para la investigación futura sobre la deuda social en el desarrollo de software ágil? & Identificar las barreras y las posibles áreas de crecimiento en el estudio de la deuda social en el desarrollo de software ágil. \\
-        PI5 & ¿Cuáles son las practicas o enfoques que abordan de manera exitosa la gestión de la deuda social en el desarrollo de software ágil? & Identificar y evaluar las prácticas y enfoques que han demostrado ser efectivos en la gestión de la deuda social dentro de proyectos de desarrollo de software ágil. \\
+        PI1          & ¿Cuáles son los estudios primarios más citados que han proporcionado según la evidencia aportes importantes e influyentes en el contexto de la gestión de la deuda social en el desarrollo de software ágil? & Identificar y evaluar los estudios fundamentales que han tenido un impacto significativo en el campo de la gestión de la deuda social en el desarrollo de software ágil.            \\
+        PI2          & ¿Cuál es la distribución de tiempo de publicación de los estudios primarios relevantes con respecto a la deuda social en el desarrollo de software ágil?                                                     & Comprender cómo ha evolucionado el interés y el cono-cimiento sobre la deuda social en el contexto del desarrollo de software ágil a lo largo del tiempo.                           \\
+        PI3          & ¿Cuáles son las investigaciones o propuestas desarrolladas cuya idea central sea la gestión de la deuda social en el desarrollo de software ágil hasta la fecha?                                             & Identificar y analizar las contribuciones académicas y propuestas prácticas que se han centrado específicamente en la gestión de la deuda social en el desarrollo de software ágil. \\
+        PI4          & ¿Cuáles son los principales desafíos y oportunidades para la investigación futura sobre la deuda social en el desarrollo de software ágil?                                                                   & Identificar las barreras y las posibles áreas de crecimiento en el estudio de la deuda social en el desarrollo de software ágil.                                                    \\
+        PI5          & ¿Cuáles son las practicas o enfoques que abordan de manera exitosa la gestión de la deuda social en el desarrollo de software ágil?                                                                          & Identificar y evaluar las prácticas y enfoques que han demostrado ser efectivos en la gestión de la deuda social dentro de proyectos de desarrollo de software ágil.                \\
         \bottomrule
     \end{tabularx}
     \smallskip

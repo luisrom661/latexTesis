@@ -55,15 +55,16 @@ En otras palabras, el Product Owner se convierte en un aliado informado, no en u
 En SocialScrum, el Product Owner asume tres nuevas responsabilidades que amplían su rol tradicional e incorporan la dimensión social como parte de la gestión del producto:
 
 \begin{enumerate}
-    \item Colaborar con el Social Guide durante el Sprint Planning para evaluar si la salud social del equipo permite comprometerse con items de alta complejidad.
-    \item Incluir el Health Score como un factor adicional en la priorización del Product Backlog, junto con la urgencia técnica y el valor de negocio.
-    \item Reconocer las condiciones críticas de salud social (por ejemplo, cuando el Health Score es menor a 4/10) y, en esos casos, priorizar las acciones de mitigación social antes que las features técnicas.
+    \item Durante el \textit{Sprint Planning}, el Product Owner recibe del Social Guide una evaluación del \textit{Health Score} del equipo, expresada en una escala del 1 al 10. Si este puntaje resulta crítico (por debajo de 4), el Product Owner comprende que el equipo no está en condiciones de asumir \textit{features} de alta complejidad. En ese caso, prioriza en su lugar acciones o elementos orientados a mitigar la deuda social existente.
+    \item En cada proceso de priorización, el Product Owner busca equilibrar tres dimensiones: (a) el valor de negocio, (b) la urgencia técnica y (c) la salud social del equipo. Estos factores rara vez se alinean de manera perfecta, por lo que la decisión final requiere diálogo y juicio compartido entre el Product Owner, el Social Guide y el Scrum Master.
+    \item El Product Owner no interviene directamente en las dinámicas sociales internas del equipo. Su papel es mantenerse informado y considerar ese contexto al priorizar, reconociendo que un equipo con buena salud social entrega productos de mayor calidad y de forma más sostenible.
 \end{enumerate}
 
 La operacionalización detallada de este rol —incluyendo el \textit{framework} de priorización, los protocolos de decisión y ejemplos prácticos— se presenta en el Capítulo 4, Sección 4.4.
 
 \paragraph{Scrum Master}
 El Scrum Master mantiene su papel como facilitador del proceso y protector del equipo frente a interrupciones externas \cite{schwaber2020scrum}. En SocialScrum, trabaja de la mano con el Social Guide para detectar de forma temprana los impedimentos sociales que puedan surgir durante el Sprint, mientras el Social Guide aporta un enfoque analítico basado en datos —por ejemplo, usando análisis de redes sociales (SNA) o métricas socio-técnicas—, el Scrum Master ofrece una comprensión más vivencial del grupo, ayudando a abrir conversaciones difíciles y facilitar la resolución de conflictos \cite{saeeda2024nontechnicaldebt}. Ambos diseñan estrategias conjuntas que fortalecen la cohesión del equipo, siempre respetando su autoorganización.
+Hay que aclarar que el Scrum Master no asume responsabilidades directas en la gestión de la deuda social; esa función recae exclusivamente en el Social Guide. Su rol es más bien de apoyo y colaboración, asegurando que las intervenciones sociales se integren de manera armoniosa dentro del proceso ágil sin generar fricciones ni confusiones en las responsabilidades.
 
 \paragraph{Developers}
 Los Developers conservan su responsabilidad sobre la implementación técnica y la autogestión del trabajo del Sprint \cite{schwaber2020scrum}, sin embargo, en SocialScrum asumen también un papel activo en el monitoreo de la salud social del equipo donde deben participar en la detección de community smells durante las ceremonias, proponer acciones de mejora social para el Sprint Backlog y colaborar con el Social Guide brindando retroalimentación sobre la comunicación, la colaboración o la distribución del conocimiento \cite{saeeda2024nontechnicaldebt}. Su participación asegura que las intervenciones sociales sean realistas, aplicables y sostenibles dentro del propio equipo.
@@ -86,59 +87,180 @@ Sus responsabilidades principales incluyen:
 
 \end{itemize}
 
-Es importante resaltar que el Social Guide no toma decisiones sobre el producto, no evalúa el desempeño individual y no reemplaza las funciones del Scrum Master en la facilitación del proceso \cite{schwaber2020scrum}. Su rol es consultivo y de acompañamiento: analiza, orienta y educa al equipo para que tome decisiones informadas, siempre desde la autonomía colectiva, además, tampoco cumple funciones propias de recursos humanos, como evaluaciones de desempeño o medidas disciplinarias; su foco está en la salud colectiva del equipo, no en la gestión individual.
+\paragraph{Límites y diferenciación claros}
 
-La operacionalización de los roles se desarrolla de manera detallada en el Capítulo 4, Sección 4.X.
+Es fundamental dejar claro lo que el Social Guide \textbf{no hace}:
+
+\begin{itemize}
+    \item \textbf{No reemplaza al Scrum Master:} el Scrum Master se encarga de facilitar el proceso ágil; el Social Guide, en cambio, se enfoca en facilitar las dinámicas sociales del equipo. Ambos roles se complementan, no se superponen.
+    \item \textbf{No evalúa el desempeño individual:} el Social Guide nunca entrega información personal a recursos humanos ni a la gerencia para fines de evaluación. Los datos que maneja son agregados, confidenciales y usados exclusivamente para la mejora del equipo.
+    \item \textbf{No actúa como “policía social”:} su labor no es sancionar ni imponer normas. Su función es acompañar y guiar al equipo para que identifique y resuelva sus propios conflictos.
+    \item \textbf{No toma decisiones sobre el producto:} el Product Owner define qué se construye; el Social Guide simplemente aporta información sobre cuándo el equipo está en condiciones de comprometerse.
+\end{itemize}
+
+\paragraph{Competencias requeridas}
+
+Para desempeñar el rol de manera efectiva, el Social Guide necesita combinar sensibilidad humana con criterio analítico. Algunas competencias clave son:
+
+\begin{enumerate}
+    \item \textbf{Experiencia en dinámicas de grupo:} conocimientos en psicología social (idealmente con especialización en gestión de personas), resolución de conflictos y facilitación de equipos.
+    \item \textbf{Comprensión técnica:} conoce el contexto del desarrollo de software —como prácticas de \textit{pair programming}, revisiones de código o despliegues—, aunque no necesariamente sea un programador experto.
+    \item \textbf{Capacidad de medición:} sabe interpretar escalas psicométricas, analizar tendencias y traducir datos en acciones comprensibles para el equipo.
+    \item \textbf{Neutralidad:} no tiene autoridad ejecutiva; su poder radica en la confianza, la escucha y la capacidad de facilitar sin imponer.
+\end{enumerate}
+
+\subsection{Salvaguardas éticas y protecciones en SocialScrum}
+
+El acceso del Social Guide a información sensible sobre dinámicas interpersonales implica una gran responsabilidad. Por ello, SocialScrum establece un conjunto de salvaguardas éticas y protecciones obligatorias que garantizan que dicha información nunca sea mal utilizada ni interpretada fuera de contexto.
+
+\subsubsection{Principios éticos fundamentales}
+
+\begin{enumerate}
+    \item \textbf{Confidencialidad absoluta:} toda información compartida durante eventos sociales —como retrospectivas o sesiones de mediación 1:1— es estrictamente confidencial. Bajo ninguna circunstancia puede utilizarse para evaluaciones de desempeño, decisiones de despido u otras acciones laborales.
+
+    \item \textbf{Rendición de cuentas clara:} el Social Guide reporta directamente al CTO o al Scrum Master, \textbf{nunca} a Recursos Humanos. Esta medida evita conflictos de interés y protege la naturaleza constructiva del rol, impidiendo que la información social se convierta en ``evidencia'' para decisiones administrativas o disciplinarias.
+
+    \item \textbf{Transparencia hacia el equipo:} todos los reportes o hallazgos generados por el Social Guide son accesibles para el equipo. En SocialScrum no existen ``reportes secretos'' ni comunicaciones unilaterales sobre temas sociales.
+
+    \item \textbf{Protección contra represalias:} cualquier miembro del equipo que denuncie una violación ética —por ejemplo, la divulgación indebida de información personal— está protegido y no puede ser objeto de sanciones o represalias.
+
+\end{enumerate}
+
+\subsubsection{Requisito de consentimiento informado}
+
+Antes de implementar SocialScrum, es indispensable que el equipo otorgue su consentimiento informado. Este proceso implica:
+
+\begin{itemize}
+    \item \textbf{Sesión de explicación:} presentación clara del propósito de SocialScrum, los tipos de datos que se recopilan y los mecanismos establecidos para su protección.
+    \item \textbf{Votación:} al menos el 70\% del equipo debe aprobar su adopción para garantizar que la implementación sea legítima y participativa.
+    \item \textbf{Derecho a no participar:} cualquier persona puede optar por no participar en eventos sociales sin recibir represalias ni afectaciones en su rol dentro del equipo.
+\end{itemize}
+
+\subsubsection{Requisito de cambio Real, no teatro social}
+
+Uno de los riesgos más importantes que enfrenta SocialScrum es caer en lo que se conoce como ``teatro social'': equipos que participan en retrospectivas o reuniones enfocadas en lo humano solo porque ``toca hacerlo'', pero sin generar transformaciones reales en las dinámicas del grupo. En esos casos, el proceso se vuelve una formalidad vacía que no aporta valor ni mejora la convivencia.
+
+Para prevenirlo, SocialScrum establece un principio innegociable:
+
+\begin{quote}
+    \textit{``Toda acción identificada en una retrospectiva social debe implementarse antes del siguiente Sprint. Si el equipo no cuenta con los recursos necesarios, la situación debe escalarse al nivel de gestión o dirección.''}
+\end{quote}
+
+En la práctica, esto implica:
+
+\begin{enumerate}
+    \item Si el equipo detecta un conflicto, se debe crear un ítem de mediación dentro del Sprint.
+    \item Si se identifica una falla de comunicación, se asignan recursos o tiempo para mejorar las herramientas y los procesos involucrados.
+    \item Si se observa aislamiento entre los miembros, se promueven espacios de interacción genuina —como sesiones de \textit{\gls{pair-programming}} o talleres colaborativos—.
+    \item Si la dirección no brinda apoyo o recursos, esta falta de acción debe documentarse y comunicarse formalmente. SocialScrum no puede sostenerse si las recomendaciones se ignoran de manera sistemática.
+\end{enumerate}
+
+Sin acciones concretas, el equipo se desmotiva y el proceso termina convirtiéndose en una fachada de ``bienestar'' que, lejos de ayudar, profundiza la frustración, por lo tanto, cualquier organización que adopte SocialScrum asume el compromiso de actuar sobre los hallazgos, no solo escucharlos. El cambio cultural y relacional debe ser tan tangible como los resultados técnicos.
+
+Sin un consentimiento genuino, el proceso pierde su esencia colaborativa. La confianza —base fundamental de SocialScrum— no puede imponerse; debe construirse desde la transparencia y el respeto mutuo.
+
+\emph{Referencia:} La operacionalización de los roles se desarrolla de manera detallada en el Capítulo 4, Sección 4.X.
 
 \subsubsection{Eventos adaptados en SocialScrum}
 
-En SocialScrum, los eventos del marco original se ajustan para incluir la gestión de la deuda social sin alterar su esencia ni su propósito principal. Esta adaptación parte de una idea clave: si la deuda social es algo que no siempre se ve, cambia con el tiempo y suele resistirse al cambio —como se planteó en los principios empíricos—, entonces los espacios de inspección y adaptación no pueden depender del azar, deben estar integrados dentro del propio proceso.
+En SocialScrum, los eventos del marco original se ajustan para incorporar la gestión de la deuda social sin modificar su esencia ni su propósito fundamental. Esta adaptación surge de una premisa sencilla pero profunda: si la deuda social es, por naturaleza, algo difícil de ver, que evoluciona con el tiempo y se resiste al cambio —como lo plantean los principios empíricos—, entonces los espacios de inspección y adaptación no pueden quedar sujetos a la casualidad ni a la buena voluntad. Deben estar integrados de manera intencional en la dinámica del equipo, formando parte de su ritmo cotidiano y de su cultura de trabajo.
 
-Cada evento incorpora una dimensión social concreta, en sintonía con los valores de Scrum y los fundamentos teóricos del modelo. La Tabla \ref{tab:eventos_adaptados} resume estas transformaciones, mostrando cómo cada ceremonia se convierte en un punto de encuentro con la salud social del equipo, un espacio donde el aspecto humano también se inspecciona y mejora.
+SocialScrum, por tanto, no añade nuevos eventos; en cambio, aprovecha los mismos espacios del marco Scrum para incluir una dimensión social en ellos.
+La clave está en que esta integración se logra sin sacrificar tiempo de desarrollo ni alterar el flujo natural del equipo. Cada evento mantiene su propósito original, pero amplía su alcance para incluir la salud social como un aspecto esencial del desempeño colectivo.
+
+\paragraph{Principio de No-Sobrecarga}
+
+Los ajustes sociales se incorporan de la siguiente manera:
+
+\begin{itemize}
+    \item \textbf{Daily Standup:} se añade una pregunta final —``¿Hay algún impedimento social?''— que toma entre 2 y 3 minutos adicionales.
+    \item \textbf{Sprint Planning:} se incorpora una breve sección de “Riesgos Sociales” (15 minutos) para identificar posibles tensiones o bloqueos humanos que puedan afectar el Sprint. Este tiempo se compensa optimizando otras secciones, sin afectar la calidad de la planificación.
+    \item \textbf{Sprint Review:} se reserva un espacio de aproximadamente 10 minutos para presentar el \textit{Health Score} y discutir su evolución durante el Sprint.
+    \item \textbf{Sprint Retrospective:} no requiere tiempo adicional; simplemente se reequilibra el enfoque, pasando de una atención predominantemente técnica (90\%) a una distribución más equilibrada entre lo técnico y lo social (50\%-50\%).
+\end{itemize}
+
+\textbf{Total:} el tiempo adicional estimado es de aproximadamente 45 minutos por cada Sprint de dos semanas, lo que equivale a unos 4.5 minutos por día.
+En términos prácticos, esto representa menos del 1\% del tiempo total del Sprint, una inversión mínima frente al impacto positivo que genera en la salud y sostenibilidad del equipo.
+
+\emph{Referencia:} el Principio de No-Sobrecarga se desarrolla con mayor detalle en el Capítulo 4, Sección 4.X, donde se incluyen tablas de distribución de tiempo por evento y estrategias de optimización para reducir el overhead aún más.
+
+Cada evento, por tanto, incorpora una dimensión social específica, alineada con los valores de Scrum y con los fundamentos teóricos del modelo. La Tabla \ref{tab:eventos_adaptados} muestra cómo cada ceremonia se transforma en un espacio para observar, evaluar y fortalecer la salud social del equipo; un punto de encuentro donde también se inspecciona lo humano, no solo lo técnico.
 
 \begin{adjustwidth}{\parindent}{0pt}
     \begin{table}[!htbp]
         \caption{Eventos de Scrum adaptados en SocialScrum}
         \label{tab:eventos_adaptados}
         \centering
-        \renewcommand{\arraystretch}{1.3}
+        \renewcommand{\arraystretch}{1.2}
         \small
-        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}{@{}p{3.7cm}X@{}}
+        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}{@{}p{3.2cm}X@{}}
             \toprule
-            \textbf{Evento Scrum}         & \textbf{Adaptación en SocialScrum}                                                                                                                                                                                \\
+            \textbf{Evento}               & \textbf{Adaptación en SocialScrum}                                                                                                                                                                                     \\
             \midrule
 
             \textbf{Sprint Planning}      &
-            Incluye una \textbf{Revisión de Riesgos Sociales} liderada por el Social Guide. En esta fase, el equipo analiza si su estado social actual (Health Score, smells activos) permite comprometerse con tareas de alta complejidad. Se identifican los \textit{community smells} que podrían interferir con el objetivo del Sprint y se definen acciones preventivas que se integran de forma explícita al Sprint Backlog Social \cite{schwaber2020scrum}.
-            \textit{Conexión teórica:} esta práctica refuerza la \textbf{Autonomía} (TAD), pues el equipo decide su verdadera capacidad, y fortalece la \textbf{Integridad} (Confianza) al hacer visibles los compromisos sociales asumidos.                  \\[1pt]
+            Se incorpora una \textbf{Revisión de Riesgos Sociales}, liderada por el Social Guide. En esta etapa, el equipo analiza si su estado social actual —medido mediante el \textit{Health Score} y los \textit{smells} activos— le permite comprometerse con tareas de alta complejidad. Se identifican posibles obstáculos sociales y se definen acciones preventivas que se integran directamente en el \textit{Sprint Backlog Social} \cite{schwaber2020scrum}.
+            Esta práctica fortalece la \textbf{autonomía} del equipo al permitirle reconocer su capacidad real, y promueve la \textbf{integridad} al hacer visibles sus compromisos sociales.                                                                      \\[1pt]
 
-            \textbf{Daily Scrum}          &
-            Se agrega una pregunta sencilla pero poderosa: “¿Hay algo que esté afectando la colaboración o comunicación del equipo hoy?”. El Social Guide observa las dinámicas —quién participa, quién se mantiene callado, el tono emocional— como señales tempranas de posibles tensiones. Si aparecen fricciones, se registran para tratarlas fuera del Daily, respetando siempre el \textit{time-boxing} \cite{saeeda2024nontechnicaldebt}.
-            \textit{Conexión teórica:} promueve una \textbf{Transparencia} constante frente a los impedimentos sociales y fomenta la \textbf{Relacionalidad} (TAD), al normalizar que los equipos hablen abiertamente sobre sus dificultades interpersonales. \\[1pt]
+            \textbf{Daily Standup}        &
+            Se añade una pregunta breve pero significativa: ``¿Hay algún impedimento social?''.
+            El Social Guide observa las dinámicas del equipo —quién participa, quién se mantiene en silencio, el tono emocional del grupo— como señales tempranas de posibles tensiones. Si surgen fricciones, se documentan para abordarlas fuera del Daily, respetando el \textit{time-boxing} \cite{saeeda2024nontechnicaldebt}.
+            Este enfoque normaliza la conversación sobre dificultades interpersonales y fomenta una transparencia constante en las relaciones del equipo.                                                                                                          \\[1pt]
 
             \textbf{Sprint Review}        &
-            Además de presentar el Increment, se dedica un breve espacio (5 a 7 minutos) a una \textbf{Evaluación de la Dinámica del Equipo}. El Social Guide comparte un resumen con los cambios en la salud social durante el Sprint: evolución de métricas (SNA, distribución de conocimiento), nuevos smells detectados o mitigados, y el impacto de las relaciones humanas en la entrega del producto. Así, los stakeholders reconocen que la salud social también influye directamente en el valor generado \cite{schwaber2020scrum}.
-            \textit{Conexión teórica:} potencia el valor de la \textbf{Apertura} al visibilizar el estado social del equipo y cultiva la \textbf{Benevolencia} (Confianza) al demostrar un interés genuino por el bienestar colectivo.                        \\[1pt]
+            Además de presentar el Increment, se dedican entre 5 y 7 minutos a una \textbf{Evaluación de la Dinámica del Equipo}.
+            El Social Guide comparte de forma breve la evolución de las métricas sociales —como SNA o distribución de conocimiento—, los \textit{smells} mitigados o nuevos, y cómo las interacciones influyeron en la entrega.
+            Este espacio permite que los stakeholders comprendan que la salud social también incide en el valor del producto \cite{schwaber2020scrum}, visibilizando un aspecto a menudo ignorado y mostrando una preocupación genuina por el bienestar colectivo. \\[1pt]
 
             \textbf{Sprint Retrospective} &
-            Se convierte en el corazón de la gestión de la deuda social. El Social Guide lidera o cofacilita un bloque dedicado (20 a 30 minutos) que sigue cuatro pasos:
-            (1) revisar el Registro de Smells,
-            (2) analizar causas raíz con técnicas como “5 Whys”,
-            (3) diseñar experimentos de mejora con hipótesis comprobables, y
-            (4) priorizar las acciones para el siguiente Sprint Backlog.
-            Las mejoras sociales más relevantes se formalizan con responsables, métricas de éxito y criterios de evaluación \cite{martini2019agiledebt}.
-            \textit{Conexión teórica:} encarna el ciclo completo de \textbf{Inspección → Adaptación → Nueva Transparencia}, y demanda tanto \textbf{Coraje} (para hablar de lo difícil) como \textbf{Compromiso} (para sostener los cambios en el tiempo).    \\
+            Se convierte en el núcleo de la gestión social. El Social Guide lidera una sección específica (de 20 a 30 minutos) estructurada en cuatro fases: revisión del registro de \textit{smells}, análisis de causas raíz (por ejemplo, con la técnica de los ``5 Whys''), diseño de experimentos de mejora con hipótesis comprobables y priorización de las acciones resultantes para el siguiente Sprint.
+            Las mejoras sociales más importantes se formalizan con responsables, métricas de éxito y criterios de evaluación \cite{martini2019agiledebt}.
+            Este evento encarna el ciclo completo de inspección, adaptación y nueva transparencia, y requiere tanto coraje para abordar los temas difíciles como compromiso para sostener los cambios en el tiempo.                                                \\
             \bottomrule
         \end{tabularx}
     \end{table}
 \end{adjustwidth}
 
+Al incorporar nuevas dimensiones sociales dentro de los eventos existentes, SocialScrum busca que la gestión de la deuda social no se perciba como una tarea adicional o un ``pendiente'' más en la agenda del equipo, sino como una parte natural de su dinámica ágil. El objetivo es que estos espacios sociales se integren orgánicamente en el flujo de trabajo, promoviendo una cultura donde lo humano y lo técnico convivan en equilibrio. Así, se fortalece tanto la calidad del producto como las relaciones que lo hacen posible.
+
+La Tabla \ref{tab:eventos-tiempo} presenta una estimación del tiempo adicional (\textit{overhead}) que implican estas adaptaciones, evidenciando que el impacto temporal es mínimo en comparación con los beneficios obtenidos en cohesión, confianza y sostenibilidad del equipo.
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        \textbf{Evento}      & \textbf{Tiempo estimado} & \textbf{Overhead social} & \textbf{Facilitador}                                \\
+        \hline
+        Daily Standup        & 15 min                   & +2-–3 min                & Social Guide (1 pregunta)                           \\
+        Sprint Planning      & 4 h                      & +15 min                  & Social Guide (revisión de riesgos sociales)         \\
+        Sprint Review        & 2 h                      & +10 min                  & Social Guide (evaluación del \textit{Health Score}) \\
+        Sprint Retrospective & 1.5 h                    & +0 min                   & Scrum Master (técnico) + Social Guide (social)      \\
+        \hline
+    \end{tabular}
+    \caption{Overhead temporal de los eventos sociales en SocialScrum}
+    \label{tab:eventos-tiempo}
+\end{table}
+
+\emph{Nota: El principio de \textbf{No Sobrecarga} establece que estas adaptaciones deben integrarse en los eventos existentes de Scrum sin aumentar de forma significativa el tiempo total de las ceremonias. Este principio se desarrolla con mayor detalle en el Capítulo 4, Sección 4.X.}
+
 \FloatBarrier
 
-El \textbf{Sprint Retrospective Social} es, sin duda, el evento que merece una atención especial. Representa el punto culminante de todo el ciclo de gestión de la deuda social dentro de SocialScrum. A diferencia de las retrospectivas tradicionales —donde los temas sociales suelen tratarse de forma secundaria—, esta versión los convierte en el eje central mediante una estructura clara, guiada y con propósito.
+El \textbf{Sprint Retrospective Social} es, sin duda, el evento que mayor protagonismo tiene dentro del ciclo de gestión social, ya que marca el cierre natural del proceso y el punto de partida para nuevas mejoras. A diferencia de las retrospectivas tradicionales —donde los temas humanos suelen abordarse solo de manera tangencial—, aquí se convierten en el eje central de la conversación, con una estructura clara, propósito definido y un enfoque deliberado en el bienestar colectivo.
 
-La Figura \ref{fig:sprint_retrospective_social1} muestra cómo fluye este proceso. Todo comienza con la presentación del Social Guide, quien comparte tanto los datos cuantitativos (métricas del Sprint) como las observaciones cualitativas sobre las dinámicas del equipo. A partir de allí, el grupo analiza las causas de los smells detectados, evitando soluciones rápidas o superficiales. En su lugar, se aplican técnicas de análisis de causas raíz para comprender realmente el problema.
-Las intervenciones que surgen de este análisis se diseñan como verdaderos experimentos: cada uno con su hipótesis, métricas de éxito y criterios claros para decidir si vale la pena continuar o hacer un cambio. Esto refleja el espíritu empírico y de aprendizaje continuo que caracteriza al modelo.
+La Figura \ref{fig:sprint_retrospective_social1} ilustra el flujo completo. El proceso comienza con la presentación del Social Guide, quien comparte tanto datos cuantitativos —como métricas del Sprint y tendencias del \textit{Health Score}— como observaciones cualitativas sobre las interacciones del equipo. A partir de esta base, el grupo analiza de forma colaborativa las causas de los \textit{smells} identificados, evitando soluciones rápidas o paliativas.
+Las acciones resultantes se formulan como experimentos con hipótesis claras, métricas de éxito y criterios definidos para decidir si continuar, ajustar o descartar el cambio. Esta lógica experimental refleja el espíritu empírico y de aprendizaje continuo que caracteriza a SocialScrum.
+
+En este flujo, todos los roles tienen un papel activo y complementario. El Social Guide aporta el diagnóstico analítico y orienta la conversación hacia los aspectos relacionales; el Scrum Master facilita los diálogos difíciles y protege el ambiente psicológico del grupo; los Developers proponen soluciones prácticas y contextualizadas; y el Product Owner actualiza el \textit{Product Backlog Social} con las acciones resultantes.
+De esta manera, la gestión social deja de ser responsabilidad de una sola figura y se convierte en un compromiso compartido que refuerza la madurez y cohesión del equipo.
+
+\textbf{Criterios de éxito:}
+\begin{itemize}
+    \item Se analizó en profundidad al menos un \textit{smell} crítico, abordando sus causas reales y no solo sus síntomas.
+    \item Las acciones acordadas se formularon como hipótesis comprobables, con métricas claras que permitan evaluar su efectividad.
+    \item El equipo pudo expresar sus inquietudes con libertad y sin temor a represalias, reflejando un entorno de auténtica seguridad psicológica.
+    \item Se identificaron aprendizajes concretos del Sprint anterior, tanto sobre lo que funcionó como sobre aquello que requiere ajuste o mejora.
+\end{itemize}
 
 \begin{figure}[!htbp]
     \centering
@@ -147,64 +269,50 @@ Las intervenciones que surgen de este análisis se diseñan como verdaderos expe
     \label{fig:sprint_retrospective_social1}
 \end{figure}
 
-Como puede verse en la figura, este flujo involucra activamente a todos los roles del equipo.
-El Social Guide aporta el diagnóstico y la mirada analítica; el Scrum Master se encarga de facilitar las conversaciones difíciles y mantener un ambiente constructivo; los Developers proponen soluciones realistas y adecuadas a su contexto; y el Product Owner actualiza el \textit{Product Backlog Social} con los elementos que surgen del proceso.
-Gracias a este enfoque colaborativo, la gestión social deja de depender de una sola figura y se convierte en una responsabilidad compartida por todo el equipo.
-
-\textbf{Criterios de éxito de la Retrospective Social:}
-\begin{itemize}
-    \item Se analizó al menos un \textit{community smell} crítico en profundidad, evitando quedarse en la superficie.
-    \item Las acciones de mejora se formularon como hipótesis medibles, con indicadores claros para evaluar su efectividad.
-    \item El equipo pudo expresar sus preocupaciones con confianza, sin miedo a consecuencias negativas (síntoma de una buena seguridad psicológica).
-    \item Se identificaron aprendizajes concretos del Sprint anterior: qué funcionó, qué no y por qué.
-\end{itemize}
-
-La aplicación detallada de cada evento —incluyendo facilitadores, tiempos recomendados, preguntas guía y herramientas prácticas— se describe a fondo en el Capítulo 4, Sección 4.X, donde se presenta el manual de implementación del modelo.
+La descripción completa del proceso —con facilitadores, tiempos sugeridos, preguntas guía y herramientas de apoyo— se desarrolla en el Capítulo 4, Sección 4.X, donde se presenta el manual práctico de implementación del modelo.
 
 \FloatBarrier
 
 \subsubsection{Artefactos adaptados en SocialScrum}
 
-En Scrum, los artefactos —Product Backlog, Sprint Backlog e Increment— representan tanto el trabajo como el valor entregado, y están diseñados para garantizar la transparencia en todo momento \cite{schwaber2020scrum}. En SocialScrum, estos mismos artefactos se amplían para incluir la dimensión social, no como un añadido superficial, sino como una extensión natural del principio de transparencia aplicado a los aspectos humanos y sociotécnicos del equipo.
+En Scrum, los artefactos —Product Backlog, Sprint Backlog e Increment— representan el trabajo y el valor generados, y están diseñados para mantener la transparencia en todo momento \cite{schwaber2020scrum}. En SocialScrum, estos artefactos se amplían para incluir la dimensión social, no como un añadido superficial, sino como una extensión natural del principio de transparencia aplicado a los aspectos humanos del equipo.
 
-Si entendemos que la deuda social afecta directamente el valor del producto —porque retrasa entregas, reduce la calidad y genera retrabajo—, entonces debe gestionarse con el mismo nivel de disciplina que la deuda técnica. Los artefactos adaptados en SocialScrum hacen justamente eso: convierten los problemas sociales en elementos visibles, medibles y gestionables, con el mismo peso que cualquier funcionalidad técnica. En otras palabras, los temas relacionales dejan de ser “conversaciones de pasillo” para transformarse en \textit{work items} formales con seguimiento, prioridad y resultados esperados.
+Si la deuda social influye directamente en el valor del producto —porque retrasa entregas, degrada la calidad o genera retrabajo—, entonces debe abordarse con el mismo nivel de rigor que la deuda técnica. Los artefactos adaptados en SocialScrum buscan justamente eso: transformar los problemas sociales en elementos visibles, medibles y gestionables, con el mismo nivel de importancia que cualquier funcionalidad técnica.
 
-La Tabla \ref{tab:artefactos_adaptados} resume cómo cada artefacto se enriquece con información social, manteniendo su función original, pero ampliando su alcance hacia la sostenibilidad del equipo y la calidad del entorno de trabajo.
+La Tabla \ref{tab:artefactos_adaptados} ilustra cómo cada artefacto se enriquece con información social, manteniendo su propósito original, pero ampliando su alcance hacia la sostenibilidad del equipo y la salud del entorno de trabajo.
 
 \begin{adjustwidth}{\parindent}{0pt}
     \begin{table}[!htbp]
         \caption{Artefactos de Scrum adaptados en SocialScrum}
         \label{tab:artefactos_adaptados}
         \centering
-        \renewcommand{\arraystretch}{1.2}
+        \renewcommand{\arraystretch}{1.15}
         \small
-        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}{@{}p{3.2cm}X@{}}
+        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}{@{}p{2.8cm}X@{}}
             \toprule
-            \textbf{Artefacto Scrum} & \textbf{Adaptación en SocialScrum}                                                                                                                                                                       \\
+            \textbf{Artefacto}       & \textbf{Adaptación en SocialScrum}                                                                                                                                                                                                 \\
             \midrule
 
             \textbf{Product Backlog} &
-            Se amplía con \textbf{Elementos de Deuda Social} o \textbf{Habilitadores de Salud del Equipo}: iniciativas que buscan mejorar la comunicación, reducir smells persistentes o fortalecer habilidades sociales dentro del grupo (por ejemplo: “Establecer protocolos de \textit{code review} no tóxicos para mitigar el smell \textit{Priggish Members}”).
-            El Product Owner los prioriza junto al Social Guide utilizando un marco que combina cuatro criterios: (1) el Health Score actual del equipo, (2) la severidad del smell, (3) el impacto estimado en la velocidad, y (4) la viabilidad de mitigación.
-            Esta lógica reconoce que cuidar la salud social también es entregar valor al producto, no un desvío del objetivo principal \cite{saeeda2024nontechnicaldebt, schwaber2020scrum}.
-            \textit{Conexión teórica:} Refuerza la \textbf{Habilidad} (Confianza) del equipo para gestionar su complejidad interna y sostiene la \textbf{Competencia} (TAD) al ofrecer herramientas concretas para la mejora continua.          \\[1pt]
+            Se amplía con \textbf{Elementos de Deuda Social} o \textbf{Habilitadores de Salud del Equipo}: iniciativas destinadas a mejorar la comunicación, reducir \textit{smells} persistentes o fortalecer las habilidades sociales del grupo (por ejemplo: “Establecer protocolos de \textit{code review} no tóxicos para mitigar \textit{Priggish Members}”).
+            El Product Owner los prioriza junto al Social Guide considerando cuatro criterios: el \textit{Health Score} actual del equipo, la severidad del smell, el impacto en la velocidad y la viabilidad de mitigación \cite{saeeda2024nontechnicaldebt}.
+            Este enfoque reconoce que cuidar la salud social también es entregar valor, no una distracción. Refuerza la capacidad del equipo para gestionar su propia complejidad (habilidad) y fomenta la mejora continua mediante herramientas concretas (competencia). \\[1pt]
 
             \textbf{Sprint Backlog}  &
-            Integra de manera explícita las \textbf{Acciones de Mitigación Social} derivadas del Sprint Planning o la Retrospectiva. Estas acciones se tratan como ítems de trabajo formales: con descripción clara, responsables definidos, esfuerzo estimado y criterios de aceptación específicos.
-            Un ejemplo podría ser:
-            ``Acción: Implementar sesiones semanales de ``lunch \& learn'' sobre el subsistema X.
+            Integra explícitamente las \textbf{Acciones de Mitigación Social} como ítems formales, con descripción clara, responsables asignados, esfuerzo estimado y criterios de aceptación definidos.
+            Ejemplo: “Implementar sesiones semanales de ‘lunch \& learn’ sobre el subsistema X.
             Owner: Developer A + voluntario rotativo.
-            DoD: Al menos tres desarrolladores pueden explicar la arquitectura básica del subsistema.
-            Métrica: Reducción superior al 30\% en preguntas a Developer A (medido en Slack).''
-            Este nivel de visibilidad garantiza que el trabajo social no quede relegado ni se perciba como “invisible”, sino que forme parte del compromiso del Sprint \cite{saeeda2024nontechnicaldebt}.
-            \textit{Conexión teórica:} Fortalece el valor de \textbf{Compromiso} al formalizar la responsabilidad colectiva, y apoya la \textbf{Autonomía} (TAD) al permitir que el equipo defina cómo resolver sus propios desafíos sociales.  \\[1pt]
+            DoD: Al menos tres desarrolladores pueden explicar la arquitectura básica.
+            Métrica: reducción superior al 30\% en preguntas a Developer A (medido en Slack).”
+            Esta visibilidad asegura que el trabajo social no sea “invisible”, sino parte integral del compromiso del Sprint \cite{saeeda2024nontechnicaldebt}.
+            Formaliza la responsabilidad colectiva (compromiso) y potencia la \textbf{autonomía} del equipo para definir cómo abordar sus propios retos interpersonales.                                                                                                  \\[1pt]
 
             \textbf{Incremento}      &
-            Además de cumplir con la \textit{Definition of Done} técnica, cada Incremento se evalúa según su \textbf{Impacto en la Salud Social}.
-            El Social Guide colabora en la definición de criterios de “sostenibilidad social”: por ejemplo, si el trabajo se realizó sin generar burnout, si no surgieron nuevos smells (como \textit{Black Clouds} por falta de documentación) o si las dinámicas de colaboración mejoraron.
-            También se pueden medir indicadores como: variaciones en el Health Score, reducción o aparición de smells, distribución del conocimiento (SNA) o niveles de carga emocional (horas extra, rotación).
-            Un Incremento que cumple con lo técnico pero erosiona el bienestar del equipo no es sostenible a largo plazo y debe tratarse como deuda social acumulada \cite{saeeda2024nontechnicaldebt}.
-            \textit{Conexión teórica:} Equilibra el valor de \textbf{Foco} entre resultados técnicos y sostenibilidad humana, y materializa la \textbf{Relacionalidad} (TAD) al medir la cohesión y la colaboración efectiva dentro del equipo. \\
+            Además de cumplir con la \textit{Definition of Done} técnica, cada Incremento se evalúa también por su \textbf{Impacto en la Salud Social}.
+            El Social Guide participa en la definición de criterios de sostenibilidad social, respondiendo preguntas como: ¿el trabajo se completó sin generar burnout? ¿sin crear nuevos \textit{smells} (por ejemplo, \textit{Black Clouds} por falta de documentación)? ¿mejoraron las dinámicas de colaboración?
+            Se analizan indicadores como variaciones en el \textit{Health Score}, aparición o reducción de \textit{smells}, distribución del conocimiento (SNA) o niveles de carga emocional (horas extra, rotación).
+            Un Incremento que cumple lo técnico pero deteriora el bienestar del equipo debe considerarse deuda social acumulada \cite{saeeda2024nontechnicaldebt}.
+            Este equilibrio entre entrega técnica y sostenibilidad humana fortalece el valor de \textbf{foco} y refleja la \textbf{relacionalidad} del equipo al medir su cohesión y colaboración efectiva.                                                               \\
             \bottomrule
         \end{tabularx}
     \end{table}
@@ -214,19 +322,30 @@ La Tabla \ref{tab:artefactos_adaptados} resume cómo cada artefacto se enriquece
 
 \paragraph{Artefactos complementarios específicos de SocialScrum}
 
-Además de los artefactos adaptados de Scrum, SocialScrum introduce tres artefactos complementarios diseñados específicamente para gestionar la deuda social:
+Además de los artefactos adaptados, SocialScrum incorpora tres artefactos complementarios diseñados específicamente para gestionar la deuda social de manera estructurada y continua:
 
 \begin{enumerate}
-    \item \textbf{Registro de Community Smells:} Log centralizado y accesible de smells detectados, que incluye: fecha de detección, categoría (Comunicación\slash Conocimiento\slash Relacional\slash Organizacional), severidad (Baja\slash Media\slash Alta\slash Crítica), estado (Activo\slash En mitigación\slash Resuelto\slash Latente), acciones tomadas y resultados observados. Este registro no es confidencial del Social Guide; es transparente para el equipo, operacionalizando el principio de que ``lo que no se mide, no se gestiona''. Funciona como memoria organizacional que previene amnesia social (olvidar problemas resueltos y repetirlos) y permite análisis de tendencias a largo plazo.
+    \item \textbf{Registro de Community Smells:}
+          Un registro centralizado donde se documentan los \textit{smells} detectados, junto con su fecha, categoría, nivel de severidad, estado actual, acciones tomadas y resultados obtenidos.
+          Este registro no es de uso privado del Social Guide; por el contrario, es completamente transparente para el equipo, bajo la premisa de que “lo que no se mide, no se gestiona”.
+          Cumple también una función de memoria organizacional, evitando la llamada \textit{amnesia social} —cuando se olvidan problemas ya resueltos y se vuelven a repetir—, además de permitir el análisis de tendencias a lo largo del tiempo.
 
-    \item \textbf{Dashboard de Métricas Sociales:} Visualización en tiempo real de indicadores clave de salud social: Health Score actual y tendencia, distribución de conocimiento (SNA), señales tempranas de burnout (horas extra, velocidad individual), índice de seguridad psicológica (encuestas cortas cada 2-3 Sprints), y balance de participación en decisiones. Estas métricas no reemplazan la comprensión cualitativa, pero la complementan, permitiendo que el equipo detecte anomalías (e.g., un miembro que pasa de alta participación a silencio súbito) antes de que escalen a crisis.
+    \item \textbf{Dashboard de Métricas Sociales:}
+          Una visualización en tiempo real de los principales indicadores de la salud del equipo: evolución del \textit{Health Score}, distribución de conocimiento (SNA), señales tempranas de \textit{burnout} (por ejemplo, exceso de horas extra o variaciones en la velocidad individual), índice de seguridad psicológica (a partir de encuestas cada 2 o 3 Sprints) y equilibrio en la participación en la toma de decisiones.
+          Estas métricas complementan la visión cualitativa del Social Guide, ayudando a detectar patrones o anomalías —por ejemplo, un miembro que pasa de tener alta participación a permanecer en silencio— antes de que el problema escale.
 
-    \item \textbf{Catálogo de Estrategias Probadas:} Repositorio evolutivo de experimentos de mitigación ejecutados por el equipo, documentando: smell abordado, estrategia intentada, contexto (e.g., ``Sprint de alta presión''), resultados (éxito/fracaso/mixto), y aprendizajes. Este catálogo no es prescriptivo (``siempre hacer X para Y'') sino descriptivo, acelerando el diseño de futuras intervenciones al evitar repetir experimentos fallidos y permitiendo adaptar estrategias exitosas. Refleja el enfoque empírico: cada equipo construye su propio conocimiento contextual sobre qué funciona para ellos.
+    \item \textbf{Catálogo de Estrategias Probadas:}
+          Un repositorio evolutivo donde se registran los experimentos realizados: el \textit{smell} abordado, la estrategia implementada, el contexto del equipo, los resultados obtenidos (éxito, fracaso o mixto) y los aprendizajes derivados.
+          No es un manual rígido ni prescriptivo —no se trata de “hacer X para resolver Y”—, sino una base de conocimiento viva que acelera el diseño de futuras intervenciones al evitar repetir intentos fallidos.
+          Representa el enfoque empírico del modelo: cada equipo aprende, adapta y construye su propio conocimiento contextual.
+
+
 \end{enumerate}
 
-Estos artefactos complementarios no son opcionales si se busca gestionar deuda social sistemáticamente. Son la infraestructura mínima necesaria para que la transparencia, inspección y adaptación operen efectivamente en el dominio social, convirtiendo buenas intenciones en prácticas sostenibles.
+Estos artefactos no son accesorios ni recomendables “solo si hay tiempo”. Son la infraestructura mínima necesaria para que los principios de transparencia, inspección y adaptación funcionen también en el ámbito social.
+Gracias a ellos, las buenas intenciones se traducen en prácticas sostenibles y medibles que fortalecen la salud del equipo a largo plazo.
 
-La operacionalización detallada de cada artefacto —incluyendo templates, herramientas digitales recomendadas, y ejemplos de implementación en diferentes contextos de equipo— se desarrolla en el Capítulo 4, Sección 4.Y.
+La descripción detallada —con plantillas, herramientas digitales y ejemplos de implementación— se presenta en el Capítulo 4, Sección 4.Y.
 
 \FloatBarrier
 
@@ -258,7 +377,7 @@ Por estas razones, la Teoría de la Autodeterminación (TAD) fue elegida como el
 
 Ahora bien, ¿por qué optar por la TAD y no por otra teoría motivacional? La respuesta es simple: porque aborda directamente el núcleo del problema. Tres razones lo explican con claridad:
 
-\paragraph{1. Diferenciación entre motivación intrínseca y extrínseca}
+\paragraph{Diferenciación entre motivación intrínseca y extrínseca}
 Hay teorías muy respetadas en el mundo organizacional —como la Teoría de Expectativas de Vroom \cite{vroom1964work} o la Teoría de Metas de Locke \cite{locke1990theory}— que funcionan bien cuando se trata de incentivos externos: bonos, reconocimientos, metas claras y medibles. Pero acá está el detalle: la TAD va más allá. Nos permite comprender por qué una persona elige actuar sin necesidad de una recompensa externa, sin apoyarse en la obtención de beneficios externos, sino en el valor intrínseco de la tarea misma \cite{ryan_self-determination_2000}. Y eso, en el contexto de la deuda social, es absolutamente clave.
 
 Pensémoslo así:
@@ -271,7 +390,7 @@ Pensémoslo así:
 
 \textbf{Y acá viene la pregunta que otras teorías no pueden responder:} ¿Por qué alguien levantaría la mano para señalar una dinámica tóxica en el equipo si no va a recibir puntos extra por hacerlo? ¿Por qué participaría activamente en una \textit{Sprint Retrospective Social} si eso no aparece en su evaluación de desempeño ni le suma al bono de fin de año? Pues bien, la TAD explica precisamente eso: la motivación que nace desde adentro, no desde las recompensas.
 
-\paragraph{2. Conexión directa con el síndrome de Burnout}
+\paragraph{Conexión directa con el síndrome de Burnout}
 La evidencia empírica demuestra que la frustración de las necesidades psicológicas básicas planteadas por la Teoría de la Autodeterminación (TAD) —autonomía, competencia y relacionalidad— predice directamente el desarrollo del Burnout \cite{tulili2022burnout}, una de las consecuencias más graves y costosas de la deuda social.
 
 En particular:
@@ -284,7 +403,7 @@ En particular:
 
 A diferencia de otras teorías motivacionales, la TAD ofrece un vínculo empírico claro entre la insatisfacción de estas necesidades psicológicas y los efectos negativos de la deuda social, lo que refuerza su relevancia como marco explicativo en el contexto de SocialScrum \cite{tulili2022burnout,wilson_all_2006}.
 
-\paragraph{3. Aplicabilidad demostrada en contextos de desarrollo de software}
+\paragraph{Aplicabilidad demostrada en contextos de desarrollo de software}
 A diferencia de otras teorías creadas para entornos industriales o de manufactura, la Teoría de la Autodeterminación (TAD) ha demostrado su validez empírica en equipos de conocimiento y en contextos complejos \cite{ryan_self-determination_2000}, donde la autoorganización y la motivación intrínseca son factores determinantes —justamente el tipo de entorno en el que opera Scrum.
 
 Por contraste, teorías como la Teoría de Metas resultan eficaces en escenarios con tareas claras y objetivos medibles, pero no logran explicar la motivación en actividades ambiguas o socialmente complejas, como ``mejorar la cohesión del equipo'' o ``reducir el aislamiento social'', donde las dinámicas humanas juegan un papel central.
@@ -293,7 +412,7 @@ Por contraste, teorías como la Teoría de Metas resultan eficaces en escenarios
 
 El modelo propuesto por Mayer et al. \cite{mayer_integrative_1995} fue elegido por encima de otros marcos de confianza organizacional —como los de Rousseau et al. \cite{rousseau1998not} o McAllister \cite{mcallister1995affect}— por cuatro razones fundamentales que lo hacen especialmente pertinente para el contexto de SocialScrum.
 
-\paragraph{1. Integración de dimensiones cognitivas y afectivas}
+\paragraph{Integración de dimensiones cognitivas y afectivas}
 Mientras que los modelos anteriores tendían a separar la confianza cognitiva (basada en la competencia o fiabilidad técnica) de la confianza afectiva (fundamentada en los lazos emocionales y la benevolencia), el modelo de Mayer et al. propone una visión integradora.
 Sus tres dimensiones —habilidad, benevolencia e integridad— permiten capturar de forma equilibrada ambos aspectos de la confianza \cite{mayer_integrative_1995}.
 
@@ -304,7 +423,7 @@ Esto resulta crucial en el contexto de los equipos de desarrollo, porque:
     \item La deuda social no surge únicamente por fallas técnicas ni por conflictos interpersonales, sino por la interacción entre ambos niveles, donde la falta de alineación entre competencia y empatía deteriora la colaboración.
 \end{itemize}
 
-\paragraph{2. Diferenciación entre confianza y cooperación}
+\paragraph{Diferenciación entre confianza y cooperación}
 El modelo de Mayer et al. distingue de forma clara la confianza —que implica vulnerabilidad y apertura— de la cooperación, que puede darse simplemente por control, presión o conveniencia \cite{mayer_integrative_1995}.
 Esta diferencia es fundamental para SocialScrum, ya que permite comprender dinámicas que otros enfoques pasan por alto:
 
@@ -318,7 +437,7 @@ Esta diferencia es fundamental para SocialScrum, ya que permite comprender diná
 ¿Por qué dos equipos con igual productividad técnica pueden presentar niveles radicalmente distintos de deuda social?
 ¿Y cómo diferenciar entre un equipo que ``funciona'' gracias al control y la supervisión, frente a uno que lo hace desde la confianza y el compromiso mutuo genuino?
 
-\paragraph{3. Validación empírica en equipos mediados por tecnología}
+\paragraph{Validación empírica en equipos mediados por tecnología}
 El estudio de Wilson et al. \cite{wilson_all_2006} demostró que el modelo de Mayer et al. describe con precisión cómo evoluciona la confianza en equipos virtuales o distribuidos, un entorno cada vez más habitual en el desarrollo de software.
 Sus hallazgos muestran que:
 
@@ -330,7 +449,7 @@ Sus hallazgos muestran que:
 
 Desde esta perspectiva, se entiende por qué community smells como \gls{cs-radio-silence} o \gls{cs-org-silo} resultan especialmente dañinos: interrumpen los canales de comunicación y los vínculos interpersonales, afectando los mismos mecanismos que permiten construir confianza en los equipos distribuidos.
 
-\paragraph{4. Operacionalización clara para la intervención}
+\paragraph{Operacionalización clara para la intervención}
 A diferencia de otros modelos más abstractos de confianza organizacional, el enfoque de Mayer et al. ofrece dimensiones concretas y medibles —Habilidad, Benevolencia e Integridad (H-B-I)— que permiten tanto el diagnóstico como la intervención práctica \cite{mayer_integrative_1995}.
 
 En el contexto de SocialScrum, esta claridad conceptual se traduce en acciones específicas:
@@ -342,7 +461,7 @@ En el contexto de SocialScrum, esta claridad conceptual se traduce en acciones e
 \end{itemize}
 
 En el caso de los equipos distribuidos, Kim et al. \cite{kim2009individual} proponen una tipología particular de confianza —rápida (swift), basada en el conocimiento (knowledge-based) y basada en la identificación (identification-based)— que complementa el modelo H-B-I de Mayer.
-No obstante, dado que SocialScrum está concebido para aplicarse tanto en equipos presenciales como remotos, el modelo de Mayer resulta una base más amplia y generalizable, capaz de adaptarse a distintos contextos de colaboración sin perder coherencia conceptual.
+No obstante, dado que SocialScrum está diseñado para implementarse tanto en equipos presenciales como en entornos remotos, el modelo de Mayer ofrece una base más amplia y adaptable. Su enfoque permite mantener coherencia conceptual incluso cuando las dinámicas de colaboración cambian según el contexto o la distancia. Esta idea se desarrollará con mayor detalle en la Sección 3.3.5.
 
 \subsection{Complementariedad de ambos marcos}
 
@@ -381,21 +500,32 @@ Esto es especialmente relevante en los equipos de desarrollo de software, donde 
 
 En este marco, la TAD identifica tres necesidades psicológicas universales cuya satisfacción impulsa tanto la motivación intrínseca como el bienestar colectivo del equipo:
 
-\paragraph{1. Autonomía}
+\paragraph{Autonomía}
 La autonomía se refiere a la necesidad de sentir que uno tiene control sobre sus propias acciones y decisiones, lo que implica auto-iniciativa y autorregulación \cite{ryan_self-determination_2000}.
 En el contexto de SocialScrum, esta autonomía se promueve al ofrecer opciones reales y permitir que los desarrolladores gestionen su propio trabajo, fortaleciendo la autoorganización del equipo, un principio esencial dentro de Scrum \cite{ryan_self-determination_2000}.
 Cuando una persona siente que tiene control sobre lo que hace, surge la motivación intrínseca —esa que impulsa a actuar por gusto, interés o satisfacción personal—, en lugar de depender únicamente de recompensas externas.
-De hecho, la investigación muestra que una dependencia excesiva de recompensas extrínsecas puede debilitar el sentido de autonomía y, con ello, afectar la motivación genuina \cite{ryan_self-determination_2000}.
+Por ejemplo, cuando un desarrollador participa activamente en decisiones técnicas que lo afectan —como la elección de lenguajes, frameworks o procesos de trabajo—, suele sentirse más motivado, pues percibe que su voz tiene peso dentro del equipo. En cambio, cuando la dirección o el \textit{management} impone herramientas o metodologías sin consultar al grupo, la motivación tiende a disminuir: el desarrollador siente que ha perdido control sobre su propio entorno de trabajo.
 
-\paragraph{2. Competencia}
+SocialScrum busca precisamente evitar esa desconexión, promoviendo que el equipo participe en decisiones sobre herramientas de comunicación, normas de \textit{code review}, horarios o cualquier otro aspecto que influya en su dinámica diaria.
+Esta participación no solo fortalece el compromiso, sino también el sentido de autonomía, un factor clave para la motivación genuina. De hecho, la investigación demuestra que depender en exceso de recompensas externas puede debilitar ese sentido de autonomía y, con ello, afectar la motivación intrínseca \cite{ryan_self-determination_2000}.
+
+\paragraph{Competencia}
 La competencia representa el deseo fundamental de sentirse eficaz, capaz y en crecimiento dentro de las propias acciones \cite{ryan_self-determination_2000}. Supone contar con las habilidades necesarias para interactuar con el entorno de manera efectiva y alcanzar las metas propuestas \cite{ryan_self-determination_2000}.
 Esta sensación de competencia se fortalece cuando las exigencias del trabajo están en equilibrio con las capacidades de la persona, y cuando se recibe una retroalimentación positiva y constructiva que reconoce los logros y orienta las mejoras \cite{ryan_self-determination_2000}.
-En ese sentido, SocialScrum busca precisamente reforzar esa percepción de eficacia, ayudando a prevenir la ineficacia profesional, uno de los síntomas más comunes del Burnout \cite{tulili2022burnout}.
+Si se ignoran estos aspectos, pueden presentarse escenarios poco saludables en los que el desarrollador solo recibe críticas vagas o comentarios sarcásticos. Esto debilita su sentido de competencia y lo lleva a pensamientos como: ``¿Qué hice mal?'', ``¿Podré mejorar?'' o incluso ``No sirvo para esto''.
 
-\paragraph{3. Relacionalidad}
+En cambio, cuando después de una revisión de código el desarrollador recibe retroalimentación específica, constructiva y orientada al crecimiento, la situación cambia por completo. Su competencia se fortalece y surgen pensamientos mucho más sanos y motivadores: ``Esto lo hice bien'', ``Sé en qué puedo mejorar'' o ``Estoy creciendo profesionalmente``.
+
+En esa línea, SocialScrum busca precisamente reforzar esa percepción de eficacia personal, promoviendo entornos donde la retroalimentación nutra y motive en lugar de desgastar. De esta forma, contribuye a prevenir la sensación de ineficacia profesional, uno de los síntomas más frecuentes del \textit{burnout} \cite{tulili2022burnout}.
+
+\paragraph{Relacionalidad}
 La relacionalidad hace referencia a la necesidad humana de conectar con otros, de construir vínculos cercanos y afectuosos, y de sentirse parte de un grupo o comunidad \cite{ryan_self-determination_2000}. Esta conexión se fortalece cuando las personas se sienten respetadas, escuchadas y valoradas dentro de un entorno inclusivo y empático \cite{ryan_self-determination_2000}.
-En SocialScrum, esta necesidad se aborda de forma explícita al fomentar la cohesión del equipo y reducir los \textit{community smells} relacionados con el aislamiento, como el conocido \textit{lone wolf} o ``lobo solitario'' \cite{caballero2022communitysmells}.
-Cada intervención social busca construir un ambiente de seguridad psicológica, donde las personas puedan expresarse sin temor y las relaciones se basen en la confianza y el respeto mutuo.
+Un ambiente colaborativo saludable permite, por ejemplo, que un desarrollador bajo presión pueda acudir a sus compañeros en busca de apoyo o que estos, al notar la situación, se ofrezcan espontáneamente a ayudar. Ese gesto genera un sentido de pertenencia y alimenta un pensamiento positivo: ``no estoy solo, mi equipo me respalda''.
+
+Por el contrario, cuando cada desarrollador trabaja de forma aislada, sin interacción ni colaboración, se crea un entorno de silos que termina generando sentimientos de desconexión, soledad y falta de apoyo. En consecuencia, aparecen pensamientos negativos que afectan tanto la motivación como el rendimiento del equipo.
+
+En SocialScrum, esta necesidad se aborda de manera directa, fomentando la cohesión grupal y reduciendo los \textit{community smells} asociados al aislamiento, como el conocido \textit{lone wolf} o ``lobo solitario'' \cite{caballero2022communitysmells}.
+Cada intervención social busca fortalecer la seguridad psicológica dentro del equipo, promoviendo un espacio donde las personas puedan expresarse sin miedo, y donde la confianza y el respeto mutuo sean la base de las relaciones de trabajo.
 
 En esencia, al integrar los principios de la Teoría de la Autodeterminación (TAD), SocialScrum busca que los equipos desarrollen una motivación intrínseca genuina y asuman la responsabilidad de sus propias acciones, fortaleciendo así su locus de control interno \cite{ryan_self-determination_2000}.
 De acuerdo con esta teoría, cuando las personas sienten que actúan por decisión propia y desde el compromiso interno, aumentan su claridad emocional, su autoconfianza y su satisfacción general con el trabajo y con el equipo \cite{ryan_self-determination_2000}.
@@ -410,17 +540,17 @@ Siguiendo la definición clásica, la confianza se entiende como la disposición
 Este concepto permite diferenciar la confianza de la simple cooperación, ya que cooperar no siempre implica vulnerabilidad; en muchos casos, la cooperación puede darse por mecanismos de control, presión o conveniencia, sin que exista una verdadera relación de confianza \cite{mayer_integrative_1995}.
 En este marco, el nivel de confianza que un miembro (el trustor) deposita en otro (el trustee) depende de la percepción que tenga sobre tres factores clave de confiabilidad \cite{mayer_integrative_1995}:
 
-\paragraph{1. Habilidad}
+\paragraph{Habilidad}
 La habilidad se refiere al conjunto de competencias, conocimientos y destrezas que permiten a una persona influir de manera efectiva dentro de un dominio específico \cite{mayer_integrative_1995}.
 En SocialScrum, la percepción de esta habilidad —tanto en los \textit{Developers} como en los demás roles— refuerza la confianza en la capacidad técnica y social del equipo para alcanzar los objetivos propuestos \cite{mayer_integrative_1995}.
 Esta dimensión constituye la base de la confianza cognitiva, también llamada confianza basada en la competencia o fiabilidad, que se construye cuando los miembros del equipo reconocen que pueden depender de las capacidades y el profesionalismo de los demás \cite{wilson_all_2006}.
 
-\paragraph{2. Benevolencia}
+\paragraph{Benevolencia}
 La benevolencia se entiende como la creencia de que el \textit{trustee} actúa con una intención genuina de bienestar hacia el otro, es decir, que busca hacer el bien al \textit{trustor} sin guiarse únicamente por intereses personales o de beneficio propio \cite{mayer_integrative_1995}.
 Esta dimensión es clave para la confianza afectiva, aquella que se basa en los lazos emocionales, la empatía y la preocupación mutua entre los miembros del equipo \cite{wilson_all_2006}.
 En SocialScrum, la benevolencia se refleja en el valor de respeto y en las estrategias orientadas a reducir el cinismo y la desconexión emocional que suelen acompañar al Burnout \cite{tulili2022burnout}.
 
-\paragraph{3. Integridad}
+\paragraph{Integridad}
 La integridad se refiere a la percepción de que el \textit{trustee} actúa de acuerdo con principios y valores coherentes, manteniendo una consistencia entre lo que dice y lo que hace \cite{mayer_integrative_1995}.
 En otras palabras, la confianza se fortalece cuando las acciones reflejan de forma constante los compromisos y valores compartidos por el equipo.
 Junto con la habilidad y la benevolencia, la integridad conforma un marco equilibrado y comprobado empíricamente para evaluar la confianza dentro de los equipos \cite{mayer_integrative_1995}.
@@ -428,6 +558,22 @@ Junto con la habilidad y la benevolencia, la integridad conforma un marco equili
 El estudio sobre el desarrollo de la confianza en equipos \cite{wilson_all_2006} respalda la idea de que la confianza no surge de inmediato, sino que evoluciona con el tiempo —un proceso de adaptación constante.
 Si bien los equipos que trabajan de forma remota o mediada suelen partir con niveles más bajos de confianza, las investigaciones muestran que esta aumenta progresivamente hasta alcanzar niveles similares a los de los equipos que colaboran cara a cara \cite{wilson_all_2006}.
 Este desarrollo gradual pone de relieve la importancia de contar con procesos iterativos, como SocialScrum, que favorezcan el cultivo y fortalecimiento continuo de las bases sociales sobre las que se sostiene la colaboración efectiva.
+
+Además del modelo de confianza de Mayer et al. \cite{mayer_integrative_1995}, durante el diseño de SocialScrum se tuvieron en cuenta otros enfoques teóricos relevantes, como la propuesta de Kim et al. \cite{kim2009individual}, quienes desarrollan una tipología de confianza especialmente útil para equipos distribuidos (100\% remotos o altamente dispersos). Este enfoque distingue tres formas de confianza:
+
+\begin{enumerate}
+    \item \textbf{Confianza Rápida (\textit{Swift Trust}):} se basa en roles y expectativas iniciales. Surge desde el primer día y permite que los equipos remotos comiencen a operar rápidamente, aunque es frágil y difícil de sostener sin interacción constante.
+    \item \textbf{Confianza basada en el Conocimiento (\textit{Knowledge-Based Trust}):} se construye a partir de la experiencia compartida y del conocimiento que cada miembro tiene sobre las competencias y hábitos de los demás.
+    \item \textbf{Confianza basada en la Identificación (\textit{Identification-Based Trust}):} es la forma más profunda, fundada en valores y objetivos compartidos. Su desarrollo requiere tiempo, pero genera relaciones más estables y resilientes.
+\end{enumerate}
+
+Esta tipología resulta especialmente útil en entornos de trabajo remoto, donde la confianza debe construirse de manera asincrónica y principalmente a través de medios digitales, sin la interacción presencial que suelen tener los equipos co-localizados.
+
+En ese sentido, SocialScrum toma el modelo de Mayer como base general —por su solidez conceptual y aplicabilidad universal—, pero integra los matices de Kim et al. para adaptarse a contextos distribuidos.
+En estos casos, la medición de la confianza (particularmente las dimensiones \textit{knowledge-based} e \textit{identification-based}, más allá de la \textit{swift trust}) se vuelve un indicador clave del funcionamiento social del equipo.
+Por ello, la evaluación del valor ``Compromiso'' dentro del \textit{Health Score} incorpora preguntas específicas que permiten observar si el grupo ha avanzado desde una confianza inicial y funcional hacia una confianza más profunda, basada en el conocimiento y la identificación mutua.
+
+En resumen, el modelo de Mayer aporta una estructura universal para entender la confianza en equipos, mientras que la tipología de Kim et al. enriquece esta perspectiva con matices prácticos para equipos remotos o distribuidos.
 
 \subsection{Fundamentos ágiles y valores de Scrum}
 
@@ -441,7 +587,7 @@ La gestión de la deuda social se integra plenamente con los valores de Scrum, q
 
 \paragraph{Coraje (Courage)}
 El coraje es la base emocional que permite al equipo asumir riesgos y mostrarse vulnerable frente a los demás.
-Dado que la confianza implica precisamente esa disposición a la vulnerabilidad \cite{mayer_integrative_1995}, el coraje se convierte en un requisito indispensable para tomar acciones valientes dentro de las relaciones interpersonales, conocidas en la literatura como Risk Taking in Relationship (RTR) \cite{mayer_integrative_1995}.
+Dado que la confianza implica precisamente esa disposición a la vulnerabilidad \cite{mayer_integrative_1995}, el coraje se convierte en un requisito indispensable para tomar acciones valientes dentro de las relaciones interpersonales, conocidas en la literatura como \gls{rtr} \cite{mayer_integrative_1995}.
 En SocialScrum, este valor cobra especial importancia durante la \textit{Sprint Retrospective Social}, donde se necesita el coraje para abrir conversaciones difíciles, enfrentar tensiones o conflictos personales, y expresar de manera honesta lo que afecta la dinámica del equipo. Solo a través de esa valentía compartida se construye una confianza real y sostenible.
 
 \paragraph{Apertura (Openness)}
@@ -737,8 +883,84 @@ Aplicado de manera consistente —en distintas cadencias (diaria, Sprint, Releas
     \end{tabular}
 \end{table}
 
+Para ilustrar cómo opera el ciclo de Transparencia $\rightarrow$ Inspección $\rightarrow$ Adaptación dentro de SocialScrum, a continuación se presenta un caso práctico:
+
+\paragraph{Escenario inicial: un problema invisible}
+
+Un equipo de cinco desarrolladores trabaja en el Sprint X. A simple vista, todo parece marchar bien: cumplen con la velocidad planificada y no se reportan errores. Sin embargo, bajo la superficie existe una tensión silenciosa entre Dev A (senior) y Dev B (junior) por desacuerdos en los estándares de código. Nadie lo menciona, pues se asume que ``es un asunto entre ellos''.
+
+\paragraph{Fase 1: Transparencia — Hacer visible el problema}
+
+Durante la \textit{Sprint Retrospective}, el Social Guide introduce una pregunta clave:
+\textit{``¿Hay dinámicas interpersonales que estén afectando nuestro trabajo?''}
+
+Antes de esta intervención, el conflicto permanecía oculto y seguía acumulando fricción.
+Después de la pregunta, Dev A comenta: ``Siento que Dev B no respeta mis comentarios en los \textit{code reviews}''.
+Dev B responde: ``Me siento juzgado; muchas veces no entiendo por qué rechazas mis PRs''.
+
+\textbf{Resultado:} el conflicto, antes invisible, ahora es observable. Se ha logrado transparencia.
+
+\paragraph{Fase 2: Inspección — Analizar el problema}
+
+El Social Guide facilita el análisis sin emitir juicios personales:
+
+\begin{itemize}
+    \item ¿Cuánto tiempo se está afectando el proceso de \textit{code review}? $\rightarrow$ Debería tomar 45 minutos, pero actualmente tarda entre 2 y 3 horas.
+    \item ¿Cuál parece ser la causa? $\rightarrow$ Existen expectativas no documentadas sobre los estándares de código.
+    \item ¿Qué impacto tiene esto en el equipo? $\rightarrow$ Los demás desarrolladores evitan participar en los \textit{reviews}, duplicando el trabajo y reduciendo la colaboración.
+\end{itemize}
+
+\textbf{Resultado:} la causa raíz queda identificada. Inspección completada.
+
+\paragraph{Fase 3: Adaptación — Implementar cambios}
+
+El equipo crea un ítem social dentro del \textit{Sprint Backlog} enfocado en resolver la situación. El Social Guide facilita una serie de sesiones:
+
+\begin{enumerate}
+    \item \textbf{Sesión 1:1 con Dev A:} ``¿Qué esperas de un buen PR?''
+    \item \textbf{Sesión 1:1 con Dev B:} ``¿Qué necesitas para sentirte respetado durante la revisión?''
+    \item \textbf{Sesión conjunta:} ambos acuerdan y documentan qué constituye un ``buen estándar de código''.
+\end{enumerate}
+
+\textbf{Resultado:} existe ahora una referencia compartida. Se ha implementado un cambio. Adaptación lograda.
+
+\paragraph{Retroalimentación: cierre del ciclo}
+
+En el siguiente Sprint, los resultados son visibles:
+
+\begin{itemize}
+    \item Tiempo promedio de \textit{code review}: vuelve a ser de 45 minutos (antes 2–-3 horas). \ding{51}
+    \item Participación: los demás desarrolladores retoman los \textit{reviews}. \ding{51}
+    \item Relación A–-B: mejora de 3/10 (tensa) a 6/10 (profesional y respetuosa). \ding{51}
+\end{itemize}
+
+El ciclo continúa: Transparencia $\rightarrow$ Inspección $\rightarrow$ Adaptación se convierte en una práctica recurrente que permite identificar y atender nuevos desafíos sociales a medida que surgen.
+
+\emph{Reflexión:} sin transparencia, el conflicto habría permanecido oculto; sin inspección, no se habría comprendido su causa; y sin adaptación, nada habría cambiado. En SocialScrum, los tres pilares son interdependientes y forman el corazón del aprendizaje social continuo.
+
 El ciclo empírico de SocialScrum no promete eliminar la deuda social —ningún sistema humano podría hacerlo sin caer en la ingenuidad—, pero sí garantiza algo mucho más valioso: que cuando la deuda emerja, será detectada tempranamente, abordada con estrategias basadas en evidencia y gestionada de forma iterativa, aprendiendo de cada experiencia.
 En ese sentido, SocialScrum transforma la deuda social de una fuerza destructiva invisible en un componente reconocido y gestionable del desarrollo sostenible de software.
+
+\subsection{Medición de la salud social}
+
+Para que SocialScrum mantenga su carácter \textit{empírico}, necesita métricas observables que permitan evaluar el progreso de manera constante. A diferencia de las métricas técnicas —como la velocidad o la cantidad de defectos—, las métricas sociales se centran en las dinámicas humanas y relacionales del equipo.
+
+En este modelo, la salud social se mide a través del \textit{Health Score}, un indicador compuesto que evalúa los cinco valores fundamentales de Scrum:
+
+\begin{itemize}
+    \item \textbf{Openness / Franqueza:} mide qué tan abierta y honesta es la comunicación dentro del equipo.
+    \item \textbf{Compromiso:} evalúa el nivel de compromiso mutuo entre los miembros y su sentido de responsabilidad compartida.
+    \item \textbf{Respeto:} refleja el grado de seguridad psicológica presente en el grupo, es decir, si las personas se sienten escuchadas y valoradas.
+    \item \textbf{Foco:} determina si el equipo está alineado en torno a un objetivo común y evita distracciones que debiliten su cohesión.
+    \item \textbf{Coraje:} analiza si el equipo enfrenta los problemas difíciles o tiende a evitarlos.
+\end{itemize}
+
+Cada valor se califica en una escala del 1 al 10, generando un \textit{Health Score} promedio que representa la salud social general del equipo.
+Un puntaje inferior a 4/10 indica una situación crítica que requiere intervención inmediata, mientras que valores altos reflejan un entorno estable y colaborativo.
+
+La forma de aplicar esta medición —incluyendo las preguntas específicas, las escalas de evaluación y el seguimiento de tendencias— se detalla en el Capítulo 4, Sección 4.X: \textit{``Métricas de Salud Social''}.
+
+\emph{Relación con los Story Points Sociales:} mientras el \textit{Health Score} evalúa la \textbf{condición actual} del equipo, los \textit{Story Points Sociales} estiman el \textbf{esfuerzo necesario} para abordar un problema social o relacional. Ambos indicadores son complementarios: uno diagnostica el estado del equipo y el otro proyecta la energía requerida para mejorar su bienestar colectivo.
 
 \FloatBarrier
 
@@ -954,7 +1176,7 @@ Por último, los artefactos se amplían para formalizar la gestión de la deuda 
 
 \FloatBarrier
 
-\textbf{Capa 4 (Outcomes)} representa los resultados observables del modelo SocialScrum, mostrando tanto los efectos preventivos (reducción de community smells por categoría) como los impactos sistémicos positivos en el equipo y la organización.
+\textbf{Capa 4 Resultados (Outcomes)} representa los resultados observables del modelo SocialScrum, mostrando tanto los efectos preventivos (reducción de community smells por categoría) como los impactos sistémicos positivos en el equipo y la organización.
 
 En esta última capa, SocialScrum trasciende la gestión operativa para mostrar su valor sistémico: cómo la aplicación continua de sus principios y componentes reduce la deuda social, fortalece la confianza, previene el burnout y mejora la sostenibilidad del trabajo en equipo.
 Así, los resultados no son únicamente reactivos (resolver conflictos o eliminar smells), sino también emergentes, reflejando una transformación cultural hacia equipos más cohesionados, autónomos y emocionalmente saludables.
@@ -1010,13 +1232,13 @@ Así, los resultados no son únicamente reactivos (resolver conflictos o elimina
         };
 
     \end{tikzpicture}
-    \caption{Outcomes del modelo SocialScrum: prevención y mejora sistémica}
+    \caption{Resultados del modelo SocialScrum: prevención y mejora sistémica}
     \label{fig:outcomes_socialscrum}
 \end{figure}
 
 \FloatBarrier
 
-Los feedback loops (líneas discontinuas) muestran que el sistema es reflexivo: los outcomes exitosos refuerzan los valores que los habilitaron, y el ciclo empírico se auto-perfecciona continuamente. Esta arquitectura en capas permite que SocialScrum escale desde fundamentos teóricos hasta impacto medible, manteniendo coherencia conceptual en cada nivel.
+Los \gls{feedback-loops} (líneas discontinuas) muestran que el sistema es reflexivo: los resultados exitosos refuerzan los valores que los habilitaron, y el ciclo empírico se auto-perfecciona continuamente. Esta arquitectura en capas permite que SocialScrum escale desde fundamentos teóricos hasta impacto medible, manteniendo coherencia conceptual en cada nivel.
 
 \begin{figure}[p]  % [p] = página completa
     \centering
@@ -1102,8 +1324,8 @@ Los feedback loops (líneas discontinuas) muestran que el sistema es reflexivo: 
     \label{fig:arquitectura_integrada}
 \end{figure}
 
-\textbf{Outcomes y Feedback Sistémico)}
-Los \textit{feedback loops} (líneas discontinuas en la Figura~\ref{fig:arquitectura_integrada_total}) evidencian que el sistema es reflexivo: los resultados positivos retroalimentan los valores y principios que los generaron, haciendo que el ciclo empírico se auto-perfeccione de forma continua.
+\textbf{Resultados y Feedback Sistémico)}
+Los \gls{feedback-loops} (líneas discontinuas en la Figura~\ref{fig:arquitectura_integrada_total}) evidencian que el sistema es reflexivo: los resultados positivos retroalimentan los valores y principios que los generaron, haciendo que el ciclo empírico se auto-perfeccione de forma continua.
 De esta manera, SocialScrum no se limita a un marco operativo, sino que actúa como un sistema adaptativo complejo, capaz de aprender de sí mismo.
 Esta arquitectura en capas permite que el modelo escale coherentemente desde los fundamentos teóricos (motivación, confianza y valores) hasta el impacto medible en la práctica (prevención de \textit{smells}, fortalecimiento de la cohesión, sostenibilidad y bienestar).
 
@@ -1185,6 +1407,35 @@ Esta arquitectura en capas permite que el modelo escale coherentemente desde los
     \caption{Arquitectura integrada del modelo SocialScrum (Capas 2–4)}
     \label{fig:arquitectura_integrada_total}
 \end{figure}
+
+\section{Consideraciones de Escalabilidad y Adaptación}
+
+SocialScrum es un framework diseñado para adaptarse a distintos contextos organizacionales y de equipo.
+Aunque sus principios fundamentales —la Teoría de la Autodeterminación (TAD), la confianza y los valores de Scrum— son universales, su aplicación práctica debe ajustarse a las particularidades de cada entorno.
+
+\subsection{Adaptabilidad a Contextos Diversos}
+
+Las siguientes preguntas sirven como guía para adaptar SocialScrum de forma responsable y contextual:
+
+\begin{enumerate}
+    \item ¿Cuál es el tamaño del equipo? (¿5 personas o 50?)
+    \item ¿Dónde está ubicado el equipo? (¿Co-localizado, híbrido o completamente remoto?)
+    \item ¿Qué nivel de madurez tiene en Scrum? (¿Principiante o experimentado?)
+    \item ¿Cómo es la cultura organizacional? (¿Jerárquica, horizontal o con dinámicas disfuncionales?)
+\end{enumerate}
+
+SocialScrum debe ajustarse a estas variables, buscando mantener su esencia sin imponer estructuras rígidas. Algunos ejemplos prácticos de adaptación incluyen:
+
+\begin{itemize}
+    \item \textbf{Equipo pequeño (5 personas):} el rol de Social Guide puede ser rotativo, dedicando cada miembro un pequeño porcentaje de su tiempo (aproximadamente un 10\%) en lugar de tener una figura exclusiva.
+    \item \textbf{Equipo completamente distribuido:} los \textit{Daily Standups} pueden realizarse de manera asincrónica (por ejemplo, a través de Slack o herramientas similares), reduciendo el \textit{overhead} (sobrecarga) de reuniones sin perder la transparencia diaria.
+    \item \textbf{Organización jerárquica:} es recomendable contar con un patrocinio ejecutivo (CTO o CEO) que respalde al Social Guide y garantice la protección de sus reportes frente a posibles interferencias o presiones jerárquicas.
+    \item \textbf{Cultura organizacional tóxica:} en entornos con altos niveles de desconfianza o comunicación deteriorada, SocialScrum puede no ser viable hasta que se produzca una transformación organizacional previa que restablezca condiciones básicas de respeto y apertura.
+\end{itemize}
+
+\emph{Nota importante:} SocialScrum no es un modelo ``único para todos''.
+Su efectividad depende de una adaptación consciente a la realidad de cada equipo y organización.
+Las consideraciones más detalladas sobre escalabilidad y estrategias de ajuste a distintos contextos se desarrollan en el Capítulo 4, Sección 4.X: \textit{“Escalabilidad y Adaptación de SocialScrum”}.
 
 \section{Conclusiones}
 
