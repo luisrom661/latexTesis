@@ -12,4 +12,818 @@
 
 Este capítulo traslada el modelo teórico de SocialScrum (Capítulo 3) al terreno de la aplicación práctica en equipos ágiles. Se muestra cómo sus componentes adaptados (eventos, artefactos y los roles (como también el rol del \textit{Social Guide}) se materializan en escenarios reales para identificar, priorizar y mitigar la \textit{deuda social} y los \textit{community smells}. Se presentan un proceso operativo
 
+\section{Introducción: aplicación práctica de SocialScrum}
 
+El Capítulo 3 presentó el modelo conceptual de SocialScrum, sus bases teóricas y la arquitectura general del proceso. Allí se explicó cómo la Teoría de la Autodeterminación (TAD), el modelo de Confianza de Mayer et al. y los valores de Scrum convergen para construir un marco empírico que aborda la deuda social con el mismo cuidado que la deuda técnica. Sin embargo, un modelo —por sólido que sea— sigue siendo solo una idea hasta que se convierte en acciones concretas, protocolos claros y herramientas que los equipos puedan usar en su día a día.
+
+Este capítulo busca precisamente cerrar esa brecha: llevar SocialScrum del plano conceptual a la práctica real. Aquí se abordan las preguntas que cualquier equipo se haría antes de adoptarlo: ¿Cómo se implementa en la vida diaria? ¿Qué hace exactamente el Social Guide? ¿Cómo se equilibran los ítems sociales con los técnicos? ¿Cómo se mide el progreso? ¿Y qué garantías existen para evitar que esto termine pareciendo vigilancia organizacional?
+
+Implementar SocialScrum no es tan sencillo como añadir una herramienta al stack de desarrollo. No basta con “instalar” y usar. Gestionar la deuda social implica transformaciones profundas en la cultura, la forma de relacionarse y la manera en que el equipo entiende su propio bienestar. De hecho, una mala implementación puede ser peor que no hacer nada: un Social Guide sin salvaguardas éticas puede convertirse en una figura de control; las métricas sociales mal interpretadas pueden fomentar teatro social; y eventos poco diseñados pueden quitar tiempo sin aportar valor.
+
+Por eso, este capítulo se organiza como un manual práctico y riguroso que combina:
+
+\begin{enumerate}
+    \item \textbf{Protocolos paso a paso}: instrucciones claras para facilitar cada evento, cada conversación y cada decisión de priorización.
+    \item \textbf{Plantillas y artefactos listos para usar}: formatos para Jira, Confluence o Slack, evitando que el equipo tenga que improvisar cómo registrar la deuda social.
+    \item \textbf{Ejemplos contextualizados}: casos reales y escenarios simulados que muestran aciertos, errores frecuentes y cómo resolverlos.
+    \item \textbf{Salvaguardas éticas obligatorias}: principios indispensables para proteger la confidencialidad y la seguridad psicológica, evitando que SocialScrum se distorsione.
+\end{enumerate}
+
+El capítulo sigue un recorrido que refleja la experiencia de un equipo que adopta SocialScrum desde cero:
+
+\textbf{Primero} (Secciones 4.2–4.3), se establece el contexto de adopción: cuándo conviene implementarlo, cuándo es mejor no hacerlo, cómo preparar al equipo y cómo definir el rol del Social Guide. Esta etapa es crítica: sin consentimiento informado y sin claridad sobre las responsabilidades del rol, el modelo nace bajo desconfianza.
+
+\textbf{Segundo} (Secciones 4.4–4.5), se presenta el núcleo operativo: los eventos adaptados y los artefactos sociales. Aquí se detalla cómo se vive SocialScrum en el día a día: desde una pregunta social en el Daily, hasta una retrospectiva social completa. Estos mecanismos permiten que la transparencia, la inspección y la adaptación aterricen sobre las dinámicas humanas.
+
+\textbf{Tercero} (Secciones 4.6–4.8), se explica el sistema de gestión: cómo medir la salud social, cómo priorizar entre lo técnico y lo social, cómo estimar ítems sociales y cómo evitar que el modelo derive en burocracia. En otras palabras: “¿Cómo sabemos que está funcionando?”
+
+\textbf{Cuarto} (Secciones 4.9–4.11), se abordan las salvaguardas, optimizaciones y adaptaciones a distintos contextos. Aquí se describe cómo proteger al equipo de usos indebidos, cómo minimizar carga operacional y cómo adaptar SocialScrum a equipos grandes, pequeños, remotos o co-localizados.
+
+\textbf{Finalmente} (Secciones 4.12–4.13), se integra todo con herramientas tecnológicas y un caso de estudio que muestra SocialScrum en acción durante tres Sprints consecutivos.
+
+A lo largo del capítulo se mantiene un balance entre solidez académica y utilidad práctica. Cada sección incluye:
+
+\begin{itemize}
+    \item \textbf{Fundamento teórico}: conexión explícita con los conceptos del Capítulo 3.
+    \item \textbf{Aplicación concreta}: pasos, plantillas y ejemplos reales de diálogos y decisiones.
+    \item \textbf{Evidencia de viabilidad}: razones por las cuales estas prácticas son sostenibles y realistas.
+\end{itemize}
+
+Es importante resaltar que SocialScrum no es un marco rígido. Las plantillas y protocolos que aquí se presentan son guías, no reglas absolutas. Cada equipo deberá ajustarlos a su cultura y madurez. Sin embargo, hay elementos que no pueden negociarse: las salvaguardas éticas, el principio de no-sobrecarga y la transparencia en los reportes. Son estos pilares los que sostienen su viabilidad ética y operativa.
+
+Al llegar al final de este capítulo, el lector tendrá una visión completa y práctica de cómo implementar SocialScrum en un entorno real, incluyendo:
+
+\begin{itemize}
+    \item Cómo preparar y ejecutar cada evento adaptado.
+    \item Cómo el Social Guide facilita conversaciones difíciles sin convertirse en un “policía social”.
+    \item Cómo equilibrar el valor de negocio, la urgencia técnica y la salud social sin caer en parálisis.
+    \item Cómo medir el avance social con indicadores cualitativos y cuantitativos.
+    \item Cómo proteger al equipo de uso indebido de información sensible.
+    \item Cómo escalar y adaptar el modelo a distintos contextos organizacionales.
+\end{itemize}
+
+El paso del modelo conceptual (Capítulo 3) a su implementación práctica (Capítulo 4) marca la diferencia entre una idea sugerente y una propuesta realmente aplicable. El objetivo de este capítulo es asegurar que SocialScrum no se quede en teoría, sino que pueda convertirse en una herramienta útil, viable y éticamente responsable para equipos que buscan equilibrar rendimiento técnico y bienestar humano en entornos ágiles.
+
+\section{Adopción inicial de SocialScrum}
+
+La adopción de SocialScrum no es un trámite administrativo ni una decisión que la gerencia pueda imponer por sí sola. Es un proceso cuidadoso, consensuado y con un fuerte sustento ético, que requiere preparación, transparencia y un compromiso real tanto del equipo como de la organización. A diferencia de la incorporación de una herramienta técnica —donde basta con capacitarse y configurarla—, SocialScrum implica un cambio cultural mucho más profundo: el equipo debe estar dispuesto a mostrar vulnerabilidades, hablar abiertamente de tensiones y asumir la responsabilidad compartida sobre su propia salud social. Sin esa disposición, cualquier intento de adopción terminará convirtiéndose en teatro social: una apariencia de bienestar sin cambios reales.
+
+Esta sección explica el proceso de adopción inicial, organizado en tres fases: evaluación de los prerequisitos organizacionales, preparación del equipo (Sprint 0) y presentación formal a los stakeholders. Cada fase incluye criterios de éxito concretos y puntos de decisión que permiten detener el proceso si las condiciones aún no están dadas.
+
+\subsection{Pre-requisitos organizacionales}
+
+Antes de empezar la implementación de SocialScrum, es clave verificar si el contexto organizacional realmente cuenta con las condiciones mínimas para sostenerlo. No todos los equipos —ni todas las empresas— están listos para adoptar este modelo, y forzarlo en un entorno inadecuado no solo genera frustración: también puede empeorar los problemas que pretende resolver.
+
+\subsubsection{Condiciones necesarias para la adopción}
+
+SocialScrum exige, como punto de partida, que existan al menos cuatro condiciones organizacionales fundamentales.
+
+\paragraph{1. Compromiso ejecutivo genuino}
+
+El liderazgo técnico (CTO, VP de Ingeniería o roles equivalentes) debe respaldar el modelo de forma clara y explícita. Ese respaldo no puede quedarse en discursos bienintencionados; tiene que verse reflejado en acciones concretas:
+
+\begin{itemize}
+    \item Asignar presupuesto para el rol del Social Guide, incluyendo tiempo protegido y capacitación especializada.
+    \item Aceptar el principio de no-sobrecarga: comprender que SocialScrum puede reducir temporalmente la capacidad técnica del equipo (entre un 10 y un 20\%) mientras se atienden community smells críticos.
+    \item Comprometerse con las salvaguardas éticas: garantizar formalmente que la información recopilada por el Social Guide jamás se usará para evaluaciones de desempeño ni decisiones de empleo.
+    \item Estar dispuesto a intervenir cuando sea necesario: por ejemplo, ajustar la carga de trabajo, aprobar talleres especializados o apoyar la mediación en conflictos organizacionales.
+\end{itemize}
+
+Si este compromiso no existe, el Social Guide quedará sin autoridad moral y sin los recursos necesarios para actuar. Una señal evidente de falta de respaldo es cuando el liderazgo afirma: ``Sí, implementen SocialScrum… pero sin afectar la velocidad ni pedir recursos adicionales''. Eso no es compromiso; es delegar sin ofrecer apoyo real.
+
+\paragraph{2. Cultura organizacional mínimamente saludable}
+
+SocialScrum no es una herramienta de rescate para organizaciones profundamente tóxicas. Si la cultura presenta los siguientes síntomas de manera sistémica, la adopción debe posponerse hasta que ocurra una intervención más profunda a nivel organizacional:
+
+\begin{itemize}
+    \item \textbf{Desconfianza institucionalizada}: la gerencia utiliza información en contra de los empleados de forma recurrente (por ejemplo, convertir comentarios de retrospectivas en sanciones o llamados de atención).
+    \item \textbf{Abuso jerárquico normalizado}: hay patrones evidentes de intimidación, acoso o micro-management destructivo que no tienen consecuencias para quienes los ejercen.
+    \item \textbf{Rotación extrema}: más del 30\% del equipo se va cada año por razones vinculadas al clima laboral (y no por oportunidades de crecimiento o factores de mercado).
+    \item \textbf{Comunicación totalmente fracturada}: la información crítica se oculta deliberadamente entre niveles jerárquicos, generando desinformación constante.
+\end{itemize}
+
+En contextos así, SocialScrum simplemente no puede operar: la seguridad psicológica —la base misma del modelo— no existe. Intentar implementarlo sería como tratar de apagar un incendio con un vaso de agua: no solo es inútil, sino que puede empeorar la situación.
+
+\paragraph{3. Equipo con autonomía técnica y organizacional}
+
+El equipo necesita contar con un nivel mínimo de autonomía para decidir cómo trabaja. SocialScrum depende de esa capacidad de autogestión, porque requiere que el propio equipo pueda:
+
+\begin{itemize}
+    \item Priorizar ítems sociales dentro del Sprint Backlog sin tener que pedir autorización externa.
+    \item Ajustar su capacidad técnica según lo que refleje el Health Score.
+    \item Definir cómo abordar los community smells (por ejemplo, implementar un daily asíncrono, modificar procesos de comunicación o establecer nuevas normas internas).
+\end{itemize}
+
+Si el equipo opera bajo un esquema de comando y control, donde cada decisión pasa por una aprobación gerencial, SocialScrum simplemente no podrá funcionar. La autoorganización no es un extra ni un ideal aspiracional: es un requisito operativo sin el cual el modelo no tiene espacio para florecer.
+
+\paragraph{4. Disponibilidad de un Social Guide calificado}
+
+El rol del Social Guide no puede dejarse ``a la de Dios''. Se necesita una persona con un perfil híbrido poco común: alguien que entienda las dinámicas humanas —psicología organizacional, facilitación, mediación— pero que también conozca cómo funciona el desarrollo de software en la práctica. Si la organización no cuenta con alguien así, o no está dispuesta a formarlo, lo más sensato es esperar antes de adoptar el modelo.
+
+Un error frecuente es asignarle este rol al Scrum Master o al Product Owner. Aunque pueden trabajar de la mano, el Social Guide debe ser una figura independiente para evitar choques de responsabilidades. El Scrum Master se encarga de facilitar el proceso ágil; el Social Guide vela por la salud social del equipo. Son roles que se acompañan, sí, pero no pueden sustituirse entre sí.
+
+\subsubsection{Cuándo \textbf{NO} implementar SocialScrum}
+
+Hay situaciones en las que intentar poner en marcha SocialScrum es más dañino que útil. Los siguientes casos son señales claras de que es mejor detenerse y replantear antes de avanzar:
+
+\begin{enumerate}
+    \item \textbf{Equipo en crisis severa}: cuando el Health Score está por debajo de 3/10, el equipo difícilmente tiene la estabilidad emocional para participar en un proceso de este tipo. En estos casos, lo urgente es estabilizar: reducir carga, buscar apoyo de mediación profesional o incluso considerar cambios de personal.
+
+    \item \textbf{Liderazgo hostil al modelo}: si el CTO o el VP de Ingeniería perciben SocialScrum como ``burocracia'' o ``pérdida de tiempo'', la implementación está destinada al fracaso. Sin respaldo real desde arriba, el Social Guide se convierte en una figura simbólica sin autoridad ni legitimidad.
+
+    \item \textbf{Equipos temporales o en transición}: SocialScrum requiere cierta continuidad (al menos 3–4 Sprints trabajando juntos). Equipos que se forman y se disuelven con frecuencia no alcanzan a generar las relaciones ni la estabilidad que el modelo necesita para operar.
+
+    \item \textbf{Ausencia de salvaguardas éticas}: si la organización no garantiza confidencialidad, separación total frente a evaluaciones de desempeño e independencia del Social Guide respecto a HR, entonces la respuesta es clara: \textbf{NO implementar}. Sin ética, SocialScrum deja de ser una herramienta de bienestar y se convierte en vigilancia disfrazada.
+
+\end{enumerate}
+
+\subsubsection{Evaluación inicial: checklist de viabilidad}
+
+Antes de avanzar con la implementación, el equipo y el liderazgo deben completar la siguiente evaluación. Si más de dos de las primeras seis preguntas reciben una respuesta negativa, lo más prudente es posponer la adopción hasta que las condiciones mejoren:
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabular}{|p{10cm}|c|}
+        \hline
+        \textbf{Criterio}                                                                   & \textbf{Sí/No} \\
+        \hline
+        ¿El liderazgo técnico (CTO/VP Eng) respalda de forma clara SocialScrum?             &                \\
+        \hline
+        ¿La organización puede garantizar la confidencialidad de la información social?     &                \\
+        \hline
+        ¿El equipo tiene autonomía real para priorizar ítems sociales en el Sprint?         &                \\
+        ¿Existe un candidato viable para ejercer como Social Guide?                         &                \\
+        \hline
+        ¿La cultura organizacional permite conversaciones honestas sin temor a represalias? &                \\
+        \hline
+        ¿El equipo cuenta con estabilidad mínima (3 o más Sprints trabajando junto)?        &                \\
+        \hline
+        ¿El Health Score actual es $\geq$ 4/10?                                             &                \\
+        \hline
+        ¿La rotación anual del equipo es menor al 30\%?                                     &                \\
+        \hline
+    \end{tabular}
+    \caption{Checklist de viabilidad para la adopción de SocialScrum}
+    \label{tab:checklist-viabilidad}
+\end{table}
+
+\subsection{Sprint 0: Preparación del equipo}
+
+Cuando los pre-requisitos están claros y validados, el equipo dedica un “Sprint 0” —o una iteración exclusivamente preparatoria— a construir las bases operativas y éticas de SocialScrum. Este no es un Sprint orientado a entregar features. Su propósito es otro: preparar al equipo para trabajar de una forma distinta, más consciente y más humana.
+
+\subsubsection{Actividades del Sprint 0}
+
+El Sprint 0 dura entre 1 y 2 semanas y debe completar cinco actividades clave.
+
+\paragraph{Actividad 1: Capacitación en fundamentos de SocialScrum (4 horas)}
+
+El Social Guide (ya seleccionado) y el Scrum Master facilitan una sesión formativa que cubre:
+
+\begin{itemize}
+    \item Qué es la deuda social y por qué es relevante, con evidencia concreta sobre su impacto.
+    \item Qué son los community smells y cómo suelen manifestarse en el día a día.
+    \item Cómo funciona SocialScrum: roles, eventos adaptados, artefactos y dinámicas centrales.
+    \item Qué \textbf{NO} es SocialScrum: no es evaluación de desempeño, no es vigilancia y no es terapia grupal.
+    \item Salvaguardas éticas esenciales: confidencialidad, separación total frente a evaluaciones y derecho a opt-out.
+\end{itemize}
+
+Esta sesión no debe ser una clase magistral. Es un espacio para conversar abiertamente, donde el equipo pueda hacer preguntas difíciles sin filtro:
+``¿Qué pasa si digo que estoy en burnout? ¿Esto puede afectar mi estabilidad laboral?''
+
+Las respuestas deben ser claras, documentadas y respaldadas por políticas formales de la organización. Allí es donde se empieza a construir la confianza que SocialScrum necesita para funcionar.
+
+\paragraph{Actividad 2: Establecimiento del \textit{baseline} de salud social (2 horas)}
+
+En esta etapa, el Social Guide realiza la primera medición del Health Score para definir un punto de partida claro. Esta evaluación incluye tres componentes:
+
+\begin{enumerate}
+    \item Una encuesta anónima sobre los cinco valores de Scrum (Apertura, Compromiso, Respeto, Foco y Coraje), calificados en una escala de 1 a 10.
+    \item Entrevistas 1:1 opcionales para quienes quieran compartir contexto adicional o experiencias que no se sienten cómodos expresando en grupo.
+    \item Una identificación preliminar de community smells a partir de observación directa: patrones de comunicación en Slack, interacciones en GitHub, dinámicas en Jira, etc.
+\end{enumerate}
+
+El resultado de esta actividad es un Health Score inicial (por ejemplo, 5.8/10) acompañado de una lista preliminar de smells activos. Este punto de referencia será clave para comparar avances en los próximos Sprints y para entender cómo evoluciona la salud social del equipo a lo largo del tiempo.
+
+\paragraph{Actividad 3: Firma de acuerdos de consentimiento informado (1 hora)}
+
+En este punto, cada integrante del equipo firma dos documentos fundamentales:
+
+\begin{enumerate}
+    \item \textbf{Acuerdo de Confidencialidad del Social Guide}: aquí, el Social Guide declara formalmente que no compartirá información individual, que solo reportará datos agregados y que su prioridad será proteger la seguridad psicológica del equipo.
+
+    \item \textbf{Consentimiento Informado del Equipo}: cada persona confirma que entiende qué es SocialScrum, qué tipo de información se va a recopilar, cómo será utilizada y cuáles son sus derechos —incluyendo la opción de retirarse del proceso en cualquier momento.
+
+\end{enumerate}
+
+Si menos del 70\% del equipo firma el consentimiento, SocialScrum no debe implementarse. Este umbral garantiza que exista un apoyo mayoritario real y evita que una minoría presione a una mayoría que no está convencida.
+
+\emph{Nota}: Las plantillas completas de ambos acuerdos se encuentran en los \textbf{Anexos A y B} de este documento.
+
+\paragraph{Actividad 4: Configuración de herramientas y artefactos (3 horas)}
+
+En esta actividad, el equipo deja lista toda la infraestructura operativa que permitirá que SocialScrum funcione de manera consistente y transparente. Esto incluye:
+
+\begin{itemize}
+    \item Crear el \textbf{Product Backlog Social} en Jira (o una herramienta equivalente), incorporando campos personalizados como: Story Points Sociales (SPS), tipo de Community Smell e impacto en la salud del equipo (Health Impact).
+    \item Configurar un \textbf{Dashboard de Health Score} en Confluence o en la herramienta de visualización que use la organización.
+    \item Establecer el \textbf{Registro de Community Smells}: un documento vivo donde se registre el historial de smells identificados, su evolución y las acciones tomadas para mitigarlos.
+    \item Crear plantillas para \textbf{User Stories Sociales} y para reportes de retrospectivas sociales, de modo que el equipo tenga formatos claros y consistentes desde el primer día.
+\end{itemize}
+
+Esta configuración asegura que SocialScrum no dependa de la memoria del equipo ni de procesos informales. Todo debe quedar documentado, accesible y visible para garantizar transparencia y trazabilidad.
+
+\paragraph{Actividad 5: Primera retrospectiva social simulada (2 horas)}
+
+Para que el equipo se familiarice con el proceso, se realiza una retrospectiva social “en seco”, es decir, sin la presión de estar en pleno Sprint o de tener que entregar resultados inmediatos. El Social Guide guía las cuatro fases del evento —presentación de métricas, análisis de smells, diseño de experimentos y priorización de acciones— utilizando el baseline inicial como referencia.
+
+El propósito de esta sesión no es empezar a resolver problemas reales, sino practicar el protocolo: aprender a hablar de temas sociales sin culpa ni señalamientos, ensayar cómo proponer acciones de mejora y entender cómo comprometerse de manera respetuosa y segura para todos.
+
+\subsubsection{Criterios de éxito del Sprint 0}
+
+El Sprint 0 se considera exitoso cuando se cumplen los siguientes puntos:
+
+\begin{itemize}
+    \item Al menos el 70\% del equipo firmó el consentimiento informado.
+    \item Se logró establecer un Health Score baseline con la participación de todos los miembros.
+    \item Los artefactos operativos quedaron configurados, documentados y disponibles para el equipo.
+    \item El equipo tiene claridad sobre qué es SocialScrum y, sobre todo, qué \textbf{no} es.
+    \item Se identificó al menos un community smell activo para trabajar durante el primer Sprint real.
+\end{itemize}
+
+Si alguno de estos criterios no se cumple, el equipo debe considerar extender el Sprint 0 para cerrar los vacíos pendientes. En situaciones más complejas, puede ser necesario reevaluar si este es realmente el momento adecuado para implementar SocialScrum.
+
+\subsection{Presentación al equipo y \textit{stakeholders}}
+
+Cuando el Sprint 0 llega a su cierre, el Social Guide y el Scrum Master realizan una presentación formal dirigida a los stakeholders clave: el Product Owner, otros equipos con los que se interactúa, la gerencia técnica y, cuando sea relevante, Recursos Humanos (únicamente para informar, no para delegar autoridad ni acceso a información).
+
+\subsubsection{Objetivos de la presentación}
+
+Esta presentación cumple tres propósitos centrales:
+
+\begin{enumerate}
+    \item \textbf{Transparencia}: explicar de manera clara qué es SocialScrum, por qué el equipo decidió adoptarlo y cómo se integrará en el trabajo del día a día.
+
+    \item \textbf{Gestión de expectativas}: dejar explícito que SocialScrum puede generar una reducción temporal en la velocidad técnica (aproximadamente entre el 10 y el 20\%), especialmente mientras se atienden community smells críticos. Esta disminución no es un fallo del proceso, sino una inversión para mejorar el rendimiento y la salud del equipo en el mediano y largo plazo.
+
+    \item \textbf{Compromiso mutuo}: solicitar y asegurar el respaldo del liderazgo, tanto en recursos (tiempo, presupuesto, capacitación) como en decisiones operativas (ajustes de carga, priorización de acciones sociales, intervención cuando sea necesaria).
+\end{enumerate}
+
+\subsubsection{Estructura de la presentación (45 minutos)}
+
+La presentación sigue una estructura sencilla y directa que permite contextualizar, alinear expectativas y asegurar el apoyo necesario.
+
+\paragraph{1. Contexto y justificación (10 min)}
+
+En este primer bloque, se comparte evidencia clara sobre por qué SocialScrum es pertinente en este momento. La idea es mostrar que no se trata de una moda ni de una iniciativa improvisada, sino de una respuesta informada a problemas reales.
+
+\begin{itemize}
+    \item \textbf{Datos propios del equipo (si existen)}: cifras de rotación, fluctuaciones notorias en la velocidad, picos de defectos que coinciden con periodos de tensión, o cualquier patrón que muestre impacto de la dinámica social en el rendimiento técnico.
+
+    \item \textbf{Evidencia investigativa}: estudios que han documentado cómo la salud social influye en la productividad y la calidad del software \cite{tamburri2013socialdebt, saeeda2024nontechnicaldebt}. Estas referencias ayudan a mostrar que la deuda social no es un concepto abstracto, sino un fenómeno medido y reconocido.
+\end{itemize}
+
+Este segmento busca que todos entiendan el ``por qué'' antes del ``cómo'': sin un motivo claro, cualquier cambio de proceso se siente impuesto; con la evidencia a la vista, se entiende como una necesidad real y oportuna.
+
+\paragraph{2. Explicación del modelo (15 min)}
+
+En este segmento se presenta SocialScrum de manera práctica, mostrando cómo funciona en el día a día. El objetivo es que los stakeholders entiendan el modelo sin tecnicismos innecesarios, visualizando claramente qué cambia y qué se mantiene igual.
+
+\begin{itemize}
+    \item \textbf{Roles}: se explica qué hace el Social Guide en el trabajo cotidiano, cómo se coordina con el Scrum Master y cuál es el papel del Product Owner dentro del proceso. La idea es mostrar que cada rol aporta algo distinto y complementario.
+
+    \item \textbf{Eventos adaptados}: se describe cómo se integran los elementos sociales en los eventos ya existentes —Daily, Planning, Review y Retrospective— sin alterar su esencia. El enfoque está en cómo estos espacios se vuelven más sensibles a la dinámica humana del equipo.
+
+    \item \textbf{Artefactos}: se introducen los elementos nuevos del proceso, como el Product Backlog Social, el Health Score y el Registro de Smells, mostrando cómo cada uno ayuda a documentar y gestionar la deuda social con rigor y trazabilidad.
+\end{itemize}
+
+Un punto crucial de esta parte es enfatizar que \textbf{SocialScrum NO agrega reuniones nuevas}. Todo se integra a los eventos que ya existen. Este es el corazón del Principio de No-Sobrecarga: mejorar la salud social sin aumentar el peso operativo del equipo.
+
+\paragraph{3. Salvaguardas éticas (10 min)}
+
+En esta parte de la presentación se explican, de forma clara y sin ambigüedades, las protecciones que hacen que SocialScrum sea un proceso seguro y no una herramienta de vigilancia. El propósito es desactivar cualquier temor o malentendido antes de que aparezca.
+
+\begin{itemize}
+    \item \textbf{Confidencialidad absoluta de información individual}: nada de lo que diga una persona será compartido fuera del equipo si puede identificarla directa o indirectamente.
+
+    \item \textbf{Separación total entre el Health Score y las evaluaciones de desempeño}: los datos sociales jamás se usarán para medir rendimiento individual, decidir ascensos, despidos o salarios.
+
+    \item \textbf{Estructura de reporte clara}: el Social Guide reporta únicamente al CTO o al Scrum Master.
+          Recursos Humanos no tiene acceso a información social, salvo en las excepciones legales previamente establecidas.
+
+    \item \textbf{Derecho de auditoría del equipo}: cualquier reporte que vaya a salir del equipo debe ser revisado primero por sus integrantes. Si algo vulnera la confidencialidad, pueden pedir ajustes o bloquear el envío.
+\end{itemize}
+
+Esta parte de la presentación es esencial. Muchos \textit{stakeholders} podrían ver SocialScrum como algo invasivo si no comprenden bien estas salvaguardas. Aclararlas con calma y transparencia ayuda a construir confianza desde el primer día.
+
+\paragraph{4. Plan de implementación y métricas de éxito (10 min)}
+
+Aquí se comparte el plan de trabajo para los próximos tres Sprints, mostrando cómo será la adopción en la práctica y qué espera ver la organización durante este periodo inicial.
+
+\begin{itemize}
+    \item \textbf{Sprint 1}: puesta en marcha del modelo, trabajando sobre un smell de baja complejidad para aprender el proceso sin generar sobrecarga.
+    \item \textbf{Sprint 2}: ajustes y mejoras basadas en lo aprendido durante el Sprint 1; aquí el equipo refina su manera de aplicar SocialScrum.
+    \item \textbf{Sprint 3}: evaluación formal de efectividad, comparando el Health Score inicial con el actual y revisando avances en los smells priorizados.
+\end{itemize}
+
+También se definen las métricas de éxito que permitirán evaluar si la implementación va por buen camino:
+
+\begin{itemize}
+    \item El Health Score aumenta al menos en 1 punto después de tres Sprints.
+    \item Se logra mitigar parcialmente al menos un community smell crítico.
+    \item La velocity no cae más del 20\% en el proceso de adopción y muestra señales de recuperación en el Sprint 3.
+\end{itemize}
+
+\subsubsection{Gestión de objeciones comunes}
+
+Durante la presentación es normal que aparezcan dudas o resistencias. El Social Guide debe responder con calma, honestidad y sin defensividad. Algunas de las objeciones más frecuentes son:
+
+\begin{itemize}
+    \item \textbf{``¿Esto no va a quitar tiempo de desarrollo?''}
+          → Sí, en el corto plazo. Pero la deuda social ya está consumiendo tiempo en otras formas: retrabajo, conflictos, comunicación rota, rotación del equipo.
+          SocialScrum simplemente vuelve visible ese costo y propone una forma estructurada de reducirlo.
+
+    \item \textbf{``¿No es esto responsabilidad de HR?''}
+          → No. Recursos Humanos se enfoca en políticas laborales, contratación y aspectos formales del empleo.
+          SocialScrum se ocupa de las dinámicas operativas del equipo: cómo colaboramos, cómo nos comunicamos y cómo nos afecta la carga socio-técnica del día a día.
+          Son esfuerzos complementarios, pero no se superponen.
+
+    \item \textbf{``¿Qué pasa si el equipo no quiere participar?''}
+          → Entonces no se implementa. SocialScrum solo funciona cuando hay consentimiento real, no presión.
+          El umbral mínimo es del 70\% del equipo. Si no se alcanza, se suspende o se pospone hasta que existan las condiciones adecuadas.
+\end{itemize}
+
+\subsubsection{Documentación post-presentación}
+
+Después de la presentación, el Social Guide deja todo bien organizado y visible para el equipo. Para eso publica un documento formal que contiene:
+
+\begin{itemize}
+    \item Un resumen ejecutivo de SocialScrum (máximo una página, claro y directo).
+    \item La política de confidencialidad firmada por el CTO.
+    \item El plan de implementación para los próximos tres Sprints.
+    \item Los datos de contacto del Social Guide para dudas, inquietudes o comentarios —así, cualquier persona del equipo puede escribirle sin rodeos.
+\end{itemize}
+
+Este documento queda disponible en  la herramienta que use la organización para que todas las personas del equipo y los stakeholders lo puedan consultar cuando lo necesiten. Nada escondido, nada de puertas cerradas: todo transparente, como debe ser.
+
+La adopción inicial de SocialScrum no es un evento de una sola vez. Es un proceso que se construye paso a paso, con intención y cuidado. Cuando se hace sin la preparación adecuada, el modelo puede sentirse como una imposición o, peor aún, como una amenaza. Pero cuando se implementa con claridad, respeto y buena comunicación, SocialScrum se integra de manera natural en la cultura del equipo. Desde el primer día se empieza a sembrar confianza, y eso abre el camino para una gestión sostenible de la salud social a largo plazo —esa que, a la larga, marca la diferencia en cómo trabaja y se siente un equipo.
+
+\section{El rol del Social Guide: Perfil, competencias y gobernanza}
+
+El Social Guide es la figura central y más distintiva de SocialScrum. Sin este rol, el modelo se reduce a Scrum estándar con buenas intenciones pero sin mecanismos concretos para gestionar la deuda social. Sin embargo, la creación de este rol también introduce riesgos significativos: si no se define correctamente, el Social Guide puede convertirse en un ``policía social'' que inhibe la comunicación honesta, en un ``terapeuta improvisado'' que sobrepasa sus competencias, o en un ``informante organizacional'' que destruye la seguridad psicológica que debería proteger.
+
+Esta sección establece con claridad qué es (y qué no es) el Social Guide, qué competencias requiere, cómo se selecciona y capacita, y cuál es su estructura de reporte y rendición de cuentas. La definición rigurosa de este rol es fundamental para la viabilidad ética y operativa de SocialScrum.
+
+\subsection{Perfil y competencias requeridas}
+
+El Social Guide requiere un perfil híbrido poco común: debe combinar comprensión profunda de dinámicas humanas con conocimiento técnico del desarrollo de software. No es suficiente ser un experto en psicología organizacional sin entender cómo funciona un equipo ágil, ni es suficiente ser un Scrum Master experimentado sin formación en facilitación de conflictos y dinámicas de grupo.
+
+\subsubsection{Perfil profesional ideal}
+
+El candidato ideal para el rol de Social Guide reúne las siguientes características:
+
+\paragraph{Formación académica y profesional}
+
+\begin{itemize}
+    \item \textbf{Formación base}: Licenciatura en Psicología Organizacional, Trabajo Social, Ciencias de la Comunicación o Ingeniería de Sistemas con especialización en gestión de equipos.
+    \item \textbf{Formación complementaria}: Certificación en facilitación de grupos, mediación de conflictos o coaching profesional (certificación ICF o equivalente). Deseable: formación en metodologías ágiles (Certified Scrum Master, Professional Scrum Master o similar).
+    \item \textbf{Experiencia profesional}: Mínimo 3 años trabajando en equipos de desarrollo de software, ya sea como desarrollador, Scrum Master, Product Owner o en roles de People Operations enfocados en equipos técnicos.
+\end{itemize}
+
+Este perfil garantiza que el Social Guide entiende tanto el lenguaje técnico del equipo (``¿qué es un pull request?'', ``¿qué significa code review?'') como los marcos conceptuales necesarios para analizar dinámicas humanas (``¿qué es un conflicto de rol?'', ``¿cómo se construye confianza?'').
+
+\paragraph{Competencias técnicas (hard skills)}
+
+El Social Guide debe dominar las siguientes competencias técnicas:
+
+\begin{enumerate}
+    \item \textbf{Análisis de redes sociales (SNA)}: Capacidad para interpretar métricas de comunicación, identificar cuellos de botella, detectar aislamiento o centralización excesiva. Uso de herramientas como Gephi, NodeXL o análisis de datos de Slack/GitHub.
+
+    \item \textbf{Aplicación de instrumentos psicométricos}: Conocimiento de escalas validadas para medir cohesión grupal, burnout, seguridad psicológica y satisfacción laboral. Capacidad para administrar, analizar e interpretar resultados.
+
+    \item \textbf{Análisis cualitativo}: Técnicas de entrevista semi-estructurada, análisis de discurso, identificación de patrones narrativos en retrospectivas o conversaciones de equipo.
+
+    \item \textbf{Facilitación de retrospectivas}: Dominio de técnicas de facilitación (círculos de diálogo, 5 Whys, Fishbone, Sailboat, etc.) aplicadas específicamente a temas sociales y relacionales.
+
+    \item \textbf{Mediación de conflictos}: Técnicas de mediación transformativa o facilitativa (no arbitraje), manejo de conversaciones difíciles, comunicación no violenta (CNV).
+
+    \item \textbf{Conocimiento de Scrum y desarrollo ágil}: Comprensión profunda de roles, eventos, artefactos y valores de Scrum. Familiaridad con el ciclo de vida del desarrollo de software, prácticas técnicas (CI/CD, code review, pair programming) y herramientas comunes (Jira, Confluence, Slack, GitHub).
+\end{enumerate}
+
+\paragraph{Competencias interpersonales (soft skills)}
+
+Más allá de las competencias técnicas, el Social Guide debe poseer cualidades personales específicas:
+
+\begin{enumerate}
+    \item \textbf{Neutralidad emocional}: Capacidad para escuchar sin juzgar, para facilitar sin imponer su propia agenda. El Social Guide no toma partido en conflictos, no evalúa quién tiene razón, sino que ayuda al equipo a encontrar soluciones.
+
+    \item \textbf{Empatía calibrada}: Empatía suficiente para conectar con el equipo, pero no tanta que pierda objetividad. El Social Guide no es terapeuta; su función no es contener emocionalmente a individuos, sino facilitar la resolución colectiva de problemas.
+
+    \item \textbf{Coraje profesional}: Disposición para abordar temas incómodos, para señalar comportamientos disfuncionales (incluso de líderes), para decir verdades difíciles cuando sea necesario. Sin coraje, el Social Guide se vuelve irrelevante.
+
+    \item \textbf{Integridad ética}: Compromiso inquebrantable con la confidencialidad, la honestidad y las salvaguardas éticas del modelo. Si el equipo percibe que el Social Guide compromete su integridad (por ejemplo, reportando información confidencial a gerencia), la confianza colapsa irreversiblemente.
+
+    \item \textbf{Humildad intelectual}: Reconocimiento de los límites de su conocimiento y disposición para derivar casos que excedan su competencia (por ejemplo, problemas de salud mental severos que requieren intervención de psicólogos clínicos).
+\end{enumerate}
+
+\subsubsection{Qué NO es el Social Guide}
+
+Para evitar malentendidos y expectativas incorrectas, es fundamental aclarar qué funciones NO corresponden al Social Guide:
+
+\begin{itemize}
+    \item \textbf{No es un psicólogo clínico}: No diagnostica trastornos mentales, no ofrece terapia individual, no trata problemas de salud mental. Si detecta señales de depresión, ansiedad o burnout severo, deriva a profesionales de salud mental.
+
+    \item \textbf{No es un evaluador de desempeño}: No califica el trabajo individual de los miembros del equipo, no participa en decisiones de promoción o despido, no reporta a recursos humanos información sobre personas específicas.
+
+    \item \textbf{No es un ``policía social''}: No sanciona comportamientos, no impone normas unilateralmente, no actúa como juez en conflictos. Su rol es facilitar que el equipo encuentre sus propias soluciones.
+
+    \item \textbf{No reemplaza al Scrum Master}: El Scrum Master facilita el proceso ágil; el Social Guide facilita la salud social. Son roles complementarios, no intercambiables. El Scrum Master sigue siendo responsable de eliminar impedimentos técnicos y organizacionales; el Social Guide se enfoca en impedimentos relacionales y emocionales.
+
+    \item \textbf{No es un ``amigo'' del equipo}: Mantiene una relación profesional, no personal. La cercanía emocional excesiva compromete su neutralidad y efectividad.
+\end{itemize}
+
+\subsection{Proceso de selección y capacitación}
+
+La selección del Social Guide no puede ser improvisada. Requiere un proceso estructurado que evalúe tanto competencias técnicas como ajuste cultural y ético.
+
+\subsubsection{Proceso de selección (3-4 semanas)}
+
+El proceso de selección consta de cinco fases:
+
+\paragraph{Fase 1: Identificación de candidatos (1 semana)}
+
+Se buscan candidatos internos o externos que cumplan el perfil profesional. Las fuentes incluyen:
+
+\begin{itemize}
+    \item Scrum Masters con formación en psicología organizacional o facilitación avanzada.
+    \item Profesionales de People Operations con experiencia en equipos técnicos.
+    \item Desarrolladores senior con interés y formación en dinámicas humanas.
+    \item Consultores externos especializados en salud organizacional y metodologías ágiles.
+\end{itemize}
+
+\paragraph{Fase 2: Evaluación técnica (1 semana)}
+
+Los candidatos completan:
+
+\begin{enumerate}
+    \item \textbf{Caso práctico de análisis de community smells}: Se les presenta un escenario ficticio con datos de comunicación del equipo (logs de Slack, GitHub, Jira) y deben identificar smells activos, proponer hipótesis de causa raíz y diseñar intervenciones.
+
+    \item \textbf{Facilitación de retrospectiva simulada}: Deben facilitar una retrospectiva social de 30 minutos con un equipo simulado que presenta conflictos (actores que representan roles específicos). Se evalúa su capacidad para mantener neutralidad, manejar resistencia y generar acciones concretas.
+
+    \item \textbf{Entrevista técnica sobre marcos teóricos}: Se valida su comprensión de TAD, modelo de confianza de Mayer, valores de Scrum y literatura sobre community smells.
+\end{enumerate}
+
+\paragraph{Fase 3: Evaluación de ajuste cultural y ético (1 semana)}
+
+El candidato es entrevistado por:
+
+\begin{itemize}
+    \item El Scrum Master del equipo (evalúa capacidad de colaboración).
+    \item Dos miembros del Development Team (evalúan si genera confianza).
+    \item El CTO o VP de Ingeniería (evalúa alineación con valores organizacionales).
+\end{itemize}
+
+Se exploran preguntas éticas críticas:
+
+\begin{itemize}
+    \item ``¿Qué harías si el CTO te pide información confidencial sobre un miembro del equipo?''
+    \item ``¿Cómo manejarías un conflicto donde un desarrollador senior intimida a un junior?''
+    \item ``¿Qué harías si detectas que un miembro del equipo tiene signos de depresión severa?''
+\end{itemize}
+
+Las respuestas deben demostrar claridad ética, conocimiento de límites profesionales y compromiso con las salvaguardas de SocialScrum.
+
+\paragraph{Fase 4: Decisión consensuada}
+
+La decisión final requiere consenso entre:
+
+\begin{itemize}
+    \item Scrum Master: ``¿Puedo trabajar con esta persona?''
+    \item Development Team (mayoría): ``¿Confiamos en esta persona?''
+    \item CTO/VP Ingeniería: ``¿Esta persona tiene la autoridad moral y profesional necesaria?''
+\end{itemize}
+
+Si no hay consenso, se busca otro candidato. El Social Guide debe ser aceptado por el equipo; imponerlo desde arriba garantiza el fracaso.
+
+\paragraph{Fase 5: Período de prueba (3 Sprints)}
+
+El candidato seleccionado inicia un período de prueba de 3 Sprints donde:
+
+\begin{itemize}
+    \item Facilita retrospectivas sociales bajo supervisión del Scrum Master.
+    \item Recibe feedback continuo del equipo.
+    \item Participa en capacitación complementaria si es necesaria.
+\end{itemize}
+
+Al final del período, el equipo vota (anónimamente) si el candidato debe continuar. Se requiere $\geq$ 70\% de aprobación.
+
+\subsubsection{Programa de capacitación inicial (40 horas)}
+
+Antes de asumir el rol completamente, el Social Guide completa un programa de capacitación estructurado en cuatro módulos:
+
+\paragraph{Módulo 1: Fundamentos teóricos de SocialScrum (8 horas)}
+
+\begin{itemize}
+    \item Teoría de la Autodeterminación (TAD): necesidades de autonomía, competencia, relacionalidad.
+    \item Modelo de Confianza de Mayer et al.: habilidad, benevolencia, integridad.
+    \item Community smells: taxonomía de Caballero-Espinosa, manifestaciones, causas raíz.
+    \item Valores de Scrum aplicados a deuda social.
+    \item Evidencia empírica: estudios sobre impacto de deuda social en productividad y calidad.
+\end{itemize}
+
+\paragraph{Módulo 2: Técnicas de facilitación y mediación (12 horas)}
+
+\begin{itemize}
+    \item Facilitación de retrospectivas sociales: protocolo completo, manejo de resistencias.
+    \item Mediación de conflictos: técnicas transformativas, comunicación no violenta (CNV).
+    \item Manejo de conversaciones difíciles: feedback constructivo, confrontación compasiva.
+    \item Técnicas de escucha activa y preguntas poderosas.
+\end{itemize}
+
+\paragraph{Módulo 3: Herramientas de medición y análisis (8 horas)}
+
+\begin{itemize}
+    \item Aplicación e interpretación de escalas psicométricas (Health Score, burnout, seguridad psicológica).
+    \item Análisis de redes sociales (SNA): métricas, visualización, interpretación.
+    \item Análisis cualitativo de retrospectivas: identificación de patrones, codificación temática.
+\end{itemize}
+
+\paragraph{Módulo 4: Ética y salvaguardas (12 horas)}
+
+\begin{itemize}
+    \item Confidencialidad absoluta: qué es confidencial, qué es reportable, protocolo de manejo de solicitudes de información.
+    \item Límites profesionales: cuándo derivar a psicólogos clínicos, cuándo escalar a CTO.
+    \item Prevención de teatro social: cómo detectar simulación de bienestar.
+    \item Protocolo de auditoría: cómo documentar intervenciones, cómo responder a auditorías.
+    \item Casos éticos complejos: análisis de escenarios reales.
+\end{itemize}
+
+\subsection{Estructura de reporte y rendición de cuentas}
+
+La estructura de reporte del Social Guide es crítica para garantizar que el rol funcione éticamente y sin conflictos de interés. La regla fundamental es:
+
+\begin{center}
+    \textbf{El Social Guide NUNCA reporta a Recursos Humanos (HR).}
+\end{center}
+
+Esta separación no es opcional; es un requisito ético no negociable. HR gestiona evaluaciones de desempeño, contrataciones y despidos. Si el Social Guide reporta a HR, cualquier información que maneje puede convertirse en ``evidencia'' para decisiones laborales, destruyendo instantáneamente la seguridad psicológica del equipo.
+
+\subsubsection{Estructura organizacional recomendada}
+
+La estructura de reporte óptima es:
+
+\begin{verbatim}
+CEO
+ |
+ +--- CTO / VP Engineering
+ |     |
+ |     +--- Scrum Master
+ |     |     |
+ |     |     +--- Social Guide <- REPORTA AQUI
+ |     |
+ |     +--- Product Owner
+ |
+ +--- CHRO / VP Recursos Humanos
+       |
+       +--- NO tiene autoridad sobre Social Guide
+            NO recibe reportes individuales
+\end{verbatim}
+
+\textbf{Justificación de esta estructura:}
+
+\begin{itemize}
+    \item \textbf{Alineación de objetivos}: El CTO y el Scrum Master buscan equipos sanos y productivos. El Social Guide tiene el mismo objetivo. Hay alineación natural.
+    \item \textbf{Protección de confidencialidad}: Al estar fuera de la estructura de HR, la información del Social Guide se trata como ``datos operacionales'' (similar a métricas técnicas), no como ``datos de personal''.
+    \item \textbf{Autoridad moral}: El equipo confía en que el Social Guide no reporta a quien toma decisiones de empleo.
+\end{itemize}
+
+\subsubsection{Protocolo de reporte}
+
+El Social Guide genera dos tipos de reportes:
+
+\paragraph{Reportes internos al equipo (cada Sprint)}
+
+Estos reportes son completamente transparentes y accesibles para el equipo:
+
+\begin{itemize}
+    \item Dashboard de Health Score actualizado semanalmente.
+    \item Registro de community smells: cuáles están activos, cuáles se mitigaron, cuáles son nuevos.
+    \item Resumen de acciones sociales completadas en el Sprint.
+    \item Propuesta de items sociales para el próximo Sprint.
+\end{itemize}
+
+Estos reportes NO contienen información individual identificable. Si es necesario mencionar un caso específico (por ejemplo, ``se realizó mediación entre dos desarrolladores''), se anonimiza: ``Desarrollador A'' y ``Desarrollador B'', sin nombres reales.
+
+\paragraph{Reportes a liderazgo técnico (mensual)}
+
+Una vez al mes, el Social Guide envía un reporte ejecutivo al CTO/VP de Ingeniería y al Scrum Master:
+
+\begin{itemize}
+    \item Health Score promedio del mes y tendencia (mejorando/empeorando/estable).
+    \item Community smells críticos (severidad alta) que requieren atención organizacional.
+    \item Solicitudes de recursos: por ejemplo, ``se requiere taller especializado de mediación de conflictos, presupuesto estimado: X horas''.
+    \item Correlación entre Health Score y métricas técnicas (velocity, defects, code review time).
+\end{itemize}
+
+Este reporte es \textbf{agregado y anónimo}. No identifica personas. Por ejemplo:
+
+\begin{itemize}
+    \item Correcto: ``El equipo presenta un community smell activo: Radio Silence. La comunicación centralizada en el Scrum Master genera cuellos de botella. Se recomienda implementar comunicación asincrónica.''
+    \item Incorrecto: ``María no participa en las retrospectivas. Pedro domina las conversaciones. Esto genera tensión.''
+\end{itemize}
+
+\subsubsection{Qué hacer si HR solicita información}
+
+Es inevitable que, en algún momento, recursos humanos solicite información del Social Guide. El protocolo es:
+
+\begin{enumerate}
+    \item \textbf{Social Guide rechaza la solicitud inmediatamente}, sin proporcionar ninguna información.
+
+    \item \textbf{Social Guide informa al Scrum Master y al CTO} de la solicitud.
+
+    \item \textbf{CTO/Scrum Master evalúan si hay justificación legal}: por ejemplo, investigación formal de acoso laboral donde la información del Social Guide es pertinente.
+
+    \item Si hay justificación legal:
+          \begin{itemize}
+              \item Social Guide proporciona SOLO la información estrictamente relevante.
+              \item Requiere consentimiento explícito del afectado si es posible.
+              \item Documenta formalmente qué información compartió y por qué.
+          \end{itemize}
+
+    \item Si NO hay justificación legal:
+          \begin{itemize}
+              \item CTO responde a HR: ``La información del Social Guide está protegida por confidencialidad de SocialScrum. No puede compartirse.''
+          \end{itemize}
+\end{enumerate}
+
+\subsubsection{Rendición de cuentas y auditoría}
+
+El Social Guide no opera sin supervisión. Está sujeto a dos mecanismos de rendición de cuentas:
+
+\paragraph{1. Auditoría semestral por auditor independiente}
+
+Cada 6 meses, un auditor externo (sin conflicto de interés) evalúa si el Social Guide cumple los principios éticos de SocialScrum. El auditor:
+
+\begin{itemize}
+    \item Entrevista anónimamente al 100\% del equipo: ``¿Sientes que tu información es confidencial?'', ``¿El Social Guide ha usado información en tu contra?''
+    \item Revisa todos los reportes generados: busca evidencia de reportes ``secretos'' o violaciones de confidencialidad.
+    \item Emite un reporte público (visible para el equipo) con hallazgos y recomendaciones.
+\end{itemize}
+
+Si el auditor detecta violaciones éticas confirmadas, el Social Guide es removido inmediatamente del rol.
+
+\paragraph{2. Feedback continuo del equipo}
+
+Al final de cada Sprint, el equipo completa una encuesta anónima breve (2 minutos):
+
+\begin{itemize}
+    \item ``¿El Social Guide respetó la confidencialidad esta Sprint?'' (Sí/No)
+    \item ``¿Te sientes seguro para compartir problemas sociales en retrospectivas?'' (1-10)
+    \item ``¿El Social Guide fue neutral y no impuso su agenda?'' (Sí/No)
+\end{itemize}
+
+Si las respuestas son consistentemente negativas (más de 2 Sprints consecutivos con $<$ 60\% de aprobación), el CTO inicia una revisión formal del desempeño del Social Guide.
+
+\subsubsection{Dedicación del rol: tiempo parcial vs. tiempo completo}
+
+La dedicación del Social Guide depende del tamaño y complejidad del equipo:
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        \textbf{Tamaño del equipo} & \textbf{Health Score} & \textbf{Dedicación} & \textbf{Modelo}        \\
+        \hline
+        5-7 personas               & $\geq$ 7/10           & 10-20\%             & Rol rotativo o parcial \\
+        \hline
+        5-7 personas               & $<$ 7/10              & 30-40\%             & Rol parcial dedicado   \\
+        \hline
+        8-15 personas              & $\geq$ 7/10           & 30-40\%             & Rol parcial dedicado   \\
+        \hline
+        8-15 personas              & $<$ 7/10              & 50-70\%             & Rol casi completo      \\
+        \hline
+        16+ personas               & Cualquiera            & 80-100\%            & Rol tiempo completo    \\
+        \hline
+        Múltiples equipos          & Cualquiera            & 100\%               & Dedicado a 2-3 equipos \\
+        \hline
+    \end{tabular}
+    \caption{Dedicación del Social Guide según contexto}
+    \label{tab:dedicacion-social-guide}
+\end{table}
+
+\textbf{Consideración práctica}: En equipos pequeños con buena salud social, el rol puede ser rotativo (cada miembro del equipo asume el rol por 2-3 Sprints). Esto tiene ventajas (todos aprenden perspectiva social, bajo costo) y desventajas (menor especialización, menor continuidad). En equipos medianos o con Health Score bajo, se requiere un Social Guide dedicado con formación especializada.
+
+\subsubsection{Compensación y carrera profesional}
+
+El rol del Social Guide debe reconocerse formalmente en la estructura organizacional:
+
+\begin{itemize}
+    \item \textbf{Título formal}: ``Social Guide'' o ``Facilitador de Salud Social'' (no ``Agile Coach'' genérico, que genera ambigüedad).
+    \item \textbf{Compensación}: Equivalente a Scrum Master senior o líder técnico, reflejando la especialización y responsabilidad del rol.
+    \item \textbf{Carrera profesional}: Posibilidad de crecimiento hacia roles como ``Head of Team Health'', ``Director of Engineering Culture'' o ``Agile Coach con especialización en salud organizacional''.
+\end{itemize}
+
+Sin reconocimiento formal y compensación adecuada, el rol se percibe como ``carga adicional'' sin valor, reduciendo el interés de profesionales calificados.
+
+El rol del Social Guide es complejo, exigente y crítico para el éxito de SocialScrum. No puede improvisarse ni asignarse casualmente. Requiere un perfil híbrido específico, un proceso de selección riguroso, capacitación formal, una estructura de reporte ética y mecanismos claros de rendición de cuentas. Cuando se diseña e implementa correctamente, el Social Guide se convierte en el facilitador clave que permite al equipo gestionar su deuda social con el mismo profesionalismo que gestiona su deuda técnica, fortaleciendo tanto el bienestar humano como la sostenibilidad del trabajo colectivo.
+
+\section{Eventos adaptados: El núcleo operativo de SocialScrum}
+% NOTA: Esta es la sección MÁS IMPORTANTE del capítulo
+\subsection{Daily Standup Social}
+% Protocolo, preguntas, tiempo (+2-3 min)
+\subsection{Sprint Planning Social}
+% Sección de riesgos sociales (+15 min)
+\subsection{Sprint Review Social}
+% Evaluación de Health Score (+10 min)
+\subsection{Sprint Retrospective Social}
+% Protocolo completo, facilitación, 4 fases
+
+\section{Artefactos sociales y su gestión}
+\subsection{Product Backlog Social}
+% Items de deuda social, priorización
+\subsection{Sprint Backlog Social}
+% Compromisos sociales del Sprint
+\subsection{Registro de Community Smells}
+% Histórico, tracking, tendencias
+\subsection{Dashboard de Métricas Sociales}
+% Visualización en tiempo real
+
+\section{Sistema de medición de salud social}
+\subsection{Health Score: Concepto y aplicación}
+% Escala 1-10, componentes (Openness, Compromiso, Respeto, Foco, Coraje)
+\subsection{Instrumentos de recolección de datos}
+% Encuestas, observación, SNA
+\subsection{Interpretación de resultados y umbrales de acción}
+% ¿Qué significa Health Score < 4? ¿Cuándo intervenir?
+
+\section{Framework de priorización social-técnica}
+\subsection{Triángulo de decisión: valor de negocio, urgencia técnica, salud social}
+% Modelo conceptual
+\subsection{Matriz de 18 escenarios de priorización}
+% Tabla completa con ejemplos
+\subsection{Protocolo de decisión colaborativa}
+% PO + SM + Social Guide + Dev Team
+
+\section{Sistema de estimación de items sociales (Story Points Sociales)}
+\subsection{Escala de estimación SPS}
+% 1 SPS ≈ 1 SP técnico en tiempo/esfuerzo
+\subsection{Metodología de estimación}
+% Severidad + Complejidad → SPS final
+\subsection{Conversión SPS <-> SP y gestión de capacidad}
+% Cómo balancear items técnicos + sociales en Sprint
+
+\section{Estrategias de mitigación de community smells}
+\subsection{Clasificación por categoría}
+% Comunicación, Conocimiento, Relacional, Organizacional
+\subsection{Catálogo de estrategias probadas}
+% 30 smells + estrategias específicas
+\subsection{Diseño de experimentos de mejora}
+% Hipótesis, métricas de éxito, criterios de evaluación
+
+\section{Principio de No-Sobrecarga: Integración sin agregar tiempo}
+\subsection{Overhead temporal por evento}
+% Tabla: Daily +2-3 min, Planning +15 min, etc.
+\subsection{Optimizaciones prácticas}
+% Daily async, retros alternadas, rol rotativo
+\subsection{Gestión de expectativas organizacionales}
+% Cómo comunicar esto al equipo y stakeholders
+
+\section{Salvaguardas éticas y Gobernanza del Social Guide}
+\subsection{Confidencialidad absoluta: Principio no negociable}
+% Qué es confidencial vs qué es reportable
+\subsection{Estructura organizacional y rendición de cuentas}
+% Social Guide → CTO/SM, NO HR
+\subsection{Protocolo de auditoría independiente}
+% Cada 6 meses, auditor externo
+\subsection{Prevención del ``Teatro Social''}
+% Cómo evitar simulación de bienestar
+
+\section{Adaptación contextual y escalabilidad}
+\subsection{Equipos pequeños (5-7 personas)}
+% Rol rotativo, overhead mínimo
+\subsection{Equipos medianos (8-15 personas)}
+% Social Guide dedicado al 50%
+\subsection{Equipos grandes (16+ personas) y múltiples equipos}
+% Social Guide dedicado 100%, coordinación entre equipos
+\subsection{Equipos distribuidos vs co-localizados}
+% Adaptaciones específicas (daily async, herramientas remotas)
+
+\section{Herramientas y tecnología de soporte}
+\subsection{Integración con Jira/Azure DevOps}
+% Custom fields, labels, dashboards
+\subsection{Templates y plantillas operacionales}
+% User stories sociales, retrospectivas, reportes
+\subsection{Dashboards automatizados}
+% Grafana, Tableau, Power BI
+
+\section{Caso de estudio: Implementación simulada de SocialScrum}
+\subsection{Diseño del piloto}
+% Equipo, contexto, duración
+\subsection{Métricas observadas durante 3 sprints}
+% Health Score, velocity, smells mitigados
+\subsection{Resultados y lecciones aprendidas}
+% Qué funcionó, qué no, recomendaciones
+
+\section{Conclusiones del capítulo}
+% Síntesis: De teoría a práctica, viabilidad demostrada

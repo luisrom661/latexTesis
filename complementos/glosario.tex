@@ -14,7 +14,7 @@
 \newacronym{tad}{TAD}{Teoría de la Autodeterminación}
 \newacronym{rsl}{RSL}{Revisión Sistemática de la Literatura}
 \newacronym{scrum}{SCRUM}{Scrum Framework}
-\newacronym{dnt}{DNT}{Deuda No Técnica}
+\newacronym{ntd}{NTD}{Deuda No Técnica (Non-Technical Debt)}
 \newacronym{burnout}{BURNOUT}{Síndrome de Agotamiento}
 \newacronym{kpis}{KPIs}{Key Performance Indicators (Indicadores Clave de Desempeño)}
 
@@ -36,9 +36,12 @@
     plural={Community Smells}
 }
 
-\newglossaryentry{social-debt-debt}{
+\newglossaryentry{non-technical-debt}{
     name={Deuda No Técnica},
-    description={Subcategoría de deuda social que se manifiesta en problemas técnicos (documentación deficiente, componentes frágiles) resultantes de decisiones socio-técnicas pobres.}
+    description={Deuda No Técnica: Problemas técnicos (documentación fragmentaria,
+            arquitectura inconexa) cuya CAUSA es social (comunicación pobre,
+            dinámicas disfuncionales), no técnica. Diferencia: CAUSA es social,
+            EFECTO es técnico.}
 }
 
 % Risk Taking in Relationship (RTR)
@@ -209,15 +212,22 @@
 
 \newglossaryentry{cs-prima-donnas}{
     name={Prima donnas},
-    description={Miembros que trabajan en aislamiento deliberado, rechazan cambios evolutivos en productos legacy y rehúsan proporcionar soporte genuino a colegas. Bloquean activamente innovación organizacional, impiden comunicación y colaboración efectiva, generan dependencias negativas y erosionan cohesión.},
+    description={Miembros que trabajan en aislamiento deliberado, rechazan cambios evolutivos en productos legacy y rehúsan proporcionar soporte genuino a compañeros. Bloquean activamente innovación organizacional, impiden comunicación y colaboración efectiva, generan dependencias negativas y erosionan cohesión.},
     plural={Prima donnas}
 }
 
 \newglossaryentry{cs-radio-silence}{
-    name={Radio silence (Bottleneck)},
-    description={En organizaciones formales y complejas, nodos clave de comunicación se saturan como únicos intermediarios de información entre múltiples equipos. La información debe transitar por protocolos altamente regularizados generando compresión, causando retrasos comunicacionales severos, sobrecarga de intermediarios y estancamiento del flujo de trabajo.},
-    plural={Silencios radiales, Cuellos de botella}
+    name={Radio Silence},
+    description={Comunicación insuficiente o nula entre equipos.
+            Información crítica no circula, decisiones no se comparten.}
 }
+
+\newglossaryentry{cs-bottleneck}{
+    name={Bottleneck},
+    description={Toda comunicación transita por nodos saturados (managers,
+            arquitectos), causando compresión severa y retrasos comunicacionales.}
+}
+
 
 \newglossaryentry{cs-sharing-villainy}{
     name={Sharing villainy},
@@ -275,6 +285,26 @@
     name={Leadership vacuum},
     description={Ausencia de liderazgo claro, mentorship estructurado y dirección explícita en el equipo genera falta de claridad en objetivos organizacionales. Resulta en desorganización operativa, baja motivación del equipo, toma de decisiones inconsistente y fragmentación de esfuerzos.},
     plural={Vacíos de liderazgo}
+}
+
+\newglossaryentry{cs-social-isolation}{
+    name={Social isolation},
+    description={Miembros del equipo experimentan desconexión social significativa debido a barreras geográficas, culturales o de comunicación. Genera sentimientos de exclusión, disminución de la colaboración efectiva, pérdida de cohesión grupal y reducción del intercambio genuino de conocimiento.},
+    plural={Aislamientos sociales}
+}
+
+%toxic-relationships
+\newglossaryentry{cs-toxic-relationships}{
+    name={Toxic relationships},
+    description={Relaciones interpersonales disfuncionales y conflictivas entre miembros del equipo que generan un ambiente laboral negativo. Causa estrés elevado, disminución de la productividad, alta rotación de personal y erosión de la confianza mutua.},
+    plural={Relaciones tóxicas}
+}
+
+%organizational-rigidity
+\newglossaryentry{cs-organizational-rigidity}{
+    name={Organizational rigidity},
+    description={Estructuras organizacionales inflexibles y procesos burocráticos que dificultan la adaptación a cambios tecnológicos y de mercado. Resulta en resistencia al cambio, innovación limitada, baja agilidad operativa y pérdida de competitividad.},
+    plural={Rigideces organizacionales}
 }
 
 % ============================================================================

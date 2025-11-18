@@ -1,8 +1,29 @@
 // ==========================================
+// CONSTANTS
+// ==========================================
+
+const STATUS = {
+    TODO: 'TODO',
+    IN_PROGRESS: 'IN_PROGRESS',
+    DONE: 'DONE',
+    ACTIVE: 'ACTIVE',
+    RESOLVED: 'RESOLVED'
+};
+
+const NOTIFICATION_TYPES = {
+    SUCCESS: 'success',
+    ERROR: 'error',
+    WARNING: 'warning',
+    INFO: 'info'
+};
+
+const NOTIFICATION_DURATION = 3000;
+
+// ==========================================
 // STATE MANAGEMENT
 // ==========================================
 
-let appState = {
+const appState = {
     productBacklog: {
         technical: [
             {
@@ -201,29 +222,40 @@ let appState = {
     ]
 };
 
-let nextSocialId = 4;
-let nextSmellId = 4;
+const state = {
+    nextSocialId: 4,
+    nextSmellId: 4
+};
 
 // ==========================================
 // NAVIGATION
 // ==========================================
 
 function initNavigation() {
-    const navItems = document.querySelectorAll('.nav-item');
-    const sections = document.querySelectorAll('.artifact-section');
+    const navContainer = document.querySelector('.nav');
+    if (!navContainer) return;
 
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const artifactId = item.dataset.artifact;
-            
-            // Update active states
-            navItems.forEach(nav => nav.classList.remove('active'));
-            item.classList.add('active');
-            
-            sections.forEach(section => section.classList.remove('active'));
-            document.getElementById(artifactId).classList.add('active');
-        });
+    navContainer.addEventListener('click', (event) => {
+        const navItem = event.target.closest('.nav-item');
+        if (!navItem) return;
+
+        const artifactId = navItem.dataset.artifact;
+        if (!artifactId) return;
+        
+        setActiveNavigation(navItem, artifactId);
     });
+}
+
+function setActiveNavigation(activeItem, artifactId) {
+    // Update active nav items
+    document.querySelectorAll('.nav-item').forEach(item => 
+        item.classList.toggle('active', item === activeItem)
+    );
+    
+    // Update active sections
+    document.querySelectorAll('.artifact-section').forEach(section =>
+        section.classList.toggle('active', section.id === artifactId)
+    );
 }
 
 // ==========================================
@@ -231,25 +263,96 @@ function initNavigation() {
 // ==========================================
 
 function openModal(modalId) {
-    document.getElementById(modalId).classList.add('active');
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
 }
 
 function closeModal(modalId) {
-    document.getElementById(modalId).classList.remove('active');
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+function closeAllModals() {
+    document.querySelectorAll('.modal.active').forEach(modal => {
+        modal.classList.remove('active');
+    });
+    document.body.style.overflow = '';
 }
 
 // ==========================================
 // NOTIFICATIONS
 // ==========================================
 
-function showNotification(message, type = 'success') {
+let notificationTimeout = null;
+
+function showNotification(message, type = NOTIFICATION_TYPES.SUCCESS) {
+    if (!message) return;
+    
     const notification = document.getElementById('notification');
+    if (!notification) return;
+    
+    // Clear previous timeout
+    if (notificationTimeout) {
+        clearTimeout(notificationTimeout);
+    }
+    
     notification.textContent = message;
     notification.className = `notification ${type} show`;
     
-    setTimeout(() => {
+    notificationTimeout = setTimeout(() => {
         notification.classList.remove('show');
-    }, 3000);
+        notificationTimeout = null;
+    }, NOTIFICATION_DURATION);
+}
+
+// ==========================================
+// UTILITY FUNCTIONS
+// ==========================================
+
+function sanitizeHTML(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
+function generateId(prefix, number) {
+    return `${prefix}-${String(number).padStart(3, '0')}`;
+}
+
+function createElement(html) {
+    const template = document.createElement('template');
+    template.innerHTML = html.trim();
+    return template.content.firstChild;
+}
+
+function updateElementContent(elementId, content, isHTML = true) {
+    const element = document.getElementById(elementId);
+    if (!element) return false;
+    
+    if (isHTML) {
+        element.innerHTML = content;
+    } else {
+        element.textContent = content;
+    }
+    return true;
+}
+
+function getFormData(formId) {
+    const form = document.getElementById(formId);
+    if (!form) return null;
+    
+    const formData = new FormData(form);
+    const data = {};
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+    return data;
 }
 
 // ==========================================
@@ -263,88 +366,146 @@ function renderProductBacklog() {
 
 function renderTechnicalItems() {
     const container = document.getElementById('techItems');
-    container.innerHTML = appState.productBacklog.technical.map(item => `
-        <div class="card backlog-item tech">
+    if (!container) return;
+    
+    const itemsHTML = appState.productBacklog.technical
+        .map(item => createTechnicalItemHTML(item))
+        .join('');
+    
+    container.innerHTML = itemsHTML;
+}
+
+function createTechnicalItemHTML(item) {
+    const statusClass = item.estado.toLowerCase().replace('_', '-');
+    
+    return `
+        <div class="card backlog-item tech" data-id="${sanitizeHTML(item.id)}">
             <div class="item-header">
-                <span class="item-id">${item.id}</span>
-                <span class="status-badge ${item.estado.toLowerCase().replace('_', '-')}">${item.estado}</span>
+                <span class="item-id">${sanitizeHTML(item.id)}</span>
+                <span class="status-badge ${statusClass}">${sanitizeHTML(item.estado)}</span>
             </div>
-            <div class="item-title">${item.titulo}</div>
+            <div class="item-title">${sanitizeHTML(item.titulo)}</div>
             <div class="item-meta">
                 <div class="meta-item">💎 Valor: ${item.valor}</div>
                 <div class="meta-item">📊 SP: ${item.sp}</div>
-                <div class="meta-item"><span class="priority-badge priority-${item.priority}">P${item.priority}</span></div>
+                <div class="meta-item">
+                    <span class="priority-badge priority-${item.priority}">P${item.priority}</span>
+                </div>
             </div>
         </div>
-    `).join('');
+    `;
 }
 
 function renderSocialItems() {
     const container = document.getElementById('socialItems');
-    container.innerHTML = appState.productBacklog.social.map(item => `
-        <div class="card backlog-item social">
+    if (!container) return;
+    
+    const itemsHTML = appState.productBacklog.social
+        .map(item => createSocialItemHTML(item))
+        .join('');
+    
+    container.innerHTML = itemsHTML;
+}
+
+function createSocialItemHTML(item) {
+    const statusClass = item.estado.toLowerCase().replace('_', '-');
+    const smellHTML = item.smell 
+        ? `<div class="item-detail">⚠️ ${sanitizeHTML(item.smell)}</div>` 
+        : '';
+    const impactHTML = item.impact 
+        ? `<div class="item-detail">📈 ${sanitizeHTML(item.impact)}</div>` 
+        : '';
+    
+    return `
+        <div class="card backlog-item social" data-id="${sanitizeHTML(item.id)}">
             <div class="item-header">
-                <span class="item-id">${item.id}</span>
-                <span class="status-badge ${item.estado.toLowerCase().replace('_', '-')}">${item.estado}</span>
+                <span class="item-id">${sanitizeHTML(item.id)}</span>
+                <span class="status-badge ${statusClass}">${sanitizeHTML(item.estado)}</span>
             </div>
-            <div class="item-title">${item.titulo}</div>
+            <div class="item-title">${sanitizeHTML(item.titulo)}</div>
             <div class="item-meta">
-                <div class="meta-item">💜 ${item.valor_social}</div>
+                <div class="meta-item">💜 ${sanitizeHTML(item.valor_social)}</div>
                 <div class="meta-item">📊 SPS: ${item.sps}</div>
-                <div class="meta-item"><span class="priority-badge priority-${item.priority}">P${item.priority}</span></div>
+                <div class="meta-item">
+                    <span class="priority-badge priority-${item.priority}">P${item.priority}</span>
+                </div>
             </div>
-            ${item.smell ? `<div style="margin-top: 8px; font-size: 12px; color: var(--color-text-secondary);">⚠️ ${item.smell}</div>` : ''}
-            ${item.impact ? `<div style="margin-top: 4px; font-size: 12px; color: var(--color-text-secondary);">📈 ${item.impact}</div>` : ''}
-            <div style="margin-top: 8px; font-size: 12px; color: var(--color-text-secondary);">👤 ${item.guide}</div>
+            ${smellHTML}
+            ${impactHTML}
+            <div class="item-detail">👤 ${sanitizeHTML(item.guide)}</div>
         </div>
-    `).join('');
+    `;
 }
 
 function filterItems(type) {
     const techSection = document.querySelector('.backlog-section:nth-of-type(1)');
     const socialSection = document.querySelector('.backlog-section:nth-of-type(2)');
     
-    if (type === 'all') {
-        techSection.style.display = 'block';
-        socialSection.style.display = 'block';
-    } else if (type === 'tech') {
-        techSection.style.display = 'block';
-        socialSection.style.display = 'none';
-    } else if (type === 'social') {
-        techSection.style.display = 'none';
-        socialSection.style.display = 'block';
-    }
+    if (!techSection || !socialSection) return;
+    
+    const displayConfig = {
+        all: { tech: 'block', social: 'block' },
+        tech: { tech: 'block', social: 'none' },
+        social: { tech: 'none', social: 'block' }
+    };
+    
+    const config = displayConfig[type] || displayConfig.all;
+    techSection.style.display = config.tech;
+    socialSection.style.display = config.social;
 }
 
 // Add Social Item
-document.addEventListener('DOMContentLoaded', () => {
+function initSocialItemForm() {
     const form = document.getElementById('addSocialItemForm');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const newItem = {
-                id: `SOCIAL-${String(nextSocialId).padStart(3, '0')}`,
-                titulo: document.getElementById('newSocialTitle').value,
-                valor_social: document.getElementById('newSocialValue').value,
-                sps: parseInt(document.getElementById('newSocialSPS').value),
-                priority: parseInt(document.getElementById('newSocialPriority').value),
-                estado: 'TODO',
-                smell: document.getElementById('newSocialSmell').value,
-                impact: document.getElementById('newSocialImpact').value,
-                guide: document.getElementById('newSocialGuide').value
-            };
-            
-            appState.productBacklog.social.push(newItem);
-            nextSocialId++;
-            
-            renderSocialItems();
-            closeModal('addSocialItemModal');
-            form.reset();
-            showNotification('Item social agregado exitosamente!');
-        });
+    if (!form) return;
+    
+    form.addEventListener('submit', handleSocialItemSubmit);
+}
+
+function handleSocialItemSubmit(e) {
+    e.preventDefault();
+    
+    const formData = {
+        titulo: document.getElementById('newSocialTitle')?.value?.trim(),
+        valor_social: document.getElementById('newSocialValue')?.value?.trim(),
+        sps: document.getElementById('newSocialSPS')?.value,
+        priority: document.getElementById('newSocialPriority')?.value,
+        smell: document.getElementById('newSocialSmell')?.value?.trim(),
+        impact: document.getElementById('newSocialImpact')?.value?.trim(),
+        guide: document.getElementById('newSocialGuide')?.value
+    };
+    
+    // Validation
+    if (!formData.titulo) {
+        showNotification('El título es obligatorio', NOTIFICATION_TYPES.ERROR);
+        return;
     }
-});
+    
+    if (!formData.sps || formData.sps < 1) {
+        showNotification('Los SPS deben ser mayor a 0', NOTIFICATION_TYPES.ERROR);
+        return;
+    }
+    
+    const newItem = {
+        id: generateId('SOCIAL', state.nextSocialId),
+        titulo: formData.titulo,
+        valor_social: formData.valor_social || 'Mejora general',
+        sps: parseInt(formData.sps),
+        priority: parseInt(formData.priority) || 5,
+        estado: STATUS.TODO,
+        smell: formData.smell || '',
+        impact: formData.impact || '',
+        guide: formData.guide || 'Social Guide'
+    };
+    
+    appState.productBacklog.social.push(newItem);
+    state.nextSocialId++;
+    
+    renderSocialItems();
+    closeModal('addSocialItemModal');
+    e.target.reset();
+    showNotification('Item social agregado exitosamente!');
+}
 
 // ==========================================
 // ARTIFACT 2: USER STORY SOCIAL
@@ -379,26 +540,40 @@ function addAcceptanceCriteria() {
 }
 
 function saveUserStory() {
-    const title = document.getElementById('storyTitle').value;
-    if (!title) {
-        showNotification('Por favor completa el título', 'error');
+    const formData = {
+        title: document.getElementById('storyTitle')?.value?.trim(),
+        smell: document.getElementById('storySmell')?.value?.trim(),
+        sps: document.getElementById('storySPS')?.value,
+        priority: document.getElementById('storyPriority')?.value,
+        impact: document.getElementById('storyImpact')?.value?.trim(),
+        assigned: document.getElementById('storyAssigned')?.value
+    };
+    
+    // Validation
+    if (!formData.title) {
+        showNotification('Por favor completa el título', NOTIFICATION_TYPES.ERROR);
+        return;
+    }
+    
+    if (!formData.sps || formData.sps < 1) {
+        showNotification('Los SPS deben ser mayor a 0', NOTIFICATION_TYPES.ERROR);
         return;
     }
     
     const newItem = {
-        id: `SOCIAL-${String(nextSocialId).padStart(3, '0')}`,
-        titulo: title,
-        valor_social: document.getElementById('storySmell').value || 'Mejora general',
-        sps: parseInt(document.getElementById('storySPS').value),
-        priority: parseInt(document.getElementById('storyPriority').value),
-        estado: 'TODO',
-        smell: document.getElementById('storySmell').value,
-        impact: document.getElementById('storyImpact').value,
-        guide: document.getElementById('storyAssigned').value
+        id: generateId('SOCIAL', state.nextSocialId),
+        titulo: formData.title,
+        valor_social: formData.smell || 'Mejora general',
+        sps: parseInt(formData.sps),
+        priority: parseInt(formData.priority) || 5,
+        estado: STATUS.TODO,
+        smell: formData.smell || '',
+        impact: formData.impact || '',
+        guide: formData.assigned || 'Social Guide'
     };
     
     appState.productBacklog.social.push(newItem);
-    nextSocialId++;
+    state.nextSocialId++;
     
     renderSocialItems();
     clearStoryForm();
@@ -411,61 +586,80 @@ function saveUserStory() {
 
 function renderSprintBacklog() {
     const container = document.getElementById('sprintItems');
+    if (!container) return;
     
-    container.innerHTML = appState.sprintBacklog.map(item => {
-        const healthImpactKey = Object.keys(item.health_impact)[0];
-        const healthImpact = item.health_impact[healthImpactKey];
-        
-        return `
-            <div class="card sprint-item">
-                <div class="sprint-item-header">
-                    <div>
-                        <span class="item-id">${item.id}</span>
-                        <h3 style="margin: 8px 0;">${item.titulo}</h3>
-                    </div>
-                    <div style="text-align: right;">
-                        <div style="font-size: 24px; font-weight: bold; color: var(--color-primary);">${item.progress}%</div>
-                        <div style="font-size: 12px; color: var(--color-text-secondary);">${item.sps} SPS</div>
-                    </div>
+    const itemsHTML = appState.sprintBacklog
+        .map(item => createSprintItemHTML(item))
+        .join('');
+    
+    container.innerHTML = itemsHTML;
+    updateSprintSummary();
+}
+
+function createSprintItemHTML(item) {
+    const healthImpactKey = Object.keys(item.health_impact)[0];
+    const healthImpact = item.health_impact[healthImpactKey];
+    const timelineHTML = item.dias
+        .map(dia => createDayItemHTML(dia))
+        .join('');
+    
+    return `
+        <div class="card sprint-item" data-id="${sanitizeHTML(item.id)}">
+            <div class="sprint-item-header">
+                <div>
+                    <span class="item-id">${sanitizeHTML(item.id)}</span>
+                    <h3 style="margin: 8px 0;">${sanitizeHTML(item.titulo)}</h3>
                 </div>
-                
-                <div class="progress-bar" style="margin-bottom: 16px;">
-                    <div class="progress-bar-fill" style="width: ${item.progress}%;"></div>
-                </div>
-                
-                <h4 style="font-size: 14px; margin-bottom: 8px;">Timeline (Días del Sprint)</h4>
-                <div class="timeline">
-                    ${item.dias.map(dia => `
-                        <div class="day-item ${dia.status.toLowerCase().replace('_', '-')}">
-                            <div style="font-weight: bold;">Día ${dia.dia}</div>
-                            <div style="font-size: 10px; margin-top: 4px;">${dia.actividad || '-'}</div>
-                        </div>
-                    `).join('')}
-                </div>
-                
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px;">
-                    <div>
-                        <div style="font-size: 12px; color: var(--color-text-secondary);">Bloqueantes</div>
-                        <div style="font-weight: 500;">${item.bloqueantes}</div>
-                    </div>
-                    <div>
-                        <div style="font-size: 12px; color: var(--color-text-secondary);">Health Impact</div>
-                        <div style="font-weight: 500;">${healthImpactKey}: ${healthImpact.antes} → ${healthImpact.despues}</div>
-                    </div>
+                <div style="text-align: right;">
+                    <div style="font-size: 24px; font-weight: bold; color: var(--color-primary);">${item.progress}%</div>
+                    <div style="font-size: 12px; color: var(--color-text-secondary);">${item.sps} SPS</div>
                 </div>
             </div>
-        `;
-    }).join('');
+            
+            <div class="progress-bar" style="margin-bottom: 16px;">
+                <div class="progress-bar-fill" style="width: ${item.progress}%;"></div>
+            </div>
+            
+            <h4 style="font-size: 14px; margin-bottom: 8px;">Timeline (Días del Sprint)</h4>
+            <div class="timeline">
+                ${timelineHTML}
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px;">
+                <div>
+                    <div style="font-size: 12px; color: var(--color-text-secondary);">Bloqueantes</div>
+                    <div style="font-weight: 500;">${sanitizeHTML(item.bloqueantes)}</div>
+                </div>
+                <div>
+                    <div style="font-size: 12px; color: var(--color-text-secondary);">Health Impact</div>
+                    <div style="font-weight: 500;">${sanitizeHTML(healthImpactKey)}: ${healthImpact.antes} → ${healthImpact.despues}</div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function createDayItemHTML(dia) {
+    const statusClass = dia.status.toLowerCase().replace('_', '-');
+    return `
+        <div class="day-item ${statusClass}">
+            <div style="font-weight: bold;">Día ${sanitizeHTML(dia.dia)}</div>
+            <div style="font-size: 10px; margin-top: 4px;">${sanitizeHTML(dia.actividad) || '-'}</div>
+        </div>
+    `;
+}
+
+function updateSprintSummary() {
+    if (appState.sprintBacklog.length === 0) return;
     
-    // Update summary
     const totalSPS = appState.sprintBacklog.reduce((sum, item) => sum + item.sps, 0);
     const avgProgress = appState.sprintBacklog.reduce((sum, item) => sum + item.progress, 0) / appState.sprintBacklog.length;
     const completedSPS = (totalSPS * avgProgress / 100).toFixed(1);
     
-    document.getElementById('sprintItemsCount').textContent = appState.sprintBacklog.length;
-    document.getElementById('sprintTotalSPS').textContent = totalSPS;
-    document.getElementById('sprintCompletedSPS').textContent = completedSPS;
-    document.getElementById('sprintProgress').textContent = Math.round(avgProgress) + '%';
+    updateElementContent('sprintItemsCount', appState.sprintBacklog.length, false);
+    updateElementContent('sprintTotalSPS', totalSPS, false);
+    updateElementContent('sprintCompletedSPS', completedSPS, false);
+    updateElementContent('sprintProgress', Math.round(avgProgress) + '%', false);
 }
 
 // ==========================================
@@ -474,237 +668,321 @@ function renderSprintBacklog() {
 
 function renderHealthScore() {
     const container = document.getElementById('healthValues');
+    if (!container) return;
     
-    container.innerHTML = appState.healthScore.values.map(value => {
-        const percentage = (value.score / value.max) * 100;
-        let colorClass = 'critical';
-        if (value.score >= 9) colorClass = 'excellent';
-        else if (value.score >= 7) colorClass = 'good';
-        else if (value.score >= 4) colorClass = 'warning';
-        
-        return `
-            <div class="card health-value-card">
-                <div class="health-value-header">
-                    <div class="health-value-name">${value.nombre}</div>
-                    <div class="health-value-score" style="color: var(--color-${colorClass === 'critical' ? 'danger' : colorClass === 'warning' ? 'warning-alt' : colorClass === 'good' ? 'success-alt' : 'primary'});">
-                        ${value.score}/${value.max} ${value.tendencia}
-                    </div>
-                </div>
-                <div class="health-bar">
-                    <div class="health-bar-fill ${colorClass}" style="width: ${percentage}%;"></div>
-                </div>
-                <div class="health-value-details">
-                    <div class="health-value-detail"><strong>Anterior:</strong> ${value.score_anterior}</div>
-                    <div class="health-value-detail"><strong>Smell Activo:</strong> ${value.smell_activo}</div>
-                    <div class="health-value-detail"><strong>Indicador:</strong> ${value.indicador_positivo}</div>
-                    <div class="health-value-detail"><strong>Acción:</strong> ${value.accion}</div>
+    const valuesHTML = appState.healthScore.values
+        .map(value => createHealthValueHTML(value))
+        .join('');
+    
+    container.innerHTML = valuesHTML;
+    updateHealthScoreSummary();
+    renderActiveSmellsTable();
+}
+
+function getHealthColorClass(score) {
+    if (score >= 9) return 'excellent';
+    if (score >= 7) return 'good';
+    if (score >= 4) return 'warning';
+    return 'critical';
+}
+
+function getHealthColorVar(colorClass) {
+    const colorMap = {
+        critical: 'danger',
+        warning: 'warning-alt',
+        good: 'success-alt',
+        excellent: 'primary'
+    };
+    return colorMap[colorClass] || 'danger';
+}
+
+function createHealthValueHTML(value) {
+    const percentage = (value.score / value.max) * 100;
+    const colorClass = getHealthColorClass(value.score);
+    const colorVar = getHealthColorVar(colorClass);
+    
+    return `
+        <div class="card health-value-card">
+            <div class="health-value-header">
+                <div class="health-value-name">${sanitizeHTML(value.nombre)}</div>
+                <div class="health-value-score" style="color: var(--color-${colorVar});">
+                    ${value.score}/${value.max} ${value.tendencia}
                 </div>
             </div>
-        `;
-    }).join('');
-    
-    // Update summary
-    document.getElementById('avgHealthScore').textContent = appState.healthScore.promedio.toFixed(1);
-    document.getElementById('prevAvgScore').textContent = appState.healthScore.promedio_anterior.toFixed(1);
-    
-    // Render active smells table
+            <div class="health-bar">
+                <div class="health-bar-fill ${colorClass}" style="width: ${percentage}%;"></div>
+            </div>
+            <div class="health-value-details">
+                <div class="health-value-detail"><strong>Anterior:</strong> ${value.score_anterior}</div>
+                <div class="health-value-detail"><strong>Smell Activo:</strong> ${sanitizeHTML(value.smell_activo)}</div>
+                <div class="health-value-detail"><strong>Indicador:</strong> ${sanitizeHTML(value.indicador_positivo)}</div>
+                <div class="health-value-detail"><strong>Acción:</strong> ${sanitizeHTML(value.accion)}</div>
+            </div>
+        </div>
+    `;
+}
+
+function updateHealthScoreSummary() {
+    updateElementContent('avgHealthScore', appState.healthScore.promedio.toFixed(1), false);
+    updateElementContent('prevAvgScore', appState.healthScore.promedio_anterior.toFixed(1), false);
+}
+
+function renderActiveSmellsTable() {
     const tableBody = document.getElementById('activeSmellsTable');
-    tableBody.innerHTML = appState.communitySmells.filter(s => s.status === 'ACTIVE').map(smell => `
+    if (!tableBody) return;
+    
+    const activeSmells = appState.communitySmells.filter(s => s.status === STATUS.ACTIVE);
+    const rowsHTML = activeSmells
+        .map(smell => createSmellTableRowHTML(smell))
+        .join('');
+    
+    tableBody.innerHTML = rowsHTML;
+}
+
+function createSmellTableRowHTML(smell) {
+    const severityClass = smell.severidad.toLowerCase();
+    return `
         <tr>
-            <td><code>${smell.id}</code></td>
-            <td>${smell.tipo}</td>
-            <td><span class="severity-badge ${smell.severidad.toLowerCase()}">${smell.severidad}</span></td>
-            <td>${smell.manifestacion}</td>
-            <td><code>${smell.item_social}</code></td>
-            <td>${smell.owner}</td>
-            <td>${smell.eta_fix}</td>
+            <td><code>${sanitizeHTML(smell.id)}</code></td>
+            <td>${sanitizeHTML(smell.tipo)}</td>
+            <td><span class="severity-badge ${severityClass}">${sanitizeHTML(smell.severidad)}</span></td>
+            <td>${sanitizeHTML(smell.manifestacion)}</td>
+            <td><code>${sanitizeHTML(smell.item_social)}</code></td>
+            <td>${sanitizeHTML(smell.owner)}</td>
+            <td>${sanitizeHTML(smell.eta_fix)}</td>
         </tr>
-    `).join('');
+    `;
 }
 
 // ==========================================
 // ARTIFACT 5: COMMUNITY SMELL REGISTRY
 // ==========================================
 
-function renderCommunitySmells() {
+function renderCommunitySmells(filter = 'all') {
     const container = document.getElementById('smellsRegistry');
+    if (!container) return;
     
-    container.innerHTML = appState.communitySmells.map(smell => `
-        <div class="card smell-card ${smell.severidad.toLowerCase()}">
+    let smells = appState.communitySmells;
+    if (filter === 'active') {
+        smells = appState.communitySmells.filter(s => s.status === STATUS.ACTIVE);
+    } else if (filter === 'resolved') {
+        smells = appState.communitySmells.filter(s => s.status === STATUS.RESOLVED);
+    }
+    
+    const smellsHTML = smells
+        .map(smell => createCommunitySmellHTML(smell))
+        .join('');
+    
+    container.innerHTML = smellsHTML;
+}
+
+function createCommunitySmellHTML(smell) {
+    const severityClass = smell.severidad.toLowerCase();
+    const statusClass = smell.status === STATUS.ACTIVE ? 'in-progress' : 'done';
+    const healthScoresText = smell.health_scores_afectados.join(', ');
+    
+    return `
+        <div class="card smell-card ${severityClass}" data-id="${sanitizeHTML(smell.id)}">
             <div class="smell-header">
                 <div>
-                    <div style="font-family: var(--font-family-mono); font-size: 12px; color: var(--color-text-secondary);">${smell.id}</div>
-                    <div class="smell-type">${smell.tipo}</div>
+                    <div style="font-family: var(--font-family-mono); font-size: 12px; color: var(--color-text-secondary);">
+                        ${sanitizeHTML(smell.id)}
+                    </div>
+                    <div class="smell-type">${sanitizeHTML(smell.tipo)}</div>
                 </div>
-                <span class="severity-badge ${smell.severidad.toLowerCase()}">${smell.severidad}</span>
+                <span class="severity-badge ${severityClass}">${sanitizeHTML(smell.severidad)}</span>
             </div>
             
             <div style="margin: 12px 0; padding: 12px; background: var(--color-secondary); border-radius: 8px;">
                 <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px;">Manifestación</div>
-                <div>${smell.manifestacion}</div>
+                <div>${sanitizeHTML(smell.manifestacion)}</div>
             </div>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 12px;">
                 <div>
                     <div style="color: var(--color-text-secondary);">Identificado por</div>
-                    <div style="font-weight: 500;">${smell.identificado_por}</div>
+                    <div style="font-weight: 500;">${sanitizeHTML(smell.identificado_por)}</div>
                 </div>
                 <div>
                     <div style="color: var(--color-text-secondary);">Fecha</div>
-                    <div style="font-weight: 500;">${smell.fecha}</div>
+                    <div style="font-weight: 500;">${sanitizeHTML(smell.fecha)}</div>
                 </div>
             </div>
             
             <div style="margin-top: 12px; font-size: 12px;">
                 <div style="color: var(--color-text-secondary);">Impacto en el equipo</div>
-                <div style="margin-top: 4px;">${smell.impacto}</div>
+                <div style="margin-top: 4px;">${sanitizeHTML(smell.impacto)}</div>
             </div>
             
             <div style="margin-top: 12px; font-size: 12px;">
                 <div style="color: var(--color-text-secondary);">Root Cause</div>
-                <div style="margin-top: 4px;">${smell.root_cause}</div>
+                <div style="margin-top: 4px;">${sanitizeHTML(smell.root_cause)}</div>
             </div>
             
             <div style="margin-top: 12px; font-size: 12px;">
                 <div style="color: var(--color-text-secondary);">Health Scores Afectados</div>
-                <div style="margin-top: 4px;">${smell.health_scores_afectados.join(', ')}</div>
+                <div style="margin-top: 4px;">${sanitizeHTML(healthScoresText)}</div>
             </div>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 12px; font-size: 12px;">
                 <div>
                     <div style="color: var(--color-text-secondary);">Item Social</div>
-                    <div style="font-weight: 500; font-family: var(--font-family-mono);">${smell.item_social}</div>
+                    <div style="font-weight: 500; font-family: var(--font-family-mono);">
+                        ${sanitizeHTML(smell.item_social)}
+                    </div>
                 </div>
                 <div>
                     <div style="color: var(--color-text-secondary);">Owner</div>
-                    <div style="font-weight: 500;">${smell.owner}</div>
+                    <div style="font-weight: 500;">${sanitizeHTML(smell.owner)}</div>
                 </div>
                 <div>
                     <div style="color: var(--color-text-secondary);">ETA Fix</div>
-                    <div style="font-weight: 500;">${smell.eta_fix}</div>
+                    <div style="font-weight: 500;">${sanitizeHTML(smell.eta_fix)}</div>
                 </div>
             </div>
             
             <div style="margin-top: 12px;">
-                <span class="status-badge ${smell.status === 'ACTIVE' ? 'in-progress' : 'done'}">${smell.status}</span>
+                <span class="status-badge ${statusClass}">${sanitizeHTML(smell.status)}</span>
             </div>
         </div>
-    `).join('');
+    `;
 }
 
 function filterSmells(status) {
-    const container = document.getElementById('smellsRegistry');
-    let filtered = appState.communitySmells;
-    
-    if (status === 'active') {
-        filtered = appState.communitySmells.filter(s => s.status === 'ACTIVE');
-    } else if (status === 'resolved') {
-        filtered = appState.communitySmells.filter(s => s.status === 'RESOLVED');
-    }
-    
-    container.innerHTML = filtered.map(smell => `
-        <div class="card smell-card ${smell.severidad.toLowerCase()}">
-            <div class="smell-header">
-                <div>
-                    <div style="font-family: var(--font-family-mono); font-size: 12px; color: var(--color-text-secondary);">${smell.id}</div>
-                    <div class="smell-type">${smell.tipo}</div>
-                </div>
-                <span class="severity-badge ${smell.severidad.toLowerCase()}">${smell.severidad}</span>
-            </div>
-            
-            <div style="margin: 12px 0; padding: 12px; background: var(--color-secondary); border-radius: 8px;">
-                <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px;">Manifestación</div>
-                <div>${smell.manifestacion}</div>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 12px;">
-                <div>
-                    <div style="color: var(--color-text-secondary);">Identificado por</div>
-                    <div style="font-weight: 500;">${smell.identificado_por}</div>
-                </div>
-                <div>
-                    <div style="color: var(--color-text-secondary);">Fecha</div>
-                    <div style="font-weight: 500;">${smell.fecha}</div>
-                </div>
-            </div>
-            
-            <div style="margin-top: 12px; font-size: 12px;">
-                <div style="color: var(--color-text-secondary);">Impacto en el equipo</div>
-                <div style="margin-top: 4px;">${smell.impacto}</div>
-            </div>
-            
-            <div style="margin-top: 12px;">
-                <span class="status-badge ${smell.status === 'ACTIVE' ? 'in-progress' : 'done'}">${smell.status}</span>
-            </div>
-        </div>
-    `).join('');
+    renderCommunitySmells(status);
 }
 
 // Add Community Smell
-document.addEventListener('DOMContentLoaded', () => {
+function initSmellForm() {
     const form = document.getElementById('addSmellForm');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const newSmell = {
-                id: `SMELL-${String(nextSmellId).padStart(3, '0')}`,
-                tipo: document.getElementById('newSmellType').value,
-                severidad: document.getElementById('newSmellSeverity').value,
-                manifestacion: document.getElementById('newSmellManifestation').value,
-                identificado_por: document.getElementById('newSmellIdentified').value,
-                impacto: document.getElementById('newSmellImpact').value,
-                item_social: 'TBD',
-                owner: 'Social Guide',
-                eta_fix: 'TBD',
-                health_scores_afectados: [],
-                fecha: new Date().toISOString().split('T')[0],
-                root_cause: 'Pendiente análisis 5 Whys',
-                status: 'ACTIVE',
-                resolucion: ''
-            };
-            
-            appState.communitySmells.push(newSmell);
-            nextSmellId++;
-            
-            renderCommunitySmells();
-            renderHealthScore();
-            closeModal('addSmellModal');
-            form.reset();
-            showNotification('Community Smell registrado exitosamente!');
-        });
+    if (!form) return;
+    
+    form.addEventListener('submit', handleSmellSubmit);
+}
+
+function handleSmellSubmit(e) {
+    e.preventDefault();
+    
+    const formData = {
+        tipo: document.getElementById('newSmellType')?.value?.trim(),
+        severidad: document.getElementById('newSmellSeverity')?.value,
+        manifestacion: document.getElementById('newSmellManifestation')?.value?.trim(),
+        identificado_por: document.getElementById('newSmellIdentified')?.value?.trim(),
+        impacto: document.getElementById('newSmellImpact')?.value?.trim()
+    };
+    
+    // Validation
+    if (!formData.tipo) {
+        showNotification('El tipo de smell es obligatorio', NOTIFICATION_TYPES.ERROR);
+        return;
     }
-});
+    
+    if (!formData.manifestacion) {
+        showNotification('La manifestación es obligatoria', NOTIFICATION_TYPES.ERROR);
+        return;
+    }
+    
+    const newSmell = {
+        id: generateId('SMELL', state.nextSmellId),
+        tipo: formData.tipo,
+        severidad: formData.severidad || 'MODERADA',
+        manifestacion: formData.manifestacion,
+        identificado_por: formData.identificado_por || 'Equipo',
+        impacto: formData.impacto || 'Pendiente análisis',
+        item_social: 'TBD',
+        owner: 'Social Guide',
+        eta_fix: 'TBD',
+        health_scores_afectados: [],
+        fecha: new Date().toISOString().split('T')[0],
+        root_cause: 'Pendiente análisis 5 Whys',
+        status: STATUS.ACTIVE,
+        resolucion: ''
+    };
+    
+    appState.communitySmells.push(newSmell);
+    state.nextSmellId++;
+    
+    renderCommunitySmells();
+    renderHealthScore();
+    closeModal('addSmellModal');
+    e.target.reset();
+    showNotification('Community Smell registrado exitosamente!');
+}
 
 // ==========================================
 // ARTIFACT 7: REPORTE STAKEHOLDERS
 // ==========================================
 
 function exportReport() {
-    showNotification('Generando reporte PDF... (Funcionalidad simulada)', 'success');
+    try {
+        // Simulación de exportación
+        showNotification('Generando reporte PDF... (Funcionalidad simulada)', NOTIFICATION_TYPES.SUCCESS);
+        // TODO: Implementar exportación real con librería PDF
+    } catch (error) {
+        console.error('Error al exportar reporte:', error);
+        showNotification('Error al generar el reporte', NOTIFICATION_TYPES.ERROR);
+    }
 }
 
 function refreshReport() {
-    showNotification('Reporte actualizado', 'success');
+    try {
+        // Re-renderizar todas las secciones del reporte
+        renderProductBacklog();
+        renderSprintBacklog();
+        renderHealthScore();
+        renderCommunitySmells();
+        showNotification('Reporte actualizado', NOTIFICATION_TYPES.SUCCESS);
+    } catch (error) {
+        console.error('Error al actualizar reporte:', error);
+        showNotification('Error al actualizar el reporte', NOTIFICATION_TYPES.ERROR);
+    }
 }
 
 // ==========================================
 // INITIALIZATION
 // ==========================================
 
-document.addEventListener('DOMContentLoaded', () => {
-    initNavigation();
-    renderProductBacklog();
-    renderSprintBacklog();
-    renderHealthScore();
-    renderCommunitySmells();
-    
-    // Close modals when clicking outside
+function initModals() {
     document.querySelectorAll('.modal').forEach(modal => {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
-                modal.classList.remove('active');
+                closeModal(modal.id);
             }
         });
     });
-});
+    
+    // Close modals with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeAllModals();
+        }
+    });
+}
+
+function initApp() {
+    try {
+        // Initialize navigation
+        initNavigation();
+        
+        // Initialize forms
+        initSocialItemForm();
+        initSmellForm();
+        
+        // Initialize modals
+        initModals();
+        
+        // Render all artifacts
+        renderProductBacklog();
+        renderSprintBacklog();
+        renderHealthScore();
+        renderCommunitySmells();
+        
+        console.log('SocialScrum Manager initialized successfully');
+    } catch (error) {
+        console.error('Error initializing app:', error);
+        showNotification('Error al inicializar la aplicación', NOTIFICATION_TYPES.ERROR);
+    }
+}
+
+// Start the application when DOM is ready
+document.addEventListener('DOMContentLoaded', initApp);
