@@ -1,0 +1,880 @@
+% anexo-e.tex
+% Anexo E: Herramientas y Tecnología de Soporte para SocialScrum
+% Contiene configuraciones detalladas de Jira, Azure DevOps, plantillas y dashboards
+
+\chapter*{ANEXO E: HERRAMIENTAS Y TECNOLOG\'IA DE SOPORTE PARA SOCIALSCRUM}
+\addcontentsline{toc}{chapter}{ANEXO E: Herramientas y tecnolog\'ia de soporte para SocialScrum}
+\label{anexo:herramientas}
+
+% Configurar numeración para anexo E
+\setcounter{section}{0}
+\renewcommand{\thesection}{E.\arabic{section}}
+\renewcommand{\thesubsection}{E.\arabic{section}.\arabic{subsection}}
+
+Este anexo presenta las configuraciones t\'ecnicas detalladas para implementar SocialScrum con herramientas de gesti\'on de proyectos. El principio rector es integraci\'on, no duplicaci\'on: los items sociales deben vivir en el mismo sistema que los items t\'ecnicos.
+
+\section{Integraci\'on con Jira}
+
+\subsection{Campos personalizados}
+
+Jira permite crear campos personalizados que capturan la informaci\'on espec\'ifica de SocialScrum:
+
+\begin{table}[h]
+  \centering
+  \small
+  \begin{tabular}{|l|l|p{6cm}|}
+    \hline
+    \textbf{Campo}        & \textbf{Tipo} & \textbf{Descripci\'on}                      \\
+    \hline
+    Item Type             & Select        & TECHNICAL / SOCIAL                          \\
+    \hline
+    Social Points (SPS)   & Number        & Escala 1-13, solo para items sociales       \\
+    \hline
+    Community Smell       & Select        & Radio Silence, Conflict, Burnout, etc.      \\
+    \hline
+    Health Dimension      & Multi-select  & Apertura, Respeto, Coraje, Compromiso, Foco \\
+    \hline
+    Social Guide Assigned & User picker   & Responsable del item social                 \\
+    \hline
+    Severity              & Select        & Leve, Moderada, Severa, Cr\'itica           \\
+    \hline
+  \end{tabular}
+  \caption{Campos personalizados para SocialScrum en Jira}
+  \label{tab:jira-custom-fields-anexo}
+\end{table}
+
+\subsection{Configuraci\'on de Issue Types}
+
+\begin{verbatim}
+=== CONFIGURACION DE ISSUE TYPES ===
+
+Opcion A: Etiqueta [SOCIAL]
+- Usar Issue Type: Story
+- Agregar label: "SOCIAL"
+- Filtrar en boards con JQL: labels = "SOCIAL"
+
+Opcion B: Issue Type dedicado (requiere admin)
+- Crear Issue Type: "Social Item"
+- Icono distintivo (ej: corazon o personas)
+- Workflow propio si se requiere
+
+Recomendacion: Empezar con Opcion A (sin friccion), 
+migrar a Opcion B cuando el proceso este maduro.
+\end{verbatim}
+
+\subsection{Workflow para items sociales}
+
+\begin{verbatim}
+=== WORKFLOW PARA ITEMS SOCIALES ===
+
+Estados:
+1. Backlog Social -> Item identificado, no priorizado
+2. Ready -> Priorizado para proximo Sprint
+3. In Progress -> Social Guide trabajando activamente
+4. Monitoring -> Intervencion completa, en observacion
+5. Done -> Mejoría confirmada en Health Score
+
+Transiciones:
+- Backlog -> Ready: Durante Sprint Planning
+- Ready -> In Progress: Al comenzar el Sprint
+- In Progress -> Monitoring: Cuando se completa la intervencion
+- Monitoring -> Done: Cuando Health Score dimension mejora >= 1 punto
+- Monitoring -> In Progress: Si la situacion empeora
+
+Automatizaciones:
+- Agregar comentario automatico al cambiar a Monitoring: 
+  "Recordar revisar en proxima retrospectiva"
+- Notificar al Social Guide si item en "In Progress" > 5 dias
+\end{verbatim}
+
+\subsection{Filtros JQL para SocialScrum}
+
+\begin{verbatim}
+=== FILTROS JQL UTILES ===
+
+1. Items sociales en Sprint actual:
+   labels = "SOCIAL" AND Sprint = currentSprint()
+
+2. Items sociales criticos sin asignar:
+   labels = "SOCIAL" AND "Severity" = "Critica" 
+   AND "Social Guide Assigned" IS EMPTY
+
+3. Items sociales completados ultimo mes:
+   labels = "SOCIAL" AND status = Done 
+   AND resolved >= -30d
+
+4. Capacidad social consumida en Sprint:
+   labels = "SOCIAL" AND Sprint = currentSprint() 
+   AND status != Backlog
+
+5. Smells de comunicacion activos:
+   labels = "SOCIAL" AND "Community Smell" IN 
+   ("Radio Silence", "Lone Wolf", "Black Cloud")
+   AND status != Done
+
+6. Health Score dimension en riesgo:
+   labels = "SOCIAL" AND "Health Dimension" = "Respeto" 
+   AND "Severity" IN ("Severa", "Critica")
+\end{verbatim}
+
+\section{Integraci\'on con Azure DevOps}
+
+Azure DevOps permite personalizaci\'on similar a trav\'es de su sistema de Work Item Types y campos personalizados.
+
+\subsection{Campos personalizados en Azure DevOps}
+
+\begin{verbatim}
+=== CAMPOS PERSONALIZADOS EN AZURE DEVOPS ===
+
+Navegacion: Organization Settings > Process > [Tu proceso] > 
+            User Story > New Field
+
+Campos a crear:
+
+1. Campo: "Social Points"
+   - Tipo: Integer
+   - Descripcion: Estimacion en SPS (1-13)
+   - Layout: Agregar a tab "Details"
+
+2. Campo: "Community Smell"
+   - Tipo: Picklist
+   - Valores: Radio Silence, Truck Factor, Conflict, 
+              Meeting Hell, Burnout, Black Cloud, Lone Wolf,
+              Knowledge Islands, Bottleneck, Invisible Output
+   - Layout: Agregar a tab "Classification"
+
+3. Campo: "Health Dimension"
+   - Tipo: Picklist (multiselect)
+   - Valores: Apertura, Compromiso, Respeto, Foco, Coraje
+   - Layout: Agregar a tab "Classification"
+
+4. Campo: "Smell Severity"
+   - Tipo: Picklist
+   - Valores: Leve, Moderada, Severa, Critica
+   - Regla: Requerido si Community Smell no es vacio
+
+5. Campo: "Social Guide"
+   - Tipo: Identity
+   - Descripcion: Persona responsable del item social
+   - Regla: Requerido para items con tag SOCIAL
+\end{verbatim}
+
+\subsection{Queries para Azure DevOps}
+
+\begin{verbatim}
+=== QUERIES EQUIVALENTES EN AZURE DEVOPS ===
+
+1. Items sociales en iteracion actual:
+   Work Item Type = User Story
+   AND Tags Contains "SOCIAL"
+   AND Iteration Path = @CurrentIteration
+
+2. Items sociales criticos sin asignar:
+   Tags Contains "SOCIAL"
+   AND Smell Severity = "Critica"
+   AND Social Guide = ""
+
+3. Dashboard de capacidad social:
+   Tags Contains "SOCIAL"
+   AND State <> "New"
+   AND Iteration Path = @CurrentIteration
+   Group by: State
+   Sum: Social Points
+\end{verbatim}
+
+\subsection{Integraci\'on de Health Score}
+
+\begin{verbatim}
+=== INTEGRACION DE HEALTH SCORE ===
+
+Opcion 1: Extension de Azure DevOps
+- Crear extension personalizada que agregue widget de Health Score
+- Conectar con formulario de encuesta (Microsoft Forms)
+- Mostrar en dashboard del equipo
+
+Opcion 2: Wiki integrado
+- Crear pagina de Wiki: "Health Score - [Equipo]"
+- Actualizar manualmente despues de cada retrospectiva
+- Vincular desde Work Items sociales
+
+Opcion 3: Power BI embebido
+- Crear reporte de Power BI con datos de Health Score
+- Embeber en Azure DevOps dashboard
+- Refresh automatico desde Excel/SharePoint
+\end{verbatim}
+
+\section{Plantillas operacionales}
+
+Las siguientes plantillas estandarizan la captura de informaci\'on y facilitan la adopci\'on de SocialScrum.
+
+\subsection{Plantilla de User Story Social}
+
+\begin{verbatim}
+=== USER STORY SOCIAL - PLANTILLA ===
+
+TITULO: [SOCIAL-XXX] [Descripcion breve del problema]
+
+-----------------------------------------------------------
+CONTEXTO DEL COMMUNITY SMELL
+-----------------------------------------------------------
+
+Tipo de smell: [Seleccionar de catalogo]
+Severidad: [Leve | Moderada | Severa | Critica]
+
+Detectado por: [Social Guide / Equipo / Anonimo]
+Detectado en: [Evento o momento]
+Sprint de deteccion: [N]
+
+Manifestacion observable:
+[Describir comportamientos especificos observados, 
+sin juicios de valor ni atribuciones de intencion]
+
+Personas afectadas:
+- Numero de personas: [N]
+- Roles afectados: [Developer, PO, SM, etc.]
+
+Impacto en Health Score:
+- Dimension afectada: [Apertura/Compromiso/Respeto/Foco/Coraje]
+- Score actual: [X]/10
+- Score objetivo: [Y]/10
+
+-----------------------------------------------------------
+CRITERIOS DE ACEPTACION
+-----------------------------------------------------------
+
+[ ] Health Score de dimension [X] mejora de [actual] a [objetivo]
+[ ] Comportamiento observable [Y] ya no se manifiesta
+[ ] Encuesta anonima post-intervencion muestra satisfaccion >= 7/10
+[ ] [Criterio especifico del contexto]
+
+-----------------------------------------------------------
+HIPOTESIS DE CAUSA RAIZ
+-----------------------------------------------------------
+
+Usando tecnica de 5 Whys:
+
+1. Por que ocurre [manifestacion]?
+   Respuesta: _____
+
+2. Por que [respuesta 1]?
+   Respuesta: _____
+
+3. Por que [respuesta 2]?
+   Respuesta: _____
+
+4. Por que [respuesta 3]?
+   Respuesta: _____
+
+5. Por que [respuesta 4]?
+   Respuesta: _____ (Causa raiz probable)
+
+-----------------------------------------------------------
+ESTRATEGIA DE INTERVENCION
+-----------------------------------------------------------
+
+Tipo de intervencion: [Facilitacion / Mediacion / Coaching / 
+                       Estructural / Escalacion]
+
+Pasos propuestos:
+1. _____
+2. _____
+3. _____
+
+Metricas de seguimiento:
+- Frecuencia de medicion: [Diaria / Semanal / Por Sprint]
+- Indicadores: _____
+
+-----------------------------------------------------------
+CONFIDENCIALIDAD
+-----------------------------------------------------------
+
+Nivel: [Publico / Equipo / Confidencial]
+Personas con acceso: _____
+Informacion a NO compartir: _____
+
+-----------------------------------------------------------
+ESTIMACION
+-----------------------------------------------------------
+
+Story Points Sociales (SPS): [1-13]
+
+Desglose:
+- Investigacion/diagnostico: __ horas
+- Sesiones 1:1: __ horas x __ personas = __ horas
+- Facilitacion grupal: __ horas
+- Seguimiento: __ horas
+- TOTAL: __ horas = __ SPS (1 SPS = 2 horas)
+\end{verbatim}
+
+\subsection{Plantilla para mediaci\'on de conflictos}
+
+\begin{verbatim}
+=== MEDIACION DE CONFLICTO - PLANTILLA ===
+
+Codigo: [SOCIAL-XXX]
+Tipo: Mediacion
+Confidencialidad: ALTA - Solo Social Guide + partes
+
+-----------------------------------------------------------
+PARTES INVOLUCRADAS
+-----------------------------------------------------------
+
+Persona A: [Iniciales o codigo]
+Persona B: [Iniciales o codigo]
+Observadores afectados: [N personas]
+
+-----------------------------------------------------------
+CONTEXTO
+-----------------------------------------------------------
+
+Origen del conflicto (percepcion inicial):
+_____
+
+Fecha de primera manifestacion: _____
+Eventos que lo agravaron: _____
+
+Impacto observable en el equipo:
+- Comunicacion: _____
+- Colaboracion: _____
+- Entregas: _____
+
+-----------------------------------------------------------
+SESIONES 1:1
+-----------------------------------------------------------
+
+[ ] Sesion con persona A completada
+    Fecha: _____ | Duracion: _____ | Notas: _____
+
+[ ] Sesion con persona B completada
+    Fecha: _____ | Duracion: _____ | Notas: _____
+
+[ ] Sesion conjunta (mediacion) completada
+    Fecha: _____ | Acuerdos documentados: _____
+
+[ ] Acuerdos explicitos documentados y firmados
+
+[ ] Seguimiento programado en proxima retrospectiva
+    Fecha: _____ | Preguntas de seguimiento: _____
+
+-----------------------------------------------------------
+DEFINITION OF DONE
+-----------------------------------------------------------
+
+[ ] Social Guide documento el proceso
+[ ] Ambas partes consintieron los acuerdos
+[ ] Acuerdos comunicados al equipo (sin detalles privados)
+[ ] Seguimiento programado
+
+Metricas de exito:
+[ ] Encuesta a persona A: relacion mejoro de __/10 a 6+/10
+[ ] Encuesta a persona B: relacion mejoro de __/10 a 6+/10
+[ ] Health Score dimension afectada: subio de __ a __
+
+-----------------------------------------------------------
+ESTIMACION
+-----------------------------------------------------------
+
+Story Points Sociales (SPS): ___
+
+Desglose:
+- Sesion 1:1 persona A: __ horas
+- Sesion 1:1 persona B: __ horas
+- Sesion conjunta: __ horas
+- Documentacion + seguimiento: __ horas
+- TOTAL: __ horas = __ SPS
+\end{verbatim}
+
+\subsection{Plantilla de Health Score Dashboard semanal}
+
+\begin{verbatim}
+=== HEALTH SCORE DASHBOARD - SEMANA X ===
+
+Equipo: [Nombre]
+Periodo: [Fecha inicio] - [Fecha fin]
+Actualizado por: [Social Guide]
+
+-----------------------------------------------------------
+VALORES DE SCRUM - EVALUACION
+-----------------------------------------------------------
+
+Apertura/Openness:    [__|__|__|__|__|__|__|__|__|__] __/10
+Tendencia: [+/-/=] | Smell activo: [Si/No - cual]
+
+Compromiso:           [__|__|__|__|__|__|__|__|__|__] __/10
+Tendencia: [+/-/=] | Smell activo: [Si/No - cual]
+
+Respeto:              [__|__|__|__|__|__|__|__|__|__] __/10
+Tendencia: [+/-/=] | Smell activo: [Si/No - cual]
+
+Foco:                 [__|__|__|__|__|__|__|__|__|__] __/10
+Tendencia: [+/-/=] | Smell activo: [Si/No - cual]
+
+Coraje:               [__|__|__|__|__|__|__|__|__|__] __/10
+Tendencia: [+/-/=] | Smell activo: [Si/No - cual]
+
+-----------------------------------------------------------
+RESUMEN
+-----------------------------------------------------------
+
+HEALTH SCORE PROMEDIO: __/10
+Semana anterior: __/10
+Tendencia general: [MEJORANDO / ESTABLE / EMPEORANDO]
+
+Capacidad estimada: __% de normal
+
+Dimensiones criticas (<4): _______________
+Dimensiones en riesgo (4-5): _______________
+Dimensiones saludables (6+): _______________
+
+-----------------------------------------------------------
+COMMUNITY SMELLS ACTIVOS
+-----------------------------------------------------------
+
+| Severidad | Smell | Manifestacion | Item Social | ETA |
+|-----------|-------|---------------|-------------|-----|
+|           |       |               |             |     |
+|           |       |               |             |     |
+
+-----------------------------------------------------------
+ACCIONES ESTA SEMANA
+-----------------------------------------------------------
+
+[X] Accion completada 1
+[X] Accion completada 2
+[->] Accion en progreso
+[ ] Accion pendiente
+
+-----------------------------------------------------------
+CORRELACION CON METRICAS TECNICAS
+-----------------------------------------------------------
+
+Health Score: __/10
+Velocity actual: __ SP (vs __ SP normal)
+Defectos: __ (vs __ promedio)
+Observaciones: _______________________
+\end{verbatim}
+
+\subsection{Plantilla de notas de retrospectiva social}
+
+\begin{verbatim}
+=== RETROSPECTIVA SOCIAL - SPRINT N ===
+
+Fecha: [Fecha]
+Facilitador: [Social Guide]
+Participantes: [Lista]
+Duracion seccion social: __ minutos
+
+-----------------------------------------------------------
+PRE-RETROSPECTIVA (Preparacion)
+-----------------------------------------------------------
+
+Health Score actual: __/10
+Dimensiones criticas: _______________
+Items sociales completados: _______________
+Items sociales en progreso: _______________
+
+Preguntas preparadas:
+1. _______________
+2. _______________
+3. _______________
+
+-----------------------------------------------------------
+DURANTE - PARTE SOCIAL
+-----------------------------------------------------------
+
+Dashboard presentado: [Si/No]
+
+Analisis de items completados:
+- Item 1: [Resultado, feedback del equipo]
+- Item 2: [Resultado, feedback del equipo]
+
+Analisis de community smells:
+- Smell 1: [Status: Resuelto/Mejorando/Igual/Peor]
+- Smell 2: [Status]
+
+Nuevos temas identificados:
+1. _______________
+2. _______________
+
+Hipotesis de causa raiz (si aplica):
+- Problema: _______________
+- Causa probable: _______________
+
+-----------------------------------------------------------
+ACCIONES PROPUESTAS
+-----------------------------------------------------------
+
+Items sociales para proximo Sprint:
+[ ] [SOCIAL-XXX] [Descripcion] - SPS: __ - Prioridad: __
+[ ] [SOCIAL-XXX] [Descripcion] - SPS: __ - Prioridad: __
+
+-----------------------------------------------------------
+HEALTH SCORE ESPERADO SPRINT N+1
+-----------------------------------------------------------
+
+Apertura: __/10 -> __/10
+Compromiso: __/10 -> __/10
+Respeto: __/10 -> __/10
+Foco: __/10 -> __/10
+Coraje: __/10 -> __/10
+
+PROMEDIO ESPERADO: __/10 -> __/10
+
+-----------------------------------------------------------
+SEGUIMIENTO PROXIMA RETRO
+-----------------------------------------------------------
+
+Preguntas de seguimiento:
+1. _______________
+2. _______________
+
+-----------------------------------------------------------
+NOTAS DEL FACILITADOR (Confidencial)
+-----------------------------------------------------------
+
+Observaciones no compartidas con el equipo:
+_______________
+
+Preocupaciones a monitorear:
+_______________
+
+Escalaciones necesarias:
+_______________
+\end{verbatim}
+
+\subsection{Plantilla de reporte mensual para stakeholders}
+
+\begin{verbatim}
+=== REPORTE DE SALUD SOCIAL - MES [X] ===
+
+Equipo: [Nombre]
+Periodo: [Mes/Ano]
+Para: CTO / VP Engineering / Stakeholders
+
+-----------------------------------------------------------
+RESUMEN EJECUTIVO
+-----------------------------------------------------------
+
+El equipo [Nombre] tiene Health Score de __/10 (mes anterior: __/10).
+Tendencia: [MEJORANDO / ESTABLE / REQUIERE ATENCION]
+
+Velocity tecnica:
+- Mes anterior: __ SP
+- Mes actual: __ SP
+- Correlacion: Health Score +1 punto = Velocity +__% aproximadamente
+
+-----------------------------------------------------------
+HEALTH SCORE - TENDENCIA 3 MESES
+-----------------------------------------------------------
+
+         M-2    M-1    M0
+         |      |      |
+   10 -  |      |      |
+    9 -  |      |      |
+    8 -  |      |      |
+    7 -  |      |  X   |  X
+    6 -  |  X   |      |
+    5 -  X      |      |
+    4 -  |      |      |
+         ---------------
+
+Valores actuales por dimension:
+- Apertura:    __/10 [+/-/=]
+- Compromiso:  __/10 [+/-/=]
+- Respeto:     __/10 [+/-/=]
+- Foco:        __/10 [+/-/=]
+- Coraje:      __/10 [+/-/=]
+
+-----------------------------------------------------------
+ITEMS SOCIALES COMPLETADOS
+-----------------------------------------------------------
+
+[X] [Descripcion item 1]
+    Resultado: _______________
+    Impacto: _______________
+
+[X] [Descripcion item 2]
+    Resultado: _______________
+    Impacto: _______________
+
+PRESUPUESTO SOCIAL (mes):
+- Items sociales: __ SPS (~__ horas)
+- Sesiones adicionales: __ horas
+- TOTAL: __ horas (~__% de capacidad)
+
+-----------------------------------------------------------
+PROXIMAS ACCIONES
+-----------------------------------------------------------
+
+CRITICO (inmediato):
+[ ] _______________
+
+IMPORTANTE (semanas 2-3):
+[ ] _______________
+
+DESEABLE (mes siguiente):
+[ ] _______________
+
+-----------------------------------------------------------
+RIESGOS Y MITIGACIONES
+-----------------------------------------------------------
+
+Riesgo 1: _______________
+Mitigacion: _______________
+
+Riesgo 2: _______________
+Mitigacion: _______________
+
+-----------------------------------------------------------
+RECOMENDACION
+-----------------------------------------------------------
+
+[CONTINUAR / AJUSTAR / ESCALAR]
+
+Justificacion: _______________
+
+Proxima revision: [Fecha]
+\end{verbatim}
+
+\subsection{Plantilla de registro de community smells}
+
+\begin{verbatim}
+=== COMMUNITY SMELL REGISTRY ===
+
+Equipo: [Nombre]
+Proposito: Historico de smells y como fueron abordados
+
+-----------------------------------------------------------
+SMELL #[NNN]: [NOMBRE DEL SMELL]
+-----------------------------------------------------------
+
+Identificado en: Sprint __, [Evento donde se detecto]
+Identificado por: [Social Guide / Equipo / Automatico]
+
+Definicion:
+- Manifestacion: _______________
+- Causa raiz (5 Whys): _______________
+- Tipo de smell: [Comunicacion / Conocimiento / Relacional / Organizacional]
+
+Severidad: [LEVE / MODERADA / SEVERA / CRITICA]
+- Personas afectadas: __
+- Impacto en velocity/calidad: _______________
+- Riesgo si no se resuelve: _______________
+
+Dimension de Health Score afectada: _______________
+Health Score antes: __/10
+
+Accion tomada:
+- Item social: [SOCIAL-XXX]
+- SPS estimado: __
+- Estrategia: _______________
+- Facilitador: [Social Guide]
+
+Resolucion:
+- Estado: [Resuelto / En progreso / Escalado / Aceptado como restriccion]
+- Fecha resolucion: _______________
+- Health Score despues: __/10
+
+Post-mortem:
+- Que funciono: _______________
+- Que no funciono: _______________
+- Como prevenir recurrencia: _______________
+\end{verbatim}
+
+\section{Dashboards automatizados}
+
+Para equipos que requieren visualizaci\'on m\'as sofisticada del Health Score y su correlaci\'on con m\'etricas t\'ecnicas, es posible construir dashboards automatizados usando herramientas de Business Intelligence.
+
+\subsection{Arquitectura de datos}
+
+\begin{verbatim}
+=== ARQUITECTURA DE DATOS PARA DASHBOARD ===
+
+Fuentes de datos:
+1. Jira/Azure DevOps API
+   - Items tecnicos: Story Points, status, Sprint
+   - Items sociales: SPS, community smell, severity
+   - Velocity por Sprint
+
+2. Formulario de Health Score (Google Forms / Microsoft Forms)
+   - Respuestas individuales (anonimas)
+   - Promedios por dimension
+   - Timestamp para historico
+
+3. Hoja de calculo intermedia (Google Sheets / Excel)
+   - Consolidacion de datos de multiples fuentes
+   - Calculos derivados (promedios, tendencias)
+   - Exportacion a herramienta BI
+
+Pipeline:
+[Jira API] ----+
+               |
+[Forms] -------+---> [Google Sheets] ---> [Dashboard BI]
+               |
+[Manual] ------+
+
+Frecuencia de actualizacion:
+- Velocity: Automatica al cerrar Sprint
+- Health Score: Semanal (despues de retrospectiva)
+- Community Smells: Tiempo real (cuando se crean/cierran items)
+\end{verbatim}
+
+\subsection{Dashboard en Google Sheets}
+
+Para equipos sin acceso a herramientas BI, Google Sheets proporciona visualizaci\'on b\'asica:
+
+\begin{verbatim}
+=== DASHBOARD EN GOOGLE SHEETS ===
+
+Hoja 1: "Datos"
+- Columnas: Sprint, Fecha, Apertura, Compromiso, Respeto, 
+            Foco, Coraje, Promedio, Velocity, Defectos
+- Una fila por Sprint
+
+Hoja 2: "Dashboard"
+- Grafico de lineas: Health Score Promedio vs Sprint
+- Grafico de radar: 5 dimensiones del Sprint actual
+- Grafico de barras: Velocity vs Health Score (correlacion)
+- Tabla: Community Smells activos
+
+Formulas utiles:
+- Promedio: =AVERAGE(B2:F2)
+- Tendencia: =IF(G2>G1,"+",IF(G2<G1,"-","="))
+- Correlacion: =CORREL(G:G, H:H)
+
+Automatizacion:
+- Google Apps Script para importar de Jira API
+- Trigger semanal para actualizar datos
+- Notificacion si Health Score < 4
+\end{verbatim}
+
+\subsection{Dashboard en Grafana}
+
+Grafana es una herramienta de visualizaci\'on open-source para dashboards sofisticados:
+
+\begin{verbatim}
+=== CONFIGURACION DE GRAFANA ===
+
+Data Source:
+- PostgreSQL / MySQL con datos exportados
+- O plugin de Jira para conexion directa
+- O JSON API para Google Sheets
+
+Paneles recomendados:
+
+1. Panel: "Health Score - Tendencia"
+   - Tipo: Time series
+   - Query: SELECT date, avg_health_score FROM health_scores
+   - Visualizacion: Linea con puntos
+
+2. Panel: "Dimensiones Actuales"
+   - Tipo: Gauge o Stat
+   - 5 gauges, uno por dimension
+   - Colores: Verde (7+), Amarillo (4-6), Rojo (<4)
+
+3. Panel: "Correlacion Health-Velocity"
+   - Tipo: Scatter plot
+   - X: Health Score
+   - Y: Velocity
+   - Anotacion: Linea de tendencia
+
+4. Panel: "Community Smells Activos"
+   - Tipo: Table
+   - Columnas: Smell, Severity, Sprint detectado, Status
+   - Filtro: Status != "Resolved"
+
+5. Panel: "Alertas"
+   - Tipo: Alert list
+   - Condicion: Health Score < 4 OR Severity = "Critical"
+   - Notificacion: Slack / Email
+
+Refresh: Cada 1 hora o manual
+\end{verbatim}
+
+\subsection{Dashboard en Power BI / Tableau}
+
+\begin{verbatim}
+=== DASHBOARD EN POWER BI ===
+
+Conexion de datos:
+- Jira: Usar conector nativo o API REST
+- Azure DevOps: Conector nativo disponible
+- Google Sheets: Conector web
+
+Modelo de datos:
+- Tabla "Sprints": Sprint_ID, Start_Date, End_Date, Velocity
+- Tabla "Health_Scores": Sprint_ID, Date, Dimension, Score
+- Tabla "Social_Items": Item_ID, Sprint_ID, Smell, SPS, Status
+- Relaciones: Sprint_ID como clave foranea
+
+Visualizaciones:
+
+Pagina 1: "Resumen Ejecutivo"
+- KPI Card: Health Score actual con tendencia
+- Line Chart: Health Score ultimos 6 Sprints
+- Donut: Distribucion de smells por categoria
+- Table: Top 3 smells criticos
+
+Pagina 2: "Detalle por Dimension"
+- 5 Gauge Charts: Una por dimension
+- Heatmap: Dimension x Sprint (colores por score)
+- Insights: Dimension con mayor variabilidad
+
+Pagina 3: "Correlacion"
+- Scatter: Health Score vs Velocity
+- Trendline: Regresion lineal
+- R-squared: Mostrar fuerza de correlacion
+- Filtros: Por equipo, por periodo
+
+Pagina 4: "Items Sociales"
+- Kanban: Items por status
+- Burndown: SPS restantes en Sprint
+- Table: Historico de items completados
+
+Refresh automatico:
+- Scheduled refresh cada 6 horas
+- O refresh manual post-retrospectiva
+\end{verbatim}
+
+\section{Alertas automatizadas}
+
+Independientemente de la herramienta, configurar alertas para situaciones cr\'iticas:
+
+\begin{verbatim}
+=== CONFIGURACION DE ALERTAS ===
+
+Alerta 1: Health Score Critico
+- Condicion: Health Score Promedio < 4.0
+- Canal: Slack #team-alerts + Email a CTO
+- Mensaje: "ALERTA: Health Score del equipo [X] es [Y]/10. 
+           Requiere atencion inmediata."
+
+Alerta 2: Dimension en Caida
+- Condicion: Cualquier dimension baja > 2 puntos en 1 Sprint
+- Canal: Slack #social-guide
+- Mensaje: "Dimension [X] cayo de [Y] a [Z]. Investigar causa."
+
+Alerta 3: Smell Critico Sin Asignar
+- Condicion: Item social con Severity = "Critica" 
+             AND Status = "Backlog" por > 48 horas
+- Canal: Email a Social Guide
+- Mensaje: "Item social critico sin asignar: [Link]"
+
+Alerta 4: Capacidad Social Excedida
+- Condicion: SPS en Sprint > 20% de capacidad total
+- Canal: Slack #scrum-master
+- Mensaje: "Items sociales exceden 20% de capacidad. 
+           Revisar priorizacion o escalar."
+
+Implementacion:
+- Grafana: Alerting rules nativas
+- Power BI: Power Automate para triggers
+- Google Sheets: Apps Script con triggers condicionales
+- Jira: Automation rules nativas
+\end{verbatim}
+
+\section{Consideraciones de implementaci\'on}
+
+Las herramientas de soporte no son requisito para implementar SocialScrum, pero reducen la fricci\'on operacional. La integraci\'on con Jira o Azure DevOps permite que los items sociales vivan junto a los t\'ecnicos, visibles para todo el equipo. Las plantillas estandarizan la captura de informaci\'on y facilitan la adopci\'on. Los dashboards automatizados proporcionan visibilidad continua sin esfuerzo manual.
+
+El principio rector es que la tecnolog\'ia debe servir al proceso, no al rev\'es: si una hoja de c\'alculo simple funciona para el equipo, no hay necesidad de implementar infraestructura compleja. La sofisticaci\'on debe ser proporcional al valor que genera.

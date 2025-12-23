@@ -1,5 +1,5 @@
-\chapter*{CAPÍTULO 5. Juicio de expertos para la aplicación de SocialScrum}
-\addcontentsline{toc}{chapter}{CAPÍTULO 5. Juicio de expertos para la aplicación de SocialScrum}
+\chapter*{CAPÍTULO 5. Validaci\'on del marco SocialScrum}
+\addcontentsline{toc}{chapter}{CAPÍTULO 5. Validaci\'on del marco SocialScrum}
 \setcounter{chapter}{5}
 \setcounter{section}{0}
 \setcounter{subsection}{0}
@@ -8,41 +8,204 @@
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
 
-Este capítulo presenta herramientas y técnicas que facilitan la implementación de SocialScrum, un proceso ágil adaptado para gestionar la deuda social en equipos de desarrollo de software. Se enfoca en la aplicación práctica de los eventos y artefactos modificados, así como en el rol del Social Guide, para abordar problemas interpersonales y mejorar el bienestar del equipo.
+Este cap\'itulo presenta el dise\~no de validaci\'on para el marco SocialScrum. Dado el alcance de esta investigaci\'on de pregrado, se propone un plan de validaci\'on mediante juicio de expertos que permita evaluar la coherencia, pertinencia y viabilidad del marco antes de su implementaci\'on emp\'irica.
 
-% ------------------------------------------------------------
-\section{Plan de validación mediante juicio de expertos}
-\label{sec:juicio-expertos}
+\section{Estrategia de validaci\'on}
 
-\subsection{Objetivo y diseño}
-Validar \emph{claridad}, \emph{pertinencia} y \emph{suficiencia} de instrumentos y plantillas de SocialScrum.
+SocialScrum es un marco metodol\'ogico conceptual que requiere validaci\'on en m\'ultiples niveles antes de considerarse listo para adopci\'on generalizada:
 
-\subsection{Muestra y perfil}
-6--10 expertos en ingeniería de software, \textit{community smells}, psicología organizacional o agilidad.
-
-\subsection{Material y criterios de calidad}
-\begin{itemize}[leftmargin=*,nosep]
-  \item Instrumento de encuestas (Tabla~\ref{tab:likert-ejemplo}) y guías de aplicación.
-  \item Rúbrica/escala de calidad (claridad, relevancia, cobertura).
-\end{itemize}
-
-\subsection{Análisis de concordancia (coeficiente Kappa)}
 \begin{table}[H]
   \centering
-  \caption{Plantilla de reporte de coeficiente Kappa (por categoría).}
-  \label{tab:kappa}
-  \begin{tabular}{@{}lccc@{}}
-    \toprule
-    \textbf{Categoría} & \textbf{Kappa} & \textbf{IC 95\%} & \textbf{Interpretación} \\
-    \midrule
-    Claridad & 0.78 & [0.65, 0.90] & Sustancial \\
-    Pertinencia & 0.72 & [0.58, 0.86] & Sustancial \\
-    Suficiencia & 0.69 & [0.54, 0.84] & Moderada--Sustancial \\
-    \bottomrule
+  \small
+  \begin{tabular}{|l|p{5cm}|p{4cm}|c|}
+    \hline
+    \textbf{Nivel}            & \textbf{Objetivo}                                  & \textbf{M\'etodo}                             & \textbf{Estado} \\
+    \hline
+    1. Coherencia te\'orica   & Verificar que el marco es internamente consistente & Revisi\'on de literatura, an\'alisis l\'ogico & Completado      \\
+    \hline
+    2. Juicio de expertos     & Evaluar claridad, pertinencia y suficiencia        & Panel de expertos (Delphi simplificado)       & Dise\~nado      \\
+    \hline
+    3. Viabilidad operativa   & Verificar que puede implementarse                  & Caso de estudio simulado                      & Completado      \\
+    \hline
+    4. Efectividad emp\'irica & Medir impacto en equipos reales                    & Estudios de caso m\'ultiples                  & Trabajo futuro  \\
+    \hline
   \end{tabular}
+  \caption{Niveles de validaci\'on del marco SocialScrum}
+  \label{tab:niveles-validacion}
 \end{table}
 
-\bigskip
+Los niveles 1 y 3 fueron abordados en cap\'itulos anteriores. Este cap\'itulo presenta el dise\~no del nivel 2 (juicio de expertos).
 
-\subsection{Acciones de mejora}
-Registrar cambios propuestos por los expertos y actualizar instrumentos/plantillas (\textit{v1.1, v1.2}, etc.).
+\section{Dise\~no de validaci\'on por juicio de expertos}
+
+\subsection{Objetivo}
+
+Evaluar la \textbf{claridad}, \textbf{pertinencia} y \textbf{suficiencia} de los componentes principales de SocialScrum mediante la opini\'on estructurada de expertos en las \'areas relevantes.
+
+\subsection{Perfil de expertos requerido}
+
+Se requiere un panel de 6-10 expertos con al menos uno de los siguientes perfiles:
+
+\begin{table}[H]
+  \centering
+  \small
+  \begin{tabular}{|l|p{5cm}|c|}
+    \hline
+    \textbf{Perfil}             & \textbf{Requisitos m\'inimos}                               & \textbf{Cantidad} \\
+    \hline
+    Ingenier\'ia de Software    & 5+ a\~nos en desarrollo \'agil, certificaci\'on Scrum       & 2-3               \\
+    \hline
+    Community Smells            & Publicaciones en el \'area o experiencia aplicada           & 1-2               \\
+    \hline
+    Psicolog\'ia Organizacional & T\'itulo en psicolog\'ia, experiencia en equipos t\'ecnicos & 1-2               \\
+    \hline
+    Coaching \'Agil             & 3+ a\~nos como Agile Coach, experiencia en salud de equipos & 2-3               \\
+    \hline
+  \end{tabular}
+  \caption{Perfiles de expertos para validaci\'on}
+  \label{tab:perfiles-expertos}
+\end{table}
+
+\subsection{Material a evaluar}
+
+Los expertos evaluar\'an los siguientes componentes del marco:
+
+\begin{enumerate}
+  \item \textbf{Rol del Social Guide}: Perfil, competencias, proceso de selecci\'on, gobernanza.
+  \item \textbf{Health Score}: Dimensiones, c\'alculo, frecuencia de medici\'on, umbrales de acci\'on.
+  \item \textbf{Artefactos sociales}: Product Backlog Social, Registro de Smells, Dashboard.
+  \item \textbf{Eventos adaptados}: Extensiones a Daily, Planning, Review, Retrospective.
+  \item \textbf{Sistema de estimaci\'on SPS}: Dimensiones, escala de Fibonacci, conversi\'on SPS-SP.
+  \item \textbf{Salvaguardas \'eticas}: Confidencialidad, auditor\'ia, protocolo con HR.
+\end{enumerate}
+
+\subsection{Instrumento de evaluaci\'on}
+
+Para cada componente, los expertos responder\'an a tres criterios usando escala Likert de 5 puntos:
+
+\begin{table}[H]
+  \centering
+  \small
+  \begin{tabular}{|l|p{8cm}|}
+    \hline
+    \textbf{Criterio} & \textbf{Definici\'on}                                                                                                                    \\
+    \hline
+    Claridad          & El componente est\'a descrito de manera comprensible, sin ambig\"uedades. Un equipo podr\'ia implementarlo sin aclaraciones adicionales. \\
+    \hline
+    Pertinencia       & El componente es relevante para abordar la deuda social en equipos de desarrollo. Tiene sentido incluirlo en el marco.                   \\
+    \hline
+    Suficiencia       & El componente cubre adecuadamente el aspecto que pretende abordar. No faltan elementos importantes.                                      \\
+    \hline
+  \end{tabular}
+  \caption{Criterios de evaluaci\'on por componente}
+  \label{tab:criterios-evaluacion-validacion}
+\end{table}
+
+Adicionalmente, se incluyen preguntas abiertas:
+\begin{itemize}
+  \item ``\textquestiondown Qu\'e elementos a\~nadir\'ia a este componente?''
+  \item ``\textquestiondown Qu\'e elementos eliminar\'ia o simplificar\'ia?''
+  \item ``\textquestiondown Qu\'e riesgos o problemas anticipa en la implementaci\'on?''
+\end{itemize}
+
+\subsection{Procedimiento}
+
+El proceso de validaci\'on sigue un protocolo Delphi simplificado:
+
+\begin{enumerate}
+  \item \textbf{Ronda 1 - Evaluaci\'on individual}: Cada experto recibe la documentaci\'on completa del marco y el instrumento de evaluaci\'on. Plazo: 2 semanas.
+
+  \item \textbf{An\'alisis de resultados}: Se calculan promedios, desviaciones est\'andar y coeficiente de concordancia (Kappa de Fleiss) por componente y criterio.
+
+  \item \textbf{Ronda 2 - Consenso}: Si hay componentes con baja concordancia ($\kappa < 0.60$) o puntuaci\'on baja (promedio $< 3.5$), se comparten los comentarios (anonimizados) y se pide reconsideraci\'on.
+
+  \item \textbf{Revisi\'on del marco}: Se incorporan las mejoras sugeridas por los expertos con alta concordancia.
+\end{enumerate}
+
+\subsection{Criterios de aceptaci\'on}
+
+\begin{table}[H]
+  \centering
+  \small
+  \begin{tabular}{|l|c|p{5cm}|}
+    \hline
+    \textbf{Resultado} & \textbf{Criterio}                                       & \textbf{Acci\'on}                       \\
+    \hline
+    Aprobado           & Promedio $\geq$ 4.0 y $\kappa \geq$ 0.70                & El componente se mantiene               \\
+    \hline
+    Revisar            & 3.5 $\leq$ Promedio $<$ 4.0 o 0.60 $\leq \kappa <$ 0.70 & Revisar seg\'un comentarios de expertos \\
+    \hline
+    Redise\~nar        & Promedio $<$ 3.5 o $\kappa <$ 0.60                      & Redise\~no significativo requerido      \\
+    \hline
+  \end{tabular}
+  \caption{Criterios de aceptaci\'on por componente}
+  \label{tab:criterios-aceptacion}
+\end{table}
+
+\section{An\'alisis preliminar de coherencia}
+
+Previo a la validaci\'on formal por expertos, se realiz\'o un an\'alisis de coherencia interna del marco. Los resultados se resumen a continuaci\'on:
+
+\subsection{Consistencia con principios de Scrum}
+
+\begin{table}[H]
+  \centering
+  \small
+  \begin{tabular}{|l|c|p{6cm}|}
+    \hline
+    \textbf{Principio Scrum}                              & \textbf{Cumple} & \textbf{Justificaci\'on}                                                                                                 \\
+    \hline
+    Empirismo (transparencia, inspecci\'on, adaptaci\'on) & S\'i            & Health Score proporciona transparencia; eventos permiten inspecci\'on; estrategias de mitigaci\'on permiten adaptaci\'on \\
+    \hline
+    Auto-organizaci\'on del equipo                        & S\'i            & Equipo decide priorizaci\'on social; Social Guide facilita, no impone                                                    \\
+    \hline
+    Time-boxing                                           & S\'i            & Extensiones a eventos se mantienen dentro de l\'imites de tiempo                                                         \\
+    \hline
+    Roles definidos                                       & S\'i            & Social Guide tiene responsabilidades claras, no solapa con SM o PO                                                       \\
+    \hline
+    Artefactos transparentes                              & S\'i            & Product Backlog Social y Dashboard son visibles para todo el equipo                                                      \\
+    \hline
+  \end{tabular}
+  \caption{Verificaci\'on de consistencia con principios de Scrum}
+  \label{tab:consistencia-scrum}
+\end{table}
+
+\subsection{Consistencia con literatura de community smells}
+
+Los community smells abordados por SocialScrum corresponden a los identificados en la literatura acad\'emica \cite{caballero2022communitysmells}. La taxonom\'ia de categor\'ias (comunicaci\'on, conocimiento, relacional, organizacional) es compatible con clasificaciones existentes.
+
+\subsection{Consistencia con Teor\'ia de la Autodeterminaci\'on}
+
+El Health Score, basado en los cinco valores de Scrum, tiene correspondencia indirecta con las necesidades b\'asicas de la TAD:
+
+\begin{itemize}
+  \item \textbf{Autonom\'ia}: Capturada parcialmente por Coraje (libertad para expresar opiniones) y Compromiso (voluntariedad).
+  \item \textbf{Competencia}: Capturada parcialmente por Foco (capacidad de concentrarse en el trabajo).
+  \item \textbf{Relacionalidad}: Capturada por Apertura, Respeto y parcialmente por Compromiso.
+\end{itemize}
+
+\section{Resultados esperados}
+
+Si la validaci\'on por juicio de expertos arroja resultados positivos (promedio $\geq$ 4.0 en todos los componentes, $\kappa \geq$ 0.70), el marco estar\'a listo para la siguiente fase: implementaci\'on piloto en equipos reales.
+
+Los resultados de la validaci\'on permitir\'an:
+\begin{enumerate}
+  \item Identificar componentes que requieren clarificaci\'on o simplificaci\'on.
+  \item Detectar elementos faltantes que los expertos consideren necesarios.
+  \item Anticipar riesgos de implementaci\'on se\~nalados por profesionales con experiencia pr\'actica.
+  \item Fortalecer la credibilidad del marco antes de proponer su adopci\'on.
+\end{enumerate}
+
+\section{Limitaciones del dise\~no de validaci\'on}
+
+\begin{enumerate}
+  \item \textbf{No sustituye validaci\'on emp\'irica}: El juicio de expertos eval\'ua la coherencia conceptual, no la efectividad real del marco.
+
+  \item \textbf{Sesgo de selecci\'on}: Los expertos disponibles pueden no representar toda la diversidad de contextos donde se aplicar\'ia SocialScrum.
+
+  \item \textbf{Limitaci\'on geogr\'afica}: El acceso a expertos puede estar limitado al contexto latinoamericano.
+
+  \item \textbf{Conocimiento del marco}: Los expertos eval\'uan el marco ``en papel'', sin experiencia de implementaci\'on real.
+\end{enumerate}
+
+Estas limitaciones refuerzan la necesidad de complementar esta validaci\'on con estudios emp\'iricos en equipos reales, como se propone en el cap\'itulo de trabajos futuros.
