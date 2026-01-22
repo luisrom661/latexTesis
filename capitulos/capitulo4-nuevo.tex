@@ -14,45 +14,55 @@ Este capítulo traslada el modelo teórico de SocialScrum (Capítulo 3) al terre
 
 \section{Introducción: aplicación práctica de SocialScrum}
 
-ste capítulo introduce tres contribuciones originales: (1) un protocolo de adopción validable, (2) un sistema de priorización técnico-social, y (3) salvaguardas éticas operacionalizadas. Allí se explicó cómo la Teoría de la Autodeterminación \cite{ryan2000self}, el modelo de Confianza de Mayer et al.\ \cite{mayer1995integrative} y los valores de Scrum convergen para construir un marco empírico que aborda la deuda social ---manifestada en forma de community smells \cite{caballero2022communitysmells}--- con el mismo cuidado que la deuda técnica. Sin embargo, un modelo ---por sólido que sea--- sigue siendo solo una idea hasta que se convierte en acciones concretas, protocolos claros y herramientas que los equipos puedan usar en su día a día.
-
-Este capítulo busca cerrar esa brecha: llevar SocialScrum del plano conceptual a la práctica real. Aquí se abordan las preguntas que cualquier equipo se haría antes de adoptarlo entre ellas: ¿Cómo se implementa en la vida diaria? ¿Qué hace exactamente el Social Guide? ¿Cómo se equilibran los ítems sociales con los técnicos? ¿Cómo se mide el progreso? ¿Y qué garantías existen para evitar que esto termine pareciendo vigilancia organizacional?
-
-Implementar SocialScrum no es tan sencillo como añadir una herramienta al stack de desarrollo. No basta con “instalar” y usar. Gestionar la deuda social implica transformaciones profundas en la cultura, la forma de relacionarse y la manera en que el equipo entiende su propio bienestar. De hecho, una mala implementación puede ser peor que no hacer nada: un Social Guide sin salvaguardas éticas puede convertirse en una figura de control; las métricas sociales mal interpretadas pueden fomentar teatro social \cite{edmondson2018fearless}; y eventos poco diseñados pueden quitar tiempo sin aportar valor.
-
-Por eso, este capítulo se organiza como un manual práctico y riguroso que combina cuatro componentes:
+El Capítulo 3 presentó el modelo conceptual de SocialScrum, sus bases teóricas y su arquitectura general. Allí se explicó cómo tres marcos teóricos complementarios sustentan la propuesta:
 
 \begin{enumerate}
-    \item \textbf{Protocolos paso a paso}: instrucciones claras para facilitar cada evento, cada conversación y cada decisión de priorización.
-    \item \textbf{Plantillas y artefactos listos para usar}: formatos para Jira, Confluence o Slack, evitando que el equipo tenga que improvisar cómo registrar la deuda social.
-    \item \textbf{Ejemplos contextualizados}: casos reales y escenarios simulados que muestran aciertos, errores frecuentes y cómo resolverlos.
-    \item \textbf{Salvaguardas éticas obligatorias}: principios indispensables para proteger la confidencialidad y la seguridad psicológica, evitando que SocialScrum se distorsione.
+    \item \textbf{Teoría de la Autodeterminación \cite{bandura1997selfefficacy}:} proporciona las necesidades psicológicas (autonomía, competencia, relación) que los eventos sociales deben proteger.
+    \item \textbf{Modelo de confianza de Mayer et al. \cite{mayer1995integrative}:} define cómo se construye la confianza mutua (habilidad, benevolencia, integridad) en el equipo.
+    \item \textbf{Valores de Scrum \cite{schwaber2020scrum}:} establecen el cómo (coraje, apertura, respeto, compromiso, foco) para operacionalizar esas necesidades.
 \end{enumerate}
 
-El capítulo sigue un recorrido que refleja la experiencia de un equipo que adopta SocialScrum desde cero:
+Sin embargo, un modelo sólido sigue siendo solo una idea hasta que se convierte en acciones concretas, protocolos claros y herramientas que los equipos puedan usar en su día a día. Este capítulo cierra esa brecha, llevando SocialScrum del plano conceptual a la práctica real. En concreto, mostramos cómo la autonomía se protege mediante protocolos no prescriptivos (Sección 4.4), la confianza se construye a través de transparencia y confidencialidad (Sección 4.11), y los valores se practican en cada evento (Secciones 4.4-4.5). La propuesta se desglosa en tres niveles de operacionalización: adopción (cómo preparar un equipo), ejecución (cómo ejecutar eventos y gestionar artefactos) y gobernanza (cómo proteger al equipo y escalar a contextos diversos).
 
-\textbf{Primero} (Secciones 4.2–4.3), se establece el contexto de adopción: cuándo conviene implementarlo, cuándo es mejor no hacerlo, cómo preparar al equipo y cómo definir el rol del Social Guide. Esta etapa es crítica: sin consentimiento informado y sin claridad sobre las responsabilidades del rol, el modelo nace bajo desconfianza.
+\textit{¿Por qué es importante este capítulo?} Porque responde las preguntas que cualquier equipo y organización se plantean antes de adoptar SocialScrum: ¿es viable en nuestro contexto? ¿Cómo se ejecuta en la vida diaria? ¿Qué hace exactamente el Social Guide? ¿Cómo se equilibran los ítems sociales con los técnicos sin parálisis? ¿Cómo se mide el progreso? ¿Y qué garantías existen para evitar que esto termine pareciendo vigilancia organizacional? Estas no son preguntas menores: tocan la viabilidad ética y operativa del modelo completo.
 
-\textbf{Segundo} (Secciones 4.4–4.5), se presenta el núcleo operativo: los eventos adaptados y los artefactos sociales. Aquí se detalla cómo se vive SocialScrum en el día a día: desde una pregunta social en el Daily, hasta una retrospectiva social completa. Estos mecanismos permiten que la transparencia, la inspección y la adaptación aterricen sobre las dinámicas humanas.
+Implementar SocialScrum no es tan sencillo como añadir una herramienta al flujo de desarrollo. Gestionar la deuda social implica transformaciones profundas en la cultura organizacional, la forma de relacionarse y la manera en que el equipo entiende su propio bienestar. De hecho, una mala implementación puede ser peor que no hacer nada. Un Social Guide sin salvaguardas éticas puede convertirse en una herramienta de vigilancia que socava la seguridad psicológica que el modelo intenta proteger. Por eso, antes de adoptar SocialScrum, todo equipo y organización deben verificar si existen condiciones mínimas (Sección 4.2.1: liderazgo genuino, confidencialidad garantizada, autonomía del equipo, cultura de confianza). Si falta alguno de estos pilares, lo mejor es esperar e invertir en construirlos primero. SocialScrum no arregla culturas disfuncionales; las requiere para funcionar.
 
-\textbf{Tercero} (Secciones 4.6–4.8), se explica el sistema de gestión: cómo medir la salud social, cómo priorizar entre lo técnico y lo social, cómo estimar ítems sociales y cómo evitar que el modelo derive en burocracia. En otras palabras: “¿Cómo sabemos que está funcionando?”
+Dada esta complejidad, este capítulo se organiza como un manual práctico y riguroso con cuatro componentes centrales: (1) \textbf{protocolos paso a paso}, instrucciones claras para facilitar cada evento y cada decisión de priorización; (2) \textbf{plantillas y artefactos listos para usar}, formatos para Jira, Confluence o Slack que evitan improvisación; (3) \textbf{ejemplos contextualizados}, casos reales y escenarios simulados que muestran aciertos y errores frecuentes; (4) \textbf{salvaguardas éticas obligatorias}, principios indispensables para proteger la confidencialidad y seguridad psicológica. Estos cuatro componentes se entretejen a lo largo de las secciones que siguen.
 
-\textbf{Cuarto} (Secciones 4.9–4.11), se abordan las salvaguardas, optimizaciones y adaptaciones a distintos contextos. Aquí se describe cómo proteger al equipo de usos indebidos, cómo minimizar carga operacional y cómo adaptar SocialScrum a equipos grandes, pequeños, remotos o co-localizados.
+\subsection*{Recorrido del capítulo}
 
-\textbf{Finalmente} (Secciones 4.12–4.13), se integra todo con herramientas tecnológicas y un caso de estudio que muestra SocialScrum en acción durante tres Sprints consecutivos.
+El contenido refleja la experiencia de un equipo que adopta SocialScrum desde cero, y por tanto sigue una secuencia lógica:
 
-Es importante resaltar que SocialScrum no es un marco rígido. Las plantillas y protocolos que aquí se presentan son guías, no reglas absolutas. Cada equipo deberá ajustarlos a su cultura y madurez. Sin embargo, hay elementos que no pueden negociarse: las salvaguardas éticas, el principio de no-sobrecarga y la transparencia en los reportes. Son estos pilares los que sostienen su viabilidad ética y operativa.
+\textbf{Contexto de adopción (Secciones 4.2--4.3):} Se establece cuándo conviene implementar SocialScrum, cuándo es mejor esperar, cómo preparar al equipo y cómo definir el rol del Social Guide. Esta etapa es crítica: sin consentimiento informado y sin claridad sobre responsabilidades, el modelo nace bajo desconfianza.
 
-Al llegar al final de este capítulo, el lector tendrá una visión completa y práctica de cómo implementar SocialScrum en un entorno real, incluyendo:
+\textbf{Operativa central (Secciones 4.4--4.5):} Se presenta el núcleo ejecutable: eventos adaptados (Daily Standup Social, Sprint Planning Social, Sprint Review Social, Sprint Retrospective Social) y artefactos sociales (Product Backlog Social, Sprint Backlog Social, Registro de Community Smells, Dashboard de Métricas). Aquí es donde SocialScrum aterriza en la rutina diaria del equipo: desde una pregunta social en el Daily, hasta una retrospectiva social completa.
+
+\textbf{Medición y priorización (Secciones 4.6--4.8):} Se explica cómo medir la salud social del equipo, cómo priorizar entre valor técnico, urgencia técnica y salud social, y cómo estimar ítems sociales sin que el modelo derive en burocracia. Esta sección responde la pregunta operacional más importante: ``¿Cómo sabemos que está funcionando?''
+
+\textbf{Protección y escalabilidad (Secciones 4.9--4.11):} Se abordan las salvaguardas éticas no negociables, las optimizaciones para reducir carga operacional, y las adaptaciones para diferentes tamaños de equipo, modalidades de trabajo y contextos organizacionales.
+
+\textbf{Implementación integrada (Secciones 4.12--4.14):} Se muestra cómo integrar SocialScrum con herramientas tecnológicas existentes (Jira, Azure DevOps, Google Sheets) y se presenta un caso de estudio que documenta SocialScrum en acción durante tres Sprints consecutivos, incluyendo aciertos, errores y lecciones aprendidas.
+
+SocialScrum no es un marco rígido. Las plantillas y protocolos presentados aquí son guías, no reglas absolutas. Cada equipo deberá ajustarlos a su cultura y madurez organizacional. Sin embargo, hay elementos que no pueden negociarse bajo ninguna circunstancia: las salvaguardas éticas (Sección 4.11), el principio de no-sobrecarga (Sección 4.10), y la transparencia en reportes. Son estos pilares los que sostienen la viabilidad ética y operativa del modelo.
+
+Al término de este capítulo, el lector tendrá una comprensión práctica y completa de cómo implementar SocialScrum en un entorno real, incluyendo cómo preparar y ejecutar cada evento adaptado, cómo el Social Guide facilita conversaciones difíciles sin convertirse en un ``policía social'', cómo equilibrar valor de negocio, urgencia técnica y salud social sin caer en parálisis, cómo medir el avance con indicadores cualitativos y cuantitativos, cómo proteger al equipo de uso indebido de información sensible, y cómo escalar y adaptar el modelo a distintos contextos.
+
+\subsection*{Para quién es este capítulo}
+
+Aunque el contenido es comprensivo, los diferentes actores encontrarán énfasis distintos:
 
 \begin{itemize}
-    \item Cómo preparar y ejecutar cada evento adaptado.
-    \item Cómo el Social Guide facilita conversaciones difíciles sin convertirse en un “policía social”.
-    \item Cómo equilibrar el valor de negocio, la urgencia técnica y la salud social sin caer en parálisis.
-    \item Cómo medir el avance social con indicadores cualitativos y cuantitativos.
-    \item Cómo proteger al equipo de uso indebido de información sensible.
-    \item Cómo escalar y adaptar el modelo a distintos contextos organizacionales.
+    \item \textbf{CTOs y VP de Ingeniería:} Consulten primero las secciones 4.2.1 (criterios de viabilidad), 4.10.5 (análisis de ROI) y 4.11 (gobernanza y protecciones). Estos apartados proporcionan la información necesaria para tomar decisiones de inversión.
+
+    \item \textbf{Scrum Masters:} Enfóquense en las secciones 4.3 (rol del Social Guide), 4.4 (eventos adaptados), 4.5 (artefactos) y 4.4.4 (facilitar retrospectivas sociales). Estos apartados contienen protocolos de facilitación que usarán de forma inmediata.
+
+    \item \textbf{Equipos de desarrollo:} Lean las secciones 4.4 (cómo participan en eventos sociales), 4.7 (cómo se estiman y priorizan ítems sociales) y 4.10 (qué cambios en la rutina diaria ocurrirán). También es crítico comprender 4.11 antes de cualquier implementación.
+
+    \item \textbf{Investigadores:} Accederán a una operacionalización completa del modelo en las secciones 4.6 (métricas y Health Score), 4.14 (caso de estudio con datos de tres Sprints) y 4.11 (arquitectura de gobernanza y protecciones).
 \end{itemize}
+
+Si alguna sección no te aplica directamente, puedes navegar de forma selectiva. Sin embargo, recomendamos enfáticamente leer las salvaguardas éticas (Sección 4.11) \textit{antes} de cualquier intento de implementación. Son el fundamento sobre el cual descansa la integridad del modelo.
 
 \section{Adopción inicial de SocialScrum}
 
@@ -133,25 +143,26 @@ Antes de avanzar con la implementación, el equipo y el liderazgo deben completa
 
 \begin{table}[h]
     \centering
-    \small
-    \begin{tabular}{|p{10cm}|c|}
+    \footnotesize
+    \begin{tabular}{|p{5.5cm}|p{1.2cm}|p{7.5cm}|}
         \hline
-        \textbf{Criterio}                                                                   & \textbf{Sí/No} \\
+        \textbf{Criterio}                                                                   & \textbf{Sí/No} & \textbf{Indicador observable}                                                                                            \\
         \hline
-        ¿El liderazgo técnico (CTO/VP Eng) respalda de forma clara SocialScrum?             &                \\
+        ¿El liderazgo técnico (CTO/VP Eng) respalda de forma clara SocialScrum?             &                & CTO/VP asistió Sprint 0; aprobó presupuesto por escrito; documentó confidencialidad                                      \\
         \hline
-        ¿La organización puede garantizar la confidencialidad de la información social?     &                \\
+        ¿La organización puede garantizar la confidencialidad de la información social?     &                & Revisar actas retrospectivas pasadas: ¿equipo compartió críticas?; ¿hubo represalias?; ¿se implementaron cambios?        \\
         \hline
-        ¿El equipo tiene autonomía real para priorizar ítems sociales en el Sprint?         &                \\
-        ¿Existe un candidato viable para ejercer como Social Guide?                         &                \\
+        ¿El equipo tiene autonomía real para priorizar ítems sociales en el Sprint?         &                & Revisar decisiones pasadas: ¿equipo ajustó carga sin pedir permiso?; ¿decidió cómo abordar smells?                       \\
         \hline
-        ¿La cultura organizacional permite conversaciones honestas sin temor a represalias? &                \\
+        ¿Existe un candidato viable para ejercer como Social Guide?                         &                & Revisar CV y experiencia: ¿tiene formación en psicología organizacional o facilitación?; ¿conoce desarrollo de software? \\
         \hline
-        ¿El equipo cuenta con estabilidad mínima (3 o más Sprints trabajando junto)?        &                \\
+        ¿La cultura organizacional permite conversaciones honestas sin temor a represalias? &                & Revisar actas retrospectivas pasadas: ¿equipo compartió críticas?; ¿hubo represalias?; ¿se implementaron cambios?        \\
         \hline
-        ¿El Health Score actual es $\geq$ 4/10?                                             &                \\
+        ¿El equipo cuenta con estabilidad mínima (3 o más Sprints trabajando junto)?        &                & Revisar historial del equipo: ¿ha habido cambios recientes en personal o estructura?                                     \\
         \hline
-        ¿La rotación anual del equipo es menor al 30\%?                                     &                \\
+        ¿El Health Score actual es $\geq$ 4/10?                                             &                & Revisar última medición del Health Score o realizar encuesta rápida anónima                                              \\
+        \hline
+        ¿La rotación anual del equipo es menor al 30\%?                                     &                & Revisar datos de RRHH: ¿cuántas personas se han ido en el último año y por qué razones?                                  \\
         \hline
     \end{tabular}
     \caption{Checklist de viabilidad para la adopción de SocialScrum}
@@ -193,7 +204,11 @@ En esta etapa, el Social Guide realiza la primera medición del Health Score par
     \item Una identificación preliminar de community smells a partir de observación directa: patrones de comunicación en Slack, interacciones en GitHub, dinámicas en Jira, etc.
 \end{enumerate}
 
+\textbf{Protocolo anti-sesgo}: La encuesta debe administrarse de forma anónima mediante plataforma online (Google Forms, Typeform, etc.), sin presencia de liderazgo o managers. El link se envía con 24 horas de anticipación para evitar presiones o influencias de grupo.
+
 El resultado de esta actividad es un Health Score inicial (por ejemplo, 5.8/10) acompañado de una lista preliminar de smells activos. Este punto de referencia será clave para comparar avances en los próximos Sprints y para entender cómo evoluciona la salud social del equipo a lo largo del tiempo.
+
+\textbf{Cálculo del Health Score}: El score basal es el promedio ponderado de las 5 dimensiones (autonomía, competencia, relacionalidad, habilidad, benevolencia), cada una en escala 0-100. Fórmula exacta en sección 4.6.1. Este número es crucial para medir cambio en Sprints posteriores.
 
 \paragraph{Actividad 3: Firma de acuerdos de consentimiento informado (1 hora)}
 
@@ -207,6 +222,8 @@ En este punto, cada integrante del equipo firma dos documentos fundamentales:
 \end{enumerate}
 
 Si menos del 70\% del equipo firma el consentimiento, SocialScrum no debe implementarse. Este umbral garantiza que exista un apoyo mayoritario real y evita que una minoría presione a una mayoría que no está convencida.
+
+Cabe resaltar que hay un permiso psicológico implícito en la firma del consentimiento: Aquí pueden decir cosas incómodas sin miedo. Si dicen 'estoy quemado', eso NO va a su expediente laboral. Este entendimiento es clave para que el equipo se sienta seguro al compartir vulnerabilidades.
 
 \emph{Nota}: Las plantillas completas de ambos acuerdos se encuentran en los \textbf{Anexos A y B} de este documento.
 
@@ -242,6 +259,28 @@ El Sprint 0 se considera exitoso cuando se cumplen los siguientes puntos:
 \end{itemize}
 
 Si alguno de estos criterios no se cumple, el equipo debe considerar extender el Sprint 0 para cerrar los vacíos pendientes. En situaciones más complejas, puede ser necesario reevaluar si este es realmente el momento adecuado para implementar SocialScrum.
+
+\subsubsection{Qué hacer si el equipo rechaza SocialScrum}
+
+Si menos del 70\% del equipo firma el consentimiento, el proceso se detiene. Pero eso no es el final: es el inicio de una investigación.
+
+\paragraph{1. Validación en privado}
+Conversaciones 1:1 confidenciales (no con liderazgo) para confirmar si el rechazo es genuino o hay presión externa.
+
+\paragraph{2. Investigación de causas}
+¿Es por:
+\begin{itemize}
+    \item Falta de comprensión? → Repetir sesión de capacitación
+    \item Desconfianza en Social Guide? → Explorar otro candidato
+    \item Miedo a sobrecarga? → Reducir overhead (ej: Daily Social asincrónica)
+    \item Resistencia cultural? → Posponer 3-6 meses
+\end{itemize}
+
+\paragraph{3. Comunicación a liderazgo}
+``SocialScrum requiere autonomía genuina. Forzar la adopción violaría Autonomía (TAD 3.3.1.1) y garantizaría fracaso.''
+
+\paragraph{4. Siguientes pasos}
+Documentar razones. Crear plan concreto para mejorar condiciones. Reintentar en momento más favorable, si es viable.
 
 \subsection{Presentación al equipo y \textit{stakeholders}}
 
@@ -324,9 +363,20 @@ También se definen las métricas de éxito que permitirán evaluar si la implem
     \item La velocity no cae más del 20\% en el proceso de adopción y muestra señales de recuperación en el Sprint 3.
 \end{itemize}
 
+\textbf{Nota sobre prerequisitos de tiempo}: El tiempo de 45 minutos supone que el equipo ha revisado previamente las secciones 3.2-3.3
+de este documento (Modelo conceptual y Fundamentos de SocialScrum).
+Si eso no es viable, se recomienda:
+
+\begin{itemize}
+    \item \textbf{Opción A}: Expandir a 90 minutos
+    \item \textbf{Opción B}: Dos sesiones de 45 min (con 1 semana diferencia)
+\end{itemize}
+
+De lo contrario, el equipo no tendrá comprensión real del modelo, y el consentimiento será formal pero no genuino.
+
 \subsubsection{Gestión de objeciones comunes}
 
-Durante la presentación pueden surgir resistencias. Las tres objeciones más frecuentes y sus respuestas: (1) ``\textquestiondown Esto no va a quitar tiempo de desarrollo?'' --- Sí, en el corto plazo. Pero la deuda social ya consume tiempo en retrabajo, conflictos y rotación. SocialScrum vuelve visible ese costo y lo reduce estructuradamente. (2) ``\textquestiondown No es esto responsabilidad de HR?'' --- No. HR se enfoca en políticas laborales y contratación; SocialScrum se ocupa de dinámicas operativas: colaboración, comunicación y carga socio-técnica diaria. (3) ``\textquestiondown Qué pasa si el equipo no quiere participar?'' --- No se implementa. El umbral mínimo es 70\% de aceptación.
+Durante la presentación pueden surgir resistencias. Las tres objeciones más frecuentes y sus respuestas: (1) ``\textquestiondown Esto no va a quitar tiempo de desarrollo?'' --- Sí, en el corto plazo. Pero la deuda social ya consume tiempo en retrabajo, conflictos y rotación. SocialScrum vuelve visible ese costo y lo reduce estructuradamente. (2) ``\textquestiondown No es esto responsabilidad de HR?'' --- No. HR se enfoca en políticas laborales y contratación; SocialScrum se ocupa de dinámicas operativas: colaboración, comunicación y carga socio-técnica diaria. (3) ``¿Qué pasa si el equipo no quiere participar?'' --- No se implementa. El umbral mínimo es 70\% de aceptación. Si menos del 70\% firma, hay un protocolo de investigación documentado en la sección 4.2.2.3.
 
 \subsubsection{Documentación post-presentación}
 
@@ -347,7 +397,13 @@ Sin embargo, el proceso de adopción, por bien diseñado que esté, requiere alg
 
 \section{El rol del Social Guide: Perfil, competencias y gobernanza}
 
-El Social Guide es la figura central de SocialScrum. Sin este rol, el modelo se reduce a Scrum con buenas intenciones pero sin mecanismos concretos para gestionar la deuda social. El Social Guide actúa como catalizador de seguridad psicológica \cite{edmondson2018fearless}, facilitando las tres necesidades psicológicas básicas de la Teoría de la Autodeterminación ---autonomía, competencia y relacionalidad \cite{ryan2000self}--- y construyendo la confianza organizacional según el modelo de Mayer et al.\ \cite{mayer1995integrative}. Esta sección define qué es (y qué no es) el Social Guide, sus competencias, selección y gobernanza.
+El Social Guide es la figura central de SocialScrum. Sin este rol, el modelo se reduce a Scrum con buenas intenciones pero sin mecanismos concretos para gestionar la deuda social. El Social Guide facilita seguridad psicológica mediante tres mecanismos:
+
+\begin{enumerate}
+    \item Motivación intrínseca: Crea condiciones donde el equipo quiere colaborar (no se siente obligado) respetando autonomía, competencia y relacionalidad (TAD) \cite{ryan2000self}.
+    \item Confianza interpersonal: Demuestra habilidad (sabe mediación), benevolencia (busca bien del equipo) e integridad (honesto, confidencial) según modelo Mayer et al. \cite{mayer1995integrative}.
+    \item Seguridad psicológica: Genera espacios donde es seguro hablar de conflictos, vulnerabilidades y errores sin temor a represalias \cite{edmondson2018fearless}.
+\end{enumerate}
 
 \subsection{Perfil y competencias requeridas}
 
@@ -356,63 +412,51 @@ El Social Guide requiere un perfil h\'ibrido: comprensi\'on de din\'amicas human
 \begin{table}[h]
     \centering
     \small
-    \begin{tabular}{|l|p{10cm}|}
+    \begin{tabular}{|p{3cm}|p{3.5cm}|p{3cm}|p{4cm}|}
         \hline
-        \textbf{Aspecto}           & \textbf{Requisitos}                                                                                                      \\
+        \textbf{ÁREA}            & \textbf{REQUISITO MÍNIMO}                                                                              & \textbf{CÓMO EVALUAR}                                          & \textbf{NIVEL ACEPTABLE}                                      \\
         \hline
-        Formaci\'on base           & Psicolog\'ia Organizacional, Trabajo Social, Comunicaci\'on o Ingenier\'ia con especializaci\'on en gesti\'on de equipos \\
+        Formación base           & Pregrado en Psicología, Trabajo Social, Comunicación, o Ingeniería con especialización gestión equipos & CV + transcripción + entrevista                                & Título oficial + relevancia demostrada                        \\
         \hline
-        Formaci\'on complementaria & Certificaci\'on en facilitaci\'on, mediaci\'on o coaching (ICF o equivalente); metodolog\'ias \'agiles (CSM, PSM)        \\
+        Formación complementaria & Certificación en: Facilitación, O Mediación (CNV, transformativa), O Coaching (ICF)                    & Credential + entrevista teórica (técnicas)                     & Al menos 1 certificación; puede obtenerse en 6 primeros meses \\
         \hline
-        Experiencia                & M\'inimo 3 a\~nos en equipos de desarrollo (dev, SM, PO o People Operations)                                             \\
+        Experiencia mínima       & 3+ años en equipos de desarrollo (dev, SM, PO, People Ops)                                             & Referencias + entrevista de contexto                           & Trabajo con equipos mínimo 2 años si tiene certs avanzadas    \\
+        \hline
+        \multicolumn{4}{|c|}{\textbf{HARD SKILLS}}                                                                                                                                                                                                                         \\
+        \hline
+        Análisis SNA             & ---                                                                                                    & Caso práctico: analizar sociograma                             & Produce 3 insights válidos de sociograma pequeño en 30 min    \\
+        \hline
+        Medición cualitativa     & ---                                                                                                    & Entrevista semi-estructurada observada                         & Transcribe y analiza con 2-3 códigos principales válidos      \\
+        \hline
+        Facilitación de grupos   & ---                                                                                                    & Facilita retro simulada observada                              & Equipo reporta: "Sentí seguridad psicológica"                 \\
+        \hline
+        Mediación de conflictos  & ---                                                                                                    & Role-play (mediador observado)                                 & Mantiene neutralidad, genera opciones                         \\
+        \hline
+        Dominio Scrum + ágil     & ---                                                                                                    & Explica cómo community smell afecta sprint                     & Propone intervención ágil específica                          \\
+        \hline
+        \multicolumn{4}{|c|}{\textbf{SOFT SKILLS}}                                                                                                                                                                                                                         \\
+        \hline
+        Neutralidad emocional    & ---                                                                                                    & Observación en retrospectiva                                   & Equipo valida que "No toma partido"                           \\
+        \hline
+        Empatía calibrada        & ---                                                                                                    & Role-play (escuchar alguien en conflicto)                      & Conecta emocionalmente sin validar conductas destructivas     \\
+        \hline
+        Coraje profesional       & ---                                                                                                    & Caso ético: "¿Qué harías si equipo quiere expulsar a alguien?" & Propone solución sin atacar a persona                         \\
+        \hline
+        Integridad ética         & ---                                                                                                    & Entrevista sobre confidencialidad                              & Compromiso claro con privacidad                               \\
+        \hline
+        Humildad intelectual     & ---                                                                                                    & Cómo describes límites de tu rol                               & Reconoce límites, propone derivación                          \\
         \hline
     \end{tabular}
-    \caption{Perfil profesional del Social Guide}
+    \caption{Perfil del Social Guide}
     \label{tab:perfil-social-guide}
-\end{table}
-
-\subsubsection{Competencias t\'ecnicas y blandas}
-
-\begin{table}[h]
-    \centering
-    \small
-    \begin{tabular}{|l|l|p{7cm}|}
-        \hline
-        \textbf{Tipo} & \textbf{Competencia}      & \textbf{Descripci\'on}                                              \\
-        \hline
-        Hard          & An\'alisis SNA            & Interpretar m\'etricas de comunicaci\'on, usar Gephi/NodeXL         \\
-        \hline
-        Hard          & Psicometr\'ia             & Administrar escalas de cohesi\'on, burnout, seguridad psicol\'ogica \\
-        \hline
-        Hard          & An\'alisis cualitativo    & Entrevistas, an\'alisis de discurso, patrones narrativos            \\
-        \hline
-        Hard          & Facilitaci\'on            & Retrospectivas sociales, 5 Whys, Fishbone, C\'irculos de di\'alogo  \\
-        \hline
-        Hard          & Mediaci\'on               & T\'ecnicas transformativas, CNV, conversaciones dif\'iciles         \\
-        \hline
-        Hard          & Scrum y desarrollo \'agil & Roles, eventos, artefactos, CI/CD, code review, Jira/GitHub         \\
-        \hline
-        Soft          & Neutralidad emocional     & Escuchar sin juzgar, facilitar sin imponer agenda                   \\
-        \hline
-        Soft          & Empat\'ia calibrada       & Conectar sin perder objetividad                                     \\
-        \hline
-        Soft          & Coraje profesional        & Abordar temas inc\'omodos, se\~nalar comportamientos disfuncionales \\
-        \hline
-        Soft          & Integridad \'etica        & Compromiso inquebrantable con confidencialidad                      \\
-        \hline
-        Soft          & Humildad intelectual      & Reconocer l\'imites, derivar casos que excedan competencia          \\
-        \hline
-    \end{tabular}
-    \caption{Competencias del Social Guide}
-    \label{tab:competencias-social-guide}
 \end{table}
 
 \subsubsection{Qu\'e NO es el Social Guide}
 
 \begin{itemize}
-    \item \textbf{No es psic\'ologo cl\'inico}: No diagnostica ni trata trastornos mentales; deriva a profesionales.
+    \item \textbf{No es psic\'ologo cl\'inico}: No diagnostica ni trata trastornos mentales; deriva a profesionales. Para ello, se crea una matriz: Signo clínico $\rightarrow$ Acción $\rightarrow$ Derivado a $\rightarrow$ Seguimiento.
     \item \textbf{No es evaluador de desempe\~no}: No participa en decisiones de promoci\'on o despido.
-    \item \textbf{No es ``polic\'ia social''}: No sanciona ni impone normas unilateralmente.
+    \item \textbf{No es ``polic\'ia social''}: No sanciona ni impone normas unilateralmente dependiendo el contexto.
     \item \textbf{No reemplaza al Scrum Master}: Son roles complementarios, no intercambiables.
     \item \textbf{No es ``amigo'' del equipo}: Mantiene relaci\'on profesional, no personal.
 \end{itemize}
@@ -424,44 +468,150 @@ El Social Guide requiere un perfil h\'ibrido: comprensi\'on de din\'amicas human
     \small
     \begin{tabular}{|c|l|c|p{6cm}|}
         \hline
-        \textbf{Fase} & \textbf{Nombre}                & \textbf{Duraci\'on} & \textbf{Actividades}                                                     \\
+        \textbf{Fase} & \textbf{Nombre}                & \textbf{Duraci\'on} & \textbf{Actividades}                                                                                        \\
         \hline
-        1             & Identificaci\'on de candidatos & 1 semana            & Buscar internos/externos que cumplan perfil                              \\
+        1             & Identificaci\'on de candidatos & 1 semana            & Buscar internos/externos que cumplan perfil                                                                 \\
         \hline
-        2             & Evaluaci\'on t\'ecnica         & 1 semana            & Caso pr\'actico de smells, facilitaci\'on simulada, entrevista te\'orica \\
+        2             & Evaluaci\'on t\'ecnica         & 1 semana            & Caso pr\'actico de smells, facilitaci\'on simulada, entrevista te\'orica                                    \\
         \hline
-        3             & Entrevista \'etica             & 1 semana            & Entrevistas con SM, Dev Team, CTO; preguntas \'eticas cr\'iticas         \\
+        3             & Entrevista \'etica             & 1 semana            & Entrevistas con SM, Dev Team, CTO; preguntas \'eticas cr\'iticas                                            \\
         \hline
-        4             & Decisi\'on consensuada         & --                  & Requiere consenso SM + Dev Team (mayor\'ia) + CTO                        \\
+        4             & Decisi\'on consensuada         & --                  & Requiere consenso SM + Dev Team (mayoría) + CTO (ver tabla \ref{tab:consenso-seleccion} para más detalles.) \\
         \hline
-        5             & Per\'iodo de prueba            & 3 Sprints           & Facilitar bajo supervisi\'on; voto $\geq$70\% para continuar             \\
+        5             & Per\'iodo de prueba            & 3 Sprints           & Facilitar bajo supervisi\'on; voto $\geq$70\% para continuar                                                \\
         \hline
     \end{tabular}
     \caption{Proceso de selecci\'on del Social Guide}
     \label{tab:seleccion-social-guide}
 \end{table}
 
-\subsubsection{Programa de capacitaci\'on (40 horas)}
-
 \begin{table}[h]
     \centering
-    \small
-    \begin{tabular}{|l|c|p{8cm}|}
+    \begin{tabular}{|l|l|p{4cm}|p{4cm}|}
         \hline
-        \textbf{M\'odulo}            & \textbf{Horas} & \textbf{Contenido}                                                      \\
+        \textbf{Votante}     & \textbf{Autoridad}           & \textbf{Pregunta}                 & \textbf{Voto si}                          \\
         \hline
-        Fundamentos te\'oricos       & 8h             & TAD, Modelo de Confianza Mayer, Community smells, Valores Scrum         \\
+        Scrum Master         & 1 voto                       & ¿Puede facilitar procesos?        & SÍ/NO                                     \\
         \hline
-        Facilitaci\'on y mediaci\'on & 12h            & Retrospectivas sociales, CNV, conversaciones dif\'iciles                \\
+        Dev Team (colectivo) & 1 voto (mayoría $\geq$50\%)  & ¿Lo aceptamos como par confiable? & Mayoría $\geq$50\%                        \\
         \hline
-        Medici\'on y an\'alisis      & 8h             & Escalas psicom\'etricas, SNA, an\'alisis cualitativo                    \\
-        \hline
-        \'Etica y salvaguardas       & 12h            & Confidencialidad, l\'imites profesionales, auditor\'ia, casos complejos \\
+        CTO/VP Eng.          & 1 voto + veto si causa legal & ¿Viable organizacionalmente?      & SÍ/NO (o VETO si causa legal documentada) \\
         \hline
     \end{tabular}
-    \caption{Programa de capacitaci\'on del Social Guide}
-    \label{tab:capacitacion-social-guide}
+    \caption{Proceso de Votación}
 \end{table}
+
+\textbf{Resultado final:}
+\begin{itemize}
+    \item 3 SÍ $\rightarrow$ APROBADO para Fase 5
+    \item 2 SÍ + 1 NO $\rightarrow$ APROBADO si NO no es veto del CTO
+    \item 2 SÍ + 1 VETO CTO $\rightarrow$ RECHAZADO (causa documentada)
+    \item $\leq$1 SÍ $\rightarrow$ RECHAZADO
+\end{itemize}
+
+\subsubsection{Programa de capacitaci\'on del Social Guide}
+
+El programa consta de cuatro fases secuenciales con criterios de aprobaci\'on en cada etapa y una evaluaci\'on final post-capacitaci\'on.:
+
+\subsection*{Fase 1: Fundamentos Teóricos (8 horas)}
+\begin{itemize}
+    \item Semanas 1-2 (antes de Sprint 0)
+    \item 4 sesiones de 2h sincrónicas con tutor externo
+    \item \textbf{Contenido:}
+          \begin{itemize}
+              \item \textbf{Sesión 1: TAD (2h)}
+                    \begin{itemize}
+                        \item Qué es, cómo opera en equipos, checklist de autonomía
+                    \end{itemize}
+              \item \textbf{Sesión 2: Confianza Mayer (2h)}
+                    \begin{itemize}
+                        \item Qué es, diagnóstico de baja confianza, entrevista rápida
+                    \end{itemize}
+              \item \textbf{Sesión 3: Community Smells (2h)}
+                    \begin{itemize}
+                        \item Catálogo, identificación, registro (Cap. 4.5.3)
+                    \end{itemize}
+              \item \textbf{Sesión 4: Valores Scrum aplicados (2h)}
+                    \begin{itemize}
+                        \item Matriz valores $\times$ smells (Cap. 3.7)
+                    \end{itemize}
+          \end{itemize}
+    \item \textbf{Evaluación:} Quiz 30 min, $\geq$80\% para pasar
+\end{itemize}
+
+\subsection*{Fase 2: Facilitación y Mediación (12 horas)}
+\begin{itemize}
+    \item Semanas 3-4 + Sprints 1-2
+    \item 6 sesiones de 2h (sincrónica + práctica en vivo)
+    \item \textbf{Contenido:}
+          \begin{itemize}
+              \item \textbf{Sesiones 1-2: Retrospectivas Sociales (4h)}
+                    \begin{itemize}
+                        \item Protocolo 4 fases, facilitación sin juzgar, generación acciones
+                    \end{itemize}
+              \item \textbf{Sesiones 3-4: CNV - Comunicación No Violenta (4h)}
+                    \begin{itemize}
+                        \item Observación, sentimientos, necesidades, peticiones
+                    \end{itemize}
+              \item \textbf{Sesiones 5-6: Conversaciones difíciles (4h)}
+                    \begin{itemize}
+                        \item Validación, legitimación, expansión de opciones
+                    \end{itemize}
+          \end{itemize}
+    \item \textbf{Evaluación:} Facilita retrospectiva observada por SM + evaluador
+          \begin{itemize}
+              \item Rúbrica: Seguridad psicológica ($\geq$3/5), preguntas generativas ($\geq$3/5), síntesis clara ($\geq$3/5). Si <3 en alguna: sesión coaching adicional
+          \end{itemize}
+\end{itemize}
+
+\subsection*{Fase 3: Medición y Análisis (8 horas)}
+\begin{itemize}
+    \item Semanas 5-6
+    \item 4 sesiones de 2h
+    \item \textbf{Contenido:}
+          \begin{itemize}
+              \item \textbf{Sesión 1:} Health Score (definición, dimensiones, cálculo)
+              \item \textbf{Sesión 2:} Instrumentos (encuestas Likert, entrevistas, SNA)
+              \item \textbf{Sesión 3:} Análisis cualitativo (codificación, síntesis)
+              \item \textbf{Sesión 4:} Reporting (qué comunicar, a quién, formato)
+          \end{itemize}
+    \item \textbf{Evaluación:} Analizar dataset pequeño (10 encuestas); producir Health Score + 3 smells detectados. Si hay sesgos: revisión
+\end{itemize}
+
+\subsection*{Fase 4: Ética y Salvaguardas (12 horas)}
+\begin{itemize}
+    \item Semanas 2-4 (intercalado)
+    \item 6 sesiones de 2h
+    \item \textbf{Contenido:}
+          \begin{itemize}
+              \item \textbf{Sesión 1:} Confidencialidad (qué es confidencial vs reportable)
+              \item \textbf{Sesión 2:} Límites profesionales (cuándo derivar a psicólogo)
+              \item \textbf{Sesión 3:} Sesgos y conflictos de interés
+              \item \textbf{Sesión 4:} Teatro Social (detección y prevención)
+              \item \textbf{Sesión 5:} Casos éticos complejos (role-plays)
+                    \begin{itemize}
+                        \item Ejemplo: "Dev reporta ideación suicida" $\rightarrow$ respuesta correcta
+                    \end{itemize}
+              \item \textbf{Sesión 6:} Auditoría y accountability
+          \end{itemize}
+    \item \textbf{Evaluación:} Cuestionario ético (50 preguntas); role-play observado
+\end{itemize}
+
+\subsection*{Evaluación Final Post-Capacitación (Semana 7)}
+\begin{itemize}
+    \item Quiz teórico: 60 min, $\geq$80\% para pasar
+    \item Facilita retrospectiva simulada + observada
+    \item Caso de análisis: Produce Health Score + diagnóstico + plan
+    \item \textbf{Umbral de aprobación:} Todo debe estar $\geq$3/5
+\end{itemize}
+
+\subsection*{Seguimiento (en primer año)}
+\begin{itemize}
+    \item \textbf{Mes 1-2:} Supervisión semanal (SM/tutor externo)
+    \item \textbf{Mes 3-6:} Supervisión quincenal
+    \item \textbf{Mes 6-12:} Supervisión mensual + sesión de desarrollo anual
+    \item \textbf{Año 2+:} Supervisión según necesidad + educación continua 10h/año
+\end{itemize}
 
 \subsection{Estructura de reporte y gobernanza}
 
