@@ -185,22 +185,44 @@ Al incorporar nuevas dimensiones sociales dentro de los eventos existentes, Soci
 
 La Tabla \ref{tab:eventos-tiempo} presenta una estimación del tiempo adicional (\textit{overhead}) que implican estas adaptaciones, evidenciando que el impacto temporal es mínimo en comparación con los beneficios obtenidos en cohesión, confianza y sostenibilidad del equipo.
 
-\begin{table}[!htbp]
-    \centering
-    \small
-    \begin{tabular}{|l|c|c|c|}
-        \hline
-        \textbf{Evento}      & \textbf{Tiempo estimado} & \textbf{Overhead social} & \textbf{Facilitador}                                \\
-        \hline
-        Daily Standup        & 15 min                   & +2-–3 min                & Social Guide (1 pregunta)                           \\
-        Sprint Planning      & 4 h                      & +15 min                  & Social Guide (revisión de riesgos sociales)         \\
-        Sprint Review        & 2 h                      & +10 min                  & Social Guide (evaluación del \textit{Health Score}) \\
-        Sprint Retrospective & 1.5 h                    & +0 min                   & Scrum Master (técnico) + Social Guide (social)      \\
-        \hline
-    \end{tabular}
-    \caption{Overhead temporal de los eventos sociales en SocialScrum}
-    \label{tab:eventos-tiempo}
-\end{table}
+\begin{adjustwidth}{\parindent}{0pt}
+    \begin{table}[!htbp]
+        \caption{Overhead temporal de los eventos sociales en SocialScrum}
+        \label{tab:eventos-tiempo}
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \small
+        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}
+            {@{}p{3.5cm} c c X@{}}
+            \toprule
+            \textbf{Evento} & \textbf{Tiempo estimado}                            & \textbf{Overhead social} & \textbf{Facilitador} \\
+            \midrule
+            Daily Standup
+                            & 15 min
+                            & +2--3 min
+                            & Social Guide (1 pregunta)                                                                             \\
+
+            Sprint Planning
+                            & 4 h
+                            & +15 min
+                            & Social Guide (revisión de riesgos sociales)                                                           \\
+
+            Sprint Review
+                            & 2 h
+                            & +10 min
+                            & Social Guide (evaluación del \textit{Health Score})                                                   \\
+
+            Sprint Retrospective
+                            & 1.5 h
+                            & +0 min
+                            & Scrum Master (técnico) + Social Guide (social)                                                        \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+\end{adjustwidth}
+
+
+
 
 \emph{Nota:} El principio de \textbf{No Sobrecarga} establece que las adaptaciones de SocialScrum deben integrarse dentro de los eventos existentes de Scrum, procurando no incrementar de forma significativa la duración total de las ceremonias. Este principio se explica en profundidad en el Capítulo 4, Sección 4.3.
 
@@ -213,6 +235,8 @@ Las acciones resultantes se formulan como experimentos con hipótesis claras, m�
 
 En este flujo, todos los roles tienen un papel activo y complementario. El Social Guide aporta el diagnóstico analítico y orienta la conversación hacia los aspectos relacionales; el Scrum Master facilita los diálogos difíciles y protege el ambiente psicológico del grupo; los Developers proponen soluciones prácticas y contextualizadas; y el Product Owner actualiza el \textit{Product Backlog Social} con las acciones resultantes.
 De esta manera, la gestión social deja de ser responsabilidad de una sola figura y se convierte en un compromiso compartido que refuerza la madurez y cohesión del equipo.
+
+\vspace{1em}
 
 \textbf{Criterios de éxito:}
 \begin{itemize}
@@ -246,37 +270,39 @@ La Tabla \ref{tab:artefactos_adaptados} ilustra cómo cada artefacto se enriquec
         \caption{Artefactos de Scrum adaptados en SocialScrum}
         \label{tab:artefactos_adaptados}
         \centering
-        \renewcommand{\arraystretch}{1.15}
+        \renewcommand{\arraystretch}{1.2}
         \small
-        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}{@{}p{2.8cm}X@{}}
+        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}{@{}p{2.8cm} X@{}}
             \toprule
-            \textbf{Artefacto}       & \textbf{Adaptación en SocialScrum}                                                                                                                                                                                                 \\
+            \textbf{Artefacto} & \textbf{Adaptación en SocialScrum}                                                                                                                                                                                                                                                                                                                        \\
             \midrule
 
-            \textbf{Product Backlog} &
-            Se amplía con \textbf{Elementos de Deuda Social} o \textbf{Habilitadores de Salud del Equipo}: iniciativas destinadas a mejorar la comunicación, reducir \textit{smells} persistentes o fortalecer las habilidades sociales del grupo (por ejemplo: ``Establecer protocolos de \textit{code review} no tóxicos para mitigar \textit{Priggish Members}'').
+            \textbf{Product Backlog}
+                               & Se amplía con \textbf{Elementos de Deuda Social} o \textbf{Habilitadores de Salud del Equipo}: iniciativas destinadas a mejorar la comunicación, reducir \textit{smells} persistentes o fortalecer las habilidades sociales del grupo (por ejemplo: ``Establecer protocolos de \textit{code review} no tóxicos para mitigar \textit{Priggish Members}'').
             El Product Owner los prioriza junto al Social Guide considerando cuatro criterios: el \textit{Health Score} actual del equipo, la severidad del smell, el impacto en la velocidad y la viabilidad de mitigación \cite{saeeda2024nontechnicaldebt}.
-            Este enfoque reconoce que cuidar la salud social también es entregar valor, no una distracción. Refuerza la capacidad del equipo para gestionar su propia complejidad (habilidad) y fomenta la mejora continua mediante herramientas concretas (competencia). \\[1pt]
+            Este enfoque reconoce que cuidar la salud social también es entregar valor, no una distracción. Refuerza la capacidad del equipo para gestionar su propia complejidad (habilidad) y fomenta la mejora continua mediante herramientas concretas (competencia).                                                                                                                  \\[1pt]
 
-            \textbf{Sprint Backlog}  &
-            Integra explícitamente las \textbf{Acciones de Mitigación Social} como ítems formales, con descripción clara, responsables asignados, esfuerzo estimado y criterios de aceptación definidos.
+            \textbf{Sprint Backlog}
+                               & Integra explícitamente las \textbf{Acciones de Mitigación Social} como ítems formales, con descripción clara, responsables asignados, esfuerzo estimado y criterios de aceptación definidos.
             Ejemplo: ``Implementar sesiones semanales de ‘lunch \& learn’ sobre el subsistema X.
             Owner: Developer A + voluntario rotativo.
             DoD: Al menos tres desarrolladores pueden explicar la arquitectura básica.
             Métrica: reducción superior al 30\% en preguntas a Developer A (medido en Slack).''
             Esta visibilidad asegura que el trabajo social no sea ``invisible'', sino parte integral del compromiso del Sprint \cite{saeeda2024nontechnicaldebt}.
-            Formaliza la responsabilidad colectiva (compromiso) y potencia la \textbf{autonomía} del equipo para definir cómo abordar sus propios retos interpersonales.                                                                                                  \\[1pt]
+            Formaliza la responsabilidad colectiva (compromiso) y potencia la \textbf{autonomía} del equipo para definir cómo abordar sus propios retos interpersonales.                                                                                                                                                                                                                   \\[1pt]
 
-            \textbf{Incremento}      &
-            Además de cumplir con la \textit{Definition of Done} técnica, cada Incremento se evalúa también por su \textbf{Impacto en la Salud Social}.
+            \textbf{Incremento}
+                               & Además de cumplir con la \textit{Definition of Done} técnica, cada Incremento se evalúa también por su \textbf{Impacto en la Salud Social}.
             El Social Guide participa en la definición de criterios de sostenibilidad social, respondiendo preguntas como: ¿el trabajo se completó sin generar burnout? ¿sin crear nuevos \textit{smells} (por ejemplo, \textit{Black Clouds} por falta de documentación)? ¿mejoraron las dinámicas de colaboración?
             Se analizan indicadores como variaciones en el \textit{Health Score}, aparición o reducción de \textit{smells}, distribución del conocimiento (SNA) o niveles de carga emocional (horas extra, rotación).
             Un Incremento que cumple lo técnico pero deteriora el bienestar del equipo debe considerarse deuda social acumulada \cite{saeeda2024nontechnicaldebt}.
-            Este equilibrio entre entrega técnica y sostenibilidad humana fortalece el valor de \textbf{foco} y refleja la \textbf{relacionalidad} del equipo al medir su cohesión y colaboración efectiva.                                                               \\
+            Este equilibrio entre entrega técnica y sostenibilidad humana fortalece el valor de \textbf{foco} y refleja la \textbf{relacionalidad} del equipo al medir su cohesión y colaboración efectiva.                                                                                                                                                                                \\
+
             \bottomrule
         \end{tabularx}
     \end{table}
 \end{adjustwidth}
+
 
 \FloatBarrier
 
@@ -510,45 +536,47 @@ De esta forma, el foco deja de ser únicamente un asunto de cumplimiento técnic
 
 La Tabla \ref{tab:valores_smells} muestra cómo cada valor de Scrum actúa como un antídoto específico frente a distintos community smells, conectando las dimensiones sociales afectadas con los mecanismos concretos que SocialScrum activa para mitigarlos.
 
-\begin{table}[!htbp]
-    \caption{Community smells mitigados por cada valor de Scrum en SocialScrum \cite{caballero2022communitysmells}}
-    \label{tab:valores_smells}
-    \centering
-    \small
-    \begin{tabular}{@{}p{2.2cm}p{4.2cm}p{3.2cm}p{4.3cm}@{}}
-        \toprule
-        \textbf{Valor Scrum}                                                                                                                                  & \textbf{Community Smells Mitigados} & \textbf{Dimensión Afectada} & \textbf{Mecanismo en SocialScrum} \\
-        \midrule
-        \textbf{Coraje}                                                                                                                                       &
-        Radio Silence,  Sharing Villainy, Lack of Conflict Resolution, Decision Incommunicability, Newbie Ignored                                             &
-        Comunicación y transparencia                                                                                                                          &
-        Social Sprint Retrospective como espacio protegido; modelado de liderazgo; canales seguros para expresar tensiones.                                                                                                                                           \\
-        \addlinespace
-        \textbf{Apertura}                                                                                                                                     &
-        \gls{cs-radio-silence}, \gls{cs-org-silo}, Cognitive Distance, Black Cloud, Information Island, Missing Links, Documentation Silo                     &
-        Visibilidad de información y conocimiento                                                                                                             &
-        Product Backlog Social visible; métricas sociales compartidas; documentación accesible; canales abiertos de comunicación.                                                                                                                                     \\
-        \addlinespace
+\begin{adjustwidth}{\parindent}{0pt}
+    \begin{table}[!htbp]
+        \caption{Community smells mitigados por cada valor de Scrum en SocialScrum \cite{caballero2022communitysmells}}
+        \label{tab:valores_smells}
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \small
+        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}
+            {@{}p{2.5cm} X p{3.5cm} X@{}}
+            \toprule
+            \textbf{Valor Scrum} & \textbf{Community Smells mitigados}                                                                                                                           & \textbf{Dimensión afectada} & \textbf{Mecanismo en SocialScrum} \\
+            \midrule
+            \textbf{Coraje}
+                                 & Radio Silence, Sharing Villainy, Lack of Conflict Resolution, Decision Incommunicability, Newbie Ignored
+                                 & Comunicación y transparencia
+                                 & Social Sprint Retrospective como espacio protegido; modelado de liderazgo; canales seguros para expresar tensiones.                                                                                                             \\
 
-        \textbf{Respeto}                                                                                                                                      &
-        Priggish Members, Lone Wolf, Social Isolation, Toxic Relationships, Power Holder, Bottleneck Developer, Dismissiveness, Unfriendly Environment        &
-        Relacionalidad y benevolencia                                                                                                                         &
-        Código de conducta explícito; rotación de roles; feedback estructurado y empático; políticas contra el acoso o la intimidación.                                                                                                                               \\
-        \addlinespace
+            \textbf{Apertura}
+                                 & \gls{cs-radio-silence}, \gls{cs-org-silo}, Cognitive Distance, Black Cloud, Information Island, Missing Links, Documentation Silo
+                                 & Visibilidad de información y conocimiento
+                                 & Product Backlog Social visible; métricas sociales compartidas; documentación accesible; canales abiertos de comunicación.                                                                                                       \\
 
-        \textbf{Compromiso}                                                                                                                                   &
-        Dissentus, Solution Defiance, Prima Donnas, Organizational Rigidity, Truck Factor, Unhealthy Contribution Patterns, Absent Stakeholder, Disengagement &
-        Responsabilidad colectiva y participación                                                                                                             &
-        Sprint Backlog Social con ownership; Definition of Done con criterios sociales; distribución equitativa del conocimiento; participación activa en decisiones.                                                                                                 \\
-        \addlinespace
+            \textbf{Respeto}
+                                 & Priggish Members, Lone Wolf, Social Isolation, Toxic Relationships, Power Holder, Bottleneck Developer, Dismissiveness, Unfriendly Environment
+                                 & Relacionalidad y benevolencia
+                                 & Código de conducta explícito; rotación de roles; feedback estructurado y empático; políticas contra el acoso o la intimidación.                                                                                                 \\
 
-        \textbf{Foco}                                                                                                                                         &
-        Work Exhaustion, Inefficacy, Organizational Silo (intraequipo), Cognitive Distance, Overload, Time Wasted, Scattered Development                      &
-        Equilibrio, priorización y carga de trabajo                                                                                                           &
-        Capacidad reservada para salud social; Sprint Goal dual (técnico + social); métricas balanceadas; límites WIP con enfoque social.                                                                                                                             \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+            \textbf{Compromiso}
+                                 & Dissentus, Solution Defiance, Prima Donnas, Organizational Rigidity, Truck Factor, Unhealthy Contribution Patterns, Absent Stakeholder, Disengagement
+                                 & Responsabilidad colectiva y participación
+                                 & Sprint Backlog Social con ownership; Definition of Done con criterios sociales; distribución equitativa del conocimiento; participación activa en decisiones.                                                                   \\
+
+            \textbf{Foco}
+                                 & Work Exhaustion, Inefficacy, Organizational Silo (intraequipo), Cognitive Distance, Overload, Time Wasted, Scattered Development
+                                 & Equilibrio, priorización y carga de trabajo
+                                 & Capacidad reservada para salud social; Sprint Goal dual (técnico + social); métricas balanceadas; límites WIP con enfoque social.                                                                                               \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+\end{adjustwidth}
+
 
 La aplicación concreta de estos valores —a través de indicadores tanto cuantitativos como cualitativos, como escalas de medición, preguntas de evaluación y umbrales de acción— se explica con mayor detalle en el Capítulo 4, Sección 4.5.
 
@@ -583,35 +611,38 @@ El marco enfrenta este desafío transformando lo difuso en explícito a través 
     \item Mecanismos de revelación protegida que permiten visibilidad colectiva sin exponer vulnerabilidades individuales (ver Tabla \ref{tab:transparencia_mecanismos}).
 \end{itemize}
 
-\begin{table}[!htbp]
-    \caption{Estrategias de transparencia social en SocialScrum}
-    \label{tab:transparencia_mecanismos}
-    \centering
-    \small
-    \begin{tabular}{@{}p{3.5cm}p{5.5cm}p{4.5cm}@{}}
-        \toprule
-        \textbf{Estrategia}                                                                          & \textbf{Función} & \textbf{Qué visibiliza} \\
-        \midrule
-        Artefactos sociales explícitos                                                               &
-        Formalizan los problemas sociales como work items con el mismo estatus que la deuda técnica. &
-        Community smells, acciones de mitigación y responsabilidades compartidas.                                                                 \\
-        \addlinespace
-        Métricas sociales objetivas                                                                  &
-        Cuantifican dinámicas cualitativas mediante indicadores observables.                         &
-        Patrones de comunicación, distribución de conocimiento y señales tempranas de deterioro social.                                           \\
-        \addlinespace
+\begin{adjustwidth}{\parindent}{0pt}
+    \begin{table}[!htbp]
+        \caption{Estrategias de transparencia social en SocialScrum}
+        \label{tab:transparencia_mecanismos}
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \small
+        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}
+            {@{}p{3.5cm} X X@{}}
+            \toprule
+            \textbf{Estrategia} & \textbf{Función}                                                                                & \textbf{Qué visibiliza} \\
+            \midrule
+            Artefactos sociales explícitos
+                                & Formalizan los problemas sociales como work items con el mismo estatus que la deuda técnica.
+                                & Community smells, acciones de mitigación y responsabilidades compartidas.                                                 \\
 
-        Espacios formales de revelación                                                              &
-        Institucionalizan momentos seguros para exponer impedimentos sociales.                       &
-        Fricciones cotidianas, salud del Sprint e impacto en la entrega.                                                                          \\
-        \addlinespace
+            Métricas sociales objetivas
+                                & Cuantifican dinámicas cualitativas mediante indicadores observables.
+                                & Patrones de comunicación, distribución de conocimiento y señales tempranas de deterioro social.                           \\
 
-        Mecanismos de revelación segura                                                              &
-        Permiten visibilidad colectiva sin inhibir el reporte de temas sensibles.                    &
-        Patrones agregados en lugar de casos individuales.                                                                                        \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+            Espacios formales de revelación
+                                & Institucionalizan momentos seguros para exponer impedimentos sociales.
+                                & Fricciones cotidianas, salud del Sprint e impacto en la entrega.                                                          \\
+
+            Mecanismos de revelación segura
+                                & Permiten visibilidad colectiva sin inhibir el reporte de temas sensibles.
+                                & Patrones agregados en lugar de casos individuales.                                                                        \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+\end{adjustwidth}
+
 
 En última instancia, SocialScrum apuesta por que estas estrategias, aplicadas de forma constante, transformen las dinámicas sociales: de ser simples ``rumores de pasillo'' a convertirse en objetos legítimos de gestión.
 Ese paso —hacer visible lo invisible— es el punto de partida de toda intervención sistemática.
@@ -642,39 +673,42 @@ Para enfrentar este desafío, SocialScrum organiza la inspección en múltiples 
     \item Continua, mediante monitoreo automatizado de señales digitales que revelan cambios abruptos en patrones establecidos.
 \end{itemize}
 
-\begin{table}[!htbp]
-    \caption{Cadencias de inspección social en SocialScrum}
-    \label{tab:inspeccion_cadencias}
-    \centering
-    \small
-    \begin{tabular}{@{}p{2cm}p{3.5cm}p{4.5cm}p{3.5cm}@{}}
-        \toprule
-        \textbf{Cadencia}                                            & \textbf{Foco} & \textbf{Fenómenos detectables} & \textbf{Métodos} \\
-        \midrule
-        Diaria                                                       &
-        Impedimentos inmediatos                                      &
-        Fricciones, bloqueos de comunicación, conflictos emergentes  &
-        Observación directa, indagación estructurada.                                                                                    \\
-        \addlinespace
-        Por Sprint                                                   &
-        Evolución de smells y eficacia de intervenciones             &
-        Nuevos smells, cambios en severidad, efectos secundarios     &
-        Análisis de métricas, revisión de causas raíz.                                                                                   \\
-        \addlinespace
+\begin{adjustwidth}{\parindent}{0pt}
+    \begin{table}[!htbp]
+        \caption{Cadencias de inspección social en SocialScrum}
+        \label{tab:inspeccion_cadencias}
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \small
+        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}
+            {@{}p{2.5cm} p{3.5cm} X X@{}}
+            \toprule
+            \textbf{Cadencia} & \textbf{Foco}                                                & \textbf{Fenómenos detectables} & \textbf{Métodos} \\
+            \midrule
+            Diaria
+                              & Impedimentos inmediatos
+                              & Fricciones, bloqueos de comunicación, conflictos emergentes
+                              & Observación directa, indagación estructurada.                                                                    \\
 
-        Por Release                                                  &
-        Tendencias de largo plazo                                    &
-        Deterioro sostenido, patrones recurrentes, riesgo de burnout &
-        Instrumentos validados, evaluaciones longitudinales.                                                                             \\
-        \addlinespace
+            Por Sprint
+                              & Evolución de smells y eficacia de intervenciones
+                              & Nuevos smells, cambios en severidad, efectos secundarios
+                              & Análisis de métricas, revisión de causas raíz.                                                                   \\
 
-        Continua                                                     &
-        Anomalías en patrones                                        &
-        Cambios súbitos o desviaciones respecto al baseline          &
-        Monitoreo automatizado.                                                                                                          \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+            Por Release
+                              & Tendencias de largo plazo
+                              & Deterioro sostenido, patrones recurrentes, riesgo de burnout
+                              & Instrumentos validados, evaluaciones longitudinales.                                                             \\
+
+            Continua
+                              & Anomalías en patrones
+                              & Cambios súbitos o desviaciones respecto al baseline
+                              & Monitoreo automatizado.                                                                                          \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+\end{adjustwidth}
+
 
 Este enfoque multirresolución permite que SocialScrum detecte tanto las crisis inmediatas como las erosiones silenciosas —ambas igual de peligrosas, solo que en distintas escalas temporales—, garantizando así una visión integral del estado social del equipo.
 
@@ -710,35 +744,38 @@ Estructura la adaptación como un proceso empírico iterativo, basado en:
 
 La Tabla \ref{tab:estrategias_mitigacion} no pretende ser un recetario, sino un punto de partida: presenta familias de estrategias documentadas en la literatura que han funcionado en ciertos contextos, pero que cada equipo debe adaptar o descartar según su realidad.
 
-\begin{table}[!htbp]
-    \caption{Familias de estrategias de mitigación por categoría de community smell}
-    \label{tab:estrategias_mitigacion}
-    \centering
-    \small
-    \begin{tabular}{@{}p{3.5cm}p{5cm}p{5cm}@{}}
-        \toprule
-        \textbf{Categoría}                 & \textbf{Naturaleza del problema} & \textbf{Familias de intervención}              \\
-        \midrule
-        Comunicación                       &
-        Flujos bloqueados o distorsionados &
-        Canales estructurados, redistribución de intermediación, protocolos asíncronos \cite{wilson_all_2006}.                 \\
-        \addlinespace
-        Conocimiento                       &
-        Distribución desigual de expertise &
-        Transferencia por inmersión, incentivos para documentación, rotación de funciones \cite{caballero2022communitysmells}. \\
-        \addlinespace
+\begin{adjustwidth}{\parindent}{0pt}
+    \begin{table}[!htbp]
+        \caption{Familias de estrategias de mitigación por categoría de community smell}
+        \label{tab:estrategias_mitigacion}
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \small
+        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}
+            {@{}p{3.5cm} X X@{}}
+            \toprule
+            \textbf{Categoría} & \textbf{Naturaleza del problema}                                                                                       & \textbf{Familias de intervención} \\
+            \midrule
+            Comunicación
+                               & Flujos bloqueados o distorsionados
+                               & Canales estructurados, redistribución de intermediación, protocolos asíncronos \cite{wilson_all_2006}.                                                     \\
 
-        Relacional                         &
-        Deterioro de vínculos o exclusión  &
-        Mediación, normas explícitas, construcción de propósito compartido \cite{tulili2022burnout}.                           \\
-        \addlinespace
+            Conocimiento
+                               & Distribución desigual de expertise
+                               & Transferencia por inmersión, incentivos para documentación, rotación de funciones \cite{caballero2022communitysmells}.                                     \\
 
-        Organizacional                     &
-        Impedimentos estructurales         &
-        Comunidades de práctica, movilidad temporal, escalamiento progresivo \cite{saeeda2024nontechnicaldebt}.                \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+            Relacional
+                               & Deterioro de vínculos o exclusión
+                               & Mediación, normas explícitas, construcción de propósito compartido \cite{tulili2022burnout}.                                                               \\
+
+            Organizacional
+                               & Impedimentos estructurales
+                               & Comunidades de práctica, movilidad temporal, escalamiento progresivo \cite{saeeda2024nontechnicaldebt}.                                                    \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+\end{adjustwidth}
+
 
 Este enfoque se alinea con los tres principios de la TAD para lograr intervenciones sostenibles \cite{ryan_self-determination_2000}:
 preservar la autonomía (co-crear soluciones, no imponerlas), reforzar la competencia (que el equipo tenga los medios para ejecutarlas) y fortalecer la relacionalidad (fomentar la unión, no la fragmentación).
@@ -753,30 +790,33 @@ La transparencia transforma lo difuso en observable; la inspección identifica d
 
 Aplicado de manera consistente —en distintas cadencias (diaria, Sprint, Release) y a través de métodos mixtos, tanto cuantitativos como cualitativos—, este ciclo convierte la deuda social de una amenaza invisible en un aspecto gestionable dentro del proceso ágil.
 
-\begin{table}[!htbp]
-    \caption{Consecuencias de la ausencia de principios empíricos en la gestión de la deuda social}
-    \label{tab:consecuencias_ausencia}
-    \centering
-    \small
-    \begin{tabular}{@{}p{3cm}p{5.5cm}p{5cm}@{}}
-        \toprule
-        \textbf{Principio ausente}                                                                        & \textbf{Patrón de fallo} & \textbf{Evidencia empírica}                                                 \\
-        \midrule
-        \textbf{Transparencia}                                                                            &
-        Acumulación silenciosa de disfunciones hasta la crisis; normalización de comportamientos nocivos. &
-        Silos no detectados que derivan en re-arquitecturas completas \cite{tamburri2015insights}; ``ambiente de miedo'' institucionalizado en Boeing \cite{saeeda2024nontechnicaldebt}.                           \\
-        \addlinespace
-        \textbf{Inspección}                                                                               &
-        Burnout como desenlace no anticipado; escalamiento exponencial de los costos humanos y técnicos.  &
-        Estudios muestran que el burnout presentaba señales meses antes sin inspección continua \cite{tulili2022burnout}; detección tardía implica costos significativamente mayores \cite{dreesen2021socialdebt}. \\
-        \addlinespace
+\begin{adjustwidth}{\parindent}{0pt}
+    \begin{table}[!htbp]
+        \caption{Consecuencias de la ausencia de principios empíricos en la gestión de la deuda social}
+        \label{tab:consecuencias_ausencia}
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \small
+        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}{@{}p{3.0cm} X X@{}}
+            \toprule
+            \textbf{Principio ausente} & \textbf{Patrón de fallo}                                                                                                                                                                                   & \textbf{Evidencia empírica} \\
+            \midrule
+            \textbf{Transparencia}
+                                       & Acumulación silenciosa de disfunciones hasta la crisis; normalización de comportamientos nocivos.
+                                       & Silos no detectados que derivan en re-arquitecturas completas \cite{tamburri2015insights}; ``ambiente de miedo'' institucionalizado en Boeing \cite{saeeda2024nontechnicaldebt}.                                                         \\
+            \addlinespace
+            \textbf{Inspección}
+                                       & Burnout como desenlace no anticipado; escalamiento exponencial de los costos humanos y técnicos.
+                                       & Estudios muestran que el burnout presentaba señales meses antes sin inspección continua \cite{tulili2022burnout}; detección tardía implica costos significativamente mayores \cite{dreesen2021socialdebt}.                               \\
+            \addlinespace
+            \textbf{Adaptación}
+                                       & Intervenciones contraproducentes; persistencia de síntomas por aplicar soluciones superficiales.
+                                       & Acciones mal diseñadas que agravan el burnout \cite{martini2019agiledebt}; community smells recurrentes no abordados desde su causa raíz \cite{caballero2022communitysmells}.                                                            \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+\end{adjustwidth}
 
-        \textbf{Adaptación}                                                                               &
-        Intervenciones contraproducentes; persistencia de síntomas por aplicar soluciones superficiales.  &
-        Acciones mal diseñadas que agravan el burnout \cite{martini2019agiledebt}; community smells recurrentes no abordados desde su causa raíz \cite{caballero2022communitysmells}.                              \\
-        \bottomrule
-    \end{tabular}
-\end{table}
 
 Para ilustrar cómo opera el ciclo de Transparencia $\rightarrow$ Inspección $\rightarrow$ Adaptación dentro de SocialScrum, a continuación se presenta un caso práctico:
 
@@ -853,11 +893,13 @@ En este modelo, la salud social se mide a través del \textit{Health Score}, un 
 Cada valor se califica en una escala del 1 al 10, generando un \textit{Health Score} promedio que representa la salud social general del equipo.
 Un puntaje inferior a 4/10 indica una situación crítica que requiere intervención inmediata, mientras que valores altos reflejan un entorno estable y colaborativo.
 
+\vspace{1em}
+
 \textbf{Ejemplos de preguntas de evaluación:}
 \begin{itemize}
-    \item \textit{Apertura}: ``¿Puedo expresar mi opinión con sinceridad dentro del equipo, sin miedo a consecuencias negativas?'' (1 = Nunca, 10 = Siempre)
-    \item \textit{Respeto}: ``¿Siento que mis aportes son realmente valorados y reconocidos por mis compañeros?'' (1 = Para nada, 10 = Totalmente)
-    \item \textit{Coraje}: ``¿El equipo enfrenta las conversaciones difíciles cuando algo no está funcionando?'' (1 = Se evitan, 10 = Se abordan abiertamente)
+    \item \textit{Apertura}: ``¿Puedo expresar mi opinión con sinceridad dentro del equipo, sin miedo a consecuencias negativas?'' (1 = Nunca, 10 = Siempre).
+    \item \textit{Respeto}: ``¿Siento que mis aportes son realmente valorados y reconocidos por mis compañeros?'' (1 = Para nada, 10 = Totalmente).
+    \item \textit{Coraje}: ``¿El equipo enfrenta las conversaciones difíciles cuando algo no está funcionando?'' (1 = Se evitan, 10 = Se abordan abiertamente).
 \end{itemize}
 
 La forma de aplicar esta medición —que incluye el conjunto completo de preguntas, las escalas utilizadas y el seguimiento de las tendencias a lo largo del tiempo— se explica con mayor detalle en el Capítulo 4, Sección 4.5: \textit{``Métricas de Salud Social''}.
@@ -962,13 +1004,13 @@ Si el equipo detecta que un reporte vulnera las salvaguardas acordadas, tiene de
 Las salvaguardas éticas no son simples declaraciones de principios: necesitan traducirse en acciones concretas y acuerdos formales. En SocialScrum, dos documentos son fundamentales para poner en práctica estas protecciones:
 
 \begin{enumerate}
-    \item \textbf{Acuerdo de Confidencialidad del Social Guide:} un compromiso formal en el que el Social Guide declara que no compartirá información individual, que solo reportará datos agregados y que su prioridad será proteger la seguridad psicológica del equipo. Este acuerdo debe firmarse antes de asumir el rol.
+    \item \textbf{Acuerdo de confidencialidad del Social Guide:} un compromiso formal en el que el Social Guide declara que no compartirá información individual, que solo reportará datos agregados y que su prioridad será proteger la seguridad psicológica del equipo. Este acuerdo debe firmarse antes de asumir el rol.
 
-    \item \textbf{Acuerdo del Equipo (Consentimiento Informado):} un documento donde el equipo autoriza la implementación de SocialScrum bajo condiciones claras de confidencialidad, anonimización y derecho de auditoría. Cada miembro firma, dejando constancia de que entiende y acepta plenamente estas condiciones.
+    \item \textbf{Acuerdo del equipo (Consentimiento Informado):} un documento donde el equipo autoriza la implementación de SocialScrum bajo condiciones claras de confidencialidad, anonimización y derecho de auditoría. Cada miembro firma, dejando constancia de que entiende y acepta plenamente estas condiciones.
 
 \end{enumerate}
 
-Estos acuerdos no son un trámite legal más, sino verdaderos mecanismos de commitment: convierten las promesas en compromisos reales y verificables. En esencia, refuerzan la confianza al alinear lo que se dice con lo que se hace —lo que Mayer et al. \cite{mayer_integrative_1995} denominan la dimensión de integridad.
+Estos acuerdos no son un trámite legal más, sino verdaderos mecanismos de commitment: convierten las promesas en compromisos reales y verificables. En esencia, refuerzan la confianza al alinear lo que se dice con lo que se hace —lo que Mayer et al. \cite{mayer_integrative_1995} denominan la dimensión de integridad—, ya que este alineamiento permite que las partes evalúen objetivamente el cumplimiento de los compromisos, fortaleciendo así la cooperación y reduciendo la incertidumbre sobre el comportamiento futuro.
 
 La implementación detallada de estas salvaguardas —incluyendo plantillas de acuerdos, protocolos de reporte y ejemplos prácticos— se presenta en el Capítulo 4, Sección 4.7: ``Consideraciones Éticas y Salvaguardas Obligatorias''.
 
@@ -985,35 +1027,37 @@ La Capa 1 (Fundamentos) integra tres marcos teóricos complementarios que sirven
     \item Finalmente, los Valores de Scrum aportan la brújula ética y cultural que orienta las decisiones y comportamientos del grupo.
 \end{itemize}
 
-\textbf{Capa 1 (Fundamentos)} Estos tres fundamentos convergen para habilitar los principios empíricos de Scrum —Transparencia, Inspección y Adaptación— que, aplicados al ámbito social, dan origen al enfoque distintivo de SocialScrum.
+\textbf{Capa 1 (Fundamentos)}: Estos tres fundamentos convergen para habilitar los principios empíricos de Scrum —Transparencia, Inspección y Adaptación— que, aplicados al ámbito social, dan origen al enfoque distintivo de SocialScrum.
 La relación entre estos fundamentos puede observarse en la Figura \ref{fig:fundamentos_teoricos}.
 
 % --- DIAGRAMA FUNDAMENTOS TEÓRICOS ---
+\vspace{1em}
 \begin{figure}[!htbp]
     \centering
     \begin{tikzpicture}[
         node distance=1.5cm, auto,
-        component/.style={rectangle, draw, fill=white, text width=3.0cm, minimum height=4.2cm,
+        component/.style={rectangle, draw=blue!75, fill=gray!10, text=black, text width=3.0cm, minimum height=4.2cm,
                 rounded corners, align=center, font=\scriptsize, inner sep=3pt},
-        arrow/.style={-{Stealth}, thick}
+        arrow/.style={-{Stealth[length=3mm]}, very thick, blue!80}
         ]
+
         % Tres bloques - centrados y con altura uniforme
         \node[component] (tad) {%
-            \centering\textbf{TAD}\\[3pt]\rule{\linewidth}{0.4pt}\\[4pt]
+            \footnotesize\textbf{TAD}\\[3pt]\rule{\linewidth}{0.4pt}\\[4pt]
             Autonomía\\[2pt]
             Competencia\\[2pt]
             Relacionalidad
         };
 
         \node[component, right=0.5cm of tad] (conf) {%
-            \centering\textbf{Confianza}\\[3pt]\rule{\linewidth}{0.4pt}\\[4pt]
+            \footnotesize\textbf{Confianza}\\[3pt]\rule{\linewidth}{0.4pt}\\[4pt]
             Habilidad\\[2pt]
             Benevolencia\\[2pt]
             Integridad
         };
 
         \node[component, right=0.5cm of conf] (vals) {%
-            \centering\textbf{Valores de Scrum}\\[3pt]\rule{\linewidth}{0.4pt}\\[4pt]
+            \footnotesize\textbf{Valores de Scrum}\\[3pt]\rule{\linewidth}{0.4pt}\\[4pt]
             Coraje\\[2pt]
             Apertura\\[2pt]
             Respeto\\[2pt]
@@ -1022,8 +1066,8 @@ La relación entre estos fundamentos puede observarse en la Figura \ref{fig:fund
         };
 
         % Barra superior - alineada con los bordes de los 3 bloques
-        \node[rectangle, draw, fill=blue!10, minimum height=1.5cm, rounded corners,
-            align=center, font=\small\bfseries, above=0.5cm of conf,
+        \node[rectangle, draw=blue!75, fill=gray!10, text=black, minimum height=1.5cm, rounded corners,
+            align=center, font=\footnotesize\bfseries, above=0.5cm of conf,
             fit={(tad.north west) (vals.north east)}, inner sep=0pt,
             anchor=south] (hdr) {FUNDAMENTOS TEÓRICOS};
 
@@ -1038,69 +1082,72 @@ La relación entre estos fundamentos puede observarse en la Figura \ref{fig:fund
         \draw[arrow] (vals.south) -- (cul.north);
 
     \end{tikzpicture}
-    \caption{Fundamentos teóricos de SocialScrum}
+    \caption{\normalsize Fundamentos teóricos de SocialScrum.}
     \label{fig:fundamentos_teoricos}
 \end{figure}
 
 \FloatBarrier
 
-\textbf{Capa 2 (Principios Empíricos)} representa el corazón operativo del modelo, donde los tres pilares de Scrum —Transparencia, Inspección y Adaptación— se articulan en un ciclo de retroalimentación continua.
+\textbf{Capa 2 (Principios empíricos)}: representa el corazón operativo del modelo, donde los tres pilares de Scrum —Transparencia, Inspección y Adaptación— se articulan en un ciclo de retroalimentación continua.
 En este nivel, la Transparencia convierte los fenómenos sociales difusos en objetos observables; la Inspección monitorea su evolución en distintas cadencias (diaria, por Sprint, por Release y continua); y la Adaptación actúa mediante experimentación controlada para intervenir en las causas raíz.
 Los resultados de esta adaptación generan nueva transparencia, cerrando así el ciclo y promoviendo el aprendizaje constante del equipo.
+
+\vspace{1em}
 
 % --- PRINCIPIOS EMPÍRICOS (Ciclo de Retroalimentación) ---
 \begin{figure}[!htbp]
     \centering
     \begin{tikzpicture}[
-        scale=1.15, transform shape,
+        scale=1.0, transform shape,
         node distance=2.2cm,
-        princ/.style={rectangle, draw=blue!75, fill=blue!12, text width=4.2cm, minimum height=3.2cm, rounded corners=4mm, align=center, font=\normalsize\bfseries, line width=1.2pt},
+        princ/.style={rectangle, draw=blue!75, fill=gray!10, text=black, text width=4.2cm, minimum height=3.2cm, rounded corners=4mm, align=center, font=\small\bfseries, line width=1.0pt},
         arrow/.style={-{Stealth[length=3mm]}, very thick, blue!80},
         feedback/.style={-{Stealth[length=3mm]}, very thick, red!80, dashed},
-        labeltext/.style={font=\small\itshape, text=black!80}
+        labeltext/.style={font=\footnotesize\itshape, text=black!80}
         ]
+
         % Nodos principales
         \node[princ] (transp) at (0,0) {
-        TRANSPARENCIA\\[6pt]
-        {\normalfont\small Convierte lo invisible en observable}
+        {\footnotesize TRANSPARENCIA}\\[1pt]
+        {\scriptsize Convierte lo invisible en observable}
         };
 
         \node[princ] (insp) at (7.5,0) {
-        INSPECCIÓN\\[6pt]
-        {\normalfont\small Monitorea evolución continua}
+        {\footnotesize INSPECCIÓN}\\[1pt]
+        {\scriptsize Monitorea evolución continua}
         };
 
         \node[princ] (adapt) at (3.75,-5.0) {
-        ADAPTACIÓN\\[6pt]
-        {\normalfont\small Experimenta e interviene}
+        {\footnotesize ADAPTACIÓN}\\[1pt]
+        {\scriptsize Experimenta e interviene}
         };
 
         % Flechas del ciclo
-        \draw[arrow] (transp.east) -- node[midway, above, labeltext, yshift=6pt] {hace visible} (insp.west);
-        \draw[arrow] (insp.south) -- node[pos=0.55, above, labeltext, yshift=4pt, text width=3.2cm, align=center] {detecta desviaciones} (adapt.north);
-        \draw[arrow] (adapt.north) -- node[pos=0.45, above, labeltext, yshift=4pt, text width=3.2cm, align=center] {genera cambios} (transp.south);
+        \draw[arrow] (transp.east) -- node[midway, above, labeltext, yshift=3pt] {hace visible} (insp.west);
+        \draw[arrow] (insp.south) -- node[pos=0.55, right, labeltext, yshift=1pt, text width=3.2cm, align=center] {detecta desviaciones} (adapt.north);
+        \draw[arrow] (adapt.north) -- node[pos=0.45, left, labeltext, yshift=1pt, text width=3.2cm, align=center] {genera cambios} (transp.south);
 
         % Feedback loop
-        \draw[feedback] (adapt.east) .. controls +(2,-1) and +(0.5,-1) .. node[right, labeltext, text width=2cm, align=center] {nueva transparencia} (insp.south);
+        \draw[feedback] (adapt.east) .. controls +(2,-1.5) and +(0.5,-1.5) .. node[right, labeltext, text width=2cm, align=center] {nueva transparencia} (insp.south);
 
         % Etiqueta de cadencias
-        \node[below=0.5cm of adapt, draw, fill=yellow!10, rounded corners, text width=9.5cm, align=center, font=\small] {
-            \textbf{Cadencias múltiples:} \mbox{Diaria} $\mid$ Sprint $\mid$ Release $\mid$ Continua
+        \node[below=0.8cm of adapt, draw, fill=gray!10, rounded corners, text width=9.5cm, align=center, font=\footnotesize, text=black] {
+            \textbf{Cadencias múltiples:} Diaria $\mid$ Sprint $\mid$ Release $\mid$ Continua
         };
 
         % Título superior
-        \node[above=0.5cm of transp, xshift=3.75cm, font=\bfseries\Large] {
-            Ciclo Empírico de Gestión Social
+        \node[above=0.5cm of transp, xshift=3.75cm, font=\large\bfseries] {
+            Ciclo empírico de gestión social
         };
 
     \end{tikzpicture}
-    \caption{Principios empíricos de SocialScrum: ciclo de retroalimentación continua}
+    \caption{\normalsize Principios empíricos de SocialScrum: ciclo de retroalimentación continua.}
     \label{fig:principios_empiricos}
 \end{figure}
 
 \FloatBarrier
 
-\textbf{Capa 3 (Componentes Operacionales)} traduce los principios empíricos en mecanismos concretos que hacen que SocialScrum funcione en la práctica.
+\textbf{Capa 3 (Componentes operacionales)}: traduce los principios empíricos en mecanismos concretos que hacen que SocialScrum funcione en la práctica.
 Esta capa define el ``cómo'': los roles que sostienen la dinámica social, los eventos que la institucionalizan y los artefactos que le dan trazabilidad.
 
 En primer lugar, los roles incorporan al \textbf{Social Guide} como figura integradora, trabajando junto al \textbf{Scrum Master} (facilitador del proceso), el \textbf{Product Owner} (priorizador estratégico) y los \textbf{Developers} (ejecutores técnicos y sociales).
@@ -1111,82 +1158,70 @@ Por último, los artefactos se amplían para formalizar la gestión de la deuda 
     \centering
     \begin{tikzpicture}[
         node distance=0.3cm,
-        colbox/.style={rectangle, draw=black!50, fill=#1, text width=3.5cm, minimum height=5cm, rounded corners=2mm, align=center, font=\small, line width=0.8pt},
-        header/.style={font=\small\bfseries},
-        item/.style={font=\scriptsize},
-        connector/.style={{Stealth[length=3mm]}-{Stealth[length=3mm]}, thick, gray!60}
+        colbox/.style={rectangle, draw=blue!75, fill=gray!10, text=black, text width=4.2cm, minimum height=5cm, rounded corners=4mm, align=center, font=\small\bfseries, line width=1.0pt},
+        header/.style={\footnotesize\bfseries},
+        item/.style={\scriptsize\rmfamily},
+        connector/.style={-{Stealth[length=3mm]}, very thick, blue!80},
+        labeltext/.style={font=\footnotesize\itshape, text=black!80}
         ]
+
         % Columna 1: ROLES
-        \node[colbox=green!10] (roles) at (0,0) {
-            \textcolor{black}{\textbf{ROLES}}\\[8pt]
-            \begin{tabular}{l}
-                \textbf{Social Guide}       \\[-2pt]
-                {\scriptsize (integrador)}  \\[4pt]
-                \textbf{Scrum Master}       \\[-2pt]
-                {\scriptsize (facilitador)} \\[4pt]
-                \textbf{Product Owner}      \\[-2pt]
-                {\scriptsize (priorizador)} \\[4pt]
-                \textbf{Developers}         \\[-2pt]
-                {\scriptsize (ejecutores)}
-            \end{tabular}
+        \node[colbox] (roles) at (0,0) {
+        {\footnotesize ROLES}\\[2pt]
+        {\scriptsize
+        Social Guide (integrador)\\[2pt]
+        Scrum Master (facilitador)\\[2pt]
+        Product Owner (priorizador)\\[2pt]
+        Developers (ejecutores)}
         };
 
         % Columna 2: EVENTOS
-        \node[colbox=orange!10, right=1.5cm of roles] (eventos) {
-            \textcolor{black}{\textbf{EVENTOS}}\\[8pt]
-            \begin{tabular}{l}
-                • Daily Social    \\[2pt]
-                • Sprint Planning \\
-                \quad Social      \\[2pt]
-                • Sprint Review   \\
-                \quad Social      \\[2pt]
-                • Retrospective   \\
-                \quad \textbf{Social (núcleo)}
-            \end{tabular}
+        \node[colbox, right=1.8cm of roles] (eventos) {
+        {\footnotesize EVENTOS}\\[2pt]
+        {\scriptsize
+        Daily Social\\[1pt]
+        Sprint Planning Social\\[1pt]
+        Sprint Review Social\\[1pt]
+        Retrospective Social (núcleo)}
         };
 
         % Columna 3: ARTEFACTOS
-        \node[colbox=purple!10, right=1.5cm of eventos] (artef) {
-            \textcolor{black}{\textbf{ARTEFACTOS}}\\[8pt]
-            \begin{tabular}{l}
-                • Product Backlog \\
-                \quad Social      \\[2pt]
-                • Sprint Backlog  \\
-                \quad Social      \\[2pt]
-                • Registro de     \\
-                \quad Smells      \\[2pt]
-                • Métricas        \\
-                \quad Sociales
-            \end{tabular}
+        \node[colbox, right=1.8cm of eventos] (artef) {
+        {\footnotesize ARTEFACTOS}\\[2pt]
+        {\scriptsize
+        Product Backlog Social\\[1pt]
+        Sprint Backlog Social\\[1pt]
+        Registro de Smells\\[1pt]
+        Métricas Sociales}
         };
 
         % Conectores bidireccionales
-        \draw[connector] (roles.east) -- (eventos.west);
-        \draw[connector] (eventos.east) -- (artef.west);
+        \draw[connector] (roles.east) -- node[midway, above, labeltext] {} (eventos.west);
+        \draw[connector] (eventos.east) -- node[midway, above, labeltext] {} (artef.west);
 
         % Etiquetas inferiores
-        \node[below=0.1cm of roles, font=\scriptsize\itshape, text=gray] {Responsabilidad};
-        \node[below=0.1cm of eventos, font=\scriptsize\itshape, text=gray] {Cadencias};
-        \node[below=0.1cm of artef, font=\scriptsize\itshape, text=gray] {Transparencia};
+        \node[below=0.8cm of roles, font=\footnotesize\itshape, text=black] {Responsabilidad};
+        \node[below=0.8cm of eventos, font=\footnotesize\itshape, text=black] {Cadencias};
+        \node[below=0.8cm of artef, font=\footnotesize\itshape, text=black] {Transparencia};
 
         % Título superior
-        \node[above=0.5cm of eventos, font=\bfseries\large] {
+        \node[above=0.5cm of eventos, font=\large\bfseries] {
             Componentes Operacionales de SocialScrum
         };
 
         % Subtítulo
-        \node[below=0.8cm of eventos, font=\scriptsize\itshape, text width=10cm, align=center] {
+        \node[below=1.2cm of eventos, font=\footnotesize\itshape, text width=12cm, align=center] {
             Mecanismos que implementan los principios empíricos
         };
 
     \end{tikzpicture}
-    \caption{Componentes operacionales de SocialScrum: roles, eventos y artefactos adaptados}
+    \caption{\normalsize Componentes operacionales de SocialScrum: roles, eventos y artefactos adaptados.}
     \label{fig:componentes_operacionales}
 \end{figure}
 
 \FloatBarrier
 
-\textbf{Capa 4 Resultados (Outcomes)} representa los resultados observables del modelo SocialScrum, mostrando tanto los efectos preventivos (reducción de community smells por categoría) como los impactos sistémicos positivos en el equipo y la organización.
+\textbf{Capa 4 Resultados (Outcomes)}: representa los resultados observables del modelo SocialScrum, mostrando tanto los efectos preventivos (reducción de community smells por categoría) como los impactos sistémicos positivos en el equipo y la organización.
 
 En esta última capa, SocialScrum trasciende la gestión operativa para mostrar su valor sistémico: cómo la aplicación continua de sus principios y componentes reduce la deuda social, fortalece la confianza, previene el burnout y mejora la sostenibilidad del trabajo en equipo.
 Así, los resultados no son únicamente reactivos (resolver conflictos o eliminar smells), sino también emergentes, reflejando una transformación cultural hacia equipos más cohesionados, autónomos y emocionalmente saludables.
@@ -1194,55 +1229,56 @@ Así, los resultados no son únicamente reactivos (resolver conflictos o elimina
 \begin{figure}[!htbp]
     \centering
     \begin{tikzpicture}[
-        node distance=1cm,
-        bigbox/.style={rectangle, draw=black!70, fill=#1, text width=12cm, minimum height=2.5cm, rounded corners=3mm, align=left, font=\small, line width=1pt},
-        arrow/.style={-{Stealth[length=3mm]}, ultra thick, blue!50}
+        node distance=1.5cm,
+        bigbox/.style={rectangle, draw=blue!75, fill=gray!10, text=black, text width=12cm, minimum height=3cm, rounded corners=4mm, align=left, font=\small\bfseries, line width=1.0pt},
+        arrow/.style={-{Stealth[length=3mm]}, very thick, blue!80},
+        labeltext/.style={font=\footnotesize\itshape, text=black}
         ]
 
         % Caja superior: Prevención
-        \node[bigbox=red!5] (prev) at (0,0) {
-            \textbf{\large Prevención de Community Smells}\\[8pt]
-            \begin{tabular}{@{}ll@{}}
-                \textbf{Comunicación:}   & Radio Silence, Bottleneck                   \\
-                \textbf{Conocimiento:}   & Black Cloud, Sharing Villainy               \\
-                \textbf{Relacional:}     & Lone Wolf, Toxic Relationships, Burnout     \\
-                \textbf{Organizacional:} & Organizational Silo, Sluggish Organizations
-            \end{tabular}
+        \node[bigbox] (prev) at (0,0) {
+        {\footnotesize Prevención de community smells}\\[2pt]
+        {\scriptsize
+        Comunicación: Radio Silence, Bottleneck\\
+        Conocimiento: Black Cloud, Sharing Villainy\\
+        Relacional: Lone Wolf, Toxic Relationships, Burnout\\
+        Organizacional: Organizational Silo, Sluggish Organizations
+        }
         };
 
         % Flecha central
-        \draw[arrow] (prev.south) -- ++(0,-0.8);
+        \draw[arrow] (prev.south) -- ++(0,-1.0);
 
         % Caja inferior: Resultados sistémicos
-        \node[bigbox=green!5, below=1.5cm of prev] (result) {
-            \textbf{\large Resultados Sistémicos}\\[8pt]
-            \begin{tabular}{@{}ccc@{}}
-                \textcolor{red!70}{$\downarrow$ Deuda Social} &
-                \textcolor{blue!70}{$\uparrow$ Confianza}     &
-                \textcolor{green!70}{$\uparrow$ Sostenibilidad} \\[4pt]
-                \textcolor{green!70}{$\uparrow$ Cohesión}     &
-                \textcolor{blue!70}{$\uparrow$ Autonomía}     &
-                \textcolor{red!70}{$\downarrow$ Burnout}
-            \end{tabular}
+        \node[bigbox, below=2.0cm of prev] (result) {
+        {\footnotesize Resultados sistémicos}\\[2pt]
+        {\scriptsize
+        $\downarrow$ Deuda Social \quad
+        $\uparrow$ Confianza \quad
+        $\uparrow$ Sostenibilidad\\[2pt]
+        $\uparrow$ Cohesión \quad
+        $\uparrow$ Autonomía \quad
+        $\downarrow$ Burnout
+        }
         };
 
         % Título superior
-        \node[above=0.5cm of prev, font=\bfseries\Large] {
+        \node[above=0.5cm of prev, font=\large\bfseries] {
             Outcomes de SocialScrum
         };
 
         % Subtítulo
-        \node[above=0.2cm of prev, font=\scriptsize\itshape] {
+        \node[above=0.2cm of prev, font=\footnotesize\itshape] {
             Qué se previene y qué mejora sistémicamente
         };
 
         % Nota al pie
-        \node[below=0.3cm of result, font=\scriptsize\itshape, text width=12cm, align=center, text=gray!70] {
-        La gestión sistemática de deuda social genera impactos tanto específicos\\(prevención de smells) como emergentes (mejora de propiedades sistémicas)
+        \node[below=0.5cm of result, font=\small\itshape, text width=12cm, align=center, text=black] {
+            La gestión sistemática de deuda social genera impactos tanto específicos (prevención de smells) como emergentes (mejora de propiedades sistémicas)
         };
 
     \end{tikzpicture}
-    \caption{Resultados del modelo SocialScrum: prevención y mejora sistémica}
+    \caption{\normalsize Resultados del modelo SocialScrum: prevención y mejora sistémica.}
     \label{fig:outcomes_socialscrum}
 \end{figure}
 
@@ -1250,180 +1286,117 @@ Así, los resultados no son únicamente reactivos (resolver conflictos o elimina
 
 Los \gls{feedback-loops} (líneas discontinuas) muestran que el sistema es reflexivo: los resultados exitosos refuerzan los valores que los habilitaron, y el ciclo empírico se auto-perfecciona continuamente. Esta arquitectura en capas permite que SocialScrum escale desde fundamentos teóricos hasta impacto medible, manteniendo coherencia conceptual en cada nivel.
 
-\begin{figure}[p]  % [p] = página completa
-    \centering
-    \begin{tikzpicture}[
-        node distance=0.8cm,
-        layer/.style={rectangle, draw=black!60, fill=#1, text width=13cm, minimum height=1cm, rounded corners=2mm, align=center, font=\small\bfseries, line width=1pt},
-        component/.style={rectangle, draw, fill=white, text width=3.8cm, minimum height=1.8cm, rounded corners=1.5mm, align=center, font=\scriptsize},
-        arrow/.style={-{Stealth[length=3mm]}, thick, blue!60},
-        feedback/.style={-{Stealth[length=3mm]}, dashed, thick, red!60}
-        ]
+\vspace{1em}
 
-        % ========== CAPA 2: PRINCIPIOS ==========
-        \node[layer=blue!10] (capa2) at (0,0) {CAPA 2: PRINCIPIOS EMPÍRICOS};
-
-        \node[component, below=0.2cm of capa2, xshift=-4cm] (transp) {
-        \textbf{Transparencia}\\[4pt]
-        {\tiny Convierte invisible\\en observable}
-        };
-        \node[component, below=0.2cm of capa2, xshift=4cm] (insp) {
-        \textbf{Inspección}\\[4pt]
-        {\tiny Monitorea evolución\\continua}
-        };
-        \node[component, below=1.2cm of capa2] (adapt) {
-        \textbf{Adaptación}\\[4pt]
-        {\tiny Experimenta e\\interviene}
-        };
-
-        \draw[arrow] (transp) -- (insp);
-        \draw[arrow] (insp) -- (adapt);
-        \draw[arrow] (adapt) -- (transp);
-        \draw[feedback] (adapt.east) to[bend right=25] (insp.south);
-
-        % ========== CAPA 3: COMPONENTES ==========
-        \node[layer=green!10, below=3.5cm of capa2] (capa3) {CAPA 3: COMPONENTES OPERACIONALES};
-
-        \node[component, below=0.2cm of capa3, xshift=-4.5cm] (roles) {
-        \textbf{Roles}\\[2pt]
-        {\tiny • Social Guide\\
-        • Scrum Master\\
-        • Product Owner\\
-        • Developers}
-        };
-        \node[component, below=0.2cm of capa3] (eventos) {
-        \textbf{Eventos}\\[2pt]
-        {\tiny • Daily Social\\
-        • Planning Social\\
-        • Review Social\\
-        • Retro Social}
-        };
-        \node[component, below=0.2cm of capa3, xshift=4.5cm] (artef) {
-        \textbf{Artefactos}\\[2pt]
-        {\tiny • Backlog Social\\
-        • Registro Smells\\
-        • Métricas}
-        };
-
-        \draw[arrow] (adapt) -- (roles);
-        \draw[arrow] (adapt) -- (eventos);
-        \draw[arrow] (adapt) -- (artef);
-
-        % ========== CAPA 4: OUTCOMES ==========
-        \node[layer=orange!10, below=3.5cm of capa3] (capa4) {CAPA 4: OUTCOMES};
-
-        \node[component, below=0.2cm of capa4, text width=12cm, minimum height=2cm] (outcomes) {
-            \textbf{Prevención:} Radio Silence, Black Cloud, Burnout, Silos\\[4pt]
-            \textbf{Mejoras:} {\tiny $\downarrow$ Deuda Social $\mid$ $\uparrow$ Confianza $\mid$ $\uparrow$ Cohesión $\mid$ $\uparrow$ Sostenibilidad}
-        };
-
-        \draw[arrow] (roles) -- (outcomes);
-        \draw[arrow] (eventos) -- (outcomes);
-        \draw[arrow] (artef) -- (outcomes);
-
-        % Feedback loop general
-        \draw[feedback] (outcomes.east) to[bend left=60] node[right, font=\tiny, text=red!70, text width=1.6cm, align=center] {Refuerza sistema} (transp.east);
-
-        % Etiquetas laterales
-        \node[rotate=90, font=\scriptsize, anchor=south, text=gray] at (-7.5, -1) {Cómo se aborda};
-        \node[rotate=90, font=\scriptsize, anchor=south, text=gray] at (-7.5, -4.5) {Qué implementa};
-        \node[rotate=90, font=\scriptsize, anchor=south, text=gray] at (-7.5, -8) {Qué mejora};
-
-    \end{tikzpicture}
-    \caption{Arquitectura integrada del modelo SocialScrum (Capas 2-4)}
-    \label{fig:arquitectura_integrada}
-\end{figure}
-
-\textbf{Resultados y Feedback Sistémico)}
+\textbf{Resultados y feedback sistémico)}:
 Los \gls{feedback-loops} (líneas discontinuas en la Figura~\ref{fig:arquitectura_integrada_total}) evidencian que el sistema es reflexivo: los resultados positivos retroalimentan los valores y principios que los generaron, haciendo que el ciclo empírico se auto-perfeccione de forma continua.
 De esta manera, SocialScrum no se limita a un marco operativo, sino que actúa como un sistema adaptativo complejo, capaz de aprender de sí mismo.
 Esta arquitectura en capas permite que el modelo escale coherentemente desde los fundamentos teóricos (motivación, confianza y valores) hasta el impacto medible en la práctica (prevención de \textit{smells}, fortalecimiento de la cohesión, sostenibilidad y bienestar).
 
-% --- ARQUITECTURA INTEGRADA ---
 \begin{figure}[p]
     \centering
     \begin{tikzpicture}[
-        node distance=0.8cm,
-        layer/.style={rectangle, draw=black!60, fill=#1, text width=13cm, minimum height=1cm,
-                rounded corners=2mm, align=center, font=\small\bfseries, line width=1pt},
-        component/.style={rectangle, draw, fill=white, text width=3.8cm, minimum height=1.8cm,
-                rounded corners=1.5mm, align=center, font=\scriptsize},
-        arrow/.style={-{Stealth[length=3mm]}, thick, blue!60},
-        feedback/.style={-{Stealth[length=3mm]}, dashed, thick, red!60}
+        node distance=1cm,
+        % ================= Estilos =================
+        layer/.style={rectangle, draw=black!60, fill=gray!20, text=black, text width=13cm, minimum height=1.2cm, rounded corners=2mm, align=center, font=\small\bfseries, line width=1pt},
+        component/.style={rectangle, draw=black!60, fill=white, text=black, text width=3.8cm, minimum height=1.8cm, rounded corners=1.5mm, align=center, font=\scriptsize},
+        outcomes/.style={rectangle, draw=black!60, fill=white, text=black, text width=12cm, minimum height=2cm, rounded corners=2mm, align=center, font=\scriptsize},
+        arrow/.style={-{Stealth[length=3mm]}, very thick, blue!80},
+        feedback/.style={-{Stealth[length=3mm]}, dashed, very thick, red!70}
         ]
 
-        % ===== CAPA 2: PRINCIPIOS =====
-        \node[layer=blue!10] (capa2) {CAPA 2: PRINCIPIOS EMPÍRICOS};
+        % ================= CAPA 2: PRINCIPIOS =================
+        \node[layer] (capa2) at (0,0) {CAPA 2: PRINCIPIOS EMPÍRICOS};
 
-        \node[component, below=0.2cm of capa2, xshift=-4cm] (transp) {
-        \textbf{Transparencia}\\[4pt]
-        {\tiny Convierte lo invisible\\en observable}
+        % Componentes de Capa 2 con fondo blanco
+        \node[component, below=0.4cm of capa2, xshift=-4cm] (transp) {
+        \textbf{Transparencia}\\[2pt]
+        {\scriptsize Convierte invisible en observable}
         };
-        \node[component, below=0.2cm of capa2, xshift=4cm] (insp) {
-        \textbf{Inspección}\\[4pt]
-        {\tiny Monitorea evolución\\continua}
+        \node[component, below=0.4cm of capa2, xshift=4cm] (insp) {
+        \textbf{Inspección}\\[2pt]
+        {\scriptsize Monitorea evolución continua}
         };
-        \node[component, below=1.2cm of capa2] (adapt) {
-        \textbf{Adaptación}\\[4pt]
-        {\tiny Experimenta e\\interviene}
-        };
-
-        \draw[arrow] (transp) -- (insp);
-        \draw[arrow] (insp) -- (adapt);
-        \draw[arrow] (adapt) -- (transp);
-        \draw[feedback] (adapt.east) to[bend right=25] (insp.south);
-
-        % ===== CAPA 3: COMPONENTES =====
-        \node[layer=green!10, below=3.5cm of capa2] (capa3) {CAPA 3: COMPONENTES OPERACIONALES};
-
-        \node[component, below=0.2cm of capa3, xshift=-4.5cm] (roles) {
-        \textbf{Roles}\\[2pt]
-        {\tiny • Social Guide\\• Scrum Master\\• Product Owner\\• Developers}
-        };
-        \node[component, below=0.2cm of capa3] (eventos) {
-        \textbf{Eventos}\\[2pt]
-        {\tiny • Daily Social\\• Planning Social\\• Review Social\\• Retro Social}
-        };
-        \node[component, below=0.2cm of capa3, xshift=4.5cm] (artef) {
-        \textbf{Artefactos}\\[2pt]
-        {\tiny • Backlog Social\\• Registro Smells\\• Métricas Sociales}
+        \node[component, below=1.5cm of capa2] (adapt) {
+        \textbf{Adaptación}\\[2pt]
+        {\scriptsize Experimenta e interviene}
         };
 
-        \draw[arrow] (adapt) -- (roles);
-        \draw[arrow] (adapt) -- (eventos);
-        \draw[arrow] (adapt) -- (artef);
+        % ================= Flechas CAPA 2 =================
+        % Transparencia -> Adaptación
+        \draw[arrow] (transp.south) -- ++(0,-0.5) -- ++(-1.0,0) -- ([xshift=-0.2cm]adapt.north west);
+        % Inspección -> Adaptación
+        \draw[arrow] (insp.south) -- ++(0,-0.5) -- ++(1.0,0) -- ([xshift=0.2cm]adapt.north east);
+        % Adaptación -> Transparencia
+        \draw[arrow] (adapt.north) .. controls ++(0,1.5) and ++(0,-0.5) .. ([yshift=-0.1cm]transp.north);
+        % Feedback loop Adaptación -> Inspección
+        \draw[feedback] (adapt.east) .. controls ++(3,-0.5) and ++(0.5,-1.0) .. (insp.south);
 
-        % ===== CAPA 4: OUTCOMES =====
-        \node[layer=orange!10, below=3.5cm of capa3] (capa4) {CAPA 4: OUTCOMES};
+        % ================= CAPA 3: COMPONENTES =================
+        \node[layer, below=5cm of capa2] (capa3) {CAPA 3: COMPONENTES OPERACIONALES};
 
-        \node[component, below=0.2cm of capa4, text width=12cm, minimum height=2cm] (outcomes) {
-            \textbf{Prevención:} Radio Silence, Black Cloud, Burnout, Silos\\[4pt]
-            \textbf{Mejoras:} {\tiny $\downarrow$ Deuda Social $\mid$ $\uparrow$ Confianza $\mid$ $\uparrow$ Cohesión $\mid$ $\uparrow$ Sostenibilidad}
+        % Componentes de Capa 3 con fondo blanco
+        \node[component, below=0.3cm of capa3, xshift=-4.5cm] (roles) {
+        \textbf{Roles}\\[1pt]
+        {\scriptsize • Social Guide\\
+        • Scrum Master\\
+        • Product Owner\\
+        • Developers}
+        };
+        \node[component, below=0.3cm of capa3] (eventos) {
+        \textbf{Eventos}\\[1pt]
+        {\scriptsize • Daily Social\\
+        • Planning Social\\
+        • Review Social\\
+        • Retro Social}
+        };
+        \node[component, below=0.3cm of capa3, xshift=4.5cm] (artef) {
+        \textbf{Artefactos}\\[1pt]
+        {\scriptsize • Backlog Social\\
+        • Registro Smells\\
+        • Métricas}
         };
 
-        \draw[arrow] (roles) -- (outcomes);
-        \draw[arrow] (eventos) -- (outcomes);
-        \draw[arrow] (artef) -- (outcomes);
+        % ================= Flechas Adaptación -> Componentes =================
+        \draw[arrow] (adapt.south) -- ++(0,-0.5) -| ([yshift=0.2cm]roles.north west);
+        \draw[arrow] (adapt.south) -- ++(0,-0.5) -| ([yshift=0.2cm]eventos.north);
+        \draw[arrow] (adapt.south) -- ++(0,-0.5) -| ([yshift=0.2cm]artef.north east);
 
-        % Feedback general (de outcomes a principios)
-        \draw[feedback] (outcomes.east) to[bend left=60] node[right, font=\tiny, text=red!70, text width=1.6cm, align=center] {Refuerza valores\\y aprendizaje} (transp.east);
+        % ================= CAPA 4: OUTCOMES =================
+        \node[layer, below=5cm of capa3] (capa4) {CAPA 4: OUTCOMES};
 
-        % Etiquetas laterales
-        \node[rotate=90, font=\scriptsize, anchor=south, text=gray] at (-7.5, -1) {Cómo se aborda};
-        \node[rotate=90, font=\scriptsize, anchor=south, text=gray] at (-7.5, -4.5) {Qué implementa};
-        \node[rotate=90, font=\scriptsize, anchor=south, text=gray] at (-7.5, -8) {Qué mejora};
+        % Nodo Outcomes con fondo blanco
+        \node[outcomes, below=0.3cm of capa4] (outcomes) {
+            \textbf{Prevención:} Radio Silence, Black Cloud, Burnout, Silos\\[2pt]
+            \textbf{Mejoras:} {\scriptsize $\downarrow$ Deuda Social $\mid$ $\uparrow$ Confianza $\mid$ $\uparrow$ Cohesión $\mid$ $\uparrow$ Sostenibilidad}
+        };
+
+        % ================= Flechas Componentes -> Outcomes (desde abajo hacia arriba) =================
+        \draw[arrow] (roles.south) -- ++(0,-0.5) -- ++(0,0) -- (outcomes.north west);
+        \draw[arrow] (eventos.south) -- ++(0,-0.5) -- ++(0,0) -- (outcomes.north);
+        \draw[arrow] (artef.south) -- ++(0,-0.5) -- ++(0,0) -- (outcomes.north east);
+
+        % Feedback loop Outcomes -> Transparencia
+        \draw[feedback] (outcomes.east) .. controls +(4,0) and +(-1,-2) .. (transp.east);
+
+        % ================= Etiquetas laterales =================
+        \node[rotate=90, font=\scriptsize, anchor=south, text=black!80] at (-8, -1) {Cómo se aborda};
+        \node[rotate=90, font=\scriptsize, anchor=south, text=black!80] at (-8, -7) {Qué implementa};
+        \node[rotate=90, font=\scriptsize, anchor=south, text=black!80] at (-8, -13) {Qué mejora};
 
     \end{tikzpicture}
-    \caption{Arquitectura integrada del modelo SocialScrum (Capas 2–4)}
-    \label{fig:arquitectura_integrada_total}
+    \caption{\centering Arquitectura integrada del modelo SocialScrum (Capas 2-4) con flechas rodeando nodos y fondos grises}
+    \label{fig:arquitectura_integrada_final}
 \end{figure}
 
-\section{Consideraciones de Escalabilidad y Adaptación}
+\FloatBarrier
+
+\section{Consideraciones de escalabilidad y adaptación}
 
 SocialScrum es un framework diseñado para adaptarse a distintos contextos organizacionales y de equipo.
 Aunque sus principios fundamentales —la Teoría de la Autodeterminación (TAD), la confianza y los valores de Scrum— son universales, su aplicación práctica debe ajustarse a las particularidades de cada entorno.
 
-\subsection{Adaptabilidad a Contextos Diversos}
+\subsection{Adaptabilidad a contextos diversos}
 
 Las siguientes preguntas sirven como guía para adaptar SocialScrum de forma responsable y contextual:
 
@@ -1448,7 +1421,7 @@ Su efectividad depende de una adaptación consciente a la realidad de cada equip
 
 Las consideraciones más amplias sobre cómo escalar SocialScrum y adaptarlo a diferentes contextos se explican con mayor detalle en el Capítulo 4, Sección 4.8: ``Escalabilidad y Adaptación de SocialScrum''.
 
-\section{Limitaciones Reconocidas}
+\section{Limitaciones reconocidas}
 
 SocialScrum no es una fórmula mágica ni una ``bala de plata''.
 Su efectividad depende, en gran medida, del contexto organizacional en el que se implemente. De hecho, hay situaciones donde el modelo encuentra límites estructurales que es necesario reconocer con honestidad y sin maquillarlos:

@@ -186,68 +186,102 @@ Posteriormente, se seleccionó Google Scholar como la base de datos principal pa
 \end{itemize}
 La búsqueda manual reveló que las frases clave ``social debt'' y ``agile software development'' eran esenciales para definir la cadena de búsqueda básica. Por esta razón, se decidió utilizar el conector lógico ``AND'' para unir estas dos frases, ya que los artículos relevantes para la investigación las mencionaban conjuntamente. De esta manera, la cadena de búsqueda básica: ``social debt'' AND ``agile software development'' se aplicó inicialmente a seis bases de datos científicas: Google Scholar, IEEE Xplore, SpringerLink y Science Direct, como se observa en la Tabla \ref{tab:cadenas-busqueda}.
 
-\begin{table}[H]
-    \centering
-    \caption{Cadenas de búsqueda utilizadas en la revisión sistemática}
-    \label{tab:cadenas-busqueda}
-    \begin{tabularx}{\textwidth}{@{}c X l l@{}}
-        \toprule
-        \textbf{No.} & \textbf{Cadena de búsqueda}                                                          & \textbf{Fuente} & \textbf{Estado} \\
-        \midrule
-        1            & ``social debt'' AND ``agile software development''                                   & Google Scholar  & Incluida        \\
-        2            & (``Full Text Only'':social debt) AND (``Full Text Only'':agile software development) & IEEE Xplore     & Incluida        \\
-        3            & ‘‘social debt’ AND ‘agile software development’’                                     & SpringerLink    & Incluida        \\
-        4            & ‘social debt’ AND ‘agile software development’                                       & Science Direct  & Incluida        \\
-        \bottomrule
-    \end{tabularx}
-    \smallskip
-    \raggedright
-    \textit{Acrónimos utilizados: Identificador (No).}
-\end{table}
+\begin{adjustwidth}{\parindent}{0pt}
+    \begin{table}[!htbp]
+        \caption{Cadenas de búsqueda utilizadas en la revisión sistemática}
+        \label{tab:cadenas-busqueda}
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \small
+        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}{@{}c X l l@{}}
+            \toprule
+            \textbf{No.} & \textbf{Cadena de búsqueda}                                                          & \textbf{Fuente} & \textbf{Estado} \\
+            \midrule
+            1            & ``social debt'' AND ``agile software development''
+                         & Google Scholar                                                                       & Incluida                          \\
+            2            & (``Full Text Only'':social debt) AND (``Full Text Only'':agile software development)
+                         & IEEE Xplore                                                                          & Incluida                          \\
+            3            & ‘‘social debt’ AND ‘agile software development’’
+                         & SpringerLink                                                                         & Incluida                          \\
+            4            & ‘social debt’ AND ‘agile software development’
+                         & Science Direct                                                                       & Incluida                          \\
+            \bottomrule
+        \end{tabularx}
+        \smallskip
+        \raggedright
+        \textit{Acrónimos utilizados: Identificador (No).}
+    \end{table}
+\end{adjustwidth}
+
 
 La cadena de búsqueda se aplicó a una ventana de tiempo desde 2013 hasta 2024, adaptándose a los filtros y parámetros específicos de cada motor de búsqueda. Tras realizar las modificaciones necesarias a la cadena de búsqueda básica, se inició la búsqueda en cada motor. La Tabla \ref{tab:resultados-busqueda} muestra el total de artículos encontrados, relevantes, repetidos y primarios.
 
-\begin{table}[H]
-    \centering
-    \caption{Resultados por motor de búsqueda en la revisión sistemática}
-    \label{tab:resultados-busqueda}
-    \begin{tabularx}{\textwidth}{@{}c p{2.0cm} c c >{\centering\arraybackslash}p{2.0cm} >{\centering\arraybackslash}p{4.0cm}@{}}
-        \toprule
-        \textbf{No.}   & \textbf{Motor de búsqueda} & \textbf{Encontrados} & \textbf{Relevantes} & \textbf{Relevantes repetidos} & \textbf{Primarios seleccionados} \\
-        \midrule
-        1              & Google Scholar             & 130                  & 15                  & 0                             & 8                                \\
-        2              & IEEE Xplore                & 28                   & 3                   & 0                             & 0                                \\
-        3              & Science Direct             & 5                    & 0                   & 0                             & 0                                \\
-        4              & SpringerLink               & 35                   & 2                   & 0                             & 0                                \\
-        \midrule
-        \textbf{Total} &                            & \textbf{198}         & \textbf{20}         & \textbf{0}                    & \textbf{8}                       \\
-        \bottomrule
-    \end{tabularx}
-    \smallskip
-    \raggedright
-    \textit{Acrónimos utilizados: Identificador (No).}
-\end{table}
+\begin{adjustwidth}{\parindent}{0pt}
+    \begin{table}[!htbp]
+        \caption{Resultados por motor de búsqueda en la revisión sistemática}
+        \label{tab:resultados-busqueda}
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \small
+        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}
+            {@{}c p{3.0cm} >{\centering\arraybackslash}c >{\centering\arraybackslash}c >{\centering\arraybackslash}c >{\centering\arraybackslash}c@{}}
+            \toprule
+            \textbf{No.}   & \textbf{Motor de búsqueda} & \textbf{Encontrados} & \textbf{Relevantes} & \textbf{Relevantes repetidos} & \textbf{Primarios seleccionados} \\
+            \midrule
+            1              & Google Scholar             & 130                  & 15                  & 0                             & 8                                \\
+            2              & IEEE Xplore                & 28                   & 3                   & 0                             & 0                                \\
+            3              & Science Direct             & 5                    & 0                   & 0                             & 0                                \\
+            4              & SpringerLink               & 35                   & 2                   & 0                             & 0                                \\
+            \midrule
+            \textbf{Total} &                            & \textbf{198}         & \textbf{20}         & \textbf{0}                    & \textbf{8}                       \\
+            \bottomrule
+        \end{tabularx}
+        \smallskip
+        \raggedright
+        \textit{Acrónimos utilizados: Identificador (No).}
+    \end{table}
+\end{adjustwidth}
+
 
 En la Tabla \ref{tab:preguntas-investigacion} se presentan las preguntas de investigación definidas que ayudaron a segmentar la información identificada en los artículos primarios, su motivación y la relación que tienen con los objetivos propuestos en la RSL. Debido a la limitación de espacio, la RSL se puede consultar en detalle en el Anexo A.
 
-\begin{table}[H]
-    \centering
-    \caption{Preguntas de investigación definidas}
-    \label{tab:preguntas-investigacion}
-    \begin{tabularx}{\textwidth}{@{}c p{7.0cm} p{7.0cm}@{}}
-        \toprule
-        \textbf{Id.} & \textbf{Pregunta de investigación}                                                                                                                                                                           & \textbf{Motivación}                                                                                                                                                                 \\
-        \midrule
-        PI1          & ¿Cuáles son los estudios primarios más citados que han proporcionado según la evidencia aportes importantes e influyentes en el contexto de la gestión de la deuda social en el desarrollo de software ágil? & Identificar y evaluar los estudios fundamentales que han tenido un impacto significativo en el campo de la gestión de la deuda social en el desarrollo de software ágil.            \\
-        PI2          & ¿Cuál es la distribución de tiempo de publicación de los estudios primarios relevantes con respecto a la deuda social en el desarrollo de software ágil?                                                     & Comprender cómo ha evolucionado el interés y el cono-cimiento sobre la deuda social en el contexto del desarrollo de software ágil a lo largo del tiempo.                           \\
-        PI3          & ¿Cuáles son las investigaciones o propuestas desarrolladas cuya idea central sea la gestión de la deuda social en el desarrollo de software ágil hasta la fecha?                                             & Identificar y analizar las contribuciones académicas y propuestas prácticas que se han centrado específicamente en la gestión de la deuda social en el desarrollo de software ágil. \\
-        PI4          & ¿Cuáles son los principales desafíos y oportunidades para la investigación futura sobre la deuda social en el desarrollo de software ágil?                                                                   & Identificar las barreras y las posibles áreas de crecimiento en el estudio de la deuda social en el desarrollo de software ágil.                                                    \\
-        PI5          & ¿Cuáles son las practicas o enfoques que abordan de manera exitosa la gestión de la deuda social en el desarrollo de software ágil?                                                                          & Identificar y evaluar las prácticas y enfoques que han demostrado ser efectivos en la gestión de la deuda social dentro de proyectos de desarrollo de software ágil.                \\
-        \bottomrule
-    \end{tabularx}
-    \smallskip
-    \raggedright
-    \textit{Acrónimos utilizados: Identificador (Id.), Pregunta de investigación (PI).}
-\end{table}
+\begin{adjustwidth}{\parindent}{0pt}
+    \begin{table}[!htbp]
+        \caption{Preguntas de investigación definidas}
+        \label{tab:preguntas-investigacion}
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \small
+        \begin{tabularx}{\dimexpr\textwidth-\parindent\relax}{@{}c X X@{}}
+            \toprule
+            \textbf{Id.} & \textbf{Pregunta de investigación}                                                                                                                                                                           & \textbf{Motivación} \\
+            \midrule
+            PI1
+                         & ¿Cuáles son los estudios primarios más citados que han proporcionado según la evidencia aportes importantes e influyentes en el contexto de la gestión de la deuda social en el desarrollo de software ágil?
+                         & Identificar y evaluar los estudios fundamentales que han tenido un impacto significativo en el campo de la gestión de la deuda social en el desarrollo de software ágil.                                                           \\
+
+            PI2
+                         & ¿Cuál es la distribución de tiempo de publicación de los estudios primarios relevantes con respecto a la deuda social en el desarrollo de software ágil?
+                         & Comprender cómo ha evolucionado el interés y el conocimiento sobre la deuda social en el contexto del desarrollo de software ágil a lo largo del tiempo.                                                                           \\
+
+            PI3
+                         & ¿Cuáles son las investigaciones o propuestas desarrolladas cuya idea central sea la gestión de la deuda social en el desarrollo de software ágil hasta la fecha?
+                         & Identificar y analizar las contribuciones académicas y propuestas prácticas que se han centrado específicamente en la gestión de la deuda social en el desarrollo de software ágil.                                                \\
+
+            PI4
+                         & ¿Cuáles son los principales desafíos y oportunidades para la investigación futura sobre la deuda social en el desarrollo de software ágil?
+                         & Identificar las barreras y las posibles áreas de crecimiento en el estudio de la deuda social en el desarrollo de software ágil.                                                                                                   \\
+
+            PI5
+                         & ¿Cuáles son las prácticas o enfoques que abordan de manera exitosa la gestión de la deuda social en el desarrollo de software ágil?
+                         & Identificar y evaluar las prácticas y enfoques que han demostrado ser efectivos en la gestión de la deuda social dentro de proyectos de desarrollo de software ágil.                                                               \\
+            \bottomrule
+        \end{tabularx}
+        \smallskip
+        \raggedright
+        \textit{Acrónimos utilizados: Identificador (Id.), Pregunta de investigación (PI).}
+    \end{table}
+\end{adjustwidth}
+
 
 ----- EN PROCESO -----
