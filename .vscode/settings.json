@@ -91,6 +91,7 @@
     "síncronas",
     "sinóptica",
     "SOCIALSCRUM",
+    "sociograma",
     "sociopsicológica",
     "sociotécnica",
     "sociotécnicas",
@@ -123,5 +124,6 @@
   "latex-workshop.latexindent.args": [
     "-m",
     "-w"
-  ]
+  ],
+  "snyk.advanced.autoSelectOrganization": true
 }

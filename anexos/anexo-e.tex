@@ -2,8 +2,8 @@
 % Anexo E: Herramientas y Tecnología de Soporte para SocialScrum
 % Contiene configuraciones detalladas de Jira, Azure DevOps, plantillas y dashboards
 
-\chapter*{ANEXO E: HERRAMIENTAS Y TECNOLOG\'IA DE SOPORTE PARA SOCIALSCRUM}
-\addcontentsline{toc}{chapter}{ANEXO E: Herramientas y tecnolog\'ia de soporte para SocialScrum}
+\chapter*{ANEXO E: HERRAMIENTAS Y TECNOLOGÍA DE SOPORTE PARA SOCIALSCRUM}
+\addcontentsline{toc}{chapter}{ANEXO E: Herramientas y tecnología de soporte para SocialScrum}
 \label{anexo:herramientas}
 
 % Configurar numeración para anexo E
@@ -11,39 +11,39 @@
 \renewcommand{\thesection}{E.\arabic{section}}
 \renewcommand{\thesubsection}{E.\arabic{section}.\arabic{subsection}}
 
-Este anexo presenta las configuraciones t\'ecnicas detalladas para implementar SocialScrum con herramientas de gesti\'on de proyectos. El principio rector es integraci\'on, no duplicaci\'on: los items sociales deben vivir en el mismo sistema que los items t\'ecnicos.
-
-\section{Integraci\'on con Jira}
+Este anexo presenta las configuraciones técnicas detalladas para implementar SocialScrum con herramientas de gestión de proyectos. El principio rector es integración, no duplicación: los items sociales deben vivir en el mismo sistema que los items técnicos.
+\section{Integración con Jira}
 
 \subsection{Campos personalizados}
 
-Jira permite crear campos personalizados que capturan la informaci\'on espec\'ifica de SocialScrum:
+Jira permite crear campos personalizados que capturan la información específica de SocialScrum:
 
+\noindent
 \begin{table}[h]
-  \centering
-  \small
-  \begin{tabular}{|l|l|p{6cm}|}
-    \hline
-    \textbf{Campo}        & \textbf{Tipo} & \textbf{Descripci\'on}                      \\
-    \hline
-    Item Type             & Select        & TECHNICAL / SOCIAL                          \\
-    \hline
-    Social Points (SPS)   & Number        & Escala 1-13, solo para items sociales       \\
-    \hline
-    Community Smell       & Select        & Radio Silence, Conflict, Burnout, etc.      \\
-    \hline
-    Health Dimension      & Multi-select  & Apertura, Respeto, Coraje, Compromiso, Foco \\
-    \hline
-    Social Guide Assigned & User picker   & Responsable del item social                 \\
-    \hline
-    Severity              & Select        & Leve, Moderada, Severa, Cr\'itica           \\
-    \hline
-  \end{tabular}
-  \caption{Campos personalizados para SocialScrum en Jira}
-  \label{tab:jira-custom-fields-anexo}
+   \centering
+   \small
+   \begin{tabular}{|l|l|p{6cm}|}
+      \hline
+      \textbf{Campo}        & \textbf{Tipo} & \textbf{Descripción}                        \\
+      \hline
+      Item Type             & Select        & TECHNICAL / SOCIAL                          \\
+      \hline
+      Social Points (SPS)   & Number        & Escala 1-13, solo para items sociales       \\
+      \hline
+      Community Smell       & Select        & Radio Silence, Conflict, Burnout, etc.      \\
+      \hline
+      Health Dimension      & Multi-select  & Apertura, Respeto, Coraje, Compromiso, Foco \\
+      \hline
+      Social Guide Assigned & User picker   & Responsable del item social                 \\
+      \hline
+      Severity              & Select        & Leve, Moderada, Severa, Crítica             \\
+      \hline
+   \end{tabular}
+   \caption{Campos personalizados para SocialScrum en Jira}
+   \label{tab:jira-custom-fields-anexo}
 \end{table}
 
-\subsection{Configuraci\'on de Issue Types}
+\subsection{Configuración de Issue Types}
 
 \begin{verbatim}
 === CONFIGURACION DE ISSUE TYPES ===
@@ -117,9 +117,9 @@ Automatizaciones:
    AND "Severity" IN ("Severa", "Critica")
 \end{verbatim}
 
-\section{Integraci\'on con Azure DevOps}
+\section{Integración con Azure DevOps}
 
-Azure DevOps permite personalizaci\'on similar a trav\'es de su sistema de Work Item Types y campos personalizados.
+Azure DevOps permite personalización similar a través de su sistema de Work Item Types y campos personalizados.
 
 \subsection{Campos personalizados en Azure DevOps}
 

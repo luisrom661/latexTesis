@@ -46,6 +46,7 @@
 \usepackage{caption}                 % Personalización de leyendas
 \usepackage{subcaption}              % Subfiguras y subtablas
 \usepackage{pdflscape}               % Páginas en orientación horizontal
+\usepackage{pifont}                  % para símbolos ✓ ✗
 
 
 % ==============================================================================
@@ -87,17 +88,18 @@
 \usepackage{enumitem}                % Personalización de listas
 \usepackage{comment}                 % Bloques de comentarios
 \usepackage{changepage}              % Ajuste temporal de márgenes
-\usepackage{tcolorbox}               % Cajas de color decorativas
+\usepackage[most]{tcolorbox}         % Cajas de color decorativas
 \usepackage[toc,acronym,nolangwarn]{glossaries}  % Glosarios y acrónimos (usar makeindex por compatibilidad Windows)
 \makeglossaries
 \usepackage{hyperref}                % Enlaces e hipervínculos (debe ir al final)
-
+\usepackage{bookmark}                 % Mejora de marcadores PDF
 
 % ==============================================================================
 % CONFIGURACIÓN DE FLOTANTES (FIGURAS Y TABLAS)
 % ==============================================================================
 
 \usepackage{float}                   % Control preciso de posicionamiento
+\usepackage{array}                   % Mejoras para tablas
 \usepackage[section]{placeins}       % Evita que flotantes crucen secciones
 \restylefloat{table}
 \restylefloat{figure}
@@ -115,6 +117,48 @@
 % --- Espaciado alrededor de flotantes ---
 \setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
 \setlength{\intextsep}{8pt plus 2pt minus 2pt}
+
+% ==============================================================================
+% CONFIGURACIÓN DE TABLAS
+% ==============================================================================
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+% ==============================================================================
+% CONFIGURACIÓN DE CAJAS DE TEXTO
+% ==============================================================================
+
+\newtcolorbox{escenario}{
+  colback=gray!5,
+  colframe=black,
+  fonttitle=\bfseries,
+  title=Escenario aplicado,
+  breakable
+}
+
+\newtcolorbox{protocolo}{
+  colback=gray!5,
+  colframe=black,
+  fonttitle=\bfseries,
+  title=Protocolo operativo,
+  breakable,
+  width=\linewidth,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt,
+  boxsep=4pt,
+  before skip=8pt,
+  after skip=10pt
+}
+
+
+
+% ==============================================================================
+% COMANDOS PERSONALIZADOS
+\newcommand{\Alta}{\ding{115}}   % ▲
+\newcommand{\Media}{\ding{108}}  % ●
+\newcommand{\Baja}{\ding{116}}   % ▼
+\newcommand{\Alerta}{\textbf{!}} % Símbolo de alerta en negrita
 
 
 % ==============================================================================
