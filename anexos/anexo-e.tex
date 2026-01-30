@@ -20,30 +20,30 @@ Jira permite crear campos personalizados que capturan la información específic
 
 \noindent
 \begin{table}[h]
-   \centering
-   \small
-   \begin{tabular}{|l|l|p{6cm}|}
-      \hline
-      \textbf{Campo}        & \textbf{Tipo} & \textbf{Descripción}                        \\
-      \hline
-      Item Type             & Select        & TECHNICAL / SOCIAL                          \\
-      \hline
-      Social Points (SPS)   & Number        & Escala 1-13, solo para items sociales       \\
-      \hline
-      Community Smell       & Select        & Radio Silence, Conflict, Burnout, etc.      \\
-      \hline
-      Health Dimension      & Multi-select  & Apertura, Respeto, Coraje, Compromiso, Foco \\
-      \hline
-      Social Guide Assigned & User picker   & Responsable del item social                 \\
-      \hline
-      Severity              & Select        & Leve, Moderada, Severa, Crítica             \\
-      \hline
-   \end{tabular}
-   \caption{Campos personalizados para SocialScrum en Jira}
-   \label{tab:jira-custom-fields-anexo}
+    \centering
+    \small
+    \begin{tabular}{|l|l|p{6cm}|}
+        \hline
+        \textbf{Campo}        & \textbf{Tipo} & \textbf{Descripción}                                              \\
+        \hline
+        Item Type             & Select        & TECHNICAL / SOCIAL                                                \\
+        \hline
+        Social Points (SSP)   & Number        & Escala 1-13, solo para items sociales                             \\
+        \hline
+        Community Smell       & Select        & \textit{Radio Silence}, \textit{Conflict}, \textit{Burnout}, etc. \\
+        \hline
+        Health Dimension      & Multi-select  & Apertura, Respeto, Coraje, Compromiso, Foco                       \\
+        \hline
+        Social Guide Assigned & User picker   & Responsable del item social                                       \\
+        \hline
+        Severity              & Select        & Leve, Moderada, Severa, Crítica                                   \\
+        \hline
+    \end{tabular}
+    \caption{Campos personalizados para SocialScrum en Jira}
+    \label{tab:jira-custom-fields-anexo}
 \end{table}
 
-\subsection{Configuración de Issue Types}
+\subsection{Configuración de tipos de incidencias (\textit{Issue Types})}
 
 \begin{verbatim}
 === CONFIGURACION DE ISSUE TYPES ===
@@ -133,7 +133,7 @@ Campos a crear:
 
 1. Campo: "Social Points"
    - Tipo: Integer
-   - Descripcion: Estimacion en SPS (1-13)
+   - Descripcion: Estimacion en SSP (1-13)
    - Layout: Agregar a tab "Details"
 
 2. Campo: "Community Smell"
@@ -182,7 +182,7 @@ Campos a crear:
    Sum: Social Points
 \end{verbatim}
 
-\subsection{Integraci\'on de Health Score}
+\subsection{Integración de Health Score}
 
 \begin{verbatim}
 === INTEGRACION DE HEALTH SCORE ===
@@ -205,7 +205,7 @@ Opcion 3: Power BI embebido
 
 \section{Plantillas operacionales}
 
-Las siguientes plantillas estandarizan la captura de informaci\'on y facilitan la adopci\'on de SocialScrum.
+Las siguientes plantillas estandarizan la captura de información y facilitan la adopción de SocialScrum.
 
 \subsection{Plantilla de User Story Social}
 
@@ -296,17 +296,17 @@ Informacion a NO compartir: _____
 ESTIMACION
 -----------------------------------------------------------
 
-Story Points Sociales (SPS): [1-13]
+Story Points Sociales (SSP): [1-13]
 
 Desglose:
 - Investigacion/diagnostico: __ horas
 - Sesiones 1:1: __ horas x __ personas = __ horas
 - Facilitacion grupal: __ horas
 - Seguimiento: __ horas
-- TOTAL: __ horas = __ SPS (1 SPS = 2 horas)
+- TOTAL: __ horas = __ SSP (1 SSP = 2 horas)
 \end{verbatim}
 
-\subsection{Plantilla para mediaci\'on de conflictos}
+\subsection{Plantilla para mediación de conflictos}
 
 \begin{verbatim}
 === MEDIACION DE CONFLICTO - PLANTILLA ===
@@ -374,14 +374,14 @@ Metricas de exito:
 ESTIMACION
 -----------------------------------------------------------
 
-Story Points Sociales (SPS): ___
+Story Points Sociales (SSP): ___
 
 Desglose:
 - Sesion 1:1 persona A: __ horas
 - Sesion 1:1 persona B: __ horas
 - Sesion conjunta: __ horas
 - Documentacion + seguimiento: __ horas
-- TOTAL: __ horas = __ SPS
+- TOTAL: __ horas = __ SSP
 \end{verbatim}
 
 \subsection{Plantilla de Health Score Dashboard semanal}
@@ -505,8 +505,8 @@ ACCIONES PROPUESTAS
 -----------------------------------------------------------
 
 Items sociales para proximo Sprint:
-[ ] [SOCIAL-XXX] [Descripcion] - SPS: __ - Prioridad: __
-[ ] [SOCIAL-XXX] [Descripcion] - SPS: __ - Prioridad: __
+[ ] [SOCIAL-XXX] [Descripcion] - SSP: __ - Prioridad: __
+[ ] [SOCIAL-XXX] [Descripcion] - SSP: __ - Prioridad: __
 
 -----------------------------------------------------------
 HEALTH SCORE ESPERADO SPRINT N+1
@@ -542,7 +542,7 @@ Escalaciones necesarias:
 _______________
 \end{verbatim}
 
-\subsection{Plantilla de reporte mensual para stakeholders}
+\subsection{Plantilla de reporte mensual para las partes interesadas (\textit{stakeholders})}
 
 \begin{verbatim}
 === REPORTE DE SALUD SOCIAL - MES [X] ===
@@ -598,7 +598,7 @@ ITEMS SOCIALES COMPLETADOS
     Impacto: _______________
 
 PRESUPUESTO SOCIAL (mes):
-- Items sociales: __ SPS (~__ horas)
+- Items sociales: __ SSP (~__ horas)
 - Sesiones adicionales: __ horas
 - TOTAL: __ horas (~__% de capacidad)
 
@@ -636,7 +636,7 @@ Justificacion: _______________
 Proxima revision: [Fecha]
 \end{verbatim}
 
-\subsection{Plantilla de registro de community smells}
+\subsection{Plantilla de registro de \textit{community smells}}
 
 \begin{verbatim}
 === COMMUNITY SMELL REGISTRY ===
@@ -666,7 +666,7 @@ Health Score antes: __/10
 
 Accion tomada:
 - Item social: [SOCIAL-XXX]
-- SPS estimado: __
+- SSP estimado: __
 - Estrategia: _______________
 - Facilitador: [Social Guide]
 
@@ -683,7 +683,7 @@ Post-mortem:
 
 \section{Dashboards automatizados}
 
-Para equipos que requieren visualizaci\'on m\'as sofisticada del Health Score y su correlaci\'on con m\'etricas t\'ecnicas, es posible construir dashboards automatizados usando herramientas de Business Intelligence.
+Para equipos que requieren visualización más sofisticada del Health Score y su correlación con métricas técnicas, es posible construir dashboards automatizados usando herramientas de Business Intelligence.
 
 \subsection{Arquitectura de datos}
 
@@ -693,7 +693,7 @@ Para equipos que requieren visualizaci\'on m\'as sofisticada del Health Score y 
 Fuentes de datos:
 1. Jira/Azure DevOps API
    - Items tecnicos: Story Points, status, Sprint
-   - Items sociales: SPS, community smell, severity
+   - Items sociales: SSP, community smell, severity
    - Velocity por Sprint
 
 2. Formulario de Health Score (Google Forms / Microsoft Forms)
@@ -721,7 +721,7 @@ Frecuencia de actualizacion:
 
 \subsection{Dashboard en Google Sheets}
 
-Para equipos sin acceso a herramientas BI, Google Sheets proporciona visualizaci\'on b\'asica:
+Para equipos sin acceso a herramientas BI, Google Sheets proporciona visualización básica:
 
 \begin{verbatim}
 === DASHBOARD EN GOOGLE SHEETS ===
@@ -750,7 +750,7 @@ Automatizacion:
 
 \subsection{Dashboard en Grafana}
 
-Grafana es una herramienta de visualizaci\'on open-source para dashboards sofisticados:
+Grafana es una herramienta de visualización open-source para dashboards sofisticados:
 
 \begin{verbatim}
 === CONFIGURACION DE GRAFANA ===
@@ -804,7 +804,7 @@ Conexion de datos:
 Modelo de datos:
 - Tabla "Sprints": Sprint_ID, Start_Date, End_Date, Velocity
 - Tabla "Health_Scores": Sprint_ID, Date, Dimension, Score
-- Tabla "Social_Items": Item_ID, Sprint_ID, Smell, SPS, Status
+- Tabla "Social_Items": Item_ID, Sprint_ID, Smell, SSP, Status
 - Relaciones: Sprint_ID como clave foranea
 
 Visualizaciones:
@@ -828,7 +828,7 @@ Pagina 3: "Correlacion"
 
 Pagina 4: "Items Sociales"
 - Kanban: Items por status
-- Burndown: SPS restantes en Sprint
+- Burndown: SSP restantes en Sprint
 - Table: Historico de items completados
 
 Refresh automatico:
@@ -838,7 +838,7 @@ Refresh automatico:
 
 \section{Alertas automatizadas}
 
-Independientemente de la herramienta, configurar alertas para situaciones cr\'iticas:
+Independientemente de la herramienta, configurar alertas para situaciones críticas:
 
 \begin{verbatim}
 === CONFIGURACION DE ALERTAS ===
@@ -861,7 +861,7 @@ Alerta 3: Smell Critico Sin Asignar
 - Mensaje: "Item social critico sin asignar: [Link]"
 
 Alerta 4: Capacidad Social Excedida
-- Condicion: SPS en Sprint > 20% de capacidad total
+- Condicion: SSP en Sprint > 20% de capacidad total
 - Canal: Slack #scrum-master
 - Mensaje: "Items sociales exceden 20% de capacidad. 
            Revisar priorizacion o escalar."
@@ -873,8 +873,8 @@ Implementacion:
 - Jira: Automation rules nativas
 \end{verbatim}
 
-\section{Consideraciones de implementaci\'on}
+\section{Consideraciones de implementación}
 
-Las herramientas de soporte no son requisito para implementar SocialScrum, pero reducen la fricci\'on operacional. La integraci\'on con Jira o Azure DevOps permite que los items sociales vivan junto a los t\'ecnicos, visibles para todo el equipo. Las plantillas estandarizan la captura de informaci\'on y facilitan la adopci\'on. Los dashboards automatizados proporcionan visibilidad continua sin esfuerzo manual.
+Las herramientas de soporte no son requisito para implementar SocialScrum, pero reducen la fricción operacional. La integración con Jira o Azure DevOps permite que los items sociales vivan junto a los técnicos, visibles para todo el equipo. Las plantillas estandarizan la captura de información y facilitan la adopción. Los dashboards automatizados proporcionan visibilidad continua sin esfuerzo manual.
 
-El principio rector es que la tecnolog\'ia debe servir al proceso, no al rev\'es: si una hoja de c\'alculo simple funciona para el equipo, no hay necesidad de implementar infraestructura compleja. La sofisticaci\'on debe ser proporcional al valor que genera.
+El principio rector es que la tecnología debe servir al proceso, no al revés: si una hoja de cálculo simple funciona para el equipo, no hay necesidad de implementar infraestructura compleja. La sofisticación debe ser proporcional al valor que genera.

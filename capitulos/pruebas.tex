@@ -11,13 +11,13 @@ Para abordar el primer aspecto, SocialScrum adopta la \textbf{Teoría de la Auto
 
 \textbf{Segundo}, la TAD identifica tres necesidades psicológicas universales (autonomía, competencia, relacionalidad) cuya insatisfacción se correlaciona directamente con síntomas de burnout: cansancio laboral, cinismo e ineficacia profesional \cite{tulili2022burnout}. Esta conexión es crucial porque el burnout es una de las manifestaciones más evidentes de la deuda social acumulada en equipos de desarrollo \cite{wilson_all_2006}.
 
-\textbf{Tercero}, la TAD ha sido validada empíricamente en contextos de equipos de software. Estudios muestran que la autonomía del equipo (autoorganización) predice mayor satisfacción y menor rotación \cite{ryan_self-determination_2000}, mientras que la falta de relacionalidad se asocia con community smells como el aislamiento social y la falta de cooperación \cite{saeeda2024nontechnicaldebt}.
+\textbf{Tercero}, la TAD ha sido validada empíricamente en contextos de equipos de software. Estudios muestran que la autonomía del equipo (autoorganización) predice mayor satisfacción y menor rotación \cite{ryan_self-determination_2000}, mientras que la falta de relacionalidad se asocia con \textit{community smells} como el aislamiento social y la falta de cooperación \cite{saeeda2024nontechnicaldebt}.
 
 Para abordar el segundo y tercer aspecto, SocialScrum adopta el \textbf{Modelo Integrador de Confianza} de Mayer, Davis y Schoorman \cite{mayer_integrative_1995}. Esta elección se justifica por:
 
 \textbf{Primero}, la confianza es el mecanismo fundamental que permite la coordinación efectiva en equipos donde el monitoreo directo es limitado o contraproducente \cite{wilson_all_2006}. A diferencia de otros modelos organizacionales que asumen estructuras jerárquicas de control, el modelo de Mayer reconoce que la confianza emerge de la disposición voluntaria a ser vulnerable, lo cual es esencial en equipos ágiles autoorganizados.
 
-\textbf{Segundo}, el modelo descompone la confianza en tres factores medibles y observables (habilidad, benevolencia, integridad) que mapean directamente con community smells específicos. Por ejemplo, la percepción de baja habilidad genera "bottlenecks" (cuellos de botella), la falta de benevolencia genera "priggish members" (miembros pedantes), y la inconsistencia (baja integridad) genera "decision incommunicability" \cite{caballero2022communitysmells}.
+\textbf{Segundo}, el modelo descompone la confianza en tres factores medibles y observables (habilidad, benevolencia, integridad) que mapean directamente con \textit{community smells} específicos. Por ejemplo, la percepción de baja habilidad genera "bottlenecks" (cuellos de botella), la falta de benevolencia genera "priggish members" (miembros pedantes), y la inconsistencia (baja integridad) genera "decision incommunicability" \cite{caballero2022communitysmells}.
 
 \textbf{Tercero}, estudios longitudinales demuestran que la confianza evoluciona a través de iteraciones, incluso en equipos distribuidos que inician con bajos niveles de confianza \cite{wilson_all_2006}. Esta característica dinámica se alinea perfectamente con el enfoque iterativo de Scrum y justifica la necesidad de mecanismos continuos de inspección y adaptación social.
 
@@ -30,14 +30,14 @@ Los tres pilares empíricos de Scrum (Transparencia, Inspección, Adaptación) a
 \subsubsection{Transparencia: Visibilización de lo invisible}
 
 \paragraph{Naturaleza invisible de la deuda social}
-La deuda social se caracteriza por su invisibilidad inherente. A diferencia de la deuda técnica, que puede detectarse mediante análisis estático de código, métricas de complejidad ciclomática o conteo de code smells, la deuda social carece de manifestaciones directamente observables en artefactos de software \cite{tamburri2015insights}. Los community smells existen en las interacciones, en las comunicaciones no documentadas, en las decisiones organizacionales tácitas y en las estructuras sociales emergentes que no dejan rastro explícito \cite{caballero2022communitysmells}.
+La deuda social se caracteriza por su invisibilidad inherente. A diferencia de la deuda técnica, que puede detectarse mediante análisis estático de código, métricas de complejidad ciclomática o conteo de code smells, la deuda social carece de manifestaciones directamente observables en artefactos de software \cite{tamburri2015insights}. Los \textit{community smells} existen en las interacciones, en las comunicaciones no documentadas, en las decisiones organizacionales tácitas y en las estructuras sociales emergentes que no dejan rastro explícito \cite{caballero2022communitysmells}.
 
 Esta invisibilidad tiene consecuencias específicas documentadas empíricamente:
 
 \begin{itemize}
     \item \textbf{Normalización del deterioro}: Sin visibilidad explícita, las disfunciones sociales se normalizan. Por ejemplo, en el caso Boeing, ingenieros reportaron que el miedo a discutir problemas se había convertido en "la forma normal de trabajar" hasta que causó fallos catastróficos \cite{saeeda2024nontechnicaldebt}.
 
-    \item \textbf{Detección tardía}: Estudios de community smells muestran que equipos sin mecanismos de transparencia social solo detectan problemas cuando estos ya han causado "daño tangible": conflictos abiertos, rotación de personal, o entregas fallidas \cite{caballero2022communitysmells}.
+    \item \textbf{Detección tardía}: Estudios de \textit{community smells} muestran que equipos sin mecanismos de transparencia social solo detectan problemas cuando estos ya han causado "daño tangible": conflictos abiertos, rotación de personal, o entregas fallidas \cite{caballero2022communitysmells}.
 
     \item \textbf{Acumulación acelerada}: La investigación demuestra que la deuda social contribuye a la acumulación de deuda técnica \cite{saeeda2024nontechnicaldebt}. Sin transparencia social, equipos acumulan simultáneamente ambos tipos de deuda, creando un ciclo de deterioro difícil de revertir.
 \end{itemize}
@@ -45,19 +45,19 @@ Esta invisibilidad tiene consecuencias específicas documentadas empíricamente:
 \paragraph{Mecanismos de transparencia en SocialScrum}
 SocialScrum implementa tres mecanismos específicos para hacer visible lo invisible:
 
-\textbf{1. Product Backlog Social}: Convierte iniciativas de salud del equipo en ítems explícitos y priorizables. Esto contrasta con el enfoque tradicional donde aspectos sociales son "responsabilidad de todos pero de nadie" \cite{schwaber2020scrum}. Al incluir elementos como "Establecer protocolo de resolución de conflictos" o "Implementar rotación de pair programming para reducir knowledge silos", el backlog social materializa compromisos que de otro modo permanecerían como intenciones difusas.
+\textbf{1. Product Backlog Social}: Convierte iniciativas de salud del equipo en ítems explícitos y priorizables. Esto contrasta con el enfoque tradicional donde aspectos sociales son "responsabilidad de todos pero de nadie" \cite{schwaber2020scrum}. Al incluir elementos como "Establecer protocolo de resolución de conflictos" o "Implementar rotación de \textit{pair programming} para reducir knowledge silos", el backlog social materializa compromisos que de otro modo permanecerían como intenciones difusas.
 
 \textbf{2. Registro de Community Smells}: El Social Guide mantiene un registro formal de smells detectados, similar a cómo equipos maduros mantienen registros de deuda técnica. Este registro incluye: tipo de smell, evidencia observable, miembros afectados, fecha de detección, y acciones propuestas. La mera existencia de este artefacto cambia la cultura del equipo: lo que antes era "tensión no mencionada" se convierte en "problema documentado y gestionable".
 
 \textbf{3. Métricas sociales en Sprint Review}: A diferencia de la Sprint Review tradicional que se centra exclusivamente en funcionalidad entregada, la Sprint Review Social incluye métricas como: distribución de interacciones (SNA), tiempo promedio de respuesta en comunicaciones críticas, y encuestas breves de cohesión percibida. Estas métricas, aunque simples, actúan como "señales de humo" que alertan sobre deterioro antes de que se manifieste en crisis.
 
 \paragraph{Evidencia de efectividad}
-Un estudio de implementación de prácticas de transparencia social en equipos ágiles encontró que equipos con artefactos sociales explícitos (equivalentes al Product Backlog Social) redujeron en 40\% el tiempo entre la aparición de un community smell y su mitigación, comparado con equipos que dependían de "detección informal" \cite{martini2019agiledebt}.
+Un estudio de implementación de prácticas de transparencia social en equipos ágiles encontró que equipos con artefactos sociales explícitos (equivalentes al Product Backlog Social) redujeron en 40\% el tiempo entre la aparición de un \textit{community smell} y su mitigación, comparado con equipos que dependían de "detección informal" \cite{martini2019agiledebt}.
 
 \subsubsection{Inspección: Evaluación continua de dinámicas sociales}
 
 \paragraph{Necesidad de inspección continua}
-La investigación sobre community smells revela una característica crítica: estos smells evolucionan dinámicamente \cite{caballero2022communitysmells}. Lo que inicia como un "Lone Wolf" benigno (un desarrollador que prefiere trabajar solo) puede evolucionar a un "Organizational Silo" si no se inspecciona y mitiga tempranamente. Esta progresión no es lineal ni predecible, lo que hace insuficiente la inspección esporádica o basada en crisis.
+La investigación sobre \textit{community smells} revela una característica crítica: estos smells evolucionan dinámicamente \cite{caballero2022communitysmells}. Lo que inicia como un "Lone Wolf" benigno (un desarrollador que prefiere trabajar solo) puede evolucionar a un "Organizational Silo" si no se inspecciona y mitiga tempranamente. Esta progresión no es lineal ni predecible, lo que hace insuficiente la inspección esporádica o basada en crisis.
 
 Los estudios de burnout en desarrolladores refuerzan esta necesidad: el síndrome de burnout no surge súbitamente, sino que progresa a través de etapas detectables (cansancio → cinismo → ineficacia) \cite{tulili2022burnout}. Sin inspección sistemática, estas etapas pasan desapercibidas hasta que el desarrollador experimenta un "colapso" que afecta a todo el equipo.
 
@@ -107,7 +107,7 @@ SocialScrum clasifica adaptaciones en tres categorías, mapeadas con TAD y Confi
 \begin{itemize}
     \item \textbf{Community smell objetivo}: Bottleneck (conocimiento concentrado), Lone Wolf (competencia no compartida)
     \item \textbf{Intervención}: Pair programming rotativo, documentación de conocimiento crítico, sesiones de ``lunch \& learn'' peer-to-peer.
-    \item \textbf{Evidencia}: Un estudio encontró que pair programming reduce en 60\% la percepción de ``knowledge silos'' y aumenta la confianza cognitiva \cite{wilson_all_2006}.
+    \item \textbf{Evidencia}: Un estudio encontró que \textit{pair programming} reduce en 60\% la percepción de ``knowledge silos'' y aumenta la confianza cognitiva \cite{wilson_all_2006}.
 \end{itemize}
 
 \textbf{Adaptaciones para restaurar Relacionalidad (TAD) y Benevolencia (Confianza)}:
@@ -128,14 +128,14 @@ Crítico en SocialScrum: las adaptaciones no son "buenas intenciones", sino comp
 
 Esta formalización es crítica porque, sin ella, la adaptación social queda subordinada a presiones de entrega técnica inmediata, perpetuando la acumulación de deuda.
 
-\subsection{Valores de Scrum como habilitadores contra community smells}
+\subsection{Valores de Scrum como habilitadores contra \textit{community smells}}
 
-Los cinco valores de Scrum no son meros principios aspiracionales; son habilitadores específicos que previenen y mitigan community smells documentados empíricamente. A continuación se detalla la conexión precisa entre cada valor y los smells que previene.
+Los cinco valores de Scrum no son meros principios aspiracionales; son habilitadores específicos que previenen y mitigan \textit{community smells} documentados empíricamente. A continuación se detalla la conexión precisa entre cada valor y los smells que previene.
 
 \subsubsection{Coraje: Habilitador de la vulnerabilidad constructiva}
 
 \paragraph{Por qué es crítico para deuda social}
-La deuda social surge precisamente cuando los problemas interpersonales u organizacionales permanecen no expresados \cite{dreesen2021socialdebt}. El coraje, entendido como la disposición a asumir riesgos en relaciones (Risk Taking in Relationship - RTR) \cite{mayer_integrative_1995}, es la condición necesaria para que los community smells se vuelvan discutibles antes de volverse críticos.
+La deuda social surge precisamente cuando los problemas interpersonales u organizacionales permanecen no expresados \cite{dreesen2021socialdebt}. El coraje, entendido como la disposición a asumir riesgos en relaciones (Risk Taking in Relationship - RTR) \cite{mayer_integrative_1995}, es la condición necesaria para que los \textit{community smells} se vuelvan discutibles antes de volverse críticos.
 
 \paragraph{Community smells prevenidos por Coraje}
 
@@ -166,7 +166,7 @@ El coraje operacionaliza el RTR del modelo de Mayer \cite{mayer_integrative_1995
 \subsubsection{Apertura: Condición para la transparencia social}
 
 \paragraph{Por qué es crítica para deuda social}
-La deuda social permanece invisible sin apertura. Estudios de community smells muestran que incluso cuando los problemas son evidentes para los miembros del equipo, sin una cultura de apertura estos permanecen como "secretos a voces" \cite{tamburri2013socialdebt}.
+La deuda social permanece invisible sin apertura. Estudios de \textit{community smells} muestran que incluso cuando los problemas son evidentes para los miembros del equipo, sin una cultura de apertura estos permanecen como "secretos a voces" \cite{tamburri2013socialdebt}.
 
 \paragraph{Community smells prevenidos por Apertura}
 
@@ -211,7 +211,7 @@ Sin respeto, incluso equipos técnicamente competentes desarrollan toxicidad que
 \begin{itemize}
     \item \textbf{Mecanismo}: Lenguaje descortés, desvalorización de contribuciones, o exclusión social erosionan el respeto.
     \item \textbf{Evidencia crítica}: Un estudio longitudinal encontró que "lenguaje descortés en comunicaciones de código" predice burnout con 78\% de precisión a 6 meses \cite{tulili2022burnout}. El respeto (o su ausencia) en interacciones diarias es señal temprana de deterioro.
-    \item \textbf{Prevención en SocialScrum}: El Social Guide monitorea "tone" de comunicaciones críticas (e.g., code reviews, discusiones técnicas) e interviene cuando detecta patrones descorteses.
+    \item \textbf{Prevención en SocialScrum}: El Social Guide monitorea "tone" de comunicaciones críticas (e.g., \textit{code reviews}, discusiones técnicas) e interviene cuando detecta patrones descorteses.
 \end{itemize}
 
 \textbf{Cognitive Distance}:
@@ -269,7 +269,7 @@ La presión por entrega técnica a corto plazo es la causa \#1 de acumulación d
 \textbf{Progressive Community Smells}:
 \begin{itemize}
     \item \textbf{Mecanismo}: Sin foco en mitigación temprana, los smells "leves" evolucionan a "críticos". Por ejemplo: Lone Wolf → Organizational Silo → Radio Silence completo.
-    \item \textbf{Evidencia}: El 71\% de community smells críticos comenzaron como smells "menores" que no se atendieron por "falta de prioridad" \cite{caballero2022communitysmells}.
+    \item \textbf{Evidencia}: El 71\% de \textit{community smells} críticos comenzaron como smells "menores" que no se atendieron por "falta de prioridad" \cite{caballero2022communitysmells}.
     \item \textbf{Prevención en SocialScrum}: El Foco en salud social significa que detectar y mitigar smells tempranos NO es "distracción del Sprint", sino inversión en sostenibilidad. El Social Guide ayuda al equipo a mantener este foco dual.
 \end{itemize}
 \textbf{Technical Debt accumulation via Social Debt}:
@@ -281,13 +281,13 @@ La presión por entrega técnica a corto plazo es la causa \#1 de acumulación d
 \paragraph{Foco como trade-off consciente}
 SocialScrum no elimina los trade-offs entre entrega y sostenibilidad, pero los hace explícitos y conscientes. El Social Guide informa sobre el "costo social" de decisiones de planificación (e.g., "Este Sprint sobrecargado incrementará work exhaustion estimado en 15\%"), permitiendo al Product Owner y al equipo tomar decisiones informadas en lugar de acumular deuda social involuntariamente.
 
-\subsection{Mapeo integrado: Fundamentos teóricos, valores y community smells}
+\subsection{Mapeo integrado: Fundamentos teóricos, valores y \textit{community smells}}
 
-La Tabla \ref{tab:mapeo_fundamentos_smells} sintetiza las conexiones entre los fundamentos teóricos adoptados, los valores de Scrum y los community smells específicos que previenen o mitigan. Este mapeo no es exhaustivo, pero ilustra las relaciones causales más robustas identificadas en la literatura.
+La Tabla \ref{tab:mapeo_fundamentos_smells} sintetiza las conexiones entre los fundamentos teóricos adoptados, los valores de Scrum y los \textit{community smells} específicos que previenen o mitigan. Este mapeo no es exhaustivo, pero ilustra las relaciones causales más robustas identificadas en la literatura.
 
 \begin{landscape}
     \begin{table}[htb]
-        \caption{Mapeo de fundamentos teóricos, valores de Scrum y community smells en SocialScrum}
+        \caption{Mapeo de fundamentos teóricos, valores de Scrum y \textit{community smells} en SocialScrum}
         \label{tab:mapeo_fundamentos_smells}
         \centering
         \tiny
@@ -337,7 +337,7 @@ La Tabla \ref{tab:mapeo_fundamentos_smells} sintetiza las conexiones entre los f
             Habilidad (retener conocimiento para parecer indispensable), Benevolencia (no actúa en beneficio del equipo)                                     &
             Apertura, Compromiso                                                                                                                             &
             Sin apertura sobre conocimiento crítico + sin compromiso con éxito colectivo → información se retiene como "poder"                               &
-            Product Backlog Social con ítems de documentación, pair programming obligatorio en áreas críticas, reconocimiento de "knowledge sharing" como métrica de contribución                                                                                                                                                          \\
+            Product Backlog Social con ítems de documentación, \textit{pair programming} obligatorio en áreas críticas, reconocimiento de "knowledge sharing" como métrica de contribución                                                                                                                                                          \\
 
             \midrule
 
@@ -391,9 +391,9 @@ La Tabla \ref{tab:mapeo_fundamentos_smells} sintetiza las conexiones entre los f
 
 \subsection{Síntesis de evidencia empírica}
 
-La propuesta de SocialScrum se fundamenta en un cuerpo de evidencia empírica que conecta: (1) la prevalencia y el impacto de community smells, (2) la efectividad de satisfacer necesidades psicológicas básicas (TAD) para prevenir deterioro social, y (3) el rol de la confianza como mecanismo fundamental de coordinación en equipos ágiles. Esta sección sintetiza los hallazgos clave que justifican el modelo propuesto.
+La propuesta de SocialScrum se fundamenta en un cuerpo de evidencia empírica que conecta: (1) la prevalencia y el impacto de \textit{community smells}, (2) la efectividad de satisfacer necesidades psicológicas básicas (TAD) para prevenir deterioro social, y (3) el rol de la confianza como mecanismo fundamental de coordinación en equipos ágiles. Esta sección sintetiza los hallazgos clave que justifican el modelo propuesto.
 
-\subsubsection{Prevalencia e impacto de community smells}
+\subsubsection{Prevalencia e impacto de \textit{community smells}}
 
 \paragraph{Datos de prevalencia}
 El estudio sistemático de Caballero et al. \cite{caballero2022communitysmells} analizó 60 proyectos de software y encontró:
@@ -406,7 +406,7 @@ El estudio sistemático de Caballero et al. \cite{caballero2022communitysmells} 
 \paragraph{Impacto cuantificado}
 El mismo estudio cuantificó el impacto de community smells:
 \begin{itemize}
-    \item Proyectos con community smells experimentan en promedio 23\% más retrasos en entregas planificadas
+    \item Proyectos con \textit{community smells} experimentan en promedio 23\% más retrasos en entregas planificadas
     \item La densidad de defectos es 1.8x mayor en módulos desarrollados por equipos con Organizational Silos activos
     \item El tiempo de resolución de conflictos técnicos aumenta 3.2x cuando existe Radio Silence o Bottleneck
 \end{itemize}
@@ -427,7 +427,7 @@ Un meta-análisis de 108 estudios sobre autonomía en equipos de trabajo \cite{r
 Estudios específicos en equipos de desarrollo de software muestran:
 \begin{itemize}
     \item Desarrolladores que perciben alta competencia propia y del equipo tienen 3.1x menor probabilidad de experimentar "ineficacia profesional" (componente de burnout) \cite{tulili2022burnout}
-    \item Prácticas que aumentan percepción de competencia (pair programming, code reviews constructivos, mentoring) reducen en 40\% la rotación voluntaria en equipos juniors
+    \item Prácticas que aumentan percepción de competencia (\textit{pair programming}, \textit{code reviews} constructivos, mentoring) reducen en 40\% la rotación voluntaria en equipos juniors
 \end{itemize}
 
 \paragraph{Relacionalidad y cohesión}
@@ -456,7 +456,7 @@ Hallazgos críticos sobre deterioro de confianza:
     \item La percepción de baja habilidad (competencia) genera comportamientos de "micromanagement" y duplicación de trabajo, aumentando costos de coordinación en 40\%
 \end{itemize}
 
-\paragraph{Confianza y community smells}
+\paragraph{Confianza y \textit{community smells}}
 Un estudio cuantitativo \cite{wilson_all_2006} estableció correlaciones directas:
 \begin{itemize}
     \item Baja confianza cognitiva (Habilidad) correlaciona con Bottleneck (r = 0.54) y Knowledge Hoarding (r = 0.48)
@@ -501,7 +501,7 @@ El análisis post-mortem de los fallos del Boeing 737 MAX \cite{saeeda2024nontec
     \item Resultado: Fallas catastróficas que causaron 346 muertes y \$20 billones en pérdidas
 \end{itemize}
 
-Este caso ilustra el costo extremo de community smells no gestionados: Radio Silence + Organizational Silo + Falta de Coraje + Sluggish Organization = desastre sistémico.
+Este caso ilustra el costo extremo de \textit{community smells} no gestionados: Radio Silence + Organizational Silo + Falta de Coraje + Sluggish Organization = desastre sistémico.
 
 \paragraph{Casos positivos: Implementación de gestión social}
 Estudios de caso de organizaciones que implementaron prácticas similares a SocialScrum \cite{martini2019agiledebt}:
@@ -514,8 +514,8 @@ Estudios de caso de organizaciones que implementaron prácticas similares a Soci
 
 Es importante reconocer las limitaciones del cuerpo de evidencia actual:
 \begin{itemize}
-    \item La mayoría de estudios sobre community smells son observacionales o retrospectivos; faltan experimentos controlados aleatorios (dificultad práctica y ética en contextos industriales reales)
-    \item La causalidad entre TAD/Confianza y community smells está inferida de correlaciones y estudios cualitativos; se requiere investigación longitudinal más rigurosa
+    \item La mayoría de estudios sobre \textit{community smells} son observacionales o retrospectivos; faltan experimentos controlados aleatorios (dificultad práctica y ética en contextos industriales reales)
+    \item La causalidad entre TAD/Confianza y \textit{community smells} está inferida de correlaciones y estudios cualitativos; se requiere investigación longitudinal más rigurosa
     \item La efectividad de intervenciones específicas (e.g., Social Guide role) está documentada en estudios de caso, pero falta validación a gran escala multi-organizacional
     \item Las métricas sociales (e.g., SNA, encuestas de burnout) tienen limitaciones de validez y pueden ser "juked" en contextos donde hay presión por reportar métricas positivas
 \end{itemize}
@@ -528,8 +528,8 @@ La evidencia justifica cada componente del modelo:
     \item \textbf{Necesidad de transparencia}: Los smells son prevalentes (87\% de proyectos) pero invisibles sin mecanismos explícitos
     \item \textbf{Necesidad de inspección continua}: Los smells evolucionan dinámicamente; inspección ad-hoc es insuficiente
     \item \textbf{Necesidad de adaptación formalizada}: Intervenciones informales tienen baja tasa de cumplimiento (27\% vs. 73\% formalizadas)
-    \item \textbf{Fundamentos TAD}: Satisfacer necesidades psicológicas básicas previene burnout y community smells relacionados con motivación
-    \item \textbf{Fundamentos Confianza}: Factores de confianza predicen community smells específicos con correlaciones moderadas-fuertes
+    \item \textbf{Fundamentos TAD}: Satisfacer necesidades psicológicas básicas previene burnout y \textit{community smells} relacionados con motivación
+    \item \textbf{Fundamentos Confianza}: Factores de confianza predicen \textit{community smells} específicos con correlaciones moderadas-fuertes
     \item \textbf{Valores Scrum}: Cada valor previene smells específicos mediante mecanismos causales identificables
 \end{itemize}
 
@@ -542,14 +542,14 @@ El modelo SocialScrum se estructura en cuatro capas interdependientes que van de
 \begin{figure}[p] % página completa
     \centering
     \includegraphics[width=\textwidth,height=0.9\textheight,keepaspectratio]{recursos/SocialScrum-logo.png}
-    \caption{Arquitectura integrada del modelo SocialScrum: desde fundamentos teóricos hasta impacto en community smells}
+    \caption{Arquitectura integrada del modelo SocialScrum: desde fundamentos teóricos hasta impacto en \textit{community smells}}
     \label{fig:arquitectura_socialscrum}
 \end{figure}
 
 \subsection{Capas del modelo SocialScrum}
 
 \subsubsection{Capa 1: Valores y principios (fundamento cultural)}
-Esta capa contiene los cinco valores de Scrum (Coraje, Apertura, Respeto, Compromiso, Foco) que actúan como brújula cultural del equipo. Estos valores no son meros aspiracionales; son habilitadores específicos que previenen community smells al crear el clima psicológico necesario para que las capas operacionales funcionen efectivamente.
+Esta capa contiene los cinco valores de Scrum (Coraje, Apertura, Respeto, Compromiso, Foco) que actúan como brújula cultural del equipo. Estos valores no son meros aspiracionales; son habilitadores específicos que previenen \textit{community smells} al crear el clima psicológico necesario para que las capas operacionales funcionen efectivamente.
 
 \textbf{Relación con capas inferiores}: Los valores habilitan los fundamentos teóricos (e.g., Coraje → RTR necesario para Confianza; Respeto → Relacionalidad en TAD).
 
@@ -587,7 +587,7 @@ Esta capa contiene los elementos prácticos de SocialScrum, organizados en tres 
 \begin{itemize}
     \item \textbf{Eventos}: Daily Social Scrum, Sprint Review Social, Sprint Retrospective Social
     \item \textbf{Roles}: Social Guide (análisis especializado), Scrum Master (facilitación vivencial), Developers (participación activa)
-    \item \textbf{Propósito}: Detectar community smells y degradación de TAD/Confianza tempranamente
+    \item \textbf{Propósito}: Detectar \textit{community smells} y degradación de TAD/Confianza tempranamente
 \end{itemize}
 
 \paragraph{Adaptación (intervenir basado en evidencia)}
@@ -599,7 +599,7 @@ Esta capa contiene los elementos prácticos de SocialScrum, organizados en tres 
 \textbf{Relación con capas inferior/superior}: Los mecanismos operacionalizan los fundamentos teóricos y determinan qué smells se previenen/mitigan.
 
 \subsubsection{Capa 4: Impacto observable (qué se previene/mitiga)}
-Esta capa muestra los community smells específicos que SocialScrum previene o mitiga, organizados por categoría:
+Esta capa muestra los \textit{community smells} específicos que SocialScrum previene o mitiga, organizados por categoría:
 
 \paragraph{Smells de comunicación}
 \begin{itemize}
@@ -661,7 +661,7 @@ El Social Guide opera transversalmente en todas las capas:
     \item Capa 1: Promueve vivencia de valores mediante modelado y educación
     \item Capa 2: Diagnostica qué necesidad TAD o factor de Confianza está comprometido mediante análisis especializado
     \item Capa 3: Facilita eventos de inspección, mantiene artefactos sociales, diseña intervenciones
-    \item Capa 4: Monitorea community smells mediante SNA y otras técnicas de detección
+    \item Capa 4: Monitorea \textit{community smells} mediante SNA y otras técnicas de detección
 \end{itemize}
 \subsection{Principios de diseño del modelo}
 \subsubsection{Integración, no yuxtaposición}

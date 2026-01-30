@@ -1,10 +1,10 @@
-\chapter*{ANEXO F: EJEMPLOS DETALLADOS DE INTERVENCIONES}
-\addcontentsline{toc}{chapter}{ANEXO F: Ejemplos Detallados de Intervenciones}
+\chapter*{ANEXO H: EJEMPLOS DETALLADOS DE INTERVENCIONES}
+\addcontentsline{toc}{chapter}{ANEXO H: Ejemplos Detallados de Intervenciones}
 \label{anexo:ejemplos-intervenciones}
 
-Este anexo presenta ejemplos detallados de intervenciones para diferentes categor\'ias de community smells. Cada ejemplo incluye diagn\'ostico, estrategia paso a paso, m\'etricas de \'exito y resultados observados.
+Este anexo presenta ejemplos detallados de intervenciones para diferentes categorías de \textit{community smells}. Cada ejemplo incluye diagnóstico, estrategia paso a paso, métricas de éxito y resultados observados.
 
-\section*{F.1 Intervenci\'on: Radio Silence (Smell de Comunicaci\'on)}
+\section*{H.1 Intervención: \textit{Radio Silence} (Smell de Comunicación)}
 
 \begin{verbatim}
 === INTERVENCIÓN: RADIO SILENCE ===
@@ -16,7 +16,7 @@ DIAGNÓSTICO:
 - 3 devs reportan "enterarse tarde" de cambios de API
 - En Daily, solo María y Pedro hablan regularmente
 
-ESTRATEGIA (5 SPS):
+ESTRATEGIA (5 SSP):
 Semana 1:
 - Workshop "Comunicación distribuida" (2h)
 - Crear canal #alpha-actualizaciones para cambios técnicos
@@ -37,7 +37,7 @@ RESULTADO (Sprint +1):
 - Encuesta: 6.5/10 (mejora parcial, continuar)
 \end{verbatim}
 
-\section*{F.2 Intervenci\'on: Truck Factor = 1 (Smell de Conocimiento)}
+\section*{H.2 Intervención: Truck Factor = 1 (Smell de Conocimiento)}
 
 \begin{verbatim}
 === INTERVENCIÓN: TRUCK FACTOR = 1 ===
@@ -50,18 +50,18 @@ DIAGNÓSTICO:
 - Cuando Carlos está de vacaciones, bugs en motor quedan sin resolver
 - Otros devs "tienen miedo" de tocar ese código
 
-ESTRATEGIA (8 SPS distribuidos en 3 Sprints):
+ESTRATEGIA (8 SSP distribuidos en 3 Sprints):
 
-Sprint 1 (3 SPS):
+Sprint 1 (3 SSP):
 - Carlos documenta arquitectura en 3 páginas
 - Carlos hace pair programming con Ana en 2 tareas del motor
 
-Sprint 2 (3 SPS):
+Sprint 2 (3 SSP):
 - Ana hace tarea sola en motor, Carlos solo revisa
 - Carlos hace pair con Pedro en 1 tarea
 - Sesión de 2h: "Cómo debuggear el motor"
 
-Sprint 3 (2 SPS):
+Sprint 3 (2 SSP):
 - Pedro hace tarea solo, Carlos revisa
 - Documentar "troubleshooting guide" para problemas comunes
 - Evaluar: ¿Ana y Pedro pueden resolver bugs nivel 1-2?
@@ -77,7 +77,7 @@ RESULTADO:
 - Truck factor efectivo: 2.5 (Ana casi independiente, Pedro parcial)
 \end{verbatim}
 
-\section*{F.3 Intervenci\'on: Conflicto No Resuelto (Smell Relacional)}
+\section*{H.3 Intervención: Conflicto No Resuelto (Smell Relacional)}
 
 \begin{verbatim}
 === INTERVENCIÓN: UNRESOLVED CONFLICT ===
@@ -90,7 +90,7 @@ DIAGNÓSTICO:
 - Otros miembros evitan tareas que requieren A+B
 - Daily tiene tensión cuando ambos reportan
 
-ESTRATEGIA (5 SPS):
+ESTRATEGIA (5 SSP):
 
 Día 1 - Sesión 1:1 con Dev A (1h):
 - Escuchar su perspectiva sin juzgar
@@ -132,7 +132,7 @@ RESULTADO (Sprint +2):
 - Respeto: 6.5/10 [OK]
 \end{verbatim}
 
-\section*{F.4 Intervenci\'on: Meeting Hell (Smell Organizacional)}
+\section*{H.4 Intervención: Meeting Hell (Smell Organizacional)}
 
 \begin{verbatim}
 === INTERVENCIÓN: MEETING HELL ===
@@ -142,12 +142,12 @@ Problema: Promedio de 25h/semana en reuniones por persona
 DIAGNÓSTICO:
 - Auditoría de calendarios muestra:
   - 8h/semana: reuniones de Scrum (normal)
-  - 10h/semana: reuniones con stakeholders (excesivo)
+  - 10h/semana: reuniones con partes interesadas (\textit{stakeholders}) (excesivo)
   - 7h/semana: reuniones "informativas" donde equipo es pasivo
 - Foco del equipo: 4.2/10 (crítico)
 - Velocity cayó 30% en últimos 3 Sprints
 
-ESTRATEGIA (5 SPS):
+ESTRATEGIA (5 SSP):
 
 Semana 1 - Documentación:
 - Crear spreadsheet: reunión, convocador, frecuencia, asistentes
@@ -159,7 +159,7 @@ Semana 2 - Propuesta:
 - Establecer "Focus Fridays": sin reuniones externas
 
 Semana 3 - Negociación:
-- Reunión con stakeholders clave (SM lidera)
+- Reunión con \textit{stakeholders} clave (SM lidera)
 - Presentar datos de impacto en velocity
 - Acordar: representante rota, resumen escrito después
 
@@ -179,7 +179,7 @@ RESULTADO (Sprint +2):
 - Velocity: +20% (recuperación parcial, continuar)
 \end{verbatim}
 
-\section*{F.5 Experimento: Reducir Knowledge Islands}
+\section*{H.5 Experimento: Reducir Knowledge Islands}
 
 \begin{verbatim}
 === EXPERIMENTO: REDUCIR KNOWLEDGE ISLANDS ===
@@ -199,12 +199,12 @@ porque la exposición temprana a código de otros
 reduce sorpresas y builds empathy."
 
 MÉTRICAS:
-| Métrica                  | Baseline | Target  |
-|--------------------------|----------|---------|
-| PRs con reviewer cruzado | 0/semana | 5/semana|
-| Conflictos de integración| 4/Sprint | 2/Sprint|
-| "Entiendo código otros"  | 3/10     | 5/10    |
-| Health Score Compromiso  | 5.5      | 6.5     |
+| Métrica                  | Linea base | Target  |
+|--------------------------|------------|---------|
+| PRs con reviewer cruzado | 0/semana   | 5/semana|
+| Conflictos de integración| 4/Sprint   | 2/Sprint|
+| "Entiendo código otros"  | 3/10       | 5/10    |
+| Health Score Compromiso  | 5.5        | 6.5     |
 
 INTERVENCIÓN:
 Semana 1:
