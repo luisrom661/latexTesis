@@ -58,7 +58,7 @@
 \usepackage{longtable}               % Tablas que ocupan múltiples páginas
 \usepackage{tabularx}                % Tablas con ancho ajustable
 \usepackage{siunitx}                 % Alineación de números y unidades
-
+\usepackage{multirow}                % Celdas que abarcan múltiples filas
 
 % ==============================================================================
 % PAQUETES MATEMÁTICOS Y DE SÍMBOLOS
@@ -100,9 +100,12 @@
 
 \usepackage{float}                   % Control preciso de posicionamiento
 \usepackage{array}                   % Mejoras para tablas
+\usepackage{longtable}               % Tablas que ocupan múltiples páginas
 \usepackage[section]{placeins}       % Evita que flotantes crucen secciones
 \restylefloat{table}
 \restylefloat{figure}
+\usepackage{ltablex}
+\keepXColumns
 
 % --- Parámetros de colocación de flotantes ---
 \setcounter{topnumber}{3}            % Máximo 3 flotantes en la parte superior
@@ -274,7 +277,7 @@
 %\input{capitulos/pruebas.tex}
 
 % --- Capítulo 5 ---
-\input{capitulos/capitulo5.tex}
+\input{capitulos/capitulo5-nuevo.tex}
 
 % --- Capítulo 6 ---
 \input{capitulos/capitulo6.tex}

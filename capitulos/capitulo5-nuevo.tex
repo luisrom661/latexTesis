@@ -1,0 +1,398 @@
+\chapter*{CAPÍTULO 5. Validación del modelo SocialScrum mediante la técnica de juicio de expertos}
+\addcontentsline{toc}{chapter}{CAPÍTULO 5. Validación del modelo SocialScrum mediante la técnica de juicio de expertos}
+\setcounter{chapter}{5}
+\setcounter{section}{0}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+\setlength{\parindent}{0pt}
+
+Este capítulo presenta la validación del modelo SocialScrum, con el fin de analizar su coherencia y alineación con los principios de la agilidad. La validación se aborda desde una perspectiva conceptual, considerando tanto la evaluación de la agilidad del modelo como la valoración experta de su diseño, previo a una eventual implementación empírica en contextos organizacionales reales.
+
+\section{Estrategia de validación del modelo SocialScrum}
+La estrategia de validación del modelo SocialScrum se centra en evaluar su alineación con los valores y principios del Manifiesto Ágil, considerando el carácter socio-organizacional del modelo. Para ello, se utiliza el framework AgilityPRO (\textit{Agility in Processes}) como marco de referencia, dado que proporciona un enfoque estructurado para evaluar la agilidad de procesos de desarrollo de software a partir de los principios ágiles fundamentales.
+
+AgilityPRO, desarrollado por Ortega \textit{et al.} \cite{ortega2019agilityevaluation}, se caracteriza por su independencia de metodologías específicas, lo que permite analizar elementos transversales de la agilidad presentes en marcos ampliamente adoptados como Scrum, XP o Kanban. Esta característica resulta adecuada para el análisis de SocialScrum, dado que se trata de un modelo derivado de Scrum que amplía su alcance hacia la gestión de factores sociales y organizacionales.
+
+Dado el alcance de esta investigación de pregrado, la validación del modelo se complementa mediante la técnica de juicio de expertos, orientada a evaluar la coherencia, pertinencia y viabilidad conceptual del diseño propuesto. La aplicación de AgilityPRO se realiza de manera conceptual y simulada, a partir del análisis del diseño del modelo SocialScrum, sin considerar mediciones empíricas ni evaluaciones en entornos productivos reales.
+
+Es importante señalar que SocialScrum prioriza deliberadamente los factores sociales y organizacionales del trabajo en equipo por encima de prácticas técnicas específicas de ingeniería de software. En consecuencia, los resultados de esta validación deben interpretarse como una validación conceptual del modelo desde la perspectiva ágil, quedando la evaluación de su desempeño técnico y operativo como una línea de trabajo futuro.
+La estructura de este capítulo se organiza de la siguiente manera y se puede visualizar en la figura \ref{fig:estructura-capitulo5}:
+
+\begin{enumerate}
+    \item \textbf{Protocolo de validación mediante juicio de expertos}
+    \item \textbf{Perfil y selección de expertos participantes}
+    \item \textbf{Diseño del instrumento de validación}
+    \item \textbf{Procedimiento de aplicación}
+    \item \textbf{Análisis de resultados y retroalimentación}
+\end{enumerate}
+
+\section{Protocolo de validación mediante juicio de expertos}
+Para la evaluación del modelo SocialScrum, se diseñó un protocolo de validación basado en la técnica de juicio de expertos. Para la evaluación y validación de este modelo se incluypo un documento entregado a los participantes con la contextualización del tema a evaluar (ver Anexo~\ref{anexo:contextualizacion}). Esta técnica permite obtener una valoración cualitativa y cuantitativa del modelo a partir de la experiencia y conocimientos de profesionales en metodologías ágiles y desarrollo de software. El protocolo se estructuró en varias etapas, que se describen a continuación.
+
+\subsection{Objetivo de la validación}
+El objetivo principal de esta validación es evaluar la adecuación del modelo SocialScrum en términos de su alineación con los principios ágiles, su aplicabilidad en contextos reales de desarrollo de software y su capacidad para fomentar la colaboración y eficiencia en equipos distribuidos.
+
+\section{Perfil y selección de expertos participantes}
+\subsection{Perfilamiento de los participantes}
+Para la validación del modelo SocialScrum, se seleccionaron expertos con experiencia en metodologías ágiles, desarrollo de software y gestión de proyectos. Los criterios de selección incluyeron:
+\begin{itemize}
+    \item Experiencia académica o profesional en el área de desarrollo de software.
+    \item Experiencia mínima de 2 años en la aplicación de metodologías ágiles.
+    \item Participación en proyectos ágiles exitosos.
+    \item Conocimiento en herramientas de colaboración y gestión de proyectos ágiles.
+    \item Preferiblemente, experiencia en equipos distribuidos o remotos.
+\end{itemize}
+
+\subsection{Selección de participantes}
+Se contactaron a 8 expertos potenciales a través de redes profesionales y académicas. De estos, los 8 aceptaron participar en la validación del modelo SocialScrum. Los participantes provinieron de diversas industrias, incluyendo desarrollo de software, consultoría ágil y educación en ingeniería de software. A continuación, se presenta un resumen del perfil de los expertos participantes en la validación del modelo SocialScrum (ver Tabla~\ref{tab:perfil-expertos}).
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Perfil de los expertos participantes en la validación del modelo SocialScrum}
+    \label{tab:perfil-expertos}
+    \small
+
+    % Columna X alineada a la izquierda con salto de línea correcto
+    \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+    % Columna numérica centrada (para "Años")
+    \newcolumntype{C}{>{\centering\arraybackslash}c}
+
+    \begin{tabularx}{\textwidth}{|C|Y|C|Y|Y|}
+        \hline
+        \textbf{Id.} & \textbf{Último título obtenido} & \textbf{Años de experiencia} & \textbf{Cargo actual}                 & \textbf{Metodologías ágiles conocidas} \\
+        \hline
+        E1           & Ingeniero de sistemas           & 4 años                       & Desarrollador Senior de software      & Scrum, Kanban, XP                      \\
+        \hline
+        E2           & Ingeniero de sistemas           & 4 años                       & Desarrollador Semi-Senior de software & Scrum, Lean, Kanban                    \\
+        \hline
+        E3           & Ingeniero de sistemas           & 9 años                       & Desarrollador Senior de software      & Scrum, Kanban                          \\
+        \hline
+        E4           & Ingeniero de sistemas           & 5 años                       & Desarrollador Senior de software      & Scrum, XP, Lean                        \\
+        \hline
+        E5           & Ingeniero de sistemas           & 4 años                       & Desarrollador Semi-Senior de software & Scrum, Kanban                          \\
+        \hline
+        E6           & Ingeniero en Telemática         & 5 años                       & Ingeniero DevOps Senior               & Scrum, Kanban, SAfe                    \\
+        \hline
+        E7           & Ingeniero de sistemas           & 3 años                       & Desarrollador Semi-Senior de software & Scrum, Lean                            \\
+        \hline
+        E8           & Ingeniero de sistemas           & 5 años                       & Desarrollador Senior de software      & Scrum, Kanban, XP, Lean                \\
+        \hline
+    \end{tabularx}
+
+    \smallskip
+    \raggedright
+    \textit{Acrónimos utilizados: Identificador (Id.). y Experto (E).}
+\end{table}
+\FloatBarrier
+
+\section{Definición del instrumento de validación}
+La validación del contenido del marco ágil SocialScrum se organizó en torno a un instrumento diseñado específicamente para este fin, denominado Instrumento de evaluación por juicio de expertos - marco ágil SocialScrum. Este instrumento fue diseñado como un medio para valorar la calidad técnica y la aplicabilidad metodológica del proceso propuesto además de un documento de contextualización entregado a los expertos (ver Anexo~\ref{anexo:contextualizacion}).
+
+\section{Criterios de evaluación considerados}
+La validación del modelo SocialScrum se llevó a cabo mediante un cuestionario estructurado que incluyó tanto preguntas cuantitativas como cualitativas. El cuestionario se diseñó para evaluar diferentes aspectos del modelo, tales como su coherencia con los principios ágiles, su aplicabilidad práctica y su capacidad para mejorar la colaboración en equipos distribuidos.
+\subsection{Criterios de evaluación}
+Se definieron cinco criterios de evaluación clave para guiar la valoración del modelo SocialScrum por parte de los expertos:
+\begin{enumerate}
+    \item \textbf{Claridad}: Evaluar si los conceptos y procesos del modelo SocialScrum están claramente definidos y son comprensibles.
+    \item \textbf{Completitud}: Determinar si el modelo abarca todos los aspectos necesarios para la gestión ágil de proyectos en equipos distribuidos.
+    \item \textbf{Idoneidad}: Valorar si el modelo es adecuado para su aplicación en contextos reales de desarrollo de software.
+    \item \textbf{Facilidad de uso}: Evaluar si el modelo es fácil de implementar y utilizar por parte de los equipos de desarrollo.
+    \item \textbf{Coherencia}: Analizar si el modelo se alinea con los principios y valores del Manifiesto Ágil.
+\end{enumerate}
+
+\begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{|c|X|}
+        \hline
+        \textbf{Criterio} & \textbf{Descripción}                                                                                                    \\
+        \hline
+        Claridad          & Evaluar si los conceptos y procesos del modelo SocialScrum están claramente definidos y son comprensibles.              \\
+        \hline
+        Completitud       & Determinar si el modelo abarca todos los aspectos necesarios para la gestión ágil de proyectos en equipos distribuidos. \\
+        \hline
+        Idoneidad         & Valorar si el modelo es adecuado para su aplicación en contextos reales de desarrollo de software.                      \\
+        \hline
+        Facilidad de uso  & Evaluar si el modelo es fácil de implementar y utilizar por parte de los equipos de desarrollo.                         \\
+        \hline
+        Coherencia        & Analizar si el modelo se alinea con los principios y valores del Manifiesto Ágil.                                       \\
+        \hline
+    \end{tabularx}
+    \caption{Criterios de evaluación y número de preguntas en el instrumento de validación}
+    \label{tab:criterios-evaluacion}
+\end{table}
+\FloatBarrier
+
+\subsection{Estructura de la encuesta}
+El instrumento de evaluación del marco ágil SocialScrum se estructuró como un cuestionario en formato digital, compuesto por 20 preguntas cerradas y 3 preguntas abiertas. Las
+preguntas cerradas fueron diseñadas para ser valoradas por los expertos en función de cinco criterios de calidad presentados anteriormente, utilizando una escala Likert de 1 a 5, donde 1 representaba "Totalmente en desacuerdo" y 5 "Totalmente de acuerdo". Las preguntas abiertas permitieron a los expertos proporcionar comentarios cualitativos y sugerencias de mejora.
+
+\begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{|c|c|}
+        \hline
+        \textbf{Interpretación}    & \textbf{Valor} \\
+        \hline
+        Totalmente en desacuerdo   & 1              \\
+        \hline
+        Parcialmente en desacuerdo & 2              \\
+        \hline
+        Neutralidad                & 3              \\
+        \hline
+        Parcialmente de acuerdo    & 4              \\
+        \hline
+        Totalmente de acuerdo      & 5              \\
+        \hline
+    \end{tabularx}
+    \caption{Estructura del instrumento de evaluación}
+    \label{tab:estructura-instrumento}
+\end{table}
+\FloatBarrier
+
+\subsection{Preguntas formuladas}
+A continuación se presenta el cuestionario dividido en Parte A (preguntas cerradas con escala Likert de 5 puntos, donde 1 = Totalmente en desacuerdo y 5 = Totalmente de acuerdo) y Parte B (preguntas abiertas). Cada pregunta está identificada con un código (P1–P20 para ítems Likert, PA1–PA3 para abiertas):
+
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.1}
+
+\begin{longtable}{|c|>{\raggedright\arraybackslash}p{\dimexpr\textwidth-\tabcolsep*2-2\arrayrulewidth-1.8cm\relax}|}
+    \caption{Ejemplos de preguntas del instrumento de evaluación}
+    \label{tab:ejemplos-preguntas}                                                                                                                                                                                                                     \\
+    \hline
+    \textbf{Id.} & \textbf{Pregunta}                                                                                                                                                                                                                   \\
+    \hline
+
+    \multicolumn{2}{|l|}{\textbf{Parte A - Preguntas Cerradas}}                                                                                                                                                                                        \\
+    \hline
+
+    P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos?                                                                                                                                                     \\
+    \hline
+    P2           & ¿Cree que el modelo SocialScrum cubre todos los aspectos necesarios para la gestión ágil de proyectos?                                                                                                                              \\
+    \hline
+    P3           & ¿Los valores fundamentales de Scrum (coraje, foco, compromiso, apertura y respeto) se reflejan adecuadamente en las prácticas de SocialScrum para manejar la deuda social del equipo?                                               \\
+    \hline
+    P4           & ¿Existen inconsistencias teóricas en el marco conceptual de SocialScrum (TAD, confianza en equipos, valores de Scrum) que podrían comprometer la coherencia del modelo?                                                             \\
+    \hline
+    P5           & ¿El perfil y las competencias del Social Guide están claramente definidos y son viables, complementando los roles existentes en el equipo sin solapamiento de responsabilidades?                                                    \\
+    \hline
+    P6           & ¿La introducción del rol Social Guide podría generar conflictos de autoridad o de interés con roles existentes (por ejemplo, con el Scrum Master, Product Owner o el departamento de RRHH)?                                         \\
+    \hline
+    P7           & ¿La estructura de reporte propuesta para el Social Guide (por ejemplo, que reporte al CTO o al Scrum Master en lugar de a RRHH) es adecuada para preservar la independencia del rol y la confianza del equipo?                      \\
+    \hline
+    P8           & ¿El modelo establece mecanismos claros de gobernanza para resolver desacuerdos entre el Social Guide y otros roles (por ejemplo, conflictos con el Product Owner), evitando impactos negativos en la toma de decisiones del equipo? \\
+    \hline
+    P9           & ¿La adaptación de eventos Scrum en SocialScrum (como el Social Daily Standup o las retrospectivas sociales) añade una complejidad innecesaria al proceso ágil?                                                                      \\
+    \hline
+    P10          & ¿Los artefactos sociales introducidos (por ejemplo, el Social Product Backlog, las historias de usuario sociales y el registro de community smells) están bien definidos y facilitan el seguimiento de la salud del equipo?         \\
+    \hline
+    P11          & ¿La métrica Health Score proporciona una evaluación objetiva y útil de la salud social del equipo, sirviendo de base para tomar acciones de mejora cuando sea necesario?                                                            \\
+    \hline
+    P12          & ¿El sistema de estimación Social Story Points (SSP) es compatible con las prácticas ágiles estándar y resulta comprensible para todos los miembros del equipo?                                                                      \\
+    \hline
+    P13          & ¿El mecanismo de priorización socio-técnica de SocialScrum (integrando intervenciones sociales junto con tareas técnicas) es práctico y logra equilibrar la mejora del equipo con la entrega de valor al producto?                  \\
+    \hline
+    P14          & ¿SocialScrum garantiza la confidencialidad de la información personal compartida por el equipo, de modo que ningún dato sensible se comunica a terceros (por ejemplo, gerencia o RRHH) sin consentimiento expreso?                  \\
+    \hline
+    P15          & ¿El modelo incluye mecanismos de auditoría y transparencia que permiten al equipo verificar la actuación del Social Guide, previniendo posibles abusos de autoridad o desviaciones éticas?                                          \\
+    \hline
+    P16          & ¿SocialScrum aborda adecuadamente el riesgo de “teatro social”, evitando que el equipo finja bienestar solo para cumplir con el proceso mientras los problemas reales permanecen sin resolver?                                      \\
+    \hline
+    P17          & ¿El modelo no define con suficiente claridad los límites del rol del Social Guide, lo cual podría derivar en intervenciones excesivas o invasivas hacia el equipo?                                                                  \\
+    \hline
+    P18          & ¿La implementación de SocialScrum en equipos ágiles reales es factible y no requiere cambios organizacionales o culturales impracticables?                                                                                          \\
+    \hline
+    P19          & ¿La sobrecarga de reuniones, métricas y responsabilidades adicionales que introduce SocialScrum resultaría insostenible para el equipo a mediano o largo plazo?                                                                     \\
+    \hline
+    P20          & ¿El modelo SocialScrum es suficientemente flexible para adaptarse a diversas circunstancias (distintos tamaños de equipo, sectores de la industria y culturas organizacionales) manteniendo su efectividad?                         \\
+    \hline
+
+    \multicolumn{2}{|l|}{\textbf{Parte B - Preguntas Abiertas}}                                                                                                                                                                                        \\
+    \hline
+
+    PA1          & ¿Qué elementos del modelo SocialScrum considera usted que faltan o están poco desarrollados?                                                                                                                                        \\
+    \hline
+    PA2          & ¿Qué riesgos no contemplados o efectos adversos potenciales podrían surgir de la implementación de SocialScrum?                                                                                                                     \\
+    \hline
+    PA3          & ¿Qué sugerencias de mejora específicas propondría para el modelo SocialScrum? Justifique su respuesta con fundamentos teóricos o prácticos?                                                                                         \\
+    \hline
+
+    \multicolumn{2}{l}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.), Pregunta Cerrada (P) y Pregunta Abierta (PA).}}
+\end{longtable}
+
+
+\section{Resultados de la validación y análisis cuantitativo}
+En esta sección se presentan los resultados obtenidos a partir de la validación del modelo SocialScrum. El propósito central de este análisis es determinar en qué medida el proceso cumple con los criterios de calidad previamente definidos —claridad, completitud, idoneidad, facilidad de uso y coherencia—, así como identificar percepciones cualitativas
+que permitan reconocer sus fortalezas y oportunidades de mejora
+
+\subsection{Análisis cuantitativo de las respuestas}
+Se recopilaron las respuestas de los 8 expertos participantes, quienes evaluaron cada una de las 20 preguntas del instrumento de validación utilizando la escala Likert propuesta. A continuación, se presentan los resultados cuantitativos obtenidos para cada criterio de evaluación.
+
+\begin{table}[!htbp]
+    \caption{Distribución de respuestas de los expertos por pregunta en la escala de Likert.}
+    \label{tab:dist-resp-likert}
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|c|Y|c|c|c|c|c|}
+        \hline
+        \multirow{2}{*}{\textbf{Id.}}                           &
+        \multirow{2}{*}{\textbf{Preguntas con escala discreta}} &
+        \multicolumn{5}{c|}{\textbf{Número de respuestas por nivel de la escala}}                                                                                                                                                                                               \\
+        \cline{3-7}
+                                                                &                                                                                                           & \textbf{Escala 5} & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
+        \hline
+        P1.                                                     & ¿El objetivo general del marco ágil SocialScrum está claramente formulado?                                & 15                & 4                 & 1                 & 0                 & 0                 \\
+        \hline
+        P2.                                                     & ¿Las actividades descritas son entendibles por un lector con conocimientos básicos en mejora de procesos? & 14                & 5                 & 1                 & 0                 & 0                 \\
+        \hline
+        P3.                                                     & ¿La descripción de roles, entradas, salidas y productos es clara y accesible?                             & 13                & 6                 & 1                 & 0                 & 0                 \\
+        \hline
+        P4.                                                     & ¿El lenguaje utilizado evita ambigüedades o tecnicismos innecesarios?                                     & 12                & 7                 & 1                 & 0                 & 0                 \\
+        \hline
+    \end{tabularx}
+    \smallskip
+    \raggedright
+    \textit{Acrónimos utilizados: Identificador (Id.).}
+\end{table}
+
+A continuación, se presentan los resultados organizados por cada uno de los criterios de evaluación considerados en el instrumento: (i) claridad, (ii) completitud, (iii) idoneidad,
+(iv) facilidad de uso y (v) coherencia. En las subsecciones siguientes se muestran las tablas y figuras que resumen el comportamiento de las respuestas para cada criterio, lo cual permite disponer de una visión diferenciada del nivel de conformidad alcanzado en cada dimensión del modelo SocialScrum.
+
+\subsubsection{Claridad}
+\begin{table}[!htbp]
+    \caption{Distribución de respuestas de los expertos para el criterio de claridad.}
+    \label{tab:dist-resp-claridad}
+    \centering
+    \begin{tabularx}{\textwidth}{|c|Y|c|c|c|c|c|}
+        \hline
+        \textbf{Id.} & \textbf{Pregunta}                                                               & \textbf{Escala 5} & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
+        \hline
+        P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos? & 7                 & 0                 & 0                 & 0                 & 0                 \\
+        \hline
+    \end{tabularx}
+    \smallskip
+    \raggedright
+    \textit{Acrónimos utilizados: Identificador (Id.).}
+\end{table}
+
+\subsubsection{Completitud}
+\begin{table}[!htbp]
+    \caption{Distribución de respuestas de los expertos para el criterio de completitud.}
+    \label{tab:dist-resp-completitud}
+    \centering
+    \begin{tabularx}{\textwidth}{|c|Y|c|c|c|c|c|}
+        \hline
+        \textbf{Id.} & \textbf{Pregunta}                                                               & \textbf{Escala 5} & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
+        \hline
+        P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos? & 7                 & 0                 & 0                 & 0                 & 0                 \\
+        \hline
+    \end{tabularx}
+    \smallskip
+    \raggedright
+    \textit{Acrónimos utilizados: Identificador (Id.).}
+\end{table}
+
+\subsubsection{Idoneidad}
+\begin{table}[!htbp]
+    \caption{Distribución de respuestas de los expertos para el criterio de idoneidad.}
+    \label{tab:dist-resp-idoneidad}
+    \centering
+    \begin{tabularx}{\textwidth}{|c|Y|c|c|c|c|c|}
+        \hline
+        \textbf{Id.} & \textbf{Pregunta}                                                               & \textbf{Escala 5} & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
+        \hline
+        P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos? & 7                 & 0                 & 0                 & 0                 & 0                 \\
+        \hline
+    \end{tabularx}
+    \smallskip
+    \raggedright
+    \textit{Acrónimos utilizados: Identificador (Id.).}
+\end{table}
+
+\subsubsection{Facilidad de uso}
+\begin{table}[!htbp]
+    \caption{Distribución de respuestas de los expertos para el criterio de facilidad de uso.}
+    \label{tab:dist-resp-facilidad-uso}
+    \centering
+    \begin{tabularx}{\textwidth}{|c|Y|c|c|c|c|c|}
+        \hline
+        \textbf{Id.} & \textbf{Pregunta}                                                               & \textbf{Escala 5} & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
+        \hline
+        P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos? & 7                 & 0                 & 0                 & 0                 & 0                 \\
+        \hline
+    \end{tabularx}
+    \smallskip
+    \raggedright
+    \textit{Acrónimos utilizados: Identificador (Id.).}
+\end{table}
+
+\subsubsection{Coherencia}
+\begin{table}[!htbp]
+    \caption{Distribución de respuestas de los expertos para el criterio de coherencia.}
+    \label{tab:dist-resp-coherencia}
+    \centering
+    \begin{tabularx}{\textwidth}{|c|Y|c|c|c|c|c|}
+        \hline
+        \textbf{Id.} & \textbf{Pregunta}                                                               & \textbf{Escala 5} & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
+        \hline
+        P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos? & 7                 & 0                 & 0                 & 0                 & 0                 \\
+        \hline
+    \end{tabularx}
+    \smallskip
+    \raggedright
+    \textit{Acrónimos utilizados: Identificador (Id.).}
+\end{table}
+
+\subsection{Resultados preguntas abiertas}
+El presente análisis se enfoca en las respuestas abiertas proporcionadas por los expertos durante la validación del modelo SocialScrum. Estas respuestas cualitativas ofrecen una perspectiva enriquecedora sobre las fortalezas y áreas de mejora del marco ágil propuesto. A continuación, se presentan las observaciones y recomendaciones más relevantes extraídas de las respuestas de los expertos
+
+\begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{|c|Y|c|c|}
+        \hline
+        \textbf{Id.} & \textbf{Observación / Recomendación}                                                                                                      & \textbf{Calificación} & \textbf{Justificación} \\
+        \hline
+        PA1          & El modelo SocialScrum presenta una estructura clara y bien definida, lo que facilita su comprensión y aplicación en equipos distribuidos. & Si                    & hola                   \\
+        \hline
+        PA2          & Se recomienda incluir ejemplos prácticos o casos de estudio que ilustren la implementación del modelo en diferentes contextos.            & Si                    & hello                  \\
+        \hline
+        PA3          & Sería beneficioso proporcionar guías adicionales sobre cómo adaptar el modelo a las particularidades de cada equipo o proyecto.           & No                    & Chao                   \\
+        \hline
+    \end{tabularx}
+    \smallskip
+    \raggedright
+    \textit{Acrónimos utilizados: Identificador (Id.).}
+    \caption{Observaciones y recomendaciones de los expertos}
+    \label{tab:observaciones-recomendaciones}
+\end{table}
+
+\section{Desempeño del modelo y recomendaciones de mejora}
+
+\subsubsection{Fortalezas del modelo SocialScrum}
+\begin{itemize}
+    \item \textbf{Claridad y estructura}: Los expertos destacaron que el modelo SocialScrum presenta una estructura clara y bien definida, lo que facilita su comprensión y aplicación en equipos distribuidos.
+    \item \textbf{Alineación con principios ágiles}: Se reconoció que el modelo está alineado con los valores y principios del Manifiesto Ágil, promoviendo la colaboración y la adaptabilidad.
+    \item \textbf{Enfoque en la colaboración}: Los expertos valoraron positivamente el énfasis del modelo en fomentar la colaboración entre los miembros del equipo, especialmente en contextos distribuidos.
+\end{itemize}
+
+\subsubsection{Debilidades del modelo SocialScrum}
+\begin{itemize}
+    \item \textbf{Falta de ejemplos prácticos}: Algunos expertos señalaron la ausencia de ejemplos prácticos o casos de estudio que ilustren la implementación del modelo en diferentes contextos.
+    \item \textbf{Adaptabilidad limitada}: Se mencionó que el modelo podría beneficiarse de guías adicionales sobre cómo adaptarlo a las particularidades de cada equipo o proyecto.
+    \item \textbf{Clarificación de roles}: Algunos expertos indicaron que ciertos roles y responsabilidades dentro del modelo podrían no estar suficientemente claros, lo que podría generar confusiones durante su implementación.
+    \item \textbf{Falta de herramientas de soporte}: Se observó que el modelo no proporciona recomendaciones sobre herramientas tecnológicas que puedan facilitar su aplicación en equipos distribuidos.
+    \item \textbf{Complejidad en la implementación}: Algunos expertos consideraron que la implementación del modelo podría resultar compleja para equipos con poca experiencia en metodologías ágiles.
+\end{itemize}
+
+\subsubsection{Oportunidades de mejora}
+\begin{itemize}
+    \item \textbf{Incorporación de ejemplos prácticos}: Se recomendó incluir ejemplos prácticos o casos de estudio que ilustren la implementación del modelo en diferentes contextos.
+    \item \textbf{Guías de adaptación}: Los expertos sugirieron proporcionar guías adicionales sobre cómo adaptar el modelo a las particularidades de cada equipo o proyecto.
+    \item \textbf{Clarificación de roles}: Algunos expertos señalaron la necesidad de clarificar los roles y responsabilidades dentro del modelo para evitar confusiones durante su implementación.
+    \item \textbf{Herramientas de soporte}: Se propuso la inclusión de recomendaciones sobre herramientas tecnológicas que puedan facilitar la aplicación del modelo en equipos distribuidos.
+\end{itemize}
+
+
