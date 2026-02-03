@@ -1,0 +1,244 @@
+\chapter*{ANEXO L: EJEMPLOS DETALLADOS DE INTERVENCIONES}
+\addcontentsline{toc}{chapter}{ANEXO L: Ejemplos Detallados de Intervenciones}
+\label{anexo:ejemplos-intervenciones}
+
+Este anexo presenta ejemplos detallados de intervenciones para diferentes categorías de \textit{community smells}. Cada ejemplo incluye diagnóstico, estrategia paso a paso, métricas de éxito y resultados observados.
+
+\section*{L.1 Intervención: \textit{Radio Silence} (Smell de Comunicación)}
+
+\begin{verbatim}
+=== INTERVENCIÓN: RADIO SILENCE ===
+Equipo: Alpha (7 personas)
+Severidad detectada: Moderada (afecta velocidad, no bloquea)
+
+DIAGNÓSTICO:
+- SNA muestra que María centraliza 70% de comunicación
+- 3 devs reportan "enterarse tarde" de cambios de API
+- En Daily, solo María y Pedro hablan regularmente
+- Health Score "Comunicación" 4.5/10
+ESTRATEGIA (5 SSP):
+Semana 1:
+- Workshop "Comunicación distribuida" (2h)
+- Crear canal #alpha-actualizaciones para cambios técnicos
+- Norma: quien cambia API pública, postea en canal
+
+Semana 2:
+- Rotación de "facilitador de Daily" (cada día alguien diferente)
+- Pregunta explícita en Daily: "¿Hay algo que otros deban saber?"
+
+MÉTRICAS DE ÉXITO:
+- Mensajes en #alpha-actualizaciones: >= 5/semana
+- Participación en Daily: todos hablan al menos 3x/semana
+- Encuesta: "Me entero a tiempo" sube de 4/10 a 7/10
+
+RESULTADO (Sprint +1):
+- Mensajes en canal: 8/semana [OK]
+- Participación Daily: 6 de 7 hablan regularmente [OK]
+- Encuesta: 6.5/10 (mejora parcial, continuar)
+\end{verbatim}
+
+\section*{L.2 Intervención: Truck Factor = 1 (Smell de Conocimiento)}
+
+\begin{verbatim}
+=== INTERVENCIÓN: TRUCK FACTOR = 1 ===
+Equipo: Beta (5 personas)
+Componente crítico: Motor de reglas de negocio
+Único experto: Carlos
+
+DIAGNÓSTICO:
+- Carlos escribió 95% del código del motor
+- Cuando Carlos está de vacaciones, bugs en motor quedan sin resolver
+- Otros devs "tienen miedo" de tocar ese código
+
+ESTRATEGIA (8 SSP distribuidos en 3 Sprints):
+
+Sprint 1 (3 SSP):
+- Carlos documenta arquitectura en 3 páginas
+- Carlos hace pair programming con Ana en 2 tareas del motor
+
+Sprint 2 (3 SSP):
+- Ana hace tarea sola en motor, Carlos solo revisa
+- Carlos hace pair con Pedro en 1 tarea
+- Sesión de 2h: "Cómo debuggear el motor"
+
+Sprint 3 (2 SSP):
+- Pedro hace tarea solo, Carlos revisa
+- Documentar "troubleshooting guide" para problemas comunes
+- Evaluar: ¿Ana y Pedro pueden resolver bugs nivel 1-2?
+
+MÉTRICAS DE ÉXITO:
+- Truck factor: de 1 a 3 (Carlos + Ana + Pedro)
+- Tiempo de resolución de bugs cuando Carlos no está: < 48h
+- Ana y Pedro reportan confianza >= 6/10 para trabajar en motor
+
+RESULTADO:
+- Sprint 3: Ana resolvió bug de producción sola [OK]
+- Confianza: Ana 7/10, Pedro 5/10 (continuar con Pedro)
+- Truck factor efectivo: 2.5 (Ana casi independiente, Pedro parcial)
+\end{verbatim}
+
+\section*{L.3 Intervención: Conflicto No Resuelto (Smell Relacional)}
+
+\begin{verbatim}
+=== INTERVENCIÓN: UNRESOLVED CONFLICT ===
+Equipo: Gamma (6 personas)
+Partes: Dev A (frontend) vs Dev B (backend)
+Origen: Desacuerdo sobre diseño de API hace 2 meses
+
+DIAGNÓSTICO:
+- Code reviews entre A y B son hostiles
+- Otros miembros evitan tareas que requieren A+B
+- Daily tiene tensión cuando ambos reportan
+
+ESTRATEGIA (5 SSP):
+
+Día 1 - Sesión 1:1 con Dev A (1h):
+- Escuchar su perspectiva sin juzgar
+- Identificar: ¿qué necesita para mejorar la situación?
+- A dice: "B nunca acepta mis sugerencias, siempre impone"
+
+Día 2 - Sesión 1:1 con Dev B (1h):
+- Escuchar su perspectiva sin juzgar
+- B dice: "A no entiende las restricciones de backend"
+
+Día 3 - Preparación:
+- Identificar intereses comunes (ambos quieren producto exitoso)
+- Preparar estructura para sesión conjunta
+
+Día 4 - Sesión conjunta facilitada (2h):
+- Reglas: hablar en primera persona, no interrumpir
+- Cada uno expresa su perspectiva (10 min c/u)
+- Identificar puntos de acuerdo
+- Negociar: ¿cómo manejar desacuerdos futuros?
+- Documentar acuerdos firmados por ambos
+
+Día 15 - Seguimiento (30 min):
+- ¿Se están respetando acuerdos?
+- Ajustar si es necesario
+
+ACUERDOS DOCUMENTADOS:
+1. Desacuerdos técnicos se discuten en 1:1, no en PR comments
+2. Si no hay acuerdo en 30 min, escalar a Tech Lead
+3. Ambos se comprometen a asumir buena intención del otro
+
+MÉTRICAS DE ÉXITO:
+- Code reviews sin comentarios hostiles: 4 semanas consecutivas
+- A y B aceptan trabajar en tarea conjunta sin resistencia
+- Health Score "Respeto" sube de 4/10 a 6/10
+
+RESULTADO (Sprint +2):
+- 0 comentarios hostiles en PRs [OK]
+- Aceptaron tarea conjunta en Sprint 16 [OK]
+- Respeto: 6.5/10 [OK]
+\end{verbatim}
+
+\section*{L.4 Intervención: Meeting Hell (Smell Organizacional)}
+
+\begin{verbatim}
+=== INTERVENCIÓN: MEETING HELL ===
+Equipo: Delta (8 personas)
+Problema: Promedio de 25h/semana en reuniones por persona
+
+DIAGNÓSTICO:
+- Auditoría de calendarios muestra:
+  - 8h/semana: reuniones de Scrum (normal)
+  - 10h/semana: reuniones con partes interesadas (\textit{stakeholders}) (excesivo)
+  - 7h/semana: reuniones "informativas" donde equipo es pasivo
+- Foco del equipo: 4.2/10 (crítico)
+- Velocity cayó 30% en últimos 3 Sprints
+
+ESTRATEGIA (5 SSP):
+
+Semana 1 - Documentación:
+- Crear spreadsheet: reunión, convocador, frecuencia, asistentes
+- Calcular costo: horas $\times$ personas $\times$ tarifa hora $\approx$ \$X/semana
+
+Semana 2 - Propuesta:
+- Clasificar reuniones: eliminar, reducir frecuencia, o delegar
+- Propuesta: representante único para reuniones informativas
+- Establecer "Focus Fridays": sin reuniones externas
+
+Semana 3 - Negociación:
+- Reunión con \textit{stakeholders} clave (SM lidera)
+- Presentar datos de impacto en velocity
+- Acordar: representante rota, resumen escrito después
+
+Semana 4 - Implementación:
+- Focus Fridays en efecto
+- Representante único para 5 reuniones
+- Monitorear calendarios
+
+MÉTRICAS DE ÉXITO:
+- Horas en reuniones: de 25h a 15h/semana
+- Foco: de 4.2 a 6.0
+- Velocity: recuperar al menos 50% de la caída
+
+RESULTADO (Sprint +2):
+- Reuniones: 16h/semana (36% reducción) [OK]
+- Foco: 5.8/10 (mejora significativa) [OK]
+- Velocity: +20% (recuperación parcial, continuar)
+\end{verbatim}
+
+\section*{L.5 Experimento: Reducir Knowledge Islands}
+
+\begin{verbatim}
+=== EXPERIMENTO: REDUCIR KNOWLEDGE ISLANDS ===
+
+CONTEXTO:
+Equipo Zeta tiene 3 subgrupos: Frontend, Backend, Data.
+Casi no hay comunicación entre subgrupos.
+Integración al final de Sprint genera conflictos.
+Health Score "Compromiso": 5.5/10
+
+HIPÓTESIS:
+"Si implementamos code reviews cruzados obligatorios 
+(1 PR/semana revisado por miembro de otro subgrupo),
+entonces el conocimiento compartido aumentará 
+y los conflictos de integración disminuirán,
+porque la exposición temprana a código de otros 
+reduce sorpresas y builds empathy."
+
+MÉTRICAS:
+| Métrica                  | Linea base | Target  |
+|--------------------------|------------|---------|
+| PRs con reviewer cruzado | 0/semana   | 5/semana|
+| Conflictos de integración| 4/Sprint   | 2/Sprint|
+| "Entiendo código otros"  | 3/10       | 5/10    |
+| Health Score Compromiso  | 5.5        | 6.5     |
+
+INTERVENCIÓN:
+Semana 1:
+- Workshop: "Por qué code reviews cruzados" (1h)
+- Configurar GitHub: reviewer aleatorio de otro subgrupo
+- Norma: al menos 1 PR cruzado por persona/semana
+
+Semanas 2-4:
+- Monitorear cumplimiento
+- 1:1 con personas que no participan
+- Celebrar en Daily cuando review cruzado genera insight
+
+DURACIÓN: 2 Sprints
+
+CRITERIOS DE EVALUACIÓN:
+- Éxito: Conflictos <= 2, "Entiendo código" >= 5
+- Parcial: Conflictos <= 3, alguna mejora en percepción
+- Fracaso: Sin mejora o resistencia activa del equipo
+
+RESULTADOS (Sprint +2):
+- PRs cruzados: 6/semana [OK] (superó target)
+- Conflictos: 3/Sprint (mejora, no alcanzó target)
+- "Entiendo código": 4.5/10 (mejora parcial)
+- Compromiso: 6.0/10 (mejora)
+
+EVALUACIÓN: Éxito parcial
+
+APRENDIZAJES:
+1. Reviews cruzados toman más tiempo (factor 1.5x)
+2. Backend → Frontend funciona mejor que inverso
+3. Data team necesita onboarding adicional para participar
+
+DECISIÓN: Iterar
+- Reducir a 1 PR cruzado cada 2 semanas (más sostenible)
+- Sesión de 1h para Data team sobre arquitectura general
+- Re-evaluar en Sprint 20
+\end{verbatim}

@@ -1,0 +1,778 @@
+\chapter*{ANEXO F: PROTOCOLOS OPERATIVOS DE GOBERNANZA Y ÉTICA DEL SOCIAL GUIDE}
+\label{anexo:protocolos-eticos}
+\addcontentsline{toc}{chapter}{ANEXO F: Protocolos Operativos de Gobernanza y Ética del Social Guide}
+
+Este anexo presenta los protocolos operativos detallados para la gobernanza ética del Social Guide en SocialScrum. Estos protocolos complementan los fundamentos éticos presentados en el Capítulo 3, Sección 3.4 y las directrices generales del Capítulo 4.
+
+\section*{F.1 Protocolo técnico de protección de datos}
+
+El Social Guide tiene acceso a información sensible sobre dinámicas interpersonales, conflictos y vulnerabilidades del equipo. Sin salvaguardas explícitas, existe riesgo de que esta información sea utilizada para evaluaciones de desempeño punitivas, decisiones de despido, o manipulación organizacional. Edmondson \cite{edmondson2018fearless} describe cómo el miedo a represalias silencia a las organizaciones y destruye la seguridad psicológica \cite{edmondson1999psychological}. Esta sección establece los principios éticos obligatorios para la implementación de SocialScrum, asegurando que el marco construya seguridad psicológica en lugar de destruirla.
+
+Los principios aquí descritos no son sugerencias; son condiciones necesarias. Una organización que implementa SocialScrum sin estas salvaguardas convierte el marco en una herramienta de vigilancia, no de salud social.
+
+\subsection{Confidencialidad absoluta: Principio no negociable}
+
+La confidencialidad es la base sobre la cual se construye la confianza del equipo en SocialScrum. Mayer et al.\ \cite{mayer1995integrative} establecen que la confianza organizacional requiere tres componentes: habilidad, benevolencia e integridad. La confidencialidad protege la \textit{integridad} del Social Guide y demuestra \textit{benevolencia} hacia el equipo.
+
+\subsubsection{Definición del principio}
+
+\begin{quote}
+    Toda información compartida en eventos sociales (Social Daily Standup, Social Sprint Retrospective, sesiones de mediación) es \textbf{confidencial} y \textbf{no puede ser utilizada} para evaluaciones de desempeño, decisiones de contratación o despido, o cualquier acción que afecte el estatus laboral de un individuo.
+\end{quote}
+
+Este principio es absoluto. No existen excepciones basadas en ``interés de la empresa'' o ``necesidad de negocio''. La única excepción es una obligación legal (por ejemplo, investigación de acoso documentado), y aún en ese caso, se requiere consentimiento explícito del afectado y documentación formal.
+
+\subsubsection{Qué es confidencial vs. qué es reportable}
+
+La distinción entre información confidencial e información reportable es clara:
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|X|X|}
+        \hline
+        \textbf{Confidencial (NO reportable)} & \textbf{Reportable (datos agregados)}                        \\
+        \hline
+        Declaraciones individuales en retrospectivas
+                                              & Health Score promedio del equipo                             \\
+        \hline
+        Conflictos interpersonales con nombres
+                                              & “El equipo presenta aislamiento social” (sin nombres)        \\
+        \hline
+        Estado emocional de personas específicas
+                                              & “Se detectó burnout en el equipo” (sin identificar personas) \\
+        \hline
+        Intención de renuncia de alguien
+                                              & “Riesgo de rotación elevado” (dato agregado)                 \\
+        \hline
+        Críticas a gerencia por persona
+                                              & “El equipo reporta fricción con \textit{stakeholders}”       \\
+        \hline
+        Detalles de mediaciones 1:1
+                                              & “Se realizó mediación; conflicto en proceso de resolución”   \\
+        \hline
+    \end{tabularx}
+    \caption{Información confidencial vs. reportable}
+    \label{tab:confidencial-reportable}
+\end{table}
+\FloatBarrier
+
+\paragraph{Regla práctica}
+Si la información permite identificar a una persona específica y podría afectarla negativamente, es confidencial. Si es un dato agregado que describe al equipo sin señalar individuos, es reportable.
+
+\subsubsection{Ejemplos de aplicación}
+
+La diferencia entre información confidencial y reportable se ilustra con un caso: si un miembro menciona en retrospectiva que ``está considerando renunciar porque se siente excluido'', el Social Guide \textbf{nunca} comparte esto con HR. En cambio, reporta de forma agregada: ``El Health Score es 4.2/10; existe \textit{community smell} de aislamiento social; se requiere intervención para restaurar cohesión.'' El Anexo~\ref{anexo:confidencialidad} presenta el Acuerdo de Confidencialidad completo que formaliza estas obligaciones.
+
+\subsubsection{Acuerdos formales de confidencialidad}
+
+La confidencialidad debe formalizarse en documentos firmados por el Social Guide y aceptados por el equipo. El Anexo~\ref{anexo:confidencialidad} contiene la plantilla completa del Acuerdo de Confidencialidad del Social Guide, que incluye:
+
+\begin{itemize}
+    \item Compromiso de no compartir información individual identificable.
+    \item Obligación de reportar solo datos agregados.
+    \item Prohibición de uso para evaluaciones de desempeño.
+    \item Rechazo de solicitudes de información confidencial, incluso de gerencia.
+    \item Consecuencias por violación (remoción inmediata del rol).
+\end{itemize}
+
+\subsubsection{Protocolo técnico de protección de datos}
+
+La confidencialidad requiere no solo políticas organizacionales, sino también implementación técnica que proteja la información sensible.
+
+\paragraph{Almacenamiento seguro}
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        \textbf{Requisito} & \textbf{Implementación}                                                                                                       \\
+        \hline
+        Cifrado en reposo
+                           & Datos almacenados con cifrado AES-256 o equivalente. Bases de datos con Transparent Data Encryption (TDE).                    \\
+        \hline
+        Cifrado en tránsito
+                           & HTTPS obligatorio; TLS 1.2 o superior para todas las conexiones.                                                              \\
+        \hline
+        Ubicación física
+                           & Servidores en jurisdicciones con protección de datos adecuada (GDPR si aplica). Nunca en dispositivos personales sin cifrado. \\
+        \hline
+        Separación lógica
+                           & Datos de SocialScrum en una base de datos separada de HR y de evaluaciones de desempeño, sin acceso cruzado.                  \\
+        \hline
+    \end{tabularx}
+    \caption{Requisitos técnicos de almacenamiento}
+    \label{tab:almacenamiento-tecnico}
+\end{table}
+\FloatBarrier
+
+\paragraph{Control de acceso}
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        \textbf{Rol} & \textbf{Acceso permitido}                                              \\
+        \hline
+        Social Guide
+                     & Acceso completo (lectura y escritura)                                  \\
+        \hline
+        Scrum Master
+                     & Métricas agregadas (solo lectura)                                      \\
+        \hline
+        CTO
+                     & Métricas agregadas (solo lectura)                                      \\
+        \hline
+        HR
+                     & Ninguno (acceso prohibido)                                             \\
+        \hline
+        Managers
+                     & Ninguno (acceso prohibido)                                             \\
+        \hline
+        Auditor externo
+                     & Acceso completo en modo solo lectura, limitado al periodo de auditoría \\
+        \hline
+    \end{tabularx}
+    \caption{Matriz de acceso a datos de SocialScrum}
+    \label{tab:matriz-acceso-socialscrum}
+\end{table}
+\FloatBarrier
+
+\textbf{Nota}: Los accesos se implementan mediante roles técnicos en el sistema, no mediante confianza implícita en los usuarios.
+
+\paragraph{Política de retención y eliminación}
+
+\begin{itemize}
+    \item \textbf{Retención máxima}: Datos individuales se retienen por 12 meses desde su creación. Después, solo se conservan agregados anonimizados.
+
+    \item \textbf{Derecho de eliminación}: Cualquier miembro puede solicitar eliminación de sus datos individuales en cualquier momento. El Social Guide tiene 5 días hábiles para ejecutar la solicitud.
+
+    \item \textbf{Salida del equipo}: Cuando un miembro deja el equipo (renuncia, despido, transferencia), sus datos individuales se eliminan en 30 días. Datos agregados que lo incluían permanecen sin modificar.
+
+    \item \textbf{Fin de SocialScrum}: Si la organización discontinúa SocialScrum, todos los datos se eliminan en 60 días, con notificación previa al equipo.
+\end{itemize}
+
+\paragraph{Auditoría de accesos}
+
+Toda consulta a datos de SocialScrum debe generar un registro con: usuario, timestamp, datos consultados y origen. Los logs se retienen 24 meses y el Social Guide los revisa mensualmente. Accesos anómalos (HR intentando acceder, consultas masivas, horarios inusuales) generan alerta automática.
+
+\subsection{Estructura organizacional y rendición de cuentas}
+
+La ubicación del Social Guide en la estructura organizacional determina a quién rinde cuentas y qué incentivos tiene. Una ubicación incorrecta puede convertir el rol en un instrumento de control en lugar de apoyo.
+
+\subsubsection{Principio de reporte}
+
+\begin{quote}
+    El Social Guide reporta al Scrum Master o CTO/VP de Ingeniería, \textbf{nunca a Recursos Humanos (HR)}. Esto evita conflictos de interés, dado que HR gestiona evaluaciones de desempeño y decisiones de empleo.
+\end{quote}
+
+\subsubsection{Estructura organizacional recomendada}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{recursos/capitulo4/estructura-sg.png}
+    \caption{Estructura organizacional del Social Guide: reporta a CTO/SM, nunca a HR}
+    \label{fig:estructura-sg}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{Justificación de la estructura}
+
+Existen tres razones para esta estructura:
+
+\paragraph{Razón 1: Conflicto de interés}
+HR tiene como función evaluar desempeño y gestionar decisiones de empleo (contratación, despido, promociones). Si el Social Guide reporta a HR, la información social se convierte en ``evidencia'' para esas decisiones. El resultado: el equipo deja de ser auténtico porque sabe que lo que diga puede usarse en su evaluación.
+
+\paragraph{Razón 2: Alineación de objetivos}
+
+El CTO y el Scrum Master tienen como objetivo equipos sanos y productivos. El Social Guide tiene como objetivo mitigar deuda social. Estos objetivos están naturalmente alineados. HR, en contraste, tiene objetivos adicionales (cumplimiento legal, gestión de nómina, políticas organizacionales) que pueden entrar en conflicto.
+
+\paragraph{Razón 3: Protección de datos}
+
+En algunas jurisdicciones, la información sensible de empleados requiere protección especial. Si el Social Guide es parte de Engineering (no HR), la información se trata como ``datos operacionales del equipo'', no como ``datos de personal'', lo que puede simplificar el cumplimiento legal.
+
+\subsubsection{Protocolo cuando HR solicita información}
+
+Cuando HR solicita información individual, el Social Guide: (1) rechaza inmediatamente, (2) informa al SM/CTO, (3) documenta el intento. La única excepción es una obligación legal documentada (investigación de acoso), donde se proporciona solo información relevante, con consentimiento explícito del afectado. HR recibe respuesta estándar: ``La información sobre conflictos específicos es confidencial. Puedo compartir el Health Score agregado (X/10) y que estamos trabajando en la dimensión Y.''
+
+\subsubsection{Separación entre salud social y evaluación de desempeño}
+
+La organización debe establecer una política explícita firmada por CEO, CTO y CHRO que establezca: (1) la información de SocialScrum no se usa en evaluaciones de desempeño; (2) reportar burnout o conflictos es señal de confianza, no de bajo desempeño; (3) la participación es voluntaria y no afecta promociones; (4) las violaciones son falta grave.
+
+\subsection{Protocolo de conflicto irreconciliable PO-Social Guide}
+
+En ocasiones, el Product Owner y el Social Guide pueden tener visiones incompatibles sobre la priorización del Sprint. El PO puede insistir en entregar funcionalidades técnicas; el Social Guide puede argumentar que el equipo necesita recuperación social primero. Cuando el diálogo no produce acuerdo, se requiere un mecanismo de resolución.
+
+\subsubsection{Principio rector}
+
+\begin{quote}
+    Ni el PO ni el Social Guide tienen autoridad unilateral para imponer su visión. El conflicto irreconciliable se escala a un tercero neutral (Scrum Master o CTO) para decisión final.
+\end{quote}
+
+\subsubsection{Protocolo de escalamiento}
+
+El conflicto se resuelve en tres niveles progresivos:
+
+\begin{enumerate}
+    \item \textbf{Nivel 1 - Diálogo directo (30 min)}: PO y SG exponen posiciones con datos y buscan compromiso (ej: 60\% técnico, 40\% social).
+    \item \textbf{Nivel 2 - Mediación del SM (1 hora)}: SM facilita conversación estructurada, cada parte tiene 10 min sin interrupción, SM propone opciones.
+    \item \textbf{Nivel 3 - Decision del CTO (24-48h)}: SM presenta caso por escrito. CTO decide considerando riesgo de negocio vs. riesgo de burnout. Decision final para ese Sprint.
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[scale=0.85]
+        % Nodos principales
+        \node[rectangle, rounded corners, draw=blue!70, fill=blue!10, minimum width=2.5cm, minimum height=1.2cm, font=\footnotesize, align=center] (n1) at (0,2) {\textbf{Nivel 1}\\Dialogo directo\\{\tiny (30 min)}};
+
+        \node[rectangle, rounded corners, draw=orange!70, fill=orange!10, minimum width=2.5cm, minimum height=1.2cm, font=\footnotesize, align=center] (n2) at (5,2) {\textbf{Nivel 2}\\Mediación SM\\{\tiny (1 hora)}};
+
+        \node[rectangle, rounded corners, draw=red!70, fill=red!10, minimum width=2.5cm, minimum height=1.2cm, font=\footnotesize, align=center] (n3) at (10,2) {\textbf{Nivel 3}\\Decision CTO\\{\tiny (24-48h)}};
+
+        % Nodos de resultado
+        \node[rectangle, rounded corners, draw=green!70, fill=green!15, minimum width=2cm, minimum height=0.8cm, font=\footnotesize] (ok1) at (0,0) {Acuerdo};
+        \node[rectangle, rounded corners, draw=green!70, fill=green!15, minimum width=2cm, minimum height=0.8cm, font=\footnotesize] (ok2) at (5,0) {Acuerdo};
+        \node[rectangle, rounded corners, draw=green!70, fill=green!15, minimum width=2.2cm, minimum height=0.8cm, font=\footnotesize] (ok3) at (10,0) {Decision final};
+
+        % Flechas de escalamiento
+        \draw[-stealth, thick, red!60] (n1.east) -- (n2.west) node[midway, above, font=\tiny] {Sin acuerdo};
+        \draw[-stealth, thick, red!60] (n2.east) -- (n3.west) node[midway, above, font=\tiny] {Sin acuerdo};
+
+        % Flechas a resultado
+        \draw[-stealth, thick, green!60] (n1.south) -- (ok1.north) node[midway, right, font=\tiny] {Sí};
+        \draw[-stealth, thick, green!60] (n2.south) -- (ok2.north) node[midway, right, font=\tiny] {Sí};
+        \draw[-stealth, thick, green!60] (n3.south) -- (ok3.north);
+
+        % Actores
+        \node[font=\tiny, gray] at (0,3) {PO + SG};
+        \node[font=\tiny, gray] at (5,3) {PO + SG + SM};
+        \node[font=\tiny, gray] at (10,3) {CTO};
+    \end{tikzpicture}
+    \caption{Protocolo de escalamiento en conflicto PO-Social Guide}
+    \label{fig:escalamiento-po-sg}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{Criterios de decisión para el CTO}
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|X|c|X|}
+        \hline
+        \textbf{Escenario} & \textbf{Recomendación}                      & \textbf{Justificación} \\
+        \hline
+        Health Score $>$ 7, deadline contractual
+                           & Priorizar técnico
+                           & Equipo sano puede absorber presión temporal                          \\
+        \hline
+        Health Score $<$ 4, deadline flexible
+                           & Priorizar social
+                           & Equipo en crisis no entrega calidad                                  \\
+        \hline
+        Health Score 4--6, deadline crítico
+                           & Balance 50/50 o decisión caso por caso
+                           & Zona gris; evaluar riesgo específico                                 \\
+        \hline
+        Burnout activo documentado
+                           & Siempre priorizar social
+                           & Ignorar burnout garantiza rotación                                   \\
+        \hline
+    \end{tabularx}
+    \caption{Criterios de decisión en conflicto PO--SG}
+    \label{tab:criterios-conflicto}
+\end{table}
+\FloatBarrier
+
+\subsubsection{Prevención de conflictos recurrentes}
+
+Si el mismo tipo de conflicto ocurre 3+ veces en 6 meses, indica un problema sistémico. Se recomienda una revisión profunda de la dinámica PO-SG, incluyendo:
+
+\begin{itemize}
+    \item \textbf{PO siempre gana}: El Social Guide no tiene suficiente autoridad formal; revisar estructura organizacional.
+    \item \textbf{SG siempre gana}: El PO puede estar ignorando legítimas presiones de negocio; revisar comunicación con \textit{stakeholders}.
+    \item \textbf{Siempre escala a CTO}: PO y SG no han construido relación de trabajo colaborativa; sesión de alineación de roles.
+\end{itemize}
+
+\subsection{Protocolo de continuidad del Social Guide}
+
+El Social Guide acumula conocimiento sensible sobre dinámicas del equipo. Su salida (renuncia, transferencia, despido, incapacidad prolongada) requiere un protocolo que proteja tanto la continuidad del programa como la confidencialidad de la información.
+
+\subsubsection{Escenarios de salida}
+
+\paragraph{Escenario 1: Renuncia voluntaria con aviso}\mbox{}\\[-0.3\baselineskip]
+
+\begin{escenario}
+    \textbf{Renuncia voluntaria del Social Guide (aviso $\geq$ 2 semanas)}
+
+    \textbf{Semana 1}
+    \begin{itemize}
+        \item Notificación formal al Scrum Master.
+        \item Inicio del proceso de reemplazo.
+        \item Documentación del estado actual del equipo.
+    \end{itemize}
+
+    \textbf{Semana 2}
+    \begin{itemize}
+        \item Entrenamiento del reemplazo (shadowing).
+        \item Traspaso de documentación no individual.
+        \item Evento de cierre ritual con el equipo.
+    \end{itemize}
+
+    \textbf{Día final}
+    \begin{itemize}
+        \item Eliminación de accesos del SG saliente.
+        \item Destrucción o transferencia consentida de datos individuales.
+        \item Firma de compromiso de confidencialidad post-salida.
+    \end{itemize}
+\end{escenario}
+
+
+\paragraph{Escenario 2: Salida abrupta (despido, emergencia, incapacidad)}\mbox{}\\[-0.3\baselineskip]
+
+\begin{escenario}
+    \textbf{Salida abrupta del Social Guide}
+
+    \textbf{Acciones inmediatas}
+    \begin{itemize}
+        \item El Scrum Master asume de forma temporal las funciones mínimas del Social Guide.
+        \item Los accesos del Social Guide saliente se revocan en un plazo máximo de 24 horas.
+        \item El CTO autoriza acceso temporal del Scrum Master a la documentación necesaria para garantizar continuidad.
+    \end{itemize}
+
+    \textbf{Semana 1}
+    \begin{itemize}
+        \item El Scrum Master revisa la documentación existente e identifica intervenciones sociales urgentes en progreso.
+        \item Se comunica al equipo la situación de forma transparente: el Social Guide ya no está; el Scrum Master asume temporalmente mientras se busca reemplazo.
+        \item El Scrum Master no tiene acceso a notas individuales de sesiones 1:1; dichas notas se destruyen si el Social Guide no puede transferirlas con consentimiento explícito.
+    \end{itemize}
+
+    \textbf{Semanas 2 a 4}
+    \begin{itemize}
+        \item Se ejecuta un proceso acelerado de selección de un nuevo Social Guide.
+        \item El Scrum Master facilita únicamente eventos sociales básicos (por ejemplo, retrospectivas), evitando profundizar en temas sensibles en curso.
+    \end{itemize}
+
+    \textbf{Ingreso del nuevo Social Guide}
+    \begin{itemize}
+        \item El nuevo Social Guide inicia las relaciones 1:1 desde cero.
+        \item Se transfiere únicamente documentación agregada sobre \textit{community smells} y Health Score.
+        \item No se transfieren notas personales ni registros individuales del Social Guide anterior.
+    \end{itemize}
+\end{escenario}
+
+
+\subsubsection{Compromiso de confidencialidad post-salida}
+
+El Social Guide saliente firma un acuerdo de confidencialidad permanente que incluye: mantener confidencialidad sobre toda información individual, destruir notas personales de sesiones 1:1, y aceptar consecuencias legales por violaciones. El CTO actúa como testigo.
+
+\subsection{Protocolo de auditoría independiente}
+
+La confianza en SocialScrum no puede depender únicamente de la buena voluntad del Social Guide. Se requiere verificación externa periódica para asegurar que los principios éticos se cumplen en la práctica.
+
+\subsubsection{Definición del principio}
+
+\begin{quote}
+    Cada 6 meses, un auditor independiente (sin conflicto de interés) evalúa si el Social Guide está cumpliendo los principios éticos de SocialScrum.
+\end{quote}
+
+\subsubsection{Selección del auditor}
+
+El auditor debe ser:
+\begin{itemize}
+    \item Externo a la organización (consultor, coach ágil certificado)
+    \item Sin relación comercial con la empresa (excepto el contrato de auditoría)
+    \item Con experiencia en dinámicas de equipo y ética organizacional
+\end{itemize}
+
+\subsubsection{Proceso de auditoría}
+
+\paragraph{Paso 1: Entrevistas confidenciales}
+
+El auditor entrevista a cada miembro del equipo de forma individual (30 minutos), sin presencia del Social Guide.
+
+\paragraph{Preguntas clave de la entrevista}
+
+El auditor pregunta (escala 1--10 + comentarios):
+
+\begin{enumerate}
+    \item ¿Sientes que la información es confidencial?
+    \item ¿El Social Guide ha usado información en tu contra?
+    \item ¿Te sientes seguro para ser auténtico?
+    \item ¿Has sido presionado a compartir?
+    \item ¿Conoces tus derechos (opt-out, auditoría)?
+    \item ¿Has observado violaciones éticas?
+    \item ¿Recomendarías SocialScrum?
+\end{enumerate}
+
+\paragraph{Paso 2: Revisión de documentación}
+
+El auditor revisa:
+\begin{itemize}
+    \item Todos los reportes generados por el Social Guide en el período.
+    \item Comunicaciones entre Social Guide y gerencia/HR (si las hay).
+    \item Acuerdos de confidencialidad firmados.
+    \item Evidencia de reportes ``secretos'' (no deberían existir).
+\end{itemize}
+
+\paragraph{Paso 3: Reporte de auditoría}
+
+El auditor emite un reporte con:
+\begin{itemize}
+    \item Cumplimiento de principios éticos: Sí / No / Parcial
+    \item Hallazgos específicos (violaciones, si existen).
+    \item Fortalezas observadas.
+    \item Recomendaciones de mejora.
+\end{itemize}
+
+El reporte es \textbf{público para el equipo}. No existen reportes de auditoría secretos.
+
+\subsubsection{Consecuencias de hallazgos negativos}
+
+\begin{protocolo}
+    \textbf{Auditoría negativa (hallazgo ético)}
+
+    \textbf{Condición de activación}
+    \begin{itemize}
+        \item El auditor identifica una posible violación ética.
+    \end{itemize}
+
+    \textbf{Acción inmediata}
+    \begin{itemize}
+        \item Se inicia una investigación formal liderada por el CTO y el auditor (duración estimada: 1--2 semanas).
+    \end{itemize}
+
+    \textbf{Resultado A: violación confirmada}
+    \begin{itemize}
+        \item El Social Guide es removido inmediatamente del rol.
+        \item El Social Guide no puede volver a ocupar el rol en la organización.
+        \item La organización emite una disculpa formal al equipo.
+        \item Se nombra un nuevo Social Guide, con reentrenamiento ético completo.
+        \item Se programa una auditoría de seguimiento a los 3 meses.
+    \end{itemize}
+
+    \textbf{Resultado B: no confirmada, pero con preocupaciones}
+    \begin{itemize}
+        \item El Social Guide recibe feedback detallado y un plan de mejora.
+        \item Se realiza una reauditora a los 3 meses (en lugar de 6).
+        \item Se incrementa el monitoreo por parte del Scrum Master, limitado a indicadores agregados y cumplimiento del protocolo.
+    \end{itemize}
+\end{protocolo}
+
+\subsubsection{Canal de denuncia (whistleblowing)}
+
+Además de la auditoría periódica, debe existir un canal para denuncias inmediatas:
+
+\paragraph{Opciones de denuncia}
+
+\begin{enumerate}
+    \item \textbf{Canal interno}: Denuncia al Scrum Master, quien escala a CTO.
+    \item \textbf{Canal externo}: Denuncia directa al auditor independiente (contacto proporcionado al inicio de SocialScrum).
+    \item \textbf{Canal anónimo}: Formulario web anónimo revisado por CTO + auditor.
+\end{enumerate}
+
+\paragraph{Protección contra represalias}
+
+Política de tolerancia cero: si alguien denuncia violación ética y sufre represalias, se investiga inmediatamente, la persona que tomó represalias es sancionada (hasta despido), y el denunciante recibe protección formal (no puede ser despedido sin aprobación de CTO + auditor durante 12 meses; evaluaciones negativas son revisadas por auditor).
+
+\paragraph{Monitoreo de represalias silenciosas}
+
+Las represalias no siempre son obvias. Un manager puede evitar despedir a alguien pero tomar acciones sutiles que degradan la experiencia laboral de la persona. El Social Guide debe monitorear indicadores de represalias indirectas:
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|X|}
+        \hline
+        \textbf{Indicador} & \textbf{Patrón sospechoso}                                                         & \textbf{Acción} \\
+        \hline
+        Asignación de tareas
+                           & Persona recibe solo tareas triviales o indeseables después de reportar un problema
+                           & Entrevista privada; comparación con asignaciones previas                                             \\
+        \hline
+        Exclusión de reuniones
+                           & La persona deja de ser invitada a reuniones relevantes
+                           & Verificación en calendario; conversación con la persona afectada                                     \\
+        \hline
+        Aislamiento social
+                           & Colegas evitan la interacción; la persona almuerza sola
+                           & Observación directa; análisis de redes sociales                                                      \\
+        \hline
+        Evaluación de desempeño
+                           & Calificación baja inesperada después de una denuncia
+                           & Comparación con evaluaciones anteriores; revisión por auditor                                        \\
+        \hline
+        Oportunidades negadas
+                           & Promoción, capacitación o proyectos relevantes asignados a otros
+                           & Revisión del historial de asignaciones; análisis del patrón temporal                                 \\
+        \hline
+        Micromanagement repentino
+                           & Supervisión excesiva que no existía previamente
+                           & Comparación con el trato hacia otros miembros del equipo                                             \\
+        \hline
+    \end{tabularx}
+    \caption{Indicadores de represalias silenciosas}
+    \label{tab:represalias-silenciosas}
+\end{table}
+\FloatBarrier
+
+Si el Social Guide detecta un patrón sospechoso, debe: (1) documentar observaciones con fechas, (2) entrevistar confidencialmente al afectado, (3) si confirma percepción de represalia, escalar a CTO para investigación, (4) si no percibe represalia, documentar para monitoreo y revisar en 30 días. El Social Guide detecta y escala; la investigación formal corresponde a CTO, auditor o asesoría legal.
+
+\subsection{Prevención del ``Teatro Social''}
+
+El ``Teatro Social'' ocurre cuando el equipo simula bienestar para satisfacer las expectativas de SocialScrum, mientras los problemas reales permanecen ocultos. Es la antítesis del objetivo del marco: en lugar de transparencia, genera una fachada.
+
+\subsubsection{Síntomas del ``Teatro Social''}
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        \textbf{Síntoma} & \textbf{Descripción}                                                                                       \\
+        \hline
+        Health Score artificialmente alto
+                         & Todos los valores consistentemente entre 8 y 10, sin variación, incluso cuando existen problemas visibles. \\
+        \hline
+        Retrospectivas sin sustancia
+                         & “Todo bien”, “sin comentarios”, “seguir igual”; ausencia de crítica constructiva.                          \\
+        \hline
+        Discrepancia con la realidad
+                         & Health Score de 9/10 mientras la velocidad cae, hay rotación elevada o conflictos visibles.                \\
+        \hline
+        Participación forzada
+                         & Respuestas rápidas solo para cumplir, sin reflexión real.                                                  \\
+        \hline
+        Miedo a ser diferentes
+                         & Nadie puntúa bajo porque “todos los demás puntúan alto”.                                                   \\
+        \hline
+    \end{tabularx}
+    \caption{Síntomas del ``Teatro Social''}
+    \label{tab:sintomas-teatro}
+\end{table}
+\FloatBarrier
+
+\subsubsection{Causas del ``Teatro Social''}
+
+El ``Teatro Social'' no ocurre espontáneamente; es respuesta a incentivos perversos:
+
+\paragraph{Causa 1: Miedo a represalias}
+
+Si el equipo percibe (correcta o incorrectamente) que reportar problemas tendrá consecuencias negativas, optarán por el silencio. Esto ocurre cuando:
+\begin{itemize}
+    \item Hay historial de información usada contra personas.
+    \item El Social Guide tiene relación cercana con gerencia.
+    \item La organización tiene cultura de ``matar al mensajero''.
+\end{itemize}
+
+\paragraph{Causa 2: Presión por ``buenos números''}
+
+Si la organización celebra Health Scores altos o penaliza los bajos, el equipo optimizará para el número, no para la realidad. El Health Score se convierte en KPI de vanidad.
+
+\paragraph{Causa 3: Fatiga de retrospectiva}
+
+Si las retrospectivas son percibidas como burocracia sin impacto (``hablamos pero nada cambia''), el equipo minimiza esfuerzo: respuestas rápidas, sin profundidad, para terminar pronto.
+\paragraph{Causa 4: Social Guide inefectivo}
+
+Un Social Guide que no genera confianza, no facilita bien, o es percibido como ``espía de gerencia'' produce ``Teatro Social'' como mecanismo de defensa del equipo.
+
+\subsubsection{Estrategias de prevención}
+
+\paragraph{Estrategia 1: Nunca premiar o castigar por Health Score}\mbox{}\\[-0.3\baselineskip]
+
+\begin{protocolo}
+    \textbf{Uso correcto del Health Score}
+
+    El Health Score es un instrumento diagnóstico orientado a la mejora continua y al cuidado del equipo. No debe utilizarse como indicador de desempeño ni como métrica de evaluación.
+
+    \textbf{Prácticas prohibidas}
+    \begin{itemize}
+        \item Celebrar públicamente a un equipo por tener un Health Score alto.
+        \item Señalar o estigmatizar a un equipo por tener un Health Score bajo.
+        \item Asociar bonos, incentivos o reconocimientos a un Health Score elevado.
+        \item Presionar explícita o implícitamente para “mejorar el número”.
+    \end{itemize}
+
+    \textbf{Prácticas permitidas}
+    \begin{itemize}
+        \item Utilizar el Health Score como señal para identificar áreas de mejora (por ejemplo, comunicación, foco o seguridad psicológica).
+        \item Interpretar un Health Score bajo como indicio de necesidad de apoyo, no como falla del equipo.
+        \item Usar el Health Score para asignar recursos de acompañamiento, facilitación o intervención social.
+    \end{itemize}
+\end{protocolo}
+
+\paragraph{Estrategia 2: Validación cruzada de datos}\mbox{}\\[-0.3\baselineskip]
+
+El Social Guide debe comparar el Health Score con indicadores objetivos:
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|l|X|}
+        \hline
+        \textbf{Health Score} & \textbf{Indicador objetivo}                                & \textbf{Interpretación} \\
+        \hline
+        Alto (8+)
+                              & Velocidad estable o creciente
+                              & Consistente: probablemente real                                                      \\
+        \hline
+        Alto (8+)
+                              & Velocidad cayendo
+                              & Inconsistente: posible ``Teatro Social''                                             \\
+        \hline
+        Alto (8+)
+                              & Rotación reciente
+                              & Inconsistente: requiere investigación                                                \\
+        \hline
+        Bajo (4-)
+                              & Velocidad baja
+                              & Consistente: el equipo está siendo honesto                                           \\
+        \hline
+        Bajo (4-)
+                              & Velocidad alta
+                              & Inusual: equipo muy crítico o presencia de problema oculto                           \\
+        \hline
+    \end{tabularx}
+    \caption{Validación cruzada del Health Score}
+    \label{tab:validacion-cruzada}
+\end{table}
+\FloatBarrier
+
+\paragraph{Estrategia 3: Encuestas anónimas periódicas}\mbox{}\\[-0.3\baselineskip]
+
+Además de las retrospectivas facilitadas, realizar encuestas completamente anónimas cada 2-3 Sprints:
+
+\paragraph{Encuesta anónima de validación}\mbox{}\\[-0.3\baselineskip]
+
+\begin{protocolo}
+    \textbf{Instrumento de validación del Health Score}
+
+    \textbf{Instrucciones}. Esta encuesta es completamente anónima.
+    Ni el Social Guide ni ninguna otra persona puede identificar tus respuestas.
+    El objetivo es validar la fidelidad del Health Score y la seguridad percibida en el proceso.
+
+    \begin{enumerate}
+        \item \textbf{¿El Health Score del equipo refleja la realidad?}
+              \begin{itemize}
+                  \item Sí, es preciso.
+                  \item Parcialmente, algunos aspectos no se capturan.
+                  \item No, existen problemas que no se reportan.
+              \end{itemize}
+
+        \item \textbf{¿Te sientes seguro para ser honesto en retrospectivas?}
+              \begin{itemize}
+                  \item Sí, completamente.
+                  \item Parcialmente, algunas cosas prefiero no decir.
+                  \item No, temo consecuencias.
+              \end{itemize}
+
+        \item \textbf{¿Hay algo que el equipo no dice en retrospectivas, pero debería decir?}
+              (Respuesta abierta, opcional)
+
+        \item \textbf{¿Confías en que el Social Guide mantiene la confidencialidad?}
+              \begin{itemize}
+                  \item Sí.
+                  \item No estoy seguro.
+                  \item No.
+              \end{itemize}
+    \end{enumerate}
+
+    \textbf{Nota}. Las respuestas se analizan únicamente de forma agregada y se utilizan
+    para contrastar el Health Score con indicadores objetivos y señales de ``Teatro Social''.
+\end{protocolo}
+
+Si la encuesta anónima revela discrepancias significativas con el Health Score reportado, el Social Guide debe investigar las causas y, potencialmente, reiniciar la construcción de confianza.
+
+\paragraph{Estrategia 4: Rotación del facilitador de retrospectiva}
+
+Si el Social Guide siempre facilita, el equipo puede sentir que ``le reportan a él''. Rotar la facilitación ocasionalmente (Scrum Master, miembro del equipo voluntario) puede revelar dinámicas diferentes.
+
+\paragraph{Estrategia 5: Celebrar la honestidad, no los números altos}
+
+\paragraph{Ejemplo de comunicación correcta e incorrecta}\mbox{}\\[-0.3\baselineskip]
+
+\begin{escenario}
+
+    \textbf{Comunicación correcta (enfoque diagnóstico)}
+
+    \textbf{Social Guide al equipo}:
+    \begin{quote}
+        “En esta retrospectiva identificamos tres \textit{community smells}
+        que no habíamos visto antes. Eso no es algo negativo; es una señal
+        de que estamos siendo honestos. Prefiero un Health Score de 5 real
+        que un 9 ficticio.”
+    \end{quote}
+
+    \medskip
+
+    \textbf{Comunicación incorrecta (enfoque tipo KPI)}
+
+    \textbf{Manager al equipo}:
+    \begin{quote}
+        “Felicitaciones, su Health Score subió de 6 a 8. ¡Sigan así!”
+    \end{quote}
+
+    \medskip
+
+    \textbf{Nota}. Este tipo de mensaje incentiva la optimización del número
+    en lugar de la representación fiel de la realidad del equipo.
+
+\end{escenario}
+
+\subsubsection{Qué hacer si se detecta ``Teatro Social''}
+
+\begin{protocolo}
+    \textbf{``Teatro Social'' detectado}
+
+    Este protocolo se activa cuando existen señales de que el Health Score
+    no refleja la realidad del equipo y se está produciendo optimización del
+    número en lugar de honestidad.
+
+    \textbf{Indicadores de activación}
+    \begin{itemize}
+        \item La encuesta anónima revela desconfianza (más del 30\% de respuestas del tipo “No me siento seguro”).
+        \item Health Score alto combinado con velocity, rotación o conflictos inconsistentes.
+        \item Retrospectivas sin sustancia durante tres o más Sprints consecutivos.
+    \end{itemize}
+
+    \textbf{Acciones}
+
+    \textbf{1. No confrontar al equipo}
+    \begin{itemize}
+        \item Evitar mensajes del tipo “están mintiendo” o “están maquillando los datos”.
+        \item La confrontación directa destruye la confianza restante.
+    \end{itemize}
+
+    \textbf{2. Reflexión del Social Guide}
+    \begin{itemize}
+        \item ¿Qué comportamientos propios pueden estar generando desconfianza?
+        \item ¿Existe algún incentivo estructural que fomente el ``Teatro Social''?
+    \end{itemize}
+
+    \textbf{3. Sesión de reinicio (reset)}
+    \begin{itemize}
+        \item La sesión debe ser facilitada por un actor externo (no el Social Guide).
+        \item Reconocer explícitamente que algo no está funcionando.
+        \item Preguntar de forma abierta: “¿Qué necesitan para poder ser honestos?”
+        \item Escuchar sin justificar ni defender decisiones previas.
+    \end{itemize}
+
+    \textbf{4. Ajustes estructurales}
+    \begin{itemize}
+        \item Reforzar explícitamente las garantías de confidencialidad.
+        \item Considerar el cambio de Social Guide si la pérdida de confianza es irrecuperable.
+        \item Revisar si la gerencia ha ejercido presión directa o indirecta por “buenos números”.
+    \end{itemize}
+
+    \textbf{5. Período de reconstrucción}
+    \begin{itemize}
+        \item Duración estimada: entre tres y seis Sprints.
+        \item Aceptar Health Scores bajos pero realistas durante el proceso.
+        \item Enfatizar acciones concretas sobre métricas.
+        \item Reconocer y reforzar pequeñas señales de honestidad emergente.
+    \end{itemize}
+\end{protocolo}
+
+Las salvaguardas éticas no son opcionales; son condición necesaria para que SocialScrum funcione. Sin confidencialidad, el equipo no será auténtico. Sin estructura organizacional correcta, la información se usará mal. Sin auditoría, no hay verificación. Sin prevención de ``Teatro Social'', el Health Score será una métrica de vanidad. Implementar SocialScrum sin estas salvaguardas es peor que no implementar nada: destruye la confianza que el marco pretende construir. La regla de oro es simple: si hay duda sobre si algo es ético, no se hace.

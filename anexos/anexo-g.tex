@@ -1,0 +1,381 @@
+\chapter*{ANEXO G: GUÍA DE FACILITACIÓN Y PROTOCOLOS OPERATIVOS}
+\label{anexo:guias-facilitacion-protocolos-operativos}
+\addcontentsline{toc}{chapter}{ANEXO G: Guía de Facilitación y Protocolos Operativos}
+
+\setlength{\parindent}{0pt}
+
+\section{G1. Guía para la presentación inicial de SocialScrum}
+
+\subsection{Estructura de la presentación (45 minutos).}
+
+La presentación sigue una estructura sencilla y directa que permite contextualizar, alinear expectativas y asegurar el apoyo necesario.
+
+\paragraph{1. Contexto y justificación (10 min)}
+
+En este primer bloque, se comparte evidencia clara sobre por qué SocialScrum es pertinente en este momento. La idea es mostrar que no se trata de una moda ni de una iniciativa improvisada, sino de una respuesta informada a problemas reales.
+
+\begin{itemize}
+    \item \textbf{Datos propios del equipo (si existen)}: cifras de rotación, fluctuaciones notorias en la velocidad, picos de defectos que coinciden con periodos de tensión, o cualquier patrón que muestre impacto de la dinámica social en el rendimiento técnico.
+
+    \item \textbf{Evidencia investigativa}: estudios que han documentado cómo la salud social influye en la productividad y la calidad del software \cite{tamburri2013socialdebt, saeeda2024nontechnicaldebt}. Estas referencias ayudan a mostrar que la deuda social no es un concepto abstracto, sino un fenómeno medido y reconocido.
+\end{itemize}
+
+Este segmento busca que todos entiendan el ``porque'' antes del ``cómo'': sin un motivo claro, cualquier cambio de proceso se siente impuesto; con la evidencia a la vista, se entiende como una necesidad real y oportuna.
+
+\paragraph{2. Explicación del modelo (15 min).}
+
+En este segmento se presenta SocialScrum de manera práctica, mostrando cómo funciona en el día a día. El objetivo es que los \textit{stakeholders} entiendan el modelo sin tecnicismos innecesarios, visualizando claramente qué cambia y qué se mantiene igual.
+
+\begin{itemize}
+    \item \textbf{Roles}: se explica qué hace el Social Guide en el trabajo cotidiano, cómo se coordina con el Scrum Master y cuál es el papel del Product Owner dentro del proceso. La idea es mostrar que cada rol aporta algo distinto y complementario.
+
+    \item \textbf{Eventos adaptados}: se describe cómo se integran los elementos sociales en los eventos ya existentes —Daily, Planning, Review y Retrospective— sin alterar su esencia. El enfoque está en cómo estos espacios se vuelven más sensibles a la dinámica humana del equipo.
+
+    \item \textbf{Artefactos}: se introducen los elementos nuevos del proceso, como el Social Product Backlog, el Health Score y el Registro de Smells, mostrando cómo cada uno ayuda a documentar y gestionar la deuda social con rigor y trazabilidad.
+\end{itemize}
+
+Un punto crucial de esta parte es enfatizar que \textbf{SocialScrum NO agrega reuniones nuevas}. Todo se integra a los eventos que ya existen. Este es el corazón del Principio de No-Sobrecarga: mejorar la salud social sin aumentar el peso operativo del equipo.
+
+\paragraph{3. Salvaguardas éticas (10 min).}
+
+En esta parte de la presentación se explican, de forma clara y sin ambigüedades, las protecciones que hacen que SocialScrum sea un proceso seguro y no una herramienta de vigilancia. El propósito es desactivar cualquier temor o malentendido antes de que aparezca.
+
+\begin{itemize}
+    \item \textbf{Confidencialidad absoluta de información individual}: nada de lo que diga una persona será compartido fuera del equipo si puede identificarla directa o indirectamente.
+
+    \item \textbf{Separación total entre el Health Score y las evaluaciones de desempeño}: los datos sociales jamás se usarán para medir rendimiento individual, decidir ascensos, despidos o salarios.
+
+    \item \textbf{Estructura de reporte clara}: el Social Guide reporta únicamente al CTO o al Scrum Master.
+          Recursos Humanos no tiene acceso a información social, salvo en las excepciones legales previamente establecidas.
+
+    \item \textbf{Derecho de auditoría del equipo}: cualquier reporte que vaya a salir del equipo debe ser revisado primero por sus integrantes. Si algo vulnera la confidencialidad, pueden pedir ajustes o bloquear el envío.
+\end{itemize}
+
+Esta parte de la presentación es esencial. Muchos \textit{stakeholders} podrían ver SocialScrum como algo invasivo si no comprenden bien estas salvaguardas. Aclararlas con calma y transparencia ayuda a construir confianza desde el primer día.
+
+\paragraph{4. Plan de implementación y métricas de éxito (10 min).}
+
+Aquí se comparte el plan de trabajo para los próximos tres Sprints, mostrando cómo será la adopción en la práctica y qué espera ver la organización durante este periodo inicial.
+
+\begin{itemize}
+    \item \textbf{Sprint 1}: puesta en marcha del modelo, trabajando sobre un smell de baja complejidad para aprender el proceso sin generar sobrecarga.
+    \item \textbf{Sprint 2}: ajustes y mejoras basadas en lo aprendido durante el Sprint 1; aquí el equipo refina su manera de aplicar SocialScrum.
+    \item \textbf{Sprint 3}: evaluación formal de efectividad, comparando el Health Score inicial con el actual y revisando avances en los smells priorizados.
+\end{itemize}
+
+También se definen las métricas de éxito que permitirán evaluar si la implementación va por buen camino:
+
+\begin{itemize}
+    \item El Health Score aumenta al menos en 1 punto después de tres Sprints.
+    \item Se logra mitigar parcialmente al menos un \textit{community smell} crítico.
+    \item La velocity no cae más del 20\% en el proceso de adopción y muestra señales de recuperación en el Sprint 3.
+\end{itemize}
+
+\textbf{Nota sobre pre-requisitos de tiempo}: El tiempo de 45 minutos supone que el equipo ha revisado previamente las secciones 3.2-3.3
+de este documento (Modelo conceptual y Fundamentos de SocialScrum).
+Si eso no es viable, se recomienda:
+
+\begin{itemize}
+    \item \textbf{Opción A}: Expandir a 90 minutos
+    \item \textbf{Opción B}: Dos sesiones de 45 min (con 1 semana diferencia)
+\end{itemize}
+
+De lo contrario, el equipo no tendrá comprensión real del modelo, y el consentimiento será formal pero no genuino.
+
+\subsection{Documentación post-presentación}
+
+Después de la presentación, el Social Guide publica un documento formal que contiene:
+
+\begin{itemize}
+    \item Un resumen ejecutivo de SocialScrum (máximo una página, claro y directo).
+    \item La política de confidencialidad firmada por el CTO.
+    \item El plan de implementación para los próximos tres Sprints.
+    \item Los datos de contacto del Social Guide para dudas, inquietudes o comentarios —así, cualquier persona del equipo puede escribirle sin rodeos.
+\end{itemize}
+
+Este documento queda disponible en la herramienta que use la organización para que todas las personas del equipo y los \textit{stakeholders} lo puedan consultar cuando lo necesiten, es decir, nada escondido, nada de puertas cerradas: todo transparente, como debe ser.
+
+La adopción inicial de SocialScrum no es un evento de una sola vez. Es un proceso que se construye paso a paso, con intención y cuidado. Cuando se hace sin la preparación adecuada, el modelo puede sentirse como una imposición o, peor aún, como una amenaza. Pero cuando se implementa con claridad, respeto y buena comunicación, SocialScrum se integra de manera natural en la cultura del equipo. Desde el primer día se empieza a sembrar confianza, y eso abre el camino para una gestión sostenible de la salud social a largo plazo ---esa que, a la larga, marca la diferencia en cómo trabaja y se siente un equipo.
+
+Sin embargo, el proceso de adopción, por bien diseñado que esté, requiere alguien que lo lidere. Los pasos descritos ---el consentimiento informado, el diagnóstico inicial, la configuración de herramientas--- no se ejecutan solos. Aquí entra la figura que distingue a SocialScrum de otros marcos: el Social Guide, cuyo perfil, competencias y gobernanza se detallan a continuación en la siguiente sección.
+
+\section{G2. Programa de capacitación del Social Guide}
+
+El programa consta de cuatro fases secuenciales con criterios de aprobación en cada etapa y una evaluación final post-capacitación.
+
+\subsection*{Fase 1: Fundamentos teóricos (8 horas)}
+\begin{itemize}
+    \item Semanas 1-2 (antes de Sprint 0)
+    \item 4 sesiones de 2h sincrónicas con tutor externo
+    \item \textbf{Contenido:}
+          \begin{itemize}
+              \item \textbf{Sesión 1: TAD (2h)}
+                    \begin{itemize}
+                        \item Qué es, cómo opera en equipos, checklist de autonomía
+                    \end{itemize}
+              \item \textbf{Sesión 2: Confianza Mayer (2h)}
+                    \begin{itemize}
+                        \item Qué es, diagnóstico de baja confianza, entrevista rápida
+                    \end{itemize}
+              \item \textbf{Sesión 3: \textit{Community Smells} (2h)}
+                    \begin{itemize}
+                        \item Catálogo, identificación, registro (Cap. 4.5.3)
+                    \end{itemize}
+              \item \textbf{Sesión 4: Valores Scrum aplicados (2h)}
+                    \begin{itemize}
+                        \item Matriz valores $\times$ smells (Cap. 3.7)
+                    \end{itemize}
+          \end{itemize}
+    \item \textbf{Evaluación:} Quiz 30 min, $\geq$80\% para pasar
+\end{itemize}
+
+\subsection*{Fase 2: Facilitación y mediación (12 horas)}
+\begin{itemize}
+    \item Semanas 3-4 + Sprints 1-2
+    \item 6 sesiones de 2h (sincrónica + práctica en vivo)
+    \item \textbf{Contenido:}
+          \begin{itemize}
+              \item \textbf{Sesiones 1-2: Retrospectivas sociales (4h)}
+                    \begin{itemize}
+                        \item Protocolo 4 fases, facilitación sin juzgar, generación acciones
+                    \end{itemize}
+              \item \textbf{Sesiones 3-4: CNV - Comunicación no violenta (4h)}
+                    \begin{itemize}
+                        \item Observación, sentimientos, necesidades, peticiones
+                    \end{itemize}
+              \item \textbf{Sesiones 5-6: Conversaciones difíciles (4h)}
+                    \begin{itemize}
+                        \item Validación, legitimación, expansión de opciones
+                    \end{itemize}
+          \end{itemize}
+    \item \textbf{Evaluación:} Facilita retrospectiva observada por SM + evaluador
+          \begin{itemize}
+              \item Rúbrica: Seguridad psicológica ($\geq$3/5), preguntas generativas ($\geq$3/5), síntesis clara ($\geq$3/5). Si <3 en alguna: sesión coaching adicional
+          \end{itemize}
+\end{itemize}
+
+\subsection*{Fase 3: Medición y análisis (8 horas)}
+\begin{itemize}
+    \item Semanas 5-6
+    \item 4 sesiones de 2h
+    \item \textbf{Contenido:}
+          \begin{itemize}
+              \item \textbf{Sesión 1:} Health Score (definición, dimensiones, cálculo).
+              \item \textbf{Sesión 2:} Instrumentos (encuestas Likert, entrevistas, SNA).
+              \item \textbf{Sesión 3:} Análisis cualitativo (codificación, síntesis).
+              \item \textbf{Sesión 4:} Generación de reporte (qué comunicar, a quién, formato).
+          \end{itemize}
+    \item \textbf{Evaluación:} Analizar dataset pequeño (10 encuestas); producir Health Score + 3 smells detectados. Si hay sesgos: revisión
+\end{itemize}
+
+\subsection*{Fase 4: Ética y salvaguardas (12 horas)}
+\begin{itemize}
+    \item Semanas 2-4 (intercalado).
+    \item 6 sesiones de 2h.
+    \item \textbf{Contenido:}
+          \begin{itemize}
+              \item \textbf{Sesión 1:} Confidencialidad (qué es confidencial vs reportable)
+              \item \textbf{Sesión 2:} Límites profesionales (cuándo derivar a psicólogo)
+              \item \textbf{Sesión 3:} Sesgos y conflictos de interés
+              \item \textbf{Sesión 4:} ``Teatro Social'' (detección y prevención)
+              \item \textbf{Sesión 5:} Casos éticos complejos (role-plays)
+                    \begin{itemize}
+                        \item Ejemplo: ``Dev reporta ideación suicida'' $\rightarrow$ respuesta correcta
+                    \end{itemize}
+              \item \textbf{Sesión 6:} Auditoría y responsabilidad
+          \end{itemize}
+    \item \textbf{Evaluación:} Cuestionario ético (50 preguntas); role-play observado
+\end{itemize}
+
+\subsection*{Evaluación final post-capacitación (semana 7)}
+\begin{itemize}
+    \item Quiz teórico: 60 min, $\geq$80\% para pasar
+    \item Facilita retrospectiva simulada + observada
+    \item Caso de análisis: Produce Health Score + diagnóstico + plan
+    \item \textbf{Umbral de aprobación:} Todo debe estar $\geq$3/5
+\end{itemize}
+
+\subsection*{Seguimiento (en primer año)}
+\begin{itemize}
+    \item \textbf{Mes 1-2:} Supervisión semanal (SM/tutor externo)
+    \item \textbf{Mes 3-6:} Supervisión quincenal
+    \item \textbf{Mes 6-12:} Supervisión mensual + sesión de desarrollo anual
+    \item \textbf{Año 2+:} Supervisión según necesidad + educación continua 10h/año
+\end{itemize}
+
+\section{G3. Protocolos operativos para eventos clave}
+
+\subsection{Preguntas sociales recomendadas}
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        \textbf{Tipo} & \textbf{Ejemplo de pregunta}                                        \\
+        \hline
+        Estado general
+                      & ``En una palabra, ¿cómo te sientes respecto al trabajo en equipo?'' \\
+        \hline
+        Colaboración
+                      & ``¿Hay algo que necesites de alguien y no estés recibiendo?''       \\
+        \hline
+        Reconocimiento
+                      & ``¿Alguien te ayudó de forma que quieras reconocer?''               \\
+        \hline
+        Tensión
+                      & ``¿Hay algo que te genere tensión y quieras mencionar?''            \\
+        \hline
+    \end{tabularx}
+    \caption{Tipos de preguntas sociales para el Daily}
+    \label{tab:preguntas-daily-social}
+\end{table}
+
+\FloatBarrier
+
+\subsection{Preguntas de evaluación de riesgos sociales}
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|X|X|}
+        \hline
+        \textbf{Pregunta} & \textbf{Propósito}                                                                            \\
+        \hline
+        ¿Existen conflictos activos?
+                          & Identificar conflictos entre miembros que deban colaborar durante el Sprint.                  \\
+        \hline
+        ¿Hay concentración de conocimiento?
+                          & Detectar dependencias riesgosas en una sola persona o subgrupo.                               \\
+        \hline
+        ¿Se observan señales de burnout?
+                          & Evaluar si el compromiso técnico es realista dadas las condiciones actuales del Health Score. \\
+        \hline
+        ¿Qué ítems sociales deberían incluirse?
+                          & Decidir qué ítems del Social Product Backlog deben abordarse en el Sprint.                    \\
+        \hline
+    \end{tabularx}
+    \caption{Preguntas de evaluación de riesgos sociales}
+    \label{tab:preguntas-riesgos-sociales}
+\end{table}
+
+\FloatBarrier
+
+\subsection{Documentación de riesgos sociales}
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|X|c|X|X|}
+        \hline
+        \textbf{Riesgo identificado} & \textbf{Probabilidad}                                                           & \textbf{Impacto potencial} & \textbf{Mitigación acordada} \\
+        \hline
+        Conflicto entre Ana y Carlos en el módulo de pagos
+                                     & Alta
+                                     & Bloqueo de una funcionalidad crítica
+                                     & Sesión de alineación previa al inicio del trabajo conjunto.                                                                                 \\
+        \hline
+        Dependencia única de Miguel en el backend
+                                     & Media
+                                     & Retraso significativo en caso de ausencia
+                                     & Pair programming dos horas al día con Laura para transferencia de conocimiento.                                                             \\
+        \hline
+        Fatiga generalizada (Health Score 5.8)
+                                     & Alta
+                                     & Reducción estimada de la velocidad entre 20 y 30\%
+                                     & Reducción del compromiso del Sprint a 38 puntos.                                                                                            \\
+        \hline
+    \end{tabularx}
+    \caption{Ejemplo de registro de riesgos sociales del Sprint}
+    \label{tab:riesgos-sociales-sprint}
+\end{table}
+
+\FloatBarrier
+
+Este registro se revisa en la Social Sprint Retrospective para evaluar si los riesgos se materializaron y si las mitigaciones fueron efectivas.
+
+\subsection{Contenido de la evaluación de salud social}
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|X|c|X|}
+        \hline
+        \textbf{Elemento} & \textbf{Tiempo}                                                                             & \textbf{Descripción} \\
+        \hline
+        Health Score actual vs.\ anterior
+                          & 2 min
+                          & Comparación y explicación de cambios significativos entre mediciones consecutivas.                                 \\
+        \hline
+        \textit{Community smells} abordados
+                          & 3 min
+                          & Revisión de los ítems sociales completados y del impacto observable generado.                                      \\
+        \hline
+        Riesgos materializados vs.\ mitigados
+                          & 3 min
+                          & Análisis del registro de riesgos definido durante el Sprint Planning.                                              \\
+        \hline
+        Tendencias y proyección
+                          & 2 min
+                          & Visión de mediano plazo: ¿la salud social está mejorando, empeorando o se mantiene estable?                        \\
+        \hline
+    \end{tabularx}
+    \caption{Elementos de la evaluación de salud social}
+    \label{tab:elementos-evaluacion-salud}
+\end{table}
+
+\FloatBarrier
+
+\subsubsection{Técnicas por fase}
+
+\paragraph{Fase 1: Preparación del espacio}
+
+Registro emocional (5 min): cada persona responde una pregunta breve (``En una palabra, ¿ cómo te sientes?''). Recordatorio de acuerdos (3 min): confidencialidad, no culpa, presunción de buena fe, derecho a no participar. Verificación de seguridad (2 min): confirmar que todos pueden hablar con honestidad.
+
+\paragraph{Fase 2: Recolección de datos}
+Técnica principal: Se identifican cuatro cuadrantes sociales tales como la colaboración positiva/problemática y comunicación efectiva/deficiente. Cada persona escribe notas específicas basadas en eventos concretos. Técnica alternativa: línea de tiempo emocional del Sprint.
+
+\paragraph{Fase 3: Análisis de patrones}
+
+Selección de 2-3 temas prioritarios mediante la votación por puntos. Análisis de causa raíz con ``5 Por qués'' adaptados a contexto social. El Social Guide redirige señalamientos de culpables hacia condiciones sistémicas. Mapeo a \textit{community smells} del catálogo cuando corresponda.
+
+\paragraph{Fase 4: Generación de compromisos}
+
+Propuesta de acciones SMART: específicas, medibles, alcanzables, relevantes, temporales. Estimación en SSP y priorización por severidad/esfuerzo. Formalización como items del Social Product Backlog con título, smell abordado, acción, responsable, métrica de éxito y estimación.
+
+\subsubsection{Cierre y documentación}
+
+Resumen de compromisos (2 min), registro de salida (\textit{check-out}) emocional (3 min), agradecimiento (1 min). En 24 horas, el Social Guide publica resumen interno: temas discutidos, causas raíz, acciones comprometidas. Los \textit{stakeholders} solo reciben información de alto nivel.
+
+\subsubsection{Frecuencia}
+
+Dos modelos: (1) \textbf{integrado} ---cada Retrospective incluye componentes técnicos y sociales (90-120 min); (2) \textbf{alternado} ---Sprints pares técnicos, impares sociales. Equipos con Health Score $<$ 6 se benefician del modelo integrado.
+
+\subsubsection{Manejo de situaciones difíciles}
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|X|X|}
+        \hline
+        \textbf{Situación} & \textbf{Respuesta del Social Guide}                                                                                            \\
+        \hline
+        Conflicto abierto entre dos personas
+                           & Intervenir para contener, proponer una conversación privada posterior y continuar con el resto de los temas.                   \\
+        \hline
+        Silencio prolongado
+                           & Normalizar la situación, ofrecer mecanismos de aporte anónimo; si persiste, cerrar antes la sesión y programar encuentros 1:1. \\
+        \hline
+        Expresión emocional intensa
+                           & Validar la emoción expresada, evitar presionar, ofrecer seguimiento posterior y continuar sin dramatizar.                      \\
+        \hline
+        Señalamiento de culpables
+                           & Redirigir la conversación hacia condiciones sistémicas: “¿Qué condiciones permitieron que esto ocurriera?”.                    \\
+        \hline
+    \end{tabularx}
+    \caption{Manejo de situaciones difíciles en la Social Sprint Retrospective}
+    \label{tab:situaciones-dificiles-retro}
+\end{table}
+
+\FloatBarrier
+
+La Social Retrospective es el motor de mejora continua de SocialScrum. Con ella, el equipo desarrolla capacidad de gestionar su propia salud social con autonomía creciente.

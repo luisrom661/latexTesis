@@ -7,14 +7,138 @@
 \label{anexo:herramientas}
 
 % Configurar numeración para anexo E
+\setcounter{chapter}{7}
 \setcounter{section}{0}
 \renewcommand{\thesection}{E.\arabic{section}}
 \renewcommand{\thesubsection}{E.\arabic{section}.\arabic{subsection}}
 
-Este anexo presenta las configuraciones técnicas detalladas para implementar SocialScrum con herramientas de gestión de proyectos. El principio rector es integración, no duplicación: los items sociales deben vivir en el mismo sistema que los items técnicos.
-\section{Integración con Jira}
+Este anexo presenta las adaptaciones contextuales y herramientas tecnológicas recomendadas para implementar SocialScrum en diversos entornos. Incluye guías para ajustar el marco según el tamaño del equipo y la modalidad de trabajo, así como configuraciones específicas para Jira y Azure DevOps. Además, se proporcionan plantillas operacionales estandarizadas y ejemplos de dashboards automatizados para monitorear la salud social del equipo.
 
-\subsection{Campos personalizados}
+\section{Adaptación contextual y escalabilidad}
+
+SocialScrum no es un marco monolítico; debe adaptarse al contexto específico de cada equipo. Un equipo de 5 personas co-localizadas en una startup tiene necesidades diferentes a un equipo de 20 personas distribuidas en 4 zonas horarias dentro de una corporación. Esta sección proporciona guías de adaptación según tamaño del equipo y modalidad de trabajo, asegurando que SocialScrum sea viable independientemente del contexto.
+El principio general es proporcionalidad: equipos pequeños requieren implementación ligera; equipos grandes requieren estructura más formal. La meta es mantener los beneficios de SocialScrum sin que la sobrecarga supere lo que el contexto puede absorber.
+
+\subsection{Configuración por tamaño de equipo}
+
+La tabla \ref{tab:config-por-tamano} resume la configuración recomendada de SocialScrum según el tamaño del equipo:
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|X|X|}
+        \hline
+        \textbf{Aspecto} & \textbf{Pequeño (5--7)}                 & \textbf{Mediano (8--15)} & \textbf{Grande (16+)} \\
+        \hline
+        Social Guide
+                         & Rol rotativo (10\%)
+                         & Dedicación 50\%
+                         & Dedicación 100\%                                                                           \\
+        \hline
+        Health Score
+                         & 3 dimensiones
+                         & 5 dimensiones
+                         & 5 dimensiones + agregado organizacional                                                    \\
+        \hline
+        Social Retrospective
+                         & 15 min integrada
+                         & 30--45 min
+                         & Por subgrupo + general                                                                     \\
+        \hline
+        Sobrecarga por Sprint
+                         & 2--2.5 horas
+                         & 21--29 horas
+                         & 40+ horas                                                                                  \\
+        \hline
+        Auditoría
+                         & Scrum Master informal
+                         & Auditor externo semestral
+                         & Auditor externo semestral                                                                  \\
+        \hline
+        Escalamiento a dedicado
+                         & Si HS $<$ 4 por 3 Sprints
+                         & Si HS $<$ 4 por 2 Sprints
+                         & Siempre dedicado                                                                           \\
+        \hline
+    \end{tabularx}
+    \caption{Configuración de SocialScrum por tamaño de equipo}
+    \label{tab:config-por-tamano}
+\end{table}
+\FloatBarrier
+
+Para \textbf{equipos pequeños}, el rol rotativo funciona porque:
+(1) todos los miembros desarrollan sensibilidad social,
+(2) nadie carga permanentemente con la responsabilidad del rol, y
+(3) diferentes perspectivas enriquecen la observación del equipo.
+Los requisitos para esta modalidad son una capacitación básica de dos horas para todos los miembros,
+un handover estructurado de treinta minutos entre Social Guides,
+y la disponibilidad del Scrum Master como respaldo.
+
+Para \textbf{equipos medianos}, una dedicación aproximada del 50\% permite que el Social Guide
+permanezca conectado con la realidad técnica del equipo, preservando su credibilidad
+y evitando una separación excesiva entre el rol social y el trabajo diario.
+
+Para \textbf{equipos grandes o múltiples equipos}, se contemplan tres configuraciones posibles:
+(a) un Social Guide por equipo con dedicación del 50\%,
+(b) un Social Guide compartido con dedicación completa para dos o tres equipos, o
+(c) un Social Guide Lead con representantes por equipo en organizaciones de 50 o más personas.
+
+\subsection{Adaptación por modalidad de trabajo}
+
+La modalidad de trabajo afecta significativamente cómo se implementa SocialScrum. El principio para equipos híbridos es ``remote-first'': todas las prácticas deben diseñarse como si todos fueran remotos.
+
+\begin{table}[h]
+    \centering
+    \footnotesize
+    \begin{tabularx}{\textwidth}{|l|X|X|X|}
+        \hline
+        \textbf{Aspecto} & \textbf{Co-localizado}                                                  & \textbf{Distribuido} & \textbf{Híbrido} \\
+        \hline
+        Social Daily Standup
+                         & Presencial, 15--18 min
+                         & Asíncrono (Slack) o videollamada
+                         & Remote-first (todos conectados desde dispositivo)                                                                 \\
+        \hline
+        Social Sprint Retrospective
+                         & Presencial con \textit{post-its}
+                         & Digital (Miro u otras herramientas) + videollamada
+                         & Digital para todos los participantes                                                                              \\
+        \hline
+        Observación
+                         & Directa y contextual (interacciones informales)
+                         & Patrones en Slack y sesiones 1:1 virtuales
+                         & Combinada, con énfasis en señales digitales                                                                       \\
+        \hline
+        Cohesión
+                         & Almuerzos y eventos presenciales
+                         & Charlas informales (\textit{coffee chats}) virtuales y canales sociales
+                         & Ambas modalidades, priorizando actividades inclusivas                                                             \\
+        \hline
+        Mediación
+                         & Preferentemente presencial
+                         & Videollamada; presencial puntual si es necesario
+                         & Según disponibilidad y contexto de los participantes                                                              \\
+        \hline
+        Health Score
+                         & Recopilación durante la retrospectiva
+                         & Formulario asíncrono con discusión posterior
+                         & Formulario asíncrono para todos                                                                                   \\
+        \hline
+    \end{tabularx}
+    \caption{Adaptaciones de SocialScrum según la modalidad de trabajo}
+    \label{tab:adaptaciones-modalidad}
+\end{table}
+\FloatBarrier
+
+Para equipos distribuidos, los desafíos principales son: comunicación asíncrona, ausencia de señales no verbales, y aislamiento~\cite{wilson2006trust, noll2020motivation}. Las adaptaciones incluyen: Social Daily Standup asíncrono mediante bots (Geekbot, Standuply), retrospectivas híbridas (fase asíncrona de 24h para reflexiones + fase síncrona de 45 min para discusión), observación remota de patrones en Slack (tiempo de respuesta, tono, emojis), y \textit{``coffee chats''} virtuales para detectar señales no verbales. Para equipos híbridos, la regla es: si 4 personas están en oficina y 3 remotas, cada persona se conecta desde su laptop para igualar la experiencia.
+
+La adaptación contextual asegura que SocialScrum sea viable en cualquier configuración. La sobrecarga debe ser proporcional a la complejidad social: un equipo de 5 personas co-localizadas no necesita la misma infraestructura que una organización de 50 personas distribuidas en 4 continentes.
+
+\section{Herramientas y tecnología}
+
+\subsection{Integración con Jira}
+
+\subsubsection{Campos personalizados}
 
 Jira permite crear campos personalizados que capturan la información específica de SocialScrum:
 
@@ -43,7 +167,7 @@ Jira permite crear campos personalizados que capturan la información específic
     \label{tab:jira-custom-fields-anexo}
 \end{table}
 
-\subsection{Configuración de tipos de incidencias (\textit{Issue Types})}
+\subsubsection{Configuración de tipos de incidencias (\textit{Issue Types})}
 
 \begin{verbatim}
 === CONFIGURACION DE ISSUE TYPES ===
@@ -62,7 +186,7 @@ Recomendacion: Empezar con Opcion A (sin friccion),
 migrar a Opcion B cuando el proceso este maduro.
 \end{verbatim}
 
-\subsection{Workflow para items sociales}
+\subsubsection{Workflow para items sociales}
 
 \begin{verbatim}
 === WORKFLOW PARA ITEMS SOCIALES ===
@@ -87,7 +211,7 @@ Automatizaciones:
 - Notificar al Social Guide si item en "In Progress" > 5 dias
 \end{verbatim}
 
-\subsection{Filtros JQL para SocialScrum}
+\subsubsection{Filtros JQL para SocialScrum}
 
 \begin{verbatim}
 === FILTROS JQL UTILES ===
@@ -117,11 +241,11 @@ Automatizaciones:
    AND "Severity" IN ("Severa", "Critica")
 \end{verbatim}
 
-\section{Integración con Azure DevOps}
+\subsection{Integración con Azure DevOps}
 
 Azure DevOps permite personalización similar a través de su sistema de Work Item Types y campos personalizados.
 
-\subsection{Campos personalizados en Azure DevOps}
+\subsubsection{Campos personalizados en Azure DevOps}
 
 \begin{verbatim}
 === CAMPOS PERSONALIZADOS EN AZURE DEVOPS ===
@@ -159,7 +283,7 @@ Campos a crear:
    - Regla: Requerido para items con tag SOCIAL
 \end{verbatim}
 
-\subsection{Queries para Azure DevOps}
+\subsubsection{Queries para Azure DevOps}
 
 \begin{verbatim}
 === QUERIES EQUIVALENTES EN AZURE DEVOPS ===
@@ -182,7 +306,7 @@ Campos a crear:
    Sum: Social Points
 \end{verbatim}
 
-\subsection{Integración de Health Score}
+\subsubsection{Integración de Health Score}
 
 \begin{verbatim}
 === INTEGRACION DE HEALTH SCORE ===
@@ -203,11 +327,11 @@ Opcion 3: Power BI embebido
 - Refresh automatico desde Excel/SharePoint
 \end{verbatim}
 
-\section{Plantillas operacionales}
+\subsection{Plantillas operacionales}
 
 Las siguientes plantillas estandarizan la captura de información y facilitan la adopción de SocialScrum.
 
-\subsection{Plantilla de User Story Social}
+\subsubsection{Plantilla de User Story Social}
 
 \begin{verbatim}
 === USER STORY SOCIAL - PLANTILLA ===
@@ -306,7 +430,7 @@ Desglose:
 - TOTAL: __ horas = __ SSP (1 SSP = 2 horas)
 \end{verbatim}
 
-\subsection{Plantilla para mediación de conflictos}
+\subsubsection{Plantilla para mediación de conflictos}
 
 \begin{verbatim}
 === MEDIACION DE CONFLICTO - PLANTILLA ===
@@ -384,7 +508,7 @@ Desglose:
 - TOTAL: __ horas = __ SSP
 \end{verbatim}
 
-\subsection{Plantilla de Health Score Dashboard semanal}
+\subsubsection{Plantilla de Health Score Dashboard semanal}
 
 \begin{verbatim}
 === HEALTH SCORE DASHBOARD - SEMANA X ===
@@ -454,7 +578,7 @@ Defectos: __ (vs __ promedio)
 Observaciones: _______________________
 \end{verbatim}
 
-\subsection{Plantilla de notas de retrospectiva social}
+\subsubsection{Plantilla de notas de retrospectiva social}
 
 \begin{verbatim}
 === RETROSPECTIVA SOCIAL - SPRINT N ===
@@ -542,7 +666,7 @@ Escalaciones necesarias:
 _______________
 \end{verbatim}
 
-\subsection{Plantilla de reporte mensual para las partes interesadas (\textit{stakeholders})}
+\subsubsection{Plantilla de reporte mensual para las partes interesadas (\textit{stakeholders})}
 
 \begin{verbatim}
 === REPORTE DE SALUD SOCIAL - MES [X] ===
@@ -636,7 +760,7 @@ Justificacion: _______________
 Proxima revision: [Fecha]
 \end{verbatim}
 
-\subsection{Plantilla de registro de \textit{community smells}}
+\subsubsection{Plantilla de registro de \textit{community smells}}
 
 \begin{verbatim}
 === COMMUNITY SMELL REGISTRY ===
@@ -681,11 +805,11 @@ Post-mortem:
 - Como prevenir recurrencia: _______________
 \end{verbatim}
 
-\section{Dashboards automatizados}
+\subsection{Dashboards automatizados}
 
 Para equipos que requieren visualización más sofisticada del Health Score y su correlación con métricas técnicas, es posible construir dashboards automatizados usando herramientas de Business Intelligence.
 
-\subsection{Arquitectura de datos}
+\subsubsection{Arquitectura de datos}
 
 \begin{verbatim}
 === ARQUITECTURA DE DATOS PARA DASHBOARD ===
@@ -719,7 +843,7 @@ Frecuencia de actualizacion:
 - Community Smells: Tiempo real (cuando se crean/cierran items)
 \end{verbatim}
 
-\subsection{Dashboard en Google Sheets}
+\subsubsection{Dashboard en Google Sheets}
 
 Para equipos sin acceso a herramientas BI, Google Sheets proporciona visualización básica:
 
@@ -748,7 +872,7 @@ Automatizacion:
 - Notificacion si Health Score < 4
 \end{verbatim}
 
-\subsection{Dashboard en Grafana}
+\subsubsection{Dashboard en Grafana}
 
 Grafana es una herramienta de visualización open-source para dashboards sofisticados:
 
@@ -791,7 +915,7 @@ Paneles recomendados:
 Refresh: Cada 1 hora o manual
 \end{verbatim}
 
-\subsection{Dashboard en Power BI / Tableau}
+\subsubsection{Dashboard en Power BI / Tableau}
 
 \begin{verbatim}
 === DASHBOARD EN POWER BI ===
@@ -836,7 +960,7 @@ Refresh automatico:
 - O refresh manual post-retrospectiva
 \end{verbatim}
 
-\section{Alertas automatizadas}
+\subsection{Alertas automatizadas}
 
 Independientemente de la herramienta, configurar alertas para situaciones críticas:
 
@@ -873,7 +997,7 @@ Implementacion:
 - Jira: Automation rules nativas
 \end{verbatim}
 
-\section{Consideraciones de implementación}
+\subsection{Consideraciones de implementación}
 
 Las herramientas de soporte no son requisito para implementar SocialScrum, pero reducen la fricción operacional. La integración con Jira o Azure DevOps permite que los items sociales vivan junto a los técnicos, visibles para todo el equipo. Las plantillas estandarizan la captura de información y facilitan la adopción. Los dashboards automatizados proporcionan visibilidad continua sin esfuerzo manual.
 

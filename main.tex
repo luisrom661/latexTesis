@@ -54,6 +54,7 @@
 % ==============================================================================
 
 \usepackage{array}                   % Mejoras para tablas
+\usepackage{ragged2e}                % Alineación mejorada (Centering, RaggedRight)
 \usepackage{booktabs}                % Líneas profesionales en tablas
 \usepackage{longtable}               % Tablas que ocupan múltiples páginas
 \usepackage{tabularx}                % Tablas con ancho ajustable
@@ -74,11 +75,17 @@
 
 \usepackage{tikz}                    % Creación de gráficos vectoriales
 \usepackage{enumitem}                % Personalización de listas
-\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit,decorations.pathmorphing, shadows,shapes.misc} % Librerías de TikZ
+\usepackage{tikz-3dplot}             % Gráficos 3D
+\usetikzlibrary{babel}
 
 \usepackage{pgfplots}                % Gráficos y plots avanzados
 \pgfplotsset{compat=1.18}
 \usepackage{pgfkeys}
+
+% Definición de colores personalizados para coincidir con la imagen
+\definecolor{socialblue}{RGB}{0, 114, 188} % Azul corporativo
+\definecolor{darkgrey}{RGB}{80, 80, 80}
 
 
 % ==============================================================================
@@ -89,7 +96,7 @@
 \usepackage{comment}                 % Bloques de comentarios
 \usepackage{changepage}              % Ajuste temporal de márgenes
 \usepackage[most]{tcolorbox}         % Cajas de color decorativas
-\usepackage[toc,acronym,nolangwarn]{glossaries}  % Glosarios y acrónimos (usar makeindex por compatibilidad Windows)
+\usepackage[toc,acronym,nolangwarn,numberedsection]{glossaries}  % Glosarios y acrónimos (usar makeindex por compatibilidad Windows)
 \makeglossaries
 \usepackage{hyperref}                % Enlaces e hipervínculos (debe ir al final)
 \usepackage{bookmark}                 % Mejora de marcadores PDF
@@ -283,10 +290,19 @@
 \input{capitulos/capitulo6.tex}
 
 % --- Anexos ---
+% \input{anexos/anexo-a.tex}
+% \input{anexos/anexo-b.tex}
 \input{anexos/anexo-c.tex}
 \input{anexos/anexo-d.tex}
 \input{anexos/anexo-e.tex}
+\input{anexos/anexo-f.tex}
+\input{anexos/anexo-g.tex}
 \input{anexos/anexo-h.tex}
+\input{anexos/anexo-i.tex}
+\input{anexos/anexo-j.tex}
+\input{anexos/anexo-k.tex}
+\input{anexos/anexo-l.tex}
+%\input{anexos/anexo-m.tex}
 
 % --- Otros capítulos (comentados) ---
 % \input{capitulos/socialscrum-expanded.tex}
@@ -300,6 +316,8 @@
 \addcontentsline{toc}{chapter}{\MakeUppercase{REFERENCIAS BIBLIOGRÁFICAS}}
 \printbibliography
 
+\printglossary[type=\acronymtype, title={Acrónimos}]
+\printglossary[style=altlist,title={Glosario}]
 
 % ==============================================================================
 % ==============================================================================

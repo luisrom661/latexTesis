@@ -1,0 +1,358 @@
+\chapter*{ANEXO J: CATÁLOGO DE ESTRATEGIAS DE MITIGACIÓN}
+\label{anexo:catalogo-estrategias-mitigacion}
+\addcontentsline{toc}{chapter}{ANEXO J: Catálogo de Estrategias de Mitigación}
+
+Este anexo presenta un catálogo de estrategias de mitigación para diferentes categorías de \textit{community smells}. Cada estrategia incluye una descripción, pasos recomendados y consideraciones clave para su implementación efectiva.
+
+\section{Estrategias de mitigación de community smells}
+
+Detectar un \textit{community smell} es solo el primer paso. La detección sin acción genera frustración: el equipo sabe que hay un problema pero no ve mejora. Esta sección proporciona un catálogo de estrategias de mitigación basadas en la taxonomía de \textit{community smells} de Caballero et al.\ \cite{caballero2022communitysmells}, organizadas por categoría de smell. Herramientas como csDetector \cite{almarimi2021csDetector} permiten detección automática de algunos de estos patrones a partir de metadatos de repositorios.
+
+El objetivo no es eliminar todos los smells ---algunos son síntomas de tensiones organizacionales que el equipo no controla--- sino reducir su impacto en la capacidad del equipo de entregar valor.
+
+\subsection{Catálogo de estrategias por categoría}
+
+Para cada categoría de \textit{community smell}, se describen problemas comunes, ejemplos representativos y tipos de intervención recomendados (ver Tabla~\ref{tab:categorias-smells}).
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|X|X|}
+        \hline
+        \textbf{Categoría} & \textbf{Problema}                                                                                                                      & \textbf{Smells representativos} & \textbf{Tipo de intervención} \\
+        \hline
+        Comunicación
+                           & Información no fluye entre miembros o hacia afuera
+                           & \textit{Radio Silence}, \textit{Information Hoarding}, \textit{Broadcast Storm}, \textit{Missing Links}, \textit{Synchronous Overload}
+                           & Rediseño de canales, protocolos y automatización                                                                                                                                                         \\
+        \hline
+        Conocimiento
+                           & Saber técnico concentrado o no compartido
+                           & \textit{Truck Factor} = 1, \textit{Knowledge Islands}, \textit{Outdated Docs}, \textit{Tribal Knowledge}, \textit{Expert Bottleneck}
+                           & \textit{Pair programming}, documentación y rotación                                                                                                                                                      \\
+        \hline
+        Relacional
+                           & Conflictos, exclusión y dinámicas tóxicas
+                           & \textit{Lone Wolf}, \textit{Prima Donna}, \textit{Clique Formation}, \textit{Unresolved Conflict}, \textit{Toxic Leadership}
+                           & Mediación, facilitación y feedback directo                                                                                                                                                               \\
+        \hline
+        Organizacional
+                           & Estructura o procesos disfuncionales
+                           & \textit{Organizational Silo}, \textit{Meeting Hell}, \textit{Unclear Ownership}, \textit{Process Overhead}, \textit{Unstable Team}
+                           & Escalamiento, negociación y reestructuración                                                                                                                                                             \\
+        \hline
+    \end{tabularx}
+    \caption{Categorías de \textit{community smells}, ejemplos e intervenciones}
+    \label{tab:categorias-smells}
+\end{table}
+\FloatBarrier
+
+\subsubsection{Estrategias para \textit{smells} de comunicación}
+
+Estas estrategias abordan problemas de flujo de información dentro del equipo y con \textit{stakeholders} externos.
+
+\begin{table}[h]
+    \centering
+    \footnotesize
+    \begin{tabularx}{\textwidth}{|l|X|X|c|}
+        \hline
+        \textbf{Smell} & \textbf{Síntomas}                                                       & \textbf{Estrategia de mitigación} & \textbf{SSP} \\
+        \hline
+        \textit{Radio Silence}
+                       & Sorpresas frecuentes; “nadie me dijo”; la información llega tarde
+                       & 1) Identificar nodos centrales mediante SNA.
+        2) Crear un canal de broadcast para actualizaciones críticas.
+        3) Establecer \textit{office hours} donde cualquiera pueda preguntar.
+        4) Rotar la responsabilidad de comunicar en la Daily.
+                       & 3--5                                                                                                                       \\
+        \hline
+        \textit{Information Hoarding}
+                       & Personas guardan información “por si acaso”; duplicación de esfuerzo
+                       & 1) Workshop sobre beneficios de compartir.
+        2) Crear una wiki o Confluence con expectativa explícita de documentar decisiones.
+        3) Reconocer públicamente cuando alguien comparte información útil.
+                       & 3--5                                                                                                                       \\
+        \hline
+        \textit{Broadcast Storm}
+                       & Canales saturados; nadie lee mensajes; información importante se pierde
+                       & 1) Auditar y consolidar canales existentes.
+        2) Establecer convenciones (por ejemplo, @here solo para urgencias).
+        3) Crear resúmenes diarios o semanales.
+        4) Eliminar canales redundantes.
+                       & 2--3                                                                                                                       \\
+        \hline
+        \textit{Missing Links}
+                       & Subgrupos no se comunican; integraciones tardías generan conflictos
+                       & 1) Mapear la comunicación actual mediante SNA.
+        2) Crear rituales de sincronización entre subgrupos.
+        3) Asignar enlaces rotativos entre equipos.
+        4) Realizar retrospectivas conjuntas mensuales.
+                       & 5--8                                                                                                                       \\
+        \hline
+        \textit{Synchronous Overload}
+                       & Calendarios saturados; trabajo fragmentado; fatiga de videollamadas
+                       & 1) Auditar reuniones y eliminar las innecesarias.
+        2) Establecer \textit{no-meeting days}.
+        3) Convertir reuniones de estado a formato asíncrono.
+        4) Limitar la duración máxima de reuniones (25/50 min).
+                       & 3--5                                                                                                                       \\
+        \hline
+    \end{tabularx}
+    \caption{Estrategias para smells de comunicación}
+    \label{tab:estrategias-comunicacion}
+\end{table}
+\FloatBarrier
+
+\subsubsection{Estrategias para smells de conocimiento}
+
+Estas estrategias se enfocan en mejorar la gestión y transferencia del conocimiento dentro del equipo.
+
+\begin{table}[h]
+    \centering
+    \footnotesize
+    \begin{tabularx}{\textwidth}{|l|X|X|c|}
+        \hline
+        \textbf{Smell} & \textbf{Síntomas}                                                              & \textbf{Estrategia de mitigación} & \textbf{SSP} \\
+        \hline
+        \textit{Truck Factor} = 1
+                       & “Solo Juan sabe cómo funciona X”; bloqueos cuando Juan no está
+                       & 1) Identificar componentes críticos con un solo experto.
+        2) \textit{Pair programming} forzado: Juan + otro dev en cada tarea del componente.
+        3) Juan documenta la arquitectura básica (2–3 páginas).
+        4) Otro dev realiza un cambio pequeño de forma autónoma; Juan revisa.
+                       & 5--8                                                                                                                              \\
+        \hline
+        \textit{Knowledge Islands}
+                       & Subgrupos especializados no comparten conocimiento; la integración es dolorosa
+                       & 1) \textit{Tech talks} semanales rotativos (30 min).
+        2) \textit{Code reviews} cruzados entre subgrupos.
+        3) Rotación temporal: un Sprint en otro subgrupo.
+        4) Documentación explícita de interfaces entre componentes.
+                       & 5--8                                                                                                                              \\
+        \hline
+        \textit{Outdated Documentation}
+                       & La documentación existe pero es incorrecta; nadie confía en ella
+                       & 1) Auditar documentación: marcar obsoleta o eliminar.
+        2) Establecer \textit{docs as code}: la documentación vive junto al código.
+        3) Incluir actualización de documentación en la \textit{Definition of Done}.
+        4) Asignar un responsable de cada documentación crítica.
+                       & 3--5                                                                                                                              \\
+        \hline
+        \textit{Tribal Knowledge}
+                       & Conocimiento principalmente oral; el \textit{onboarding} toma meses
+                       & 1) Grabar sesiones de \textit{onboarding} para reutilizarlas.
+        2) Crear un \textit{playbook} de operaciones comunes.
+        3) \textit{Pair programming} intensivo durante las primeras dos semanas.
+        4) Implementar un sistema de compañeros (\textit{buddy system}) para nuevos miembros.
+                       & 5--8                                                                                                                              \\
+        \hline
+        \textit{Expert Bottleneck}
+                       & Una sola persona revisa todo; los PRs esperan días
+                       & 1) El experto entrena a 2–3 personas como reviewers secundarios.
+        2) Establecer un SLA (Service Level Agreement): PRs simples no requieren aprobación del experto.
+        3) Crear checklists de revisión reutilizables.
+        4) Delegar gradualmente categorías de PRs.
+                       & 5--8                                                                                                                              \\
+        \hline
+    \end{tabularx}
+    \caption{Estrategias para smells de conocimiento}
+    \label{tab:estrategias-conocimiento}
+\end{table}
+\FloatBarrier
+
+\subsubsection{Estrategias para smells relacionales}
+
+Estas estrategias se enfocan en mejorar las interacciones y relaciones dentro del equipo.
+
+\begin{table}[h]
+    \centering
+    \footnotesize
+    \begin{tabularx}{\textwidth}{|l|X|X|c|}
+        \hline
+        \textbf{Smell} & \textbf{Síntomas}                                                                     & \textbf{Estrategia de mitigación} & \textbf{SSP} \\
+        \hline
+        Lone Wolf
+                       & Trabaja solo; no pide ni ofrece ayuda; PRs sin contexto
+                       & 1) 1:1 para entender la motivación (preferencia o desconfianza).
+        2) Pair programming gradual (1 hora al día).
+        3) Asignar tareas que requieran colaboración.
+        4) Reconocer públicamente cuando colabora.
+                       & 3--5                                                                                                                                     \\
+        \hline
+        Prima Donna
+                       & Cree que sus ideas son superiores; no acepta feedback; bloquea el consenso
+                       & 1) 1:1 para dar feedback específico sobre el impacto.
+        2) Establecer la norma de decisiones por consenso, no por imposición.
+        3) Documentar criterios objetivos para decisiones técnicas.
+        4) Si persiste, escalar al Scrum Master.
+                       & 5--8                                                                                                                                     \\
+        \hline
+        Clique Formation
+                       & Subgrupo cerrado; exclusión en almuerzos o canales; la información no sale del clique
+                       & 1) Workshop de cohesión con todo el equipo.
+        2) Rotar parejas de trabajo para romper cliques.
+        3) Crear rituales inclusivos (coffee chat aleatorio).
+        4) 1:1 con líderes informales del clique.
+                       & 5--8                                                                                                                                     \\
+        \hline
+        Unresolved Conflict
+                       & Tensión visible; evitan trabajar juntos; comentarios pasivo-agresivos
+                       & 1) 1:1 con cada parte para entender su perspectiva.
+        2) Sesión de mediación facilitada.
+        3) Documentar acuerdos de comportamiento.
+        4) Seguimiento en 2--4 semanas.
+                       & 5--8                                                                                                                                     \\
+        \hline
+        Toxic Leadership
+                       & Micromanagement; culpabilización pública; generación de miedo
+                       & 1) Documentar incidentes específicos con fechas.
+        2) Escalar a CTO o VP con evidencia.
+        3) Proteger al equipo mientras se resuelve la situación.
+        4) En casos severos, separar al líder del equipo.
+                       & 8--13                                                                                                                                    \\
+        \hline
+    \end{tabularx}
+    \caption{Estrategias para smells relacionales}
+    \label{tab:estrategias-relacionales}
+\end{table}
+\FloatBarrier
+
+\subsubsection{Estrategias para smells organizacionales}
+
+Estas estrategias abordan problemas estructurales y de proceso que afectan al equipo.
+
+\begin{table}[h]
+    \centering
+    \footnotesize
+    \begin{tabularx}{\textwidth}{|l|X|X|c|}
+        \hline
+        \textbf{Smell} & \textbf{Síntomas}                                                      & \textbf{Estrategia de mitigación} & \textbf{SSP} \\
+        \hline
+        \textit{Organizational Silo}
+                       & Equipos no se comunican; duplicación de trabajo; integraciones tardías
+                       & 1) Identificar puntos de contacto necesarios.
+        2) Establecer embajadores entre equipos.
+        3) Reuniones de sincronización bisemanales.
+        4) Escalar a liderazgo si la estructura impide la colaboración.
+                       & 5--8                                                                                                                      \\
+        \hline
+        \textit{Meeting Hell}
+                       & Calendarios saturados por demandas externas al equipo
+                       & 1) Auditar reuniones: quién las convoca y si son necesarias.
+        2) Negociar con \textit{stakeholders} un representante único.
+        3) Establecer \textit{focus time} protegido.
+        4) Escalar al Scrum Master para proteger al equipo.
+                       & 3--5                                                                                                                      \\
+        \hline
+        \textit{Unclear Ownership}
+                       & Preguntas frecuentes sobre responsables; decisiones postergadas
+                       & 1) Mapear componentes y asignar responsables explícitos.
+        2) Documentar una matriz RACI para decisiones comunes.
+        3) Publicar el \textit{ownership} en una wiki accesible.
+        4) Revisar y actualizar cada tres meses.
+                       & 3--5                                                                                                                      \\
+        \hline
+        \textit{Process Overhead}
+                       & Aprobaciones múltiples y burocracia que no agrega valor
+                       & 1) Documentar tiempo perdido en procesos.
+        2) Proponer simplificación basada en evidencia.
+        3) Ejecutar un piloto con exención de un proceso durante dos Sprints.
+        4) Medir impacto y escalar resultados.
+                       & 5--8                                                                                                                      \\
+        \hline
+        \textit{Unstable Team}
+                       & Miembros prestados y rotación frecuente
+                       & 1) Documentar el impacto en velocidad y calidad.
+        2) Escalar a liderazgo con datos.
+        3) Negociar un período mínimo de estabilidad.
+        4) Si no es posible cambiar, optimizar el onboarding.
+                       & 5--8                                                                                                                      \\
+        \hline
+    \end{tabularx}
+    \caption{Estrategias para smells organizacionales}
+    \label{tab:estrategias-organizacionales}
+\end{table}
+\FloatBarrier
+
+\subsubsection{Smells que requieren escalamiento}
+
+Algunos smells no pueden resolverse a nivel de equipo. El Social Guide debe reconocer estos casos y escalar apropiadamente:
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|X|}
+        \hline
+        \textbf{Smell} & \textbf{Por qué requiere escalamiento}                                            & \textbf{A quién escalar} \\
+        \hline
+        \textit{Toxic Leadership}
+                       & El líder tiene poder formal sobre el equipo; la confrontación directa es riesgosa
+                       & CTO, VP Engineering, HR (con cuidado)                                                                        \\
+        \hline
+        \textit{Organizational Silo} (estructural)
+                       & Equipos separados por decisiones organizacionales
+                       & VP Engineering, Director de Producto                                                                         \\
+        \hline
+        \textit{Unstable Team} (política)
+                       & Las decisiones de staffing provienen de niveles superiores
+                       & CTO, Resource Manager                                                                                        \\
+        \hline
+        \textit{Budget Constraints}
+                       & Problemas derivados de falta de recursos
+                       & CTO, VP con autoridad presupuestaria                                                                         \\
+        \hline
+        Legal / Problemas de cumplimiento (\textit{Compliance Issues})
+                       & Procesos impuestos por regulación o cumplimiento normativo
+                       & Legal, Compliance Officer                                                                                    \\
+        \hline
+    \end{tabularx}
+    \caption{Smells que requieren escalamiento}
+    \label{tab:smells-escalamiento}
+\end{table}
+\FloatBarrier
+
+Para estos casos, el rol del Social Guide es:
+\begin{enumerate}
+    \item Documentar el impacto con datos cuantitativos.
+    \item Preparar propuesta de solución (no solo el problema).
+    \item Escalar al \textit{stakeholder} apropiado con Scrum Master.
+    \item Proteger al equipo mientras se resuelve externamente.
+\end{enumerate}
+
+\subsection{Diseño de experimentos de mejora}
+
+Las estrategias del catálogo son puntos de partida que pueden requerir adaptaciones al contexto. El diseño de experimentos permite probar intervenciones sistemáticamente.
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        \textbf{Componente} & \textbf{Descripción}                                                                        \\
+        \hline
+        Hipótesis
+                            & Declaración falsificable que conecta una intervención con un resultado esperado.
+        Formato: \textit{Si [intervención], entonces [resultado], porque [mecanismo]}.                                    \\
+        \hline
+        Métricas
+                            & Indicadores cuantitativos definidos con baseline y objetivo (\textit{target}).              \\
+        \hline
+        Diseño
+                            & Definición de qué se hará, cuándo, quiénes participan y recursos requeridos (SSP).          \\
+        \hline
+        Criterios de evaluación
+                            & Éxito: métricas alcanzan el \textit{target} $\rightarrow$ institucionalizar. \newline
+        Parcial: mejora $\geq$ 50\% $\rightarrow$ iterar. \newline
+        Fracaso: sin mejora $\rightarrow$ pivotar. \newline
+        Inconcluso: datos insuficientes $\rightarrow$ extender experimento.                                               \\
+        \hline
+        Documentación
+                            & Registro estructurado de la hipótesis, resultados obtenidos, aprendizajes y decisión final. \\
+        \hline
+    \end{tabularx}
+    \caption{Componentes de un experimento de mejora}
+    \label{tab:experimento-mejora}
+\end{table}
+\FloatBarrier
+
+No toda intervención requiere experimento formal. Se recomienda diseño experimental cuando: el contexto es único, la intervención es costosa ($>$8 SSP), el equipo es escéptico, o el impacto afecta múltiples equipos. Intervenciones simples y reversibles pueden implementarse directamente y ajustarse.

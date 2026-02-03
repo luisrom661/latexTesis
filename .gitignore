@@ -16,6 +16,8 @@
 *.snm
 *.vrb
 pdflatex*.fls
+*.bbl-SAVE-ERROR
+main.bbl-SAVE-ERROR
 
 # Directorio de compilación
 build/
@@ -26,3 +28,6 @@ indent.log
 
 # Archivos del editor
 .vscode/settings.json
+
+# Agente
+.agent/
