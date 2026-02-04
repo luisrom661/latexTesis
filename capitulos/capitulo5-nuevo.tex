@@ -89,6 +89,8 @@ Se definieron cinco criterios de evaluación clave para guiar la valoración del
 \end{longtable}
 \endgroup
 
+La evaluación de la agilidad en este instrumento no se fundamenta en percepciones subjetivas, sino que tiene como propósito validar la pertinencia y el cumplimiento de los 33 indicadores de agilidad (IA\_01 a IA\_33) definidos en la capa metodológica del framework AgilityPRO \cite{ortega2019agilityevaluation}. Específicamente, las preguntas de esta dimensión buscan que el experto determine si los componentes de SocialScrum ---como el rol del Social Guide, los Eventos Adaptados y los Artefactos Sociales--- operan efectivamente como ``aspectos de agilidad''. Al utilizar el modelo de referencia AgilityRef, esta validación garantiza que SocialScrum no solo gestiona la deuda social, sino que lo hace manteniendo la alineación formal con los valores y principios del Manifiesto Ágil bajo un marco de referencia internacionalmente reconocido.
+
 \subsection{Escala de medición}
 Para la evaluación cuantitativa, se utilizó una escala Likert de de 1 a 5 puntos, donde 1 representaba "Totalmente en desacuerdo" y 5 "Totalmente de acuerdo". esto permitió a los expertos expresar su grado de acuerdo o desacuerdo con afirmaciones relacionadas con cada criterio de evaluación. La escala se definió de la siguiente manera en la Tabla~\ref{tab:estructura-instrumento}:
 
@@ -160,89 +162,75 @@ A continuación se presenta el cuestionario dividido en Parte A (preguntas cerra
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    |c|
-    >{\raggedright\arraybackslash}p{\dimexpr\textwidth-2\tabcolsep-2\arrayrulewidth-1.8cm\relax}|
+\begin{longtable}[H]{
+    >{\RaggedRight\hspace{0pt}}p{1.2cm} % Id.
+    >{\RaggedRight\hspace{0pt}}p{2.8cm} % Criterio
+    >{\RaggedRight\hspace{0pt}}p{\dimexpr\textwidth-1.2cm-2.8cm-6\tabcolsep\relax} % Pregunta
     }
 
     % --- ENCABEZADO PRIMERA PÁGINA ---
     \caption{Ejemplos de preguntas del instrumento de evaluación}
-    \label{tab:ejemplos-preguntas}                                                                                                                                                                                                                     \\
-    \hline
-    \textbf{Id.} & \textbf{Pregunta}                                                                                                                                                                                                                   \\
-    \hline
+    \label{tab:ejemplos-preguntas}                                                                                                                                                                                                                                                                                                   \\
+    \toprule
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                             \\
+    \midrule
     \endfirsthead
 
     % --- ENCABEZADO PÁGINAS SIGUIENTES ---
-    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                            \\
-    \hline
-    \textbf{Id.} & \textbf{Pregunta}                                                                                                                                                                                                                   \\
-    \hline
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                          \\
+    \toprule
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                             \\
+    \midrule
     \endhead
 
     % --- PIE INTERMEDIO ---
-    \hline
-    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                    \\
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                  \\
     \endfoot
 
     % --- PIE FINAL ---
-    \hline
-    \multicolumn{2}{l}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.), Pregunta Cerrada (P) y Pregunta Abierta (PA).}}                                                                                                                 \\
+    \bottomrule
+    \multicolumn{3}{l}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.), Pregunta Cerrada (P) y Pregunta Abierta (PA).}}                                                                                                                                                                                               \\
     \endlastfoot
 
-    \multicolumn{2}{|l|}{\textbf{Parte A – Preguntas Cerradas}}                                                                                                                                                                                        \\
-    \hline
-    P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos?                                                                                                                                                     \\
-    \hline
-    P2           & ¿Cree que el modelo SocialScrum cubre todos los aspectos necesarios para la gestión ágil de proyectos?                                                                                                                              \\
-    \hline
-    P3           & ¿Los valores fundamentales de Scrum (coraje, foco, compromiso, apertura y respeto) se reflejan adecuadamente en las prácticas de SocialScrum para manejar la deuda social del equipo?                                               \\
-    \hline
-    P4           & ¿Existen inconsistencias teóricas en el marco conceptual de SocialScrum (TAD, confianza en equipos, valores de Scrum) que podrían comprometer la coherencia del modelo?                                                             \\
-    \hline
-    P5           & ¿El perfil y las competencias del Social Guide están claramente definidos y son viables, complementando los roles existentes en el equipo sin solapamiento de responsabilidades?                                                    \\
-    \hline
-    P6           & ¿La introducción del rol Social Guide podría generar conflictos de autoridad o de interés con roles existentes (por ejemplo, con el Scrum Master, Product Owner o el departamento de RRHH)?                                         \\
-    \hline
-    P7           & ¿La estructura de reporte propuesta para el Social Guide (por ejemplo, que reporte al CTO o al Scrum Master en lugar de a RRHH) es adecuada para preservar la independencia del rol y la confianza del equipo?                      \\
-    \hline
-    P8           & ¿El modelo establece mecanismos claros de gobernanza para resolver desacuerdos entre el Social Guide y otros roles (por ejemplo, conflictos con el Product Owner), evitando impactos negativos en la toma de decisiones del equipo? \\
-    \hline
-    P9           & ¿La adaptación de eventos Scrum en SocialScrum (como el Social Daily Standup o las retrospectivas sociales) añade una complejidad innecesaria al proceso ágil?                                                                      \\
-    \hline
-    P10          & ¿Los artefactos sociales introducidos (por ejemplo, el Social Product Backlog, las historias de usuario sociales y el registro de community smells) están bien definidos y facilitan el seguimiento de la salud del equipo?         \\
-    \hline
-    P11          & ¿La métrica Health Score proporciona una evaluación objetiva y útil de la salud social del equipo, sirviendo de base para tomar acciones de mejora cuando sea necesario?                                                            \\
-    \hline
-    P12          & ¿El sistema de estimación Social Story Points (SSP) es compatible con las prácticas ágiles estándar y resulta comprensible para todos los miembros del equipo?                                                                      \\
-    \hline
-    P13          & ¿El mecanismo de priorización socio-técnica de SocialScrum (integrando intervenciones sociales junto con tareas técnicas) es práctico y logra equilibrar la mejora del equipo con la entrega de valor al producto?                  \\
-    \hline
-    P14          & ¿SocialScrum garantiza la confidencialidad de la información personal compartida por el equipo, de modo que ningún dato sensible se comunica a terceros (por ejemplo, gerencia o RRHH) sin consentimiento expreso?                  \\
-    \hline
-    P15          & ¿El modelo incluye mecanismos de auditoría y transparencia que permiten al equipo verificar la actuación del Social Guide, previniendo posibles abusos de autoridad o desviaciones éticas?                                          \\
-    \hline
-    P16          & ¿SocialScrum aborda adecuadamente el riesgo de “teatro social”, evitando que el equipo finja bienestar solo para cumplir con el proceso mientras los problemas reales permanecen sin resolver?                                      \\
-    \hline
-    P17          & ¿El modelo define con suficiente claridad los límites del rol del Social Guide, lo cual podría derivar en intervenciones excesivas o invasivas hacia el equipo?                                                                     \\
-    \hline
-    P18          & ¿La implementación de SocialScrum en equipos ágiles reales es factible y no requiere cambios organizacionales o culturales impracticables?                                                                                          \\
-    \hline
-    P19          & ¿La sobrecarga de reuniones, métricas y responsabilidades adicionales que introduce SocialScrum resultaría sostenible para el equipo a mediano o largo plazo?                                                                       \\
-    \hline
-    P20          & ¿El modelo SocialScrum es suficientemente flexible para adaptarse a diversas circunstancias (distintos tamaños de equipo, sectores de la industria y culturas organizacionales) manteniendo su efectividad?                         \\
-    \hline
+    % =========================
+    % PARTE A
+    % =========================
+    \multicolumn{3}{c}{\textbf{Parte A – Preguntas Cerradas}}                                                                                                                                                                                                                                                                        \\* \nopagebreak
+    \midrule
 
-    \multicolumn{2}{|l|}{\textbf{Parte B – Preguntas Abiertas}}                                                                                                                                                                                        \\
-    \hline
-    PA1          & ¿Qué elementos del modelo SocialScrum considera usted que faltan o están poco desarrollados?                                                                                                                                        \\
-    \hline
-    PA2          & ¿Qué riesgos no contemplados o efectos adversos potenciales podrían surgir de la implementación de SocialScrum?                                                                                                                     \\
-    \hline
-    PA3          & ¿Qué sugerencias de mejora específicas propondría para el modelo SocialScrum? Justifique su respuesta con fundamentos teóricos o prácticos.                                                                                         \\
-    \hline
+    P1           & Claridad          & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos?                                                                                                                                                                                                               \\
+    P2           & Claridad          & ¿El rol del Social Guide está claramente diferenciado de otros roles (por ejemplo, con el Scrum Master, Product Owner o el departamento de RRHH) evitando conflictos de autoridad?                                                                                                            \\
+    P3           & Claridad          & ¿El modelo establece mecanismos claros de gobernanza para resolver desacuerdos entre el Social Guide y otros roles (por ejemplo: protocolo de escalamiento PO-Social Guide, mediación del Scrum Master o arbitraje del CTO), evitando impactos negativos en la toma de decisiones del equipo? \\
+    \midrule
+    P4           & Completitud       & ¿Cree que el modelo SocialScrum cubre todos los aspectos necesarios para la gestión ágil de proyectos?                                                                                                                                                                                        \\
+    P5           & Completitud       & ¿Los artefactos sociales introducidos (por ejemplo, el Social Product Backlog, las historias de usuario sociales y el registro de community smells) están bien definidos y facilitan el seguimiento de la salud del equipo?                                                                   \\
+    P6           & Completitud       & ¿El modelo incluye mecanismos de auditoría y transparencia que permiten al equipo verificar la actuación del Social Guide, previniendo posibles abusos de autoridad o desviaciones éticas?                                                                                                    \\
+    \midrule
+    P7           & Idoneidad         & ¿Los valores fundamentales de Scrum (coraje, foco, compromiso, apertura y respeto) se reflejan adecuadamente en las prácticas de SocialScrum para manejar la deuda social del equipo?                                                                                                         \\
+    P8           & Idoneidad         & ¿La métrica Health Score proporciona una evaluación objetiva y útil de la salud social del equipo, sirviendo de base para tomar acciones de mejora cuando sea necesario?                                                                                                                      \\
+    P9           & Idoneidad         & ¿SocialScrum garantiza la confidencialidad de la información personal compartida por el equipo, de modo que ningún dato sensible se comunica a terceros (por ejemplo, gerencia o RRHH) sin consentimiento expreso?                                                                            \\
+    \midrule
+    P10          & Facilidad de Uso  & ¿El perfil y las competencias del Social Guide están claramente definidos y son viables, complementando los roles existentes en el equipo sin solapamiento de responsabilidades?                                                                                                              \\
+    P11          & Facilidad de Uso  & ¿La implementación de SocialScrum en equipos ágiles reales es factible y no requiere cambios organizacionales o culturales impracticables?                                                                                                                                                    \\
+    P12          & Facilidad de Uso  & ¿La sobrecarga operacional de SocialScrum es sostenible para equipos ágiles a mediano/largo plazo?                                                                                                                                                                                            \\
+    \midrule
+    P13          & Agilidad          & ¿La adaptación de eventos Scrum en SocialScrum (como el Social Daily Standup o las retrospectivas sociales) se integra de forma fluida y aporta un valor operativo que justifica su implementación?                                                                                           \\
+    P14          & Agilidad          & ¿El sistema de estimación Social Story Points (SSP) es compatible con las prácticas ágiles estándar y resulta comprensible para todos los miembros del equipo?                                                                                                                                \\
+    P15          & Agilidad          & ¿El mecanismo de priorización socio-técnica de SocialScrum (integrando intervenciones sociales junto con tareas técnicas) es práctico y logra equilibrar la mejora del equipo con la entrega de valor al producto?                                                                            \\
+
+    % =========================
+    % PARTE B
+    % =========================
+    \midrule
+    \multicolumn{3}{c}{\textbf{Parte B – Preguntas Abiertas}}                                                                                                                                                                                                                                                                        \\* \nopagebreak
+    \midrule
+
+    PA1          & ---               & ¿Qué elementos del modelo SocialScrum considera usted que faltan o están poco desarrollados?                                                                                                                                                                                                  \\
+    PA2          & ---               & ¿Qué sugerencias de mejora específicas propondría para el modelo SocialScrum? Justifique su respuesta con fundamentos teóricos o prácticos.                                                                                                                                                   \\
 \end{longtable}
 \endgroup
+
 
 \section{Perfil y selección de expertos participantes}
 \subsection{Perfilamiento de los participantes}
@@ -362,9 +350,9 @@ A continuación, se presentan los resultados organizados por cada uno de los cri
     \centering
     \begin{tabularx}{\textwidth}{|c|Y|c|c|c|c|c|}
         \hline
-        \textbf{Id.} & \textbf{Pregunta}                                                               & \textbf{Escala 5} & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
+        \textbf{Id.} & \textbf{Pregunta}                                                               & \textbf{Escala 5}                                             & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
         \hline
-        P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos? & 7                 & 0                 & 0                 & 0                 & 0                 \\
+        P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos? & [Pendiente de consolidación tras la recepción de formularios] & 0                 & 0                 & 0                 & 0                 \\
         \hline
     \end{tabularx}
     \smallskip
@@ -379,9 +367,9 @@ A continuación, se presentan los resultados organizados por cada uno de los cri
     \centering
     \begin{tabularx}{\textwidth}{|c|Y|c|c|c|c|c|}
         \hline
-        \textbf{Id.} & \textbf{Pregunta}                                                               & \textbf{Escala 5} & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
+        \textbf{Id.} & \textbf{Pregunta}                                                               & \textbf{Escala 5}                                             & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
         \hline
-        P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos? & 7                 & 0                 & 0                 & 0                 & 0                 \\
+        P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos? & [Pendiente de consolidación tras la recepción de formularios] & 0                 & 0                 & 0                 & 0                 \\
         \hline
     \end{tabularx}
     \smallskip
@@ -396,9 +384,9 @@ A continuación, se presentan los resultados organizados por cada uno de los cri
     \centering
     \begin{tabularx}{\textwidth}{|c|Y|c|c|c|c|c|}
         \hline
-        \textbf{Id.} & \textbf{Pregunta}                                                               & \textbf{Escala 5} & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
+        \textbf{Id.} & \textbf{Pregunta}                                                               & \textbf{Escala 5}                                             & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
         \hline
-        P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos? & 7                 & 0                 & 0                 & 0                 & 0                 \\
+        P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos? & [Pendiente de consolidación tras la recepción de formularios] & 0                 & 0                 & 0                 & 0                 \\
         \hline
     \end{tabularx}
     \smallskip
@@ -413,9 +401,9 @@ A continuación, se presentan los resultados organizados por cada uno de los cri
     \centering
     \begin{tabularx}{\textwidth}{|c|Y|c|c|c|c|c|}
         \hline
-        \textbf{Id.} & \textbf{Pregunta}                                                               & \textbf{Escala 5} & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
+        \textbf{Id.} & \textbf{Pregunta}                                                               & \textbf{Escala 5}                                             & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
         \hline
-        P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos? & 7                 & 0                 & 0                 & 0                 & 0                 \\
+        P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos? & [Pendiente de consolidación tras la recepción de formularios] & 0                 & 0                 & 0                 & 0                 \\
         \hline
     \end{tabularx}
     \smallskip
@@ -423,16 +411,16 @@ A continuación, se presentan los resultados organizados por cada uno de los cri
     \textit{Acrónimos utilizados: Identificador (Id.).}
 \end{table}
 
-\subsubsection{Coherencia}
+\subsubsection{Agilidad}
 \begin{table}[!htbp]
-    \caption{Distribución de respuestas de los expertos para el criterio de coherencia.}
-    \label{tab:dist-resp-coherencia}
+    \caption{Distribución de respuestas de los expertos para el criterio de agilidad.}
+    \label{tab:dist-resp-agilidad}
     \centering
     \begin{tabularx}{\textwidth}{|c|Y|c|c|c|c|c|}
         \hline
-        \textbf{Id.} & \textbf{Pregunta}                                                               & \textbf{Escala 5} & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
+        \textbf{Id.} & \textbf{Pregunta}                                                               & \textbf{Escala 5}                                             & \textbf{Escala 4} & \textbf{Escala 3} & \textbf{Escala 2} & \textbf{Escala 1} \\
         \hline
-        P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos? & 7                 & 0                 & 0                 & 0                 & 0                 \\
+        P1           & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos? & [Pendiente de consolidación tras la recepción de formularios] & 0                 & 0                 & 0                 & 0                 \\
         \hline
     \end{tabularx}
     \smallskip
@@ -447,13 +435,13 @@ El presente análisis se enfoca en las respuestas abiertas proporcionadas por lo
     \centering
     \begin{tabularx}{\textwidth}{|c|Y|c|c|}
         \hline
-        \textbf{Id.} & \textbf{Observación / Recomendación}                                                                                                      & \textbf{Calificación} & \textbf{Justificación} \\
+        \textbf{Id.} & \textbf{Observación / Recomendación}                                                                                                      & \textbf{Calificación} & \textbf{Justificación}                                        \\
         \hline
-        PA1          & El modelo SocialScrum presenta una estructura clara y bien definida, lo que facilita su comprensión y aplicación en equipos distribuidos. & Si                    & hola                   \\
+        PA1          & El modelo SocialScrum presenta una estructura clara y bien definida, lo que facilita su comprensión y aplicación en equipos distribuidos. & Si                    & [Pendiente de consolidación tras la recepción de formularios] \\
         \hline
-        PA2          & Se recomienda incluir ejemplos prácticos o casos de estudio que ilustren la implementación del modelo en diferentes contextos.            & Si                    & hello                  \\
+        PA2          & Se recomienda incluir ejemplos prácticos o casos de estudio que ilustren la implementación del modelo en diferentes contextos.            & Si                    & [Pendiente de consolidación tras la recepción de formularios] \\
         \hline
-        PA3          & Sería beneficioso proporcionar guías adicionales sobre cómo adaptar el modelo a las particularidades de cada equipo o proyecto.           & No                    & Chao                   \\
+        PA3          & Sería beneficioso proporcionar guías adicionales sobre cómo adaptar el modelo a las particularidades de cada equipo o proyecto.           & No                    & [Pendiente de consolidación tras la recepción de formularios] \\
         \hline
     \end{tabularx}
     \smallskip
