@@ -7,7 +7,7 @@
 \newacronym{rsl}{RSL}{Revisión Sistemática de la Literatura}
 \newacronym{scrum}{SCRUM}{Scrum Framework}
 \newacronym{ntd}{NTD}{Deuda No Técnica (Non-Technical Debt)}
-\newacronym{kpis}{KPIs}{Key Performance Indicators (Indicadores Clave de Desempeño)}
+\newacronym{kpi}{KPI}{Indicadores Clave de Desempeño (Key Performance Indicators)}
 
 % TÉRMINOS PRINCIPALES
 
@@ -23,7 +23,7 @@
 }
 
 \newglossaryentry{community-smells}{
-    name={Community Smells},
+    name={Community Smells (Olores Comunitarios)},
     description={Antipatrones socio-técnicos que representan síntomas de problemas organizacionales y sociales en comunidades de desarrollo de software. Son fuentes de deuda social que afectan la comunicación, coordinación, confianza y desempeño del equipo.},
     plural={Community Smells}
 }
@@ -38,7 +38,7 @@
 
 % Risk Taking in Relationship (RTR)
 \newglossaryentry{rtr}{
-    name={Risk Taking in Relationship (RTR) (Toma de Riesgos en las Relaciones)},
+    name={Risk Taking in Relationship (RTR, Toma de Riesgos en las Relaciones)},
     description={Disposición de los miembros del equipo para asumir riesgos interpersonales al confiar en otros. Implica vulnerabilidad y apertura en las relaciones laborales, facilitando la colaboración y el apoyo mutuo.}
 }
 
@@ -56,7 +56,7 @@
 
 % SLA (Service Level Agreement)
 \newglossaryentry{sla}{
-    name={Service Level Agreement (Acuerdo de Nivel de Servicio)},
+    name={Acuerdo de Nivel de Servicio (SLA, Service Level Agreement)},
     description={Acuerdo formal entre partes que define los niveles de servicio esperados, incluyendo métricas de desempeño, responsabilidades y tiempos de respuesta. En desarrollo de software, puede aplicarse a procesos como revisiones de código y despliegues.}
 }
 
@@ -68,7 +68,7 @@
 
 % Social Network Analysis (SNA)
 \newglossaryentry{sna}{
-    name={Social Network Analysis (Análisis de Redes Sociales)},
+    name={Análisis de Redes Sociales (SNA, Social Network Analysis)},
     description={Método para analizar las relaciones y estructuras sociales dentro de un equipo u organización, identificando patrones de interacción, comunicación y colaboración. Facilita la detección de cuellos de botella, silos y oportunidades para mejorar la cohesión social.}
 }
 
@@ -263,6 +263,24 @@
     plural={desaprendizajes}
 }
 
+\newglossaryentry{cs-information-hoarding}{
+    name={Information Hoarding (Acaparamiento de Información)},
+    description={Retención deliberada de información crítica del proyecto por parte de individuos o subgrupos. Impide flujo efectivo de conocimiento, genera silos informacionales, dificulta toma de decisiones informadas y erosiona confianza entre miembros del equipo.},
+    plural={Acaparamientos de Información}
+}
+
+\newglossaryentry{cs-broadcast-storm}{
+    name={Broadcast Storm (Tormenta de Difusión)},
+    description={Exceso de comunicación no estructurada y sin filtros adecuados entre miembros del equipo. Genera saturación informacional, pérdida de mensajes críticos, distracciones constantes y disminución de la productividad.},
+    plural={Tormentas de Difusión}
+}
+
+\newglossaryentry{cs-missing-link}{
+    name={Missing Link (Eslabón Perdido)},
+    description={Falta de conectores, mediadores o boundary spanners clave entre subgrupos del equipo que faciliten comunicación efectiva. Resulta en aislamiento progresivo de grupos, información fragmentada sin integración, pérdida de contexto compartido y ruptura de redes colaborativas funcionales.},
+    plural={Eslabones Perdidos}
+}
+
 % ============================================================================
 % COMMUNITY SMELLS ADICIONALES (Literatura reciente 2023-2024)
 % ============================================================================
@@ -407,78 +425,138 @@
 }
 
 \newglossaryentry{cs-lack-conflict-resolution}{
-    name={Lack of Conflict Resolution},
+    name={Lack of Conflict Resolution (Falta de Resolución de Conflictos)},
     description={Community smell que surge cuando los conflictos interpersonales dentro de un equipo de desarrollo no se abordan ni resuelven de manera oportuna, lo que genera resentimiento acumulado, comunicación deteriorada y un ambiente de trabajo tóxico que alimenta la deuda social.}
 }
 
 \newglossaryentry{cs-decision-incommunicability}{
-    name={Decision Incommunicability},
+    name={Decision Incommunicability (Incomunicabilidad de Decisiones)},
     description={Community smell que se manifiesta cuando las decisiones importantes —técnicas u organizacionales— no se comunican de manera adecuada al equipo, generando desinformación, duplicación de esfuerzos y erosión de la confianza en la transparencia del grupo.}
 }
 
 \newglossaryentry{cs-newbie-ignored}{
-    name={Newbie Ignored},
+    name={Newbie Ignored (Newbie Ignorado)},
     description={Community smell que ocurre cuando los nuevos integrantes de un equipo son ignorados o marginados por los miembros más experimentados, dificultando su integración, reduciendo su motivación y generando aislamiento social que contribuye a la deuda social del equipo.}
 }
 
 \newglossaryentry{cs-information-island}{
-    name={Information Island},
+    name={Information Island (Isla de Información)},
     description={Community smell que se produce cuando la información relevante queda aislada en personas, equipos o herramientas específicas, sin mecanismos efectivos para compartirla, lo que genera dependencias ocultas, retrasos y pérdida de contexto organizacional.}
 }
 
 \newglossaryentry{cs-documentation-silo}{
-    name={Documentation Silo},
+    name={Documentation Silo (Silo de Documentación)},
     description={Community smell que aparece cuando la documentación del proyecto se encuentra fragmentada, dispersa o inaccesible para ciertos miembros del equipo, lo que dificulta la transferencia de conocimiento, aumenta la dependencia de individuos clave y contribuye a la opacidad organizacional.}
 }
 
 \newglossaryentry{cs-power-holder}{
-    name={Power Holder},
+    name={Power Holder (Concentrador de Poder)},
     description={Community smell que se manifiesta cuando uno o más individuos concentran poder de decisión desproporcionado dentro del equipo, limitando la participación democrática, inhibiendo la autonomía de los demás y generando dinámicas jerárquicas que erosionan la colaboración horizontal.}
 }
 
 \newglossaryentry{cs-dismissiveness}{
-    name={Dismissiveness},
+    name={Dismissiveness (Desdén)},
     description={Community smell caracterizado por la actitud de descarte o menosprecio hacia las ideas, opiniones o contribuciones de ciertos miembros del equipo. Esta conducta erosiona la seguridad psicológica, desincentiva la participación y genera resentimiento que se acumula como deuda social.}
 }
 
 \newglossaryentry{cs-unfriendly-environment}{
-    name={Unfriendly Environment},
+    name={Unfriendly Environment (Ambiente Hostil)},
     description={Community smell que describe un ambiente de trabajo hostil, poco acogedor o emocionalmente inseguro, donde los miembros del equipo no se sienten cómodos para expresarse, colaborar o reportar problemas. Este patrón deteriora la confianza, la cohesión y el bienestar colectivo.}
 }
 
 \newglossaryentry{cs-unhealthy-contribution}{
-    name={Unhealthy Contribution Patterns},
+    name={Unhealthy Contribution Patterns (Patrones de Contribución No Saludables)},
     description={Community smell que se presenta cuando la distribución del trabajo y las contribuciones dentro del equipo es desigual o desequilibrada, generando sobrecarga en algunos miembros y subutilización en otros, lo que afecta la equidad, la motivación y la sostenibilidad del equipo.}
 }
 
 \newglossaryentry{cs-absent-stakeholder}{
-    name={Absent Stakeholder},
+    name={Absent Stakeholder (Parte Interesada Ausente)},
     description={Community smell que ocurre cuando las partes interesadas clave (stakeholders) no participan activamente en los procesos del equipo, lo que genera falta de dirección, decisiones sin contexto de negocio, retrabajo y desalineación entre las expectativas del producto y el trabajo del equipo.}
 }
 
 \newglossaryentry{cs-work-exhaustion}{
-    name={Work Exhaustion},
+    name={Work Exhaustion (Agotamiento Laboral)},
     description={Community smell relacionado con el agotamiento crónico derivado de cargas de trabajo excesivas o mal distribuidas. Se manifiesta en fatiga persistente, reducción del rendimiento y deterioro del bienestar emocional, siendo un precursor directo del burnout y un indicador crítico de deuda social.}
 }
 
 \newglossaryentry{cs-inefficacy}{
-    name={Inefficacy},
+    name={Inefficacy (Ineficacia)},
     description={Community smell que se manifiesta cuando los miembros del equipo perciben que sus esfuerzos no generan resultados significativos o que su trabajo carece de impacto real. Esta sensación de ineficacia profesional erosiona la motivación intrínseca, la competencia percibida y contribuye al agotamiento emocional.}
 }
 
 \newglossaryentry{cs-overload}{
-    name={Overload},
+    name={Overload (Sobrecarga)},
     description={Community smell que ocurre cuando uno o más miembros del equipo asumen una cantidad excesiva de tareas, responsabilidades o roles simultáneos, superando su capacidad sostenible. Genera estrés crónico, errores por fatiga y desequilibrio en la distribución del trabajo.}
 }
 
 \newglossaryentry{cs-time-wasted}{
-    name={Time Wasted},
+    name={Time Wasted (Tiempo Perdido)},
     description={Community smell que se refiere a la pérdida sistemática de tiempo productivo debido a reuniones innecesarias, procesos burocráticos excesivos, interrupciones frecuentes o falta de priorización clara. Afecta el foco del equipo y genera frustración acumulada.}
 }
 
 \newglossaryentry{cs-scattered-development}{
-    name={Scattered Development},
+    name={Scattered Development (Desarrollo Disperso)},
     description={Community smell que describe una situación en la que el esfuerzo de desarrollo se dispersa entre demasiadas tareas, proyectos o prioridades simultáneas, impidiendo que el equipo logre profundidad y calidad en su trabajo. Este patrón fragmenta la atención y reduce la eficacia colectiva.}
+}
+
+\newglossaryentry{cs-synchronous-overload}{
+    name={Synchronous Overload (Sobrecarga Sincrónica)},
+    description={Community smell que ocurre cuando el equipo depende excesivamente de comunicación sincrónica (reuniones, videollamadas), saturando los calendarios, fragmentando el tiempo de trabajo profundo y generando fatiga comunicacional que reduce la productividad y el bienestar.}
+}
+
+\newglossaryentry{cs-knowledge-islands}{
+    name={Knowledge Islands (Islas de Conocimiento)},
+    description={Community smell que se produce cuando subgrupos especializados dentro del equipo acumulan conocimiento exclusivo sobre componentes o dominios específicos, sin mecanismos de transferencia, generando dependencias ocultas e integraciones dolorosas.}
+}
+
+\newglossaryentry{cs-outdated-documentation}{
+    name={Outdated Documentation (Documentación Desactualizada)},
+    description={Community smell que aparece cuando la documentación existente del proyecto es incorrecta, desactualizada o no refleja el estado real del sistema. Genera desconfianza en las fuentes escritas, aumenta la dependencia del conocimiento oral y dificulta el onboarding de nuevos miembros.}
+}
+
+\newglossaryentry{cs-expert-bottleneck}{
+    name={Expert Bottleneck (Cuello de Botella Experto)},
+    description={Community smell que surge cuando una sola persona concentra la responsabilidad de revisión, aprobación o validación técnica, generando cuellos de botella en el flujo de trabajo, retrasos en las entregas y dependencia crítica de un individuo.}
+}
+
+\newglossaryentry{cs-clique-formation}{
+    name={Clique Formation (Formación de Cliques)},
+    description={Community smell que se manifiesta cuando se forman subgrupos cerrados dentro del equipo que excluyen a otros miembros, limitando el flujo de información, generando dinámicas de favoritismo y erosionando la cohesión y la confianza del equipo en su conjunto.}
+}
+
+\newglossaryentry{cs-unresolved-conflict}{
+    name={Unresolved Conflict (Conflicto No Resuelto)},
+    description={Community smell que ocurre cuando los conflictos interpersonales dentro del equipo no se abordan ni resuelven, generando tensión sostenida, evitación mutua, comentarios pasivo-agresivos y un ambiente de trabajo deteriorado que alimenta la deuda social.}
+}
+
+\newglossaryentry{cs-toxic-leadership}{
+    name={Toxic Leadership (Liderazgo Tóxico)},
+    description={Community smell que describe un estilo de liderazgo basado en el micromanagement, la culpabilización pública, la generación de miedo o la manipulación. Este patrón destruye la seguridad psicológica, inhibe la autonomía del equipo y genera un deterioro profundo de la confianza y el bienestar colectivo.}
+}
+
+\newglossaryentry{cs-meeting-hell}{
+    name={Meeting Hell (Infierno de Reuniones)},
+    description={Community smell que se presenta cuando los calendarios del equipo están saturados de reuniones, muchas de ellas innecesarias o mal estructuradas, dejando poco tiempo para el trabajo profundo y generando frustración, fatiga y pérdida de productividad.}
+}
+
+\newglossaryentry{cs-unclear-ownership}{
+    name={Unclear Ownership (Propiedad Poco Clara)},
+    description={Community smell que aparece cuando no hay claridad sobre quién es responsable de qué componentes, decisiones o procesos dentro del equipo. Genera preguntas frecuentes, decisiones postergadas, duplicación de esfuerzos y ambigüedad operativa.}
+}
+
+\newglossaryentry{cs-process-overhead}{
+    name={Process Overhead (Sobrecarga de Procesos)},
+    description={Community smell que se manifiesta cuando los procesos organizacionales —aprobaciones múltiples, burocracia excesiva, flujos de trabajo rígidos— consumen tiempo y energía sin agregar valor significativo, reduciendo la agilidad y la motivación del equipo.}
+}
+
+\newglossaryentry{cs-unstable-team}{
+    name={Unstable Team (Equipo Inestable)},
+    description={Community smell que ocurre cuando la composición del equipo cambia frecuentemente debido a rotación de personal, préstamos de recursos o decisiones organizacionales, impidiendo la construcción de confianza, cohesión y conocimiento compartido necesarios para un desempeño sostenible.}
+}
+
+\newglossaryentry{cs-budget-constraints}{
+    name={Budget Constraints (Restricciones Presupuestarias)},
+    description={Community smell organizacional que surge cuando las restricciones presupuestarias impiden al equipo acceder a los recursos necesarios —herramientas, capacitación, personal— para gestionar adecuadamente su deuda social y técnica, generando frustración y deterioro progresivo.}
 }
 
 % ============================================================================
