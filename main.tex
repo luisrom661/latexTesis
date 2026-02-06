@@ -96,10 +96,11 @@
 \usepackage{comment}                 % Bloques de comentarios
 \usepackage{changepage}              % Ajuste temporal de márgenes
 \usepackage[most]{tcolorbox}         % Cajas de color decorativas
-\usepackage[toc,acronym,nolangwarn,numberedsection]{glossaries}  % Glosarios y acrónimos (usar makeindex por compatibilidad Windows)
+\usepackage{hyperref}                % Enlaces e hipervínculos (DEBE ir antes de glossaries)
+\usepackage{bookmark}                % Mejora de marcadores PDF
+\usepackage[toc,acronym,nolangwarn,numberedsection]{glossaries}  % Glosarios y acrónimos (después de hyperref para hipervínculos)
 \makeglossaries
-\usepackage{hyperref}                % Enlaces e hipervínculos (debe ir al final)
-\usepackage{bookmark}                 % Mejora de marcadores PDF
+\usepackage{pdfpages}                % Inclusión de PDFs completos
 
 % ==============================================================================
 % CONFIGURACIÓN DE FLOTANTES (FIGURAS Y TABLAS)
@@ -281,7 +282,7 @@
 \input{capitulos/capitulo4.tex}
 
 % --- Pruebas ---
-%\input{capitulos/pruebas.tex}
+\input{capitulos/pruebas.tex}
 
 % --- Capítulo 5 ---
 \input{capitulos/capitulo5-nuevo.tex}
@@ -290,8 +291,32 @@
 \input{capitulos/capitulo6.tex}
 
 % --- Anexos ---
-% \input{anexos/anexo-a.tex}
-% \input{anexos/anexo-b.tex}
+\appendix
+
+% Redefinir formato de capítulo para anexos: "ANEXO C:" en vez de "CAPÍTULO C."
+\titleformat{\chapter}[hang]
+{\normalfont\bfseries\large\centering}
+{ANEXO\ \thechapter:}
+{1em}
+{\MakeUppercase}
+
+% Hacer que la TOC muestre "ANEXO C: Título" en vez de solo "C Título"
+\makeatletter
+\let\oldchaptercontentsline\l@chapter
+\renewcommand{\l@chapter}[2]{%
+  \begingroup
+  \let\oldnumberline\numberline
+  \renewcommand{\numberline}[1]{ANEXO ##1: }%
+  \oldchaptercontentsline{#1}{#2}%
+  \endgroup
+}
+\makeatother
+
+% Saltar A y B (anexos comentados)
+\setcounter{chapter}{0}
+
+\input{anexos/anexo-a.tex}
+\input{anexos/anexo-b.tex}
 \input{anexos/anexo-c.tex}
 \input{anexos/anexo-d.tex}
 \input{anexos/anexo-e.tex}
@@ -302,10 +327,7 @@
 \input{anexos/anexo-j.tex}
 \input{anexos/anexo-k.tex}
 \input{anexos/anexo-l.tex}
-%\input{anexos/anexo-m.tex}
-
-% --- Otros capítulos (comentados) ---
-% \input{capitulos/socialscrum-expanded.tex}
+\input{anexos/anexo-m.tex}
 
 
 % ==============================================================================

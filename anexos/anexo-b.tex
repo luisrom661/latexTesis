@@ -1,0 +1,7 @@
+% anexo-a.tex
+% Registrar en TOC sin imprimir página de título (el PDF ya tiene su propia portada)
+\stepcounter{chapter}
+\phantomsection
+\label{anexo:b}
+\addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}Artículo publicado y aceptado en el evento internacional IEEE AmITIC 2025: Social Debt in Agile Software Development.}
+\includepdf[pages=-]{complementos/anexo-b.pdf}

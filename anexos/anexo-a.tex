@@ -1,0 +1,7 @@
+% anexo-a.tex
+% Registrar en TOC sin imprimir página de título (el PDF ya tiene su propia portada)
+\stepcounter{chapter}
+\phantomsection
+\label{anexo:a}
+\addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}Revisión sistemática de la literatura (RSL) sobre la gestión de la deuda social en el desarrollo de software ágil}
+\includepdf[pages=-]{complementos/anexo-a.pdf}

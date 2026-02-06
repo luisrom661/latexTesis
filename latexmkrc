@@ -13,8 +13,8 @@ $clean_ext = 'aux bbl bcf blg brf fdb_latexmk fls glg glo gls acn acr alg idx il
 # Copiar el PDF al directorio raíz después de cada compilación exitosa
 $success_cmd = 'copy /Y build\\%R.pdf . >nul 2>&1';
 
-# Limpiar archivos temporales antes de cada compilación
-$compiling_cmd = "latexmk -C -outdir=build 2>nul; if not exist build mkdir build";
+# Limpiar archivos temporales antes de cada compilación (DESACTIVADO: interfiere con build incremental)
+# $compiling_cmd = "latexmk -C -outdir=build 2>nul; if not exist build mkdir build";
 $pre_tex_code = '';
 
 # Hook para limpiar antes de compilar
@@ -52,7 +52,7 @@ sub clean_build_dir {
 
 # Ejecutar limpieza al inicio si se pasa la opción -gg o siempre
 # Para forzar limpieza antes de cada build, descomentar la siguiente línea:
-clean_build_dir();
+# clean_build_dir();  # DESACTIVADO: borraba archivos .gls/.acr antes de que pdflatex los leyera
 
 # Glosarios - configuración para directorio build
 add_cus_dep('glo', 'gls', 0, 'run_makeglossaries');
