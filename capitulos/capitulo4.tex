@@ -13,9 +13,9 @@
 
 \setlength{\parindent}{0pt}
 
-Este capítulo traslada el modelo teórico de SocialScrum (Capítulo 3) al terreno de la aplicación práctica en equipos ágiles. Se muestra cómo sus componentes adaptados (eventos, artefactos y los roles (como también el rol del \textit{Social Guide}) se materializan en escenarios reales para identificar, priorizar y mitigar la \textit{deuda social} y los \textit{community smells}. Se presenta el proceso operativo que permite implementar SocialScrum en equipos reales, incluyendo protocolos, plantillas y salvaguardas éticas.
+Este capítulo traslada el modelo teórico de SocialScrum (Capítulo 3) al terreno de la aplicación práctica en equipos ágiles. Se muestra cómo sus componentes adaptados (eventos, artefactos y los roles (como también el rol del \textit{Social Guide}) se materializan en escenarios reales para identificar, priorizar y mitigar la \textit{deuda social} y los \textit{community smells}. Asimismo, se presenta el proceso operativo que permite implementar SocialScrum en equipos reales, incluyendo protocolos, plantillas y salvaguardas éticas.
 
-\section{Introducción: aplicación práctica de SocialScrum}
+\section{Consideraciones del capitulo}
 
 El Capítulo 3 presentó el modelo conceptual de SocialScrum, sus bases teóricas y su arquitectura general. Allí se explicó cómo tres marcos teóricos complementarios sustentan la propuesta:
 
@@ -26,9 +26,9 @@ El Capítulo 3 presentó el modelo conceptual de SocialScrum, sus bases teórica
 \end{enumerate}
 
 Sin embargo, un modelo sólido sigue siendo solo una idea hasta que se convierte en acciones concretas, protocolos operativos y herramientas que los equipos puedan usar en su día a día. Este capítulo cierra esa brecha, llevando SocialScrum del plano conceptual a la ejecución real mediante una estructura sintética orientada a la ingeniería de procesos.
-En concreto, mostramos cómo la autonomía se protege mediante los protocolos operativos de los eventos (Sección 4.4), la confianza se construye a través de los principios de transparencia y confidencialidad (Sección 4.2 y Anexo~\ref{anexo:protocolos-eticos}), y los valores se practican en la gestión de artefactos y medición (Secciones 4.5 y 4.6). La propuesta se desglosa en tres niveles de operacionalización:
+En concreto, incluimos el nuevo rol encargado de guiar el proceso de SocialScrum (Sección 4.3), además, mostramos cómo la autonomía se protege mediante los protocolos operativos de los eventos (Sección 4.4), la confianza se construye a través de los principios de transparencia y confidencialidad (Sección 4.2 y Anexo~\ref{anexo:protocolos-eticos}), y los valores se practican en la gestión de artefactos y medición (Secciones 4.5 y 4.6). La propuesta se desglosa en tres niveles de operacionalización:
 \begin{enumerate}
-    \item \textbf{Adopción:} preparación del equipo y checklist de viabilidad (Sección 4.2).
+    \item \textbf{Adopción:} preparación del equipo y checklist de viabilidad (Sección 4.2) ademas de la implementación del nuevo rol de Social Guide (Sección 4.3).
     \item \textbf{Ejecución:} gestión de eventos, artefactos, métricas de salud social y el framework de priorización (Secciones 4.4 a 4.7).
     \item \textbf{Gobernanza:} protección ética y escalabilidad, cuyos detalles procedimentales se desplazan a los Anexos~\ref{anexo:herramientas} y \ref{anexo:protocolos-eticos} para preservar el enfoque práctico del capítulo.
 \end{enumerate}
@@ -53,7 +53,7 @@ Antes de empezar la implementación de SocialScrum, es clave verificar si el con
 
 SocialScrum exige, como punto de partida, que existan al menos cuatro condiciones organizacionales fundamentales.
 
-\paragraph{1. Compromiso ejecutivo genuino.}
+\paragraph{a. Compromiso ejecutivo genuino.}
 
 El liderazgo técnico (CTO, VP de Ingeniería o roles equivalentes) debe respaldar el modelo de forma clara y explícita. Ese respaldo no puede quedarse en discursos bienintencionados; tiene que verse reflejado en acciones concretas:
 
@@ -66,7 +66,7 @@ El liderazgo técnico (CTO, VP de Ingeniería o roles equivalentes) debe respald
 
 Si este compromiso no existe, el Social Guide quedará sin autoridad moral y sin los recursos necesarios para actuar. Una señal evidente de falta de respaldo es cuando el liderazgo afirma: ``Sí, implementen SocialScrum… pero sin afectar la velocidad ni pedir recursos adicionales''. Eso no es compromiso; es delegar sin ofrecer apoyo real.
 
-\paragraph{2. Cultura organizacional mínimamente saludable.}
+\paragraph{b. Cultura organizacional mínimamente saludable.}
 
 SocialScrum no es una herramienta de rescate para organizaciones profundamente tóxicas. Si la cultura presenta los siguientes síntomas de manera sistémica, la adopción debe posponerse hasta que ocurra una intervención más profunda a nivel organizacional:
 
@@ -79,7 +79,7 @@ SocialScrum no es una herramienta de rescate para organizaciones profundamente t
 
 En contextos así, SocialScrum simplemente no puede operar: la seguridad psicológica ---la base misma del modelo \cite{edmondson1999psychological}--- no existe. Edmondson demostró que sin seguridad psicológica, los equipos no reportan problemas reales por temor a represalias, lo que invalida cualquier intento de gestión de deuda social. Intentar implementarlo sería como tratar de apagar un incendio con un vaso de agua: no solo es inútil, sino que puede empeorar la situación.
 
-\paragraph{3. Equipo con autonomía técnica y organizacional.}
+\paragraph{c. Equipo con autonomía técnica y organizacional.}
 
 El equipo necesita contar con un nivel mínimo de autonomía para decidir cómo trabaja. SocialScrum depende de esa capacidad de autogestión, porque requiere que el propio equipo pueda:
 
@@ -91,7 +91,7 @@ El equipo necesita contar con un nivel mínimo de autonomía para decidir cómo 
 
 Si el equipo opera bajo un esquema de comando y control, donde cada decisión pasa por una aprobación gerencial, SocialScrum simplemente no podrá funcionar. La autoorganización no es un extra ni un ideal aspiracional: es un requisito operativo sin el cual el modelo no tiene espacio para florecer.
 
-\paragraph{4. Disponibilidad de un Social Guide calificado.}
+\paragraph{d. Disponibilidad de un Social Guide calificado.}
 
 El rol del Social Guide no puede dejarse al azar. Se necesita una persona con un perfil híbrido poco común: alguien que entienda las dinámicas humanas —psicología organizacional, facilitación, mediación— pero que también conozca cómo funciona el desarrollo de software en la práctica. Si la organización no cuenta con alguien así, o no está dispuesta a formarlo, lo más sensato es esperar antes de adoptar el modelo.
 
@@ -453,82 +453,68 @@ En la Tabla \ref{tab:seleccion-social-guide} se detalla el proceso de selección
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
-\setlength{\tabcolsep}{4pt}
-\setlength{\LTleft}{0pt}
-\setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\Centering\hspace{0pt}}p{1.2cm}   % Fase
-    >{\RaggedRight\hspace{0pt}}p{4.2cm} % Nombre
-    >{\Centering\hspace{0pt}}p{2.5cm}   % Duración
-    >{\RaggedRight\hspace{0pt}}p{6.0cm} % Actividades
+\begin{longtable}[H]{
+    >{\Centering\hspace{0pt}}p{1.2cm}
+    >{\RaggedRight\hspace{0pt}}p{5.0cm}
+    >{\Centering\hspace{0pt}}p{2.5cm}
+    >{\RaggedRight\hspace{0pt}}p{6.0cm}
     }
 
     % --- ENCABEZADO PRIMERA PÁGINA ---
     \caption{Proceso de selección del Social Guide}
-    \label{tab:seleccion-social-guide}                                                                                                                                                 \\
+    \label{tab:seleccion-social-guide}                                                         \\
     \toprule
-    \textbf{Fase} & \textbf{Nombre}                                                                                                         & \textbf{Duración} & \textbf{Actividades} \\
+    \textbf{Fase} & \textbf{Nombre}              & \textbf{Duración} & \textbf{Actividades}    \\
     \midrule
     \endfirsthead
 
     % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                            \\
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                    \\
     \toprule
-    \textbf{Fase} & \textbf{Nombre}                                                                                                         & \textbf{Duración} & \textbf{Actividades} \\
+    \textbf{Fase} & \textbf{Nombre}              & \textbf{Duración} & \textbf{Actividades}    \\
     \midrule
     \endhead
 
     % --- PIE INTERMEDIO ---
     \midrule
-    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                    \\
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                            \\
     \endfoot
 
     % --- PIE FINAL ---
     \bottomrule
     \endlastfoot
 
-    1
-                  & Identificación de candidatos
-                  & 1 semana
-                  & Búsqueda de candidatos internos o externos que cumplan con el perfil definido.                                                                                     \\
+    1             & Identificación de candidatos & 1 semana          &
+    Búsqueda de candidatos internos o externos que cumplan con el perfil definido.             \\
 
-    2
-                  & Evaluación técnica
-                  & 1 semana
-                  & Caso práctico sobre \textit{community smells}, facilitación simulada y entrevista teórica.                                                                         \\
+    2             & Evaluación técnica           & 1 semana          &
+    Caso práctico sobre \textit{community smells}, facilitación simulada y entrevista teórica. \\
 
-    3
-                  & Entrevista ética
-                  & 1 semana
-                  & Entrevistas con Scrum Master, Development Team y CTO; análisis de dilemas éticos críticos.                                                                         \\
+    3             & Entrevista ética             & 1 semana          &
+    Entrevistas con Scrum Master, Development Team y CTO; análisis de dilemas éticos críticos. \\
 
-    4
-                  & Decisión consensuada
-                  & --
-                  & Requiere consenso entre Scrum Master, Development Team (mayoría simple) y CTO (ver Tabla~\ref{tab:consenso-seleccion}).                                            \\
+    4             & Decisión consensuada         & --                &
+    Requiere consenso entre Scrum Master, Development Team (mayoría simple) y CTO
+    (ver Tabla~\ref{tab:consenso-seleccion}).                                                  \\
 
-    5
-                  & Período de prueba
-                  & 3 Sprints
-                  & Ejercicio del rol bajo supervisión; se requiere una votación de aprobación $\geq 70\%$ para la confirmación definitiva.                                            \\
+    5             & Período de prueba            & 3 Sprints         &
+    Ejercicio del rol bajo supervisión; se requiere una votación de aprobación
+    $\geq 70\%$ para la confirmación definitiva.                                               \\
 \end{longtable}
 \endgroup
+
 
 En la Tabla \ref{tab:consenso-seleccion} se describen las preguntas clave y los criterios de votación que cada autoridad debe considerar durante la fase de decisión consensuada (Fase 4) del proceso de selección del Social Guide.
 
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
-\setlength{\tabcolsep}{4pt}
-\setlength{\LTleft}{0pt}
-\setlength{\LTright}{0pt}
-
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{3.2cm}   % Votante
-    >{\RaggedRight\hspace{0pt}}p{3.8cm}   % Autoridad
-    >{\RaggedRight\hspace{0pt}}p{4.6cm}   % Pregunta
-    >{\Centering\hspace{0pt}}p{3.0cm}     % Voto si
+\begin{longtable}[H]{
+    >{\RaggedRight\hspace{0pt}}p{4.5cm}  % Col 1: Votante
+    >{\Centering\hspace{0pt}}p{2.5cm}    % Col 2: Autoridad
+    >{\RaggedRight\hspace{0pt}}p{4.5cm}  % Col 3: Pregunta
+    >{\Centering\hspace{0pt}}p{2.5cm}    % Col 4: Voto si
     }
 
     % --- ENCABEZADO PRIMERA PÁGINA ---
@@ -555,6 +541,7 @@ En la Tabla \ref{tab:consenso-seleccion} se describen las preguntas clave y los 
     \bottomrule
     \endlastfoot
 
+    % --- CONTENIDO ---
     Scrum Master
                      & 1 voto
                      & ¿Puede facilitar procesos y proteger el marco de trabajo?
@@ -637,7 +624,6 @@ En la Tabla \ref{tab:reglas-decision-votacion} se presentan las reglas de decisi
 \label{sec:eventos-adaptados-socialscrum}
 
 Los eventos adaptados de SocialScrum mantienen la estructura básica de Scrum, pero incorporan componentes sociales clave para abordar la deuda social. La Figura \ref{fig:ciclo-eventos-socialscrum} ilustra cómo cada evento tradicional se enriquece con prácticas específicas para monitorear y mejorar la salud social del equipo.
-
 %figura social daily standup
 \begin{figure}[h]
     \centering
@@ -645,7 +631,6 @@ Los eventos adaptados de SocialScrum mantienen la estructura básica de Scrum, p
     \caption{Ciclo de eventos adaptados de SocialScrum}
     \label{fig:ciclo-eventos-socialscrum}
 \end{figure}
-\FloatBarrier
 
 \subsection{Social Daily Standup}
 
@@ -705,7 +690,7 @@ En la Tabla \ref{tab:daily-social-estructura} se detalla la estructura del Socia
 \end{longtable}
 \endgroup
 
-La respuesta es siempre opcional. El Social Guide no profundiza en el Daily; si detecta un problema significativo, ofrece conversación privada posterior.
+La respuesta es siempre opcional, el Social Guide no profundiza en el Daily; si detecta un problema significativo, ofrece conversación privada posterior. A continuación se presentan las reglas de facilitación, variantes para equipos distribuidos y el resultado esperado del Social Daily Standup.
 
 \paragraph{Reglas de facilitación}
 \begin{enumerate}
@@ -715,11 +700,11 @@ La respuesta es siempre opcional. El Social Guide no profundiza en el Daily; si 
     \item \textbf{Registrar patrones}: Si múltiples personas mencionan temas similares, hay un patrón que requiere atención.
 \end{enumerate}
 
-\paragraph{Variantes para equipos distribuidos}
+\paragraph{Variantes para equipos distribuidos.}
 
 En equipos remotos: (1) registro de entrada (\textit{check-in}) con emoji que representa estado; (2) pregunta semanal rotativa en lugar de diaria; (3) canal dedicado \#team-health separado de reportes técnicos.
 
-\paragraph{Resultado del Social Daily Standup}
+\paragraph{Resultado del Social Daily Standup.}
 
 Señales tempranas de malestar, datos cualitativos para el Health Score, y agenda de seguimiento con conversaciones privadas a realizar.
 
@@ -863,7 +848,7 @@ El reporte siempre es agregado, anónimo y enfocado en patrones. Nunca se presen
 
 \subsection{Social Sprint Retrospective}
 
-La Social Sprint Retrospective es el evento central de SocialScrum. Mientras los otros eventos añaden extensiones breves, la Retrospective se transforma sustancialmente para abordar la deuda social con rigurosidad, generando acciones concretas que se integran al Social Sprint Backlog siguiente.
+La Social Sprint Retrospective es el evento central de SocialScrum, mientras los otros eventos añaden extensiones breves, la Retrospective se transforma sustancialmente para abordar la deuda social con rigurosidad, generando acciones concretas que se integran al Social Sprint Backlog siguiente.
 
 \subsubsection{Estructura de la Social Sprint Retrospective}
 
@@ -1150,7 +1135,7 @@ El Social Sprint Backlog contiene:
     \item \textbf{Criterios de ``Done'' social}: Condiciones que deben cumplirse para considerar el item completado.
 \end{itemize}
 
-\textit{Ejemplo de item en Social Sprint Backlog}:
+Ejemplo de item en Social Sprint Backlog:
 
 \begin{protocolo}
     \textbf{Ítem del Social Sprint Backlog}
@@ -1763,7 +1748,7 @@ Durante el Planning, Laura facilitó la revisión de riesgos sociales:
 \end{escenario}
 
 
-\paragraph{Social Sprint Backlog}\mbox{}\\[-0.3\baselineskip]
+\subsubsection{Social Sprint Backlog}\mbox{}\\[-0.3\baselineskip]
 
 \textbf{Capacidad asignada}: 8 SSP de 50 puntos totales del Sprint (16\%).
 
@@ -1775,9 +1760,9 @@ Durante el Planning, Laura facilitó la revisión de riesgos sociales:
 
 \subsubsection{Ejecución del Sprint}
 
-\paragraph{Social Daily Standup's}
+\paragraph{Social Daily Standup's:}
 
-Se implementó la pregunta social diaria donde los miembros del equipo respondían a una pregunta rotativa diseñada para detectar señales tempranas de fricción o malestar. En la Tabla \ref{tab:daily-sprint1} se presentan las señales detectadas durante el Sprint 1.
+En este nuevo evento se implementó la pregunta social diaria donde los miembros del equipo respondían a una pregunta rotativa diseñada para detectar señales tempranas de fricción o malestar. En la Tabla \ref{tab:daily-sprint1} se presentan las señales detectadas durante el Sprint 1.
 
 \begingroup
 \scriptsize
@@ -1830,8 +1815,8 @@ Se implementó la pregunta social diaria donde los miembros del equipo respondí
 \end{longtable}
 \endgroup
 
-\paragraph{Intervención: Sesión Carlos-Miguel}\mbox{}\\[-0.3\baselineskip]
-
+\paragraph{Intervención:}\mbox{}\\[-0.3\baselineskip]
+A continuacion se detalla la sesión de alineación entre Carlos y Miguel, facilitada por Laura, la cual fue una intervención clave para abordar el community smell en un escenario aplicado.
 \begin{escenario}
 
     \textbf{Sesión de alineación Carlos–Miguel}
@@ -2140,7 +2125,7 @@ Resultado: Integraciones tardías se redujeron de 4 por Sprint a 1.
 
 Laura facilitó una retrospectiva extendida (2 horas) para evaluar los resultados obtenidos a lo largo de tres Sprints consecutivos.
 
-\paragraph{Aspectos que funcionaron.}
+\paragraph{\normalfont{Aspectos que funcionaron.}}
 \begin{itemize}
     \item El Social Daily Standup permitió detectar tensiones antes de que escalaran.
     \item La sesión de alineación entre Carlos y Miguel evitó el bloqueo de una feature crítica.
@@ -2148,14 +2133,14 @@ Laura facilitó una retrospectiva extendida (2 horas) para evaluar los resultado
     \item El equipo comenzó a mencionar problemas de forma explícita en retrospectivas.
 \end{itemize}
 
-\paragraph{Aspectos que no funcionaron.}
+\paragraph{\normalfont{Aspectos que no funcionaron.}}
 \begin{itemize}
     \item La sobrecarga inicial se percibió como elevada (la percepción mejoró en los Sprints 2 y 3).
     \item Algunas preguntas del Social Daily Standup se volvieron rutinarias con el tiempo.
     \item El Product Owner mostró resistencia inicial a asignar capacidad a ítems sociales.
 \end{itemize}
 
-\paragraph{Ajustes acordados.}
+\paragraph{\normalfont{Ajustes acordados.}}
 \begin{itemize}
     \item Reducir el Social Sprint Backlog al 10\% como nivel de mantenimiento.
     \item Rotar la pregunta social semanalmente, en lugar de diariamente.
