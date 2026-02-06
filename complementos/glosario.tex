@@ -1,13 +1,5 @@
 % ============================================================================
-% GLOSARIO DE COMMUNITY SMELLS PARA TESIS DE DEUDA SOCIAL
-% ============================================================================
-% Basado en: Caballero-Espinosa et al. (2023) "Community Smells: The Sources
-% of Social Debt - A Systematic Literature Review"
-% + Literatura reciente (Tahsin et al. 2024, Almarimi et al. 2023)
-%
-% Paquete requerido: \usepackage[toc]{glossaries}
-% En preámbulo: \makeglossaries
-% Después de \begin{document}: \printglossaries
+% GLOSARIO PARA TESIS DE DEUDA SOCIAL
 % ============================================================================
 
 % ACRÓNIMOS Y TÉRMINOS GENERALES
@@ -15,14 +7,13 @@
 \newacronym{rsl}{RSL}{Revisión Sistemática de la Literatura}
 \newacronym{scrum}{SCRUM}{Scrum Framework}
 \newacronym{ntd}{NTD}{Deuda No Técnica (Non-Technical Debt)}
-\newacronym{burnout}{BURNOUT}{Síndrome de Agotamiento}
 \newacronym{kpis}{KPIs}{Key Performance Indicators (Indicadores Clave de Desempeño)}
 
 % TÉRMINOS PRINCIPALES
 
 \newglossaryentry{deuda-social}{
-    name={deuda social},
-    description={Decisiones socio-técnicas subóptimas que generan costos no previstos en equipos de desarrollo de software. Acumulación de efectos adversos derivados de problemas organizacionales y sociales que impactan el desempeño del equipo y la calidad del software.}
+    name={Deuda Social},
+    description={Decisiones socio-técnicas subóptimas que generan costos no previstos en equipos de desarrollo de software. Acumulación de efectos adversos derivados de problemas organizacionales y sociales que impactan el desempeño del equipo y la calidad del software}
 }
 
 \newglossaryentry{socialscrum}{
@@ -32,13 +23,13 @@
 }
 
 \newglossaryentry{community-smells}{
-    name={community smells},
+    name={Community Smells},
     description={Antipatrones socio-técnicos que representan síntomas de problemas organizacionales y sociales en comunidades de desarrollo de software. Son fuentes de deuda social que afectan la comunicación, coordinación, confianza y desempeño del equipo.},
-    plural={community smells}
+    plural={Community Smells}
 }
 
 \newglossaryentry{non-technical-debt}{
-    name={deuda no técnica},
+    name={Deuda No Técnica},
     description={Deuda No Técnica: Problemas técnicos (documentación fragmentaria,
             arquitectura inconexa) cuya CAUSA es social (comunicación pobre,
             dinámicas disfuncionales), no técnica. Diferencia: CAUSA es social,
@@ -47,7 +38,7 @@
 
 % Risk Taking in Relationship (RTR)
 \newglossaryentry{rtr}{
-    name={Risk Taking in Relationship (RTR)},
+    name={Risk Taking in Relationship (RTR) (Toma de Riesgos en las Relaciones)},
     description={Disposición de los miembros del equipo para asumir riesgos interpersonales al confiar en otros. Implica vulnerabilidad y apertura en las relaciones laborales, facilitando la colaboración y el apoyo mutuo.}
 }
 
@@ -73,6 +64,12 @@
 \newglossaryentry{gaming}{
     name={Gaming (Manipulación de Métricas)},
     description={Comportamiento donde los miembros del equipo manipulan métricas o procesos para aparentar cumplimiento de objetivos sin realmente mejorar el desempeño. Puede incluir prácticas como inflar reportes, evitar tareas difíciles o priorizar cantidad sobre calidad.}
+}
+
+% Social Network Analysis (SNA)
+\newglossaryentry{sna}{
+    name={Social Network Analysis (Análisis de Redes Sociales)},
+    description={Método para analizar las relaciones y estructuras sociales dentro de un equipo u organización, identificando patrones de interacción, comunicación y colaboración. Facilita la detección de cuellos de botella, silos y oportunidades para mejorar la cohesión social.}
 }
 
 % ============================================================================
@@ -318,6 +315,170 @@
     name={Organizational Rigidity (Rigidez Organizacional)},
     description={Estructuras organizacionales inflexibles y procesos burocráticos que dificultan la adaptación a cambios tecnológicos y de mercado. Resulta en resistencia al cambio, innovación limitada, baja agilidad operativa y pérdida de competitividad.},
     plural={Rigideces Organizacionales}
+}
+
+% ============================================================================
+% TÉRMINOS ESPECÍFICOS DE SOCIALSCRUM
+% ============================================================================
+
+\newglossaryentry{social-guide}{
+    name={Social Guide},
+    description={Rol especializado introducido por SocialScrum cuya misión es cuidar la dimensión social del equipo. Actúa como facilitador y consultor en temas humanos y organizacionales, sin ejercer autoridad jerárquica. Su objetivo principal es mantener el equilibrio emocional y relacional del grupo, garantizando la confianza, la comunicación y la cooperación como pilares constantes del trabajo.}
+}
+
+\newglossaryentry{health-score}{
+    name={Health Score},
+    description={Indicador compuesto que evalúa la salud social de un equipo de desarrollo mediante la medición de los cinco valores fundamentales de Scrum (Apertura, Compromiso, Respeto, Foco y Coraje). Cada valor se califica en una escala del 1 al 10, generando un puntaje promedio que representa la salud social general del equipo. Un puntaje inferior a 4/10 indica una situación crítica que requiere intervención inmediata.}
+}
+
+\newglossaryentry{social-sprint-backlog}{
+    name={Social Sprint Backlog},
+    description={Extensión del Sprint Backlog tradicional que integra explícitamente acciones de mitigación social como ítems formales, con descripción clara, responsables asignados, esfuerzo estimado y criterios de aceptación definidos. Garantiza que el trabajo social sea visible y parte integral del compromiso del Sprint.}
+}
+
+\newglossaryentry{social-product-backlog}{
+    name={Social Product Backlog},
+    description={Extensión del Product Backlog tradicional que incorpora elementos de deuda social e iniciativas destinadas a mejorar la comunicación, reducir community smells persistentes o fortalecer las habilidades sociales del equipo. El Product Owner los prioriza junto al Social Guide considerando el Health Score, la severidad del smell, el impacto en la velocidad y la viabilidad de mitigación.}
+}
+
+\newglossaryentry{social-daily-standup}{
+    name={Social Daily Standup},
+    description={Adaptación del Daily Standup de Scrum en SocialScrum que añade una pregunta social al cierre del evento para detectar impedimentos interpersonales de forma temprana. Requiere entre 2 y 3 minutos adicionales respecto al Daily tradicional.}
+}
+
+\newglossaryentry{social-sprint-planning}{
+    name={Social Sprint Planning},
+    description={Adaptación del Sprint Planning de Scrum en SocialScrum que incorpora una Revisión de Riesgos Sociales liderada por el Social Guide, donde el equipo analiza si su estado social actual le permite comprometerse con tareas de alta complejidad y define acciones preventivas.}
+}
+
+\newglossaryentry{social-sprint-review}{
+    name={Social Sprint Review},
+    description={Adaptación del Sprint Review de Scrum en SocialScrum que reserva un espacio para presentar el Health Score, discutir su evolución durante el Sprint y compartir métricas sociales con los stakeholders.}
+}
+
+\newglossaryentry{social-sprint-retrospective}{
+    name={Social Sprint Retrospective},
+    description={Adaptación del Sprint Retrospective de Scrum que se convierte en el núcleo de la gestión social en SocialScrum. Redistribuye el enfoque entre lo técnico y lo social (50\%-50\%) sin requerir tiempo adicional. Incluye revisión de smells, análisis de causas raíz, diseño de experimentos de mejora y priorización de acciones.}
+}
+
+\newglossaryentry{social-story-points}{
+    name={Social Story Points},
+    description={Unidad de estimación del esfuerzo necesario para abordar un problema social o relacional dentro del equipo. Complementa al Health Score: mientras este diagnostica el estado actual del equipo, los Social Story Points proyectan la energía requerida para mejorar el bienestar colectivo.}
+}
+
+\newglossaryentry{seguridad-psicologica}{
+    name={seguridad psicológica},
+    description={Creencia compartida por los miembros de un equipo de que el entorno es seguro para asumir riesgos interpersonales, expresar ideas, admitir errores y plantear preocupaciones sin temor a represalias. Es un requisito fundamental para la transparencia en SocialScrum.}
+}
+
+\newglossaryentry{definition-of-done}{
+    name={Definition of Done (Definición de Terminado)},
+    description={Descripción formal del estado del Incremento cuando cumple las medidas de calidad requeridas para el producto. En SocialScrum, se amplía para incluir criterios de sostenibilidad social, evaluando si el trabajo se completó sin generar burnout, sin crear nuevos community smells y si mejoraron las dinámicas de colaboración.}
+}
+
+\newglossaryentry{registro-community-smells}{
+    name={Registro de Community Smells},
+    description={Artefacto complementario de SocialScrum donde se documentan los community smells detectados, junto con su fecha, categoría, nivel de severidad, estado actual, acciones tomadas y resultados obtenidos. Es transparente para todo el equipo y cumple función de memoria organizacional.}
+}
+
+\newglossaryentry{dashboard-metricas-sociales}{
+    name={Dashboard de Métricas Sociales},
+    description={Visualización en tiempo real de los principales indicadores de la salud del equipo en SocialScrum: evolución del Health Score, distribución de conocimiento (SNA), señales tempranas de burnout, índice de seguridad psicológica y equilibrio en la participación.}
+}
+
+\newglossaryentry{five-whys}{
+    name={5 Whys (5 Porqués)},
+    description={Técnica iterativa de análisis de causa raíz que consiste en preguntar ``¿por qué?'' de forma sucesiva (generalmente cinco veces) ante un problema, con el fin de identificar la causa fundamental que lo origina. Es ampliamente utilizada en metodologías ágiles y Lean para abordar problemas de forma estructurada, evitando soluciones superficiales o paliativas.}
+}
+
+\newglossaryentry{lunch-and-learn}{
+    name={Lunch \& Learn (Almuerzo y Aprendizaje)},
+    description={Práctica informal de intercambio de conocimiento en la que los miembros de un equipo se reúnen durante el almuerzo o un espacio breve para compartir aprendizajes, presentar temas técnicos o discutir experiencias. En SocialScrum, se utiliza como estrategia de mitigación para reducir silos de conocimiento y fortalecer la distribución de competencias dentro del equipo.}
+}
+
+\newglossaryentry{salud-social}{
+    name={Salud Social},
+    description={Estado general de las dinámicas humanas, relacionales y organizacionales dentro de un equipo de desarrollo de software. Abarca aspectos como la comunicación, la confianza, la colaboración, el bienestar emocional y la cohesión del grupo. En SocialScrum, la salud social se mide a través del Health Score y se gestiona de forma sistemática mediante eventos, artefactos y roles especializados.}
+}
+
+\newglossaryentry{burnout}{
+    name={Burnout (Síndrome de Agotamiento)},
+    description={Estado de agotamiento físico, emocional y mental causado por estrés prolongado y excesivo en el entorno laboral. Se caracteriza por sentimientos de fatiga, cinismo, despersonalización y disminución de la eficacia profesional. En equipos de desarrollo de software, el burnout puede afectar negativamente la productividad, la calidad del trabajo y la salud general del equipo.}
+}
+
+\newglossaryentry{cs-lack-conflict-resolution}{
+    name={Lack of Conflict Resolution},
+    description={Community smell que surge cuando los conflictos interpersonales dentro de un equipo de desarrollo no se abordan ni resuelven de manera oportuna, lo que genera resentimiento acumulado, comunicación deteriorada y un ambiente de trabajo tóxico que alimenta la deuda social.}
+}
+
+\newglossaryentry{cs-decision-incommunicability}{
+    name={Decision Incommunicability},
+    description={Community smell que se manifiesta cuando las decisiones importantes —técnicas u organizacionales— no se comunican de manera adecuada al equipo, generando desinformación, duplicación de esfuerzos y erosión de la confianza en la transparencia del grupo.}
+}
+
+\newglossaryentry{cs-newbie-ignored}{
+    name={Newbie Ignored},
+    description={Community smell que ocurre cuando los nuevos integrantes de un equipo son ignorados o marginados por los miembros más experimentados, dificultando su integración, reduciendo su motivación y generando aislamiento social que contribuye a la deuda social del equipo.}
+}
+
+\newglossaryentry{cs-information-island}{
+    name={Information Island},
+    description={Community smell que se produce cuando la información relevante queda aislada en personas, equipos o herramientas específicas, sin mecanismos efectivos para compartirla, lo que genera dependencias ocultas, retrasos y pérdida de contexto organizacional.}
+}
+
+\newglossaryentry{cs-documentation-silo}{
+    name={Documentation Silo},
+    description={Community smell que aparece cuando la documentación del proyecto se encuentra fragmentada, dispersa o inaccesible para ciertos miembros del equipo, lo que dificulta la transferencia de conocimiento, aumenta la dependencia de individuos clave y contribuye a la opacidad organizacional.}
+}
+
+\newglossaryentry{cs-power-holder}{
+    name={Power Holder},
+    description={Community smell que se manifiesta cuando uno o más individuos concentran poder de decisión desproporcionado dentro del equipo, limitando la participación democrática, inhibiendo la autonomía de los demás y generando dinámicas jerárquicas que erosionan la colaboración horizontal.}
+}
+
+\newglossaryentry{cs-dismissiveness}{
+    name={Dismissiveness},
+    description={Community smell caracterizado por la actitud de descarte o menosprecio hacia las ideas, opiniones o contribuciones de ciertos miembros del equipo. Esta conducta erosiona la seguridad psicológica, desincentiva la participación y genera resentimiento que se acumula como deuda social.}
+}
+
+\newglossaryentry{cs-unfriendly-environment}{
+    name={Unfriendly Environment},
+    description={Community smell que describe un ambiente de trabajo hostil, poco acogedor o emocionalmente inseguro, donde los miembros del equipo no se sienten cómodos para expresarse, colaborar o reportar problemas. Este patrón deteriora la confianza, la cohesión y el bienestar colectivo.}
+}
+
+\newglossaryentry{cs-unhealthy-contribution}{
+    name={Unhealthy Contribution Patterns},
+    description={Community smell que se presenta cuando la distribución del trabajo y las contribuciones dentro del equipo es desigual o desequilibrada, generando sobrecarga en algunos miembros y subutilización en otros, lo que afecta la equidad, la motivación y la sostenibilidad del equipo.}
+}
+
+\newglossaryentry{cs-absent-stakeholder}{
+    name={Absent Stakeholder},
+    description={Community smell que ocurre cuando las partes interesadas clave (stakeholders) no participan activamente en los procesos del equipo, lo que genera falta de dirección, decisiones sin contexto de negocio, retrabajo y desalineación entre las expectativas del producto y el trabajo del equipo.}
+}
+
+\newglossaryentry{cs-work-exhaustion}{
+    name={Work Exhaustion},
+    description={Community smell relacionado con el agotamiento crónico derivado de cargas de trabajo excesivas o mal distribuidas. Se manifiesta en fatiga persistente, reducción del rendimiento y deterioro del bienestar emocional, siendo un precursor directo del burnout y un indicador crítico de deuda social.}
+}
+
+\newglossaryentry{cs-inefficacy}{
+    name={Inefficacy},
+    description={Community smell que se manifiesta cuando los miembros del equipo perciben que sus esfuerzos no generan resultados significativos o que su trabajo carece de impacto real. Esta sensación de ineficacia profesional erosiona la motivación intrínseca, la competencia percibida y contribuye al agotamiento emocional.}
+}
+
+\newglossaryentry{cs-overload}{
+    name={Overload},
+    description={Community smell que ocurre cuando uno o más miembros del equipo asumen una cantidad excesiva de tareas, responsabilidades o roles simultáneos, superando su capacidad sostenible. Genera estrés crónico, errores por fatiga y desequilibrio en la distribución del trabajo.}
+}
+
+\newglossaryentry{cs-time-wasted}{
+    name={Time Wasted},
+    description={Community smell que se refiere a la pérdida sistemática de tiempo productivo debido a reuniones innecesarias, procesos burocráticos excesivos, interrupciones frecuentes o falta de priorización clara. Afecta el foco del equipo y genera frustración acumulada.}
+}
+
+\newglossaryentry{cs-scattered-development}{
+    name={Scattered Development},
+    description={Community smell que describe una situación en la que el esfuerzo de desarrollo se dispersa entre demasiadas tareas, proyectos o prioridades simultáneas, impidiendo que el equipo logre profundidad y calidad en su trabajo. Este patrón fragmenta la atención y reduce la eficacia colectiva.}
 }
 
 % ============================================================================
