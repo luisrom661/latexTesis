@@ -251,5 +251,194 @@ En la Tabla \ref{tab:preguntas-investigacion-longtable} se presentan las pregunt
 \end{longtable}
 \endgroup
 
-TODO: Agregar lo faltante del anteproyecto de investigación.
------ EN PROCESO -----
+A continuación, se presentan las respuestas a algunas de las preguntas que proporcionan información relevante para nuestro análisis. Para más detalles, consulte el Anexo~\ref{anexo:a}, el cual incluye aspectos como: (i) criterios de exclusión e inclusión de los estudios primarios, (ii) criterios de evaluación de calidad, (iii) respuestas a todas las preguntas de investigación, entre otros. En este anteproyecto se enfatiza sobre las preguntas de investigación PI4 y PI5 (presentadas en la Tabla 3) por ser consideradas las más relevantes para el lector. Las respuestas a las demás preguntas pueden ser consultadas en el Anexo~\ref{anexo:a}.
+
+\textbf{PI4: ¿Cuáles son los principales desafíos y oportunidades para la investigación futura sobre la deuda social en el desarrollo de software ágil?}
+
+Los principales desafíos en la investigación futura sobre la deuda social en el desarrollo de software ágil incluyen la comprensión de su naturaleza compleja, el desarrollo de métricas efectivas para su evaluación, la integración de enfoques interdisciplinarios y la identificación de estrategias de mitigación. Estos desafíos requieren una profunda comprensión de los aspectos técnicos y sociales involucrados, así como la capacidad de medir y abordar la deuda social de manera oportuna y precisa. Dressen \textit{et al.} \cite{dreesen2021socialdebt} sugieren que actualmente se desconoce qué causa exactamente el aumento de la deuda social y qué mecanismos ayudan a mitigar o disminuir sus efectos adversos. Caballero \textit{et al.} \cite{caballero2022communitysmells} identificaron 30 olores comunitarios, que se analizan mediante un modelo que vincula causas y consecuencias. La información detallada sobre los 30 olores comunitarios se presenta de manera completa en la revisión sistemática de la literatura.
+
+Teniendo en cuenta lo anterior, se presentan las fases que describen cómo surgen los “olores comunitarios” en un equipo de desarrollo de software \cite{caballero2022communitysmells}. Cada fase, desde el inicio del estrés entre los miembros hasta su impacto en la organización y en los usuarios externos, muestra cómo las decisiones sociotécnicas pueden contribuir a la acumulación de deuda social. Las fases del estudio se organizan de la siguiente manera: fase 1, denominada “Inicio”; fase 2, “Impacto directo de los problemas comunitarios”; fase 3, “Difusión del Equipo”; fase 4, “Impacto en la organización”; y, por último, fase 5, “Problemas avanzados”. A continuación, nos enfocaremos en particular en la Fase 3, denominada “Difusión del Equipo”, donde se resalta cómo los miembros que experimentan emociones negativas afectan la cohesión grupal, intensificando así la deuda social. Para un análisis completo de estas fases, se puede consultar la revisión sistemática de la literatura adjuntada en el Anexo A. En este contexto, la intervención de los líderes de proyectos se vuelve esencial. Los líderes no solo deben estar atentos a estos cambios emocionales en sus equipos, sino que también deben ser proactivos en la identificación de estos “olores comunitarios” y en la implementación de estrategias que favorezcan un ambiente de trabajo positivo. Aun así, los líderes de proyectos pueden detectar la presencia de efectos negativos derivados de los “olores comunitarios”. Sin embargo, el desarrollo de un método preciso para diagnosticar, gestionar y solucionar estos problemas depende de la experiencia del líder y de los enfoques de gestión que tenga a su disposición. En este sentido, estos líderes tienen una responsabilidad significativa y una gran oportunidad para prevenir posibles daños organizativos. Al supervisar y mitigar periódicamente los efectos de los olores comunitarios dentro de los equipos de desarrollo de software, pueden contribuir a mantener la cohesión grupal y la calidad del trabajo.
+
+Por otra parte, también se presentan oportunidades para investigar, entre ellas: nuevas tecnologías y herramientas, explorar la relación entre la deuda social y el rendimiento del equipo, estudiar el papel de la cultura organizacional y evaluar el impacto a largo plazo de la deuda social en la dinámica del equipo y la calidad del software. Estas oportunidades pueden conducir a una comprensión más completa de la deuda social en entornos ágiles y al desarrollo de estrategias más efectivas para su gestión y mitigación. Saeeda \textit{et al.} \cite{saeeda2024multivocal}.
+
+\textbf{PI6: ¿Cuáles son las practicas o enfoques que abordan de manera exitosa la gestión de la deuda social en el desarrollo de software ágil?}
+
+Dressen \textit{et al.} \cite{dreesen2021socialdebt} sugieren una estrategia para abordar la deuda social fundamentada en el modelo de las 3C’s, que enfatiza las deficiencias en comunicación, colaboración y coordinación. El enfoque de mitigación sugerido por Dressen \textit{et al.} \cite{dreesen2021socialdebt} se concentra particularmente en mejorar la comunicación y la colaboración, destacando los siguientes puntos:
+
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.4}
+
+\begin{longtable}{
+    >{\Centering\hspace{0pt}}p{1.2cm}
+    >{\RaggedRight\hspace{0pt}}p{4.2cm}
+    >{\RaggedRight\hspace{0pt}}p{10.6cm}
+    }
+
+    \caption{Enfoques de mitigación de la deuda social en equipos de desarrollo de software ágil distribuido.}
+    \label{tab:enfoques_mitigacion}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \\
+    \toprule
+    \textbf{No.}                                                                            & \textbf{Enfoque de mitigación} & \textbf{Descripción}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \\
+    \midrule
+    \endfirsthead
+
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 \\
+    \toprule
+    \textbf{No.}                                                                            & \textbf{Enfoque de mitigación} & \textbf{Descripción}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \\
+    \midrule
+    \endhead
+
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \\
+    \endfoot
+
+    \bottomrule
+    \multicolumn{3}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No).}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    \\
+    \endlastfoot
+
+    1                                                                                       &
+    Comunicación honesta y abierta                                                          &
+    Es fundamental en equipos de desarrollo de software ágil distribuido para mitigar la deuda social. La comunicación honesta y abierta se define por su franqueza y transparencia, lo que ayuda a construir confianza mutua entre los miembros del equipo. Esta confianza facilita la resolución efectiva de conflictos sociales, ya que los miembros del equipo pueden abordar los problemas directamente. En última instancia, esta comunicación directa contribuye a crear un ambiente de trabajo constructivo y ayuda a reducir la acumulación de deuda social en el equipo.                                                                                                                          \\
+
+    \midrule
+
+    2                                                                                       &
+    Intensidad de la comunicación relacionada con las tareas                                &
+    Se refiere a la naturaleza altamente enfocada y orientada a objetivos de la interacción en el trabajo remoto. Las interacciones y la comunicación no son aleatorias, sino que están determinadas o preparadas de antemano para completar tareas específicas, reduciendo las distracciones. Este enfoque intensificado en la comunicación relacionada con las tareas puede ayudar a mitigar el efecto de los factores que contribuyen a la deuda social en equipos de desarrollo de software ágil distribuido (ASD).                                                                                                                                                                                     \\
+
+    \midrule
+
+    3                                                                                       &
+    Intensidad de la colaboración relacionada con las tareas con respecto a la colaboración &
+    Se refiere a cómo las interacciones durante el trabajo remoto están altamente enfocadas en tareas y objetivos específicos. Esto significa que todas las acciones colaborativas están orientadas a completar la tarea en cuestión, reduciendo las distracciones. Este enfoque intensificado en la colaboración relacionada con las tareas puede tener un efecto tanto en promover como en mitigar la deuda social en equipos de desarrollo de software ágil distribuidos. Por un lado, puede conducir a una comunicación más directa y eficiente, pero por otro, puede resultar en una falta de interacción informal que es importante para la construcción de relaciones y la resolución de conflictos. \\
+
+    \midrule
+
+    4                                                                                       &
+    Costos iniciales reducidos para iniciar interacciones o comunicaciones                  &
+    Se refieren a la capacidad de establecer rápidamente un entorno para la colaboración y comunicación uno a uno sin restricciones. Esto es beneficioso en un contexto de trabajo remoto, ya que las salas de reuniones libres ya no son un recurso escaso y se puede configurar la comunicación sin casi ninguna limitación. Este factor ayuda a mitigar la deuda social en equipos de desarrollo de software ágil distribuido al facilitar la resolución de conflictos y promover una comunicación más directa y abierta entre los miembros del equipo.                                                                                                                                                  \\
+\end{longtable}
+\endgroup
+
+Por otra parte, Saeeda \textit{et al.} \cite{saeeda2024multivocal} llevaron a cabo un estudio exhaustivo sobre varios tipos de deuda no técnica, incluyendo la deuda social, explorando sus causas y proponiendo múltiples estrategias para su mitigación. Identifican que las causas de la deuda social derivan de tres factores principales: limitaciones sociales, desafíos organizacionales y dinámicas comunitarias. A partir de estos factores, se delinean ocho estrategias basadas en evidencias de la literatura científica y gris para reducir la deuda social, las cuales son:
+
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.4}
+
+\begin{longtable}{
+    >{\Centering\hspace{0pt}}p{1.2cm}
+    >{\RaggedRight\hspace{0pt}}p{4.2cm}
+    >{\RaggedRight\hspace{0pt}}p{10.6cm}
+    }
+
+    \caption{Estrategias de mitigación de la deuda social en equipos de desarrollo de software.}
+    \label{tab:estrategias_mitigacion}                                                                                                                                                                                                                                                                                                                                                     \\
+    \toprule
+    \textbf{No.}                                                                & \textbf{Estrategias de mitigación} & \textbf{Descripción}                                                                                                                                                                                                                                                \\
+    \midrule
+    \endfirsthead
+
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                                                                \\
+    \toprule
+    \textbf{No.}                                                                & \textbf{Estrategias de mitigación} & \textbf{Descripción}                                                                                                                                                                                                                                                \\
+    \midrule
+    \endhead
+
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                                                                        \\
+    \endfoot
+
+    \bottomrule
+    \multicolumn{3}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No).}}                                                                                                                                                                                                                                                                                                   \\
+    \endlastfoot
+
+    1                                                                           &
+    Análisis de redes sociales                                                  &
+    Emplear el análisis de redes para entender mejor la deuda.                                                                                                                                                                                                                                                                                                                             \\
+
+    \midrule
+
+    2                                                                           &
+    Comunicación colaborativa                                                   &
+    Promover una comunicación efectiva dentro del equipo.                                                                                                                                                                                                                                                                                                                                  \\
+
+    \midrule
+
+    3                                                                           &
+    Gestión de la composición del equipo y mejora de decisiones arquitectónicas &
+    Establecer directrices claras para la formación de equipos y la toma de decisiones arquitectónicas.                                                                                                                                                                                                                                                                                    \\
+
+    \midrule
+
+    4                                                                           &
+    Entornos de trabajo híbridos                                                &
+    Fomentar entornos que combinen modalidades presenciales y remotas.                                                                                                                                                                                                                                                                                                                     \\
+
+    \midrule
+
+    5                                                                           &
+    Métricas para la comunicabilidad de la arquitectura del software            &
+    Desarrollar y aplicar métricas específicas que faciliten la comprensión arquitectónica.                                                                                                                                                                                                                                                                                                \\
+
+    \midrule
+
+    6                                                                           &
+    Marcos de trabajo para la mitigación de la deuda social                     &
+    Implementar marcos como CAFFEA, que combina el desarrollo de software ágil con el desarrollo y manejo continuo de la arquitectura de software, especialmente en empresas grandes con líneas de productos complejos.                                                                                                                                                                    \\
+
+    \midrule
+
+    7                                                                           &
+    Tácticas arquitectónicas y frameworks sociotécnicos                         &
+    El enfoque DAHLIA, que incluye la popularidad y la conciencia en las decisiones, junto con el marco de calidad sociotécnica.                                                                                                                                                                                                                                                           \\
+
+    \midrule
+
+    8                                                                           &
+    Herramientas específicas                                                    &
+    Introducir herramientas como GEEZMO, que monitorea el estado de ánimo del equipo; CodeFace4Smell, que detecta causas de deuda social en silos organizacionales; y YOSHI (Yielding Open-Source Health Information), que proporciona transparencia y asistencia computacional a las comunidades de software de código abierto. Maelstromdat \textit{et al.} \cite{maelstromdat2014yoshi} \\
+\end{longtable}
+\endgroup
+
+\subsection{Objetivos}
+
+\subsubsection{Objetivo general}
+
+\begin{itemize}
+    \item Definir un proceso ágil para gestionar la deuda social generada en proyectos de desarrollo de software ágil, a partir de aspectos fundamentales propuestos en la literatura y de la adaptación de los elementos del enfoque ágil para la gestión de proyectos conocido como Scrum.
+\end{itemize}
+
+\subsubsection{Objetivos específicos (OE)}
+
+A continuación, se presentan los objetivos específicos de acuerdo con las palabras claves para la definición de objetivos propuestas en la taxonomía de B. S. Bloom \cite{bloom1956taxonomy}:
+
+\begin{itemize}
+    \item Identificar los elementos fundamentales para la gestión de la deuda social en el desarrollo de software ágil mediante un análisis de la literatura encontrada en diferentes bases científicas, el cual permita entender y organizar el conocimiento relacionado con la gestión de la deuda social en equipos de desarrollo de software.
+    \item Construir un proceso basado en Scrum que permita gestionar la deuda social en proyectos de desarrollo de software ágil, incorporando los elementos identificados en el objetivo específico 1 y aquellos aspectos que se consideren fundamentales.
+    \item Evaluar el proceso propuesto en el OE2 mediante la técnica de validación de juicio de expertos, y determinar oportunidades de mejora a partir de un coeficiente estadístico.
+\end{itemize}
+
+\subsection{Brechas existentes}
+
+A partir del análisis realizado en la RSL (ver en detalle en el Anexo~\ref{anexo:a}), existen importantes brechas en la comprensión y gestión de la deuda social en el desarrollo de software ágil. Primero, aunque se reconoce la deuda social, hay poca investigación sobre cómo llevar a cabo su gestión en equipos ágiles. En pocas palabras, no se evidenció la definición de un marco claro que permita gestionarla y abordarla de manera sistemática. Además, pese a que se entienden sus impactos, faltan soluciones claras que permitan guiar a las organizaciones en la implementación de estrategias efectivas que culminen con una gestión mucho más sistemática de la deuda social cuando se identifique. El enfoque cortoplacista, que prioriza cumplir plazos y reducir costos, lleva a decisiones que aumentan la deuda social sin equilibrar el bienestar del equipo, y esto se ve impactado en una mayor magnitud si no se sabe cómo gestionar dicha deuda. También faltan herramientas y métricas para evaluar el impacto de la deuda social en la calidad del trabajo y el bienestar del equipo, dificultando su identificación y gestión. Finalmente, la comunicación inadecuada y la falta de colaboración en la toma de decisiones relacionada con la deuda social es consecuencia de la ausencia de una solución que provea los elementos que permitan, de manera sistemática, gestionar la deuda social.
+
+\subsection{Aportes}
+
+Teniendo en cuenta lo anterior, con el desarrollo de esta propuesta es posible realizar los siguientes aportes:
+
+\subsubsection{Investigativo}
+
+\begin{itemize}
+    \item Desarrollo de un Marco de Trabajo Adaptado: La propuesta de adaptar Scrum para la gestión de deuda social puede ofrecer un enfoque estructurado que permita a los equipos abordar la deuda social de manera continua y colaborativa. Esto implica un análisis profundo de las prácticas actuales y su alineación con las necesidades específicas de los equipos de desarrollo.
+\end{itemize}
+
+\subsubsection{Innovación}
+
+Se innova a partir de una adaptación de uno de los enfoques ágiles para la gestión de proyectos de desarrollo de software más utilizados, llamado Scrum según VersionOne Inc. \cite{versionone2023stateofagile}. Dicha adaptación radica en tomar los elementos y adaptarlos con el fin de apoyar la gestión de la deuda social, adoptando características como:
+
+\begin{itemize}
+    \item Implementación de sesiones de retrospectiva: Incluir sesiones de retrospectiva centradas en la deuda social podría fomentar un espacio seguro para discutir y resolver problemas, permitiendo al equipo identificar desafíos y proponer soluciones. Esta práctica innovadora puede transformar la cultura del equipo hacia una más colaborativa y proactiva.
+    \item Sprints dedicados a la deuda social: La idea de tener sprints específicos para abordar la deuda social podría mejorar la moral del equipo y la calidad del producto final al permitir un enfoque concentrado en la resolución de problemas relacionados con el bienestar del equipo. Esta innovación puede llevar a una mayor satisfacción laboral y rendimiento.
+    \item Fomento de la comunicación transparente: Promover la transparencia y la participación en la toma de decisiones puede mejorar el clima organizacional, fortalecer las relaciones interpersonales y ayudar a construir un sentido de pertenencia dentro del equipo. La implementación de prácticas comunicativas innovadoras es clave para el éxito en la gestión de la deuda social.
+\end{itemize}
