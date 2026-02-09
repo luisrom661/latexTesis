@@ -1,6 +1,298 @@
 \chapter{Contextualización del modelo SocialScrum}
 \label{anexo:contextualizacion}
 
-\section{Contextualización del modelo SocialScrum}
+Este documento presenta una síntesis autocontenida del modelo SocialScrum, un proceso ágil que extiende Scrum para gestionar la \textbf{deuda social} en equipos de desarrollo de software. Está dirigido a expertos evaluadores, por lo que todos los términos se definen en el propio texto sin remitir a glosarios externos.
 
-hola
+% ============================================================
+\section{Conceptos clave}
+% ============================================================
+
+\begin{description}
+   \item[Deuda social.]
+         Acumulación de efectos adversos derivados de decisiones socio-técnicas subóptimas (comunicación deficiente, distribución desigual del conocimiento, conflictos no abordados) que impactan la productividad, la calidad del software y la cohesión del equipo.
+
+   \item[Community smells (olores comunitarios).]
+         Antipatrones socio-técnicos observables que actúan como síntomas de deuda social. Ejemplos: \emph{Radio Silence} (silencio comunicativo entre subgrupos), \emph{Lone Wolf} (desarrollador que trabaja aislado ignorando al equipo), \emph{Organisational Silo} (equipos que operan sin intercambio de información entre áreas).
+
+   \item[Health Score (puntaje de salud social).]
+         Indicador agregado en escala 1--10 que evalúa cinco dimensiones de la salud del equipo, alineadas con los valores de Scrum: Apertura, Compromiso, Respeto, Foco y Coraje. Se calcula como el promedio de las cinco dimensiones, cada una medida mediante encuestas anónimas.
+
+   \item[Social Guide (Guía Social).]
+         Nuevo rol introducido por SocialScrum. Persona con perfil híbrido (psicología organizacional + conocimiento técnico de desarrollo de software) que facilita la identificación, análisis y mitigación de la deuda social, sin ejercer autoridad jerárquica. No reemplaza al Scrum Master: este facilita el proceso ágil; el Social Guide vela por la salud social del equipo.
+
+   \item[Social Story Points (SSP).]
+         Unidad de estimación del esfuerzo requerido para abordar un ítem de deuda social. Utiliza la misma escala Fibonacci que los Story Points técnicos (1, 2, 3, 5, 8, 13; valores superiores a 13 indican que el ítem debe descomponerse) y se define con la equivalencia \textbf{1 SSP $\approx$ 1 SP}, permitiendo sumar ítems técnicos y sociales en un único Sprint Backlog para calcular la capacidad total del Sprint. La estimación se realiza en tres pasos: (1) identificar el community smell específico, (2) evaluar su severidad ---Leve (1--2 SSP base), Moderada (3--5), Severa (5--8) o Crítica (8--13)--- y (3) ajustar por complejidad de intervención (+0 baja, +1 media, +2 alta). Por ejemplo, un conflicto interpersonal moderado (3 SSP base) que requiere mediación especializada (complejidad alta, +2) se estima en 5 SSP. Todo el equipo participa en la estimación durante el Social Sprint Planning, tal como ocurre con los Story Points técnicos; el Social Guide aporta contexto sobre la severidad y el tipo de intervención requerido, pero no impone la cifra.
+
+   \item[SNA (Social Network Analysis --- Análisis de Redes Sociales).]
+         Método para analizar relaciones y patrones de interacción dentro del equipo (e.g., quién se comunica con quién, cuellos de botella de información), usando metadatos de herramientas como Slack o GitHub.
+
+   \item[Seguridad psicológica.]
+         Percepción compartida de que el equipo es un espacio seguro para expresar opiniones, errores o preocupaciones sin temor a represalias.
+
+   \item[Burnout (agotamiento profesional).]
+         Síndrome de estrés laboral crónico caracterizado por agotamiento emocional, cinismo y sensación de ineficacia profesional; consecuencia frecuente de la deuda social acumulada.
+\end{description}
+
+% ============================================================
+\section{Fundamentos teóricos de SocialScrum (síntesis del Capítulo 3)}
+% ============================================================
+
+SocialScrum se sustenta en tres marcos teóricos complementarios que abordan la motivación individual, las relaciones de confianza y los valores del equipo.
+
+\subsection{Teoría de la Autodeterminación (TAD)}
+
+Propuesta por Ryan y Deci, establece que la motivación intrínseca sostenible depende de la satisfacción de tres necesidades psicológicas básicas:
+
+\begin{enumerate}
+   \item \textbf{Autonomía}: sentirse autor de las propias acciones y decisiones, no un mero ejecutor de órdenes externas.
+   \item \textbf{Competencia}: percibir que el esfuerzo propio genera progreso y resultados con sentido.
+   \item \textbf{Relacionalidad}: sentirse conectado con los demás, experimentar pertenencia y vínculos significativos dentro del grupo.
+\end{enumerate}
+
+Cuando estas necesidades se frustran, emergen el agotamiento emocional (falta de autonomía), la sensación de ineficacia (falta de competencia) y el cinismo o aislamiento (falta de relacionalidad), configurando el burnout.
+
+\subsection{Modelo de confianza de Mayer, Davis y Schoorman}
+
+Define la confianza como la disposición a ser vulnerable frente a las acciones de otra persona, basada en tres dimensiones:
+
+\begin{enumerate}
+   \item \textbf{Habilidad}: percepción de que el otro posee las competencias técnicas necesarias para cumplir con su rol.
+   \item \textbf{Benevolencia}: creencia de que el otro actúa con intención genuina de bienestar hacia el equipo, no solo por interés propio.
+   \item \textbf{Integridad}: percepción de coherencia entre lo que la persona dice y lo que hace; cumplimiento de compromisos.
+\end{enumerate}
+
+La confianza genuina (no la cooperación forzada) es requisito para que los equipos aborden abiertamente sus community smells.
+
+\subsection{Valores de Scrum aplicados a la deuda social}
+
+SocialScrum reinterpreta los cinco valores de Scrum como mecanismos de protección frente a la deuda social:
+
+\begin{itemize}
+   \item \textbf{Coraje}: base emocional para conversaciones difíciles y para mostrar vulnerabilidad.
+   \item \textbf{Apertura}: transparencia sobre problemas sociales; hacer visible lo que normalmente se oculta.
+   \item \textbf{Respeto}: antídoto frente a relaciones tóxicas; garantiza seguridad psicológica.
+   \item \textbf{Compromiso}: responsabilidad compartida sobre el bienestar colectivo, no solo sobre entregables técnicos.
+   \item \textbf{Foco}: equilibrio entre la entrega del producto y la atención a la salud del equipo.
+\end{itemize}
+
+\subsection{Principios empíricos aplicados al ámbito social}
+
+SocialScrum aplica los tres pilares empíricos de Scrum al plano social:
+
+\begin{itemize}
+   \item \textbf{Transparencia}: transformar las dinámicas sociales difusas en objetos observables y gestionables, mediante artefactos explícitos, métricas sociales y espacios seguros de revelación.
+   \item \textbf{Inspección}: monitoreo continuo en múltiples cadencias (diaria, por Sprint, por Release y continua) porque los community smells evolucionan, escalan e interactúan entre sí.
+   \item \textbf{Adaptación}: experimentación controlada, pequeña y reversible para mitigar la deuda social; cada intervención se formula como hipótesis con métricas de éxito verificables.
+\end{itemize}
+
+% ============================================================
+\section{Modelo conceptual de SocialScrum}
+% ============================================================
+
+El modelo se estructura en tres componentes que se integran al marco Scrum: roles especializados, eventos adaptados y artefactos enriquecidos con dimensión social. Estos actúan coordinadamente para identificar, analizar y gestionar la deuda social.
+
+\subsection{Roles}
+
+\begin{itemize}
+   \item \textbf{Product Owner}: mantiene su rol de maximizar valor del producto. Recibe del Social Guide una evaluación del estado social del equipo antes de cada Sprint Planning. Si el Health Score es crítico, prioriza acciones de mitigación de deuda social por encima de features de alta complejidad.
+   \item \textbf{Scrum Master}: facilita el proceso ágil y colabora con el Social Guide para identificar impedimentos sociales. No gestiona la deuda social directamente.
+   \item \textbf{Developers}: asumen un rol activo en la detección de community smells y proponen acciones de mejora que se integran al Social Sprint Backlog.
+   \item \textbf{Social Guide}: rol central de SocialScrum. Detecta community smells mediante herramientas como SNA, facilita estrategias de mitigación, educa sobre deuda social y colabora con Scrum Master y Product Owner. No evalúa desempeño individual, no sanciona, no toma decisiones sobre el producto.
+\end{itemize}
+
+\subsection{Eventos adaptados}
+
+SocialScrum no añade nuevos eventos; adapta los existentes incorporando una dimensión social:
+
+\begin{itemize}
+   \item \textbf{Social Sprint Planning}: se añade una revisión de riesgos sociales (15 min) donde el equipo analiza si su estado social le permite comprometerse con tareas de alta complejidad.
+   \item \textbf{Social Daily Standup}: se añade una pregunta social breve (2--3 min): ``¿Hay algún impedimento social?''. El Social Guide observa dinámicas (participación, tono, silencios) como señales tempranas.
+   \item \textbf{Social Sprint Review}: se dedican 5--10 min a presentar la evolución del Health Score y los community smells abordados ante stakeholders (partes interesadas), siempre con datos agregados y anónimos.
+   \item \textbf{Social Sprint Retrospective}: núcleo de la gestión social. Se reestructura en cuatro fases (preparación del espacio, recolección de datos, análisis de patrones y generación de compromisos) durante 90 min. No requiere tiempo adicional; redistribuye el foco de 90\% técnico a 50\%--50\% técnico-social.
+\end{itemize}
+
+Sobrecarga total estimada: $\sim$45 min por Sprint de dos semanas ($<$1\% del tiempo total).
+
+\subsection{Artefactos sociales}
+
+Además de extender Product Backlog, Sprint Backlog e Increment con dimensión social, SocialScrum introduce cuatro artefactos complementarios:
+
+\begin{enumerate}
+   \item \textbf{Social Product Backlog}: inventario priorizado de todos los ítems de deuda social identificados. Cada ítem incluye: community smell asociado, severidad (Alta/Media/Baja), dimensión del Health Score afectada, estimación en SSP y criterios de aceptación.
+   \item \textbf{Social Sprint Backlog}: ítems del Social Product Backlog comprometidos para el Sprint actual (típicamente 1--3 ítems). Se recomienda integrarlos en el mismo tablero que los ítems técnicos (modelo integrado).
+   \item \textbf{Registro de Community Smells}: historial centralizado de smells detectados, con fecha, severidad, estado, acciones tomadas y resultados. Transparente para todo el equipo.
+   \item \textbf{Dashboard de Métricas Sociales}: visualización del Health Score, distribución de conocimiento (SNA), señales de burnout y participación en decisiones.
+\end{enumerate}
+
+% ============================================================
+\section{Operacionalización de SocialScrum (síntesis del Capítulo 4)}
+% ============================================================
+
+\subsection{Adopción inicial}
+
+La implementación de SocialScrum requiere verificar cuatro pre-requisitos organizacionales mínimos:
+
+\begin{enumerate}
+   \item \textbf{Compromiso ejecutivo genuino}: el liderazgo técnico (CTO, VP de Ingeniería o equivalente) respalda el modelo con recursos, presupuesto y aceptación de reducción temporal (10--20\%) de la capacidad técnica.
+   \item \textbf{Cultura organizacional mínimamente saludable}: no existe desconfianza institucionalizada, abuso jerárquico normalizado, rotación extrema ($>$30\% anual) ni comunicación totalmente fracturada.
+   \item \textbf{Equipo con autonomía}: el equipo puede priorizar ítems sociales, ajustar su capacidad según el Health Score y decidir cómo abordar los community smells sin autorización externa.
+   \item \textbf{Social Guide calificado disponible}: perfil híbrido con formación en dinámicas de grupo/psicología organizacional y comprensión del contexto técnico de desarrollo de software.
+\end{enumerate}
+
+Si estas condiciones no se cumplen, SocialScrum no debe implementarse: el modelo no arregla culturas disfuncionales, las requiere como base.
+
+\subsubsection{Sprint 0 (preparación)}
+
+Cuando los pre-requisitos están validados, se dedica un Sprint preparatorio (1--2 semanas) con cinco actividades:
+
+\begin{enumerate}
+   \item Capacitación en fundamentos de SocialScrum (4 h).
+   \item Establecimiento de la línea base del Health Score (2 h): encuesta anónima sobre los cinco valores de Scrum, entrevistas 1:1 opcionales e identificación preliminar de community smells.
+   \item Firma de acuerdos de consentimiento informado (1 h): confidencialidad del Social Guide y consentimiento del equipo. Si $<$70\% del equipo firma, SocialScrum no se implementa.
+   \item Configuración de herramientas y artefactos (3 h): Social Product Backlog, Dashboard de Health Score, Registro de community smells.
+   \item Retrospectiva social simulada (2 h): práctica del protocolo sin presión de Sprint real.
+\end{enumerate}
+
+\subsection{El Social Guide: perfil y gobernanza}
+
+El Social Guide requiere:
+
+\begin{itemize}
+   \item \textbf{Habilidades duras}: análisis SNA, medición cualitativa, facilitación de grupos, mediación de conflictos (Comunicación No Violenta), dominio de Scrum.
+   \item \textbf{Habilidades blandas}: neutralidad emocional, empatía calibrada (conectar sin validar conductas destructivas), coraje profesional, integridad ética, humildad intelectual.
+\end{itemize}
+
+Su selección implica cinco fases: identificación de candidatos, evaluación técnica, entrevista ética, decisión consensuada (Scrum Master + Development Team + CTO) y período de prueba (3 Sprints; requiere aprobación $\geq$70\% del equipo).
+
+El Social Guide reporta al Scrum Master o al liderazgo técnico, \textbf{nunca} a Recursos Humanos, para evitar conflictos de interés con evaluaciones de desempeño.
+
+\subsection{Sistema de medición: Health Score}
+
+\subsubsection{Cálculo}
+
+$$\text{Health Score} = \frac{\text{Apertura} + \text{Compromiso} + \text{Respeto} + \text{Foco} + \text{Coraje}}{5}$$
+
+Cada dimensión se mide en escala 1--10 mediante dos instrumentos:
+
+\begin{itemize}
+   \item \textbf{Pulso semanal}: 5 preguntas (1 por dimensión), 2--3 min, tasa de respuesta mínima 70\%.
+   \item \textbf{Encuesta de Sprint completa}: 20 preguntas + 3 abiertas, 5--8 min, tasa mínima 80\%.
+\end{itemize}
+
+\subsubsection{Zonas de interpretación y respuesta}
+
+\begin{itemize}
+   \item \textbf{7.0--10.0 (Saludable)}: mantenimiento preventivo, 5--10\% de capacidad social.
+   \item \textbf{5.0--6.9 (En riesgo)}: atención activa, 15--20\% de capacidad social, revisión semanal.
+   \item \textbf{1.0--4.9 (Crítico)}: intervención inmediata, 30--50\% de capacidad social, escalar a CTO, reducir alcance técnico.
+\end{itemize}
+
+\subsubsection{Alertas tempranas}
+
+\begin{itemize}
+   \item Caída $>$1.5 puntos en una semana: investigar inmediatamente.
+   \item 3 semanas consecutivas de caída: activar protocolo ``En riesgo''.
+   \item Cualquier dimensión $<$4.0: priorizar esa dimensión.
+   \item $<$50\% de respuesta en encuestas por 2 semanas: revisar el proceso.
+\end{itemize}
+
+\subsection{Framework de priorización social-técnica}
+
+SocialScrum introduce un ``Triángulo de Decisión'' con tres dimensiones evaluadas en escala 1--10:
+
+\begin{enumerate}
+   \item \textbf{Valor de negocio} (responsable: Product Owner): beneficio para el cliente u organización.
+   \item \textbf{Urgencia técnica} (responsable: Development Team): necesidad desde la perspectiva de arquitectura o calidad.
+   \item \textbf{Salud social} (responsable: Social Guide): necesidad de restaurar la capacidad del equipo.
+\end{enumerate}
+
+No se usa fórmula matemática; se estructura una conversación entre los responsables de cada vértice. Tres reglas de oro para casos extremos:
+
+\begin{enumerate}
+   \item Health Score $<$ 5 $\rightarrow$ no comprometer features de alta complejidad.
+   \item Valor de negocio 10 + Salud social 10 $\rightarrow$ escalar decisión al CTO.
+   \item Health Score $\geq$ 8 $\rightarrow$ priorizar por valor + urgencia técnica (SocialScrum se comporta como Scrum estándar).
+\end{enumerate}
+
+\subsection{Sistema de estimación Social Story Points (SSP)}
+
+Los SSP permiten que el esfuerzo social sea visible y planificable en el Sprint, al igual que los Story Points técnicos. La escala, el proceso y las prácticas se resumen a continuación.
+
+\subsubsection{Escala y rangos de referencia}
+
+\begin{center}
+   \begin{tabular}{lcll}
+      \toprule
+      \textbf{SSP} & \textbf{Duración típica} & \textbf{Tipo de intervención}               & \textbf{Ejemplo}                 \\
+      \midrule
+      1--2         & 1--4 h                   & Conversación facilitada, ajuste menor       & Feedback rápido, norma simple    \\
+      3--5         & 4 h--2 días              & Workshop, mediación, retrospectiva profunda & Código de conducta, mediación    \\
+      8--13        & 2 días--1 semana         & Intervención organizacional, crisis         & Burnout severo, cambio liderazgo \\
+      \bottomrule
+   \end{tabular}
+\end{center}
+
+\subsubsection{Proceso de estimación}
+
+Se aplican tres pasos: (1) \textbf{Identificar el community smell} a partir del Registro de Community Smells; (2) \textbf{evaluar severidad} según el Health Score y la observación directa (Leve 1--2 SSP base, Moderada 3--5, Severa 5--8, Crítica 8--13); y (3) \textbf{evaluar complejidad de intervención} según alcance, facilitación necesaria y número de sesiones (Baja +0, Media +1, Alta +2). El SSP final se calcula como:
+$$\text{SSP Final} = \text{SSP Base (severidad)} + \text{Ajuste (complejidad)}$$
+
+\subsubsection{Integración con Story Points técnicos}
+
+Dado que 1 SSP $\approx$ 1 SP, ambos tipos de ítems se suman para calcular la capacidad total del Sprint. Por ejemplo: si el equipo tiene velocidad de 50 puntos y asigna 20\% a deuda social, dispone de 40 SP técnicos + 10 SSP sociales. Esta integración permite que el Product Owner y el Social Guide negocien la distribución de capacidad de forma transparente durante el Social Sprint Planning, usando la misma unidad de medida.
+
+\textbf{Mejores prácticas}: estimar conservadoramente (añadir 20\% de buffer en situaciones inciertas), descomponer ítems que superen 8 SSP, registrar el esfuerzo real vs. estimado para calibrar la escala, y asegurar que cada ítem corresponda a un community smell específico (evitar ítems vagos como ``mejorar comunicación'').
+
+\subsection{Salvaguardas éticas}
+
+Las salvaguardas éticas son requisitos indispensables, no recomendaciones:
+
+\begin{itemize}
+   \item \textbf{Confidencialidad absoluta}: ningún dato de eventos sociales puede usarse para evaluaciones de desempeño ni decisiones de empleo. Se comparten solo datos agregados y anónimos.
+   \item \textbf{Consentimiento informado}: cada miembro entiende qué información se recopila, para qué, quién tiene acceso y cuáles son sus derechos. Umbral mínimo: 70\% del equipo.
+   \item \textbf{Anonimización}: reportes a nivel organizacional nunca permiten identificar individuos.
+   \item \textbf{Derecho de auditoría del equipo}: el equipo revisa cualquier reporte antes de su difusión externa y puede bloquear su publicación si vulnera las salvaguardas.
+   \item \textbf{Prevención del ``teatro social''}: garantizar que reconocer problemas no genera consecuencias negativas; si las salvaguardas fallan, el equipo fingirá bienestar.
+\end{itemize}
+
+% ============================================================
+\section{Simulación de implementación: caso del equipo Phoenix}
+% ============================================================
+
+Para ilustrar la aplicación práctica, SocialScrum se simuló durante 3 Sprints en un equipo ficticio (basado en patrones reales):
+
+\textbf{Contexto}: equipo de 7 personas, modalidad híbrida, 18 meses con Scrum estándar. Síntomas: velocidad inconsistente, conflicto no resuelto entre dos desarrolladores, concentración de conocimiento en una persona (60\% del código crítico), retrospectivas ``ceremoniales''.
+
+\textbf{Diagnóstico inicial}: Health Score = 5.2/10 (zona ``en riesgo''). Community smells activos: Radio Silence (alta severidad), Organisational Silo (media), Lone Wolf (media).
+
+\textbf{Evolución en 3 Sprints}:
+
+\begin{center}
+   \begin{tabular}{lcccc}
+      \toprule
+      \textbf{Métrica}      & \textbf{Inicial} & \textbf{Sprint 1} & \textbf{Sprint 2} & \textbf{Sprint 3} \\
+      \midrule
+      Health Score          & 5.2              & 5.8               & 6.4               & 7.1               \\
+      Velocity (SP)         & 38               & 42                & 45                & 48                \\
+      Smells activos        & 3                & 3                 & 2                 & 1                 \\
+      Capacidad social (\%) & 0                & 16                & 20                & 12                \\
+      \bottomrule
+   \end{tabular}
+\end{center}
+
+\textbf{Intervenciones clave}: sesión de alineación entre desarrolladores en conflicto, pair programming rotativo, transferencia de conocimiento de la desarrolladora senior al equipo (bus factor pasó de 1 a 3), creación de canal de comunicación social, acuerdo de feedback con reglas explícitas, ritual de sincronización semanal entre áreas Frontend y Backend.
+
+\textbf{Resultado}: mejora del Health Score de +36\%, aumento de velocity de +26\%, reducción de smells activos de 3 a 1. Aunque la correlación no prueba causalidad, la consistencia de ambas tendencias sugiere que abordar la deuda social beneficia tanto el bienestar del equipo como su productividad.
+
+% ============================================================
+\section{Limitaciones reconocidas}
+% ============================================================
+
+\begin{itemize}
+   \item SocialScrum no ha sido validado empíricamente en múltiples organizaciones.
+   \item No funciona en entornos con toxicidad organizacional severa (desconfianza sistémica, abuso jerárquico normalizado).
+   \item La escalabilidad no es lineal: gestionar la deuda social de múltiples equipos requiere construir cultura, no solo contratar Social Guides.
+   \item La sobrecarga de 15--20\% de capacidad puede ser prohibitiva en equipos bajo presión extrema de entrega.
+   \item El perfil híbrido del Social Guide (psicología + técnica) es escaso en el mercado laboral actual.
+   \item Tensiones inherentes (Product Owner vs.\ Social Guide; supervisión del Social Guide por quien puede ser parte del problema) no se eliminan, solo se hacen visibles.
+\end{itemize}
