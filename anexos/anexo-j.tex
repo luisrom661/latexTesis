@@ -1,17 +1,17 @@
 \chapter{Catálogo de Estrategias de Mitigación}
 \label{anexo:catalogo-estrategias-mitigacion}
 
-Este anexo presenta un catálogo de estrategias de mitigación para diferentes categorías de \textit{community smells}. Cada estrategia incluye una descripción, pasos recomendados y consideraciones clave para su implementación efectiva.
+Este anexo presenta un catálogo de estrategias de mitigación para diferentes categorías de \gls{community-smells}. Cada estrategia incluye una descripción, pasos recomendados y consideraciones clave para su implementación efectiva.
 
 \section{Estrategias de mitigación de community smells}
 
-Detectar un \textit{community smell} es solo el primer paso. La detección sin acción genera frustración: el equipo sabe que hay un problema pero no ve mejora. Esta sección proporciona un catálogo de estrategias de mitigación basadas en la taxonomía de \textit{community smells} de Caballero et al.\ \cite{caballero2022communitysmells}, organizadas por categoría de smell. Herramientas como csDetector \cite{almarimi2021csDetector} permiten detección automática de algunos de estos patrones a partir de metadatos de repositorios.
+Detectar un Olor Comunitario es solo el primer paso. La detección sin acción genera frustración: el equipo sabe que hay un problema pero no ve mejora. Esta sección proporciona un catálogo de estrategias de mitigación basadas en la taxonomía de \gls{community-smells} de Caballero et al.\ \cite{caballero2022communitysmells}, organizadas por categoría de smell. Herramientas como csDetector \cite{almarimi2021csDetector} permiten detección automática de algunos de estos patrones a partir de metadatos de repositorios.
 
 El objetivo no es eliminar todos los smells ---algunos son síntomas de tensiones organizacionales que el equipo no controla--- sino reducir su impacto en la capacidad del equipo de entregar valor.
 
 \subsection{Catálogo de estrategias por categoría}
 
-Para cada categoría de \textit{community smell}, se describen problemas comunes, ejemplos representativos y tipos de intervención recomendados (ver Tabla~\ref{tab:categorias-smells}).
+Para cada categoría de Olor Comunitario, se describen problemas comunes, ejemplos representativos y tipos de intervención recomendados (ver Tabla~\ref{tab:categorias-smells}).
 
 \begin{table}[!htbp]
     \centering
@@ -28,7 +28,7 @@ Para cada categoría de \textit{community smell}, se describen problemas comunes
         Conocimiento
                            & Saber técnico concentrado o no compartido
                            & \gls{cs-truck-factor} = 1, \gls{cs-knowledge-islands}, \gls{cs-outdated-documentation}, \gls{cs-tribal-knowledge}, \gls{cs-expert-bottleneck}
-                           & \textit{Pair programming}, documentación y rotación                                                                                                                                                             \\
+                           & \gls{pair-programming}, documentación y rotación                                                                                                                                                                \\
         \hline
         Relacional
                            & Conflictos, exclusión y dinámicas tóxicas
@@ -41,7 +41,7 @@ Para cada categoría de \textit{community smell}, se describen problemas comunes
                            & Escalamiento, negociación y reestructuración                                                                                                                                                                    \\
         \hline
     \end{tabularx}
-    \caption{Categorías de \textit{community smells}, ejemplos e intervenciones}
+    \caption{Categorías de \gls{community-smells}, ejemplos e intervenciones}
     \label{tab:categorias-smells}
 \end{table}
 \FloatBarrier
@@ -116,7 +116,7 @@ Estas estrategias se enfocan en mejorar la gestión y transferencia del conocimi
         \textit{Truck Factor} = 1
                        & “Solo Juan sabe cómo funciona X”; bloqueos cuando Juan no está
                        & 1) Identificar componentes críticos con un solo experto.
-        2) \textit{Pair programming} forzado: Juan + otro dev en cada tarea del componente.
+        2) \gls{pair-programming} forzado: Juan + otro dev en cada tarea del componente.
         3) Juan documenta la arquitectura básica (2–3 páginas).
         4) Otro dev realiza un cambio pequeño de forma autónoma; Juan revisa.
                        & 5--8                                                                                                                              \\
@@ -138,10 +138,10 @@ Estas estrategias se enfocan en mejorar la gestión y transferencia del conocimi
                        & 3--5                                                                                                                              \\
         \hline
         \gls{cs-tribal-knowledge}
-                       & Conocimiento principalmente oral; el \textit{onboarding} toma meses
-                       & 1) Grabar sesiones de \textit{onboarding} para reutilizarlas.
+                       & Conocimiento principalmente oral; la incorporación toma meses
+                       & 1) Grabar sesiones de incorporaciones para reutilizarlas.
         2) Crear un \textit{playbook} de operaciones comunes.
-        3) \textit{Pair programming} intensivo durante las primeras dos semanas.
+        3) \gls{pair-programming} intensivo durante las primeras dos semanas.
         4) Implementar un sistema de compañeros (\textit{buddy system}) para nuevos miembros.
                        & 5--8                                                                                                                              \\
         \hline
@@ -173,7 +173,7 @@ Estas estrategias se enfocan en mejorar las interacciones y relaciones dentro de
         \gls{cs-lone-wolf}
                        & Trabaja solo; no pide ni ofrece ayuda; PRs sin contexto
                        & 1) 1:1 para entender la motivación (preferencia o desconfianza).
-        2) Pair programming gradual (1 hora al día).
+        2) \gls{pair-programming} gradual (1 hora al día).
         3) Asignar tareas que requieran colaboración.
         4) Reconocer públicamente cuando colabora.
                        & 3--5                                                                                                                                     \\
@@ -264,7 +264,7 @@ Estas estrategias abordan problemas estructurales y de proceso que afectan al eq
                        & 1) Documentar el impacto en velocidad y calidad.
         2) Escalar a liderazgo con datos.
         3) Negociar un período mínimo de estabilidad.
-        4) Si no es posible cambiar, optimizar el onboarding.
+        4) Si no es posible cambiar, optimizar la incorporación.
                        & 5--8                                                                                                                      \\
         \hline
     \end{tabularx}

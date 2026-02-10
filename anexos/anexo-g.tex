@@ -66,7 +66,7 @@ También se definen las métricas de éxito que permitirán evaluar si la implem
 
 \begin{itemize}
     \item El Health Score aumenta al menos en 1 punto después de tres Sprints.
-    \item Se logra mitigar parcialmente al menos un \textit{community smell} crítico.
+    \item Se logra mitigar parcialmente al menos un Olor Comunitario crítico.
     \item La velocidad no cae más del 20\% en el proceso de adopción y muestra señales de recuperación en el Sprint 3.
 \end{itemize}
 
@@ -116,7 +116,7 @@ El programa consta de cuatro fases secuenciales con criterios de aprobación en 
                     \begin{itemize}
                         \item Qué es, diagnóstico de baja confianza, entrevista rápida
                     \end{itemize}
-              \item \textbf{Sesión 3: \textit{Community Smells} (2h)}
+              \item \textbf{Sesión 3: \gls{community-smells} (2h)}
                     \begin{itemize}
                         \item Catálogo, identificación, registro (Cap. 4.5.3)
                     \end{itemize}
@@ -267,22 +267,22 @@ El programa consta de cuatro fases secuenciales con criterios de aprobación en 
     \small
     \begin{tabularx}{\textwidth}{|X|c|X|X|}
         \hline
-        \textbf{Riesgo identificado} & \textbf{Probabilidad}                                                           & \textbf{Impacto potencial} & \textbf{Mitigación acordada} \\
+        \textbf{Riesgo identificado} & \textbf{Probabilidad}                                                                 & \textbf{Impacto potencial} & \textbf{Mitigación acordada} \\
         \hline
         Conflicto entre Ana y Carlos en el módulo de pagos
                                      & Alta
                                      & Bloqueo de una funcionalidad crítica
-                                     & Sesión de alineación previa al inicio del trabajo conjunto.                                                                                 \\
+                                     & Sesión de alineación previa al inicio del trabajo conjunto.                                                                                       \\
         \hline
         Dependencia única de Miguel en el backend
                                      & Media
                                      & Retraso significativo en caso de ausencia
-                                     & Pair programming dos horas al día con Laura para transferencia de conocimiento.                                                             \\
+                                     & \gls{pair-programming} dos horas al día con Laura para transferencia de conocimiento.                                                             \\
         \hline
         Fatiga generalizada (Health Score 5.8)
                                      & Alta
                                      & Reducción estimada de la velocidad entre 20 y 30\%
-                                     & Reducción del compromiso del Sprint a 38 puntos.                                                                                            \\
+                                     & Reducción del compromiso del Sprint a 38 puntos.                                                                                                  \\
         \hline
     \end{tabularx}
     \caption{Ejemplo de registro de riesgos sociales del Sprint}
@@ -306,7 +306,7 @@ Este registro se revisa en la Social Sprint Retrospective para evaluar si los ri
                           & 2 min
                           & Comparación y explicación de cambios significativos entre mediciones consecutivas.                                 \\
         \hline
-        \textit{Community smells} abordados
+        \gls{community-smells} abordados
                           & 3 min
                           & Revisión de los ítems sociales completados y del impacto observable generado.                                      \\
         \hline
@@ -336,7 +336,7 @@ Técnica principal: Se identifican cuatro cuadrantes sociales tales como la cola
 
 \paragraph{Fase 3: Análisis de patrones}
 
-Selección de 2-3 temas prioritarios mediante la votación por puntos. Análisis de causa raíz con \gls{five-whys} adaptados a contexto social. El Social Guide redirige señalamientos de culpables hacia condiciones sistémicas. Mapeo a \textit{community smells} del catálogo cuando corresponda.
+Selección de 2-3 temas prioritarios mediante la votación por puntos. Análisis de causa raíz con \gls{five-whys} adaptados a contexto social. El Social Guide redirige señalamientos de culpables hacia condiciones sistémicas. Mapeo a \gls{community-smells} del catálogo cuando corresponda.
 
 \paragraph{Fase 4: Generación de compromisos}
 
