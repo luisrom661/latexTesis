@@ -99,7 +99,7 @@
 \usepackage[most]{tcolorbox}         % Cajas de color decorativas
 \usepackage{hyperref}                % Enlaces e hipervínculos (DEBE ir antes de glossaries)
 \usepackage{bookmark}                % Mejora de marcadores PDF
-\usepackage[toc,acronym,nolangwarn,numberedsection]{glossaries}  % Glosarios y acrónimos (después de hyperref para hipervínculos)
+\usepackage[toc,acronym,nolangwarn]{glossaries}  % Glosarios y acrónimos (después de hyperref para hipervínculos)
 \makeglossaries
 \usepackage{pdfpages}                % Inclusión de PDFs completos
 
@@ -186,6 +186,36 @@
 % ==============================================================================
 
 \usepackage{titlesec}
+
+% Definición para ajustar el formato de los anexos en la TOC
+\makeatletter
+\let\l@chapteroriginal\l@chapter
+\newcommand{\l@chapterappendix}[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{7.0em}% Ancho reservado para "ANEXO X:" (Ajustar si es necesario)
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      % Redefinir cómo se muestra el número (##1 para el argumento de numberline dentro de esta definición)
+      \def\numberline##1{\hb@xt@\@tempdima{ANEXO ##1: \hfil}}%
+      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi
+}
+
+\newcommand{\setupAppendixTOC}{%
+  \let\l@chapter\l@chapterappendix
+}
+\newcommand{\restoreAppendixTOC}{%
+  \let\l@chapter\l@chapteroriginal
+}
+\makeatother
 
 % --- Formato de capítulos ---
 \titleformat{\chapter}[hang]
@@ -302,16 +332,7 @@
 {\MakeUppercase}
 
 % Hacer que la TOC muestre "ANEXO C: Título" en vez de solo "C Título"
-\makeatletter
-\let\oldchaptercontentsline\l@chapter
-\renewcommand{\l@chapter}[2]{%
-  \begingroup
-  \let\oldnumberline\numberline
-  \renewcommand{\numberline}[1]{ANEXO ##1: }%
-  \oldchaptercontentsline{#1}{#2}%
-  \endgroup
-}
-\makeatother
+\addtocontents{toc}{\protect\setupAppendixTOC}
 
 % Saltar A y B (anexos comentados)
 \setcounter{chapter}{0}
@@ -336,6 +357,7 @@
 % ==============================================================================
 
 \cleardoublepage
+\addtocontents{toc}{\protect\restoreAppendixTOC}
 \addcontentsline{toc}{chapter}{\MakeUppercase{REFERENCIAS BIBLIOGRÁFICAS}}
 \printbibliography
 
