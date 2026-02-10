@@ -104,14 +104,14 @@ La búsqueda manual reveló que las frases clave ``social debt'' y ``agile softw
 \renewcommand{\arraystretch}{1.4} % Mayor espacio entre filas para facilitar la lectura
 
 \begin{longtable}[H]{
-    >{\Centering\hspace{0pt}}p{0.8cm}    % Col 1: No.
-    >{\RaggedRight\hspace{0pt}}p{8.5cm}  % Col 2: Cadena de búsqueda
-    >{\RaggedRight\hspace{0pt}}p{2.5cm}  % Col 3: Fuente
-    >{\RaggedRight\hspace{0pt}}p{2.0cm}  % Col 4: Estado
+    >{\Centering\hspace{0pt}}p{0.8cm}      % Col 1: No.
+    >{\RaggedRight\hspace{0pt}}p{9.0cm}    % Col 2: Cadena de búsqueda 
+    >{\Centering\hspace{0pt}}p{2.5cm}      % Col 3: Fuente 
+    >{\Centering\hspace{0pt}}p{2.0cm}      % Col 4: Estado 
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-    \caption{Cadenas de búsqueda utilizadas en la revisión sistemática} \label{tab:cadenas-busqueda}                                        \\
+    \caption{Cadenas de búsqueda utilizadas en la revisión sistemática.} \label{tab:cadenas-busqueda}                                       \\
     \toprule
     \textbf{No.} & \textbf{Cadena de búsqueda}                                                          & \textbf{Fuente} & \textbf{Estado} \\
     \midrule
@@ -143,62 +143,70 @@ La búsqueda manual reveló que las frases clave ``social debt'' y ``agile softw
 \endgroup
 
 
+
 La cadena de búsqueda se aplicó a una ventana de tiempo desde 2013 hasta 2024, adaptándose a los filtros y parámetros específicos de cada motor de búsqueda. Tras realizar las modificaciones necesarias a la cadena de búsqueda básica, se inició la búsqueda en cada motor. La Tabla \ref{tab:resultados-busqueda-longtable} muestra el total de artículos encontrados, relevantes, repetidos y primarios.
 
 \begingroup
-\scriptsize
-\renewcommand{\arraystretch}{1.4}
-
+\scriptsize % Fuente ligeramente reducida
+\setlength{\LTleft}{0pt} % Alinear tabla a la izquierda
+\setlength{\LTright}{0pt} % Permitir que la tabla ocupe espacio a la derecha
+\setlength{\tabcolsep}{5pt} % Ajuste de espacio entre columnas
+\renewcommand{\arraystretch}{1.4} % Mayor espacio entre filas
 \begin{longtable}[H]{
-    >{\Centering\hspace{0pt}}p{1.0cm}
-    >{\RaggedRight\hspace{0pt}}p{4.2cm}
-    >{\Centering\hspace{0pt}}p{1.8cm}
-    >{\Centering\hspace{0pt}}p{1.8cm}
-    >{\Centering\hspace{0pt}}p{2.4cm}
-    >{\Centering\hspace{0pt}}p{2.4cm}
+    >{\Centering\hspace{0pt}}p{0.8cm}   % Col 1: No.
+    >{\RaggedRight\hspace{0pt}}p{4.8cm} % Col 2: Motor de búsqueda (Aumentado para llenar ancho)
+    >{\Centering\hspace{0pt}}p{1.8cm}   % Col 3: Encontrados
+    >{\Centering\hspace{0pt}}p{1.8cm}   % Col 4: Relevantes
+    >{\Centering\hspace{0pt}}p{2.2cm}   % Col 5: Relevantes repetidos
+    >{\Centering\hspace{0pt}}p{2.5cm}   % Col 6: Primarios seleccionados
     }
+    % --- CÁLCULO DE ANCHOS ---
+    % Objetivo: ~16.5 - 17cm (Ancho texto A4 típico con márgenes 2.5cm)
+    % -------------------------
 
-    \caption{Resultados por motor de búsqueda en la revisión sistemática}
-    \label{tab:resultados-busqueda-longtable}                                                                                      \\
+    % Encabezado primera página
+    \caption{Resultados por motor de búsqueda en la revisión sistemática} \label{tab:resultados-busqueda-longtable}                                           \\
     \toprule
-    \textbf{No.}        & \textbf{Motor de búsqueda}    & \textbf{Encontrados}             &
-    \textbf{Relevantes} & \textbf{Relevantes repetidos} & \textbf{Primarios seleccionados}                                         \\
+    \textbf{No.} & \textbf{Motor de búsqueda} & \textbf{Encontrados} & \textbf{Relevantes} & \textbf{Relevantes repetidos} & \textbf{Primarios seleccionados} \\
     \midrule
     \endfirsthead
 
-    \multicolumn{6}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                        \\
+    % Encabezado páginas siguientes
+    \multicolumn{6}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                   \\
     \toprule
-    \textbf{No.}        & \textbf{Motor de búsqueda}    & \textbf{Encontrados}             &
-    \textbf{Relevantes} & \textbf{Relevantes repetidos} & \textbf{Primarios seleccionados}                                         \\
+    \textbf{No.} & \textbf{Motor de búsqueda} & \textbf{Encontrados} & \textbf{Relevantes} & \textbf{Relevantes repetidos} & \textbf{Primarios seleccionados} \\
     \midrule
     \endhead
 
+    % Pie páginas intermedias
     \midrule
-    \multicolumn{6}{r}{\textit{Continúa en la siguiente página...}}                                                                \\
+    \multicolumn{6}{r}{\textit{Continúa en la siguiente página...}}                                                                                           \\
     \endfoot
 
+    % Pie final
     \bottomrule
-    \multicolumn{6}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No).}}                                           \\
+    \multicolumn{6}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No).}}                                                                      \\
     \endlastfoot
 
-    1                   & Google Scholar                & 130                              & 15          & 0          & 8          \\
-    2                   & IEEE Xplore                   & 28                               & 3           & 0          & 0          \\
-    3                   & Science Direct                & 5                                & 0           & 0          & 0          \\
-    4                   & SpringerLink                  & 35                               & 2           & 0          & 0          \\
+    % CONTENIDO
+    1            & Google Scholar             & 130                  & 15                  & 0                             & 8                                \\
+    2            & IEEE Xplore                & 28                   & 3                   & 0                             & 0                                \\
+    3            & Science Direct             & 5                    & 0                   & 0                             & 0                                \\
+    4            & SpringerLink               & 35                   & 2                   & 0                             & 0                                \\
     \midrule
-                        & \textbf{Total}                & \textbf{198}                     & \textbf{20} & \textbf{0} & \textbf{8} \\
+                 & \textbf{Total}             & \textbf{198}         & \textbf{20}         & \textbf{0}                    & \textbf{8}                       \\
 \end{longtable}
 \endgroup
 
 
-En la Tabla \ref{tab:preguntas-investigacion-longtable} se presentan las preguntas de investigación definidas que ayudaron a segmentar la información identificada en los artículos primarios, su motivación y la relación que tienen con los objetivos propuestos en la RSL. Debido a la limitación de espacio, la RSL se puede consultar en detalle en el Anexo A.
+En la Tabla \ref{tab:preguntas-investigacion-longtable} se presentan las preguntas de investigación definidas que ayudaron a segmentar la información identificada en los artículos primarios, su motivación y la relación que tienen con los objetivos propuestos en la RSL. Debido a la limitación de espacio, la RSL se puede consultar en detalle en el Anexo~\ref{anexo:a}.
 
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
 
 \begin{longtable}[H]{
-    >{\Centering\hspace{0pt}}p{1.2cm}     % Id.
+    >{\Centering\hspace{0pt}}p{0.7cm}     % Id.
     >{\RaggedRight\hspace{0pt}}p{7.5cm}   % Pregunta de investigación
     >{\RaggedRight\hspace{0pt}}p{6.5cm}   % Motivación
     }
@@ -263,16 +271,16 @@ Por otra parte, también se presentan oportunidades para investigar, entre ellas
 
 \textbf{PI6: ¿Cuáles son las practicas o enfoques que abordan de manera exitosa la gestión de la deuda social en el desarrollo de software ágil?}
 
-Dressen \textit{et al.} \cite{dreesen2021socialdebt} sugieren una estrategia para abordar la deuda social fundamentada en el modelo de las 3C’s, que enfatiza las deficiencias en comunicación, colaboración y coordinación. El enfoque de mitigación sugerido por Dressen \textit{et al.} \cite{dreesen2021socialdebt} se concentra particularmente en mejorar la comunicación y la colaboración, destacando los siguientes puntos:
+Dressen \textit{et al.} \cite{dreesen2021socialdebt} sugieren una estrategia para abordar la deuda social fundamentada en el modelo de las 3C’s, que enfatiza las deficiencias en comunicación, colaboración y coordinación. El enfoque de mitigación sugerido por Dressen \textit{et al.} \cite{dreesen2021socialdebt} se concentra particularmente en mejorar la comunicación y la colaboración, destacando los siguientes puntos presentados en la Tabla \ref{tab:enfoques_mitigacion}:
 
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
 
 \begin{longtable}{
-    >{\Centering\hspace{0pt}}p{1.2cm}
-    >{\RaggedRight\hspace{0pt}}p{4.2cm}
-    >{\RaggedRight\hspace{0pt}}p{10.6cm}
+    >{\Centering\hspace{0pt}}p{0.7cm}
+    >{\RaggedRight\hspace{0pt}}p{4.0cm}
+    >{\RaggedRight\hspace{0pt}}p{10.0cm}
     }
 
     \caption{Enfoques de mitigación de la deuda social en equipos de desarrollo de software ágil distribuido.}
@@ -320,20 +328,20 @@ Dressen \textit{et al.} \cite{dreesen2021socialdebt} sugieren una estrategia par
 \end{longtable}
 \endgroup
 
-Por otra parte, Saeeda \textit{et al.} \cite{saeeda2024multivocal} llevaron a cabo un estudio exhaustivo sobre varios tipos de deuda no técnica, incluyendo la deuda social, explorando sus causas y proponiendo múltiples estrategias para su mitigación. Identifican que las causas de la deuda social derivan de tres factores principales: limitaciones sociales, desafíos organizacionales y dinámicas comunitarias. A partir de estos factores, se delinean ocho estrategias basadas en evidencias de la literatura científica y gris para reducir la deuda social, las cuales son:
+Por otra parte, Saeeda \textit{et al.} \cite{saeeda2024multivocal} llevaron a cabo un estudio exhaustivo sobre varios tipos de deuda no técnica, incluyendo la deuda social, explorando sus causas y proponiendo múltiples estrategias para su mitigación. Identifican que las causas de la deuda social derivan de tres factores principales: limitaciones sociales, desafíos organizacionales y dinámicas comunitarias. A partir de estos factores, se delinean ocho estrategias basadas en evidencias de la literatura científica y gris para reducir la deuda social, como se puede visualizar en la Tabla \ref{tab:estrategias_mitigacion_enfoque} las cuales son:
 
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
 
 \begin{longtable}{
-    >{\Centering\hspace{0pt}}p{1.2cm}
-    >{\RaggedRight\hspace{0pt}}p{4.2cm}
-    >{\RaggedRight\hspace{0pt}}p{10.6cm}
+    >{\Centering\hspace{0pt}}p{0.7cm}
+    >{\RaggedRight\hspace{0pt}}p{4.0cm}
+    >{\RaggedRight\hspace{0pt}}p{10.0cm}
     }
 
     \caption{Estrategias de mitigación de la deuda social en equipos de desarrollo de software.}
-    \label{tab:estrategias_mitigacion}                                                                                                                                                                                                                                                                                                                                                     \\
+    \label{tab:estrategias_mitigacion_enfoque}                                                                                                                                                                                                                                                                                                                                             \\
     \toprule
     \textbf{No.}                                                                & \textbf{Estrategias de mitigación} & \textbf{Descripción}                                                                                                                                                                                                                                                \\
     \midrule

@@ -561,7 +561,7 @@ CORRELACIÓN CON MÉTRICAS TÉCNICAS
 -----------------------------------------------------------
 
 Health Score: __/10
-Velocity actual: __ SP (vs __ SP normal)
+velocidad actual: __ SP (vs __ SP normal)
 Defectos: __ (vs __ promedio)
 Observaciones: _______________________
 \end{verbatim}
@@ -670,10 +670,10 @@ RESUMEN EJECUTIVO
 El equipo [Nombre] tiene Health Score de __/10 (mes anterior: __/10).
 Tendencia: [MEJORANDO / ESTABLE / REQUIERE ATENCIÓN]
 
-Velocity técnica:
+velocidad técnica:
 - Mes anterior: __ SP
 - Mes actual: __ SP
-- Correlación: Health Score +1 punto = Velocity +__% aproximadamente
+- Correlación: Health Score +1 punto = velocidad +__% aproximadamente
 
 -----------------------------------------------------------
 HEALTH SCORE - TENDENCIA 3 MESES
@@ -769,7 +769,7 @@ Definición:
 
 Severidad: [LEVE / MODERADA / SEVERA / CRÍTICA]
 - Personas afectadas: __
-- Impacto en velocity/calidad: _______________
+- Impacto en velocidad/calidad: _______________
 - Riesgo si no se resuelve: _______________
 
 Dimensión de Health Score afectada: _______________
@@ -804,7 +804,7 @@ Fuentes de datos:
 1. Jira/Azure DevOps API
    - Ítems técnicos: Story Points, status, Sprint
    - Ítems sociales: SSP, community smell, severity
-   - Velocity por Sprint
+   - velocidad por Sprint
 
 2. Formulario de Health Score (Google Forms / Microsoft Forms)
    - Respuestas individuales (anónimas)
@@ -824,7 +824,7 @@ Pipeline:
 [Manual] ------+
 
 Frecuencia de actualización:
-- Velocity: Automática al cerrar Sprint
+- velocidad: Automática al cerrar Sprint
 - Health Score: Semanal (después de retrospectiva)
 - Community Smells: Tiempo real (cuando se crean/cierran ítems)
 \end{verbatim}
@@ -838,13 +838,13 @@ Para equipos sin acceso a herramientas BI, Google Sheets proporciona visualizaci
 
 Hoja 1: "Datos"
 - Columnas: Sprint, Fecha, Apertura, Compromiso, Respeto, 
-            Foco, Coraje, Promedio, Velocity, Defectos
+            Foco, Coraje, Promedio, velocidad, Defectos
 - Una fila por Sprint
 
 Hoja 2: "Dashboard"
 - Gráfico de líneas: Health Score Promedio vs Sprint
 - Gráfico de radar: 5 dimensiones del Sprint actual
-- Gráfico de barras: Velocity vs Health Score (correlación)
+- Gráfico de barras: velocidad vs Health Score (correlación)
 - Tabla: Community Smells activos
 
 Fórmulas útiles:
@@ -882,10 +882,10 @@ Paneles recomendados:
    - 5 gauges, uno por dimensión
    - Colores: Verde (7+), Amarillo (4-6), Rojo (<4)
 
-3. Panel: "Correlación Health-Velocity"
+3. Panel: "Correlación Health-velocidad"
    - Tipo: Scatter plot
    - X: Health Score
-   - Y: Velocity
+   - Y: velocidad
    - Anotación: Línea de tendencia
 
 4. Panel: "Community Smells Activos"
@@ -912,7 +912,7 @@ Conexión de datos:
 - Google Sheets: Conector web
 
 Modelo de datos:
-- Tabla "Sprints": Sprint_ID, Start_Date, End_Date, Velocity
+- Tabla "Sprints": Sprint_ID, Start_Date, End_Date, velocidad
 - Tabla "Health_Scores": Sprint_ID, Date, Dimension, Score
 - Tabla "Social_Items": Item_ID, Sprint_ID, Smell, SSP, Status
 - Relaciones: Sprint_ID como clave foránea
@@ -931,7 +931,7 @@ Página 2: "Detalle por Dimensión"
 - Insights: Dimensión con mayor variabilidad
 
 Página 3: "Correlación"
-- Scatter: Health Score vs Velocity
+- Scatter: Health Score vs velocidad
 - Trendline: Regresión lineal
 - R-squared: Mostrar fuerza de correlación
 - Filtros: Por equipo, por período

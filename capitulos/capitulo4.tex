@@ -23,17 +23,17 @@ Este capítulo traslada el modelo teórico de SocialScrum (Capítulo~\ref{chap:c
 El Capítulo~\ref{chap:capitulo3} presentó el modelo conceptual de SocialScrum, sus bases teóricas y su arquitectura general. Allí se explicó cómo tres marcos teóricos complementarios sustentan la propuesta:
 
 \begin{enumerate}
-   \item \textbf{Teoría de la Autodeterminación \cite{bandura1997selfefficacy}:} proporciona las necesidades psicológicas (autonomía, competencia, relación) que los eventos sociales deben proteger.
-   \item \textbf{Modelo de confianza de Mayer et al. \cite{mayer1995integrative}:} define cómo se construye la confianza mutua (habilidad, benevolencia, integridad) en el equipo.
-   \item \textbf{Valores de Scrum \cite{schwaber2020scrum}:} establecen el cómo (coraje, apertura, respeto, compromiso, foco) para operacionalizar esas necesidades.
+    \item \textbf{Teoría de la Autodeterminación \cite{bandura1997selfefficacy}:} proporciona las necesidades psicológicas (autonomía, competencia, relación) que los eventos sociales deben proteger.
+    \item \textbf{Modelo de confianza de Mayer et al. \cite{mayer1995integrative}:} define cómo se construye la confianza mutua (habilidad, benevolencia, integridad) en el equipo.
+    \item \textbf{Valores de Scrum \cite{schwaber2020scrum}:} establecen el cómo (coraje, apertura, respeto, compromiso, foco) para operacionalizar esas necesidades.
 \end{enumerate}
 
 Sin embargo, un modelo sólido sigue siendo solo una idea hasta que se convierte en acciones concretas, protocolos operativos y herramientas que los equipos puedan usar en su día a día. Este capítulo cierra esa brecha, llevando SocialScrum del plano conceptual a la ejecución real mediante una estructura sintética orientada a la ingeniería de procesos.
 En concreto, incluimos el nuevo rol encargado de guiar el proceso de SocialScrum (Sección~\ref{sec:rol-social-guide}), además, mostramos cómo la autonomía se protege mediante los protocolos operativos de los eventos (Sección~\ref{sec:eventos-adaptados-socialscrum}), la confianza se construye a través de los principios de transparencia y confidencialidad (Sección~\ref{sec:adopcion-inicial} y Anexo~\ref{anexo:protocolos-eticos}), y los valores se practican en la gestión de artefactos y medición (Secciones~\ref{sec:artefactos-sociales} y \ref{sec:sistema-medicion-salud-social}). La propuesta se desglosa en tres niveles de operacionalización:
 \begin{enumerate}
-   \item \textbf{Adopción:} preparación del equipo y checklist de viabilidad (Sección~\ref{sec:adopcion-inicial}) ademas de la implementación del nuevo rol de Social Guide (Sección~\ref{sec:rol-social-guide}).
-   \item \textbf{Ejecución:} gestión de eventos, artefactos, métricas de salud social y el framework de priorización (Secciones~\ref{sec:eventos-adaptados-socialscrum} a \ref{sec:framework-priorizacion}).
-   \item \textbf{Gobernanza:} protección ética y escalabilidad, cuyos detalles procedimentales se desplazan a los Anexos~\ref{anexo:herramientas} y \ref{anexo:protocolos-eticos} para preservar el enfoque práctico del capítulo.
+    \item \textbf{Adopción:} preparación del equipo y checklist de viabilidad (Sección~\ref{sec:adopcion-inicial}) ademas de la implementación del nuevo rol de Social Guide (Sección~\ref{sec:rol-social-guide}).
+    \item \textbf{Ejecución:} gestión de eventos, artefactos, métricas de salud social y el framework de priorización (Secciones~\ref{sec:eventos-adaptados-socialscrum} a \ref{sec:framework-priorizacion}).
+    \item \textbf{Gobernanza:} protección ética y escalabilidad, cuyos detalles procedimentales se desplazan a los Anexos~\ref{anexo:herramientas} y \ref{anexo:protocolos-eticos} para preservar el enfoque práctico del capítulo.
 \end{enumerate}
 
 \textit{¿Por qué es importante este capítulo?} Porque responde las preguntas que cualquier equipo y organización se plantean antes de adoptar SocialScrum: ¿es viable en nuestro contexto? ¿Cómo se ejecuta en la vida diaria? ¿Qué hace exactamente el Social Guide? ¿Cómo se equilibran los ítems sociales con los técnicos sin parálisis? ¿Cómo se mide el progreso? ¿Y qué garantías existen para evitar que esto termine pareciendo vigilancia organizacional? Estas no son preguntas menores: tocan la viabilidad ética y operativa del modelo completo.
@@ -63,10 +63,10 @@ SocialScrum exige, como punto de partida, que existan al menos cuatro condicione
 El (\acrfull{cto}), \acrfull{vp} de Ingeniería o roles equivalentes, deben respaldar el modelo de forma clara y explícita. Ese respaldo no puede quedarse en discursos bienintencionados; tiene que verse reflejado en acciones concretas:
 
 \begin{itemize}
-   \item Asignar presupuesto para el rol del \gls{social-guide}, incluyendo tiempo protegido y capacitación especializada.
-   \item Aceptar el principio de no-sobrecarga: comprender que SocialScrum puede reducir temporalmente la capacidad técnica del equipo (entre un 10\% y un 20\%) mientras se atienden olores comunitarios críticos.
-   \item Comprometerse con las salvaguardas éticas: garantizar formalmente que la información recopilada por el Social Guide jamás se usará para evaluaciones de desempeño ni decisiones de empleo.
-   \item Estar dispuesto a intervenir cuando sea necesario: por ejemplo, ajustar la carga de trabajo, aprobar talleres especializados o apoyar la mediación en conflictos organizacionales.
+    \item Asignar presupuesto para el rol del \gls{social-guide}, incluyendo tiempo protegido y capacitación especializada.
+    \item Aceptar el principio de no-sobrecarga: comprender que SocialScrum puede reducir temporalmente la capacidad técnica del equipo (entre un 10\% y un 20\%) mientras se atienden olores comunitarios críticos.
+    \item Comprometerse con las salvaguardas éticas: garantizar formalmente que la información recopilada por el Social Guide jamás se usará para evaluaciones de desempeño ni decisiones de empleo.
+    \item Estar dispuesto a intervenir cuando sea necesario: por ejemplo, ajustar la carga de trabajo, aprobar talleres especializados o apoyar la mediación en conflictos organizacionales.
 \end{itemize}
 
 Si este compromiso no existe, el Social Guide quedará sin autoridad moral y sin los recursos necesarios para actuar. Una señal evidente de falta de respaldo es cuando el liderazgo afirma: ``Sí, implementen SocialScrum… pero sin afectar la velocidad ni pedir recursos adicionales''. Eso no es compromiso; es delegar sin ofrecer apoyo real.
@@ -76,10 +76,10 @@ Si este compromiso no existe, el Social Guide quedará sin autoridad moral y sin
 SocialScrum no es una herramienta de rescate para organizaciones profundamente tóxicas. Si la cultura presenta los siguientes síntomas de manera sistémica, la adopción debe posponerse hasta que ocurra una intervención más profunda a nivel organizacional:
 
 \begin{itemize}
-   \item \textbf{Desconfianza institucionalizada}: la gerencia utiliza información en contra de los empleados de forma recurrente (por ejemplo, convertir comentarios de retrospectivas en sanciones o llamados de atención).
-   \item \textbf{Abuso jerárquico normalizado}: hay patrones evidentes de intimidación, acoso o micro-management destructivo que no tienen consecuencias para quienes los ejercen.
-   \item \textbf{Rotación extrema}: más del 30\% del equipo se va cada año por razones vinculadas al clima laboral (y no por oportunidades de crecimiento o factores de mercado).
-   \item \textbf{Comunicación totalmente fracturada}: la información crítica se oculta deliberadamente entre niveles jerárquicos, generando desinformación constante.
+    \item \textbf{Desconfianza institucionalizada}: la gerencia utiliza información en contra de los empleados de forma recurrente (por ejemplo, convertir comentarios de retrospectivas en sanciones o llamados de atención).
+    \item \textbf{Abuso jerárquico normalizado}: hay patrones evidentes de intimidación, acoso o micro-management destructivo que no tienen consecuencias para quienes los ejercen.
+    \item \textbf{Rotación extrema}: más del 30\% del equipo se va cada año por razones vinculadas al clima laboral (y no por oportunidades de crecimiento o factores de mercado).
+    \item \textbf{Comunicación totalmente fracturada}: la información crítica se oculta deliberadamente entre niveles jerárquicos, generando desinformación constante.
 \end{itemize}
 
 En contextos así, SocialScrum simplemente no puede operar: la seguridad psicológica ---la base misma del modelo \cite{edmondson1999psychological}--- no existe. Edmondson demostró que sin seguridad psicológica, los equipos no reportan problemas reales por temor a represalias, lo que invalida cualquier intento de gestión de deuda social. Intentar implementarlo sería como tratar de apagar un incendio con un vaso de agua: no solo es inútil, sino que puede empeorar la situación.
@@ -89,9 +89,9 @@ En contextos así, SocialScrum simplemente no puede operar: la seguridad psicol�
 El equipo necesita contar con un nivel mínimo de autonomía para decidir cómo trabaja. SocialScrum depende de esa capacidad de autogestión, porque requiere que el propio equipo pueda:
 
 \begin{itemize}
-   \item Priorizar ítems sociales dentro del Social Sprint Backlog sin tener que pedir autorización externa.
-   \item Ajustar su capacidad técnica según lo que refleje el Health Score.
-   \item Definir cómo abordar los \textit{community smells} (por ejemplo, implementar un daily asíncrono, modificar procesos de comunicación o establecer nuevas normas internas).
+    \item Priorizar ítems sociales dentro del Social Sprint Backlog sin tener que pedir autorización externa.
+    \item Ajustar su capacidad técnica según lo que refleje el Health Score.
+    \item Definir cómo abordar los \textit{community smells} (por ejemplo, implementar un daily asíncrono, modificar procesos de comunicación o establecer nuevas normas internas).
 \end{itemize}
 
 Si el equipo opera bajo un esquema de comando y control, donde cada decisión pasa por una aprobación gerencial, SocialScrum simplemente no podrá funcionar. La autoorganización no es un extra ni un ideal aspiracional: es un requisito operativo sin el cual el modelo no tiene espacio para florecer.
@@ -107,13 +107,13 @@ Un error frecuente es asignarle este rol al Scrum Master o al Product Owner. Aun
 Hay situaciones en las que intentar poner en marcha SocialScrum es más dañino que útil. Los siguientes casos son señales claras de que es mejor detenerse y replantear antes de avanzar:
 
 \begin{enumerate}
-   \item \textbf{Equipo en crisis severa}: cuando el Health Score está por debajo de 3/10, el equipo difícilmente tiene la estabilidad emocional para participar en un proceso de este tipo. En estos casos, lo urgente es estabilizar: reducir carga, buscar apoyo de mediación profesional o incluso considerar cambios de personal.
+    \item \textbf{Equipo en crisis severa}: cuando el Health Score está por debajo de 3/10, el equipo difícilmente tiene la estabilidad emocional para participar en un proceso de este tipo. En estos casos, lo urgente es estabilizar: reducir carga, buscar apoyo de mediación profesional o incluso considerar cambios de personal.
 
-   \item \textbf{Liderazgo hostil al modelo}: si el CTO o el VP de Ingeniería perciben SocialScrum como ``burocracia'' o ``pérdida de tiempo'', la implementación está destinada al fracaso. Sin respaldo real desde arriba, el Social Guide se convierte en una figura simbólica sin autoridad ni legitimidad.
+    \item \textbf{Liderazgo hostil al modelo}: si el CTO o el VP de Ingeniería perciben SocialScrum como ``burocracia'' o ``pérdida de tiempo'', la implementación está destinada al fracaso. Sin respaldo real desde arriba, el Social Guide se convierte en una figura simbólica sin autoridad ni legitimidad.
 
-   \item \textbf{Equipos temporales o en transición}: SocialScrum requiere cierta continuidad (al menos 3–4 Sprints trabajando juntos). Equipos que se forman y se disuelven con frecuencia no alcanzan a generar las relaciones ni la estabilidad que el modelo necesita para operar.
+    \item \textbf{Equipos temporales o en transición}: SocialScrum requiere cierta continuidad (al menos 3–4 Sprints trabajando juntos). Equipos que se forman y se disuelven con frecuencia no alcanzan a generar las relaciones ni la estabilidad que el modelo necesita para operar.
 
-   \item \textbf{Ausencia de salvaguardas éticas}: si la organización no garantiza confidencialidad, separación total frente a evaluaciones de desempeño e independencia del Social Guide respecto a HR, entonces la respuesta es clara: \textbf{NO implementar}. Sin ética, SocialScrum deja de ser una herramienta de bienestar y se convierte en vigilancia disfrazada.
+    \item \textbf{Ausencia de salvaguardas éticas}: si la organización no garantiza confidencialidad, separación total frente a evaluaciones de desempeño e independencia del Social Guide respecto a HR, entonces la respuesta es clara: \textbf{NO implementar}. Sin ética, SocialScrum deja de ser una herramienta de bienestar y se convierte en vigilancia disfrazada.
 \end{enumerate}
 
 \subsubsection{Evaluación inicial: checklist de viabilidad}
@@ -123,68 +123,71 @@ Antes de avanzar con la implementación, el equipo y el liderazgo deben completa
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
 
 \begin{longtable}[H]{
-   >{\RaggedRight\hspace{0pt}}p{6.5cm}   % Criterio
-   >{\Centering\hspace{0pt}}p{2.0cm}     % Sí/No
-   >{\RaggedRight\hspace{0pt}}p{6.5cm}   % Indicador observable
-   }
+    >{\RaggedRight\hspace{0pt}}p{6.5cm}   % Criterio
+    >{\Centering\hspace{0pt}}p{2.0cm}     % Sí/No
+    >{\RaggedRight\hspace{0pt}}p{6.7cm}   % Indicador observable
+    }
 
-   % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-   \caption{Checklist de viabilidad para la adopción de SocialScrum}
-   \label{tab:checklist-viabilidad}                                                                                                                                                \\
-   \toprule
-   \textbf{Criterio} & \textbf{Sí/No}                                                                                                              & \textbf{Indicador observable} \\
-   \midrule
-   \endfirsthead
+    % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
+    \caption{Checklist de viabilidad para la adopción de SocialScrum}
+    \label{tab:checklist-viabilidad}                                                                                                                                                \\
+    \toprule
+    \textbf{Criterio} & \textbf{Sí/No}                                                                                                              & \textbf{Indicador observable} \\
+    \midrule
+    \endfirsthead
 
-   % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-   \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                         \\
-   \toprule
-   \textbf{Criterio} & \textbf{Sí/No}                                                                                                              & \textbf{Indicador observable} \\
-   \midrule
-   \endhead
+    % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                         \\
+    \toprule
+    \textbf{Criterio} & \textbf{Sí/No}                                                                                                              & \textbf{Indicador observable} \\
+    \midrule
+    \endhead
 
-   % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-   \midrule
-   \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                 \\
-   \endfoot
+    % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                 \\
+    \endfoot
 
-   % --- 4. PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- 4. PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   ¿El liderazgo técnico (CTO/VP Eng) respalda de forma clara SocialScrum?
-                     & [  ]
-                     & CTO/VP asistió al Sprint 0; aprobó presupuesto por escrito; documentó compromisos de confidencialidad.                                                      \\
+    ¿El liderazgo técnico (CTO/VP Eng) respalda de forma clara SocialScrum?
+                      & [  ]
+                      & CTO/VP asistió al Sprint 0; aprobó presupuesto por escrito; documentó compromisos de confidencialidad.                                                      \\
 
-   ¿La organización puede garantizar la confidencialidad de la información social?
-                     & [  ]
-                     & Revisión de retrospectivas pasadas: ¿el equipo compartió críticas? ¿hubo represalias? ¿se implementaron cambios?                                            \\
+    ¿La organización puede garantizar la confidencialidad de la información social?
+                      & [  ]
+                      & Revisión de retrospectivas pasadas: ¿el equipo compartió críticas? ¿hubo represalias? ¿se implementaron cambios?                                            \\
 
-   ¿El equipo tiene autonomía real para priorizar ítems sociales en el Sprint?
-                     & [  ]
-                     & Decisiones previas: ¿el equipo ajustó carga sin pedir permiso? ¿decidió cómo abordar \textit{community smells}?                                             \\
+    ¿El equipo tiene autonomía real para priorizar ítems sociales en el Sprint?
+                      & [  ]
+                      & Decisiones previas: ¿el equipo ajustó carga sin pedir permiso? ¿decidió cómo abordar \textit{community smells}?                                             \\
 
-   ¿Existe un candidato viable para ejercer como Social Guide?
-                     & [  ]
-                     & Revisión de perfil: formación en facilitación o psicología organizacional; conocimiento práctico de desarrollo de software.                                 \\
+    ¿Existe un candidato viable para ejercer como Social Guide?
+                      & [  ]
+                      & Revisión de perfil: formación en facilitación o psicología organizacional; conocimiento práctico de desarrollo de software.                                 \\
 
-   ¿La cultura organizacional permite conversaciones honestas sin temor a represalias?
-                     & [  ]
-                     & Evidencia histórica: críticas expresadas y atendidas sin consecuencias negativas para quienes las plantearon.                                               \\
+    ¿La cultura organizacional permite conversaciones honestas sin temor a represalias?
+                      & [  ]
+                      & Evidencia histórica: críticas expresadas y atendidas sin consecuencias negativas para quienes las plantearon.                                               \\
 
-   ¿El equipo cuenta con estabilidad mínima (tres o más Sprints trabajando juntos)?
-                     & [  ]
-                     & Historial del equipo: ausencia de cambios frecuentes en personal o estructura durante los últimos Sprints.                                                  \\
+    ¿El equipo cuenta con estabilidad mínima (tres o más Sprints trabajando juntos)?
+                      & [  ]
+                      & Historial del equipo: ausencia de cambios frecuentes en personal o estructura durante los últimos Sprints.                                                  \\
 
-   ¿El Health Score actual es $\geq$ 4/10?
-                     & [  ]
-                     & Última medición disponible o encuesta anónima rápida realizada antes de la adopción.                                                                        \\
+    ¿El Health Score actual es $\geq$ 4/10?
+                      & [  ]
+                      & Última medición disponible o encuesta anónima rápida realizada antes de la adopción.                                                                        \\
 
-   ¿La rotación anual del equipo es menor al 30\%?
-                     & [  ]
-                     & Datos de RRHH: número de salidas en el último año y causas asociadas.                                                                                       \\
+    ¿La rotación anual del equipo es menor al 30\%?
+                      & [  ]
+                      & Datos de RRHH: número de salidas en el último año y causas asociadas.                                                                                       \\
 \end{longtable}
 \endgroup
 
@@ -203,11 +206,11 @@ El Sprint 0 dura entre 1 y 2 semanas y debe completar cinco actividades clave.
 El Social Guide (ya seleccionado) y el Scrum Master facilitan una sesión formativa que cubre:
 
 \begin{itemize}
-   \item Qué es la deuda social y por qué es relevante, con evidencia concreta sobre su impacto.
-   \item Qué son los \textit{community smells} y cómo suelen manifestarse en el día a día.
-   \item Cómo funciona SocialScrum: roles, eventos adaptados, artefactos y dinámicas centrales.
-   \item Qué \textbf{NO} es SocialScrum: no es evaluación de desempeño, no es vigilancia y no es terapia grupal.
-   \item Salvaguardas éticas esenciales: confidencialidad, separación total frente a evaluaciones y derecho a opt-out.
+    \item Qué es la deuda social y por qué es relevante, con evidencia concreta sobre su impacto.
+    \item Qué son los \textit{community smells} y cómo suelen manifestarse en el día a día.
+    \item Cómo funciona SocialScrum: roles, eventos adaptados, artefactos y dinámicas centrales.
+    \item Qué \textbf{NO} es SocialScrum: no es evaluación de desempeño, no es vigilancia y no es terapia grupal.
+    \item Salvaguardas éticas esenciales: confidencialidad, separación total frente a evaluaciones y derecho a opt-out.
 \end{itemize}
 
 Esta sesión no debe ser una clase magistral. Es un espacio para conversar abiertamente, donde el equipo pueda hacer preguntas difíciles sin filtro:
@@ -220,9 +223,9 @@ Las respuestas deben ser claras, documentadas y respaldadas por políticas forma
 En esta etapa, el Social Guide realiza la primera medición del Health Score para definir un punto de partida claro. Esta evaluación incluye tres componentes:
 
 \begin{enumerate}
-   \item Una encuesta anónima sobre los cinco valores de Scrum (Apertura, Compromiso, Respeto, Foco y Coraje), calificados en una escala de 1 a 10.
-   \item Entrevistas 1:1 opcionales para quienes quieran compartir contexto adicional o experiencias que no se sienten cómodos expresando en grupo.
-   \item Una identificación preliminar de \textit{community smells} a partir de observación directa: patrones de comunicación en Slack, interacciones en GitHub, dinámicas en Jira, etc.
+    \item Una encuesta anónima sobre los cinco valores de Scrum (Apertura, Compromiso, Respeto, Foco y Coraje), calificados en una escala de 1 a 10.
+    \item Entrevistas 1:1 opcionales para quienes quieran compartir contexto adicional o experiencias que no se sienten cómodos expresando en grupo.
+    \item Una identificación preliminar de \textit{community smells} a partir de observación directa: patrones de comunicación en Slack, interacciones en GitHub, dinámicas en Jira, etc.
 \end{enumerate}
 
 \textbf{Protocolo anti-sesgo}: La encuesta debe administrarse de forma anónima mediante plataforma online (Google Forms, Typeform, etc.), sin presencia de liderazgo o managers. El link se envía con 24 horas de anticipación para evitar presiones o influencias de grupo.
@@ -236,9 +239,9 @@ El resultado de esta actividad es un Health Score inicial (por ejemplo, 5.8/10) 
 En este punto, cada integrante del equipo firma dos documentos fundamentales:
 
 \begin{enumerate}
-   \item \textbf{Acuerdo de Confidencialidad del Social Guide}: aquí, el Social Guide declara formalmente que no compartirá información individual, que solo reportará datos agregados y que su prioridad será proteger la seguridad psicológica del equipo.
+    \item \textbf{Acuerdo de Confidencialidad del Social Guide}: aquí, el Social Guide declara formalmente que no compartirá información individual, que solo reportará datos agregados y que su prioridad será proteger la seguridad psicológica del equipo.
 
-   \item \textbf{Consentimiento Informado del Equipo}: cada persona confirma que entiende qué es SocialScrum, qué tipo de información se va a recopilar, cómo será utilizada y cuáles son sus derechos —incluyendo la opción de retirarse del proceso en cualquier momento.
+    \item \textbf{Consentimiento Informado del Equipo}: cada persona confirma que entiende qué es SocialScrum, qué tipo de información se va a recopilar, cómo será utilizada y cuáles son sus derechos —incluyendo la opción de retirarse del proceso en cualquier momento.
 \end{enumerate}
 
 Si menos del 70\% del equipo firma el consentimiento, SocialScrum no debe implementarse. Este umbral garantiza que exista un apoyo mayoritario real y evita que una minoría presione a una mayoría que no está convencida.
@@ -252,10 +255,10 @@ Cabe resaltar que hay un permiso psicológico implícito en la firma del consent
 En esta actividad, el equipo deja lista toda la infraestructura operativa que permitirá que SocialScrum funcione de manera consistente y transparente. Esto incluye:
 
 \begin{itemize}
-   \item Crear el \textbf{Social Product Backlog} en Jira (o una herramienta equivalente así como Slack o Azure DevOps), incorporando campos personalizados como: Social Story Points (SSP), tipo de \textit{Community Smell} e impacto en la salud del equipo (\textit{Health Impact}).
-   \item Configurar un \textbf{Dashboard de Health Score} en Confluence o en la herramienta de visualización que use la organización.
-   \item Establecer el \textbf{Registro de \textit{community smells}}: un documento vivo donde se registre el historial de smells identificados, su evolución y las acciones tomadas para mitigarlos.
-   \item Crear plantillas para \textbf{\textit{Social User Stories}} y para reportes de retrospectivas sociales, de modo que el equipo tenga formatos claros y consistentes desde el primer día.
+    \item Crear el \textbf{Social Product Backlog} en Jira (o una herramienta equivalente así como Slack o Azure DevOps), incorporando campos personalizados como: Social Story Points (SSP), tipo de \textit{Community Smell} e impacto en la salud del equipo (\textit{Health Impact}).
+    \item Configurar un \textbf{Dashboard de Health Score} en Confluence o en la herramienta de visualización que use la organización.
+    \item Establecer el \textbf{Registro de \textit{community smells}}: un documento vivo donde se registre el historial de smells identificados, su evolución y las acciones tomadas para mitigarlos.
+    \item Crear plantillas para \textbf{\textit{Social User Stories}} y para reportes de retrospectivas sociales, de modo que el equipo tenga formatos claros y consistentes desde el primer día.
 \end{itemize}
 
 Esta configuración asegura que SocialScrum no dependa de la memoria del equipo ni de procesos informales. Todo debe quedar documentado, accesible y visible para garantizar transparencia y trazabilidad.
@@ -271,11 +274,11 @@ El propósito de esta sesión no es empezar a resolver problemas reales, sino pr
 El Sprint 0 se considera exitoso cuando se cumplen los siguientes puntos:
 
 \begin{itemize}
-   \item Al menos el 70\% del equipo firmó el consentimiento informado.
-   \item Se logró establecer un Health Score \textit{baseline} con la participación de todos los miembros.
-   \item Los artefactos operativos quedaron configurados, documentados y disponibles para el equipo.
-   \item El equipo tiene claridad sobre qué es SocialScrum y, sobre todo, qué \textbf{no} es.
-   \item Se identificó al menos un \textit{community smell} activo para trabajar durante el primer Sprint real.
+    \item Al menos el 70\% del equipo firmó el consentimiento informado.
+    \item Se logró establecer un Health Score \textit{baseline} con la participación de todos los miembros.
+    \item Los artefactos operativos quedaron configurados, documentados y disponibles para el equipo.
+    \item El equipo tiene claridad sobre qué es SocialScrum y, sobre todo, qué \textbf{no} es.
+    \item Se identificó al menos un \textit{community smell} activo para trabajar durante el primer Sprint real.
 \end{itemize}
 
 Si alguno de estos criterios no se cumple, el equipo debe considerar extender el Sprint 0 para cerrar los vacíos pendientes. En situaciones más complejas, puede ser necesario reevaluar si este es realmente el momento adecuado para implementar SocialScrum.
@@ -290,10 +293,10 @@ Conversaciones 1:1 confidenciales (no con liderazgo) para confirmar si el rechaz
 \paragraph{2. Investigación de causas}
 ¿Es por:
 \begin{itemize}
-   \item Falta de comprensión? → Repetir sesión de capacitación
-   \item Desconfianza en el Social Guide? → Explorar otro candidato
-   \item Miedo a la sobrecarga? → Reducir sobrecarga (ej: Social Daily asincrónica)
-   \item Resistencia cultural? → Posponer 3-6 meses
+    \item Falta de comprensión? → Repetir sesión de capacitación
+    \item Desconfianza en el Social Guide? → Explorar otro candidato
+    \item Miedo a la sobrecarga? → Reducir sobrecarga (ej: Social Daily asincrónica)
+    \item Resistencia cultural? → Posponer 3-6 meses
 \end{itemize}
 
 \paragraph{3. Comunicación a liderazgo}
@@ -311,11 +314,11 @@ Cuando el Sprint 0 llega a su cierre, el Social Guide y el Scrum Master realizan
 Esta presentación cumple tres propósitos centrales:
 
 \begin{enumerate}
-   \item \textbf{Transparencia}: explicar de manera clara qué es SocialScrum, por qué el equipo decidió adoptarlo y cómo se integrará en el trabajo del día a día.
+    \item \textbf{Transparencia}: explicar de manera clara qué es SocialScrum, por qué el equipo decidió adoptarlo y cómo se integrará en el trabajo del día a día.
 
-   \item \textbf{Gestión de expectativas}: dejar explícito que SocialScrum puede generar una reducción temporal en la velocidad técnica (aproximadamente entre el 10 y el 20\%), especialmente mientras se atienden \textit{community smells} críticos. Esta disminución no es un fallo del proceso, sino una inversión para mejorar el rendimiento y la salud del equipo en el mediano y largo plazo.
+    \item \textbf{Gestión de expectativas}: dejar explícito que SocialScrum puede generar una reducción temporal en la velocidad técnica (aproximadamente entre el 10 y el 20\%), especialmente mientras se atienden \textit{community smells} críticos. Esta disminución no es un fallo del proceso, sino una inversión para mejorar el rendimiento y la salud del equipo en el mediano y largo plazo.
 
-   \item \textbf{Compromiso mutuo}: solicitar y asegurar el respaldo del liderazgo, tanto en recursos (tiempo, presupuesto, capacitación) como en decisiones operativas (ajustes de carga, priorización de acciones sociales, intervención cuando sea necesaria).
+    \item \textbf{Compromiso mutuo}: solicitar y asegurar el respaldo del liderazgo, tanto en recursos (tiempo, presupuesto, capacitación) como en decisiones operativas (ajustes de carga, priorización de acciones sociales, intervención cuando sea necesaria).
 \end{enumerate}
 
 \subsubsection{Gestión de objeciones comunes}
@@ -328,9 +331,9 @@ Durante la presentación pueden surgir resistencias. Una de las tres objeciones 
 El Social Guide es la figura central de SocialScrum. Sin este rol, el modelo se reduce a Scrum con buenas intenciones pero sin mecanismos concretos para gestionar la deuda social. El Social Guide facilita seguridad psicológica mediante tres mecanismos:
 
 \begin{enumerate}
-   \item Motivación intrínseca: Crea condiciones donde el equipo quiere colaborar (no se siente obligado) respetando autonomía, competencia y relacionalidad (TAD) \cite{ryan2000self}.
-   \item Confianza interpersonal: Demuestra habilidad (sabe mediación), benevolencia (busca bien del equipo) e integridad (honesto, confidencial) según modelo Mayer et al. \cite{mayer1995integrative}.
-   \item Seguridad psicológica: Genera espacios donde es seguro hablar de conflictos, vulnerabilidades y errores sin temor a represalias \cite{edmondson2018fearless}.
+    \item Motivación intrínseca: Crea condiciones donde el equipo quiere colaborar (no se siente obligado) respetando autonomía, competencia y relacionalidad (TAD) \cite{ryan2000self}.
+    \item Confianza interpersonal: Demuestra habilidad (sabe mediación), benevolencia (busca bien del equipo) e integridad (honesto, confidencial) según modelo Mayer et al. \cite{mayer1995integrative}.
+    \item Seguridad psicológica: Genera espacios donde es seguro hablar de conflictos, vulnerabilidades y errores sin temor a represalias \cite{edmondson2018fearless}.
 \end{enumerate}
 
 \subsection{Perfil y competencias requeridas}
@@ -347,108 +350,108 @@ El Social Guide requiere un perfil híbrido: comprensión de dinámicas humanas 
 \setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{2.6cm}   % Área
-   >{\RaggedRight\hspace{0pt}}p{4.6cm}   % Requisito mínimo
-   >{\RaggedRight\hspace{0pt}}p{3.8cm}   % Cómo evaluar
-   >{\RaggedRight\hspace{0pt}}p{3.8cm}   % Nivel aceptable
-   }
+    >{\RaggedRight\hspace{0pt}}p{2.6cm}   % Área
+    >{\RaggedRight\hspace{0pt}}p{4.6cm}   % Requisito mínimo
+    >{\RaggedRight\hspace{0pt}}p{3.8cm}   % Cómo evaluar
+    >{\RaggedRight\hspace{0pt}}p{3.8cm}   % Nivel aceptable
+    }
 
-   % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-   \caption{Perfil del rol Social Guide}
-   \label{tab:perfil-social-guide}                                                                                                                                                                                                                                \\
-   \toprule
-   \textbf{Área} & \textbf{Requisito mínimo}                                                                                                                                                                   & \textbf{Cómo evaluar} & \textbf{Nivel aceptable} \\
-   \midrule
-   \endfirsthead
+    % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
+    \caption{Perfil del rol Social Guide}
+    \label{tab:perfil-social-guide}                                                                                                                                                                                                                                \\
+    \toprule
+    \textbf{Área} & \textbf{Requisito mínimo}                                                                                                                                                                   & \textbf{Cómo evaluar} & \textbf{Nivel aceptable} \\
+    \midrule
+    \endfirsthead
 
-   % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-   \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                        \\
-   \toprule
-   \textbf{Área} & \textbf{Requisito mínimo}                                                                                                                                                                   & \textbf{Cómo evaluar} & \textbf{Nivel aceptable} \\
-   \midrule
-   \endhead
+    % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                        \\
+    \toprule
+    \textbf{Área} & \textbf{Requisito mínimo}                                                                                                                                                                   & \textbf{Cómo evaluar} & \textbf{Nivel aceptable} \\
+    \midrule
+    \endhead
 
-   % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-   \midrule
-   \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                \\
-   \endfoot
+    % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                \\
+    \endfoot
 
-   % --- 4. PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- 4. PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   Formación base
-                 & Pregrado en Psicología, Trabajo Social, Comunicación, o Ingeniería con especialización en gestión de equipos
-                 & Revisión de CV, transcripción académica y entrevista
-                 & Título oficial y relevancia demostrada para el rol                                                                                                                                                                                             \\
+    Formación base
+                  & Pregrado en Psicología, Trabajo Social, Comunicación, o Ingeniería con especialización en gestión de equipos
+                  & Revisión de CV, transcripción académica y entrevista
+                  & Título oficial y relevancia demostrada para el rol                                                                                                                                                                                             \\
 
-   Formación complementaria
-                 & Certificación en facilitación, mediación (CNV, transformativa) o coaching (ICF)
-                 & Entrevista teórica sobre técnicas
-                 & Al menos una certificación; puede completarse en los primeros seis meses                                                                                                                                                                       \\
+    Formación complementaria
+                  & Certificación en facilitación, mediación (CNV, transformativa) o coaching (ICF)
+                  & Entrevista teórica sobre técnicas
+                  & Al menos una certificación; puede completarse en los primeros seis meses                                                                                                                                                                       \\
 
-   Experiencia mínima
-                 & Dos o más años trabajando con equipos de desarrollo (devs, SM, PO, People Ops)
-                 & Referencias laborales y entrevista de contexto
-                 & Mínimo un año si cuenta con certificaciones avanzadas                                                                                                                                                                                          \\
+    Experiencia mínima
+                  & Dos o más años trabajando con equipos de desarrollo (devs, SM, PO, People Ops)
+                  & Referencias laborales y entrevista de contexto
+                  & Mínimo un año si cuenta con certificaciones avanzadas                                                                                                                                                                                          \\
 
-   \midrule
-   \multicolumn{4}{c}{\textbf{Habilidades duras (hard skills)}}                                                                                                                                                                                                   \\* \nopagebreak
-   \midrule
+    \midrule
+    \multicolumn{4}{c}{\textbf{Habilidades duras (hard skills)}}                                                                                                                                                                                                   \\* \nopagebreak
+    \midrule
 
-   Análisis SNA (Social Network Analysis)
-                 & Conocimiento en teoría de grafos aplicada a organizaciones y capacidad de interpretar métricas de centralidad e intermediación en redes de comunicación.
-                 & Caso práctico: análisis de un sociograma
-                 & Produce al menos tres insignias válidas a partir de un sociograma pequeño en 30 minutos                                                                                                                                                        \\
+    Análisis SNA (Social Network Analysis)
+                  & Conocimiento en teoría de grafos aplicada a organizaciones y capacidad de interpretar métricas de centralidad e intermediación en redes de comunicación.
+                  & Caso práctico: análisis de un sociograma
+                  & Produce al menos tres insignias válidas a partir de un sociograma pequeño en 30 minutos                                                                                                                                                        \\
 
-   Medición cualitativa
-                 & Dominio de técnicas de codificación de datos, síntesis de entrevistas y análisis de contenido para transformar percepciones subjetivas en indicadores.
-                 & Entrevista semi-estructurada observada
-                 & Transcribe y analiza usando dos o tres códigos principales coherentes                                                                                                                                                                          \\
+    Medición cualitativa
+                  & Dominio de técnicas de codificación de datos, síntesis de entrevistas y análisis de contenido para transformar percepciones subjetivas en indicadores.
+                  & Entrevista semi-estructurada observada
+                  & Transcribe y analiza usando dos o tres códigos principales coherentes                                                                                                                                                                          \\
 
-   Facilitación de grupos
-                 & Conocimiento sólido de dinámicas de grupo y metodologías de diseño de sesiones colaborativas (como Design Thinking o Liberating Structures).
-                 & Facilitación de retrospectiva simulada
-                 & El equipo reporta sensación de seguridad psicológica                                                                                                                                                                                           \\
+    Facilitación de grupos
+                  & Conocimiento sólido de dinámicas de grupo y metodologías de diseño de sesiones colaborativas (como Design Thinking o Liberating Structures).
+                  & Facilitación de retrospectiva simulada
+                  & El equipo reporta sensación de seguridad psicológica                                                                                                                                                                                           \\
 
-   Mediación de conflictos
-                 & Formación o dominio de técnicas de resolución de conflictos, específicamente el modelo de Comunicación No Violenta (CNV).
-                 & Role-play con observación del mediador
-                 & Mantiene neutralidad y genera opciones de resolución                                                                                                                                                                                           \\
+    Mediación de conflictos
+                  & Formación o dominio de técnicas de resolución de conflictos, específicamente el modelo de Comunicación No Violenta (CNV).
+                  & Role-play con observación del mediador
+                  & Mantiene neutralidad y genera opciones de resolución                                                                                                                                                                                           \\
 
-   Dominio de Scrum y enfoques ágiles
-                 & Comprensión profunda de la Guía de Scrum y experiencia práctica en el ciclo de vida de desarrollo de software (SDLC) para entender el contexto técnico de los desarrolladores
-                 & Explicación de cómo un \textit{community smell} afecta un Sprint
-                 & Propone una intervención ágil concreta y coherente                                                                                                                                                                                             \\
+    Dominio de Scrum y enfoques ágiles
+                  & Comprensión profunda de la Guía de Scrum y experiencia práctica en el ciclo de vida de desarrollo de software (SDLC) para entender el contexto técnico de los desarrolladores
+                  & Explicación de cómo un \textit{community smell} afecta un Sprint
+                  & Propone una intervención ágil concreta y coherente                                                                                                                                                                                             \\
 
-   \midrule
-   \multicolumn{4}{c}{\textbf{Habilidades blandas (soft skills)}}                                                                                                                                                                                                 \\* \nopagebreak
-   \midrule
+    \midrule
+    \multicolumn{4}{c}{\textbf{Habilidades blandas (soft skills)}}                                                                                                                                                                                                 \\* \nopagebreak
+    \midrule
 
-   Neutralidad emocional
-                 & Capacidad de mantener una postura imparcial y no jerárquica, separando los juicios de valor personales de los hechos observados en el equipo.
-                 & Observación durante una retrospectiva
-                 & El equipo valida que no toma partido                                                                                                                                                                                                           \\
+    Neutralidad emocional
+                  & Capacidad de mantener una postura imparcial y no jerárquica, separando los juicios de valor personales de los hechos observados en el equipo.
+                  & Observación durante una retrospectiva
+                  & El equipo valida que no toma partido                                                                                                                                                                                                           \\
 
-   Empatía calibrada
-                 & Habilidad para conectar con las emociones y necesidades del equipo sin perder la objetividad ni validar conductas destructivas.
-                 & Role-play de escucha en situación de conflicto
-                 & Conecta emocionalmente sin validar conductas destructivas                                                                                                                                                                                      \\
+    Empatía calibrada
+                  & Habilidad para conectar con las emociones y necesidades del equipo sin perder la objetividad ni validar conductas destructivas.
+                  & Role-play de escucha en situación de conflicto
+                  & Conecta emocionalmente sin validar conductas destructivas                                                                                                                                                                                      \\
 
-   Coraje profesional
-                 & Disposición para enfrentar conversaciones difíciles, señalar community smells invisibles y confrontar al liderazgo si se vulnera la salud del equipo.
-                 & Caso ético: ``¿Qué harías si el equipo quiere expulsar a alguien?''
-                 & Propone soluciones sin atacar a la persona                                                                                                                                                                                                     \\
+    Coraje profesional
+                  & Disposición para enfrentar conversaciones difíciles, señalar community smells invisibles y confrontar al liderazgo si se vulnera la salud del equipo.
+                  & Caso ético: ``¿Qué harías si el equipo quiere expulsar a alguien?''
+                  & Propone soluciones sin atacar a la persona                                                                                                                                                                                                     \\
 
-   Integridad ética
-                 & Apego inquebrantable a los principios de confidencialidad absoluta y anonimización de datos sensibles
-                 & Entrevista sobre confidencialidad
-                 & Compromiso explícito con la privacidad                                                                                                                                                                                                         \\
+    Integridad ética
+                  & Apego inquebrantable a los principios de confidencialidad absoluta y anonimización de datos sensibles
+                  & Entrevista sobre confidencialidad
+                  & Compromiso explícito con la privacidad                                                                                                                                                                                                         \\
 
-   Humildad intelectual
-                 & Capacidad de reconocer los límites de su competencia y proponer la derivación a especialistas (psicólogos clínicos o recursos humanos) cuando el problema exceda el alcance de SocialScrum.
-                 & Pregunta abierta sobre los límites del rol
-                 & Reconoce límites y propone derivación cuando corresponde                                                                                                                                                                                       \\
+    Humildad intelectual
+                  & Capacidad de reconocer los límites de su competencia y proponer la derivación a especialistas (psicólogos clínicos o recursos humanos) cuando el problema exceda el alcance de SocialScrum.
+                  & Pregunta abierta sobre los límites del rol
+                  & Reconoce límites y propone derivación cuando corresponde                                                                                                                                                                                       \\
 \end{longtable}
 \endgroup
 
@@ -459,54 +462,57 @@ En la Tabla \ref{tab:seleccion-social-guide} se detalla el proceso de selección
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
 
 \begin{longtable}[H]{
-   >{\Centering\hspace{0pt}}p{1.2cm}
-   >{\RaggedRight\hspace{0pt}}p{5.0cm}
-   >{\Centering\hspace{0pt}}p{2.5cm}
-   >{\RaggedRight\hspace{0pt}}p{6.0cm}
-   }
+    >{\Centering\hspace{0pt}}p{1.2cm} % Fase
+    >{\RaggedRight\hspace{0pt}}p{4.6cm} % Nombre
+    >{\Centering\hspace{0pt}}p{2.5cm} % Duración
+    >{\RaggedRight\hspace{0pt}}p{6.6cm} % Actividades
+    }
 
-   % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-   \caption{Proceso de selección del Social Guide}
-   \label{tab:seleccion-social-guide}                                                         \\
-   \toprule
-   \textbf{Fase} & \textbf{Nombre}              & \textbf{Duración} & \textbf{Actividades}    \\
-   \midrule
-   \endfirsthead
+    % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
+    \caption{Proceso de selección del Social Guide}
+    \label{tab:seleccion-social-guide}                                                         \\
+    \toprule
+    \textbf{Fase} & \textbf{Nombre}              & \textbf{Duración} & \textbf{Actividades}    \\
+    \midrule
+    \endfirsthead
 
-   % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-   \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                    \\
-   \toprule
-   \textbf{Fase} & \textbf{Nombre}              & \textbf{Duración} & \textbf{Actividades}    \\
-   \midrule
-   \endhead
+    % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                    \\
+    \toprule
+    \textbf{Fase} & \textbf{Nombre}              & \textbf{Duración} & \textbf{Actividades}    \\
+    \midrule
+    \endhead
 
-   % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-   \midrule
-   \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                            \\
-   \endfoot
+    % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                            \\
+    \endfoot
 
-   % --- 4. PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- 4. PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   1             & Identificación de candidatos & 1 semana          &
-   Búsqueda de candidatos internos o externos que cumplan con el perfil definido.             \\
+    1             & Identificación de candidatos & 1 semana          &
+    Búsqueda de candidatos internos o externos que cumplan con el perfil definido.             \\
 
-   2             & Evaluación técnica           & 1 semana          &
-   Caso práctico sobre \textit{community smells}, facilitación simulada y entrevista teórica. \\
+    2             & Evaluación técnica           & 1 semana          &
+    Caso práctico sobre \textit{community smells}, facilitación simulada y entrevista teórica. \\
 
-   3             & Entrevista ética             & 1 semana          &
-   Entrevistas con Scrum Master, Development Team y CTO; análisis de dilemas éticos críticos. \\
+    3             & Entrevista ética             & 1 semana          &
+    Entrevistas con Scrum Master, Development Team y CTO; análisis de dilemas éticos críticos. \\
 
-   4             & Decisión consensuada         & --                &
-   Requiere consenso entre Scrum Master, Development Team (mayoría simple) y CTO
-   (ver Tabla~\ref{tab:consenso-seleccion}).                                                  \\
+    4             & Decisión consensuada         & --                &
+    Requiere consenso entre Scrum Master, Development Team (mayoría simple) y CTO
+    (ver Tabla~\ref{tab:consenso-seleccion}).                                                  \\
 
-   5             & Período de prueba            & 3 Sprints         &
-   Ejercicio del rol bajo supervisión; se requiere una votación de aprobación
-   $\geq 70\%$ para la confirmación definitiva.                                               \\
+    5             & Período de prueba            & 3 Sprints         &
+    Ejercicio del rol bajo supervisión; se requiere una votación de aprobación
+    $\geq 70\%$ para la confirmación definitiva.                                               \\
 \end{longtable}
 \endgroup
 
@@ -515,54 +521,55 @@ En la Tabla \ref{tab:consenso-seleccion} se describen las preguntas clave y los 
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
 \begin{longtable}[H]{
-   >{\RaggedRight\hspace{0pt}}p{0.30\textwidth}
-   >{\Centering\hspace{0pt}}p{0.20\textwidth}
-   >{\RaggedRight\hspace{0pt}}p{0.35\textwidth}
-   >{\Centering\hspace{0pt}}p{0.15\textwidth}
-   }
+    >{\RaggedRight\hspace{0pt}}p{0.10\textwidth} % Votante
+    >{\Centering\hspace{0pt}}p{0.20\textwidth}   % Autoridad
+    >{\RaggedRight\hspace{0pt}}p{0.48\textwidth} % Pregunta
+    >{\Centering\hspace{0pt}}p{0.15\textwidth}   % Voto si
+    }
 
-   % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-   \caption{Proceso de votación para la selección del Social Guide}
-   \label{tab:consenso-seleccion}                                                                                      \\
-   \toprule
-   \textbf{Votante} & \textbf{Autoridad}                                        & \textbf{Pregunta} & \textbf{Voto si} \\
-   \midrule
-   \endfirsthead
+    % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
+    \caption{Proceso de votación para la selección del Social Guide}
+    \label{tab:consenso-seleccion}                                                                                      \\
+    \toprule
+    \textbf{Votante} & \textbf{Autoridad}                                        & \textbf{Pregunta} & \textbf{Voto si} \\
+    \midrule
+    \endfirsthead
 
-   % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-   \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                             \\
-   \toprule
-   \textbf{Votante} & \textbf{Autoridad}                                        & \textbf{Pregunta} & \textbf{Voto si} \\
-   \midrule
-   \endhead
+    % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                             \\
+    \toprule
+    \textbf{Votante} & \textbf{Autoridad}                                        & \textbf{Pregunta} & \textbf{Voto si} \\
+    \midrule
+    \endhead
 
-   % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-   \midrule
-   \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                     \\
-   \endfoot
+    % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                     \\
+    \endfoot
 
-   % --- 4. PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- 4. PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   Scrum Master
-                    & 1 voto
-                    & ¿Puede facilitar procesos y proteger el marco de trabajo?
-                    & Sí / No                                                                                          \\
+    Scrum Master
+                     & 1 voto
+                     & ¿Puede facilitar procesos y proteger el marco de trabajo?
+                     & Sí / No                                                                                          \\
 
-   Development Team (colectivo)
-                    & 1 voto (mayoría $\geq 50\%$)
-                    & ¿Lo aceptamos como un par confiable para el equipo?
-                    & Mayoría $\geq 50\%$                                                                              \\
+    Equipo de desarrollo (colectivo)
+                     & 1 voto (mayoría $\geq 50\%$)
+                     & ¿Lo aceptamos como un par confiable para el equipo?
+                     & Mayoría $\geq 50\%$                                                                              \\
 
-   CTO / VP Engineering
-                    & 1 voto + veto por causa legal documentada
-                    & ¿Es viable a nivel organizacional y legal?
-                    & Sí / No (o veto con justificación formal)                                                        \\
+    CTO / VP Ingeniería
+                     & 1 voto + veto por causa legal documentada
+                     & ¿Es viable a nivel organizacional y legal?
+                     & Sí / No (o veto con justificación formal)                                                        \\
 \end{longtable}
 \endgroup
 
@@ -572,58 +579,60 @@ En la Tabla \ref{tab:reglas-decision-votacion} se presentan las reglas de decisi
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{6pt}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\Centering\hspace{0pt}}p{4.2cm}   % Resultado
-   >{\Centering\hspace{0pt}}p{2.0cm}   % Votos Sí
-   >{\Centering\hspace{0pt}}p{2.5cm}   % Votos No / Veto
-   >{\RaggedRight\hspace{0pt}}p{6.0cm} % Decisión
-   }
+    >{\Centering\hspace{0pt}}p{4.0cm}   % Resultado
+    >{\Centering\hspace{0pt}}p{2.0cm}   % Votos Sí
+    >{\Centering\hspace{0pt}}p{2.5cm}   % Votos No / Veto
+    >{\RaggedRight\hspace{0pt}}p{6.4cm} % Decisión
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Reglas de decisión del proceso de votación para la selección del Social Guide}
-   \label{tab:reglas-decision-votacion}                                                                           \\
-   \toprule
-   \textbf{Resultado} & \textbf{Sí}                                      & \textbf{No / Veto} & \textbf{Decisión} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Reglas de decisión del proceso de votación para la selección del Social Guide}
+    \label{tab:reglas-decision-votacion}                                                                           \\
+    \toprule
+    \textbf{Resultado} & \textbf{Sí}                                      & \textbf{No / Veto} & \textbf{Decisión} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO PÁGINAS SIGUIENTES ---
-   \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                        \\
-   \toprule
-   \textbf{Resultado} & \textbf{Sí}                                      & \textbf{No / Veto} & \textbf{Decisión} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO PÁGINAS SIGUIENTES ---
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                        \\
+    \toprule
+    \textbf{Resultado} & \textbf{Sí}                                      & \textbf{No / Veto} & \textbf{Decisión} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   3 SÍ
-                      & 3
-                      & 0
-                      & Aprobado para Fase 5.                                                                     \\
+    3 SÍ
+                       & 3
+                       & 0
+                       & Aprobado para Fase 5.                                                                     \\
 
-   2 SÍ + 1 NO
-                      & 2
-                      & 1
-                      & Aprobado si el NO no corresponde a veto del CTO.                                          \\
+    2 SÍ + 1 NO
+                       & 2
+                       & 1
+                       & Aprobado si el NO no corresponde a veto del CTO.                                          \\
 
-   2 SÍ + 1 VETO CTO
-                      & 2
-                      & 1 (Veto)
-                      & Rechazado (causa documentada).                                                            \\
+    2 SÍ + 1 VETO CTO
+                       & 2
+                       & 1 (Veto)
+                       & Rechazado (causa documentada).                                                            \\
 
-   $\leq$ 1 SÍ
-                      & 0--1
-                      & $\geq$ 2
-                      & Rechazado.                                                                                \\
+    $\leq$ 1 SÍ
+                       & 0--1
+                       & $\geq$ 2
+                       & Rechazado.                                                                                \\
 \end{longtable}
 \endgroup
 
@@ -633,10 +642,10 @@ En la Tabla \ref{tab:reglas-decision-votacion} se presentan las reglas de decisi
 Los eventos adaptados de SocialScrum mantienen la estructura básica de Scrum, pero incorporan componentes sociales clave para abordar la deuda social. La Figura \ref{fig:ciclo-eventos-socialscrum} ilustra cómo cada evento tradicional se enriquece con prácticas específicas para monitorear y mejorar la salud social del equipo.
 %figura social daily standup
 \begin{figure}[h]
-   \centering
-   \includegraphics[width=0.8\textwidth]{recursos/capitulo4/ciclo-eventos-socialscrum.png}
-   \caption{Ciclo de eventos adaptados de SocialScrum}
-   \label{fig:ciclo-eventos-socialscrum}
+    \centering
+    \includegraphics[width=0.8\textwidth]{recursos/capitulo4/ciclo-eventos-socialscrum.png}
+    \caption{Ciclo de eventos adaptados de SocialScrum}
+    \label{fig:ciclo-eventos-socialscrum}
 \end{figure}
 
 \subsection{Social Daily Standup}
@@ -655,45 +664,45 @@ En la Tabla \ref{tab:daily-social-estructura} se detalla la estructura del Socia
 \setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{3.0cm}   % Fase
-   >{\Centering\hspace{0pt}}p{3.0cm}     % Duración
-   >{\RaggedRight\hspace{0pt}}p{3.5cm}   % Facilitador
-   >{\RaggedRight\hspace{0pt}}p{5.5cm}   % Contenido
-   }
+    >{\RaggedRight\hspace{0pt}}p{2.9cm}   % Fase
+    >{\Centering\hspace{0pt}}p{3.0cm}     % Duración
+    >{\RaggedRight\hspace{0pt}}p{3.5cm}   % Facilitador
+    >{\RaggedRight\hspace{0pt}}p{5.5cm}   % Contenido
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Estructura del Social Daily Standup}
-   \label{tab:daily-social-estructura}                                                                                         \\
-   \toprule
-   \textbf{Fase} & \textbf{Duración}                                               & \textbf{Facilitador} & \textbf{Contenido} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Estructura del Social Daily Standup}
+    \label{tab:daily-social-estructura}                                                                                         \\
+    \toprule
+    \textbf{Fase} & \textbf{Duración}                                               & \textbf{Facilitador} & \textbf{Contenido} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                     \\
-   \toprule
-   \textbf{Fase} & \textbf{Duración}                                               & \textbf{Facilitador} & \textbf{Contenido} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                     \\
+    \toprule
+    \textbf{Fase} & \textbf{Duración}                                               & \textbf{Facilitador} & \textbf{Contenido} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                             \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                             \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   Técnica
-                 & 12--13 min
-                 & Scrum Master
-                 & Tres preguntas tradicionales del Daily Standup.                                                             \\
+    Técnica
+                  & 12--13 min
+                  & Scrum Master
+                  & Tres preguntas tradicionales del Daily Standup.                                                             \\
 
-   Social
-                 & 2--3 min
-                 & Social Guide
-                 & Pregunta social del día orientada a detectar señales tempranas.                                             \\
+    Social
+                  & 2--3 min
+                  & Social Guide
+                  & Pregunta social del día orientada a detectar señales tempranas.                                             \\
 \end{longtable}
 \endgroup
 
@@ -701,10 +710,10 @@ La respuesta es siempre opcional, el Social Guide no profundiza en el Daily; si 
 
 \paragraph{Reglas de facilitación}
 \begin{enumerate}
-   \item \textbf{No profundizar}: El Daily detecta problemas; no los resuelve.
-   \item \textbf{No juzgar}: Si alguien dice ``todo bien'' cuando no lo está, no confrontar públicamente.
-   \item \textbf{Rotar preguntas}: Variar para evitar respuestas automáticas.
-   \item \textbf{Registrar patrones}: Si múltiples personas mencionan temas similares, hay un patrón que requiere atención.
+    \item \textbf{No profundizar}: El Daily detecta problemas; no los resuelve.
+    \item \textbf{No juzgar}: Si alguien dice ``todo bien'' cuando no lo está, no confrontar públicamente.
+    \item \textbf{Rotar preguntas}: Variar para evitar respuestas automáticas.
+    \item \textbf{Registrar patrones}: Si múltiples personas mencionan temas similares, hay un patrón que requiere atención.
 \end{enumerate}
 
 \paragraph{Variantes para equipos distribuidos.}
@@ -717,7 +726,7 @@ Señales tempranas de malestar, datos cualitativos para el Health Score, y agend
 
 \subsection{Social Sprint Planning}
 
-El Sprint Planning tradicional responde: ¿ qué puede entregarse? y ¿ cómo se logrará? Estas preguntas asumen condiciones sociales estables, lo cual frecuentemente no es cierto. SocialScrum añade una tercera dimensión: evaluación de riesgos sociales (~15 minutos adicionales) después del Planning técnico.
+El Sprint Planning tradicional responde: \textit{¿qué puede entregarse?} y \textit{¿cómo se logrará?} Estas preguntas asumen condiciones sociales estables, lo cual frecuentemente no es cierto. SocialScrum añade una tercera dimensión: evaluación de riesgos sociales (15 minutos adicionales) después del Planning técnico.
 
 \subsubsection{Protocolo del Social Sprint Planning}
 
@@ -731,46 +740,46 @@ En la Tabla \ref{tab:planning-social-estructura} se detalla la estructura del So
 \setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{4.0cm}   % Parte
-   >{\Centering\hspace{0pt}}p{3.0cm}     % Duración
-   >{\RaggedRight\hspace{0pt}}p{8.0cm}   % Contenido
-   }
+    >{\RaggedRight\hspace{0pt}}p{4.2cm}   % Parte
+    >{\Centering\hspace{0pt}}p{3.0cm}     % Duración
+    >{\RaggedRight\hspace{0pt}}p{8.0cm}   % Contenido
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Estructura del Social Sprint Planning}
-   \label{tab:planning-social-estructura}                                                                                                                  \\
-   \toprule
-   \textbf{Parte} & \textbf{Duración}                                                                                                 & \textbf{Contenido} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Estructura del Social Sprint Planning}
+    \label{tab:planning-social-estructura}                                                                                                                  \\
+    \toprule
+    \textbf{Parte} & \textbf{Duración}                                                                                                 & \textbf{Contenido} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                 \\
-   \toprule
-   \textbf{Parte} & \textbf{Duración}                                                                                                 & \textbf{Contenido} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                 \\
+    \toprule
+    \textbf{Parte} & \textbf{Duración}                                                                                                 & \textbf{Contenido} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                         \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                         \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   1. Planning técnico
-                  & Estándar
-                  & El Product Owner presenta los ítems priorizados y el equipo selecciona el Sprint Backlog y define el Sprint Goal.                      \\
+    1. Planning técnico
+                   & Estándar
+                   & El Product Owner presenta los ítems priorizados y el equipo selecciona el Sprint Backlog y define el Sprint Goal.                      \\
 
-   2. Evaluación de riesgos sociales
-                  & 15 min
-                  & Respuesta a cuatro preguntas orientadas a identificar riesgos sociales relevantes para el Sprint.                                      \\
+    2. Evaluación de riesgos sociales
+                   & 15 min
+                   & Respuesta a cuatro preguntas orientadas a identificar riesgos sociales relevantes para el Sprint.                                      \\
 
-   3. Ajuste del Sprint Backlog
-                  & 5 min
-                  & Ajuste de alcance, inclusión de ítems sociales y agendamiento de intervenciones necesarias.                                            \\
+    3. Ajuste del Sprint Backlog
+                   & 5 min
+                   & Ajuste de alcance, inclusión de ítems sociales y agendamiento de intervenciones necesarias.                                            \\
 \end{longtable}
 \endgroup
 
@@ -794,46 +803,46 @@ En la Tabla \ref{tab:review-social-estructura} se detalla la estructura del Soci
 \setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{4.0cm}   % Parte
-   >{\Centering\hspace{0pt}}p{3.0cm}     % Duración
-   >{\RaggedRight\hspace{0pt}}p{8.0cm}   % Contenido
-   }
+    >{\RaggedRight\hspace{0pt}}p{4.0cm}   % Parte
+    >{\Centering\hspace{0pt}}p{3.0cm}     % Duración
+    >{\RaggedRight\hspace{0pt}}p{8.2cm}   % Contenido
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Estructura del Social Sprint Review}
-   \label{tab:review-social-estructura}                                                                                                                  \\
-   \toprule
-   \textbf{Parte} & \textbf{Duración}                                                                                               & \textbf{Contenido} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Estructura del Social Sprint Review}
+    \label{tab:review-social-estructura}                                                                                                                  \\
+    \toprule
+    \textbf{Parte} & \textbf{Duración}                                                                                               & \textbf{Contenido} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                               \\
-   \toprule
-   \textbf{Parte} & \textbf{Duración}                                                                                               & \textbf{Contenido} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                               \\
+    \toprule
+    \textbf{Parte} & \textbf{Duración}                                                                                               & \textbf{Contenido} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                       \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                       \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   1. Review técnica
-                  & Estándar
-                  & Demostración del Incremento y recopilación de feedback de \textit{stakeholders}.                                                     \\
+    1. Review técnica
+                   & Estándar
+                   & Demostración del Incremento y recopilación de feedback de \textit{stakeholders}.                                                     \\
 
-   2. Evaluación de la salud social
-                  & 10 min
-                  & Revisión del Health Score, \textit{community smells} abordados, riesgos materializados y tendencias observadas.                      \\
+    2. Evaluación de la salud social
+                   & 10 min
+                   & Revisión del Health Score, \textit{community smells} abordados, riesgos materializados y tendencias observadas.                      \\
 
-   3. Preguntas de \textit{stakeholders}
-                  & Variable
-                  & Respuestas limitadas a información agregada y anónima, sin referencias individuales.                                                 \\
+    3. Preguntas de \textit{stakeholders}
+                   & Variable
+                   & Respuestas limitadas a información agregada y anónima, sin referencias individuales.                                                 \\
 \end{longtable}
 \endgroup
 
@@ -842,10 +851,10 @@ En la Tabla \ref{tab:review-social-estructura} se detalla la estructura del Soci
 La Figura \ref{fig:health-score-review} muestra un ejemplo de cómo se presenta el Health Score durante el Social Sprint Review. Se utilizan gráficos de barras y líneas para ilustrar la evolución del puntaje a lo largo del tiempo, destacando áreas de mejora y éxitos alcanzados.
 
 \begin{figure}[h]
-   \centering
-   \includegraphics[width=0.7\textwidth]{recursos/capitulo4/health-score-review.png}
-   \caption{Ejemplo de visualización del Health Score en el Social Sprint Review}
-   \label{fig:health-score-review}
+    \centering
+    \includegraphics[width=0.7\textwidth]{recursos/capitulo4/health-score-review.png}
+    \caption{Ejemplo de visualización del Health Score en el Social Sprint Review}
+    \label{fig:health-score-review}
 \end{figure}
 \FloatBarrier
 
@@ -869,55 +878,55 @@ Duración: 90 minutos para Sprints de 2 semanas (ajustable proporcionalmente), e
 \setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\Centering\hspace{0pt}}p{1.2cm}   % Fase
-   >{\RaggedRight\hspace{0pt}}p{4.2cm} % Nombre
-   >{\Centering\hspace{0pt}}p{2.8cm}   % Tiempo
-   >{\RaggedRight\hspace{0pt}}p{6.8cm} % Actividades principales
-   }
+    >{\Centering\hspace{0pt}}p{1.1cm}   % Fase
+    >{\RaggedRight\hspace{0pt}}p{4.2cm} % Nombre
+    >{\Centering\hspace{0pt}}p{2.8cm}   % Tiempo
+    >{\RaggedRight\hspace{0pt}}p{6.8cm} % Actividades principales
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Estructura de la Social Sprint Retrospective (90 minutos)}
-   \label{tab:estructura-retro-social}                                                                                                                                                                                             \\
-   \toprule
-   \textbf{Fase} & \textbf{Nombre}                                                                                                                                            & \textbf{Tiempo} & \textbf{Actividades principales} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Estructura de la Social Sprint Retrospective (90 minutos)}
+    \label{tab:estructura-retro-social}                                                                                                                                                                                             \\
+    \toprule
+    \textbf{Fase} & \textbf{Nombre}                                                                                                                                            & \textbf{Tiempo} & \textbf{Actividades principales} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                         \\
-   \toprule
-   \textbf{Fase} & \textbf{Nombre}                                                                                                                                            & \textbf{Tiempo} & \textbf{Actividades principales} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                         \\
+    \toprule
+    \textbf{Fase} & \textbf{Nombre}                                                                                                                                            & \textbf{Tiempo} & \textbf{Actividades principales} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                 \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                 \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   1
-                 & Preparación del espacio
-                 & 10 min
-                 & Registro emocional inicial, recordatorio de acuerdos (confidencialidad, ausencia de culpa, buena fe) y verificación de seguridad psicológica.                                                                   \\
+    1
+                  & Preparación del espacio
+                  & 10 min
+                  & Registro emocional inicial, recordatorio de acuerdos (confidencialidad, ausencia de culpa, buena fe) y verificación de seguridad psicológica.                                                                   \\
 
-   2
-                 & Recolección de datos
-                 & 25 min
-                 & Uso de cuatro cuadrantes sociales o línea de tiempo emocional; notas específicas basadas en eventos observables del Sprint.                                                                                     \\
+    2
+                  & Recolección de datos
+                  & 25 min
+                  & Uso de cuatro cuadrantes sociales o línea de tiempo emocional; notas específicas basadas en eventos observables del Sprint.                                                                                     \\
 
-   3
-                 & Análisis de patrones
-                 & 30 min
-                 & Priorización mediante votación por puntos, aplicación de la técnica de los cinco porqués para identificar causas raíz y mapeo a \textit{community smells}.                                                      \\
+    3
+                  & Análisis de patrones
+                  & 30 min
+                  & Priorización mediante votación por puntos, aplicación de la técnica de los cinco porqués para identificar causas raíz y mapeo a \textit{community smells}.                                                      \\
 
-   4
-                 & Generación de compromisos
-                 & 25 min
-                 & Definición de acciones SMART, estimación en SSP y priorización de un máximo de una a tres acciones para el siguiente Sprint.                                                                                    \\
+    4
+                  & Generación de compromisos
+                  & 25 min
+                  & Definición de acciones SMART, estimación en SSP y priorización de un máximo de una a tres acciones para el siguiente Sprint.                                                                                    \\
 \end{longtable}
 \endgroup
 
@@ -926,10 +935,10 @@ Duración: 90 minutos para Sprints de 2 semanas (ajustable proporcionalmente), e
 La Figura \ref{fig:fases-retro-social} ilustra el flujo de las cuatro fases de la Social Sprint Retrospective, destacando la transición entre recolección de datos, análisis y generación de compromisos concretos.
 
 \begin{figure}[h]
-   \centering
-   \includegraphics[width=0.8\textwidth]{recursos/capitulo4/fases-retro-social.png}
-   \caption{Flujo de las cuatro fases de la Social Sprint Retrospective}
-   \label{fig:fases-retro-social}
+    \centering
+    \includegraphics[width=0.8\textwidth]{recursos/capitulo4/fases-retro-social.png}
+    \caption{Flujo de las cuatro fases de la Social Sprint Retrospective}
+    \label{fig:fases-retro-social}
 \end{figure}
 \FloatBarrier
 
@@ -948,55 +957,55 @@ SocialScrum introduce cuatro artefactos complementarios que hacen visible la sal
 \setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{3.6cm}   % Artefacto
-   >{\RaggedRight\hspace{0pt}}p{4.6cm}   % Propósito
-   >{\RaggedRight\hspace{0pt}}p{3.8cm}   % Se actualiza en
-   >{\Centering\hspace{0pt}}p{2.8cm}     % Responsable
-   }
+    >{\RaggedRight\hspace{0pt}}p{3.6cm}   % Artefacto
+    >{\RaggedRight\hspace{0pt}}p{4.6cm}   % Propósito
+    >{\RaggedRight\hspace{0pt}}p{3.8cm}   % Se actualiza en
+    >{\Centering\hspace{0pt}}p{2.8cm}     % Responsable
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Artefactos sociales de SocialScrum}
-   \label{tab:artefactos-sociales}                                                                                        \\
-   \toprule
-   \textbf{Artefacto} & \textbf{Propósito}                              & \textbf{Se actualiza en} & \textbf{Responsable} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Artefactos sociales de SocialScrum}
+    \label{tab:artefactos-sociales}                                                                                        \\
+    \toprule
+    \textbf{Artefacto} & \textbf{Propósito}                              & \textbf{Se actualiza en} & \textbf{Responsable} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                \\
-   \toprule
-   \textbf{Artefacto} & \textbf{Propósito}                              & \textbf{Se actualiza en} & \textbf{Responsable} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                \\
+    \toprule
+    \textbf{Artefacto} & \textbf{Propósito}                              & \textbf{Se actualiza en} & \textbf{Responsable} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                        \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                        \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   Social Product Backlog.
-                      & Inventario priorizado de items de deuda social.
-                      & Social Sprint Planning, Social Retrospective.
-                      & Social Guide + PO.                                                                                \\
+    Social Product Backlog.
+                       & Inventario priorizado de items de deuda social.
+                       & Social Sprint Planning, Social Retrospective.
+                       & Social Guide + PO.                                                                                \\
 
-   Social Sprint Backlog.
-                      & Compromisos sociales del Sprint actual.
-                      & Social Sprint Planning.
-                      & Development Team.                                                                                 \\
+    Social Sprint Backlog.
+                       & Compromisos sociales del Sprint actual.
+                       & Social Sprint Planning.
+                       & Development Team.                                                                                 \\
 
-   Registro de \textit{Community Smells}.
-                      & Historial de smells detectados y su evolución.
-                      & Continuo (Daily, Retro).
-                      & Social Guide.                                                                                     \\
+    Registro de \textit{Community Smells}.
+                       & Historial de smells detectados y su evolución.
+                       & Continuo (Daily, Retro).
+                       & Social Guide.                                                                                     \\
 
-   Dashboard de Métricas Sociales.
-                      & Visualización del Health Score y tendencias.
-                      & Semanal.
-                      & Social Guide.                                                                                     \\
+    Dashboard de Métricas Sociales.
+                       & Visualización del Health Score y tendencias.
+                       & Semanal.
+                       & Social Guide.                                                                                     \\
 \end{longtable}
 \endgroup
 
@@ -1013,11 +1022,11 @@ A diferencia del Product Backlog técnico, que contiene funcionalidades que entr
 El propósito del Social Product Backlog es triple:
 
 \begin{enumerate}
-   \item \textbf{Hacer visible la deuda social}: Sin un inventario explícito, la deuda social permanece en conversaciones informales, quejas de pasillo o frustración silenciosa. El Social Product Backlog la convierte en items concretos que pueden discutirse, priorizarse y abordarse.
+    \item \textbf{Hacer visible la deuda social}: Sin un inventario explícito, la deuda social permanece en conversaciones informales, quejas de pasillo o frustración silenciosa. El Social Product Backlog la convierte en items concretos que pueden discutirse, priorizarse y abordarse.
 
-   \item \textbf{Forzar priorización explícita}: Cuando la deuda social compite formalmente por capacidad con el trabajo técnico, el equipo debe decidir conscientemente qué problemas abordar primero. Esta decisión, aunque incómoda, es preferible a la alternativa: ignorar los problemas hasta que exploten.
+    \item \textbf{Forzar priorización explícita}: Cuando la deuda social compite formalmente por capacidad con el trabajo técnico, el equipo debe decidir conscientemente qué problemas abordar primero. Esta decisión, aunque incómoda, es preferible a la alternativa: ignorar los problemas hasta que exploten.
 
-   \item \textbf{Proporcionar trazabilidad}: El Social Product Backlog registra qué se identificó, cuándo, por qué se priorizó (o no), y qué ocurrió después. Esta trazabilidad permite aprender de intervenciones pasadas y demostrar progreso a \textit{stakeholders}.
+    \item \textbf{Proporcionar trazabilidad}: El Social Product Backlog registra qué se identificó, cuándo, por qué se priorizó (o no), y qué ocurrió después. Esta trazabilidad permite aprender de intervenciones pasadas y demostrar progreso a \textit{stakeholders}.
 \end{enumerate}
 
 \subsubsection{Estructura de un item del Social Product Backlog}
@@ -1025,12 +1034,12 @@ El propósito del Social Product Backlog es triple:
 Cada item del Social Product Backlog sigue una estructura estandarizada con los siguientes campos obligatorios:
 
 \begin{itemize}
-   \item \textbf{Identificador y metadatos}: ID único, fecha de creación, origen (evento donde se identificó).
-   \item \textbf{Título y descripción}: Descripción clara del problema o intervención propuesta.
-   \item \textbf{Criterios de aceptación}: Condiciones verificables que definen cuándo el item está completado.
-   \item \textbf{Clasificación}: \textit{Community smell} asociado, severidad (Alta/Media/Baja), dimensión del Health Score afectada.
-   \item \textbf{Planificación}: Estimación en SSP (ver Anexo~\ref{anexo:sistema-estimacion-social}), prioridad, dependencias.
-   \item \textbf{Historial}: Registro de cambios de estado y decisiones.
+    \item \textbf{Identificador y metadatos}: ID único, fecha de creación, origen (evento donde se identificó).
+    \item \textbf{Título y descripción}: Descripción clara del problema o intervención propuesta.
+    \item \textbf{Criterios de aceptación}: Condiciones verificables que definen cuándo el item está completado.
+    \item \textbf{Clasificación}: \textit{Community smell} asociado, severidad (Alta/Media/Baja), dimensión del Health Score afectada.
+    \item \textbf{Planificación}: Estimación en SSP (ver Anexo~\ref{anexo:sistema-estimacion-social}), prioridad, dependencias.
+    \item \textbf{Historial}: Registro de cambios de estado y decisiones.
 \end{itemize}
 
 \subsubsection{Tipos de items y priorización}
@@ -1042,62 +1051,61 @@ La priorización es responsabilidad compartida entre el Social Guide y el Produc
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
-\setlength{\tabcolsep}{3pt}
-% NO pegamos la longtable al margen izquierdo
-\setlength{\LTleft}{\fill}
-\setlength{\LTright}{\fill}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{3.1cm}   % Severidad
-   >{\RaggedRight\hspace{0pt}}p{3.9cm}   % Esfuerzo bajo
-   >{\RaggedRight\hspace{0pt}}p{3.9cm}   % Esfuerzo medio
-   >{\RaggedRight\hspace{0pt}}p{3.9cm}   % Esfuerzo alto
-   }
+    >{\RaggedRight\hspace{0pt}}p{3.2cm}   % Severidad
+    >{\RaggedRight\hspace{0pt}}p{3.9cm}   % Esfuerzo bajo
+    >{\RaggedRight\hspace{0pt}}p{3.9cm}   % Esfuerzo medio
+    >{\RaggedRight\hspace{0pt}}p{3.9cm}   % Esfuerzo alto
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Matriz de priorización del Social Product Backlog}
-   \label{tab:matriz-priorizacion-pbs}                                     \\
-   \toprule
-   \textbf{Severidad}
-    & \textbf{Esfuerzo bajo (1-3 SSP)}
-    & \textbf{Esfuerzo medio (4-8 SSP)}
-    & \textbf{Esfuerzo alto (9+ SSP)}                                      \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Matriz de priorización del Social Product Backlog}
+    \label{tab:matriz-priorizacion-pbs}                                     \\
+    \toprule
+    \textbf{Severidad}
+     & \textbf{Esfuerzo bajo (1-3 SSP)}
+     & \textbf{Esfuerzo medio (4-8 SSP)}
+     & \textbf{Esfuerzo alto (9+ SSP)}                                      \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}} \\
-   \toprule
-   \textbf{Severidad}
-    & \textbf{Esfuerzo bajo (1-3 SSP)}
-    & \textbf{Esfuerzo medio (4-8 SSP)}
-    & \textbf{Esfuerzo alto (9+ SSP)}                                      \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}} \\
+    \toprule
+    \textbf{Severidad}
+     & \textbf{Esfuerzo bajo (1-3 SSP)}
+     & \textbf{Esfuerzo medio (4-8 SSP)}
+     & \textbf{Esfuerzo alto (9+ SSP)}                                      \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}         \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}         \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   \textbf{Severidad alta}
-    & Hacer inmediatamente
-    & Hacer este Sprint
-    & Planificar para próximo Sprint                                       \\
+    \textbf{Severidad alta}
+     & Hacer inmediatamente
+     & Hacer este Sprint
+     & Planificar para próximo Sprint                                       \\
 
-   \textbf{Severidad media}
-    & Hacer este Sprint
-    & Evaluar capacidad
-    & Posponer si hay severidad alta pendiente                             \\
+    \textbf{Severidad media}
+     & Hacer este Sprint
+     & Evaluar capacidad
+     & Posponer si hay severidad alta pendiente                             \\
 
-   \textbf{Severidad baja}
-    & Incluir si hay capacidad
-    & Mantener en backlog
-    & Re-evaluar necesidad                                                 \\
+    \textbf{Severidad baja}
+     & Incluir si hay capacidad
+     & Mantener en backlog
+     & Re-evaluar necesidad                                                 \\
 \end{longtable}
 \endgroup
 
@@ -1110,9 +1118,9 @@ El Social Guide refina el backlog semanalmente, eliminando items obsoletos, actu
 El Social Product Backlog y el Product Backlog técnico son artefactos separados pero interrelacionados. Durante el Sprint Planning, ambos backlogs compiten por la capacidad del equipo:
 
 \begin{itemize}
-   \item El Product Owner presenta items técnicos prioritarios.
-   \item El Social Guide presenta items sociales prioritarios.
-   \item El Development Team decide cuánta capacidad asignar a cada tipo, considerando el Health Score actual y los compromisos de negocio.
+    \item El Product Owner presenta items técnicos prioritarios.
+    \item El Social Guide presenta items sociales prioritarios.
+    \item El Development Team decide cuánta capacidad asignar a cada tipo, considerando el Health Score actual y los compromisos de negocio.
 \end{itemize}
 
 Como regla general, SocialScrum recomienda reservar entre el 10\% y el 20\% de la capacidad del Sprint para items sociales cuando el Health Score está por debajo de 7. Cuando el Health Score es 7 o superior, esta reserva puede reducirse al 5-10\% para mantenimiento preventivo.
@@ -1128,52 +1136,52 @@ El Social Sprint Backlog hace explícito qué trabajo social ocurrirá durante e
 El propósito del Social Sprint Backlog es:
 
 \begin{enumerate}
-   \item \textbf{Convertir intenciones en compromisos}: Un item en el Social Product Backlog es algo que ``podríamos hacer''. Un item en el Social Sprint Backlog es algo que ``haremos este Sprint''.
-   \item \textbf{Hacer visible el trabajo social}: Cuando los items sociales aparecen en el mismo tablero que los items técnicos, el equipo y los \textit{stakeholders} ven que la salud social recibe atención real, no solo discursos.
-   \item \textbf{Permitir seguimiento de progreso}: Durante el Sprint, el equipo puede ver qué items sociales están ``en progreso'' y cuáles están ``completados'', igual que con los items técnicos.
+    \item \textbf{Convertir intenciones en compromisos}: Un item en el Social Product Backlog es algo que ``podríamos hacer''. Un item en el Social Sprint Backlog es algo que ``haremos este Sprint''.
+    \item \textbf{Hacer visible el trabajo social}: Cuando los items sociales aparecen en el mismo tablero que los items técnicos, el equipo y los \textit{stakeholders} ven que la salud social recibe atención real, no solo discursos.
+    \item \textbf{Permitir seguimiento de progreso}: Durante el Sprint, el equipo puede ver qué items sociales están ``en progreso'' y cuáles están ``completados'', igual que con los items técnicos.
 \end{enumerate}
 
 \subsubsection{Contenido del Social Sprint Backlog}
 El Social Sprint Backlog contiene:
 
 \begin{itemize}
-   \item \textbf{Items sociales seleccionados}: Típicamente 1-3 items del Social Product Backlog, dependiendo de la capacidad y el Health Score.
-   \item \textbf{Tareas asociadas}: Cada item se descompone en tareas concretas que pueden completarse y verificarse.
-   \item \textbf{Responsables}: Aunque el trabajo social es responsabilidad del equipo completo, cada tarea tiene un responsable que asegura su ejecución.
-   \item \textbf{Criterios de ``Done'' social}: Condiciones que deben cumplirse para considerar el item completado.
+    \item \textbf{Items sociales seleccionados}: Típicamente 1-3 items del Social Product Backlog, dependiendo de la capacidad y el Health Score.
+    \item \textbf{Tareas asociadas}: Cada item se descompone en tareas concretas que pueden completarse y verificarse.
+    \item \textbf{Responsables}: Aunque el trabajo social es responsabilidad del equipo completo, cada tarea tiene un responsable que asegura su ejecución.
+    \item \textbf{Criterios de ``Done'' social}: Condiciones que deben cumplirse para considerar el item completado.
 \end{itemize}
 
 Ejemplo de item en Social Sprint Backlog:
 
 \begin{protocolo}
-   \textbf{Ítem del Social Sprint Backlog}
+    \textbf{Ítem del Social Sprint Backlog}
 
-   \textbf{Título}\\
-   Reducir \emph{Radio Silence} en la comunicación cross-funcional
+    \textbf{Título}\\
+    Reducir \emph{Radio Silence} en la comunicación cross-funcional
 
-   \medskip
-   \textbf{Estimación}\\
-   5 SSP (Social Story Points)
+    \medskip
+    \textbf{Estimación}\\
+    5 SSP (Social Story Points)
 
-   \medskip
-   \textbf{Criterio de Done}
-   \begin{itemize}
-      \item Los mensajes cross-equipo aumentan de aproximadamente 2 a 5 o más por día.
-      \item Al menos un riesgo es reportado de forma proactiva durante el Sprint.
-   \end{itemize}
+    \medskip
+    \textbf{Criterio de Done}
+    \begin{itemize}
+        \item Los mensajes cross-equipo aumentan de aproximadamente 2 a 5 o más por día.
+        \item Al menos un riesgo es reportado de forma proactiva durante el Sprint.
+    \end{itemize}
 
-   \medskip
-   \textbf{Tareas}
-   \begin{itemize}
-      \item Añadir pregunta de riesgos al Daily \hfill (Responsable: Social Guide).
-      \item Crear canal \#risks en Slack o herramienta equivalente \hfill (Responsable: Scrum Master).
-      \item Facilitar primera sesión de sincronización Frontend y Backend \hfill (Responsable: Social Guide).
-      \item Medir comunicación cross-funcional al final del Sprint \hfill (Responsable: Social Guide).
-   \end{itemize}
+    \medskip
+    \textbf{Tareas}
+    \begin{itemize}
+        \item Añadir pregunta de riesgos al Daily \hfill (Responsable: Social Guide).
+        \item Crear canal \#risks en Slack o herramienta equivalente \hfill (Responsable: Scrum Master).
+        \item Facilitar primera sesión de sincronización Frontend y Backend \hfill (Responsable: Social Guide).
+        \item Medir comunicación cross-funcional al final del Sprint \hfill (Responsable: Social Guide).
+    \end{itemize}
 
-   \medskip
-   \textbf{Estado actual}\\
-   En progreso (2 de 4 tareas completadas)
+    \medskip
+    \textbf{Estado actual}\\
+    En progreso (2 de 4 tareas completadas)
 
 \end{protocolo}
 
@@ -1186,8 +1194,8 @@ Existen dos modelos para integrar el Social Sprint Backlog con el técnico:
 Los items sociales aparecen en el mismo tablero que los items técnicos, diferenciados por etiquetas o colores. Esto maximiza visibilidad y normaliza el trabajo social como ``trabajo real''.
 
 \begin{itemize}
-   \item \textbf{Ventaja}: El equipo ve todo su trabajo en un solo lugar. Los items sociales no se ``esconden'' en un backlog separado.
-   \item \textbf{Implementación}: Por ejemplo, en Jira, usar etiqueta ``social'' o tipo de incidencias (\textit{issue}) ``Social Item''. En tablero físico, usar notas adhesivas (post-its) de color diferente.
+    \item \textbf{Ventaja}: El equipo ve todo su trabajo en un solo lugar. Los items sociales no se ``esconden'' en un backlog separado.
+    \item \textbf{Implementación}: Por ejemplo, en Jira, usar etiqueta ``social'' o tipo de incidencias (\textit{issue}) ``Social Item''. En tablero físico, usar notas adhesivas (post-its) de color diferente.
 \end{itemize}
 
 \paragraph{Modelo separado}
@@ -1195,8 +1203,8 @@ Los items sociales aparecen en el mismo tablero que los items técnicos, diferen
 Los items sociales se gestionan en un tablero aparte, visible solo para el equipo y el Social Guide. Los \textit{stakeholders} ven únicamente el tablero técnico.
 
 \begin{itemize}
-   \item \textbf{Ventaja}: Mayor privacidad para temas sensibles. Útil en organizaciones donde hay riesgo de que \textit{stakeholders} malinterpreten el trabajo social.
-   \item \textbf{Desventaja}: Reduce visibilidad y puede perpetuar la percepción de que el trabajo social es ``secundario''.
+    \item \textbf{Ventaja}: Mayor privacidad para temas sensibles. Útil en organizaciones donde hay riesgo de que \textit{stakeholders} malinterpreten el trabajo social.
+    \item \textbf{Desventaja}: Reduce visibilidad y puede perpetuar la percepción de que el trabajo social es ``secundario''.
 \end{itemize}
 
 SocialScrum recomienda el modelo integrado salvo que existan razones específicas para mantener separación.
@@ -1206,11 +1214,11 @@ SocialScrum recomienda el modelo integrado salvo que existan razones específica
 El Social Sprint Backlog se actualiza durante el Sprint de la misma forma que el técnico:
 
 \begin{itemize}
-   \item \textbf{Social Daily Standup}: Si hay tareas sociales en progreso, se reporta avance brevemente. El Social Guide puede mencionar: ``La sesión de sincronización FE-BE (Frontend-Backend) está programada para mañana a las 3pm''.
+    \item \textbf{Social Daily Standup}: Si hay tareas sociales en progreso, se reporta avance brevemente. El Social Guide puede mencionar: ``La sesión de sincronización FE-BE (Frontend-Backend) está programada para mañana a las 3pm''.
 
-   \item \textbf{Durante el Sprint}: Cuando se completan tareas, se marcan como ``Done''. Si surgen impedimentos, se discuten.
+    \item \textbf{Durante el Sprint}: Cuando se completan tareas, se marcan como ``Done''. Si surgen impedimentos, se discuten.
 
-   \item \textbf{Social Sprint Review}: Se reporta qué items sociales se completaron y cuál fue su impacto.
+    \item \textbf{Social Sprint Review}: Se reporta qué items sociales se completaron y cuál fue su impacto.
 \end{itemize}
 
 \subsubsection{Qué hacer si no se completan items sociales}
@@ -1218,16 +1226,16 @@ El Social Sprint Backlog se actualiza durante el Sprint de la misma forma que el
 Si al final del Sprint hay items sociales incompletos, se aplican las mismas reglas que para items técnicos:
 
 \begin{enumerate}
-   \item \textbf{No se consideran ``Done''}: Items parcialmente completados vuelven al Social Product Backlog para re-priorización.
+    \item \textbf{No se consideran ``Done''}: Items parcialmente completados vuelven al Social Product Backlog para re-priorización.
 
-   \item \textbf{Se analiza la causa}: ¿Se subestimó el esfuerzo? ¿Hubo impedimentos inesperados? ¿El equipo priorizó trabajo técnico sobre social?
+    \item \textbf{Se analiza la causa}: ¿Se subestimó el esfuerzo? ¿Hubo impedimentos inesperados? ¿El equipo priorizó trabajo técnico sobre social?
 
-   \item \textbf{Se ajusta para futuros Sprints}: Si consistentemente los items sociales no se completan, puede indicar que el equipo no está comprometido con SocialScrum, o que la estimación en SSP es incorrecta.
+    \item \textbf{Se ajusta para futuros Sprints}: Si consistentemente los items sociales no se completan, puede indicar que el equipo no está comprometido con SocialScrum, o que la estimación en SSP es incorrecta.
 \end{enumerate}
 
-Los artefactos sociales de SocialScrum proporcionan la infraestructura de información necesaria para gestionar la deuda social con rigor. Sin ellos, la gestión de salud social queda en el ámbito de las buenas intenciones y las conversaciones informales. Con ellos, se convierte en un proceso sistemático, trazable y demostrable. El Social Product Backlog hace visible qué se puede mejorar; el Social Sprint Backlog convierte intenciones en compromisos; el Registro de \textit{community smells} proporciona memoria histórica; y el Dashboard de Métricas Sociales permite inspección continua. Juntos, estos artefactos cierran el ciclo de transparencia-inspección-adaptación que define a Scrum, extendiéndolo a la dimensión social del trabajo en equipo.
+Los artefactos sociales de SocialScrum proporcionan la infraestructura de información necesaria para gestionar la deuda social con rigor. Sin ellos, la gestión de salud social queda en el ámbito de las buenas intenciones y las conversaciones informales. Con ellos, se convierte en un proceso sistemático, trazable y demostrable. El Social Product Backlog hace visible qué se puede mejorar; el Social Sprint Backlog convierte intenciones en compromisos; el Registro de Olores Comunitarios proporciona memoria histórica; y el Dashboard de Métricas Sociales permite inspección continua. Juntos, estos artefactos cierran el ciclo de transparencia-inspección-adaptación que define a Scrum, extendiéndolo a la dimensión social del trabajo en equipo.
 
-Los artefactos capturan información, pero ¿cómo se genera esa información de manera confiable? El Health Score que aparece en el Dashboard, los \textit{community smells} que se registran, los indicadores de tendencia ---todos requieren un sistema de medición que transforme observaciones cualitativas en datos utilizables. La siguiente sección describe este sistema: cómo se operacionaliza el Health Score, qué instrumentos se utilizan para medirlo, y cómo se interpretan los resultados para tomar decisiones concretas.
+Los artefactos capturan información, pero ¿cómo se genera esa información de manera confiable? El Health Score que aparece en el Dashboard, los Olores Comunitarios que se registran, los indicadores de tendencia ---todos requieren un sistema de medición que transforme observaciones cualitativas en datos utilizables. La siguiente sección describe este sistema: cómo se operacionaliza el Health Score, qué instrumentos se utilizan para medirlo, y cómo se interpretan los resultados para tomar decisiones concretas.
 
 \section{Sistema de medición de salud social}
 \label{sec:sistema-medicion-salud-social}
@@ -1246,61 +1254,61 @@ El Health Score evalúa cinco dimensiones clave de la salud social, cada una ali
 \setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{3.5cm}   % Dimensión
-   >{\RaggedRight\hspace{0pt}}p{6.0cm}   % Indicadores positivos
-   >{\RaggedRight\hspace{0pt}}p{5.5cm}   % Smells relacionados
-   }
+    >{\RaggedRight\hspace{0pt}}p{3.5cm}   % Dimensión
+    >{\RaggedRight\hspace{0pt}}p{6.0cm}   % Indicadores positivos
+    >{\RaggedRight\hspace{0pt}}p{5.5cm}   % Smells relacionados
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Dimensiones del Health Score}
-   \label{tab:dimensiones-health-score}                                                                                                           \\
-   \toprule
-   \textbf{Dimensión} & \textbf{Indicadores positivos}                                                             & \textbf{Smells relacionados} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Dimensiones del Health Score}
+    \label{tab:dimensiones-health-score}                                                                                                           \\
+    \toprule
+    \textbf{Dimensión} & \textbf{Indicadores positivos}                                                             & \textbf{Smells relacionados} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                        \\
-   \toprule
-   \textbf{Dimensión} & \textbf{Indicadores positivos}                                                             & \textbf{Smells relacionados} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                        \\
+    \toprule
+    \textbf{Dimensión} & \textbf{Indicadores positivos}                                                             & \textbf{Smells relacionados} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   Apertura
-                      & Riesgos reportados temprano; errores discutidos abiertamente; desacuerdo constructivo
-                      & \gls{cs-radio-silence}, \gls{cs-information-hoarding}                                                                     \\
+    Apertura
+                       & Riesgos reportados temprano; errores discutidos abiertamente; desacuerdo constructivo
+                       & \gls{cs-radio-silence}, \gls{cs-information-hoarding}                                                                     \\
 
-   Compromiso
-                      & Acuerdos cumplidos; ayuda a compañeros bloqueados; Sprint Goal tratado colectivamente
-                      & \gls{cs-lone-wolf}, \gls{cs-free-riding}, \gls{cs-disengagement}                                                          \\
+    Compromiso
+                       & Acuerdos cumplidos; ayuda a compañeros bloqueados; Sprint Goal tratado colectivamente
+                       & \gls{cs-lone-wolf}, \gls{cs-free-riding}, \gls{cs-disengagement}                                                          \\
 
-   Respeto
-                      & Ideas evaluadas por mérito; reconocimiento explícito; desacuerdos sin ataques personales
-                      & \gls{cs-prima-donnas}, \gls{cs-toxic-leadership}, \gls{cs-cliques}                                                        \\
+    Respeto
+                       & Ideas evaluadas por mérito; reconocimiento explícito; desacuerdos sin ataques personales
+                       & \gls{cs-prima-donnas}, \gls{cs-toxic-leadership}, \gls{cs-cliques}                                                        \\
 
-   Foco
-                      & Una tarea a la vez; reuniones con propósito claro; protección contra demandas externas
-                      & \gls{cs-context-switching}, \gls{cs-meeting-hell}                                                                         \\
+    Foco
+                       & Una tarea a la vez; reuniones con propósito claro; protección contra demandas externas
+                       & \gls{cs-context-switching}, \gls{cs-meeting-hell}                                                                         \\
 
-   Coraje
-                      & Ideas no convencionales propuestas; errores reportados voluntariamente; feedback a líderes
-                      & \gls{cs-fear-of-speaking-up}, \gls{cs-blame-culture}                                                                      \\
+    Coraje
+                       & Ideas no convencionales propuestas; errores reportados voluntariamente; feedback a líderes
+                       & \gls{cs-fear-of-speaking-up}, \gls{cs-blame-culture}                                                                      \\
 \end{longtable}
 \endgroup
 
 El Health Score se calcula promediando las puntuaciones de las cinco dimensiones, cada una medida en una escala de 1 a 10. La fórmula es:
 
 \begin{equation}
-   \text{Health Score} = \frac{\text{Apertura} + \text{Compromiso} + \text{Respeto} + \text{Foco} + \text{Coraje}}{5}
+    \text{Health Score} = \frac{\text{Apertura} + \text{Compromiso} + \text{Respeto} + \text{Foco} + \text{Coraje}}{5}
 \end{equation}
 
 \subsubsection{Frecuencia y formato de medición}
@@ -1310,53 +1318,53 @@ El Health Score se mide mediante dos instrumentos complementarios como se detall
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
-\setlength{\tabcolsep}{3pt}
-\setlength{\LTleft}{\fill}
-\setlength{\LTright}{\fill}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{2.6cm}   % Tipo
-   >{\RaggedRight\hspace{0pt}}p{2.8cm}   % Frecuencia
-   >{\RaggedRight\hspace{0pt}}p{5.4cm}   % Contenido
-   >{\Centering\hspace{0pt}}p{2.4cm}     % Duración
-   >{\Centering\hspace{0pt}}p{2.4cm}     % Tasa mínima
-   }
+    >{\RaggedRight\hspace{0pt}}p{2.6cm}   % Tipo
+    >{\RaggedRight\hspace{0pt}}p{2.1cm}   % Frecuencia
+    >{\RaggedRight\hspace{0pt}}p{5.5cm}   % Contenido
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Duración
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Tasa mínima
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Instrumentos de medición del Health Score}
-   \label{tab:instrumentos-medicion}                                                                                          \\
-   \toprule
-   \textbf{Tipo} & \textbf{Frecuencia}                        & \textbf{Contenido} & \textbf{Duración} & \textbf{Tasa mínima} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Instrumentos de medición del Health Score}
+    \label{tab:instrumentos-medicion}                                                                                          \\
+    \toprule
+    \textbf{Tipo} & \textbf{Frecuencia}                        & \textbf{Contenido} & \textbf{Duración} & \textbf{Tasa mínima} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{5}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                    \\
-   \toprule
-   \textbf{Tipo} & \textbf{Frecuencia}                        & \textbf{Contenido} & \textbf{Duración} & \textbf{Tasa mínima} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{5}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                    \\
+    \toprule
+    \textbf{Tipo} & \textbf{Frecuencia}                        & \textbf{Contenido} & \textbf{Duración} & \textbf{Tasa mínima} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{5}{r}{\textit{Continúa en la siguiente página...}}                                                            \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{5}{r}{\textit{Continúa en la siguiente página...}}                                                            \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   Pulso semanal
-                 & Cada viernes
-                 & 5 preguntas (1 por dimensión), escala 1-10
-                 & 2-3 min
-                 & 70\%                                                                                                       \\
+    Pulso semanal
+                  & Cada viernes
+                  & 5 preguntas (1 por dimensión), escala 1-10
+                  & 2-3 min
+                  & 70\%                                                                                                       \\
 
-   Sprint completa
-                 & Fin de Sprint
-                 & 20 preguntas + 3 abiertas
-                 & 5-8 min
-                 & 80\%                                                                                                       \\
+    Sprint completa
+                  & Fin de Sprint
+                  & 20 preguntas + 3 abiertas
+                  & 5-8 min
+                  & 80\%                                                                                                       \\
 \end{longtable}
 \endgroup
 
@@ -1372,54 +1380,54 @@ El Health Score se interpreta en tres zonas que indican el estado de salud socia
 \setlength{\LTright}{0pt}
 
 \begin{longtable}[H]{
-   >{\Centering\hspace{0pt}}p{0.12\textwidth}  % Rango
-   >{\RaggedRight\hspace{0pt}}p{0.16\textwidth} % Zona
-   >{\RaggedRight\hspace{0pt}}p{0.22\textwidth} % Significado
-   >{\Centering\hspace{0pt}}p{0.16\textwidth}   % Capacidad social
-   >{\RaggedRight\hspace{0pt}}p{0.34\textwidth} % Acciones
-   }
+    >{\Centering\hspace{0pt}}p{0.10\textwidth}  % Rango
+    >{\RaggedRight\hspace{0pt}}p{0.09\textwidth} % Zona
+    >{\RaggedRight\hspace{0pt}}p{0.22\textwidth} % Significado
+    >{\Centering\hspace{0pt}}p{0.16\textwidth}   % Capacidad social
+    >{\RaggedRight\hspace{0pt}}p{0.34\textwidth} % Acciones
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Zonas del Health Score y protocolo de respuesta}
-   \label{tab:zonas-health-score}                                                                                                                          \\
-   \toprule
-   \textbf{Rango} & \textbf{Zona}                                                   & \textbf{Significado} & \textbf{Capacidad social} & \textbf{Acciones} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Zonas del Health Score y protocolo de respuesta}
+    \label{tab:zonas-health-score}                                                                                                                          \\
+    \toprule
+    \textbf{Rango} & \textbf{Zona}                                                   & \textbf{Significado} & \textbf{Capacidad social} & \textbf{Acciones} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{5}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                 \\
-   \toprule
-   \textbf{Rango} & \textbf{Zona}                                                   & \textbf{Significado} & \textbf{Capacidad social} & \textbf{Acciones} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{5}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                 \\
+    \toprule
+    \textbf{Rango} & \textbf{Zona}                                                   & \textbf{Significado} & \textbf{Capacidad social} & \textbf{Acciones} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{5}{r}{\textit{Continúa en la siguiente página...}}                                                                                         \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{5}{r}{\textit{Continúa en la siguiente página...}}                                                                                         \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   7.0--10.0
-                  & Saludable
-                  & Funciona bien, problemas menores
-                  & 5--10\%
-                  & Mantenimiento preventivo, revisión mensual.                                                                                            \\
+    7.0--10.0
+                   & Saludable
+                   & Funciona bien, problemas menores
+                   & 5--10\%
+                   & Mantenimiento preventivo, revisión mensual.                                                                                            \\
 
-   5.0--6.9
-                  & En riesgo
-                  & Fricción que puede escalar
-                  & 15--20\%
-                  & Atención activa, revisión semanal, intervenciones específicas.                                                                         \\
+    5.0--6.9
+                   & En riesgo
+                   & Fricción que puede escalar
+                   & 15--20\%
+                   & Atención activa, revisión semanal, intervenciones específicas.                                                                         \\
 
-   1.0--4.9
-                  & Crítico
-                  & Crisis seria, productividad afectada
-                  & 30--50\%
-                  & Intervención inmediata, escalar a CTO, reducir alcance técnico.                                                                        \\
+    1.0--4.9
+                   & Crítico
+                   & Crisis seria, productividad afectada
+                   & 30--50\%
+                   & Intervención inmediata, escalar a CTO, reducir alcance técnico.                                                                        \\
 \end{longtable}
 \endgroup
 
@@ -1428,10 +1436,10 @@ El Health Score se interpreta en tres zonas que indican el estado de salud socia
 El sistema genera alertas automáticas cuando se detectan patrones preocupantes en el Health Score:
 
 \begin{itemize}
-   \item \textbf{Caída abrupta}: Health Score baja $>$1.5 puntos en una semana → investigar inmediatamente.
-   \item \textbf{Tendencia negativa}: 3 semanas consecutivas de caída → activar protocolo En riesgo.
-   \item \textbf{Dimensión crítica}: Cualquier dimensión $<$4.0 → priorizar esa dimensión.
-   \item \textbf{Baja participación}: $<$50\% responde encuestas por 2 semanas → revisar proceso.
+    \item \textbf{Caída abrupta}: Health Score baja $>$1.5 puntos en una semana → investigar inmediatamente.
+    \item \textbf{Tendencia negativa}: 3 semanas consecutivas de caída → activar protocolo En riesgo.
+    \item \textbf{Dimensión crítica}: Cualquier dimensión $<$4.0 → priorizar esa dimensión.
+    \item \textbf{Baja participación}: $<$50\% responde encuestas por 2 semanas → revisar proceso.
 \end{itemize}
 
 \subsection{Triangulación de fuentes de datos}
@@ -1446,50 +1454,50 @@ El Health Score se complementa con observación participante (durante eventos Sc
 \setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{5.0cm}   % Aspecto
-   >{\Centering\hspace{0pt}}p{3.2cm}     % Encuestas
-   >{\Centering\hspace{0pt}}p{3.2cm}     % Observación
-   >{\Centering\hspace{0pt}}p{3.2cm}     % SNA
-   }
+    >{\RaggedRight\hspace{0pt}}p{5.3cm}   % Aspecto
+    >{\Centering\hspace{0pt}}p{3.2cm}     % Encuestas
+    >{\Centering\hspace{0pt}}p{3.2cm}     % Observación
+    >{\Centering\hspace{0pt}}p{3.2cm}     % SNA
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Complementariedad de instrumentos de medición}
-   \label{tab:triangulacion}                                                   \\
-   \toprule
-   \textbf{Aspecto} & \textbf{Encuestas} & \textbf{Observación} & \textbf{SNA} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Complementariedad de instrumentos de medición}
+    \label{tab:triangulacion}                                                   \\
+    \toprule
+    \textbf{Aspecto} & \textbf{Encuestas} & \textbf{Observación} & \textbf{SNA} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}     \\
-   \toprule
-   \textbf{Aspecto} & \textbf{Encuestas} & \textbf{Observación} & \textbf{SNA} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}     \\
+    \toprule
+    \textbf{Aspecto} & \textbf{Encuestas} & \textbf{Observación} & \textbf{SNA} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}             \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}             \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   Percepciones subjetivas
-                    & +++
-                    & ++
-                    & -                                                        \\
+    Percepciones subjetivas
+                     & +++
+                     & ++
+                     & -                                                        \\
 
-   Comportamientos observables
-                    & -
-                    & +++
-                    & +                                                        \\
+    Comportamientos observables
+                     & -
+                     & +++
+                     & +                                                        \\
 
-   Patrones estructurales
-                    & -
-                    & +
-                    & +++                                                      \\
+    Patrones estructurales
+                     & -
+                     & +
+                     & +++                                                      \\
 \end{longtable}
 \endgroup
 
@@ -1509,10 +1517,10 @@ Esta sección presenta un framework de priorización que integra tres dimensione
 El modelo conceptual del framework es un triángulo donde cada vértice representa una dimensión de priorización, en la Figura~\ref{fig:triangulo-priorizacion} se ilustra el triángulo de priorización.
 
 \begin{figure}[h]
-   \centering
-   \includegraphics[width=0.6\textwidth]{recursos/capitulo4/triangulo-priorizacion.png}
-   \caption{Triángulo de priorización de SocialScrum}
-   \label{fig:triangulo-priorizacion}
+    \centering
+    \includegraphics[width=0.6\textwidth]{recursos/capitulo4/triangulo-priorizacion.png}
+    \caption{Triángulo de priorización de SocialScrum}
+    \label{fig:triangulo-priorizacion}
 \end{figure}
 \FloatBarrier
 
@@ -1523,11 +1531,11 @@ La interpretación del triángulo es directa: cada item del Product Backlog se e
 Cada item se evalúa en tres dimensiones usando una escala de 1-10:
 
 \begin{enumerate}
-   \item \textbf{Valor de negocio} (responsable: Product Owner): ¿Cuánto beneficio genera para el cliente u organización? Un 10 indica que sin este ítem el negocio se detiene; un 1-3 indica mejoras marginales.
+    \item \textbf{Valor de negocio} (responsable: Product Owner): ¿Cuánto beneficio genera para el cliente u organización? Un 10 indica que sin este ítem el negocio se detiene; un 1-3 indica mejoras marginales.
 
-   \item \textbf{Urgencia técnica} (responsable: Development Team): ¿Cuán necesario es desde la perspectiva de arquitectura o calidad? Un 10 indica bloqueo total; un 1-3 indica mejoras deseables sin riesgo inmediato.
+    \item \textbf{Urgencia técnica} (responsable: Development Team): ¿Cuán necesario es desde la perspectiva de arquitectura o calidad? Un 10 indica bloqueo total; un 1-3 indica mejoras deseables sin riesgo inmediato.
 
-   \item \textbf{Salud social} (responsable: Social Guide): ¿Es necesario para restaurar la capacidad del equipo? Un 10 indica crisis activa (burnout, conflicto severo); un 1-3 indica mantenimiento preventivo con Health Score $\geq$ 7.
+    \item \textbf{Salud social} (responsable: Social Guide): ¿Es necesario para restaurar la capacidad del equipo? Un 10 indica crisis activa (burnout, conflicto severo); un 1-3 indica mantenimiento preventivo con Health Score $\geq$ 7.
 \end{enumerate}
 
 Las escalas detalladas y ejemplos de evaluación para cada dimensión se presentan en el Anexo~\ref{anexo:framework-priorizacion-extendido}.
@@ -1543,11 +1551,11 @@ En su lugar, SocialScrum propone una conversación estructurada donde cada respo
 Tres escenarios requieren reglas explícitas porque las consecuencias de decidir mal son significativas:
 
 \begin{enumerate}
-   \item \textbf{Regla 1: Health Score < 5 → No comprometer features de alta complejidad}. Un equipo en zona crítica no tiene capacidad para trabajo complejo. El Sprint Goal debe enfocarse en restaurar la salud social antes de comprometer features mayores.
+    \item \textbf{Regla 1: Health Score < 5 → No comprometer features de alta complejidad}. Un equipo en zona crítica no tiene capacidad para trabajo complejo. El Sprint Goal debe enfocarse en restaurar la salud social antes de comprometer features mayores.
 
-   \item \textbf{Regla 2: Valor de Negocio 10 + Salud Social 10 → Escalar a CTO}. Este conflicto genuino entre entregar valor crítico y proteger al equipo requiere perspectiva organizacional. Las opciones típicas incluyen recursos externos, negociación con cliente, o reducción de alcance.
+    \item \textbf{Regla 2: Valor de Negocio 10 + Salud Social 10 → Escalar a CTO}. Este conflicto genuino entre entregar valor crítico y proteger al equipo requiere perspectiva organizacional. Las opciones típicas incluyen recursos externos, negociación con cliente, o reducción de alcance.
 
-   \item \textbf{Regla 3: Health Score $\geq$ 8 → Priorizar por Valor + Urgencia Técnica}. Cuando el equipo está saludable, SocialScrum se comporta como Scrum tradicional. No hay necesidad de reservar capacidad para items sociales ni de moderar el alcance técnico.
+    \item \textbf{Regla 3: Health Score $\geq$ 8 → Priorizar por Valor + Urgencia Técnica}. Cuando el equipo está saludable, SocialScrum se comporta como Scrum tradicional. No hay necesidad de reservar capacidad para items sociales ni de moderar el alcance técnico.
 \end{enumerate}
 
 Los escenarios detallados de aplicación de estas reglas, junto con la matriz completa de 18 combinaciones posibles, se presentan en el Anexo~\ref{anexo:framework-priorizacion-extendido}.
@@ -1562,11 +1570,11 @@ SocialScrum puede implementarse con herramientas simples (documentos compartidos
 El Anexo~\ref{anexo:herramientas} presenta configuraciones detalladas para:
 
 \begin{itemize}
-   \item \textbf{Jira}: Campos personalizados (Item Type, SSP, Community Smell, Health Dimension, Severity), workflows específicos para items sociales, y filtros JQL para monitoreo.
-   \item \textbf{Azure DevOps}: Campos equivalentes, queries personalizadas, e integración con Power BI.
-   \item \textbf{Plantillas operacionales}: Social User Story, mediación de conflictos, Health Score Dashboard semanal, notas de retrospectiva, reportes para \textit{stakeholders}, y registro de \textit{community smells}.
-   \item \textbf{Dashboards automatizados}: Arquitectura de datos, implementaciones en Google Sheets, Grafana, y Power BI/Tableau.
-   \item \textbf{Alertas automatizadas}: Configuraciones para Health Score crítico, dimensiones en caída, smells sin asignar, y capacidad social excedida.
+    \item \textbf{Jira}: Campos personalizados (Item Type, SSP, Community Smell, Health Dimension, Severity), workflows específicos para items sociales, y filtros JQL para monitoreo.
+    \item \textbf{Azure DevOps}: Campos equivalentes, queries personalizadas, e integración con Power BI.
+    \item \textbf{Plantillas operacionales}: Social User Story, mediación de conflictos, Health Score Dashboard semanal, notas de retrospectiva, reportes para \textit{stakeholders}, y registro de \textit{community smells}.
+    \item \textbf{Dashboards automatizados}: Arquitectura de datos, implementaciones en Google Sheets, Grafana, y Power BI/Tableau.
+    \item \textbf{Alertas automatizadas}: Configuraciones para Health Score crítico, dimensiones en caída, smells sin asignar, y capacidad social excedida.
 \end{itemize}
 
 La sofisticación de las herramientas debe ser proporcional al valor que genera: si una hoja de cálculo simple funciona para el equipo, no hay necesidad de implementar infraestructura compleja.
@@ -1582,59 +1590,58 @@ El equipo Phoenix es un equipo Scrum de 7 personas que desarrolla una plataforma
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
-\setlength{\tabcolsep}{4pt}
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{5.0cm}   % Característica
-   >{\RaggedRight\hspace{0pt}}p{10.0cm}  % Descripción
-   }
+\begin{longtable}[H]{
+    >{\RaggedRight\hspace{0pt}}p{5.2cm}   % Col 1: Característica
+    >{\RaggedRight\hspace{0pt}}p{10.0cm}  % Col 2: Descripción
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Perfil del equipo Phoenix}
-   \label{tab:perfil-phoenix}                                                                        \\
-   \toprule
-   \textbf{Característica} & \textbf{Descripción}                                                    \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Perfil del equipo Phoenix}
+    \label{tab:perfil-phoenix}                                                                        \\
+    \toprule
+    \textbf{Característica} & \textbf{Descripción}                                                    \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                           \\
-   \toprule
-   \textbf{Característica} & \textbf{Descripción}                                                    \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                           \\
+    \toprule
+    \textbf{Característica} & \textbf{Descripción}                                                    \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                   \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                   \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   Nombre del equipo
-                           & Equipo Phoenix                                                          \\
+    Nombre del equipo
+                            & Equipo Phoenix                                                          \\
 
-   Tamaño
-                           & 7 personas (1 Product Owner, 1 Scrum Master, 5 desarrolladores)         \\
+    Tamaño
+                            & 7 personas (1 Product Owner, 1 Scrum Master, 5 desarrolladores)         \\
 
-   Producto
-                           & Plataforma SaaS de gestión de inventarios                               \\
+    Producto
+                            & Plataforma SaaS de gestión de inventarios                               \\
 
-   Modalidad
-                           & Híbrida (3 días en oficina, 2 días remotos)                             \\
+    Modalidad
+                            & Híbrida (3 días en oficina, 2 días remotos)                             \\
 
-   Duración del Sprint
-                           & 2 semanas                                                               \\
+    Duración del Sprint
+                            & 2 semanas                                                               \\
 
-   Madurez en Scrum
-                           & 18 meses practicando Scrum estándar                                     \\
+    Madurez en Scrum
+                            & 18 meses practicando Scrum estándar                                     \\
 
-   Social Guide
-                           & Laura (Scrum Master con capacitación adicional; rol compartido al 50\%) \\
+    Social Guide
+                            & Laura (Scrum Master con capacitación adicional; rol compartido al 50\%) \\
 \end{longtable}
 \endgroup
 
@@ -1643,11 +1650,11 @@ El equipo Phoenix es un equipo Scrum de 7 personas que desarrolla una plataforma
 Antes de implementar SocialScrum, el equipo presentaba los siguientes síntomas:
 
 \begin{itemize}
-   \item Velocidad inconsistente: fluctuaciones de 30\% entre Sprints sin causa técnica clara.
-   \item Dos desarrolladores (Carlos y Miguel) evitaban trabajar juntos desde un conflicto no resuelto hace 4 meses.
-   \item Ana, la desarrolladora más senior, concentraba el 60\% del conocimiento crítico del sistema.
-   \item Las retrospectivas se habían vuelto ``ceremoniales'': respuestas genéricas, sin mejoras reales.
-   \item El PO reportaba fricción frecuente al solicitar cambios de prioridad.
+    \item Velocidad inconsistente: fluctuaciones de 30\% entre Sprints sin causa técnica clara.
+    \item Dos desarrolladores (Carlos y Miguel) evitaban trabajar juntos desde un conflicto no resuelto hace 4 meses.
+    \item Ana, la desarrolladora más senior, concentraba el 60\% del conocimiento crítico del sistema.
+    \item Las retrospectivas se habían vuelto ``ceremoniales'': respuestas genéricas, sin mejoras reales.
+    \item El PO reportaba fricción frecuente al solicitar cambios de prioridad.
 \end{itemize}
 
 \subsubsection{Diagnóstico inicial (Sprint 0)}
@@ -1662,67 +1669,67 @@ Laura realizó el diagnóstico inicial usando las herramientas de SocialScrum co
 \setlength{\LTright}{0pt}
 
 \begin{longtable}[H]{
-   >{\RaggedRight\hspace{0pt}}p{0.25\textwidth}  % Dimensión
-   >{\Centering\hspace{0pt}}p{0.15\textwidth}   % Puntuación
-   >{\RaggedRight\hspace{0pt}}p{0.60\textwidth} % Observación
-   }
+    >{\RaggedRight\hspace{0pt}}p{0.18\textwidth}  % Dimensión
+    >{\Centering\hspace{0pt}}p{0.15\textwidth}   % Puntuación
+    >{\RaggedRight\hspace{0pt}}p{0.60\textwidth} % Observación
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Health Score inicial del equipo Phoenix}
-   \label{tab:health-score-inicial}                                                                             \\
-   \toprule
-   \textbf{Dimensión} & \textbf{Puntuación}                                              & \textbf{Observación} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Health Score inicial del equipo Phoenix}
+    \label{tab:health-score-inicial}                                                                             \\
+    \toprule
+    \textbf{Dimensión} & \textbf{Puntuación}                                              & \textbf{Observación} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                      \\
-   \toprule
-   \textbf{Dimensión} & \textbf{Puntuación}                                              & \textbf{Observación} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                      \\
+    \toprule
+    \textbf{Dimensión} & \textbf{Puntuación}                                              & \textbf{Observación} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                              \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                              \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   Apertura
-                      & 4.8
-                      & Los problemas se ocultan hasta el último momento                                        \\
+    Apertura
+                       & 4.8
+                       & Los problemas se ocultan hasta el último momento                                        \\
 
-   Compromiso
-                      & 6.2
-                      & Aceptable, pero es frecuente la actitud de “ese no es mi código”                        \\
+    Compromiso
+                       & 6.2
+                       & Aceptable, pero es frecuente la actitud de “ese no es mi código”                        \\
 
-   Respeto
-                      & 5.1
-                      & Tensión visible entre Carlos y Miguel                                                   \\
+    Respeto
+                       & 5.1
+                       & Tensión visible entre Carlos y Miguel                                                   \\
 
-   Foco
-                      & 5.5
-                      & Interrupciones frecuentes y cambio constante de contexto                                \\
+    Foco
+                       & 5.5
+                       & Interrupciones frecuentes y cambio constante de contexto                                \\
 
-   Coraje
-                      & 4.2
-                      & Nadie menciona explícitamente el conflicto entre Carlos y Miguel                        \\
+    Coraje
+                       & 4.2
+                       & Nadie menciona explícitamente el conflicto entre Carlos y Miguel                        \\
 
-   \midrule
-   \textbf{Health Score}
-                      & \textbf{5.2}
-                      & \textbf{Zona “en riesgo”}                                                               \\
+    \midrule
+    \textbf{Health Score}
+                       & \textbf{5.2}
+                       & \textbf{Zona “en riesgo”}                                                               \\
 \end{longtable}
 \endgroup
 
 Los \textit{community smells} identificados fueron:
 \begin{enumerate}
-   \item \textbf{Radio Silence} (Severidad Alta): Carlos y Miguel no se comunican directamente.
-   \item \textbf{Organisational Silo} (Severidad Media): Frontend y Backend trabajan aislados.
-   \item \textbf{Lone Wolf} (Severidad Media): Ana trabaja sola en módulos críticos.
+    \item \textbf{Radio Silence} (Severidad Alta): Carlos y Miguel no se comunican directamente.
+    \item \textbf{Organisational Silo} (Severidad Media): Frontend y Backend trabajan aislados.
+    \item \textbf{Lone Wolf} (Severidad Media): Ana trabaja sola en módulos críticos.
 \end{enumerate}
 
 \subsection{Sprint 1: Establecer fundamentos}
@@ -1732,29 +1739,29 @@ Durante el Planning, Laura facilitó la revisión de riesgos sociales:
 
 \begin{escenario}
 
-   \textbf{Laura (Social Guide)}:
-   \begin{quote}
-      “Antes de estimar, revisemos el contexto social.
-      El Health Score es 5.2 y tenemos tres \textit{community smells} activos.
-      ¿Ven algún riesgo para este Sprint?”
-   \end{quote}
+    \textbf{Laura (Social Guide)}:
+    \begin{quote}
+        “Antes de estimar, revisemos el contexto social.
+        El Health Score es 5.2 y tenemos tres \textit{community smells} activos.
+        ¿Ven algún riesgo para este Sprint?”
+    \end{quote}
 
-   \textbf{Product Owner}:
-   \begin{quote}
-      “Necesito que Carlos y Miguel trabajen juntos en el módulo de reportes.”
-   \end{quote}
+    \textbf{Product Owner}:
+    \begin{quote}
+        “Necesito que Carlos y Miguel trabajen juntos en el módulo de reportes.”
+    \end{quote}
 
-   \textbf{Laura (Social Guide)}:
-   \begin{quote}
-      “Eso representa un riesgo. Propongo que, antes de asignar esa tarea,
-      realicemos una sesión de alineación de una hora.
-      ¿Están de acuerdo?”
-   \end{quote}
+    \textbf{Laura (Social Guide)}:
+    \begin{quote}
+        “Eso representa un riesgo. Propongo que, antes de asignar esa tarea,
+        realicemos una sesión de alineación de una hora.
+        ¿Están de acuerdo?”
+    \end{quote}
 
-   \textbf{Resultado}:
-   \begin{quote}
-      El equipo acepta la propuesta y se agenda la sesión de alineación para el día 2 del Sprint.
-   \end{quote}
+    \textbf{Resultado}:
+    \begin{quote}
+        El equipo acepta la propuesta y se agenda la sesión de alineación para el día 2 del Sprint.
+    \end{quote}
 
 \end{escenario}
 
@@ -1764,9 +1771,9 @@ Durante el Planning, Laura facilitó la revisión de riesgos sociales:
 \textbf{Capacidad asignada}: 8 SSP de 50 puntos totales del Sprint (16\%).
 
 \begin{itemize}
-   \item Sesión de alineación entre Carlos y Miguel (3 SSP).
-   \item Pair programming rotativo entre Ana y otro desarrollador (3 SSP).
-   \item Creación y adopción del canal \#social-phoenix en Slack (2 SSP).
+    \item Sesión de alineación entre Carlos y Miguel (3 SSP).
+    \item Pair programming rotativo entre Ana y otro desarrollador (3 SSP).
+    \item Creación y adopción del canal \#social-phoenix en Slack (2 SSP).
 \end{itemize}
 
 \subsubsection{Ejecución del Sprint}
@@ -1778,51 +1785,51 @@ En este nuevo evento se implementó la pregunta social diaria donde los miembros
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
-\setlength{\tabcolsep}{3pt}
-\setlength{\LTleft}{\fill}
-\setlength{\LTright}{\fill}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\Centering\hspace{0pt}}p{1.6cm}     % Día
-   >{\RaggedRight\hspace{0pt}}p{4.6cm}   % Pregunta
-   >{\RaggedRight\hspace{0pt}}p{8.2cm}   % Señal detectada
-   }
+    >{\Centering\hspace{0pt}}p{1.6cm}     % Día
+    >{\RaggedRight\hspace{0pt}}p{4.6cm}   % Pregunta
+    >{\RaggedRight\hspace{0pt}}p{8.9cm}   % Señal detectada
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Señales detectadas en Social Daily Standup – Sprint 1}
-   \label{tab:daily-sprint1}                                                          \\
-   \toprule
-   \textbf{Día} & \textbf{Pregunta}                        & \textbf{Señal detectada} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Señales detectadas en Social Daily Standup – Sprint 1}
+    \label{tab:daily-sprint1}                                                          \\
+    \toprule
+    \textbf{Día} & \textbf{Pregunta}                        & \textbf{Señal detectada} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}            \\
-   \toprule
-   \textbf{Día} & \textbf{Pregunta}                        & \textbf{Señal detectada} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}            \\
+    \toprule
+    \textbf{Día} & \textbf{Pregunta}                        & \textbf{Señal detectada} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                    \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                    \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   3
-                & ¿Cómo te sientes?
-                & Miguel: “Tenso” (post-sesión con Carlos)                            \\
+    3
+                 & ¿Cómo te sientes?
+                 & Miguel: “Tenso” (post-sesión con Carlos)                            \\
 
-   5
-                & ¿Necesitas algo?
-                & Ana: “Ayuda con documentación”                                      \\
+    5
+                 & ¿Necesitas algo?
+                 & Ana: “Ayuda con documentación”                                      \\
 
-   8
-                & ¿Quién te ayudó?
-                & Carlos: “Miguel me explicó el módulo”                               \\
+    8
+                 & ¿Quién te ayudó?
+                 & Carlos: “Miguel me explicó el módulo”                               \\
 \end{longtable}
 \endgroup
 
@@ -1831,28 +1838,28 @@ En este nuevo evento se implementó la pregunta social diaria donde los miembros
 A continuacion se detalla la sesión de alineación entre Carlos y Miguel, facilitada por Laura, la cual fue una intervención clave para abordar el community smell en un escenario aplicado.
 \begin{escenario}
 
-   \textbf{Sesión de alineación Carlos–Miguel}
+    \textbf{Sesión de alineación Carlos–Miguel}
 
-   Laura facilita una sesión de alineación de 90 minutos con el objetivo
-   de reducir fricción y habilitar trabajo conjunto durante el Sprint.
+    Laura facilita una sesión de alineación de 90 minutos con el objetivo
+    de reducir fricción y habilitar trabajo conjunto durante el Sprint.
 
-   \begin{enumerate}
-      \item \textbf{Contexto}. Cada participante expone su perspectiva del conflicto original,
-            sin búsqueda de culpables ni juicios personales.
+    \begin{enumerate}
+        \item \textbf{Contexto}. Cada participante expone su perspectiva del conflicto original,
+              sin búsqueda de culpables ni juicios personales.
 
-      \item \textbf{Impacto}. Ambos reconocen que evitar la colaboración estaba afectando
-            al equipo, en particular la velocidad y la gestión de dependencias.
+        \item \textbf{Impacto}. Ambos reconocen que evitar la colaboración estaba afectando
+              al equipo, en particular la velocidad y la gestión de dependencias.
 
-      \item \textbf{Acuerdos}. Se establecen tres normas de trabajo conjunto:
-            \begin{itemize}
-               \item Comunicación escrita para decisiones relevantes.
-               \item Escalamiento inmediato a Laura ante señales de fricción.
-               \item Retrospectiva privada conjunta al final del Sprint.
-            \end{itemize}
-   \end{enumerate}
+        \item \textbf{Acuerdos}. Se establecen tres normas de trabajo conjunto:
+              \begin{itemize}
+                  \item Comunicación escrita para decisiones relevantes.
+                  \item Escalamiento inmediato a Laura ante señales de fricción.
+                  \item Retrospectiva privada conjunta al final del Sprint.
+              \end{itemize}
+    \end{enumerate}
 
-   \textbf{Resultado}. La sesión permite habilitar la colaboración controlada
-   entre Carlos y Miguel para el resto del Sprint.
+    \textbf{Resultado}. La sesión permite habilitar la colaboración controlada
+    entre Carlos y Miguel para el resto del Sprint.
 
 \end{escenario}
 
@@ -1861,19 +1868,19 @@ A continuacion se detalla la sesión de alineación entre Carlos y Miguel, facil
 Fase 3 (Análisis) reveló patrón: ``No decimos cuando algo nos molesta hasta que explota.''
 Análisis de causa raíz (5 Por qués):
 \begin{enumerate}
-   \item ¿Por qué no hablamos?
-         Miedo a reacciones negativas.
+    \item ¿Por qué no hablamos?
+          Miedo a reacciones negativas.
 
-   \item ¿Por qué hay miedo?
-         Experiencias pasadas de reacciones defensivas.
+    \item ¿Por qué hay miedo?
+          Experiencias pasadas de reacciones defensivas.
 
-   \item ¿Por qué hubo reacciones defensivas?
-         No existía un espacio seguro para dar feedback.
+    \item ¿Por qué hubo reacciones defensivas?
+          No existía un espacio seguro para dar feedback.
 
-   \item ¿Por qué no había un espacio seguro?
-         Nunca se estableció explícitamente.
+    \item ¿Por qué no había un espacio seguro?
+          Nunca se estableció explícitamente.
 
-   \item \textbf{Causa raíz}: Falta de normas explícitas para dar feedback crítico.
+    \item \textbf{Causa raíz}: Falta de normas explícitas para dar feedback crítico.
 \end{enumerate}
 
 \textbf{Compromiso}: Crear ``Acuerdo de Feedback'' con 5 reglas básicas (3 SSP para Sprint 2).
@@ -1885,60 +1892,60 @@ En la Tabla \ref{tab:resultados-sprint1} se presentan los resultados cuantitativ
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
-\setlength{\tabcolsep}{3pt}
-\setlength{\LTleft}{\fill}
-\setlength{\LTright}{\fill}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{5.4cm}   % Métrica
-   >{\Centering\hspace{0pt}}p{2.2cm}     % Antes
-   >{\Centering\hspace{0pt}}p{2.6cm}     % Sprint 1
-   >{\Centering\hspace{0pt}}p{2.2cm}     % Cambio
-   }
+    >{\RaggedRight\hspace{0pt}}p{7.8cm}   % Métrica
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Antes
+    >{\Centering\hspace{0pt}}p{2.6cm}     % Sprint 1
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Cambio
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Resultados del Sprint 1}
-   \label{tab:resultados-sprint1}                                          \\
-   \toprule
-   \textbf{Métrica} & \textbf{Antes} & \textbf{Sprint 1} & \textbf{Cambio} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Resultados del Sprint 1}
+    \label{tab:resultados-sprint1}                                          \\
+    \toprule
+    \textbf{Métrica} & \textbf{Antes} & \textbf{Sprint 1} & \textbf{Cambio} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}} \\
-   \toprule
-   \textbf{Métrica} & \textbf{Antes} & \textbf{Sprint 1} & \textbf{Cambio} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}} \\
+    \toprule
+    \textbf{Métrica} & \textbf{Antes} & \textbf{Sprint 1} & \textbf{Cambio} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}         \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}         \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   Health Score
-                    & 5.2
-                    & 5.8
-                    & +0.6                                                 \\
+    Health Score
+                     & 5.2
+                     & 5.8
+                     & +0.6                                                 \\
 
-   Velocity (SP completados)
-                    & 38
-                    & 42
-                    & +10\%                                                \\
+    velocidad (SP completados)
+                     & 38
+                     & 42
+                     & +10\%                                                \\
 
-   Smells activos
-                    & 3
-                    & 3
-                    & =                                                    \\
+    Smells activos
+                     & 3
+                     & 3
+                     & =                                                    \\
 
-   Smells en observación
-                    & 0
-                    & 1
-                    & +1                                                   \\
+    Smells en observación
+                     & 0
+                     & 1
+                     & +1                                                   \\
 \end{longtable}
 \endgroup
 
@@ -1952,9 +1959,9 @@ El conflicto Carlos-Miguel estaba en observación. El foco ahora era el \textit{
 
 \textbf{Capacidad asignada}: (10 SSP de 50 SP totales = 20\%):
 \begin{itemize}
-   \item Crear ``Acuerdo de Feedback'' (3 SSP)
-   \item Sesiones de transferencia de conocimiento Ana $\rightarrow$ equipo (5 SSP)
-   \item Documentar módulo de inventarios (2 SSP)
+    \item Crear ``Acuerdo de Feedback'' (3 SSP)
+    \item Sesiones de transferencia de conocimiento Ana $\rightarrow$ equipo (5 SSP)
+    \item Documentar módulo de inventarios (2 SSP)
 \end{itemize}
 
 \subsubsection{Intervención: Transferencia de conocimiento}
@@ -1964,59 +1971,59 @@ Ana facilitó 3 sesiones de 90 minutos cada una donde se habló sobre arquitectu
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
-\setlength{\tabcolsep}{3pt}
-\setlength{\LTleft}{\fill}
-\setlength{\LTright}{\fill}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\Centering\hspace{0pt}}p{1.8cm}     % Sesión
-   >{\RaggedRight\hspace{0pt}}p{8.4cm}   % Tema
-   >{\RaggedRight\hspace{0pt}}p{3.8cm}   % Participantes
-   }
+    >{\Centering\hspace{0pt}}p{1.8cm}     % Sesión
+    >{\RaggedRight\hspace{0pt}}p{9.6cm}   % Tema
+    >{\RaggedRight\hspace{0pt}}p{3.8cm}   % Participantes
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Sesiones de transferencia de conocimiento}
-   \label{tab:transferencia-conocimiento}                                            \\
-   \toprule
-   \textbf{Sesión} & \textbf{Tema}                          & \textbf{Participantes} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Sesiones de transferencia de conocimiento}
+    \label{tab:transferencia-conocimiento}                                                                                                             \\
+    \toprule
+    \textbf{Sesión} & \textbf{Tema}                                                                                           & \textbf{Participantes} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}           \\
-   \toprule
-   \textbf{Sesión} & \textbf{Tema}                          & \textbf{Participantes} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                            \\
+    \toprule
+    \textbf{Sesión} & \textbf{Tema}                                                                                           & \textbf{Participantes} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                   \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                    \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   1
-                   & Arquitectura del módulo de inventarios
-                   & Todo el equipo                                                  \\
+    1
+                    & Arquitectura del módulo de inventarios
+                    & Todo el equipo                                                                                                                   \\
 
-   2
-                   & Patrones de integración con ERP
-                   & Carlos, Pedro                                                   \\
+    2
+                    & Patrones de integración con ERP (Enterprise Resource Planning, Planificación de Recursos Empresariales)
+                    & Carlos, Pedro                                                                                                                    \\
 
-   3
-                   & Debugging de casos críticos
-                   & Miguel, Sara                                                    \\
+    3
+                    & Debugging de casos críticos
+                    & Miguel, Sara                                                                                                                     \\
 \end{longtable}
 \endgroup
 
 Resultado:
 \begin{itemize}
-   \item Bus factor del módulo crítico pasó de 1 (solo Ana) a 3 (Ana + Carlos + Miguel).
-   \item Ana reportó ``alivio'' por no ser la única responsable.
-   \item Se creó wiki con 12 páginas de documentación técnica.
+    \item Bus factor del módulo crítico pasó de 1 (solo Ana) a 3 (Ana + Carlos + Miguel).
+    \item Ana reportó ``alivio'' por no ser la única responsable.
+    \item Se creó wiki con 12 páginas de documentación técnica.
 \end{itemize}
 
 \subsubsection{Evento inesperado: Crisis de deadline}
@@ -2024,19 +2031,19 @@ Resultado:
 Día 7: El PO anunció que un cliente importante necesitaba una feature para el día 10 (3 días antes del fin de Sprint).
 
 \begin{escenario}
-   \textbf{Product Owner}:
-   \begin{quote}
-      ``Necesitamos priorizar esta iniciativa. Es crítica para el cliente.''
-   \end{quote}
-   \textbf{Social Guide (Laura)}:
-   \begin{quote}
-      ``El Health Score actual es 6.1. El equipo puede absorber presión temporal. Sin embargo, propongo reducir el Social Sprint Backlog a 5 SSP cancelando una sesión de transferencia de conocimiento, para liberar capacidad técnica.''
-   \end{quote}
-   \textbf{Equipo}:
-   \begin{quote}
-      Acepta la propuesta.
-   \end{quote}
-   La sesión de transferencia número 3 se re-programa para el Sprint 3.
+    \textbf{Product Owner}:
+    \begin{quote}
+        ``Necesitamos priorizar esta iniciativa. Es crítica para el cliente.''
+    \end{quote}
+    \textbf{Social Guide (Laura)}:
+    \begin{quote}
+        ``El Health Score actual es 6.1. El equipo puede absorber presión temporal. Sin embargo, propongo reducir el Social Sprint Backlog a 5 SSP cancelando una sesión de transferencia de conocimiento, para liberar capacidad técnica.''
+    \end{quote}
+    \textbf{Equipo}:
+    \begin{quote}
+        Acepta la propuesta.
+    \end{quote}
+    La sesión de transferencia número 3 se re-programa para el Sprint 3.
 
 \end{escenario}
 
@@ -2049,60 +2056,60 @@ En la Tabla \ref{tab:resultados-sprint2} se presentan los resultados cuantitativ
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
-\setlength{\tabcolsep}{3pt}
-\setlength{\LTleft}{\fill}
-\setlength{\LTright}{\fill}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{5.6cm}   % Métrica
-   >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 1
-   >{\Centering\hspace{0pt}}p{2.6cm}     % Sprint 2
-   >{\Centering\hspace{0pt}}p{2.4cm}     % Cambio
-   }
+    >{\RaggedRight\hspace{0pt}}p{7.8cm}   % Métrica
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 1
+    >{\Centering\hspace{0pt}}p{2.6cm}     % Sprint 2
+    >{\Centering\hspace{0pt}}p{2.4cm}     % Cambio
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Resultados Sprint 2}
-   \label{tab:resultados-sprint2}                                                      \\
-   \toprule
-   \textbf{Métrica} & \textbf{Sprint 1}          & \textbf{Sprint 2} & \textbf{Cambio} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Resultados Sprint 2}
+    \label{tab:resultados-sprint2}                                                      \\
+    \toprule
+    \textbf{Métrica} & \textbf{Sprint 1}          & \textbf{Sprint 2} & \textbf{Cambio} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}             \\
-   \toprule
-   \textbf{Métrica} & \textbf{Sprint 1}          & \textbf{Sprint 2} & \textbf{Cambio} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}             \\
+    \toprule
+    \textbf{Métrica} & \textbf{Sprint 1}          & \textbf{Sprint 2} & \textbf{Cambio} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                     \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                     \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   Health Score
-                    & 5.8
-                    & 6.4
-                    & +0.6                                                             \\
+    Health Score
+                     & 5.8
+                     & 6.4
+                     & +0.6                                                             \\
 
-   Velocity
-                    & 42
-                    & 45
-                    & +7\%                                                             \\
+    velocidad
+                     & 42
+                     & 45
+                     & +7\%                                                             \\
 
-   Smells activos
-                    & 3
-                    & 2
-                    & -1                                                               \\
+    Smells activos
+                     & 3
+                     & 2
+                     & -1                                                               \\
 
-   Smells mitigados
-                    & 0
-                    & 1 (\textit{Radio Silence})
-                    & +1                                                               \\
+    Smells mitigados
+                     & 0
+                     & 1 (\textit{Radio Silence})
+                     & +1                                                               \\
 \end{longtable}
 \endgroup
 
@@ -2116,9 +2123,9 @@ Health Score en 6.4 (zona ``En riesgo'' pero cerca de ``Saludable''). Dos smells
 
 \textbf{Capacidad asignada}: (6 SSP de 50 SP = 12\%):
 \begin{itemize}
-   \item Completar sesión 3 de transferencia (2 SSP).
-   \item Ritual de sincronización FE-BE (Frontend-Backend) semanal (2 SSP).
-   \item Retrospectiva profunda de 3 Sprints (2 SSP).
+    \item Completar sesión 3 de transferencia (2 SSP).
+    \item Ritual de sincronización FE-BE (Frontend-Backend) semanal (2 SSP).
+    \item Retrospectiva profunda de 3 Sprints (2 SSP).
 \end{itemize}
 
 \subsubsection{Intervención: Sincronización FE-BE.}
@@ -2126,9 +2133,9 @@ Health Score en 6.4 (zona ``En riesgo'' pero cerca de ``Saludable''). Dos smells
 Se implementó reunión semanal de 30 minutos entre Frontend y Backend:
 
 \begin{itemize}
-   \item Agenda fija: ¿Qué cambios de API vienen? ¿Qué necesita FE de BE? ¿Dónde hay fricción?
-   \item Rotación de facilitador (FE una semana, BE la siguiente).
-   \item Output: Lista de dependencias para el Sprint Planning.
+    \item Agenda fija: ¿Qué cambios de API vienen? ¿Qué necesita FE de BE? ¿Dónde hay fricción?
+    \item Rotación de facilitador (FE una semana, BE la siguiente).
+    \item Output: Lista de dependencias para el Sprint Planning.
 \end{itemize}
 
 Resultado: Integraciones tardías se redujeron de 4 por Sprint a 1.
@@ -2139,24 +2146,24 @@ Laura facilitó una retrospectiva extendida (2 horas) para evaluar los resultado
 
 \paragraph{\normalfont{Aspectos que funcionaron.}}
 \begin{itemize}
-   \item El Social Daily Standup permitió detectar tensiones antes de que escalaran.
-   \item La sesión de alineación entre Carlos y Miguel evitó el bloqueo de una feature crítica.
-   \item La transferencia de conocimiento redujo la dependencia técnica de Ana.
-   \item El equipo comenzó a mencionar problemas de forma explícita en retrospectivas.
+    \item El Social Daily Standup permitió detectar tensiones antes de que escalaran.
+    \item La sesión de alineación entre Carlos y Miguel evitó el bloqueo de una feature crítica.
+    \item La transferencia de conocimiento redujo la dependencia técnica de Ana.
+    \item El equipo comenzó a mencionar problemas de forma explícita en retrospectivas.
 \end{itemize}
 
 \paragraph{\normalfont{Aspectos que no funcionaron.}}
 \begin{itemize}
-   \item La sobrecarga inicial se percibió como elevada (la percepción mejoró en los Sprints 2 y 3).
-   \item Algunas preguntas del Social Daily Standup se volvieron rutinarias con el tiempo.
-   \item El Product Owner mostró resistencia inicial a asignar capacidad a ítems sociales.
+    \item La sobrecarga inicial se percibió como elevada (la percepción mejoró en los Sprints 2 y 3).
+    \item Algunas preguntas del Social Daily Standup se volvieron rutinarias con el tiempo.
+    \item El Product Owner mostró resistencia inicial a asignar capacidad a ítems sociales.
 \end{itemize}
 
 \paragraph{\normalfont{Ajustes acordados.}}
 \begin{itemize}
-   \item Reducir el Social Sprint Backlog al 10\% como nivel de mantenimiento.
-   \item Rotar la pregunta social semanalmente, en lugar de diariamente.
-   \item Incluir al Product Owner en una revisión mensual del Health Score.
+    \item Reducir el Social Sprint Backlog al 10\% como nivel de mantenimiento.
+    \item Rotar la pregunta social semanalmente, en lugar de diariamente.
+    \item Incluir al Product Owner en una revisión mensual del Health Score.
 \end{itemize}
 
 \subsubsection{Resultados Sprint 3.}
@@ -2166,60 +2173,60 @@ En la Tabla \ref{tab:resultados-sprint3} se presentan los resultados cuantitativ
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
-\setlength{\tabcolsep}{3pt}
-\setlength{\LTleft}{\fill}
-\setlength{\LTright}{\fill}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{5.6cm}   % Métrica
-   >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 2
-   >{\Centering\hspace{0pt}}p{2.6cm}     % Sprint 3
-   >{\Centering\hspace{0pt}}p{2.4cm}     % Cambio
-   }
+    >{\RaggedRight\hspace{0pt}}p{7.8cm}   % Métrica
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 2
+    >{\Centering\hspace{0pt}}p{2.6cm}     % Sprint 3
+    >{\Centering\hspace{0pt}}p{2.4cm}     % Cambio
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Resultados Sprint 3}
-   \label{tab:resultados-sprint3}                                             \\
-   \toprule
-   \textbf{Métrica} & \textbf{Sprint 2} & \textbf{Sprint 3} & \textbf{Cambio} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Resultados Sprint 3}
+    \label{tab:resultados-sprint3}                                             \\
+    \toprule
+    \textbf{Métrica} & \textbf{Sprint 2} & \textbf{Sprint 3} & \textbf{Cambio} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}    \\
-   \toprule
-   \textbf{Métrica} & \textbf{Sprint 2} & \textbf{Sprint 3} & \textbf{Cambio} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}    \\
+    \toprule
+    \textbf{Métrica} & \textbf{Sprint 2} & \textbf{Sprint 3} & \textbf{Cambio} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}            \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}            \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   Health Score
-                    & 6.4
-                    & 7.1
-                    & +0.7                                                    \\
+    Health Score
+                     & 6.4
+                     & 7.1
+                     & +0.7                                                    \\
 
-   Velocity
-                    & 45
-                    & 48
-                    & +6\%                                                    \\
+    velocidad
+                     & 45
+                     & 48
+                     & +6\%                                                    \\
 
-   Smells activos
-                    & 2
-                    & 1
-                    & -1                                                      \\
+    Smells activos
+                     & 2
+                     & 1
+                     & -1                                                      \\
 
-   Smells mitigados
-                    & 1
-                    & 2
-                    & +1                                                      \\
+    Smells mitigados
+                     & 1
+                     & 2
+                     & +1                                                      \\
 \end{longtable}
 \endgroup
 
@@ -2230,112 +2237,112 @@ Los resultados presentados son un resumen de la evolución del equipo Phoenix du
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
-\setlength{\tabcolsep}{3pt}
-\setlength{\LTleft}{\fill}
-\setlength{\LTright}{\fill}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{4.8cm}   % Métrica
-   >{\Centering\hspace{0pt}}p{2.0cm}     % Inicial
-   >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 1
-   >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 2
-   >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 3
-   }
+    >{\RaggedRight\hspace{0pt}}p{6.0cm}   % Métrica
+    >{\Centering\hspace{0pt}}p{2.0cm}     % Inicial
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 1
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 2
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 3
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Evolución del equipo Phoenix en tres Sprints}
-   \label{tab:evolucion-phoenix}                                                                   \\
-   \toprule
-   \textbf{Métrica} & \textbf{Inicial} & \textbf{Sprint 1} & \textbf{Sprint 2} & \textbf{Sprint 3} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Evolución del equipo Phoenix en tres Sprints}
+    \label{tab:evolucion-phoenix}                                                                   \\
+    \toprule
+    \textbf{Métrica} & \textbf{Inicial} & \textbf{Sprint 1} & \textbf{Sprint 2} & \textbf{Sprint 3} \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{5}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                         \\
-   \toprule
-   \textbf{Métrica} & \textbf{Inicial} & \textbf{Sprint 1} & \textbf{Sprint 2} & \textbf{Sprint 3} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{5}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                         \\
+    \toprule
+    \textbf{Métrica} & \textbf{Inicial} & \textbf{Sprint 1} & \textbf{Sprint 2} & \textbf{Sprint 3} \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{5}{r}{\textit{Continúa en la siguiente página...}}                                 \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{5}{r}{\textit{Continúa en la siguiente página...}}                                 \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   Health Score
-                    & 5.2
-                    & 5.8
-                    & 6.4
-                    & 7.1                                                                          \\
+    Health Score
+                     & 5.2
+                     & 5.8
+                     & 6.4
+                     & 7.1                                                                          \\
 
-   Velocity (SP)
-                    & 38
-                    & 42
-                    & 45
-                    & 48                                                                           \\
+    velocidad (SP)
+                     & 38
+                     & 42
+                     & 45
+                     & 48                                                                           \\
 
-   Smells activos
-                    & 3
-                    & 3
-                    & 2
-                    & 1                                                                            \\
+    Smells activos
+                     & 3
+                     & 3
+                     & 2
+                     & 1                                                                            \\
 
-   Capacidad social (\%)
-                    & 0\%
-                    & 16\%
-                    & 20\%
-                    & 12\%                                                                         \\
+    Capacidad social (\%)
+                     & 0\%
+                     & 16\%
+                     & 20\%
+                     & 12\%                                                                         \\
 \end{longtable}
 \endgroup
 
 \begin{figure}[h]
-   \centering
-   \begin{tikzpicture}[scale=0.9]
-      % Ejes
-      \draw[thick, -stealth] (0,0) -- (10,0) node[right, font=\footnotesize] {Sprints};
-      \draw[thick, -stealth] (0,0) -- (0,6) node[above, font=\footnotesize] {Health Score};
+    \centering
+    \begin{tikzpicture}[scale=0.9]
+        % Ejes
+        \draw[thick, -stealth] (0,0) -- (10,0) node[right, font=\footnotesize] {Sprints};
+        \draw[thick, -stealth] (0,0) -- (0,6) node[above, font=\footnotesize] {Health Score};
 
-      % Lineas de zona
-      \fill[red!10] (0,0) rectangle (10,2.45);
-      \fill[yellow!10] (0,2.45) rectangle (10,3.45);
-      \fill[green!10] (0,3.45) rectangle (10,5);
+        % Lineas de zona
+        \fill[red!10] (0,0) rectangle (10,2.45);
+        \fill[yellow!10] (0,2.45) rectangle (10,3.45);
+        \fill[green!10] (0,3.45) rectangle (10,5);
 
-      % Etiquetas de zona
-      \node[font=\tiny, gray] at (0.8, 1.2) {Critico};
-      \node[font=\tiny, gray] at (0.8, 2.9) {Riesgo};
-      \node[font=\tiny, gray] at (0.8, 4.2) {Saludable};
+        % Etiquetas de zona
+        \node[font=\tiny, gray] at (0.8, 1.2) {Critico};
+        \node[font=\tiny, gray] at (0.8, 2.9) {Riesgo};
+        \node[font=\tiny, gray] at (0.8, 4.2) {Saludable};
 
-      % Escala Y
-      \node[font=\tiny] at (-0.3, 0) {1};
-      \node[font=\tiny] at (-0.3, 2.45) {5};
-      \node[font=\tiny] at (-0.3, 3.45) {7};
-      \node[font=\tiny] at (-0.3, 5) {10};
+        % Escala Y
+        \node[font=\tiny] at (-0.3, 0) {1};
+        \node[font=\tiny] at (-0.3, 2.45) {5};
+        \node[font=\tiny] at (-0.3, 3.45) {7};
+        \node[font=\tiny] at (-0.3, 5) {10};
 
-      % Puntos de datos (escalados: 5.2->2.6, 5.8->2.9, 6.4->3.2, 7.1->3.55)
-      \fill[blue!70] (1,2.6) circle (0.12) node[above, font=\tiny] {5.2};
-      \fill[blue!70] (3.5,2.9) circle (0.12) node[above, font=\tiny] {5.8};
-      \fill[blue!70] (6,3.2) circle (0.12) node[above, font=\tiny] {6.4};
-      \fill[blue!70] (8.5,3.55) circle (0.12) node[above, font=\tiny] {7.1};
+        % Puntos de datos (escalados: 5.2->2.6, 5.8->2.9, 6.4->3.2, 7.1->3.55)
+        \fill[blue!70] (1,2.6) circle (0.12) node[above, font=\tiny] {5.2};
+        \fill[blue!70] (3.5,2.9) circle (0.12) node[above, font=\tiny] {5.8};
+        \fill[blue!70] (6,3.2) circle (0.12) node[above, font=\tiny] {6.4};
+        \fill[blue!70] (8.5,3.55) circle (0.12) node[above, font=\tiny] {7.1};
 
-      % Linea de conexión
-      \draw[thick, blue!70] (1,2.6) -- (3.5,2.9) -- (6,3.2) -- (8.5,3.55);
+        % Linea de conexión
+        \draw[thick, blue!70] (1,2.6) -- (3.5,2.9) -- (6,3.2) -- (8.5,3.55);
 
-      % Etiquetas de Sprint
-      \node[font=\tiny] at (1, -0.4) {Inicial};
-      \node[font=\tiny] at (3.5, -0.4) {Sprint 1};
-      \node[font=\tiny] at (6, -0.4) {Sprint 2};
-      \node[font=\tiny] at (8.5, -0.4) {Sprint 3};
+        % Etiquetas de Sprint
+        \node[font=\tiny] at (1, -0.4) {Inicial};
+        \node[font=\tiny] at (3.5, -0.4) {Sprint 1};
+        \node[font=\tiny] at (6, -0.4) {Sprint 2};
+        \node[font=\tiny] at (8.5, -0.4) {Sprint 3};
 
-      % Flecha de tendencia
-      \draw[-stealth, thick, green!60!black] (9, 2.6) -- (9, 3.55);
-      \node[font=\tiny, green!60!black, align=center] at (9.5, 3.1) {+1.9\\puntos};
-   \end{tikzpicture}
-   \caption{Evolución del Health Score del equipo Phoenix}
-   \label{fig:evolucion-health-score}
+        % Flecha de tendencia
+        \draw[-stealth, thick, green!60!black] (9, 2.6) -- (9, 3.55);
+        \node[font=\tiny, green!60!black, align=center] at (9.5, 3.1) {+1.9\\puntos};
+    \end{tikzpicture}
+    \caption{Evolución del Health Score del equipo Phoenix}
+    \label{fig:evolucion-health-score}
 \end{figure}
 
 \subsection{Lecciones aprendidas}
@@ -2345,23 +2352,23 @@ Durante la implementación de SocialScrum en el equipo Phoenix, se identificaron
 \subsubsection{Factores de éxito}
 
 \begin{enumerate}
-   \item \textbf{Compromiso visible del liderazgo}: El CTO aprobó dedicar hasta 20\% de capacidad a items sociales en los primeros Sprints.
+    \item \textbf{Compromiso visible del liderazgo}: El CTO aprobó dedicar hasta 20\% de capacidad a items sociales en los primeros Sprints.
 
-   \item \textbf{Intervención temprana en conflicto}: La sesión Carlos-Miguel en Sprint 1 evitó que el conflicto bloqueara una feature crítica.
+    \item \textbf{Intervención temprana en conflicto}: La sesión Carlos-Miguel en Sprint 1 evitó que el conflicto bloqueara una feature crítica.
 
-   \item \textbf{Flexibilidad ante presión}: Sprint 2 demostró que SocialScrum puede adaptarse a deadlines urgentes sin abandonar completamente la agenda social.
+    \item \textbf{Flexibilidad ante presión}: Sprint 2 demostró que SocialScrum puede adaptarse a deadlines urgentes sin abandonar completamente la agenda social.
 
-   \item \textbf{Transferencia de conocimiento proactiva}: Reducir el bus factor de Ana benefició tanto la salud social como la resiliencia técnica.
+    \item \textbf{Transferencia de conocimiento proactiva}: Reducir el bus factor de Ana benefició tanto la salud social como la resiliencia técnica.
 \end{enumerate}
 
 \subsubsection{Dificultades encontradas}
 
 \begin{enumerate}
-   \item \textbf{Resistencia inicial del PO}: Percibía los SSP como ``tiempo robado'' al desarrollo. Se resolvió mostrando correlación velocity-Health Score.
+    \item \textbf{Resistencia inicial del PO}: Percibía los SSP como ``tiempo robado'' al desarrollo. Se resolvió mostrando correlación velocidad-Health Score.
 
-   \item \textbf{Fatiga de preguntas sociales}: El equipo se ``acostumbró'' a las preguntas del Daily. Se resolvió rotando preguntas semanalmente.
+    \item \textbf{Fatiga de preguntas sociales}: El equipo se ``acostumbró'' a las preguntas del Daily. Se resolvió rotando preguntas semanalmente.
 
-   \item \textbf{Dificultad para cuantificar ROI}: Es difícil probar causalidad entre intervenciones sociales y mejora de velocity. Se aceptó correlación como evidencia suficiente.
+    \item \textbf{Dificultad para cuantificar ROI}: Es difícil probar causalidad entre intervenciones sociales y mejora de velocidad. Se aceptó correlación como evidencia suficiente.
 \end{enumerate}
 
 \subsubsection{Recomendaciones para otros equipos}
@@ -2371,57 +2378,57 @@ En la Tabla \ref{tab:recomendaciones-phoenix} se resumen recomendaciones prácti
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
-\setlength{\tabcolsep}{3pt}
-\setlength{\LTleft}{\fill}
-\setlength{\LTright}{\fill}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
 
 \begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{4.6cm}   % Recomendación
-   >{\RaggedRight\hspace{0pt}}p{8.8cm}   % Justificación
-   }
+    >{\RaggedRight\hspace{0pt}}p{5.5cm}   % Recomendación
+    >{\RaggedRight\hspace{0pt}}p{10.0cm}   % Justificación
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Recomendaciones basadas en el caso Phoenix}
-   \label{tab:recomendaciones-phoenix}                                                                                                                \\
-   \toprule
-   \textbf{Recomendación} & \textbf{Justificación}                                                                                                    \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Recomendaciones basadas en el caso Phoenix}
+    \label{tab:recomendaciones-phoenix}                                                                                                                \\
+    \toprule
+    \textbf{Recomendación} & \textbf{Justificación}                                                                                                    \\
+    \midrule
+    \endfirsthead
 
-   % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-   \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                            \\
-   \toprule
-   \textbf{Recomendación} & \textbf{Justificación}                                                                                                    \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                            \\
+    \toprule
+    \textbf{Recomendación} & \textbf{Justificación}                                                                                                    \\
+    \midrule
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                                                                    \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                                                                    \\
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-   Empezar con 15--20\% de capacidad social
-                          & Permite intervenciones significativas sin colapsar la velocity. Reducir a 10\% una vez estabilizado el equipo.            \\
+    Empezar con 15--20\% de capacidad social
+                           & Permite intervenciones significativas sin colapsar la velocidad. Reducir a 10\% una vez estabilizado el equipo.           \\
 
-   Priorizar conflictos activos
-                          & Son los factores que más bloquean el trabajo. Resolverlos temprano libera capacidad para acciones preventivas.            \\
+    Priorizar conflictos activos
+                           & Son los factores que más bloquean el trabajo. Resolverlos temprano libera capacidad para acciones preventivas.            \\
 
-   Medir Health Score semanalmente
-                          & Permite detectar deterioro antes de que se convierta en crisis. La medición mensual es insuficiente en equipos en riesgo. \\
+    Medir Health Score semanalmente
+                           & Permite detectar deterioro antes de que se convierta en crisis. La medición mensual es insuficiente en equipos en riesgo. \\
 
-   Involucrar al PO desde el Sprint 0
-                          & La resistencia inicial es predecible. La educación temprana facilita entender la correlación entre salud y productividad. \\
+    Involucrar al PO desde el Sprint 0
+                           & La resistencia inicial es predecible. La educación temprana facilita entender la correlación entre salud y productividad. \\
 
-   Documentar intervenciones
-                          & Permite aprender qué prácticas funcionan para el equipo específico y justificar inversiones futuras.                      \\
+    Documentar intervenciones
+                           & Permite aprender qué prácticas funcionan para el equipo específico y justificar inversiones futuras.                      \\
 \end{longtable}
 \endgroup
 
-El caso del equipo Phoenix demuestra que SocialScrum puede implementarse de forma incremental, con resultados medibles en 3 Sprints. La mejora del Health Score de 5.2 a 7.1 (+36\%) coincidió con un aumento de velocity de 38 a 48 SP (+26\%). Aunque la correlación no prueba causalidad, la consistencia de ambas tendencias sugiere que abordar la deuda social tiene beneficios tanto para el bienestar del equipo como para su productividad.
+El caso del equipo Phoenix demuestra que SocialScrum puede implementarse de forma incremental, con resultados medibles en 3 Sprints. La mejora del Health Score de 5.2 a 7.1 (+36\%) coincidió con un aumento de velocidad de 38 a 48 SP (+26\%). Aunque la correlación no prueba causalidad, la consistencia de ambas tendencias sugiere que abordar la deuda social tiene beneficios tanto para el bienestar del equipo como para su productividad.
 
 \section{Conclusiones del capítulo}
 \label{sec:conclusiones-capitulo4}
