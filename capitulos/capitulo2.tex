@@ -9,6 +9,9 @@
 \renewcommand{\thesection}{\thechapter.\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+\makeatletter
+\protected@edef\@currentlabel{\thechapter}%
+\makeatother
 \label{chap:capitulo2}
 
 En este capítulo se presentan las bases conceptuales que sustentan la investigación, abordando los conceptos clave relacionados con la deuda social, la comunicación, colaboración y coordinación (3C), el compromiso organizacional, el síndrome de Burnout y el marco de trabajo Scrum. Estos conceptos son fundamentales para comprender el contexto en el que se desarrolla la aplicación de SocialScrum en equipos de desarrollo de software ágil.
@@ -111,7 +114,7 @@ La búsqueda manual reveló que las frases clave ``social debt'' y ``agile softw
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-    \caption{Cadenas de búsqueda utilizadas en la revisión sistemática.} \label{tab:cadenas-busqueda}                                       \\
+    \caption{Cadenas de búsqueda utilizadas en la revisión sistemática} \label{tab:cadenas-busqueda}                                        \\
     \toprule
     \textbf{No.} & \textbf{Cadena de búsqueda}                                                          & \textbf{Fuente} & \textbf{Estado} \\
     \midrule
@@ -131,7 +134,7 @@ La búsqueda manual reveló que las frases clave ``social debt'' y ``agile softw
 
     % --- 4. PIE FINAL ---
     \bottomrule
-    \multicolumn{4}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No).}}                                                    \\
+    \multicolumn{4}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No)}}                                                     \\
     \endlastfoot
 
     % --- CONTENIDO ---
@@ -185,7 +188,7 @@ La cadena de búsqueda se aplicó a una ventana de tiempo desde 2013 hasta 2024,
 
     % Pie final
     \bottomrule
-    \multicolumn{6}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No).}}                                                                      \\
+    \multicolumn{6}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No)}}                                                                       \\
     \endlastfoot
 
     % CONTENIDO
@@ -233,7 +236,7 @@ En la Tabla \ref{tab:preguntas-investigacion-longtable} se presentan las pregunt
 
     % --- PIE FINAL ---
     \bottomrule
-    \multicolumn{3}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (Id.), Pregunta de investigación (PI).}}                                                                                                                                                   \\
+    \multicolumn{3}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (Id), Pregunta de investigación (PI)}}                                                                                                                                                     \\
     \endlastfoot
 
     % --- CONTENIDO ---
@@ -283,7 +286,7 @@ Dressen \textit{et al.} \cite{dreesen2021socialdebt} sugieren una estrategia par
     >{\RaggedRight\hspace{0pt}}p{10.0cm}
     }
 
-    \caption{Enfoques de mitigación de la deuda social en equipos de desarrollo de software ágil distribuido.}
+    \caption{Enfoques de mitigación de la deuda social en equipos de desarrollo de software ágil distribuido}
     \label{tab:enfoques_mitigacion}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \\
     \toprule
     \textbf{No.}                                                                            & \textbf{Enfoque de mitigación} & \textbf{Descripción}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \\
@@ -301,7 +304,7 @@ Dressen \textit{et al.} \cite{dreesen2021socialdebt} sugieren una estrategia par
     \endfoot
 
     \bottomrule
-    \multicolumn{3}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No).}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    \\
+    \multicolumn{3}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     \\
     \endlastfoot
 
     1                                                                                       &
@@ -340,7 +343,7 @@ Por otra parte, Saeeda \textit{et al.} \cite{saeeda2024multivocal} llevaron a ca
     >{\RaggedRight\hspace{0pt}}p{10.0cm}
     }
 
-    \caption{Estrategias de mitigación de la deuda social en equipos de desarrollo de software.}
+    \caption{Estrategias de mitigación de la deuda social en equipos de desarrollo de software}
     \label{tab:estrategias_mitigacion_enfoque}                                                                                                                                                                                                                                                                                                                                             \\
     \toprule
     \textbf{No.}                                                                & \textbf{Estrategias de mitigación} & \textbf{Descripción}                                                                                                                                                                                                                                                \\
@@ -358,7 +361,7 @@ Por otra parte, Saeeda \textit{et al.} \cite{saeeda2024multivocal} llevaron a ca
     \endfoot
 
     \bottomrule
-    \multicolumn{3}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No).}}                                                                                                                                                                                                                                                                                                   \\
+    \multicolumn{3}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No)}}                                                                                                                                                                                                                                                                                                    \\
     \endlastfoot
 
     1                                                                           &
