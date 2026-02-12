@@ -1,0 +1,39 @@
+% Cargar datos si no están cargados ya
+\input{data/likert-data.tex}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                xbar stacked,
+                width=0.95\textwidth,
+                height=14cm,
+                xlabel={Número de respuestas},
+                xlabel style={font=\normalsize},
+                ylabel={Preguntas del instrumento},
+                ylabel style={font=\normalsize},
+                symbolic y coords={P15,P14,P13,P12,P11,P10,P9,P8,P7,P6,P5,P4,P3,P2,P1},
+                ytick=data,
+                xticklabel style={font=\small},
+                yticklabel style={font=\small},
+                legend style={at={(0.5,-0.12)}, anchor=north, legend columns=3, font=\footnotesize, /tikz/every even column/.append style={column sep=0.3cm}},
+                bar width=9pt,
+                xmin=0, xmax=15,
+                enlarge y limits=0.03,
+                clip=false,
+            ]
+            \addplot[fill=blue!80, draw=black, line width=0.3pt] table[x=E5, y=Pregunta] {\datatablalikert};
+            \addlegendentry{Muy satisfecho (5)}
+            \addplot[fill=blue!50, draw=black, line width=0.3pt] table[x=E4, y=Pregunta] {\datatablalikert};
+            \addlegendentry{Satisfecho (4)}
+            \addplot[fill=gray!50, draw=black, line width=0.3pt] table[x=E3, y=Pregunta] {\datatablalikert};
+            \addlegendentry{Neutral (3)}
+            \addplot[fill=orange!70, draw=black, line width=0.3pt] table[x=E2, y=Pregunta] {\datatablalikert};
+            \addlegendentry{Poco satisfecho (2)}
+            \addplot[fill=red!70, draw=black, line width=0.3pt] table[x=E1, y=Pregunta] {\datatablalikert};
+            \addlegendentry{Nada satisfecho (1)}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Distribución general de respuestas del instrumento de evaluación según escala Likert}
+    \label{fig:likert-general}
+\end{figure}
