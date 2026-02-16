@@ -220,17 +220,44 @@ Los SSP permiten que el esfuerzo social sea visible y planificable en el Sprint,
 
 \subsubsection{Escala y rangos de referencia}
 
-\begin{center}
-    \begin{tabular}{lcll}
-        \toprule
-        \textbf{SSP} & \textbf{Duración típica} & \textbf{Tipo de intervención}               & \textbf{Ejemplo}                 \\
-        \midrule
-        1--2         & 1--4 h                   & Conversación facilitada, ajuste menor       & Feedback rápido, norma simple    \\
-        3--5         & 4 h--2 días              & Workshop, mediación, retrospectiva profunda & Código de conducta, mediación    \\
-        8--13        & 2 días--1 semana         & Intervención organizacional, crisis         & Burnout severo, cambio liderazgo \\
-        \bottomrule
-    \end{tabular}
-\end{center}
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+
+\begin{longtable}{
+    >{\Centering\hspace{0pt}}p{1.2cm}
+    >{\Centering\hspace{0pt}}p{2.2cm}
+    >{\RaggedRight\hspace{0pt}}p{6.2cm}
+    >{\RaggedRight\hspace{0pt}}p{5.2cm}
+    }
+
+    \caption{Guía de interpretación del SSP.} \label{tab:guia_ssp}                                                           \\
+    \toprule
+    \textbf{SSP} & \textbf{Duración típica} & \textbf{Tipo de intervención}               & \textbf{Ejemplo}                 \\
+    \midrule
+    \endfirsthead
+
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                  \\
+    \toprule
+    \textbf{SSP} & \textbf{Duración típica} & \textbf{Tipo de intervención}               & \textbf{Ejemplo}                 \\
+    \midrule
+    \endhead
+
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                          \\
+    \endfoot
+
+    \bottomrule
+    \endlastfoot
+
+    1--2         & 1--4 h                   & Conversación facilitada, ajuste menor       & Feedback rápido, norma simple    \\
+    3--5         & 4 h--2 días              & Workshop, mediación, retrospectiva profunda & Código de conducta, mediación    \\
+    8--13        & 2 días--1 semana         & Intervención organizacional, crisis         & Burnout severo, cambio liderazgo \\
+\end{longtable}
+\endgroup
 
 \subsubsection{Proceso de estimación}
 
@@ -256,7 +283,7 @@ Las salvaguardas éticas son requisitos indispensables, no recomendaciones:
 \end{itemize}
 
 % ============================================================
-\section{Simulación de implementación: caso del equipo Phoenix}
+\section[Simulación de implementación: caso del equipo Phoenix]{Simulación de implementación:\\ caso del equipo Phoenix}
 % ============================================================
 
 Para ilustrar la aplicación práctica, SocialScrum se simuló durante 3 Sprints en un equipo ficticio (basado en patrones reales):
@@ -267,18 +294,46 @@ Para ilustrar la aplicación práctica, SocialScrum se simuló durante 3 Sprints
 
 \textbf{Evolución en 3 Sprints}:
 
-\begin{center}
-    \begin{tabular}{lcccc}
-        \toprule
-        \textbf{Métrica}      & \textbf{Inicial} & \textbf{Sprint 1} & \textbf{Sprint 2} & \textbf{Sprint 3} \\
-        \midrule
-        Health Score          & 5.2              & 5.8               & 6.4               & 7.1               \\
-        velocidad (SP)        & 38               & 42                & 45                & 48                \\
-        Smells activos        & 3                & 3                 & 2                 & 1                 \\
-        Capacidad social (\%) & 0                & 16                & 20                & 12                \\
-        \bottomrule
-    \end{tabular}
-\end{center}
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+
+\begin{longtable}{
+    >{\RaggedRight\hspace{0pt}}p{4.2cm}
+    >{\Centering\hspace{0pt}}p{2.2cm}
+    >{\Centering\hspace{0pt}}p{2.2cm}
+    >{\Centering\hspace{0pt}}p{3.2cm}
+    >{\Centering\hspace{0pt}}p{2.9cm}
+    }
+
+    \caption{Evolución de métricas por sprint.} \label{tab:evolucion_metricas}                           \\
+    \toprule
+    \textbf{Métrica}      & \textbf{Inicial} & \textbf{Sprint 1} & \textbf{Sprint 2} & \textbf{Sprint 3} \\
+    \midrule
+    \endfirsthead
+
+    \multicolumn{5}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                              \\
+    \toprule
+    \textbf{Métrica}      & \textbf{Inicial} & \textbf{Sprint 1} & \textbf{Sprint 2} & \textbf{Sprint 3} \\
+    \midrule
+    \endhead
+
+    \midrule
+    \multicolumn{5}{r}{\textit{Continúa en la siguiente página...}}                                      \\
+    \endfoot
+
+    \bottomrule
+    \endlastfoot
+
+    Health Score          & 5.2              & 5.8               & 6.4               & 7.1               \\
+    velocidad (SP)        & 38               & 42                & 45                & 48                \\
+    Smells activos        & 3                & 3                 & 2                 & 1                 \\
+    Capacidad social (\%) & 0                & 16                & 20                & 12                \\
+\end{longtable}
+\endgroup
 
 \textbf{Intervenciones clave}: sesión de alineación entre desarrolladores en conflicto, \gls{pair-programming} rotativo, transferencia de conocimiento de la desarrolladora senior al equipo (bus factor pasó de 1 a 3), creación de canal de comunicación social, acuerdo de feedback con reglas explícitas, ritual de sincronización semanal entre áreas Frontend y Backend.
 
