@@ -332,6 +332,19 @@
 % Saltar A y B (anexos comentados)
 \setcounter{chapter}{0}
 
+% --- Compresión de anexos: letra más pequeña, interlineado simple, espacios reducidos ---
+\begingroup
+\footnotesize                                % Letra ~10pt (en vez de 12pt)
+\singlespacing                               % Interlineado simple (en vez de 1.5)
+\setlength{\parskip}{2pt plus 1pt minus 1pt} % Espacio entre párrafos reducido
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}        % Espacio entre floats
+\setlength{\textfloatsep}{8pt plus 2pt minus 4pt}    % Espacio float-texto
+\setlength{\intextsep}{6pt plus 2pt minus 2pt}       % Espacio float inline
+\setlength{\abovecaptionskip}{4pt}                    % Espacio sobre caption
+\setlength{\belowcaptionskip}{2pt}                    % Espacio bajo caption
+\renewcommand{\arraystretch}{1.0}                     % Tablas más compactas
+\setlength{\tabcolsep}{4pt}                           % Columnas de tabla más estrechas
+
 \input{anexos/anexo-a.tex}
 \input{anexos/anexo-b.tex}
 \input{anexos/anexo-c.tex}
@@ -345,7 +358,7 @@
 \input{anexos/anexo-k.tex}
 \input{anexos/anexo-l.tex}
 \input{anexos/anexo-m.tex}
-
+\endgroup
 
 % ==============================================================================
 % BIBLIOGRAFÍA Y REFERENCIAS
