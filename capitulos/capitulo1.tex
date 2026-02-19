@@ -9,6 +9,9 @@
 \renewcommand{\thesection}{\thechapter.\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+\makeatletter
+\protected@edef\@currentlabel{\thechapter}%
+\makeatother
 \label{chap:capitulo1}
 
 En este capítulo se explica, paso a paso, cuál es el problema que se aborda en la investigación, qué objetivos se buscan alcanzar y cuál fue el método que se usó para hacerlo posible. Además, se presenta cómo está organizado el resto del documento para que el lector tenga una idea clara de su estructura y del camino que sigue el trabajo.
@@ -34,27 +37,32 @@ A continuación, se muestran tanto el objetivo general como los objetivos espec�
 \end{itemize}
 
 \section{Método de investigación}
-El proyecto se llevó a cabo utilizando el método de Investigación-Acción en múltiples ciclos \cite{baskerville1999actionresearch}, aplicado de forma lineal y propositiva con énfasis en la construcción y validación del artefacto metodológico (SocialScrum). La evaluación de la propuesta se realizó mediante la técnica de juicio de expertos \cite{Adillah2022}, lo que permitió evaluar y analizar el modelo con el fin de determinar su viabilidad conceptual y su alineación con los principios ágiles. Siguiendo esta metodología, se ejecutaron cuatro ciclos de investigación de manera secuencial e incremental, que se describen a continuación junto con las actividades correspondientes:
+\label{sec:metodo-investigacion}
+Este trabajo se enmarca en un enfoque de \gls{dsr}, cuyo objetivo es la creación y evaluación rigurosa de artefactos que resuelvan problemas organizacionales identificados \cite{hevner2004designscience, peffers2007dsrm}. En el contexto de esta investigación, el artefacto diseñado es SocialScrum: un proceso ágil para la gestión de la deuda social en equipos de desarrollo de software. Siguiendo la metodología de Peffers \textit{et al.} \cite{peffers2007dsrm}, el proyecto se estructuró en cuatro fases que cubren las etapas de identificación del problema, diseño y construcción del artefacto, evaluación y comunicación de resultados. La evaluación del artefacto se realizó mediante la técnica de juicio de expertos \cite{Adillah2022}, lo que permitió determinar su viabilidad conceptual y su alineación con los principios ágiles.
+
+Es importante señalar que, dado que SocialScrum involucra variables sensibles de salud mental y clima laboral, se consideró éticamente necesario validar la solidez y seguridad conceptual del modelo antes de realizar intervenciones en equipos reales. Por tanto, el presente trabajo cubre las fases de diseño, desarrollo y evaluación \textit{ex ante} del \gls{dsr} \cite{wieringa2014dsr}, dejando la implementación empírica longitudinal enmarcada en ciclos completos de Investigación-Acción \cite{baskerville1999actionresearch} como línea de trabajo futuro (ver Capítulo~\ref{chap:capitulo6}).
+
+A continuación se describen las cuatro fases ejecutadas de manera secuencial e incremental, junto con sus actividades correspondientes:
 \begin{itemize}
-    \item \textbf{Ciclo 1: Análisis conceptual.} En esta etapa se realizó una revisión sistemática de la literatura relacionada con la gestión de la deuda social en el desarrollo de software ágil. El objetivo fue identificar propuestas y elementos clave para la definición de una solución efectiva.
+    \item \textbf{Fase 1: Identificación del problema y análisis conceptual.} En esta etapa se realizó una revisión sistemática de la literatura relacionada con la gestión de la deuda social en el desarrollo de software ágil. El objetivo fue identificar propuestas y elementos clave para la definición de una solución efectiva.
           \begin{itemize}
               \item \textbf{Actividad 1.1: Investigar la literatura:} Se llevó a cabo una investigación exhaustiva de las propuestas vinculadas con la gestión de la deuda social en el desarrollo de software ágil.
               \item \textbf{Actividad 1.2: Analizar la literatura:} Se identificaron causas, consecuencias, desafíos y futuras líneas de investigación en relación con la gestión de la deuda social en estas comunidades.
               \item \textbf{Actividad 1.3: Resumir la literatura seleccionada:} Se analizaron y sintetizaron los estudios relevantes que abordan la gestión de la deuda social en el desarrollo de software ágil.
           \end{itemize}
-    \item \textbf{Ciclo 2: Elaboración de la propuesta.} En esta fase se desarrolló una solución basada en Scrum para gestionar la deuda social en el desarrollo de software ágil, promoviendo la sostenibilidad y el bienestar de sus profesionales.
+    \item \textbf{Fase 2: Diseño y construcción del artefacto.} En esta fase se desarrolló SocialScrum como solución basada en Scrum para gestionar la deuda social en el desarrollo de software ágil, promoviendo la sostenibilidad y el bienestar de sus profesionales.
           \begin{itemize}
               \item \textbf{Actividad 2.1: Análisis de la información:} Identificación, análisis y categorización de los elementos que influyen en la gestión de la deuda social en el desarrollo de software ágil.
               \item \textbf{Actividad 2.2: Definición de la propuesta:} Desarrollo de un proceso basado en Scrum para gestionar la deuda social en el desarrollo de software ágil, utilizando como referencia el método propuesto por D. A. Quintana Guzmán \cite{quintana2017metodo}.
           \end{itemize}
-    \item \textbf{Ciclo 3: Evaluación de la propuesta.} En esta fase se llevó a cabo una evaluación utilizando el juicio de expertos como técnica de validación. Esta técnica contó con la colaboración de un grupo de profesionales y especialistas en desarrollo de software ágil.
+    \item \textbf{Fase 3: Evaluación del artefacto mediante juicio de expertos.} En esta fase se llevó a cabo una evaluación utilizando el juicio de expertos como técnica de validación. Esta técnica contó con la colaboración de un grupo de profesionales y especialistas en desarrollo de software ágil.
           \begin{itemize}
               \item \textbf{Actividad 3.1: Planificación:} Se realizó la capacitación, coordinación, organización y diseño del instrumento de evaluación para los expertos.
-              \item \textbf{Actividad 3.2: Acción:} Se ejecutó el juicio de expertos según la planificación y el diseño establecidos en la actividad 3.1.
+              \item \textbf{Actividad 3.2: Ejecución:} Se ejecutó el juicio de expertos según la planificación y el diseño establecidos en la actividad 3.1.
               \item \textbf{Actividad 3.3: Observación:} Recopilación de datos sobre las respuestas e intervención de los expertos.
               \item \textbf{Actividad 3.4: Reflexión:} Generación de un informe basado en el análisis de los datos obtenidos durante la evaluación de los expertos.
           \end{itemize}
-    \item \textbf{Ciclo 4: Documentación y socialización.} Este ciclo se llevó a cabo de manera transversal a lo largo del proyecto, incluyendo las siguientes actividades:
+    \item \textbf{Fase 4: Comunicación de resultados.} Este ciclo se llevó a cabo de manera transversal a lo largo del proyecto, incluyendo las siguientes actividades:
           \begin{itemize}
               \item \textbf{Actividad 4.1: Elaboración de la monografía:} Desarrollo de la monografía y los anexos resultantes del trabajo de grado.
               \item \textbf{Actividad 4.2: Elaboración del artículo de investigación:} Creación de un artículo que describe los resultados obtenidos durante el desarrollo de la propuesta.
@@ -86,7 +94,7 @@ Este documento está organizado por seis capítulos, cada uno de ellos con sus r
               \item \textbf{Anexo I:} Sistema de estimación de items sociales (Social Story Points).
               \item \textbf{Anexo J:} Guía de facilitación para eventos
               \item \textbf{Anexo K:} Estrategias para minimizar la sobrecarga de SocialScrum.
-              \item \textbf{Anexo L:} Ejemplos de intervenciones para diferentes categorías de \gls{community-smells} (Olores Comunitarios).
+              \item \textbf{Anexo L:} Ejemplos de intervenciones para diferentes categorías de \gls{community-smells}.
               \item \textbf{Anexo M:} Contextualización del modelo SocialScrum.
           \end{itemize}
 \end{itemize}

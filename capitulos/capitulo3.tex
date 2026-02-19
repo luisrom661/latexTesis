@@ -1,4 +1,4 @@
-﻿\chapter*{CAPÍTULO 3. Fundamentos conceptuales de SocialScrum}
+\chapter*{CAPÍTULO 3. Fundamentos conceptuales de SocialScrum}
 \addcontentsline{toc}{chapter}{CAPÍTULO 3. Fundamentos conceptuales de SocialScrum}
 \setcounter{chapter}{3}
 \setcounter{section}{0}
@@ -91,11 +91,11 @@ Hay que aclarar que el Scrum Master no asume responsabilidades directas en la ge
 
 Los Developers mantienen su responsabilidad principal sobre la implementación técnica y la autogestión del trabajo durante el Sprint \cite{schwaber2020scrum}. No obstante, en SocialScrum asumen también un rol más activo en el cuidado de la salud social del equipo. Esto implica participar en la detección de \gls{community-smells} durante las ceremonias, proponer acciones de mejora que se integren al Social Sprint Backlog y colaborar con el Social Guide aportando retroalimentación sobre aspectos como la comunicación, la colaboración o la distribución del conocimiento \cite{saeeda2024nontechnicaldebt}.
 
-De esta manera, los Developers se convierten en agentes directos del cambio social dentro del equipo, garantizando que las acciones e intervenciones propuestas sean realistas, aplicables y sostenibles en el contexto de su trabajo cotidiano.
+De esta manera, los Developers se convierten en agentes directos del cambio social dentro del equipo, contribuyendo a que las acciones e intervenciones propuestas sean realistas, aplicables y sostenibles en el contexto de su trabajo cotidiano.
 
 \subsubsection{Social Guide}
 
-El Social Guide es la figura central de SocialScrum y su misión es cuidar la dimensión social del equipo. No ocupa un rol jerárquico; más bien, actúa como facilitador y consultor en temas humanos y organizacionales. Su objetivo principal es mantener el equilibrio emocional y relacional del grupo, garantizando que la confianza, la comunicación y la cooperación sean pilares constantes del trabajo.
+El Social Guide es la figura central de SocialScrum y su misión es cuidar la dimensión social del equipo. No ocupa un rol jerárquico; más bien, actúa como facilitador y consultor en temas humanos y organizacionales. Su objetivo principal es velar por el equilibrio emocional y relacional del grupo, promoviendo que la confianza, la comunicación y la cooperación sean pilares constantes del trabajo.
 
 Sus responsabilidades principales incluyen:
 
@@ -128,6 +128,67 @@ Para desempeñar el rol de manera efectiva, el Social Guide necesita combinar se
    \item \textbf{Capacidad de medición:} sabe interpretar escalas psicométricas, analizar tendencias y traducir datos en acciones comprensibles para el equipo.
    \item \textbf{Neutralidad:} no tiene autoridad ejecutiva; su poder radica en la confianza, la escucha y la capacidad de facilitar sin imponer.
 \end{enumerate}
+
+\subsubsection{Diferenciación funcional: Scrum Master vs. Social Guide}
+
+Para clarificar la complementariedad de ambos roles y evitar la percepción de redundancia, la Tabla~\ref{tab:sm-vs-sg} presenta una comparación funcional entre el Scrum Master y el Social Guide.
+
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+
+\begin{longtable}{
+   >{\RaggedRight\hspace{0pt}}p{4.0cm}
+   >{\RaggedRight\hspace{0pt}}p{5.5cm}
+   >{\RaggedRight\hspace{0pt}}p{5.5cm}
+   }
+
+   \caption{Comparación funcional: Scrum Master vs. Social Guide}
+   \label{tab:sm-vs-sg}                                                                                                                                                       \\
+   \toprule
+   \textbf{Dimensión}                                   & \textbf{Scrum Master}                                                         & \textbf{Social Guide}                                                         \\
+   \midrule
+   \endfirsthead
+
+   \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                    \\
+   \toprule
+   \textbf{Dimensión}                                   & \textbf{Scrum Master}                                                         & \textbf{Social Guide}                                                         \\
+   \midrule
+   \endhead
+
+   \bottomrule
+   \endlastfoot
+
+   Foco principal
+                                                        & Proceso ágil, flujo de trabajo e impedimentos técnicos/organizacionales.
+                                                        & Clima emocional, dinámicas interpersonales y salud social del equipo.                                                                                          \\
+
+   Responsabilidad sobre el proceso
+                                                        & Facilitar Scrum: eventos, artefactos, mejora continua del flujo de entrega.
+                                                        & Operar SocialScrum: eventos sociales, artefactos sociales, mejora del bienestar colectivo.                                                                      \\
+
+   Responsabilidad sobre salud emocional
+                                                        & Indirecta: promueve un entorno de trabajo efectivo como parte de su coaching.
+                                                        & Directa: detecta \gls{community-smells}, facilita mediaciones y monitorea el Health Score.                                                                     \\
+
+   Métricas que gestiona
+                                                        & Velocidad, burndown, lead time, impedimentos técnicos.
+                                                        & Health Score, Registro de \gls{community-smells}, Social Story Points.                                                                                         \\
+
+   Relación con stakeholders
+                                                        & Interfaz con la organización para eliminar impedimentos y proteger al equipo.
+                                                        & Informa al equipo y al Scrum Master; reporta métricas agregadas y anonimizadas.                                                                                \\
+
+   Confidencialidad de datos
+                                                        & No aplica formalmente; trabaja con información del proceso visible para todos.
+                                                        & Gobernada por protocolo ético: datos individuales confidenciales, nunca vinculados a evaluación de desempeño.                                                   \\
+\end{longtable}
+\endgroup
+
+En equipos pequeños o maduros, una misma persona podría desempeñar simultáneamente los roles de Scrum Master y Social Guide; sin embargo, se explicitan como responsabilidades diferenciadas para asegurar que la gestión de la deuda social tenga un responsable claro (\textit{accountability}) y no se sacrifique ante la presión por entregar código. La distinción funcional, más que la separación física de personas, es lo que el modelo busca preservar.
 
 \subsection{Eventos adaptados}
 
@@ -588,7 +649,7 @@ Cuando todos los miembros del equipo se comprometen con un propósito común —
 
 \subsubsection{Foco (Focus)}
 Mantener el foco en la salud social del equipo es tan esencial como concentrarse en la entrega del producto.
-En este sentido, SocialScrum ayuda a los equipos a equilibrar ambas prioridades, garantizando que las dinámicas humanas no queden relegadas frente a las demandas técnicas \cite{saeeda2024nontechnicaldebt}.
+En este sentido, SocialScrum busca ayudar a los equipos a equilibrar ambas prioridades, favoreciendo que las dinámicas humanas no queden relegadas frente a las demandas técnicas \cite{saeeda2024nontechnicaldebt}.
 Al mantener este enfoque, el equipo puede identificar y resolver tempranamente los problemas sociales que podrían afectar la productividad, la motivación o la calidad del software \cite{saeeda2024nontechnicaldebt}.
 De esta forma, el foco deja de ser únicamente un asunto de cumplimiento técnico y se convierte en un compromiso integral con el bienestar y la sostenibilidad del trabajo en equipo.
 
@@ -833,7 +894,7 @@ En la Tabla \ref{tab:inspeccion_cadencias} se resumen estas cadencias, sus focos
 \end{longtable}
 \endgroup
 
-Este enfoque multirresolución permite que SocialScrum detecte tanto las crisis inmediatas como las erosiones silenciosas —ambas igual de peligrosas, solo que en distintas escalas temporales—, garantizando así una visión integral del estado social del equipo.
+Este enfoque multirresolución está diseñado para que SocialScrum detecte tanto las crisis inmediatas como las erosiones silenciosas ---ambas igual de peligrosas, solo que en distintas escalas temporales---, proporcionando así una visión integral del estado social del equipo.
 
 \subsubsection{Adaptación}
 
@@ -1077,7 +1138,7 @@ El ciclo continúa: Transparencia $\rightarrow$ Inspección $\rightarrow$ Adapta
 
 \emph{Reflexión:} sin transparencia, el conflicto habría permanecido oculto; sin inspección, no se habría comprendido su causa; y sin adaptación, nada habría cambiado. En SocialScrum, los tres pilares son interdependientes y forman el corazón del aprendizaje social continuo.
 
-El ciclo empírico de SocialScrum no promete eliminar la deuda social —ningún sistema humano podría hacerlo sin caer en la ingenuidad—, pero sí garantiza algo mucho más valioso: que cuando la deuda emerja, será detectada tempranamente, abordada con estrategias basadas en evidencia y gestionada de forma iterativa, aprendiendo de cada experiencia.
+El ciclo empírico de SocialScrum no promete eliminar la deuda social ---ningún sistema humano podría hacerlo sin caer en la ingenuidad---, pero sí ofrece un marco para que, cuando la deuda emerja, pueda ser detectada tempranamente, abordada con estrategias basadas en evidencia y gestionada de forma iterativa, aprendiendo de cada experiencia.
 En ese sentido, SocialScrum transforma la deuda social de una fuerza destructiva invisible en un componente reconocido y gestionable del desarrollo sostenible de software.
 
 \subsection{Medición de la salud-social}
