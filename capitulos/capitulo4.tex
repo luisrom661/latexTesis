@@ -637,6 +637,61 @@ En la Tabla \ref{tab:reglas-decision-votacion} se presentan las reglas de decisi
 \end{longtable}
 \endgroup
 
+\subsection{Programa de capacitación}
+\label{sec:programa-capacitacion-sg}
+
+Una vez seleccionado, el Social Guide debe completar un programa de capacitación de 40~horas distribuidas en 7~semanas, organizado en cuatro fases secuenciales con criterios de aprobación en cada etapa. La tabla~\ref{tab:capacitacion-sg-cap4} resume el programa completo.
+
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+
+\begin{longtable}{
+    >{\RaggedRight\hspace{0pt}}p{2.2cm}
+    >{\Centering\hspace{0pt}}p{1.5cm}
+    >{\RaggedRight\hspace{0pt}}p{7cm}
+    >{\RaggedRight\hspace{0pt}}p{4.5cm}
+    }
+    \caption{Programa de capacitación del Social Guide} \label{tab:capacitacion-sg-cap4}                                            \\
+    \toprule
+    \textbf{Fase}                                               & \textbf{Horas} & \textbf{Contenido} & \textbf{Evaluación}   \\
+    \midrule \endfirsthead
+    \bottomrule \endlastfoot
+    1. Fundamentos teóricos (Sem.\ 1--2)                        & 8              &
+    \acrfull{tad} (operación en equipos, checklist).
+    Confianza Mayer (diagnóstico, entrevista).
+    \gls{community-smells} (catálogo, registro).
+    Valores Scrum $\times$ smells.                              &
+    Quiz 30~min, $\geq 80\%$                                                                                                    \\ \midrule
+
+    2. Facilitación y mediación (Sem.\ 3--4)                    & 12             &
+    Retrospectivas sociales (protocolo 4 fases).
+    CNV (observación, sentimientos, necesidades, peticiones).
+    Conversaciones difíciles (validación, legitimación).         &
+    Retrospectiva observada por SM + evaluador; rúbrica $\geq 3/5$ en seguridad psicológica, preguntas generativas y síntesis   \\ \midrule
+
+    3. Medición y análisis (Sem.\ 5--6)                         & 8              &
+    Health Score (dimensiones, cálculo).
+    Instrumentos (Likert, entrevistas, SNA).
+    Análisis cualitativo (codificación).
+    Generación de reporte.                                      &
+    Analizar 10 encuestas; producir HS + 3 smells detectados                                                                    \\ \midrule
+
+    4. Ética y salvaguardas (Sem.\ 2--4, intercalado)           & 12             &
+    Confidencialidad vs.\ reportable.
+    Límites profesionales (derivación a psicólogo).
+    Sesgos y conflictos de interés.
+    Teatro Social y \textit{role-plays} de casos éticos.
+    Auditoría y responsabilidad.                                &
+    Cuestionario ético (50 preguntas); \textit{role-play} observado                                                             \\
+\end{longtable}
+\endgroup
+
+La evaluación final (semana~7) integra un quiz teórico (60~min, $\geq 80\%$), una retrospectiva simulada observada y un caso de análisis completo (Health Score + diagnóstico + plan de intervención). El umbral de aprobación es $\geq 3/5$ en todas las dimensiones. El seguimiento post-capacitación es progresivo: supervisión semanal durante los primeros 2~meses, quincenal hasta el mes~6, mensual hasta completar el primer año, y según necesidad a partir del segundo año (con un mínimo de 10~h/año de educación continua). Los protocolos detallados de facilitación, preguntas sociales recomendadas y guías de sesión se presentan en el Anexo~\ref{anexo:guias-facilitacion-protocolos-operativos}.
+
 \section{Eventos adaptados de SocialScrum}
 \label{sec:eventos-adaptados-socialscrum}
 
@@ -1235,6 +1290,102 @@ Si al final del Sprint hay items sociales incompletos, se aplican las mismas reg
 \end{enumerate}
 
 Los artefactos sociales de SocialScrum proporcionan la infraestructura de información necesaria para gestionar la deuda social con rigor. Sin ellos, la gestión de salud social queda en el ámbito de las buenas intenciones y las conversaciones informales. Con ellos, se convierte en un proceso sistemático, trazable y demostrable. El Social Product Backlog hace visible qué se puede mejorar; el Social Sprint Backlog convierte intenciones en compromisos; el Registro de Olores Comunitarios proporciona memoria histórica; y el Dashboard de Métricas Sociales permite inspección continua. Juntos, estos artefactos cierran el ciclo de transparencia-inspección-adaptación que define a Scrum, extendiéndolo a la dimensión social del trabajo en equipo.
+
+Los artefactos capturan información, pero para que el Social Sprint Backlog funcione, los items sociales necesitan una unidad de estimación comparable a los Story Points técnicos. La siguiente subsección introduce los Social Story Points (SSP), el sistema de estimación que permite integrar items técnicos y sociales en un mismo Sprint.
+
+\subsection{Sistema de estimación social: Social Story Points (SSP)}
+\label{sec:sistema-estimacion-ssp}
+
+Los items de deuda social consumen tiempo y atención del equipo, pero sin una unidad de medida comparable a los Story Points (SP) técnicos, resulta imposible planificar su inclusión en el Sprint. SocialScrum introduce los \textbf{Social Story Points (SSP)}, una escala de estimación donde $1\;\text{SSP} \approx 1\;\text{SP}$, lo que permite sumar ambos tipos de items para calcular la capacidad total del Sprint.
+
+La escala SSP utiliza los mismos valores Fibonacci que los SP técnicos: 1, 2, 3, 5, 8 y 13. Valores superiores a 13 indican que el item debe descomponerse. La tabla~\ref{tab:escala-SSP-cap4} presenta la escala con su correspondencia temporal y ejemplos representativos.
+
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+
+\begin{longtable}[H]{
+    >{\Centering\hspace{0pt}}p{1.5cm}
+    >{\Centering\hspace{0pt}}p{2.5cm}
+    >{\RaggedRight\hspace{0pt}}p{4.5cm}
+    >{\RaggedRight\hspace{0pt}}p{4.5cm}
+    }
+
+    \caption{Escala de Social Story Points (SSP)} \label{tab:escala-SSP-cap4}                                                  \\
+    \toprule
+    \textbf{SSP} & \textbf{Duración} & \textbf{Tipo de intervención}               & \textbf{Ejemplo}                        \\
+    \midrule
+    \endfirsthead
+
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                    \\
+    \toprule
+    \textbf{SSP} & \textbf{Duración} & \textbf{Tipo de intervención}               & \textbf{Ejemplo}                        \\
+    \midrule
+    \endhead
+
+    \bottomrule
+    \endlastfoot
+
+    1--2         & 1--4 horas        & Conversación facilitada, ajuste menor       & Feedback rápido, norma simple           \\
+    3--5         & 4 h--2 días       & Workshop, mediación, retrospectiva profunda & Código de conducta, mediación bilateral \\
+    8--13        & 2 días--1 semana  & Intervención organizacional, crisis         & Cambio de liderazgo, burnout severo     \\
+\end{longtable}
+\endgroup
+
+El cálculo del SSP final combina dos factores: la severidad del \gls{community-smells} (que determina el SSP base) y la complejidad de la intervención requerida (que añade un ajuste):
+
+\begin{equation}
+    \text{SSP Final} = \text{SSP Base (severidad)} + \text{Ajuste (complejidad)}
+\end{equation}
+
+\noindent donde la severidad asigna un SSP base (Leve: 1--2, Moderada: 3--5, Severa: 5--8, Crítica: 8--13) y la complejidad de intervención añade un ajuste (Baja: +0, Media: +1, Alta: +2). Por ejemplo, un conflicto de severidad moderada (3~SSP base) que requiere mediación especializada (complejidad alta, +2) resulta en un SSP Final de~5.
+
+La tabla~\ref{tab:referencia-SSP-cap4} proporciona una referencia rápida de estimación por tipo de \gls{community-smells}, permitiendo al equipo estimar rápidamente durante el Sprint Planning.
+
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+
+\begin{longtable}[H]{
+    >{\RaggedRight\hspace{0pt}}p{4.0cm}
+    >{\Centering\hspace{0pt}}p{2.5cm}
+    >{\RaggedRight\hspace{0pt}}p{5.0cm}
+    >{\Centering\hspace{0pt}}p{1.5cm}
+    }
+
+    \caption{Referencia rápida de estimación SSP por Olor Comunitario} \label{tab:referencia-SSP-cap4}                             \\
+    \toprule
+    \textbf{Community smell}         & \textbf{Severidad típica} & \textbf{Intervención típica}                  & \textbf{SSP} \\
+    \midrule
+    \endfirsthead
+
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                       \\
+    \toprule
+    \textbf{Community smell}         & \textbf{Severidad típica} & \textbf{Intervención típica}                  & \textbf{SSP} \\
+    \midrule
+    \endhead
+
+    \bottomrule
+    \endlastfoot
+
+    \textit{Radio Silence}           & Moderada                  & Workshop y ajuste de proceso                  & 3--5         \\
+    \textit{Lone Wolf}               & Leve--Moderada            & Mediación y reintegración                     & 3--5         \\
+    Conflicto interpersonal leve     & Leve                      & Mediación bilateral simple                    & 3            \\
+    Conflicto interpersonal severo   & Severa                    & Mediación intensiva y seguimiento             & 8            \\
+    \textit{Burnout} leve / moderado & Leve--Moderada            & Conversación y ajuste de carga                & 2--5         \\
+    \textit{Burnout} severo          & Severa--Crítica           & Intervención de crisis                        & 13           \\
+    Inseguridad psicológica          & Moderada--Severa          & Workshop y retrospectiva facilitada           & 5--8         \\
+    \textit{Knowledge hoarding}      & Moderada                  & Documentación y transferencia de conocimiento & 3--5         \\
+\end{longtable}
+\endgroup
+
+La metodología detallada de estimación en 3~pasos (identificación del smell, evaluación de severidad y evaluación de complejidad), junto con la matriz completa de severidad y las mejores prácticas de calibración, se presenta en el Anexo~\ref{anexo:sistema-estimacion-social}.
 
 Los artefactos capturan información, pero ¿cómo se genera esa información de manera confiable? El Health Score que aparece en el Dashboard, los Olores Comunitarios que se registran, los indicadores de tendencia ---todos requieren un sistema de medición que transforme observaciones cualitativas en datos utilizables. La siguiente sección describe este sistema: cómo se operacionaliza el Health Score, qué instrumentos se utilizan para medirlo, y cómo se interpretan los resultados para tomar decisiones concretas.
 

@@ -9,79 +9,97 @@ El principio fundamental es \textbf{integración, no adición}: los componentes 
 
 \subsection{Sobrecarga temporal por evento}
 
-\begin{table}[!htbp]
-    \centering
-    \small
-    \begin{tabularx}{\textwidth}{|X|c|c|c|c|}
-        \hline
-        \textbf{Evento} & \textbf{Scrum estándar} & \textbf{SocialScrum} & \textbf{Sobrecarga} (redistribución interna) & \textbf{\% Aumento} \\
-        \hline
-        Social Sprint Planning
-                        & 4 horas
-                        & 4 h 15 min
-                        & +15 min
-                        & +6\%                                                                                                                \\
-        \hline
-        Social Daily Standup (x10)
-                        & 150 min total
-                        & 170 min total
-                        & +20 min
-                        & +13\%                                                                                                               \\
-        \hline
-        Social Sprint Review
-                        & 2 horas
-                        & 2 h 10 min
-                        & +10 min
-                        & +8\%                                                                                                                \\
-        \hline
-        Social Sprint Retrospective
-                        & 1.5 horas
-                        & 1.5 horas
-                        & +0 min
-                        & 0\%                                                                                                                 \\
-        \hline
-        \textbf{Total por Sprint}
-                        & \textbf{10 horas}
-                        & \textbf{10 h 45 min}
-                        & \textbf{+45 min}
-                        & \textbf{+7.5\%}                                                                                                     \\
-        \hline
-    \end{tabularx}
-    \caption{Sobrecarga temporal de SocialScrum por evento}
-    \label{tab:sobrecarga-temporal}
-\end{table}
-\FloatBarrier
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+
+\begin{longtable}[H]{
+    >{\RaggedRight\hspace{0pt}}p{3.5cm}   % Col 1: Evento
+    >{\Centering\hspace{0pt}}p{2.5cm}     % Col 2: Scrum estándar
+    >{\Centering\hspace{0pt}}p{2.5cm}     % Col 3: SocialScrum
+    >{\Centering\hspace{0pt}}p{2.5cm}     % Col 4: Sobrecarga
+    >{\Centering\hspace{0pt}}p{2.0cm}     % Col 5: % Aumento
+    }
+
+    % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
+    \caption{Sobrecarga temporal de SocialScrum por evento} \label{tab:sobrecarga-temporal}                                                           \\
+    \toprule
+    \textbf{Evento}             & \textbf{Scrum estándar} & \textbf{SocialScrum} & \textbf{Sobrecarga} (redistribución interna) & \textbf{\% Aumento} \\
+    \midrule
+    \endfirsthead
+
+    % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
+    \multicolumn{5}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                           \\
+    \toprule
+    \textbf{Evento}             & \textbf{Scrum estándar} & \textbf{SocialScrum} & \textbf{Sobrecarga} (redistribución interna) & \textbf{\% Aumento} \\
+    \midrule
+    \endhead
+
+    % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
+    \midrule
+    \multicolumn{5}{r}{\textit{Continúa en la siguiente página...}}                                                                                   \\
+    \endfoot
+
+    % --- 4. PIE FINAL ---
+    \bottomrule
+    \endlastfoot
+
+    Social Sprint Planning      & 4 horas                 & 4 h 15 min           & +15 min                                      & +6\%                \\
+    Social Daily Standup (x10)  & 150 min total           & 170 min total        & +20 min                                      & +13\%               \\
+    Social Sprint Review        & 2 horas                 & 2 h 10 min           & +10 min                                      & +8\%                \\
+    Social Sprint Retrospective & 1.5 horas               & 1.5 horas            & +0 min                                       & 0\%                 \\
+    \midrule
+    \textbf{Total por Sprint}   & \textbf{10 horas}       & \textbf{10 h 45 min} & \textbf{+45 min}                             & \textbf{+7.5\%}     \\
+\end{longtable}
+\endgroup
 
 \subsubsection{Detalle por evento}
 
-\begin{table}[!htbp]
-    \centering
-    \small
-    \begin{tabularx}{\textwidth}{|l|X|c|}
-        \hline
-        \textbf{Evento} & \textbf{Cambio en SocialScrum}                                                                                       & \textbf{Tiempo adicional} \\
-        \hline
-        Social Sprint Planning
-                        & Tema 3: Riesgos sociales (Health Score, \gls{community-smells} activos e ítems sociales)
-                        & +15 min                                                                                                                                          \\
-        \hline
-        Social Daily Standup (por día)
-                        & Pregunta final: “¿Hay algún impedimento social hoy?” (solo identificar, no resolver)
-                        & +2--3 min/día                                                                                                                                    \\
-        \hline
-        Social Sprint Review
-                        & Sección dedicada a la evaluación de la dinámica social y la correlación entre Health Score y velocidad
-                        & +10 min                                                                                                                                          \\
-        \hline
-        Social Sprint Retrospective
-                        & Redistribución del tiempo: inspección técnica (30 min), inspección social (45 min) y definición de acciones (15 min)
-                        & +0 min                                                                                                                                           \\
-        \hline
-    \end{tabularx}
-    \caption{Detalle de cambios por evento}
-    \label{tab:detalle-overhead}
-\end{table}
-\FloatBarrier
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+
+\begin{longtable}[H]{
+    >{\RaggedRight\hspace{0pt}}p{3.5cm}   % Col 1: Evento
+    >{\RaggedRight\hspace{0pt}}p{7.5cm}   % Col 2: Cambio en SocialScrum
+    >{\Centering\hspace{0pt}}p{2.5cm}     % Col 3: Tiempo adicional
+    }
+
+    % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
+    \caption{Detalle de cambios por evento} \label{tab:detalle-overhead}                                                                                                              \\
+    \toprule
+    \textbf{Evento}                & \textbf{Cambio en SocialScrum}                                                                                       & \textbf{Tiempo adicional} \\
+    \midrule
+    \endfirsthead
+
+    % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                           \\
+    \toprule
+    \textbf{Evento}                & \textbf{Cambio en SocialScrum}                                                                                       & \textbf{Tiempo adicional} \\
+    \midrule
+    \endhead
+
+    % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                   \\
+    \endfoot
+
+    % --- 4. PIE FINAL ---
+    \bottomrule
+    \endlastfoot
+
+    Social Sprint Planning         & Tema 3: Riesgos sociales (Health Score, \gls{community-smells} activos e ítems sociales)                             & +15 min                   \\
+    Social Daily Standup (por día) & Pregunta final: ``¿Hay algún impedimento social hoy?'' (solo identificar, no resolver)                               & +2--3 min/día             \\
+    Social Sprint Review           & Sección dedicada a la evaluación de la dinámica social y la correlación entre Health Score y velocidad               & +10 min                   \\
+    Social Sprint Retrospective    & Redistribución del tiempo: inspección técnica (30 min), inspección social (45 min) y definición de acciones (15 min) & +0 min                    \\
+\end{longtable}
+\endgroup
 
 \subsection{Sesiones adicionales y presupuesto}
 
@@ -94,37 +112,48 @@ Algunos items sociales requieren sesiones fuera de eventos estándar (mediacione
 
 \subsection{Optimizaciones prácticas}
 
-\begin{table}[!htbp]
-    \centering
-    \small
-    \begin{tabularx}{\textwidth}{|l|X|c|}
-        \hline
-        \textbf{Optimización} & \textbf{Descripción}                                                                                     & \textbf{Ahorro} \\
-        \hline
-        Daily asíncrono
-                              & Reemplazar el Daily síncrono por un formato escrito en Slack o Teams
-        (campos: DONE, TODO, BLOCK, SOCIAL)
-                              & Elimina 15--18 min/día de reunión                                                                                          \\
-        \hline
-        Retros alternadas
-                              & Sprint impar: énfasis técnico (50/25 min). Sprint par: énfasis social (25/50 min)
-                              & Reduce la fatiga de retrospectiva                                                                                          \\
-        \hline
-        Social Guide rotativo
-                              & En equipos de 5--7 personas, rotar el rol cada Sprint.
-        Dedicación aproximada: 10\% del tiempo cuando le corresponde
-                              & Distribuye la carga entre todos                                                                                            \\
-        \hline
-        Integración primero
-                              & Jerarquía de integración: Daily $\rightarrow$ Planning $\rightarrow$ Review $\rightarrow$ Retrospective.
-        Solo crear una sesión adicional si no cabe en los eventos existentes
-                              & Minimiza sesiones adicionales                                                                                              \\
-        \hline
-    \end{tabularx}
-    \caption{Optimizaciones para reducir sobrecarga}
-    \label{tab:optimizaciones-overhead}
-\end{table}
-\FloatBarrier
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+
+\begin{longtable}[H]{
+    >{\RaggedRight\hspace{0pt}}p{3.0cm}   % Col 1: Optimización
+    >{\RaggedRight\hspace{0pt}}p{7.5cm}   % Col 2: Descripción
+    >{\RaggedRight\hspace{0pt}}p{3.0cm}   % Col 3: Ahorro
+    }
+
+    % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
+    \caption{Optimizaciones para reducir sobrecarga} \label{tab:optimizaciones-overhead}                                                                                                                                                      \\
+    \toprule
+    \textbf{Optimización} & \textbf{Descripción}                                                                                                                                                          & \textbf{Ahorro}                   \\
+    \midrule
+    \endfirsthead
+
+    % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                   \\
+    \toprule
+    \textbf{Optimización} & \textbf{Descripción}                                                                                                                                                          & \textbf{Ahorro}                   \\
+    \midrule
+    \endhead
+
+    % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                           \\
+    \endfoot
+
+    % --- 4. PIE FINAL ---
+    \bottomrule
+    \endlastfoot
+
+    Daily asíncrono       & Reemplazar el Daily síncrono por un formato escrito en Slack o Teams (campos: DONE, TODO, BLOCK, SOCIAL)                                                                      & Elimina 15--18 min/día de reunión \\
+    Retros alternadas     & Sprint impar: énfasis técnico (50/25 min). Sprint par: énfasis social (25/50 min)                                                                                             & Reduce la fatiga de retrospectiva \\
+    Social Guide rotativo & En equipos de 5--7 personas, rotar el rol cada Sprint. Dedicación aproximada: 10\% del tiempo cuando le corresponde                                                           & Distribuye la carga entre todos   \\
+    Integración primero   & Jerarquía de integración: Daily $\rightarrow$ Planning $\rightarrow$ Review $\rightarrow$ Retrospective. Solo crear una sesión adicional si no cabe en los eventos existentes & Minimiza sesiones adicionales     \\
+\end{longtable}
+\endgroup
 
 \subsection{Gestión de expectativas}
 
@@ -139,57 +168,90 @@ Mensaje clave: ``Implementamos SocialScrum para mejorar sostenibilidad del equip
 
 El retorno de inversión se estima en dólares y pesos colombianos con conversión de \$1 dólar es igual a \$4.000 COP, en este escenario se hace un ejemplo mostrado en las tablas \ref{tab:inversion-anual} y \ref{tab:roi-socialscrum}.
 
-\begin{table}[!htbp]
-    \centering
-    \small
-    \begin{tabularx}{\textwidth}{|l|c|X|c|c|}
-        \hline
-        \textbf{Inversión (anual)} & \textbf{Horas}                  & \textbf{Detalle} & \textbf{Costo (USD)} & \textbf{Costo (COP)} \\
-        \hline
-        Sobrecarga de reuniones
-                                   & 19.5 h
-                                   & 45 min $\times$ 26 Sprints
-                                   & \$975
-                                   & $\sim$3\,900\,000 COP                                                                            \\
-        \hline
-        Sesiones adicionales
-                                   & 130 h
-                                   & $\sim$5 h $\times$ 26 Sprints
-                                   & \$6\,500
-                                   & $\sim$26\,000\,000 COP                                                                           \\
-        \hline
-        \textbf{Total}
-                                   & \textbf{150 h}
-                                   & Costo anual estimado
-                                   & \textbf{\$7\,500}
-                                   & \textbf{$\sim$30\,000\,000 COP}                                                                  \\
-        \hline
-    \end{tabularx}
-    \caption{Inversión anual estimada en sobrecarga de SocialScrum}
-    \label{tab:inversion-anual}
-\end{table}
-\FloatBarrier
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
 
-\begin{table}[!htbp]
-    \centering
-    \small
-    \begin{tabularx}{\textwidth}{|l|X|}
-        \hline
-        \textbf{Retorno (anual)} & \textbf{Valor estimado}                                     \\
-        \hline
-        1 renuncia evitada
-                                 & \$50\,000--\$100\,000 dólares (50--200\% del salario anual) \\
-        \hline
-        Mejora de velocidad 10\%
-                                 & 104 SP adicionales (4 SP por Sprint $\times$ 26 Sprints)    \\
-        \hline
-        Conflictos resueltos
-                                 & Más de 50 horas de fricción evitada                         \\
-        \hline
-    \end{tabularx}
-    \caption{Análisis de ROI de SocialScrum}
-    \label{tab:roi-socialscrum}
-\end{table}
-\FloatBarrier
+\begin{longtable}[H]{
+    >{\RaggedRight\hspace{0pt}}p{3.0cm}   % Col 1: Inversión (anual)
+    >{\Centering\hspace{0pt}}p{1.5cm}     % Col 2: Horas
+    >{\RaggedRight\hspace{0pt}}p{4.0cm}   % Col 3: Detalle
+    >{\Centering\hspace{0pt}}p{2.0cm}     % Col 4: Costo (USD)
+    >{\Centering\hspace{0pt}}p{3.0cm}     % Col 5: Costo (COP)
+    }
+
+    % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
+    \caption{Inversión anual estimada en sobrecarga de SocialScrum} \label{tab:inversion-anual}                                          \\
+    \toprule
+    \textbf{Inversión (anual)} & \textbf{Horas} & \textbf{Detalle}              & \textbf{Costo (USD)} & \textbf{Costo (COP)}            \\
+    \midrule
+    \endfirsthead
+
+    % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
+    \multicolumn{5}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                              \\
+    \toprule
+    \textbf{Inversión (anual)} & \textbf{Horas} & \textbf{Detalle}              & \textbf{Costo (USD)} & \textbf{Costo (COP)}            \\
+    \midrule
+    \endhead
+
+    % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
+    \midrule
+    \multicolumn{5}{r}{\textit{Continúa en la siguiente página...}}                                                                      \\
+    \endfoot
+
+    % --- 4. PIE FINAL ---
+    \bottomrule
+    \endlastfoot
+
+    Sobrecarga de reuniones    & 19.5 h         & 45 min $\times$ 26 Sprints    & \$975                & $\sim$3\,900\,000 COP           \\
+    Sesiones adicionales       & 130 h          & $\sim$5 h $\times$ 26 Sprints & \$6\,500             & $\sim$26\,000\,000 COP          \\
+    \midrule
+    \textbf{Total}             & \textbf{150 h} & Costo anual estimado          & \textbf{\$7\,500}    & \textbf{$\sim$30\,000\,000 COP} \\
+\end{longtable}
+\endgroup
+
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+
+\begin{longtable}[H]{
+    >{\RaggedRight\hspace{0pt}}p{4.5cm}   % Col 1: Retorno (anual)
+    >{\RaggedRight\hspace{0pt}}p{9.5cm}   % Col 2: Valor estimado
+    }
+
+    % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
+    \caption{Análisis de ROI de SocialScrum} \label{tab:roi-socialscrum}                   \\
+    \toprule
+    \textbf{Retorno (anual)} & \textbf{Valor estimado}                                     \\
+    \midrule
+    \endfirsthead
+
+    % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
+    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                \\
+    \toprule
+    \textbf{Retorno (anual)} & \textbf{Valor estimado}                                     \\
+    \midrule
+    \endhead
+
+    % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
+    \midrule
+    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                        \\
+    \endfoot
+
+    % --- 4. PIE FINAL ---
+    \bottomrule
+    \endlastfoot
+
+    1 renuncia evitada       & \$50\,000--\$100\,000 dólares (50--200\% del salario anual) \\
+    Mejora de velocidad 10\% & 104 SP adicionales (4 SP por Sprint $\times$ 26 Sprints)    \\
+    Conflictos resueltos     & Más de 50 horas de fricción evitada                         \\
+\end{longtable}
+\endgroup
 
 \textbf{Balance}: \acrfull{roi} positivo si se evita 1 renuncia anual o se mejora velocidad 5\%+.

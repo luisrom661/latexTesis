@@ -31,29 +31,51 @@ Yo, \underline{\hspace{6cm}} (nombre completo del Social Guide), en mi rol de \t
 
 \subsubsection{Tipos de reportes}
 
-\begin{table}[!htpb]
-    \centering
-    \small
-    \begin{tabularx}{\textwidth}{|l|l|X|l|}
-        \hline
-        \textbf{Tipo} & \textbf{Frecuencia}                                                                                        & \textbf{Contenido} & \textbf{Audiencia} \\
-        \hline
-        Interno al equipo
-                      & Cada Sprint
-                      & Health Score del equipo, \gls{community-smells} activos y acciones sociales completadas durante el Sprint.
-                      & Equipo                                                                                                                                               \\
-        \hline
-        Ejecutivo
-                      & Mensual
-                      & Health Score promedio, \gls{community-smells} críticos y solicitudes de recursos o apoyo organizacional.
-                      & CTO, Scrum Master                                                                                                                                    \\
-        \hline
-    \end{tabularx}
-    \caption{Reportes del Social Guide}
-    \label{tab:reportes-social-guide}
-\end{table}
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
 
-\FloatBarrier
+\begin{longtable}[H]{
+    >{\RaggedRight\hspace{0pt}}p{2.8cm}
+    >{\Centering\hspace{0pt}}p{2.5cm}
+    >{\RaggedRight\hspace{0pt}}p{6.9cm}
+    >{\Centering\hspace{0pt}}p{2.5cm}
+    }
+
+    \caption{Reportes del Social Guide.} \label{tab:reportes-social-guide}                                                                                                     \\
+    \toprule
+    \textbf{Tipo}                                                                                              & \textbf{Frecuencia} & \textbf{Contenido} & \textbf{Audiencia} \\
+    \midrule
+    \endfirsthead
+
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                    \\
+    \toprule
+    \textbf{Tipo}                                                                                              & \textbf{Frecuencia} & \textbf{Contenido} & \textbf{Audiencia} \\
+    \midrule
+    \endhead
+
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                                                                            \\
+    \endfoot
+
+    \bottomrule
+    \endlastfoot
+
+    Interno al equipo                                                                                          &
+    Cada Sprint                                                                                                &
+    Health Score del equipo, \gls{community-smells} activos y acciones sociales completadas durante el Sprint. &
+    Equipo                                                                                                                                                                     \\
+    \midrule
+
+    Ejecutivo                                                                                                  &
+    Mensual                                                                                                    &
+    Health Score promedio, \gls{community-smells} críticos y solicitudes de recursos o apoyo organizacional.   &
+    CTO, Scrum Master                                                                                                                                                          \\
+\end{longtable}
+\endgroup
 
 Todos los reportes son \textbf{agregados y anónimos}. No identifican personas.
 
@@ -76,38 +98,63 @@ Todos los reportes son \textbf{agregados y anónimos}. No identifican personas.
 
 \subsubsection{Dedicación del rol}
 
-\begin{table}[!htpb]
-    \centering
-    \small
-    \begin{tabularx}{\textwidth}{|X|c|l|}
-        \hline
-        \textbf{Contexto} & \textbf{Dedicación}         & \textbf{Modelo} \\
-        \hline
-        Equipo de 5--7 personas con Health Score $\geq 7$
-                          & 10--20\%
-                          & Rol rotativo                                  \\
-        \hline
-        Equipo de 5--7 personas con Health Score $< 7$
-                          & 30--40\%
-                          & Rol parcial                                   \\
-        \hline
-        Equipo de 8--15 personas
-                          & 30--70\%
-                          & Rol parcial o casi completo                   \\
-        \hline
-        Equipo de 16 o más personas
-                          & 80--100\%
-                          & Tiempo completo                               \\
-        \hline
-        Múltiples equipos
-                          & 100\%
-                          & Dedicado a 2--3 equipos                       \\
-        \hline
-    \end{tabularx}
-    \caption{Dedicación del Social Guide según contexto}
-    \label{tab:dedicacion-social-guide}
-\end{table}
-\FloatBarrier
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+
+\begin{longtable}[H]{
+    >{\RaggedRight\hspace{0pt}}p{7.2cm}
+    >{\Centering\hspace{0pt}}p{3cm}
+    >{\RaggedRight\hspace{0pt}}p{5cm}
+    }
+
+    \caption{Dedicación del Social Guide según contexto.} \label{tab:dedicacion-social-guide} \\
+    \toprule
+    \textbf{Contexto}                                 & \textbf{Dedicación} & \textbf{Modelo} \\
+    \midrule
+    \endfirsthead
+
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                   \\
+    \toprule
+    \textbf{Contexto}                                 & \textbf{Dedicación} & \textbf{Modelo} \\
+    \midrule
+    \endhead
+
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                           \\
+    \endfoot
+
+    \bottomrule
+    \endlastfoot
+
+    Equipo de 5--7 personas con Health Score $\geq 7$ &
+    10--20\%                                          &
+    Rol rotativo                                                                              \\
+    \midrule
+
+    Equipo de 5--7 personas con Health Score $< 7$    &
+    30--40\%                                          &
+    Rol parcial                                                                               \\
+    \midrule
+
+    Equipo de 8--15 personas                          &
+    30--70\%                                          &
+    Rol parcial o casi completo                                                               \\
+    \midrule
+
+    Equipo de 16 o más personas                       &
+    80--100\%                                         &
+    Tiempo completo                                                                           \\
+    \midrule
+
+    Múltiples equipos                                 &
+    100\%                                             &
+    Dedicado a 2--3 equipos                                                                   \\
+\end{longtable}
+\endgroup
 
 \subsection{3. Separación total entre salud social y evaluación de desempeño}
 
@@ -122,40 +169,13 @@ Todos los reportes son \textbf{agregados y anónimos}. No identifican personas.
 
     \item \textbf{Rechazaré cualquier solicitud de información individual}, incluso si proviene de:
           \begin{itemize}
-              \item Recursos Humanos (HR), salvo los casos excepcionales previstos en la Sección 4.
+              \item Recursos Humanos (HR), salvo los casos excepcionales previstos en la Sección~4.
               \item Gerencia o liderazgo técnico, cuando dicha solicitud viole la confidencialidad acordada.
               \item Entidades externas a la organización.
           \end{itemize}
-
-
 \end{itemize}
 
-\subsection{4. Estructura de reporte y rendición de cuentas}
-
-\begin{itemize}
-    \item \textbf{Reportaré exclusivamente a}:
-          \begin{itemize}
-              \item El Scrum Master del equipo.
-              \item El Chief Technology Officer (CTO) o Vicepresidente de Ingeniería (VP Engineering).
-          \end{itemize}
-
-    \item \textbf{NO reportaré directamente a}:
-          \begin{itemize}
-              \item Recursos Humanos (HR), excepto en las excepciones detalladas en la Sección 4.
-              \item Gerencia de producto o partes interesadas (\textit{stakeholders}) externos al área técnica.
-          \end{itemize}
-
-    \item \textbf{Los reportes serán completamente transparentes para el equipo}:
-          \begin{itemize}
-              \item Presentaré cualquier reporte al equipo antes de enviarlo a liderazgo técnico.
-              \item El equipo podrá solicitar ajustes si considera que se está violando la confidencialidad.
-              \item No generaré reportes paralelos ni comunicaciones ocultas.
-          \end{itemize}
-
-
-\end{itemize}
-
-\subsection{5. Excepciones legalmente justificadas}
+\subsection{4. Excepciones legalmente justificadas}
 
 Reconozco que existen situaciones excepcionales que requieren suspender la confidencialidad:
 
@@ -168,61 +188,15 @@ Reconozco que existen situaciones excepcionales que requieren suspender la confi
               \item Me limitaré estrictamente a los hechos pertinentes.
               \item Documentaré la excepción y notificaré al equipo siempre que sea legalmente permitido.
           \end{itemize}
-
-
 \end{itemize}
 
 Siempre que la ley lo permita, \textbf{informaré al equipo} cuando deba suspender la confidencialidad y explicaré las razones.
 
-\subsection{6. Protección de la seguridad psicológica del equipo}
+\subsection{5. Seguridad psicológica, auditoría y mejora continua}
 
-\begin{itemize}
-    \item \textbf{Mi prioridad principal} es proteger la seguridad psicológica del equipo: que cada persona pueda expresar vulnerabilidades sin temor a represalias.
+Me comprometo a proteger la seguridad psicológica del equipo, actuando con integridad y facilitando sin imponer. El equipo tiene derecho a revisar cualquier reporte antes de su difusión, auditar mi cumplimiento en cualquier momento y solicitar mi remoción inmediata si detecta una violación. Me comprometo a participar en auditorías semestrales independientes, recibir retroalimentación del equipo y mantener formación continua en ética y facilitación. Los fundamentos detallados de estas salvaguardas se describen en el Capítulo~\ref{chap:capitulo3}, Sección~\ref{sec:salvaguardas_eticas}.
 
-    \item \textbf{Actuaré con integridad} en todo momento:
-          \begin{itemize}
-              \item No participaré en rumores o conversaciones que expongan vulnerabilidades.
-              \item No utilizaré información confidencial para influir en decisiones que no sean estrictamente sociales.
-              \item Seré coherente entre lo que prometo y lo que hago.
-          \end{itemize}
-
-    \item \textbf{Facilitaré sin imponer}: mi rol no es “arreglar” al equipo, sino acompañarlo para que encuentre sus propias soluciones.
-
-
-\end{itemize}
-
-\subsection{7. Derecho de auditoría del equipo}
-
-\begin{itemize}
-    \item El equipo tiene derecho a:
-          \begin{itemize}
-              \item Revisar cualquier reporte que genere antes de compartirlo fuera del equipo.
-              \item Solicitar copias de todas mis comunicaciones relacionadas con mi rol.
-              \item Auditar mi cumplimiento de este acuerdo en cualquier momento.
-          \end{itemize}
-
-    \item Si el equipo detecta una violación:
-          \begin{itemize}
-              \item Puede solicitar mi remoción inmediata del rol.
-              \item Puede escalar la situación al CTO o a un auditor externo.
-              \item Puede suspender SocialScrum hasta restablecer la confianza.
-          \end{itemize}
-
-
-\end{itemize}
-
-\subsection{8. Compromiso de mejora continua}
-
-\begin{itemize}
-    \item Me comprometo a:
-          \begin{itemize}
-              \item Participar en auditorías semestrales realizadas por un auditor independiente.
-              \item Recibir retroalimentación del equipo sobre mi desempeño.
-              \item Mantener formación continua en ética, confidencialidad y facilitación.
-          \end{itemize}
-\end{itemize}
-
-\subsection{9. Consecuencias de la violación de este acuerdo}
+\subsection{6. Consecuencias de la violación de este acuerdo}
 
 Reconozco que, si incumplo alguno de los principios establecidos:
 
