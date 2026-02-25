@@ -11,6 +11,7 @@
 % --- Codificación y fuentes ---
 \usepackage[utf8]{inputenc}          % Codificación de entrada UTF-8
 \usepackage[T1]{fontenc}             % Codificación de fuentes
+\usepackage{lmodern}                 % Fuentes vectoriales Latin Modern (evita bitmap .pk)
 \usepackage[spanish]{babel}          % Idioma español
 \usepackage{csquotes}                % Manejo avanzado de comillas (para biblatex)
 
@@ -139,6 +140,21 @@
   colframe=black,
   fonttitle=\bfseries,
   title=Escenario aplicado,
+  breakable
+}
+
+\newtcolorbox{dialogo}{
+  colback=white,
+  colframe=socialblue!60,
+  boxrule=0pt,
+  leftrule=2.5pt,
+  sharp corners,
+  left=8pt,
+  right=4pt,
+  top=3pt,
+  bottom=3pt,
+  before skip=4pt,
+  after skip=4pt,
   breakable
 }
 
@@ -314,7 +330,7 @@
 \input{capitulos/capitulo5.tex}
 
 % --- Capítulo 6 ---
-\input{capitulos/capitulo6-nuevo.tex}
+\input{capitulos/capitulo6.tex}
 
 % --- Anexos ---
 \appendix

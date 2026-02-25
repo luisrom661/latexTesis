@@ -12,18 +12,18 @@ La presentación contextualiza el modelo, alinea expectativas y asegura el apoyo
 \begin{description}[nosep, leftmargin=1.2cm, style=nextline]
     \item[Contexto y justificación (10 min)] Compartir evidencia del impacto de la dinámica social en el rendimiento: datos propios del equipo (rotación, velocidad, defectos) y evidencia investigativa sobre deuda social~\cite{tamburri2013socialdebt, saeeda2024nontechnicaldebt}. El objetivo es que todos entiendan el ``porqué'' antes del ``cómo''.
 
-    \item[Explicación del modelo (15 min)] Presentar roles (Social Guide, SM, PO), eventos adaptados (Daily, Planning, Review, Retrospective con componentes sociales) y artefactos nuevos (Social Product Backlog, Health Score, Registro de Smells). Enfatizar que \textbf{SocialScrum NO agrega reuniones nuevas}: todo se integra a eventos existentes (Principio de No-Sobrecarga).
+    \item[Explicación del modelo (15 min)] Presentar roles (Social Guide, SM, PO), eventos adaptados (Daily, Planning, Review, Retrospective con componentes sociales) y artefactos nuevos (Social Product Backlog, Health Score, Registro de \textit{Smells}). Enfatizar que \textbf{SocialScrum NO agrega reuniones nuevas}: todo se integra a eventos existentes (Principio de No-Sobrecarga).
 
-    \item[Salvaguardas éticas (10 min)] Explicar las protecciones: confidencialidad absoluta de información individual, separación total entre Health Score y evaluaciones de desempeño, estructura de reporte (SG reporta a CTO/SM, nunca a HR), y derecho de auditoría del equipo sobre cualquier reporte externo.
+    \item[Salvaguardas éticas (10 min)] Explicar las protecciones: confidencialidad absoluta de información individual, separación total entre Health Score y evaluaciones de desempeño, estructura de reporte (SG reporta a CTO/SM, nunca a RR. HH.) y derecho de auditoría del equipo sobre cualquier reporte externo.
 
-    \item[Plan de implementación (10 min)] Sprint~1: puesta en marcha con un smell de baja complejidad. Sprint~2: ajustes según lo aprendido. Sprint~3: evaluación formal. Métricas de éxito: HS aumenta $\geq 1$ punto, se mitiga parcialmente $\geq 1$ smell crítico, velocidad no cae $>20\%$.
+    \item[Plan de implementación (10 min)] Sprint~1: puesta en marcha con un \textit{smell} de baja complejidad. Sprint~2: ajustes según lo aprendido. Sprint~3: evaluación formal. Métricas de éxito: HS aumenta $\geq 1$ punto, se mitiga parcialmente $\geq 1$ \textit{smell} crítico, velocidad no cae $>20~\%$.
 \end{description}
 
 \noindent\textbf{Pre-requisito:} el equipo debe haber revisado previamente las secciones 3.2--3.3 del documento (Modelo conceptual y Fundamentos). Si no es viable: expandir a 90~min o dividir en dos sesiones de 45~min con 1~semana de diferencia.
 
 \section{Programa de capacitación del Social Guide}
 
-La Sección~\ref{sec:programa-capacitacion-sg} del Capítulo~\ref{chap:capitulo4} presenta un resumen del programa de capacitación con la tabla de fases y criterios de aprobación. A continuación se detalla el contenido completo de cada fase.
+La Sección~\ref{sec:programa-capacitacion-sg} del Capítulo~\ref{chap:capitulo4} presenta un resumen del programa de capacitación con la Tabla~\ref{tab:capacitacion-sg} de fases y criterios de aprobación. A continuación se detalla el contenido completo de cada fase.
 
 \begingroup
 \scriptsize
@@ -38,30 +38,30 @@ La Sección~\ref{sec:programa-capacitacion-sg} del Capítulo~\ref{chap:capitulo4
     >{\RaggedRight\hspace{0pt}}p{7cm}
     >{\RaggedRight\hspace{0pt}}p{4.5cm}
     }
-    \caption{Programa de capacitación del Social Guide.} \label{tab:capacitacion-sg}                                          \\
+    \caption{Programa de capacitación del Social Guide.} \label{tab:capacitacion-sg}                                           \\
     \toprule
-    \textbf{Fase}                                               & \textbf{Horas} & \textbf{Contenido} & \textbf{Evaluación}   \\
+    \textbf{Fase}                                               & \textbf{Horas} & \textbf{Contenido} & \textbf{Evaluación}    \\
     \midrule \endfirsthead
     \bottomrule \endlastfoot
     1. Fundamentos teóricos (Sem.\ 1--2)                        & 8              &
-    S1: \acrfull{tad} (operación en equipos, checklist).
+    S1: \acrfull{tad} (operación en equipos, \textit{checklist}).
     S2: Confianza Mayer (diagnóstico, entrevista).
     S3: \gls{community-smells} (catálogo, registro).
-    S4: Valores Scrum $\times$ smells.                          &
-    Quiz 30~min, $\geq 80\%$                                                                                                  \\ \midrule
+    S4: Valores Scrum $\times$ \textit{smells}.                 &
+    Quiz 30~min, $\geq 80~\%$                                                                                                  \\ \midrule
 
     2. Facilitación y mediación (Sem.\ 3--4)                    & 12             &
     S1--2: Retrospectivas sociales (protocolo 4 fases).
     S3--4: CNV (observación, sentimientos, necesidades, peticiones).
     S5--6: Conversaciones difíciles (validación, legitimación). &
-    Retrospectiva observada por SM + evaluador; rúbrica $\geq 3/5$ en seguridad psicológica, preguntas generativas y síntesis \\ \midrule
+    Retrospectiva observada por SM + evaluador; rúbrica $\geq 3/5$ en seguridad psicológica, preguntas generativas y síntesis. \\ \midrule
 
     3. Medición y análisis (Sem.\ 5--6)                         & 8              &
     S1: Health Score (dimensiones, cálculo).
     S2: Instrumentos (Likert, entrevistas, SNA).
     S3: Análisis cualitativo (codificación).
     S4: Generación de reporte.                                  &
-    Analizar 10 encuestas; producir HS + 3 smells detectados                                                                  \\ \midrule
+    Analizar 10 encuestas; producir HS + 3 \textit{smells} detectados.                                                         \\ \midrule
 
     4. Ética y salvaguardas (Sem.\ 2--4, intercalado)           & 12             &
     S1: Confidencialidad vs.\ reportable.
@@ -70,13 +70,13 @@ La Sección~\ref{sec:programa-capacitacion-sg} del Capítulo~\ref{chap:capitulo4
     S4: Teatro Social.
     S5: Casos éticos complejos (\textit{role-plays}).
     S6: Auditoría y responsabilidad.                            &
-    Cuestionario ético (50 preguntas); \textit{role-play} observado                                                           \\
+    Cuestionario ético (50 preguntas); \textit{role-play} observado.                                                           \\
 \end{longtable}
 \endgroup
 
 \subsection{Evaluación final (semana 7)}
 
-Quiz teórico (60~min, $\geq 80\%$), retrospectiva simulada observada, y caso de análisis (HS + diagnóstico + plan). Umbral: todo $\geq 3/5$.
+Quiz teórico (60~min, $\geq 80~\%$), retrospectiva simulada observada, y caso de análisis (HS + diagnóstico + plan). Umbral: todo $\geq 3/5$.
 
 \subsection{Seguimiento post-capacitación}
 
@@ -131,7 +131,7 @@ El seguimiento es progresivo: supervisión semanal durante los primeros 2~meses,
     \bottomrule \endlastfoot
     Conflicto entre Ana y Carlos en módulo de pagos & Alta           & Bloqueo de funcionalidad crítica & Sesión de alineación previa al trabajo conjunto.             \\ \midrule
     Dependencia única de Miguel en backend          & Media          & Retraso significativo si ausente & \gls{pair-programming} 2~h/día con Laura para transferencia. \\ \midrule
-    Fatiga generalizada (HS 5,8)                    & Alta           & Reducción de velocidad 20--30\%  & Reducción del compromiso del Sprint a 38 puntos.             \\
+    Fatiga generalizada (HS 5,8)                    & Alta           & Reducción de velocidad 20--30~\% & Reducción del compromiso del Sprint a 38 puntos.             \\
 \end{longtable}
 \endgroup
 
@@ -168,20 +168,20 @@ El seguimiento es progresivo: supervisión semanal durante los primeros 2~meses,
 \begin{description}[nosep, leftmargin=1.2cm, style=nextline]
     \item[Fase 1: Preparación del espacio (10 min)] Registro emocional (``En una palabra, ¿cómo te sientes?''), recordatorio de acuerdos (confidencialidad, no culpa, presunción de buena fe, derecho a no participar) y verificación de seguridad.
 
-    \item[Fase 2: Recolección de datos] Cuatro cuadrantes sociales (colaboración positiva/problemática, comunicación efectiva/deficiente); cada persona escribe notas basadas en eventos concretos. Alternativa: línea de tiempo emocional del Sprint.
+    \item[Fase 2: Recolección de datos] Se utilizan cuatro cuadrantes sociales (colaboración positiva/problemática, comunicación efectiva/deficiente); cada persona escribe notas basadas en eventos concretos. Alternativa: línea de tiempo emocional del Sprint.
 
-    \item[Fase 3: Análisis de patrones] Selección de 2--3 temas prioritarios por votación por puntos. Análisis de causa raíz con \gls{five-whys} adaptado a contexto social. Redirigir señalamientos hacia condiciones sistémicas. Mapeo a \gls{community-smells} del catálogo.
+    \item[Fase 3: Análisis de patrones] Selección de 2--3 temas prioritarios por votación por puntos. Análisis de causa raíz con \gls{five-whys} adaptado al contexto social. Redirigir señalamientos hacia condiciones sistémicas. Mapeo a \gls{community-smells} del catálogo.
 
-    \item[Fase 4: Generación de compromisos] Acciones SMART, estimación en SSP, priorización por severidad/esfuerzo. Formalización como ítems del Social Product Backlog (título, smell, acción, responsable, métrica de éxito, estimación).
+    \item[Fase 4: Generación de compromisos] Acciones SMART, estimación en SSP, priorización por severidad/esfuerzo. Formalización como ítems del Social Product Backlog (título, \textit{smell}, acción, responsable, métrica de éxito, estimación).
 \end{description}
 
 \subsubsection{Cierre y documentación}
 
-Resumen de compromisos (2~min), \textit{check-out} emocional (3~min), agradecimiento (1~min). En 24~horas el SG publica resumen interno (temas, causas raíz, acciones); los \textit{stakeholders} solo reciben información de alto nivel.
+Resumen de compromisos (2~min), \textit{check-out} emocional (3~min), agradecimiento (1~min). En 24~horas, el SG publica un resumen interno (temas, causas raíz, acciones); los \textit{stakeholders} solo reciben información de alto nivel.
 
 \subsubsection{Frecuencia}
 
-Dos modelos: (1)~\textbf{integrado} ---cada Retrospective incluye componentes técnicos y sociales (90--120~min); (2)~\textbf{alternado} ---Sprints pares técnicos, impares sociales. Equipos con Health Score $<6$ se benefician del modelo integrado.
+Dos modelos: (1)~\textbf{integrado} ---cada Retrospective incluye componentes técnicos y sociales (90--120~min); (2)~\textbf{alternado} ---Sprints pares para temas técnicos, impares para temas sociales. Equipos con un Health Score $<6$ se benefician del modelo integrado.
 
 \subsubsection{Manejo de situaciones difíciles}
 

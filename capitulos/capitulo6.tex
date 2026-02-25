@@ -14,111 +14,177 @@
 \makeatother
 \label{chap:capitulo6}
 
+\setlength{\parindent}{0pt}
+
+En este capítulo se presentan las conclusiones de la investigación, las limitaciones identificadas, las publicaciones derivadas, las recomendaciones, las líneas de trabajo futuro y una reflexión final.
+
+% ============================================================
+\section{Cumplimiento de los objetivos de investigación}
+\label{sec:analisis-objetivos-investigacion}
+% ============================================================
+
+De manera general, la investigación logró diseñar y validar conceptualmente el modelo propuesto, cumpliendo satisfactoriamente con los hitos trazados. La Tabla~\ref{tab:cumplimiento-objetivos} sintetiza el grado de cumplimiento de cada objetivo planteado en el Capítulo~\ref{chap:capitulo1}.
+
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+
+\begin{longtable}[H]{
+    >{\RaggedRight\hspace{0pt}}p{4.3cm} % Objetivo
+    >{\RaggedRight\hspace{0pt}}p{5.4cm} % Resultado
+    >{\RaggedRight\hspace{0pt}}p{5.3cm} % Evidencia
+    }
+
+    \caption{Cumplimiento de los objetivos de investigación}
+    \label{tab:cumplimiento-objetivos}                                                                                                                                                                                                                                                                                                                                                        \\
+
+    \toprule
+    \textbf{Objetivo} & \textbf{Resultado}                                                                                                                                                                                                                                                                                                                               & \textbf{Evidencia} \\
+    \midrule
+    \endfirsthead
+
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                                                                   \\
+    \toprule
+    \textbf{Objetivo} & \textbf{Resultado}                                                                                                                                                                                                                                                                                                                               & \textbf{Evidencia} \\
+    \midrule
+    \endhead
+
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                                                                           \\
+    \endfoot
+
+    \bottomrule
+    \endlastfoot
+
+    \textbf{General:} Definir un proceso ágil para gestionar la deuda social, basado en Scrum.
+                      & Cumplido. Se diseñó el modelo SocialScrum como extensión socio-técnica de Scrum.
+                      & Capítulo~\ref{chap:capitulo3} y Capítulo~\ref{chap:capitulo4}. Validación conceptual en Capítulo~\ref{chap:capitulo5}.                                                                                                                                                                                                                                                \\
+
+    \textbf{OE1:} Identificar elementos fundamentales mediante análisis de la literatura.
+                      & Cumplido. Se identificaron y categorizaron \gls{community-smells} en cuatro categorías, se documentó su impacto en métricas técnicas y se evidenció la ausencia de mecanismos explícitos en marcos ágiles.
+                      & RSL presentada en Capítulo~\ref{chap:capitulo2} y Anexo~\ref{anexo:a}.                                                                                                                                                                                                                                                                                                \\
+
+    \textbf{OE2:} Construir un proceso basado en Scrum incorporando los elementos del OE1.
+                      & Cumplido. Se definieron fundamentos conceptuales (Capítulo~\ref{chap:capitulo3}) y operacionalización completa (Capítulo~\ref{chap:capitulo4}): rol del Social Guide, Health Score, artefactos sociales, SSP, eventos adaptados y salvaguardas éticas.
+                      & Capítulo~\ref{chap:capitulo3} y Capítulo~\ref{chap:capitulo4}. Simulación en Anexo~\ref{anexo:simulacion-socialscrum}.                                                                                                                                                                                                                                                \\
+
+    \textbf{OE3:} Evaluar el proceso mediante juicio de expertos y coeficiente estadístico.
+                      & Cumplido. Se evaluó con 6 expertos usando $\kappa_{\text{free}}$ de Randolph y se identificaron oportunidades de mejora. Los resultados mostraron acuerdo moderado a casi perfecto en claridad e idoneidad, pero completitud (P4, $\kappa_{\text{free}} = 0{,}08$) y factibilidad (P11, $\kappa_{\text{free}} = 0{,}00$) no alcanzaron consenso.
+                      & Capítulo~\ref{chap:capitulo5}.                                                                                                                                                                                                                                                                                                                                        \\
+\end{longtable}
+\endgroup
+
+% ============================================================
 \section{Conclusiones}
+\label{sec:conclusiones}
+% ============================================================
 
-Esta investigación propuso SocialScrum, un marco metodológico que extiende Scrum para gestionar la deuda social en equipos de desarrollo de software. A continuación se presentan las conclusiones principales, organizadas según los objetivos específicos planteados.
+A partir del trabajo realizado, se presentan las siguientes conclusiones:
 
-\subsection{Sobre la caracterización de la deuda social}
+\begin{enumerate}
+    \item \textbf{La deuda social es un problema real y documentado en equipos ágiles, pero insuficientemente abordado.} La RSL confirmó que los \gls{community-smells} afectan la productividad, la calidad del software y el bienestar del equipo, y que los marcos ágiles existentes carecen de mecanismos explícitos para gestionarlos.
 
-El análisis de literatura permitió identificar y categorizar los \gls{community-smells} más prevalentes en equipos de desarrollo ágil. Se encontró que:
+    \item \textbf{El modelo SocialScrum demuestra que es conceptualmente posible integrar la gestión de la deuda social en Scrum.} El modelo adapta eventos, artefactos y roles de Scrum para incorporar una dimensión social. La cobertura de los 33 indicadores de AgilityPRO respalda su alineación conceptual con los principios ágiles, aunque dicha verificación fue realizada por los propios diseñadores del artefacto.
 
-\begin{itemize}
-    \item Los \gls{community-smells} se agrupan en cuatro categorías: comunicación, conocimiento, relacional y organizacional.
-    \item Existe una correlación documentada entre smells sociales y métricas técnicas negativas (aumento de defectos, reducción de velocidad, rotación de personal).
-    \item Los marcos ágiles existentes, incluido Scrum, carecen de mecanismos explícitos para detectar y mitigar estos problemas de manera sistemática.
-\end{itemize}
+    \item \textbf{El rol de Social Guide es una contribución diferenciadora cuya viabilidad operativa enfrenta barreras significativas.} Su perfil híbrido (psicología organizacional + conocimiento técnico) fue validado como pertinente por los expertos (P9: $Mdn = 5{,}0$), pero resulta poco común en los mercados laborales, lo cual representa un desafío de adopción en el contexto actual.
 
-\subsection{Sobre el diseño del marco SocialScrum}
+    \item \textbf{Las métricas sociales propuestas constituyen aproximaciones heurísticas que requieren validación psicométrica.} Tanto el Health Score como los Social Story Points representan simplificaciones conscientes de fenómenos complejos; su validez de constructo y confiabilidad no han sido demostradas.
 
-El diseño de SocialScrum logró integrar la gestión de la deuda social en la estructura existente de Scrum sin agregar eventos adicionales, respetando el Principio de No-Sobrecarga. Las contribuciones principales incluyen:
+    \item \textbf{La validación por juicio de expertos respalda parcialmente la viabilidad conceptual, pero no permite extraer conclusiones categóricas.} La factibilidad de implementación (P11, $\kappa_{\text{free}} = 0{,}00$) y la completitud (P4, $\kappa_{\text{free}} = 0{,}08$) no alcanzaron consenso estadístico. SocialScrum es, en su estado actual, un modelo exploratorio que requiere validación empírica antes de considerarse apto para intervención en equipos reales.
 
-\begin{itemize}
-    \item \textbf{Rol del Social Guide}: Definición de un perfil híbrido (competencias psicológicas + conocimiento técnico) con gobernanza clara que protege la confidencialidad.
-    \item \textbf{Health Score}: Métrica compuesta de cinco dimensiones (basadas en valores Scrum) que permite cuantificar y monitorear la salud social.
-    \item \textbf{Artefactos sociales}: Social Product Backlog, Registro de Smells y Dashboard de Health Score para documentar y gestionar la deuda social.
-    \item \textbf{Framework de priorización}: Modelo de triángulo que integra valor de negocio, urgencia técnica y salud social en decisiones de Sprint Planning.
-    \item \textbf{Sistema de estimación SSP}: Social Story Points para dimensionar esfuerzo de intervenciones no técnicas.
-    \item \textbf{Salvaguardas éticas}: Protocolos de confidencialidad, auditoría y rendición de cuentas que protegen a los miembros del equipo.
-\end{itemize}
+    \item \textbf{Las salvaguardas éticas son requisitos estructurales del modelo, no recomendaciones opcionales.} Sin confidencialidad, consentimiento informado y derecho de auditoría, SocialScrum podría convertirse en un instrumento de vigilancia organizacional.
+\end{enumerate}
 
-\subsection{Sobre la viabilidad práctica}
-
-El caso de estudio simulado (3 Sprints) demostró que SocialScrum es operativamente viable:
-
-\begin{itemize}
-    \item La sobrecarga de tiempo se mantuvo dentro del 10-15\% adicional por evento.
-    \item El Health Score sirve como indicador útil para guiar decisiones de priorización.
-    \item Las estrategias de mitigación del catálogo proporcionan puntos de partida concretos para intervenciones.
-\end{itemize}
-
-Sin embargo, al ser un caso simulado, estos resultados requieren validación empírica en equipos reales.
-
+% ============================================================
 \section{Limitaciones del trabajo}
-
-Esta investigación presenta las siguientes limitaciones que deben considerarse al interpretar los resultados:
+\label{sec:limitaciones}
+% ============================================================
 
 \begin{enumerate}
-    \item \textbf{Ausencia de validación empírica}: SocialScrum no ha sido implementado en equipos de desarrollo reales. Las conclusiones sobre viabilidad se basan en análisis teórico y simulación.
+    \item \textbf{Ausencia de validación empírica:} SocialScrum no ha sido implementado en equipos reales. La investigación no logró ejecutar la intervención empírica originalmente planteada (Investigación-Acción) y transitó hacia \gls{dsr} en fase \textit{ex ante} \cite{hevner2004designscience, peffers2007dsrm, wieringa2014dsr}, lo que confina todas las conclusiones al plano conceptual.
 
-    \item \textbf{Dependencia del contexto}: El marco asume equipos con cultura organizacional mínimamente abierta al cambio. En contextos altamente jerárquicos o resistentes, la adopción podría ser inviable.
+    \item \textbf{Instrumentos de medición no validados psicométricamente:} Las escalas del Health Score no han sido sometidas a pruebas de validez de constructo ni de confiabilidad test-retest \cite{nunnally1994psychometric}. Al ser el eje sobre el cual pivotan las decisiones de priorización e intervención del modelo, esto representa una limitación seria.
 
-    \item \textbf{Rol del Social Guide}: La efectividad del marco depende de encontrar personas con el perfil híbrido requerido, lo cual puede ser difícil en mercados laborales específicos.
+    \item \textbf{Perfil del Social Guide y composición del panel de expertos:} La efectividad del modelo depende de un perfil profesional poco común en el mercado laboral actual que combina psicología organizacional y conocimiento técnico. Además, el panel de validación estuvo conformado exclusivamente por ingenieros de sistemas ($N = 6$), sin incluir expertos en psicología organizacional o ciencias sociales que validaran las dimensiones psicológicas del modelo.
 
-    \item \textbf{Instrumentos de medición}: Las escalas de Health Score no han sido validadas psicométricamente (validez de constructo, confiabilidad test-retest).
+    \item \textbf{Parámetros operativos y cuantitativos no calibrados empíricamente:} Los porcentajes de capacidad social (10--20~\%), las zonas de respuesta del Health Score y los umbrales de rotación constituyen decisiones de diseño, no estándares empíricos. Su calibración para distintos contextos requiere estudios piloto con métricas longitudinales.
 
-    \item \textbf{Sesgo cultural}: El marco se desarrolló desde una perspectiva latinoamericana y podría requerir adaptaciones para otros contextos culturales.
+    \item \textbf{Autoevaluación de agilidad (AgilityPRO):} La verificación de cobertura de los 33 indicadores fue realizada por los propios diseñadores del artefacto, lo que constituye un conflicto de interés evaluativo. Su confirmación requiere auditoría empírica independiente.
+
+    \item \textbf{Sensibilidad del coeficiente de concordancia:} Con $k = 5$ categorías y $N = 6$ evaluadores, el $\kappa_{\text{free}}$ tiende a producir valores conservadores ($P_e = 0{,}20$). La aplicación de métricas complementarias como el coeficiente $W$ de Kendall \cite{Kendall1948} con muestras más amplias fortalecería la evidencia.
+
+    \item \textbf{Ausencia de un modelo financiero de Retorno de Inversión (ROI):} La reducción de capacidad técnica propuesta (10--20~\% del Sprint) carece de un análisis económico que demuestre su viabilidad financiera frente a las presiones de Time-to-Market.
 \end{enumerate}
 
+% ============================================================
+\section{Publicaciones}
+\label{sec:publicaciones}
+% ============================================================
+
+Como resultado del proceso de investigación, se generaron las siguientes producciones académicas:
+
+\begin{enumerate}
+    \item \textbf{Revisión sistemática de la literatura (RSL):} Se elaboró una RSL sobre la gestión de la deuda social en el desarrollo de software ágil, la cual sintetiza el estado del arte y fundamenta la propuesta de SocialScrum (ver Anexo~\ref{anexo:a}).
+
+    \item \textbf{Artículo publicado en la revista AmiTIC:} Se publicó un artículo titulado \textit{``Social Debt in Agile Software Development''} en la revista AmiTIC, el cual presenta los resultados preliminares de la investigación y la propuesta del modelo SocialScrum (ver Anexo~\ref{anexo:b}).
+\end{enumerate}
+
+% ============================================================
 \section{Recomendaciones}
+\label{sec:recomendaciones}
+% ============================================================
 
-\subsection{Para organizaciones que consideren adoptar SocialScrum}
-
-\begin{enumerate}
-    \item \textbf{Evaluar madurez organizacional}: SocialScrum requiere apertura a discutir temas sociales. Organizaciones con cultura de ``solo resultados'' pueden necesitar trabajo previo de cambio cultural.
-
-    \item \textbf{Comenzar con piloto pequeño}: Implementar en un equipo dispuesto durante 3-6 Sprints antes de escalar.
-
-    \item \textbf{Invertir en el Social Guide}: No asignar el rol a alguien sin formación. La capacitación de 40 horas propuesta es un mínimo.
-
-    \item \textbf{Proteger la confidencialidad}: Establecer desde el inicio la separación entre datos del Social Guide y evaluaciones de HR.
-
-    \item \textbf{Medir y ajustar}: Usar el Health Score como guía, no como objetivo. Adaptar el marco al contexto específico.
-\end{enumerate}
-
-\subsection{Para investigadores}
+\subsection{Para organizaciones}
 
 \begin{enumerate}
-    \item \textbf{Validar empíricamente}: Realizar estudios de caso múltiples con equipos reales para evaluar efectividad.
+    \item \textbf{Evaluar la madurez organizacional} antes de adoptar SocialScrum, verificando los prerrequisitos definidos en el modelo (compromiso ejecutivo, cultura saludable, autonomía del equipo, disponibilidad de un Social Guide).
 
-    \item \textbf{Desarrollar instrumentos validados}: Construir y validar psicométricamente escalas de Health Score y detección de smells.
+    \item \textbf{Comenzar con un piloto acotado} en un solo equipo durante 3 a 6 Sprints, incluyendo el Sprint~0 preparatorio para establecer la línea base del Health Score.
 
-    \item \textbf{Estudiar factores contextuales}: Investigar cómo varía la efectividad de SocialScrum según tamaño de equipo, industria, cultura nacional, etc.
+    \item \textbf{Proteger la confidencialidad desde el inicio}, estableciendo formalmente la separación entre los datos del Social Guide y los procesos de evaluación de desempeño de Recursos Humanos.
 
-    \item \textbf{Comparar con alternativas}: Evaluar SocialScrum contra otras intervenciones de salud organizacional (coaching, team building tradicional, etc.).
+    \item \textbf{Utilizar el Health Score como guía, no como objetivo}, para orientar decisiones de priorización sin generar presión artificial sobre el equipo.
+    \item
+    \item \textbf{Implementar estrategias de mitigación para cubrir el rol de Social Guide}, especialmente en fases tempranas de adopción. Dado que el perfil híbrido requerido es poco común, se recomienda recurrir a consultores externos de recursos humanos o psicólogos organizacionales. Estos profesionales pueden acompañar y capacitar a un Scrum Master experimentado en las competencias sociales requeridas, reduciendo así la barrera de entrada al rol.
 \end{enumerate}
 
+\subsection{Para la comunidad académica}
+
+\begin{enumerate}
+    \item \textbf{Priorizar la validación empírica} mediante implementaciones piloto en organizaciones reales, con diferentes tamaños de equipo, industrias y contextos culturales.
+
+    \item \textbf{Desarrollar y validar psicométricamente los instrumentos de medición} (Health Score, detección de \gls{community-smells}), incluyendo validez de constructo, confiabilidad y sensibilidad al cambio.
+
+    \item \textbf{Conformar paneles de validación multidisciplinarios} que incluyan psicólogos organizacionales y especialistas en ciencias sociales, además de ingenieros de software.
+\end{enumerate}
+
+% ============================================================
 \section{Trabajos futuros}
-
-A partir de esta investigación, se identifican las siguientes líneas de trabajo futuro:
+\label{sec:trabajos-futuros}
+% ============================================================
 
 \begin{enumerate}
-    \item \textbf{Validación empírica}: Implementar SocialScrum en 3-5 equipos de desarrollo durante 6-12 meses, midiendo Health Score, métricas técnicas (velocidad, defectos, rotación) y satisfacción del equipo.
+    \item \textbf{Validación empírica mediante Investigación-Acción:} Ejecutar ciclos completos \cite{baskerville1999actionresearch} en 3 a 5 equipos durante 6 a 12 meses, midiendo la evolución del Health Score, métricas técnicas y satisfacción del equipo.
 
-    \item \textbf{Desarrollo de herramientas}: Crear software de código abierto que automatice la recolección del Health Score, genere dashboards y facilite el análisis de SNA.
+    \item \textbf{Validación psicométrica del Health Score:} Someter las escalas a análisis factorial, pruebas de confiabilidad (alfa de Cronbach \cite{cronbach1951coefficient}, test-retest \cite{nunnally1994psychometric}) y estudios de sensibilidad al cambio.
 
-    \item \textbf{Formación de Social Guides}: Diseñar y validar un programa de certificación para Social Guides, incluyendo currículo, evaluación de competencias y ética profesional.
+    \item \textbf{Desarrollo de herramientas tecnológicas:} Crear software de código abierto que automatice la recolección del Health Score y facilite el \gls{sna} a partir de herramientas como Slack, GitHub o Jira.
 
-    \item \textbf{Integración con otros marcos}: Explorar la compatibilidad de SocialScrum con SAFe, LeSS y otros marcos de escalado ágil.
+    \item \textbf{Programa de formación para Social Guides:} Diseñar un programa de capacitación con perfiles progresivos (básico, intermedio, avanzado) que reduzca la barrera de entrada al rol.
 
-    \item \textbf{Extensión a equipos remotos}: Adaptar los protocolos de observación y detección de smells para equipos completamente distribuidos.
+    \item \textbf{Integración con marcos de escalado ágil:} Explorar la compatibilidad de SocialScrum con SAFe \cite{SafeFramework}, LeSS \cite{larman2016less} o Nexus \cite{nexusguide} para contextos multi-equipo.
 
-    \item \textbf{Automatización de detección}: Desarrollar algoritmos de machine learning que detecten \gls{community-smells} automáticamente a partir de datos de comunicación (Slack, GitHub, Jira).
+    \item \textbf{Modelo financiero de ROI:} Construir un modelo que vincule cuantitativamente la inversión en salud social con la recuperación económica derivada de la prevención de la rotación de personal, reducción de defectos y mejora de productividad.
 \end{enumerate}
 
+% ============================================================
 \section{Reflexión final}
+\label{sec:reflexion-final}
+% ============================================================
 
-La deuda social en equipos de desarrollo de software es un problema real con consecuencias medibles. Los conflictos interpersonales, la falta de comunicación, el aislamiento y las dinámicas tóxicas no son ``problemas de recursos humanos'' desconectados de la ingeniería; son impedimentos que afectan directamente la capacidad del equipo de entregar software de calidad.
+SocialScrum nació de una observación simple pero frecuentemente ignorada: las personas no son recursos intercambiables, y la calidad de sus relaciones determina, en gran medida, la calidad de lo que producen. Esta investigación propuso un camino para hacer visible y gestionable la deuda social, utilizando el mismo lenguaje que los equipos ágiles ya conocen: Sprints, backlogs, retrospectivas e inspección continua. No se pretendió inventar una nueva metodología, sino extender una existente para que también proteja a las personas que la ejecutan.
 
-SocialScrum representa un intento de abordar este problema de manera sistemática, integrando la gestión de la deuda social en el flujo de trabajo ágil existente. No pretende ser la solución definitiva, sino un punto de partida para que equipos y organizaciones tomen en serio la salud social como factor de productividad y sostenibilidad.
-
-El éxito de SocialScrum, como el de cualquier marco, dependerá de la voluntad genuina de las organizaciones de invertir en el bienestar de sus equipos, no como gesto simbólico, sino como estrategia de negocio. Si este trabajo contribuye a esa conversación, habrá cumplido su propósito.
+SocialScrum, en su estado actual, es un modelo exploratorio que sienta bases conceptuales para investigación futura. El camino que queda por recorrer ---validación empírica, calibración de instrumentos, construcción de un caso financiero--- es tan importante como el recorrido hasta aquí. Si este trabajo contribuye a que al menos un equipo de desarrollo se detenga a reflexionar sobre la salud de sus relaciones con la misma seriedad con que revisa la calidad de su código, habrá cumplido su propósito.

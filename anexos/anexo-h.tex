@@ -5,7 +5,7 @@
 
 \section{Matriz de 18 escenarios de priorización}
 
-La matriz presenta las combinaciones más comunes de valores alto (7--10), medio (4--6) y bajo (1--3) en cada dimensión, junto con la decisión típica. Sirve como guía inicial, no como regla definitiva; cada equipo desarrolla su propia interpretación basada en experiencia acumulada.
+La matriz presenta las combinaciones más comunes de valores altos (7--10), medios (4--6) y bajos (1--3) en cada dimensión, junto con la decisión típica. Sirve como guía inicial, no como regla definitiva; cada equipo desarrolla su propia interpretación basada en su experiencia acumulada.
 
 \begingroup
 \scriptsize
@@ -14,7 +14,7 @@ La matriz presenta las combinaciones más comunes de valores alto (7--10), medio
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
+\begin{longtable}{
     >{\Centering\hspace{0pt}}p{0.8cm}     % Col 1: #
     >{\Centering\hspace{0pt}}p{1.5cm}     % Col 2: Valor
     >{\Centering\hspace{0pt}}p{1.5cm}     % Col 3: Técnica
@@ -24,52 +24,52 @@ La matriz presenta las combinaciones más comunes de valores alto (7--10), medio
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-    \caption{Matriz de 18 escenarios de priorización} \label{tab:matriz-priorizacion}                                                                               \\
+    \caption{Matriz de 18 escenarios de priorización} \label{tab:matriz-priorizacion}                                                                                   \\
     \toprule
-    \textbf{\#} & \textbf{Valor} & \textbf{Técnica} & \textbf{Social} & \textbf{Prioridad}  & \textbf{Decisión típica}                                              \\
+    \textbf{\#} & \textbf{Valor} & \textbf{Técnica} & \textbf{Social} & \textbf{Prioridad}  & \textbf{Decisión típica}                                                  \\
     \midrule
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{6}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                         \\
+    \multicolumn{6}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                             \\
     \toprule
-    \textbf{\#} & \textbf{Valor} & \textbf{Técnica} & \textbf{Social} & \textbf{Prioridad}  & \textbf{Decisión típica}                                              \\
+    \textbf{\#} & \textbf{Valor} & \textbf{Técnica} & \textbf{Social} & \textbf{Prioridad}  & \textbf{Decisión típica}                                                  \\
     \midrule
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
     \midrule
-    \multicolumn{6}{r}{\textit{Continúa en la siguiente página...}}                                                                                                 \\
+    \multicolumn{6}{r}{\textit{Continúa en la siguiente página...}}                                                                                                     \\
     \endfoot
 
     % --- 4. PIE FINAL ---
     \bottomrule
     \endlastfoot
 
-    1           & Alto           & Alto             & Bajo            & \textbf{Máxima}     & Entregar inmediatamente. Equipo sano puede absorber complejidad.      \\
-    2           & Alto           & Bajo             & Alto            & \textbf{Alta}       & Mitigar lo social primero. Equipo en crisis no entrega calidad.       \\
-    3           & Bajo           & Alto             & Alto            & \textbf{Alta}       & Resolver ambos en paralelo. Urgencia técnica y social no compiten.    \\
-    4           & Alto           & Alto             & Alto            & \textbf{Escalar}    & Crisis total. Escalar a CTO para decisión organizacional.             \\
-    5           & Alto           & Medio            & Medio           & \textbf{Alta}       & Entregar con precaución. Monitorear la salud durante implementación.  \\
-    6           & Medio          & Alto             & Medio           & \textbf{Alta}       & Resolver lo técnico primero. La deuda técnica bloquea el progreso.    \\
-    7           & Medio          & Medio            & Alto            & \textbf{Alta}       & Resolver lo social primero. Equipo en crisis contamina todo lo demás. \\
-    8           & Alto           & Bajo             & Alto            & \textbf{Media-Alta} & Balancear: MVP del feature más intervención social.                   \\
-    9           & Bajo           & Alto             & Bajo            & \textbf{Media}      & Resolver lo técnico. Importante aunque no genere valor inmediato.     \\
-    10          & Bajo           & Bajo             & Alto            & \textbf{Media}      & Resolver lo social. La salud del equipo es un prerrequisito.          \\
-    11          & Alto           & Alto             & Bajo            & \textbf{Media-Alta} & Entregar. Equipo sano, aprovechar la capacidad disponible.            \\
-    12          & Bajo           & Bajo             & Bajo            & \textbf{Baja}       & Posponer. No hay urgencias ni impacto inmediato.                      \\
-    13          & Alto           & Bajo             & Bajo            & \textbf{Alta}       & Entregar. Feature valiosa sin impedimentos relevantes.                \\
-    14          & Bajo           & Alto             & Bajo            & \textbf{Media}      & Resolver lo técnico. Deuda urgente aunque el valor sea bajo.          \\
-    15          & Bajo           & Bajo             & Alto            & \textbf{Media}      & Resolver lo social. El equipo necesita atención.                      \\
-    16          & Medio          & Medio            & Medio           & \textbf{Media}      & Caso por caso. Todo es moderado; decidir según el contexto.           \\
-    17          & Alto           & Bajo             & Alto            & \textbf{Alta}       & Feature y social en paralelo. MVP mientras se atiende al equipo.      \\
-    18          & Alto           & Alto             & Bajo            & \textbf{Alta}       & Resolver lo técnico primero. Bug crítico bloquea, equipo sano.        \\
+    1           & Alto           & Alto             & Bajo            & \textbf{Máxima}     & Entregar inmediatamente. El equipo sano puede absorber la complejidad.    \\
+    2           & Alto           & Bajo             & Alto            & \textbf{Alta}       & Mitigar lo social primero. Un equipo en crisis no entrega calidad.        \\
+    3           & Bajo           & Alto             & Alto            & \textbf{Alta}       & Resolver ambos en paralelo. La urgencia técnica y social no compiten.     \\
+    4           & Alto           & Alto             & Alto            & \textbf{Escalar}    & Crisis total. Escalar al CTO para una decisión organizacional.            \\
+    5           & Alto           & Medio            & Medio           & \textbf{Alta}       & Entregar con precaución. Monitorear la salud durante la implementación.   \\
+    6           & Medio          & Alto             & Medio           & \textbf{Alta}       & Resolver lo técnico primero. La deuda técnica bloquea el progreso.        \\
+    7           & Medio          & Medio            & Alto            & \textbf{Alta}       & Resolver lo social primero. Un equipo en crisis contamina todo lo demás.  \\
+    8           & Alto           & Bajo             & Alto            & \textbf{Media-Alta} & Balancear: MVP de la \textit{feature} más intervención social.            \\
+    9           & Bajo           & Alto             & Bajo            & \textbf{Media}      & Resolver lo técnico. Importante aunque no genere valor inmediato.         \\
+    10          & Bajo           & Bajo             & Alto            & \textbf{Media}      & Resolver lo social. La salud del equipo es un prerrequisito.              \\
+    11          & Alto           & Alto             & Bajo            & \textbf{Media-Alta} & Entregar. Equipo sano; aprovechar la capacidad disponible.                \\
+    12          & Bajo           & Bajo             & Bajo            & \textbf{Baja}       & Posponer. No hay urgencias ni impacto inmediato.                          \\
+    13          & Alto           & Bajo             & Bajo            & \textbf{Alta}       & Entregar. \textit{Feature} valiosa sin impedimentos relevantes.           \\
+    14          & Bajo           & Alto             & Bajo            & \textbf{Media}      & Resolver lo técnico. Deuda urgente aunque el valor sea bajo.              \\
+    15          & Bajo           & Bajo             & Alto            & \textbf{Media}      & Resolver lo social. El equipo necesita atención prioritaria.              \\
+    16          & Medio          & Medio            & Medio           & \textbf{Media}      & Caso por caso. Todo es moderado; decidir según el contexto.               \\
+    17          & Alto           & Bajo             & Alto            & \textbf{Alta}       & \textit{Feature} y social en paralelo. MVP mientras se atiende al equipo. \\
+    18          & Alto           & Alto             & Bajo            & \textbf{Alta}       & Resolver lo técnico primero. Bug crítico bloqueante; equipo sano.         \\
 \end{longtable}
 \endgroup
 
 \section{Protocolo de decisión colaborativa}
 
-La priorización ocurre durante el Social Sprint Planning (15--20~min, antes de la estimación detallada). Ningún rol tiene autoridad absoluta; la decisión emerge del diálogo.
+La priorización ocurre durante la \textit{Social Sprint Planning} (15--20~min, antes de la estimación detallada). Ningún rol tiene autoridad absoluta; la decisión emerge del diálogo.
 
 \subsection{Participantes y autoridad}
 
@@ -80,7 +80,7 @@ La priorización ocurre durante el Social Sprint Planning (15--20~min, antes de 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
+\begin{longtable}{
     >{\RaggedRight\hspace{0pt}}p{3.0cm}   % Col 1: Rol
     >{\RaggedRight\hspace{0pt}}p{3.0cm}   % Col 2: Dimensión
     >{\RaggedRight\hspace{0pt}}p{8.0cm}   % Col 3: Autoridad
@@ -119,13 +119,13 @@ La priorización ocurre durante el Social Sprint Planning (15--20~min, antes de 
 \subsection{Protocolo de priorización paso a paso}
 
 \begin{description}[nosep, leftmargin=1.2cm, style=nextline]
-    \item[Paso 1: Estado del equipo (5 min)] El Social Guide comparte Health Score, dimensiones problemáticas, \gls{community-smells} activos, tendencia y capacidad estimada (Tabla~\ref{tab:diagnostico-social-guide}). Si el HS es crítico, los pasos siguientes se ajustan.
+    \item[Paso 1: Estado del equipo (5 min)] El Social Guide comparte el \textit{Health Score}, las dimensiones problemáticas, los \gls{community-smells} activos, la tendencia y la capacidad estimada (Tabla~\ref{tab:diagnostico-social-guide}). Si el HS es crítico, los pasos siguientes se ajustan.
 
-    \item[Paso 2: Features priorizadas (5 min)] El PO presenta los ítems de mayor valor (Tabla~\ref{tab:features-priorizadas-valor}), más de los que caben en el Sprint para permitir flexibilidad.
+    \item[Paso 2: \textit{Features} priorizadas (5 min)] El PO presenta los ítems de mayor valor (Tabla~\ref{tab:features-priorizadas-valor}), proponiendo más de los que caben en el \textit{Sprint} para permitir flexibilidad.
 
-    \item[Paso 3: Ítems sociales (5 min)] Si el HS lo indica, el SG propone intervenciones con estimación en Social Story Points (Tabla~\ref{tab:propuesta-social-guide}). Si el HS es saludable ($\geq 8$), no se requieren ítems sociales.
+    \item[Paso 3: Ítems sociales (5 min)] Si el HS lo indica, el SG propone intervenciones con estimación en \textit{Social Story Points} (Tabla~\ref{tab:propuesta-social-guide}). Si el HS es saludable ($\geq 8$), no se requieren ítems sociales.
 
-    \item[Paso 4: Discusión colaborativa (5--10 min)] Los cuatro roles dialogan para llegar a un Sprint Backlog consensuado (Tabla~\ref{tab:decision-sprint-dialogo}).
+    \item[Paso 4: Discusión colaborativa (5--10 min)] Los cuatro roles dialogan para llegar a un \textit{Sprint Backlog} consensuado (Tabla~\ref{tab:decision-sprint-dialogo}).
 \end{description}
 
 \begingroup
@@ -135,39 +135,39 @@ La priorización ocurre durante el Social Sprint Planning (15--20~min, antes de 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
+\begin{longtable}{
     >{\RaggedRight\hspace{0pt}}p{4.5cm}   % Col 1: Indicador
     >{\RaggedRight\hspace{0pt}}p{9.0cm}   % Col 2: Estado
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-    \caption{Ejemplo de diagnóstico del Social Guide} \label{tab:diagnostico-social-guide} \\
+    \caption{Ejemplo de diagnóstico del Social Guide} \label{tab:diagnostico-social-guide}  \\
     \toprule
-    \textbf{Indicador}             & \textbf{Estado}                                       \\
+    \textbf{Indicador}             & \textbf{Estado}                                        \\
     \midrule
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                \\
+    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                 \\
     \toprule
-    \textbf{Indicador}             & \textbf{Estado}                                       \\
+    \textbf{Indicador}             & \textbf{Estado}                                        \\
     \midrule
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
     \midrule
-    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                        \\
+    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                         \\
     \endfoot
 
     % --- 4. PIE FINAL ---
     \bottomrule
     \endlastfoot
 
-    Health Score actual            & 6.2/10 (zona: en riesgo)                              \\
-    Dimensiones bajas              & Coraje (4.5), Foco (5.1)                              \\
-    \gls{community-smells} activos & \textit{Radio Silence} (moderado)                     \\
-    Tendencia                      & Mejorando (5.1 en Sprint anterior)                    \\
-    Capacidad estimada             & $\approx$80\% de la normal (32 SP vs.\ 40 SP típicos) \\
+    \textit{Health Score} actual   & 6.2/10 (zona: en riesgo)                               \\
+    Dimensiones bajas              & Coraje (4.5), Foco (5.1)                               \\
+    \gls{community-smells} activos & \textit{Radio Silence} (moderado)                      \\
+    Tendencia                      & Mejorando (5.1 en el \textit{Sprint} anterior)         \\
+    Capacidad estimada             & $\approx$80~\% de la normal (32 SP vs.\ 40 SP típicos) \\
 \end{longtable}
 \endgroup
 
@@ -178,7 +178,7 @@ La priorización ocurre durante el Social Sprint Planning (15--20~min, antes de 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
+\begin{longtable}{
     >{\Centering\hspace{0pt}}p{1.0cm}     % Col 1: #
     >{\RaggedRight\hspace{0pt}}p{9.0cm}   % Col 2: Feature
     >{\Centering\hspace{0pt}}p{2.5cm}     % Col 3: Valor
@@ -187,14 +187,14 @@ La priorización ocurre durante el Social Sprint Planning (15--20~min, antes de 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Ejemplo de \textit{features} priorizadas por valor de negocio (PO)} \label{tab:features-priorizadas-valor} \\
     \toprule
-    \textbf{\#} & \textbf{Feature}             & \textbf{Valor}                                                         \\
+    \textbf{\#} & \textbf{\textit{Feature}}       & \textbf{Valor}                                                      \\
     \midrule
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
     \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                             \\
     \toprule
-    \textbf{\#} & \textbf{Feature}             & \textbf{Valor}                                                         \\
+    \textbf{\#} & \textbf{\textit{Feature}}       & \textbf{Valor}                                                      \\
     \midrule
     \endhead
 
@@ -207,11 +207,11 @@ La priorización ocurre durante el Social Sprint Planning (15--20~min, antes de 
     \bottomrule
     \endlastfoot
 
-    1           & Integración con API de Pagos & 9/10                                                                   \\
-    2           & Dashboard de Analytics       & 7/10                                                                   \\
-    3           & Notificaciones push          & 8/10                                                                   \\
-    4           & Mejora de UX en login        & 5/10                                                                   \\
-    5           & Exportar reportes a PDF      & 6/10                                                                   \\
+    1           & Integración con API de Pagos    & 9/10                                                                \\
+    2           & \textit{Dashboard} de Analytics & 7/10                                                                \\
+    3           & Notificaciones \textit{push}    & 8/10                                                                \\
+    4           & Mejora de UX en \textit{login}  & 5/10                                                                \\
+    5           & Exportar reportes a PDF         & 6/10                                                                \\
 \end{longtable}
 \endgroup
 
@@ -222,7 +222,7 @@ La priorización ocurre durante el Social Sprint Planning (15--20~min, antes de 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
+\begin{longtable}{
     >{\Centering\hspace{0pt}}p{1.0cm}     % Col 1: #
     >{\RaggedRight\hspace{0pt}}p{8.5cm}   % Col 2: Intervención propuesta
     >{\Centering\hspace{0pt}}p{3.0cm}     % Col 3: Esfuerzo (SSP)
@@ -252,11 +252,11 @@ La priorización ocurre durante el Social Sprint Planning (15--20~min, antes de 
     \endlastfoot
 
     1           & Mediación Dev--QA para resolver \textit{Radio Silence} & 5                                    \\
-    2           & Establecer protocolo de daily asíncrono                & 3                                    \\
+    2           & Establecer protocolo de \textit{daily} asíncrona       & 3                                    \\
 \end{longtable}
 \endgroup
 
-\noindent\textbf{Ejemplo de resultado del diálogo:} con capacidad de 32~SP, el equipo acuerda incluir API de Pagos (13~SP), Mediación Dev--QA (5~SSP), Dashboard Analytics MVP (8~SP) y daily asíncrono (3~SSP) = 29 puntos. Notificaciones push quedan para el siguiente Sprint. El SG proyecta mejora del HS hasta 7.0--7.5 si se abordan las intervenciones sociales.
+\noindent\textbf{Ejemplo de resultado del diálogo:} con capacidad de 32~SP, el equipo acuerda incluir API de Pagos (13~SP), Mediación Dev--QA (5~SSP), \textit{Dashboard} Analytics MVP (8~SP) y \textit{daily} asíncrona (3~SSP) = 29 puntos. Las notificaciones \textit{push} quedan para el siguiente \textit{Sprint}. El SG proyecta una mejora del HS hasta 7.0--7.5 si se abordan las intervenciones sociales.
 
 \begingroup
 \scriptsize
@@ -265,7 +265,7 @@ La priorización ocurre durante el Social Sprint Planning (15--20~min, antes de 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
+\begin{longtable}{
     >{\RaggedRight\hspace{0pt}}p{7.0cm}   % Col 1: Ítem comprometido
     >{\Centering\hspace{0pt}}p{3.0cm}     % Col 2: Tipo
     >{\Centering\hspace{0pt}}p{3.0cm}     % Col 3: Esfuerzo
@@ -274,14 +274,14 @@ La priorización ocurre durante el Social Sprint Planning (15--20~min, antes de 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Compromiso final del Sprint tras diálogo de priorización} \label{tab:decision-sprint-dialogo} \\
     \toprule
-    \textbf{Ítem comprometido}         & \textbf{Tipo}      & \textbf{Esfuerzo}                            \\
+    \textbf{Ítem comprometido}            & \textbf{Tipo}      & \textbf{Esfuerzo}                         \\
     \midrule
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
     \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                \\
     \toprule
-    \textbf{Ítem comprometido}         & \textbf{Tipo}      & \textbf{Esfuerzo}                            \\
+    \textbf{Ítem comprometido}            & \textbf{Tipo}      & \textbf{Esfuerzo}                         \\
     \midrule
     \endhead
 
@@ -294,28 +294,28 @@ La priorización ocurre durante el Social Sprint Planning (15--20~min, antes de 
     \bottomrule
     \endlastfoot
 
-    Integración con API de Pagos       & Técnico            & 13 SP                                        \\
-    Mediación Dev--QA                  & Social             & 5 SSP                                        \\
-    Dashboard de Analytics (MVP)       & Técnico            & 8 SP                                         \\
-    Daily asíncrono                    & Social             & 3 SSP                                        \\
+    Integración con API de Pagos          & Técnico            & 13 SP                                     \\
+    Mediación Dev--QA                     & Social             & 5 SSP                                     \\
+    \textit{Dashboard} de Analytics (MVP) & Técnico            & 8 SP                                      \\
+    \textit{Daily} asíncrona              & Social             & 3 SSP                                     \\
     \midrule
-    \multicolumn{2}{r}{\textbf{Total}} & \textbf{29 puntos}                                                \\
+    \multicolumn{2}{r}{\textbf{Total}}    & \textbf{29 puntos}                                             \\
 \end{longtable}
 \endgroup
 
 \subsection{Conversión entre SSP y SP}
 
-SocialScrum establece una equivalencia aproximada: $1\;\text{SSP} \approx 1\;\text{SP}$. Ambos tipos de ítems consumen tiempo y atención del equipo y pueden sumarse para calcular la capacidad total del Sprint. Cada equipo calibra esta equivalencia según su contexto. La tabla~\ref{tab:decision-sprint-dialogo} ilustra un ejemplo de compromiso final que combina ambos tipos de puntos.
+SocialScrum establece una equivalencia aproximada: $1\;\text{SSP} \approx 1\;\text{SP}$. Ambos tipos de ítems consumen tiempo y atención del equipo y pueden sumarse para calcular la capacidad total del \textit{Sprint}. Cada equipo calibra esta equivalencia según su contexto. La tabla~\ref{tab:decision-sprint-dialogo} ilustra un ejemplo de compromiso final que combina ambos tipos de puntos.
 
 \subsection{Protocolo de discrepancia}
 
 Cuando PO, SG y SM no logran consenso, se activa un protocolo de resolución estructurado:
 
 \begin{enumerate}[nosep]
-    \item \textbf{Argumentación (9 min):} cada rol dispone de 3~min para presentar su posición con evidencia (valor de negocio, estado del HS, perspectiva de proceso).
+    \item \textbf{Argumentación (9 min):} cada rol dispone de 3~min para presentar su posición con evidencia (valor de negocio, estado del \textit{Health Score}, perspectiva de proceso).
     \item \textbf{Input del Dev Team (5 min):} el equipo expresa su perspectiva sobre factibilidad y riesgos.
-    \item \textbf{Votación informal:} tres opciones --- (A)~priorizar feature (aceptar riesgo social), (B)~priorizar salud social (posponer feature), (C)~híbrido (MVP + mitigación social).
-    \item \textbf{Decisión o escalamiento:} si hay mayoría clara, se implementa. Si no, se escala a CTO/VP Engineering con resumen del dilema. El Planning continúa con ítems de consenso mientras se espera la decisión (máx.\ 24~h).
+    \item \textbf{Votación informal:} tres opciones --- (A)~priorizar \textit{feature} (aceptar riesgo social), (B)~priorizar salud social (posponer \textit{feature}), (C)~híbrido (MVP + mitigación social).
+    \item \textbf{Decisión o escalamiento:} si hay mayoría clara, se implementa. Si no, se escala al CTO/VP Engineering con un resumen del dilema. La \textit{Planning} continúa con ítems de consenso mientras se espera la decisión (máx.\ 24~h).
 \end{enumerate}
 
 \section{Ejemplo completo: Equipo Alpha (Sprint 14)}
@@ -327,43 +327,43 @@ Cuando PO, SG y SM no logran consenso, se activa un protocolo de resolución est
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
+\begin{longtable}{
     >{\RaggedRight\hspace{0pt}}p{4.5cm}   % Col 1: Indicador
     >{\RaggedRight\hspace{0pt}}p{9.0cm}   % Col 2: Estado
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-    \caption{Diagnóstico social inicial del equipo Alpha} \label{tab:diagnostico-alpha}  \\
+    \caption{Diagnóstico social inicial del equipo Alpha} \label{tab:diagnostico-alpha}         \\
     \toprule
-    \textbf{Indicador} & \textbf{Estado}                                                 \\
+    \textbf{Indicador}        & \textbf{Estado}                                                 \\
     \midrule
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}              \\
+    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                     \\
     \toprule
-    \textbf{Indicador} & \textbf{Estado}                                                 \\
+    \textbf{Indicador}        & \textbf{Estado}                                                 \\
     \midrule
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
     \midrule
-    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                      \\
+    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                             \\
     \endfoot
 
     % --- 4. PIE FINAL ---
     \bottomrule
     \endlastfoot
 
-    Health Score       & 6.8/10 (zona en riesgo, límite superior)                        \\
-    Dimensiones        & Apertura 7.2, Compromiso 7.0, Respeto 7.5, Foco 5.8, Coraje 6.5 \\
-    Community smells   & Context Switching (moderado)                                    \\
-    Tendencia          & Estable (6.7 en Sprint anterior)                                \\
-    Capacidad estimada & 90\% $\rightarrow$ 36 SP de 40 típicos                          \\
+    \textit{Health Score}     & 6.8/10 (zona en riesgo, límite superior)                        \\
+    Dimensiones               & Apertura 7.2, Compromiso 7.0, Respeto 7.5, Foco 5.8, Coraje 6.5 \\
+    \textit{Community smells} & \textit{Context Switching} (moderado)                           \\
+    Tendencia                 & Estable (6.7 en el \textit{Sprint} anterior)                    \\
+    Capacidad estimada        & 90~\% $\rightarrow$ 36 SP de 40 típicos                         \\
 \end{longtable}
 \endgroup
 
-Tras el diálogo de priorización, el PO presentó 5~features técnicas (39~SP totales) y el SG propuso una intervención social (Focus Fridays, 3~SSP) para abordar el \textit{Context Switching} y mejorar la dimensión Foco. Con una capacidad de 36~SP, el equipo acordó el siguiente Sprint Backlog, posponiendo el refactor de reportes (8~SP) al Sprint~15.
+Tras el diálogo de priorización, el PO presentó 5 \textit{features} técnicas (39~SP totales) y el SG propuso una intervención social (\textit{Focus Fridays}, 3~SSP) para abordar el \textit{Context Switching} y mejorar la dimensión Foco. Con una capacidad de 36~SP, el equipo acordó el siguiente \textit{Sprint Backlog}, posponiendo el refactor de reportes (8~SP) al Sprint~15.
 
 \begingroup
 \scriptsize
@@ -372,7 +372,7 @@ Tras el diálogo de priorización, el PO presentó 5~features técnicas (39~SP t
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
+\begin{longtable}{
     >{\RaggedRight\hspace{0pt}}p{7.0cm}   % Col 1: Ítem
     >{\Centering\hspace{0pt}}p{3.0cm}     % Col 2: Tipo
     >{\Centering\hspace{0pt}}p{3.0cm}     % Col 3: Puntos
@@ -403,9 +403,9 @@ Tras el diálogo de priorización, el PO presentó 5~features técnicas (39~SP t
 
     Migración Auth                                  & Técnico         & 13 SP           \\
     API Partners                                    & Técnico         & 8 SP            \\
-    Optimización de queries                         & Técnico         & 5 SP            \\
-    Mejora dashboard admin                          & Técnico         & 5 SP            \\
-    Focus Fridays                                   & Social          & 3 SSP           \\
+    Optimización de \textit{queries}                & Técnico         & 5 SP            \\
+    Mejora \textit{dashboard} admin                 & Técnico         & 5 SP            \\
+    \textit{Focus Fridays}                          & Social          & 3 SSP           \\
     \midrule
     \multicolumn{2}{r}{\textbf{Total comprometido}} & \textbf{34 pts}                   \\
     \multicolumn{2}{r}{\textbf{Capacidad}}          & \textbf{36 SP}                    \\

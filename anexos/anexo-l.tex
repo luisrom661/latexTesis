@@ -3,7 +3,7 @@
 
 Este anexo presenta ejemplos detallados de intervenciones para diferentes categorías de \gls{community-smells}. Cada ejemplo incluye diagnóstico, estrategia paso a paso, métricas de éxito y resultados observados.
 
-\section{1 Intervención: \textit{Radio Silence} (Smell de Comunicación)}
+\section{Intervención: \textit{Radio Silence} (\textit{Smell} de Comunicación)}
 
 \begingroup
 \scriptsize
@@ -12,66 +12,65 @@ Este anexo presenta ejemplos detallados de intervenciones para diferentes catego
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
+\begin{longtable}{
     >{\RaggedRight\hspace{0pt}}p{3.5cm}
     >{\RaggedRight\hspace{0pt}}p{12.5cm}
-}
+    }
 
-\caption{Ejemplo de intervención: Radio Silence} \label{tab:radio-silence}\\
-\toprule
-\multicolumn{2}{l}{\textbf{Intervención: Radio Silence}} \\
-\midrule
-\endfirsthead
+    \caption{Ejemplo de intervención: \textit{Radio Silence}} \label{tab:radio-silence}                          \\
+    \toprule
+    \multicolumn{2}{l}{\textbf{Intervención: \textit{Radio Silence}}}                                            \\
+    \midrule
+    \endfirsthead
 
-\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}} \\
-\toprule
-\multicolumn{2}{l}{\textbf{Intervención: Radio Silence}} \\
-\midrule
-\endhead
+    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                      \\
+    \toprule
+    \multicolumn{2}{l}{\textbf{Intervención: \textit{Radio Silence}}}                                            \\
+    \midrule
+    \endhead
 
-\midrule
-\multicolumn{2}{r}{\textit{Continúa en la siguiente página...}} \\
-\endfoot
+    \midrule
+    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                              \\
+    \endfoot
 
-\bottomrule
-\endlastfoot
+    \bottomrule
+    \endlastfoot
 
-\textbf{Equipo} & Alpha (7 personas) \\
-\textbf{Severidad detectada} & Moderada (afecta velocidad, no bloquea) \\
-\midrule
+    \textbf{Equipo}              & Alpha (7 personas)                                                            \\
+    \textbf{Severidad detectada} & Moderada (afecta la velocidad, no bloquea)                                    \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Diagnóstico}} \\* \nopagebreak
-& SNA muestra que María centraliza 70\% de comunicación \\
-& 3 DEVs reportan ``enterarse tarde'' de cambios de API \\
-& En Daily, solo María y Pedro hablan regularmente \\
-& Health Score ``Comunicación'' 4,5/10 \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Diagnóstico}}                                                                     \\* \nopagebreak
+                                 & \textit{SNA} muestra que María centraliza el 70~\% de la comunicación         \\
+                                 & 3 \textit{devs} reportan ``enterarse tarde'' de cambios en la \textit{API}    \\
+                                 & En la \textit{Daily}, solo María y Pedro hablan regularmente                  \\
+                                 & \textit{Health Score} ``Comunicación'' 4,5/10                                 \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Estrategia (5 SSP)}} \\* \nopagebreak
-\multicolumn{2}{l}{\textit{Semana 1:}} \\* \nopagebreak
-& Workshop ``Comunicación distribuida'' (2h) \\
-& Crear canal \#alpha-actualizaciones para cambios técnicos \\
-& Norma: quien cambia API pública, postea en canal \\
-\multicolumn{2}{l}{\textit{Semana 2:}} \\* \nopagebreak
-& Rotación de ``facilitador de Daily'' (cada día alguien diferente) \\
-& Pregunta explícita en Daily: ``¿Hay algo que otros deban saber?'' \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Estrategia (5 SSP)}}                                                              \\* \nopagebreak
+    \multicolumn{2}{l}{\textit{Semana 1:}}                                                                       \\* \nopagebreak
+                                 & \textit{Workshop} ``Comunicación distribuida'' (2h)                           \\
+                                 & Crear canal \#alpha-actualizaciones para cambios técnicos                     \\
+                                 & Norma: quien cambia una \textit{API} pública, lo publica en el canal          \\
+    \multicolumn{2}{l}{\textit{Semana 2:}}                                                                       \\* \nopagebreak
+                                 & Rotación de ``facilitador de \textit{Daily}'' (cada día alguien diferente)    \\
+                                 & Pregunta explícita en la \textit{Daily}: ``¿Hay algo que otros deban saber?'' \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Métricas de éxito}} \\* \nopagebreak
-& Mensajes en \#alpha-actualizaciones: >= 5/semana \\
-& Participación en Daily: todos hablan al menos 3x/semana \\
-& Encuesta: ``Me entero a tiempo'' sube de 4/10 a 7/10 \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Métricas de éxito}}                                                               \\* \nopagebreak
+                                 & Mensajes en \#alpha-actualizaciones: >= 5/semana                              \\
+                                 & Participación en la \textit{Daily}: todos hablan al menos 3x/semana           \\
+                                 & Encuesta: ``Me entero a tiempo'' sube de 4/10 a 7/10                          \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Resultado (Sprint +1)}} \\* \nopagebreak
-& Mensajes en canal: 8/semana [OK] \\
-& Participación Daily: 6 de 7 hablan regularmente [OK] \\
-& Encuesta: 6,5/10 (mejora parcial, continuar) \\
-
+    \multicolumn{2}{l}{\textbf{Resultado (Sprint +1)}}                                                           \\* \nopagebreak
+                                 & Mensajes en canal: 8/semana [OK]                                              \\
+                                 & Participación \textit{Daily}: 6 de 7 hablan regularmente [OK]                 \\
+                                 & Encuesta: 6,5/10 (mejora parcial, continuar)                                  \\
 \end{longtable}
 \endgroup
 
-\section{2 Intervención: Truck Factor = 1 (Smell de Conocimiento)}
+\section{Intervención: \textit{Truck Factor} = 1 (\textit{Smell} de Conocimiento)}
 
 \begingroup
 \scriptsize
@@ -80,70 +79,69 @@ Este anexo presenta ejemplos detallados de intervenciones para diferentes catego
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
+\begin{longtable}{
     >{\RaggedRight\hspace{0pt}}p{3.5cm}
     >{\RaggedRight\hspace{0pt}}p{12.5cm}
-}
+    }
 
-\caption{Ejemplo de intervención: Truck Factor = 1} \label{tab:truck-factor}\\
-\toprule
-\multicolumn{2}{l}{\textbf{Intervención: Truck Factor = 1}} \\
-\midrule
-\endfirsthead
+    \caption{Ejemplo de intervención: \textit{Truck Factor} = 1} \label{tab:truck-factor}                             \\
+    \toprule
+    \multicolumn{2}{l}{\textbf{Intervención: \textit{Truck Factor} = 1}}                                              \\
+    \midrule
+    \endfirsthead
 
-\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}} \\
-\toprule
-\multicolumn{2}{l}{\textbf{Intervención: Truck Factor = 1}} \\
-\midrule
-\endhead
+    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                           \\
+    \toprule
+    \multicolumn{2}{l}{\textbf{Intervención: \textit{Truck Factor} = 1}}                                              \\
+    \midrule
+    \endhead
 
-\midrule
-\multicolumn{2}{r}{\textit{Continúa en la siguiente página...}} \\
-\endfoot
+    \midrule
+    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                                   \\
+    \endfoot
 
-\bottomrule
-\endlastfoot
+    \bottomrule
+    \endlastfoot
 
-\textbf{Equipo} & Beta (5 personas) \\
-\textbf{Componente crítico} & Motor de reglas de negocio \\
-\textbf{Único experto} & Carlos \\
-\midrule
+    \textbf{Equipo}             & Beta (5 personas)                                                                   \\
+    \textbf{Componente crítico} & Motor de reglas de negocio                                                          \\
+    \textbf{Único experto}      & Carlos                                                                              \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Diagnóstico}} \\* \nopagebreak
-& Carlos escribió 95\% del código del motor \\
-& Cuando Carlos está de vacaciones, bugs en motor quedan sin resolver \\
-& Otros devs ``tienen miedo'' de tocar ese código \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Diagnóstico}}                                                                          \\* \nopagebreak
+                                & Carlos escribió el 95~\% del código del motor                                       \\
+                                & Cuando Carlos está de vacaciones, los \textit{bugs} en el motor quedan sin resolver \\
+                                & Otros \textit{devs} ``tienen miedo'' de tocar ese código                            \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Estrategia (8 SSP distribuidos en 3 Sprints)}} \\* \nopagebreak
-\multicolumn{2}{l}{\textit{Sprint 1 (3 SSP):}} \\* \nopagebreak
-& Carlos documenta arquitectura en 3 páginas \\
-& Carlos hace \gls{pair-programming} con Ana en 2 tareas del motor \\
-\multicolumn{2}{l}{\textit{Sprint 2 (3 SSP):}} \\* \nopagebreak
-& Ana hace tarea sola en motor, Carlos solo revisa \\
-& Carlos hace \gls{pair-programming} con Pedro en 1 tarea \\
-& Sesión de 2h: ``Cómo debuggear el motor'' \\
-\multicolumn{2}{l}{\textit{Sprint 3 (2 SSP):}} \\* \nopagebreak
-& Pedro hace tarea solo, Carlos revisa \\
-& Documentar ``troubleshooting guide'' para problemas comunes \\
-& Evaluar: ¿Ana y Pedro pueden resolver bugs nivel 1-2? \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Estrategia (8 SSP distribuidos en 3 \textit{Sprints})}}                                \\* \nopagebreak
+    \multicolumn{2}{l}{\textit{Sprint 1 (3 SSP):}}                                                                    \\* \nopagebreak
+                                & Carlos documenta la arquitectura en 3 páginas                                       \\
+                                & Carlos hace \gls{pair-programming} con Ana en 2 tareas del motor                    \\
+    \multicolumn{2}{l}{\textit{Sprint 2 (3 SSP):}}                                                                    \\* \nopagebreak
+                                & Ana hace tarea sola en el motor, Carlos solo revisa                                 \\
+                                & Carlos hace \gls{pair-programming} con Pedro en 1 tarea                             \\
+                                & Sesión de 2h: ``Cómo depurar (\textit{debuggear}) el motor''                        \\
+    \multicolumn{2}{l}{\textit{Sprint 3 (2 SSP):}}                                                                    \\* \nopagebreak
+                                & Pedro hace tarea solo, Carlos revisa                                                \\
+                                & Documentar la guía de resolución de problemas (\textit{troubleshooting guide})      \\
+                                & Evaluar: ¿Ana y Pedro pueden resolver \textit{bugs} nivel 1-2?                      \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Métricas de éxito}} \\* \nopagebreak
-& Truck factor: de 1 a 3 (Carlos + Ana + Pedro) \\
-& Tiempo de resolución de bugs cuando Carlos no está: < 48h \\
-& Ana y Pedro reportan confianza >= 6/10 para trabajar en motor \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Métricas de éxito}}                                                                    \\* \nopagebreak
+                                & \textit{Truck factor}: de 1 a 3 (Carlos + Ana + Pedro)                              \\
+                                & Tiempo de resolución de \textit{bugs} cuando Carlos no está: < 48h                  \\
+                                & Ana y Pedro reportan confianza >= 6/10 para trabajar en el motor                    \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Resultado}} \\* \nopagebreak
-& Sprint 3: Ana resolvió bug de producción sola [OK] \\
-& Confianza: Ana 7/10, Pedro 5/10 (continuar con Pedro) \\
-& Truck factor efectivo: 2,5 (Ana casi independiente, Pedro parcial) \\
-
+    \multicolumn{2}{l}{\textbf{Resultado}}                                                                            \\* \nopagebreak
+                                & \textit{Sprint} 3: Ana resolvió un \textit{bug} de producción sola [OK]             \\
+                                & Confianza: Ana 7/10, Pedro 5/10 (continuar con Pedro)                               \\
+                                & \textit{Truck factor} efectivo: 2,5 (Ana casi independiente, Pedro parcial)         \\
 \end{longtable}
 \endgroup
 
-\section{3 Intervención: Conflicto No Resuelto (Smell Relacional)}
+\section{Intervención: Conflicto No Resuelto (\textit{Smell} Relacional)}
 
 \begingroup
 \scriptsize
@@ -152,84 +150,83 @@ Este anexo presenta ejemplos detallados de intervenciones para diferentes catego
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
+\begin{longtable}{
     >{\RaggedRight\hspace{0pt}}p{3.5cm}
     >{\RaggedRight\hspace{0pt}}p{12.5cm}
-}
+    }
 
-\caption{Ejemplo de intervención: Conflicto No Resuelto} \label{tab:conflicto-no-resuelto}\\
-\toprule
-\multicolumn{2}{l}{\textbf{Intervención: Conflicto No Resuelto}} \\
-\midrule
-\endfirsthead
+    \caption{Ejemplo de intervención: Conflicto No Resuelto} \label{tab:conflicto-no-resuelto}                                       \\
+    \toprule
+    \multicolumn{2}{l}{\textbf{Intervención: Conflicto No Resuelto}}                                                                 \\
+    \midrule
+    \endfirsthead
 
-\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}} \\
-\toprule
-\multicolumn{2}{l}{\textbf{Intervención: Conflicto No Resuelto}} \\
-\midrule
-\endhead
+    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                          \\
+    \toprule
+    \multicolumn{2}{l}{\textbf{Intervención: Conflicto No Resuelto}}                                                                 \\
+    \midrule
+    \endhead
 
-\midrule
-\multicolumn{2}{r}{\textit{Continúa en la siguiente página...}} \\
-\endfoot
+    \midrule
+    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                                                  \\
+    \endfoot
 
-\bottomrule
-\endlastfoot
+    \bottomrule
+    \endlastfoot
 
-\textbf{Equipo} & Gamma (6 personas) \\
-\textbf{Partes} & Dev A (frontend) vs Dev B (backend) \\
-\textbf{Origen} & Desacuerdo sobre diseño de API hace 2 meses \\
-\midrule
+    \textbf{Equipo} & Gamma (6 personas)                                                                                             \\
+    \textbf{Partes} & Dev A (\textit{frontend}) vs Dev B (\textit{backend})                                                          \\
+    \textbf{Origen} & Desacuerdo sobre diseño de \textit{API} hace 2 meses                                                           \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Diagnóstico}} \\* \nopagebreak
-& Code reviews entre A y B son hostiles \\
-& Otros miembros evitan tareas que requieren A+B \\
-& Daily tiene tensión cuando ambos reportan \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Diagnóstico}}                                                                                         \\* \nopagebreak
+                    & Las \textit{code reviews} entre A y B son hostiles                                                             \\
+                    & Otros miembros evitan tareas que requieren A+B                                                                 \\
+                    & La \textit{Daily} tiene tensión cuando ambos reportan                                                          \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Estrategia (5 SSP)}} \\* \nopagebreak
-\multicolumn{2}{l}{\textit{Día 1 -- Sesión 1:1 con Dev A (1h):}} \\* \nopagebreak
-& Escuchar su perspectiva sin juzgar \\
-& Identificar: ¿qué necesita para mejorar la situación? \\
-& A dice: ``B nunca acepta mis sugerencias, siempre impone'' \\
-\multicolumn{2}{l}{\textit{Día 2 -- Sesión 1:1 con Dev B (1h):}} \\* \nopagebreak
-& Escuchar su perspectiva sin juzgar \\
-& B dice: ``A no entiende las restricciones de backend'' \\
-\multicolumn{2}{l}{\textit{Día 3 -- Preparación:}} \\* \nopagebreak
-& Identificar intereses comunes (ambos quieren producto exitoso) \\
-& Preparar estructura para sesión conjunta \\
-\multicolumn{2}{l}{\textit{Día 4 -- Sesión conjunta facilitada (2h):}} \\* \nopagebreak
-& Reglas: hablar en primera persona, no interrumpir \\
-& Cada uno expresa su perspectiva (10 min c/u) \\
-& Identificar puntos de acuerdo \\
-& Negociar: ¿cómo manejar desacuerdos futuros? \\
-& Documentar acuerdos firmados por ambos \\
-\multicolumn{2}{l}{\textit{Día 15 -- Seguimiento (30 min):}} \\* \nopagebreak
-& ¿Se están respetando acuerdos? \\
-& Ajustar si es necesario \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Estrategia (5 SSP)}}                                                                                  \\* \nopagebreak
+    \multicolumn{2}{l}{\textit{Día 1 -- Sesión 1:1 con Dev A (1h):}}                                                                 \\* \nopagebreak
+                    & Escuchar su perspectiva sin juzgar                                                                             \\
+                    & Identificar: ¿qué necesita para mejorar la situación?                                                          \\
+                    & A dice: ``B nunca acepta mis sugerencias, siempre impone''                                                     \\
+    \multicolumn{2}{l}{\textit{Día 2 -- Sesión 1:1 con Dev B (1h):}}                                                                 \\* \nopagebreak
+                    & Escuchar su perspectiva sin juzgar                                                                             \\
+                    & B dice: ``A no entiende las restricciones del \textit{backend}''                                               \\
+    \multicolumn{2}{l}{\textit{Día 3 -- Preparación:}}                                                                               \\* \nopagebreak
+                    & Identificar intereses comunes (ambos quieren un producto exitoso)                                              \\
+                    & Preparar la estructura para la sesión conjunta                                                                 \\
+    \multicolumn{2}{l}{\textit{Día 4 -- Sesión conjunta facilitada (2h):}}                                                           \\* \nopagebreak
+                    & Reglas: hablar en primera persona, no interrumpir                                                              \\
+                    & Cada uno expresa su perspectiva (10 min c/u)                                                                   \\
+                    & Identificar puntos de acuerdo                                                                                  \\
+                    & Negociar: ¿cómo manejar desacuerdos futuros?                                                                   \\
+                    & Documentar acuerdos firmados por ambos                                                                         \\
+    \multicolumn{2}{l}{\textit{Día 15 -- Seguimiento (30 min):}}                                                                     \\* \nopagebreak
+                    & ¿Se están respetando los acuerdos?                                                                             \\
+                    & Ajustar si es necesario                                                                                        \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Acuerdos documentados}} \\* \nopagebreak
-& 1. Desacuerdos técnicos se discuten en 1:1, no en PR comments \\
-& 2. Si no hay acuerdo en 30 min, escalar a Tech Lead \\
-& 3. Ambos se comprometen a asumir buena intención del otro \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Acuerdos documentados}}                                                                               \\* \nopagebreak
+                    & 1. Desacuerdos técnicos se discuten en 1:1, no en comentarios del \textit{Pull Request} (\textit{PR comments}) \\
+                    & 2. Si no hay acuerdo en 30 min, escalar al \textit{Tech Lead}                                                  \\
+                    & 3. Ambos se comprometen a asumir buena intención del otro                                                      \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Métricas de éxito}} \\* \nopagebreak
-& Code reviews sin comentarios hostiles: 4 semanas consecutivas \\
-& A y B aceptan trabajar en tarea conjunta sin resistencia \\
-& Health Score ``Respeto'' sube de 4/10 a 6/10 \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Métricas de éxito}}                                                                                   \\* \nopagebreak
+                    & \textit{Code reviews} sin comentarios hostiles: 4 semanas consecutivas                                         \\
+                    & A y B aceptan trabajar en tarea conjunta sin resistencia                                                       \\
+                    & \textit{Health Score} ``Respeto'' sube de 4/10 a 6/10                                                          \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Resultado (Sprint +2)}} \\* \nopagebreak
-& 0 comentarios hostiles en PRs [OK] \\
-& Aceptaron tarea conjunta en Sprint 16 [OK] \\
-& Respeto: 6,5/10 [OK] \\
-
+    \multicolumn{2}{l}{\textbf{Resultado (Sprint +2)}}                                                                               \\* \nopagebreak
+                    & 0 comentarios hostiles en los PR [OK]                                                                          \\
+                    & Aceptaron la tarea conjunta en el \textit{Sprint} 16 [OK]                                                      \\
+                    & Respeto: 6,5/10 [OK]                                                                                           \\
 \end{longtable}
 \endgroup
 
-\section{4 Intervención: Meeting Hell (Smell Organizacional)}
+\section{Intervención: \textit{Meeting Hell} (\textit{Smell} Organizacional)}
 
 \begingroup
 \scriptsize
@@ -238,76 +235,75 @@ Este anexo presenta ejemplos detallados de intervenciones para diferentes catego
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
+\begin{longtable}{
     >{\RaggedRight\hspace{0pt}}p{3.5cm}
     >{\RaggedRight\hspace{0pt}}p{12.5cm}
-}
+    }
 
-\caption{Ejemplo de intervención: Meeting Hell} \label{tab:meeting-hell}\\
-\toprule
-\multicolumn{2}{l}{\textbf{Intervención: Meeting Hell}} \\
-\midrule
-\endfirsthead
+    \caption{Ejemplo de intervención: \textit{Meeting Hell}} \label{tab:meeting-hell}                                 \\
+    \toprule
+    \multicolumn{2}{l}{\textbf{Intervención: \textit{Meeting Hell}}}                                                  \\
+    \midrule
+    \endfirsthead
 
-\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}} \\
-\toprule
-\multicolumn{2}{l}{\textbf{Intervención: Meeting Hell}} \\
-\midrule
-\endhead
+    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                           \\
+    \toprule
+    \multicolumn{2}{l}{\textbf{Intervención: \textit{Meeting Hell}}}                                                  \\
+    \midrule
+    \endhead
 
-\midrule
-\multicolumn{2}{r}{\textit{Continúa en la siguiente página...}} \\
-\endfoot
+    \midrule
+    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                                   \\
+    \endfoot
 
-\bottomrule
-\endlastfoot
+    \bottomrule
+    \endlastfoot
 
-\textbf{Equipo} & Delta (8 personas) \\
-\textbf{Problema} & Promedio de 25h/semana en reuniones por persona \\
-\midrule
+    \textbf{Equipo}   & Delta (8 personas)                                                                            \\
+    \textbf{Problema} & Promedio de 25h/semana en reuniones por persona                                               \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Diagnóstico}} \\* \nopagebreak
-\multicolumn{2}{l}{\textit{Auditoría de calendarios muestra:}} \\* \nopagebreak
-& 8h/semana: reuniones de Scrum (normal) \\
-& 10h/semana: reuniones con partes interesadas (stakeholders) (excesivo) \\
-& 7h/semana: reuniones ``informativas'' donde equipo es pasivo \\
-& Foco del equipo: 4,2/10 (crítico) \\
-& Velocidad cayó 30\% en últimos 3 Sprints \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Diagnóstico}}                                                                          \\* \nopagebreak
+    \multicolumn{2}{l}{\textit{Auditoría de calendarios muestra:}}                                                    \\* \nopagebreak
+                      & 8h/semana: reuniones de Scrum (normal)                                                        \\
+                      & 10h/semana: reuniones con partes interesadas (\textit{stakeholders}) (excesivo)               \\
+                      & 7h/semana: reuniones ``informativas'' donde el equipo es pasivo                               \\
+                      & Foco del equipo: 4,2/10 (crítico)                                                             \\
+                      & Velocidad cayó 30~\% en los últimos 3 \textit{Sprints}                                        \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Estrategia (5 SSP)}} \\* \nopagebreak
-\multicolumn{2}{l}{\textit{Semana 1 -- Documentación:}} \\* \nopagebreak
-& Crear spreadsheet: reunión, convocador, frecuencia, asistentes \\
-& Calcular costo: horas $\times$ personas $\times$ tarifa hora $\approx$ \$X/semana \\
-\multicolumn{2}{l}{\textit{Semana 2 -- Propuesta:}} \\* \nopagebreak
-& Clasificar reuniones: eliminar, reducir frecuencia, o delegar \\
-& Propuesta: representante único para reuniones informativas \\
-& Establecer ``Focus Fridays'': sin reuniones externas \\
-\multicolumn{2}{l}{\textit{Semana 3 -- Negociación:}} \\* \nopagebreak
-& Reunión con stakeholders clave (SM lidera) \\
-& Presentar datos de impacto en velocidad \\
-& Acordar: representante rota, resumen escrito después \\
-\multicolumn{2}{l}{\textit{Semana 4 -- Implementación:}} \\* \nopagebreak
-& Focus Fridays en efecto \\
-& Representante único para 5 reuniones \\
-& Monitorear calendarios \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Estrategia (5 SSP)}}                                                                   \\* \nopagebreak
+    \multicolumn{2}{l}{\textit{Semana 1 -- Documentación:}}                                                           \\* \nopagebreak
+                      & Crear una hoja de cálculo (\textit{spreadsheet}): reunión, convocador, frecuencia, asistentes \\
+                      & Calcular costo: horas $\times$ personas $\times$ tarifa hora $\approx$ \$X/semana             \\
+    \multicolumn{2}{l}{\textit{Semana 2 -- Propuesta:}}                                                               \\* \nopagebreak
+                      & Clasificar reuniones: eliminar, reducir frecuencia, o delegar                                 \\
+                      & Propuesta: representante único para reuniones informativas                                    \\
+                      & Establecer ``\textit{Focus Fridays}'': sin reuniones externas                                 \\
+    \multicolumn{2}{l}{\textit{Semana 3 -- Negociación:}}                                                             \\* \nopagebreak
+                      & Reunión con \textit{stakeholders} clave (SM lidera)                                           \\
+                      & Presentar datos del impacto en la velocidad                                                   \\
+                      & Acordar: representante rota, resumen escrito después                                          \\
+    \multicolumn{2}{l}{\textit{Semana 4 -- Implementación:}}                                                          \\* \nopagebreak
+                      & \textit{Focus Fridays} en efecto                                                              \\
+                      & Representante único para 5 reuniones                                                          \\
+                      & Monitorear calendarios                                                                        \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Métricas de éxito}} \\* \nopagebreak
-& Horas en reuniones: de 25h a 15h/semana \\
-& Foco: de 4,2 a 6,0 \\
-& Velocidad: recuperar al menos 50\% de la caída \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Métricas de éxito}}                                                                    \\* \nopagebreak
+                      & Horas en reuniones: de 25h a 15h/semana                                                       \\
+                      & Foco: de 4,2 a 6,0                                                                            \\
+                      & Velocidad: recuperar al menos el 50~\% de la caída                                            \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Resultado (Sprint +2)}} \\* \nopagebreak
-& Reuniones: 16h/semana (36\% reducción) [OK] \\
-& Foco: 5,8/10 (mejora significativa) [OK] \\
-& Velocidad: +20\% (recuperación parcial, continuar) \\
-
+    \multicolumn{2}{l}{\textbf{Resultado (Sprint +2)}}                                                                \\* \nopagebreak
+                      & Reuniones: 16h/semana (36~\% de reducción) [OK]                                               \\
+                      & Foco: 5,8/10 (mejora significativa) [OK]                                                      \\
+                      & Velocidad: +20~\% (recuperación parcial, continuar)                                           \\
 \end{longtable}
 \endgroup
 
-\section{5 Experimento: Reducir Knowledge Islands}
+\section{Experimento: Reducir \textit{Knowledge Islands}}
 
 \begingroup
 \scriptsize
@@ -316,89 +312,88 @@ Este anexo presenta ejemplos detallados de intervenciones para diferentes catego
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
+\begin{longtable}{
     >{\RaggedRight\hspace{0pt}}p{3.5cm}
     >{\RaggedRight\hspace{0pt}}p{12.5cm}
-}
+    }
 
-\caption{Experimento: Reducir Knowledge Islands} \label{tab:knowledge-islands}\\
-\toprule
-\multicolumn{2}{l}{\textbf{Experimento: Reducir Knowledge Islands}} \\
-\midrule
-\endfirsthead
+    \caption{Experimento: Reducir \textit{Knowledge Islands}} \label{tab:knowledge-islands}                                                                                                                                                                                                                                                  \\
+    \toprule
+    \multicolumn{2}{l}{\textbf{Experimento: Reducir \textit{Knowledge Islands}}}                                                                                                                                                                                                                                                             \\
+    \midrule
+    \endfirsthead
 
-\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}} \\
-\toprule
-\multicolumn{2}{l}{\textbf{Experimento: Reducir Knowledge Islands}} \\
-\midrule
-\endhead
+    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                  \\
+    \toprule
+    \multicolumn{2}{l}{\textbf{Experimento: Reducir \textit{Knowledge Islands}}}                                                                                                                                                                                                                                                             \\
+    \midrule
+    \endhead
 
-\midrule
-\multicolumn{2}{r}{\textit{Continúa en la siguiente página...}} \\
-\endfoot
+    \midrule
+    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                          \\
+    \endfoot
 
-\bottomrule
-\endlastfoot
+    \bottomrule
+    \endlastfoot
 
-\multicolumn{2}{l}{\textbf{Contexto}} \\* \nopagebreak
-& Equipo Zeta tiene 3 subgrupos: Frontend, Backend, Data. \\
-& Casi no hay comunicación entre subgrupos. \\
-& Integración al final de Sprint genera conflictos. \\
-& Health Score ``Compromiso'': 5,5/10 \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Contexto}}                                                                                                                                                                                                                                                                                                    \\* \nopagebreak
+                                      & Equipo Zeta tiene 3 subgrupos: \textit{Frontend}, \textit{Backend}, \textit{Data}.                                                                                                                                                                                                                   \\
+                                      & Casi no hay comunicación entre subgrupos.                                                                                                                                                                                                                                                            \\
+                                      & La integración al final del \textit{Sprint} genera conflictos.                                                                                                                                                                                                                                       \\
+                                      & \textit{Health Score} ``Compromiso'': 5,5/10                                                                                                                                                                                                                                                         \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Hipótesis}} \\* \nopagebreak
-& ``Si implementamos code reviews cruzados obligatorios (1 PR/semana revisado por miembro de otro subgrupo), entonces el conocimiento compartido aumentará y los conflictos de integración disminuirán, porque la exposición temprana a código de otros reduce sorpresas y builds empathy.'' \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Hipótesis}}                                                                                                                                                                                                                                                                                                   \\* \nopagebreak
+                                      & ``Si implementamos \textit{code reviews} cruzados obligatorios (1 PR/semana revisado por miembro de otro subgrupo), entonces el conocimiento compartido aumentará y los conflictos de integración disminuirán, porque la exposición temprana al código de otros reduce sorpresas y genera empatía.'' \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Métricas}} \\* \nopagebreak
-\textit{Métrica} & \textit{Línea base $\rightarrow$ Target} \\* \nopagebreak
-PRs con reviewer cruzado & 0/semana $\rightarrow$ 5/semana \\
-Conflictos de integración & 4/Sprint $\rightarrow$ 2/Sprint \\
-``Entiendo código otros'' & 3/10 $\rightarrow$ 5/10 \\
-Health Score Compromiso & 5,5 $\rightarrow$ 6,5 \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Métricas}}                                                                                                                                                                                                                                                                                                    \\* \nopagebreak
+    \textit{Métrica}                  & \textit{Línea base $\rightarrow$ Target}                                                                                                                                                                                                                                                             \\* \nopagebreak
+    PRs con \textit{reviewer} cruzado & 0/semana $\rightarrow$ 5/semana                                                                                                                                                                                                                                                                      \\
+    Conflictos de integración         & 4/\textit{Sprint} $\rightarrow$ 2/\textit{Sprint}                                                                                                                                                                                                                                                    \\
+    ``Entiendo el código de otros''   & 3/10 $\rightarrow$ 5/10                                                                                                                                                                                                                                                                              \\
+    \textit{Health Score} Compromiso  & 5,5 $\rightarrow$ 6,5                                                                                                                                                                                                                                                                                \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Intervención}} \\* \nopagebreak
-\multicolumn{2}{l}{\textit{Semana 1:}} \\* \nopagebreak
-& Workshop: ``Por qué code reviews cruzados'' (1h) \\
-& Configurar GitHub: reviewer aleatorio de otro subgrupo \\
-& Norma: al menos 1 PR cruzado por persona/semana \\
-\multicolumn{2}{l}{\textit{Semanas 2--4:}} \\* \nopagebreak
-& Monitorear cumplimiento \\
-& 1:1 con personas que no participan \\
-& Celebrar en Daily cuando review cruzado genera insight \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Intervención}}                                                                                                                                                                                                                                                                                                \\* \nopagebreak
+    \multicolumn{2}{l}{\textit{Semana 1:}}                                                                                                                                                                                                                                                                                                   \\* \nopagebreak
+                                      & \textit{Workshop}: ``Por qué hacer \textit{code reviews} cruzados'' (1h)                                                                                                                                                                                                                             \\
+                                      & Configurar GitHub: \textit{reviewer} aleatorio de otro subgrupo                                                                                                                                                                                                                                      \\
+                                      & Norma: al menos 1 PR cruzado por persona/semana                                                                                                                                                                                                                                                      \\
+    \multicolumn{2}{l}{\textit{Semanas 2--4:}}                                                                                                                                                                                                                                                                                               \\* \nopagebreak
+                                      & Monitorear cumplimiento                                                                                                                                                                                                                                                                              \\
+                                      & 1:1 con personas que no participan                                                                                                                                                                                                                                                                   \\
+                                      & Celebrar en la \textit{Daily} cuando una revisión cruzada genera \textit{insight}                                                                                                                                                                                                                    \\
+    \midrule
 
-\textbf{Duración} & 2 Sprints \\
-\midrule
+    \textbf{Duración}                 & 2 \textit{Sprints}                                                                                                                                                                                                                                                                                   \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Criterios de evaluación}} \\* \nopagebreak
-& Éxito: Conflictos <= 2, ``Entiendo código'' >= 5 \\
-& Parcial: Conflictos <= 3, alguna mejora en percepción \\
-& Fracaso: Sin mejora o resistencia activa del equipo \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Criterios de evaluación}}                                                                                                                                                                                                                                                                                     \\* \nopagebreak
+                                      & Éxito: Conflictos <= 2, ``Entiendo código'' >= 5                                                                                                                                                                                                                                                     \\
+                                      & Parcial: Conflictos <= 3, alguna mejora en la percepción                                                                                                                                                                                                                                             \\
+                                      & Fracaso: Sin mejora o resistencia activa del equipo                                                                                                                                                                                                                                                  \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Resultados (Sprint +2)}} \\* \nopagebreak
-& PRs cruzados: 6/semana [OK] (superó target) \\
-& Conflictos: 3/Sprint (mejora, no alcanzó target) \\
-& ``Entiendo código'': 4,5/10 (mejora parcial) \\
-& Compromiso: 6,0/10 (mejora) \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Resultados (Sprint +2)}}                                                                                                                                                                                                                                                                                      \\* \nopagebreak
+                                      & PRs cruzados: 6/semana [OK] (superó el \textit{target})                                                                                                                                                                                                                                              \\
+                                      & Conflictos: 3/\textit{Sprint} (mejora, no alcanzó el \textit{target})                                                                                                                                                                                                                                \\
+                                      & ``Entiendo el código'': 4,5/10 (mejora parcial)                                                                                                                                                                                                                                                      \\
+                                      & Compromiso: 6,0/10 (mejora)                                                                                                                                                                                                                                                                          \\
+    \midrule
 
-\textbf{Evaluación} & Éxito parcial \\
-\midrule
+    \textbf{Evaluación}               & Éxito parcial                                                                                                                                                                                                                                                                                        \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Aprendizajes}} \\* \nopagebreak
-& 1. Reviews cruzados toman más tiempo (factor 1,5x) \\
-& 2. Backend $\rightarrow$ Frontend funciona mejor que inverso \\
-& 3. Data team necesita incorporación adicional para participar \\
-\midrule
+    \multicolumn{2}{l}{\textbf{Aprendizajes}}                                                                                                                                                                                                                                                                                                \\* \nopagebreak
+                                      & 1. Las revisiones cruzadas toman más tiempo (factor 1,5x)                                                                                                                                                                                                                                            \\
+                                      & 2. El sentido \textit{Backend} $\rightarrow$ \textit{Frontend} funciona mejor que el inverso                                                                                                                                                                                                         \\
+                                      & 3. El equipo de Datos (\textit{Data team}) necesita una incorporación adicional para participar                                                                                                                                                                                                      \\
+    \midrule
 
-\multicolumn{2}{l}{\textbf{Decisión: Iterar}} \\* \nopagebreak
-& Reducir a 1 PR cruzado cada 2 semanas (más sostenible) \\
-& Sesión de 1h para Data team sobre arquitectura general \\
-& Re-evaluar en Sprint 20 \\
-
+    \multicolumn{2}{l}{\textbf{Decisión: Iterar}}                                                                                                                                                                                                                                                                                            \\* \nopagebreak
+                                      & Reducir a 1 PR cruzado cada 2 semanas (más sostenible)                                                                                                                                                                                                                                               \\
+                                      & Sesión de 1h para el \textit{Data team} sobre arquitectura general                                                                                                                                                                                                                                   \\
+                                      & Reevaluar en el \textit{Sprint} 20                                                                                                                                                                                                                                                                   \\
 \end{longtable}
 \endgroup

@@ -1,10 +1,14 @@
 \chapter{Simulación del modelo SocialScrum}
 \label{anexo:simulacion-socialscrum}
 
-Este anexo presenta una simulación que ilustra la aplicación de SocialScrum durante tres Sprints consecutivos. El escenario se basa en patrones observados en equipos reales de desarrollo, aunque los nombres y detalles específicos son ficticios. El propósito es demostrar cómo los componentes del marco ---eventos adaptados, artefactos sociales, sistema de medición y rol del Social Guide--- se integran en la práctica diaria de un equipo.
+\begin{tcolorbox}[colback=gray!10, colframe=black, fonttitle=\bfseries, title=Nota metodológica importante, breakable]
+    La siguiente simulación constituye un ejercicio de demostración operativa basado en datos proyectados y patrones documentales, \textbf{no} en métricas recolectadas en un entorno productivo real. Los valores numéricos presentados (\textit{Health Score}, velocidad del \textit{Sprint}, \textit{Social Story Points}) son cifras ilustrativas diseñadas para mostrar la mecánica de integración de los componentes de SocialScrum. Este anexo no debe interpretarse como evidencia empírica de la efectividad del modelo, sino como una herramienta heurística que sienta las bases paramétricas para que futuras investigaciones puedan replicar el ensayo en contextos organizacionales reales mediante ciclos de Investigación-Acción.
+\end{tcolorbox}
+
+Este anexo presenta una simulación proyectada que ilustra la aplicación de SocialScrum durante tres \textit{Sprints} consecutivos. El escenario se basa en patrones observados en equipos reales de desarrollo, aunque los nombres, detalles específicos y métricas son ficticios. El propósito es ilustrar cómo los componentes del marco ---eventos adaptados, artefactos sociales, sistema de medición y rol del Social Guide--- se integrarían en la práctica diaria de un equipo.
 
 \section{Contexto del equipo}
-El equipo Phoenix es un equipo Scrum de 7 personas que desarrolla una plataforma SaaS de gestión de inventarios. Tiene 18 meses de experiencia con Scrum estándar, pero ha enfrentado problemas de comunicación y colaboración que han afectado su productividad y moral, en la Tabla \ref{tab:perfil-phoenix} se presenta su perfil detallado.
+El equipo Phoenix es un equipo Scrum de 7 personas que desarrolla una plataforma SaaS de gestión de inventarios. Tiene 18 meses de experiencia con Scrum estándar, pero ha enfrentado problemas de comunicación y colaboración que han afectado su productividad y moral. En la Tabla~\ref{tab:perfil-phoenix} se presenta su perfil detallado.
 
 \begingroup
 \scriptsize
@@ -12,55 +16,42 @@ El equipo Phoenix es un equipo Scrum de 7 personas que desarrolla una plataforma
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
-  >{\RaggedRight\hspace{0pt}}p{5.2cm}   % Col 1: Característica
-  >{\RaggedRight\hspace{0pt}}p{10.0cm}  % Col 2: Descripción
-  }
+\begin{longtable}{
+    >{\RaggedRight\hspace{0pt}}p{5.2cm}   % Col 1: Característica
+    >{\RaggedRight\hspace{0pt}}p{10.0cm}  % Col 2: Descripción
+    }
 
-  % --- ENCABEZADO PRIMERA PÁGINA ---
-  \caption{Perfil del equipo Phoenix}
-  \label{tab:perfil-phoenix}                                                                        \\
-  \toprule
-  \textbf{Característica} & \textbf{Descripción}                                                    \\
-  \midrule
-  \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Perfil del equipo Phoenix}
+    \label{tab:perfil-phoenix}                                                                              \\
+    \toprule
+    \textbf{Característica}      & \textbf{Descripción}                                                     \\
+    \midrule
+    \endfirsthead
 
-  % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-  \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                           \\
-  \toprule
-  \textbf{Característica} & \textbf{Descripción}                                                    \\
-  \midrule
-  \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                 \\
+    \toprule
+    \textbf{Característica}      & \textbf{Descripción}                                                     \\
+    \midrule
+    \endhead
 
-  % --- PIE INTERMEDIO ---
-  \midrule
-  \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                   \\
-  \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                         \\
+    \endfoot
 
-  % --- PIE FINAL ---
-  \bottomrule
-  \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-  Nombre del equipo
-                          & Equipo Phoenix                                                          \\
-
-  Tamaño
-                          & 7 personas (1 Product Owner, 1 Scrum Master, 5 desarrolladores)         \\
-
-  Producto
-                          & Plataforma SaaS de gestión de inventarios                               \\
-
-  Modalidad
-                          & Híbrida (3 días en oficina, 2 días remotos)                             \\
-
-  Duración del Sprint
-                          & 2 semanas                                                               \\
-
-  Madurez en Scrum
-                          & 18 meses practicando Scrum estándar                                     \\
-
-  Social Guide
-                          & Laura (Scrum Master con capacitación adicional; rol compartido al 50\%) \\
+    Nombre del equipo            & Equipo Phoenix                                                           \\
+    Tamaño                       & 7 personas (1 Product Owner, 1 Scrum Master, 5 desarrolladores)          \\
+    Producto                     & Plataforma SaaS de gestión de inventarios                                \\
+    Modalidad                    & Híbrida (3 días en oficina, 2 días remotos)                              \\
+    Duración del \textit{Sprint} & 2 semanas                                                                \\
+    Madurez en Scrum             & 18 meses practicando Scrum estándar                                      \\
+    Social Guide                 & Laura (Scrum Master con capacitación adicional; rol compartido al 50~\%) \\
 \end{longtable}
 \endgroup
 
@@ -69,16 +60,16 @@ El equipo Phoenix es un equipo Scrum de 7 personas que desarrolla una plataforma
 Antes de implementar SocialScrum, el equipo presentaba los siguientes síntomas:
 
 \begin{itemize}
-  \item Velocidad inconsistente: fluctuaciones de 30\% entre Sprints sin causa técnica clara.
-  \item Dos desarrolladores (Carlos y Miguel) evitaban trabajar juntos desde un conflicto no resuelto hace 4 meses.
-  \item Ana, la desarrolladora más senior, concentraba el 60\% del conocimiento crítico del sistema.
-  \item Las retrospectivas se habían vuelto ``ceremoniales'': respuestas genéricas, sin mejoras reales.
-  \item El PO reportaba fricción frecuente al solicitar cambios de prioridad.
+    \item Velocidad inconsistente: fluctuaciones de 30~\% entre \textit{Sprints} sin causa técnica clara.
+    \item Dos desarrolladores (Carlos y Miguel) evitaban trabajar juntos desde un conflicto no resuelto hace 4 meses.
+    \item Ana, la desarrolladora más \textit{senior}, concentraba el 60~\% del conocimiento crítico del sistema.
+    \item Las retrospectivas se habían vuelto ``ceremoniales'': respuestas genéricas, sin mejoras reales.
+    \item El PO reportaba fricción frecuente al solicitar cambios de prioridad.
 \end{itemize}
 
 \subsection{Diagnóstico inicial (Sprint 0)}
 
-Laura realizó el diagnóstico inicial usando las herramientas de SocialScrum como se muestra en la Tabla \ref{tab:health-score-inicial}.
+Laura realizó el diagnóstico inicial usando las herramientas de SocialScrum como se muestra en la Tabla~\ref{tab:health-score-inicial}.
 
 \begingroup
 \scriptsize
@@ -87,119 +78,102 @@ Laura realizó el diagnóstico inicial usando las herramientas de SocialScrum co
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
-  >{\RaggedRight\hspace{0pt}}p{0.18\textwidth}  % Dimensión
-  >{\Centering\hspace{0pt}}p{0.15\textwidth}   % Puntuación
-  >{\RaggedRight\hspace{0pt}}p{0.60\textwidth} % Observación
-  }
+\begin{longtable}{
+    >{\RaggedRight\hspace{0pt}}p{0.18\textwidth}  % Dimensión
+    >{\Centering\hspace{0pt}}p{0.15\textwidth}   % Puntuación
+    >{\RaggedRight\hspace{0pt}}p{0.60\textwidth} % Observación
+    }
 
-  % --- ENCABEZADO PRIMERA PÁGINA ---
-  \caption{Health Score inicial del equipo Phoenix}
-  \label{tab:health-score-inicial}                                                                             \\
-  \toprule
-  \textbf{Dimensión} & \textbf{Puntuación}                                              & \textbf{Observación} \\
-  \midrule
-  \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{\textit{Health Score} inicial del equipo Phoenix}
+    \label{tab:health-score-inicial}                                                                                          \\
+    \toprule
+    \textbf{Dimensión}             & \textbf{Puntuación} & \textbf{Observación}                                               \\
+    \midrule
+    \endfirsthead
 
-  % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-  \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                      \\
-  \toprule
-  \textbf{Dimensión} & \textbf{Puntuación}                                              & \textbf{Observación} \\
-  \midrule
-  \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                   \\
+    \toprule
+    \textbf{Dimensión}             & \textbf{Puntuación} & \textbf{Observación}                                               \\
+    \midrule
+    \endhead
 
-  % --- PIE INTERMEDIO ---
-  \midrule
-  \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                              \\
-  \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                           \\
+    \endfoot
 
-  % --- PIE FINAL ---
-  \bottomrule
-  \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-  Apertura
-                     & 4.8
-                     & Los problemas se ocultan hasta el último momento                                        \\
-
-  Compromiso
-                     & 6.2
-                     & Aceptable, pero es frecuente la actitud de "ese no es mi código"                        \\
-
-  Respeto
-                     & 5.1
-                     & Tensión visible entre Carlos y Miguel                                                   \\
-
-  Foco
-                     & 5.5
-                     & Interrupciones frecuentes y cambio constante de contexto                                \\
-
-  Coraje
-                     & 4.2
-                     & Nadie menciona explícitamente el conflicto entre Carlos y Miguel                        \\
-
-  \midrule
-  \textbf{Health Score}
-                     & \textbf{5.2}
-                     & \textbf{Zona "en riesgo"}                                                               \\
+    Apertura                       & 4,8                 & Los problemas se ocultan hasta el último momento                   \\
+    Compromiso                     & 6,2                 & Aceptable, pero es frecuente la actitud de ``ese no es mi código'' \\
+    Respeto                        & 5,1                 & Tensión visible entre Carlos y Miguel                              \\
+    Foco                           & 5,5                 & Interrupciones frecuentes y cambio constante de contexto           \\
+    Coraje                         & 4,2                 & Nadie menciona explícitamente el conflicto entre Carlos y Miguel   \\
+    \midrule
+    \textbf{\textit{Health Score}} & \textbf{5,2}        & \textbf{Zona ``en riesgo''}                                        \\
 \end{longtable}
 \endgroup
 
 Los \gls{community-smells} identificados fueron:
 \begin{enumerate}
-  \item \textbf{Radio Silence} (Severidad Alta): Carlos y Miguel no se comunican directamente.
-  \item \textbf{Organisational Silo} (Severidad Media): Frontend y Backend trabajan aislados.
-  \item \textbf{Lone Wolf} (Severidad Media): Ana trabaja sola en módulos críticos.
+    \item \textbf{\textit{Radio Silence}} (Severidad Alta): Carlos y Miguel no se comunican directamente.
+    \item \textbf{\textit{Organisational Silo}} (Severidad Media): \textit{Frontend} y \textit{Backend} trabajan aislados.
+    \item \textbf{\textit{Lone Wolf}} (Severidad Media): Ana trabaja sola en módulos críticos.
 \end{enumerate}
 
 \section{Sprint 1: Establecer fundamentos}
 
 \subsection{Social Sprint Planning}
-Durante el Planning, Laura facilitó la revisión de riesgos sociales:
+Durante la \textit{Planning}, Laura facilitó la revisión de riesgos sociales:
 
 \begin{escenario}
 
-  \textbf{Laura (Social Guide)}:
-  \begin{quote}
-    "Antes de estimar, revisemos el contexto social.
-    El Health Score es 5.2 y tenemos tres \gls{community-smells} activos.
-    ¿Ven algún riesgo para este Sprint?"
-  \end{quote}
+    \textbf{Laura (Social Guide)}:
+    \begin{quote}
+        ``Antes de estimar, revisemos el contexto social.
+        El \textit{Health Score} es 5,2 y tenemos tres \gls{community-smells} activos.
+        ¿Ven algún riesgo para este \textit{Sprint}?''
+    \end{quote}
 
-  \textbf{Product Owner}:
-  \begin{quote}
-    "Necesito que Carlos y Miguel trabajen juntos en el módulo de reportes."
-  \end{quote}
+    \textbf{Product Owner}:
+    \begin{quote}
+        ``Necesito que Carlos y Miguel trabajen juntos en el módulo de reportes.''
+    \end{quote}
 
-  \textbf{Laura (Social Guide)}:
-  \begin{quote}
-    "Eso representa un riesgo. Propongo que, antes de asignar esa tarea,
-    realicemos una sesión de alineación de una hora.
-    ¿Están de acuerdo?"
-  \end{quote}
+    \textbf{Laura (Social Guide)}:
+    \begin{quote}
+        ``Eso representa un riesgo. Propongo que, antes de asignar esa tarea,
+        realicemos una sesión de alineación de una hora.
+        ¿Están de acuerdo?''
+    \end{quote}
 
-  \textbf{Resultado}:
-  \begin{quote}
-    El equipo acepta la propuesta y se agenda la sesión de alineación para el día 2 del Sprint.
-  \end{quote}
+    \textbf{Resultado}:
+    \begin{quote}
+        El equipo acepta la propuesta y se agenda la sesión de alineación para el día 2 del \textit{Sprint}.
+    \end{quote}
 
 \end{escenario}
 
 
 \subsection{Social Sprint Backlog}
 
-\textbf{Capacidad asignada}: 8 SSP de 50 puntos totales del Sprint (16\%).
+\textbf{Capacidad asignada}: 8 SSP de 50 puntos totales del \textit{Sprint} (16~\%).
 
 \begin{itemize}
-  \item Sesión de alineación entre Carlos y Miguel (3 SSP).
-  \item \gls{pair-programming} rotativo entre Ana y otro desarrollador (3 SSP).
-  \item Creación y adopción del canal \#social-phoenix en Slack (2 SSP).
+    \item Sesión de alineación entre Carlos y Miguel (3 SSP).
+    \item \gls{pair-programming} rotativo entre Ana y otro desarrollador (3 SSP).
+    \item Creación y adopción del canal \#social-phoenix en Slack (2 SSP).
 \end{itemize}
 
 \subsection{Ejecución del Sprint}
 
-\paragraph{Social Daily Standup's:}
+\paragraph{\textit{Social Daily Standups}:}
 
-En este nuevo evento se implementó la pregunta social diaria donde los miembros del equipo respondían a una pregunta rotativa diseñada para detectar señales tempranas de fricción o malestar. En la Tabla \ref{tab:daily-sprint1} se presentan las señales detectadas durante el Sprint 1.
+En este nuevo evento se implementó la pregunta social diaria, donde los miembros del equipo respondían a una pregunta rotativa diseñada para detectar señales tempranas de fricción o malestar. En la Tabla~\ref{tab:daily-sprint1} se presentan las señales detectadas durante el \textit{Sprint} 1.
 
 \begingroup
 \scriptsize
@@ -209,104 +183,93 @@ En este nuevo evento se implementó la pregunta social diaria donde los miembros
 \setlength{\LTright}{0pt}
 
 \begin{longtable}{
-  >{\Centering\hspace{0pt}}p{1.6cm}     % Día
-  >{\RaggedRight\hspace{0pt}}p{4.6cm}   % Pregunta
-  >{\RaggedRight\hspace{0pt}}p{8.9cm}   % Señal detectada
-  }
+    >{\Centering\hspace{0pt}}p{1.6cm}     % Día
+    >{\RaggedRight\hspace{0pt}}p{4.6cm}   % Pregunta
+    >{\RaggedRight\hspace{0pt}}p{8.9cm}   % Señal detectada
+    }
 
-  % --- ENCABEZADO PRIMERA PÁGINA ---
-  \caption{Señales detectadas en Social Daily Standup – Sprint 1}
-  \label{tab:daily-sprint1}                                                          \\
-  \toprule
-  \textbf{Día} & \textbf{Pregunta}                        & \textbf{Señal detectada} \\
-  \midrule
-  \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Señales detectadas en los \textit{Social Daily Standups} – Sprint 1}
+    \label{tab:daily-sprint1}                                                     \\
+    \toprule
+    \textbf{Día} & \textbf{Pregunta} & \textbf{Señal detectada}                   \\
+    \midrule
+    \endfirsthead
 
-  % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-  \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}            \\
-  \toprule
-  \textbf{Día} & \textbf{Pregunta}                        & \textbf{Señal detectada} \\
-  \midrule
-  \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}       \\
+    \toprule
+    \textbf{Día} & \textbf{Pregunta} & \textbf{Señal detectada}                   \\
+    \midrule
+    \endhead
 
-  % --- PIE INTERMEDIO ---
-  \midrule
-  \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                    \\
-  \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}               \\
+    \endfoot
 
-  % --- PIE FINAL ---
-  \bottomrule
-  \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-  3
-               & ¿Cómo te sientes?
-               & Miguel: "Tenso" (post-sesión con Carlos)                            \\
-
-  5
-               & ¿Necesitas algo?
-               & Ana: "Ayuda con documentación"                                      \\
-
-  8
-               & ¿Quién te ayudó?
-               & Carlos: "Miguel me explicó el módulo"                               \\
+    3            & ¿Cómo te sientes? & Miguel: ``Tenso'' (post-sesión con Carlos) \\
+    5            & ¿Necesitas algo?  & Ana: ``Ayuda con la documentación''        \\
+    8            & ¿Quién te ayudó?  & Carlos: ``Miguel me explicó el módulo''    \\
 \end{longtable}
 \endgroup
 
 \paragraph{Intervención:}\mbox{}\\[-0.1\baselineskip]
 
-A continuación se detalla la sesión de alineación entre Carlos y Miguel, facilitada por Laura, la cual fue una intervención clave para abordar el community smell en un escenario aplicado.
+A continuación se detalla la sesión de alineación entre Carlos y Miguel, facilitada por Laura, la cual fue una intervención clave para abordar el \textit{community smell} en un escenario aplicado.
+
 \begin{escenario}
 
-  \textbf{Sesión de alineación Carlos–Miguel}
+    \textbf{Sesión de alineación Carlos–Miguel}
 
-  Laura facilita una sesión de alineación de 90 minutos con el objetivo
-  de reducir fricción y habilitar trabajo conjunto durante el Sprint.
+    Laura facilita una sesión de alineación de 90 minutos con el objetivo
+    de reducir la fricción y habilitar el trabajo conjunto durante el \textit{Sprint}.
 
-  \begin{enumerate}
-    \item \textbf{Contexto}. Cada participante expone su perspectiva del conflicto original,
-          sin búsqueda de culpables ni juicios personales.
+    \begin{enumerate}
+        \item \textbf{Contexto}. Cada participante expone su perspectiva del conflicto original,
+              sin búsqueda de culpables ni juicios personales.
 
-    \item \textbf{Impacto}. Ambos reconocen que evitar la colaboración estaba afectando
-          al equipo, en particular la velocidad y la gestión de dependencias.
+        \item \textbf{Impacto}. Ambos reconocen que evitar la colaboración estaba afectando
+              al equipo, en particular la velocidad y la gestión de dependencias.
 
-    \item \textbf{Acuerdos}. Se establecen tres normas de trabajo conjunto:
-          \begin{itemize}
-            \item Comunicación escrita para decisiones relevantes.
-            \item Escalamiento inmediato a Laura ante señales de fricción.
-            \item Retrospectiva privada conjunta al final del Sprint.
-          \end{itemize}
-  \end{enumerate}
+        \item \textbf{Acuerdos}. Se establecen tres normas de trabajo conjunto:
+              \begin{itemize}
+                  \item Comunicación escrita para decisiones relevantes.
+                  \item Escalamiento inmediato a Laura ante señales de fricción.
+                  \item Retrospectiva privada conjunta al final del \textit{Sprint}.
+              \end{itemize}
+    \end{enumerate}
 
-  \textbf{Resultado}. La sesión permite habilitar la colaboración controlada
-  entre Carlos y Miguel para el resto del Sprint.
+    \textbf{Resultado}. La sesión permite habilitar la colaboración controlada
+    entre Carlos y Miguel para el resto del \textit{Sprint}.
 
 \end{escenario}
 
 \subsection{Social Sprint Retrospective}
 
-Fase 3 (Análisis) reveló patrón: ``No decimos cuando algo nos molesta hasta que explota.''
+La Fase 3 (Análisis) reveló un patrón: ``No decimos cuando algo nos molesta hasta que explota.''
 Análisis de causa raíz (5 Por qués):
 \begin{enumerate}
-  \item ¿Por qué no hablamos?
-        Miedo a reacciones negativas.
-
-  \item ¿Por qué hay miedo?
-        Experiencias pasadas de reacciones defensivas.
-
-  \item ¿Por qué hubo reacciones defensivas?
-        No existía un espacio seguro para dar feedback.
-
-  \item ¿Por qué no había un espacio seguro?
-        Nunca se estableció explícitamente.
-
-  \item \textbf{Causa raíz}: Falta de normas explícitas para dar feedback crítico.
+    \item ¿Por qué no hablamos?
+          Miedo a reacciones negativas.
+    \item ¿Por qué hay miedo?
+          Experiencias pasadas de reacciones defensivas.
+    \item ¿Por qué hubo reacciones defensivas?
+          No existía un espacio seguro para dar \textit{feedback}.
+    \item ¿Por qué no había un espacio seguro?
+          Nunca se estableció explícitamente.
+    \item \textbf{Causa raíz}: Falta de normas explícitas para dar \textit{feedback} crítico.
 \end{enumerate}
 
-\textbf{Compromiso}: Crear ``Acuerdo de Feedback'' con 5 reglas básicas (3 SSP para Sprint 2).
+\textbf{Compromiso}: Crear un ``Acuerdo de \textit{Feedback}'' con 5 reglas básicas (3 SSP para el \textit{Sprint} 2).
 
 \subsection{Resultados Sprint 1}
 
-En la Tabla \ref{tab:resultados-sprint1} se presentan los resultados cuantitativos del Sprint 1.
+En la Tabla~\ref{tab:resultados-sprint1} se presentan los resultados cuantitativos del \textit{Sprint} 1.
 
 \begingroup
 \scriptsize
@@ -316,55 +279,40 @@ En la Tabla \ref{tab:resultados-sprint1} se presentan los resultados cuantitativ
 \setlength{\LTright}{0pt}
 
 \begin{longtable}{
-  >{\RaggedRight\hspace{0pt}}p{7.8cm}   % Métrica
-  >{\Centering\hspace{0pt}}p{2.2cm}     % Antes
-  >{\Centering\hspace{0pt}}p{2.6cm}     % Sprint 1
-  >{\Centering\hspace{0pt}}p{2.2cm}     % Cambio
-  }
+    >{\RaggedRight\hspace{0pt}}p{7.8cm}   % Métrica
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Antes
+    >{\Centering\hspace{0pt}}p{2.6cm}     % Sprint 1
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Cambio
+    }
 
-  % --- ENCABEZADO PRIMERA PÁGINA ---
-  \caption{Resultados del Sprint 1}
-  \label{tab:resultados-sprint1}                                          \\
-  \toprule
-  \textbf{Métrica} & \textbf{Antes} & \textbf{Sprint 1} & \textbf{Cambio} \\
-  \midrule
-  \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Resultados del Sprint 1}
+    \label{tab:resultados-sprint1}                                                        \\
+    \toprule
+    \textbf{Métrica}               & \textbf{Antes} & \textbf{Sprint 1} & \textbf{Cambio} \\
+    \midrule
+    \endfirsthead
 
-  % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-  \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}} \\
-  \toprule
-  \textbf{Métrica} & \textbf{Antes} & \textbf{Sprint 1} & \textbf{Cambio} \\
-  \midrule
-  \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}               \\
+    \toprule
+    \textbf{Métrica}               & \textbf{Antes} & \textbf{Sprint 1} & \textbf{Cambio} \\
+    \midrule
+    \endhead
 
-  % --- PIE INTERMEDIO ---
-  \midrule
-  \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}         \\
-  \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                       \\
+    \endfoot
 
-  % --- PIE FINAL ---
-  \bottomrule
-  \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-  Health Score
-                   & 5.2
-                   & 5.8
-                   & +0.6                                                 \\
-
-  velocidad (SP completados)
-                   & 38
-                   & 42
-                   & +10\%                                                \\
-
-  Smells activos
-                   & 3
-                   & 3
-                   & =                                                    \\
-
-  Smells en observación
-                   & 0
-                   & 1
-                   & +1                                                   \\
+    \textit{Health Score}          & 5,2            & 5,8               & +0,6            \\
+    Velocidad (SP completados)     & 38             & 42                & +10~\%          \\
+    \textit{Smells} activos        & 3              & 3                 & =               \\
+    \textit{Smells} en observación & 0              & 1                 & +1              \\
 \end{longtable}
 \endgroup
 
@@ -372,20 +320,20 @@ En la Tabla \ref{tab:resultados-sprint1} se presentan los resultados cuantitativ
 
 \subsection{Contexto}
 
-El conflicto Carlos-Miguel estaba en observación. El foco ahora era el \textit{smell} ``Lone Wolf'' de Ana y la falta de documentación.
+El conflicto Carlos-Miguel estaba en observación. El foco ahora era el \textit{smell} ``\textit{Lone Wolf}'' de Ana y la falta de documentación.
 
 \textbf{Social Sprint Backlog}\mbox{}\\[-0.3\baselineskip]
 
-\textbf{Capacidad asignada}: (10 SSP de 50 SP totales = 20\%):
+\textbf{Capacidad asignada}: (10 SSP de 50 SP totales = 20~\%):
 \begin{itemize}
-  \item Crear ``Acuerdo de Feedback'' (3 SSP)
-  \item Sesiones de transferencia de conocimiento Ana $\rightarrow$ equipo (5 SSP)
-  \item Documentar módulo de inventarios (2 SSP)
+    \item Crear ``Acuerdo de \textit{Feedback}'' (3 SSP)
+    \item Sesiones de transferencia de conocimiento Ana $\rightarrow$ equipo (5 SSP)
+    \item Documentar módulo de inventarios (2 SSP)
 \end{itemize}
 
 \subsection{Intervención: Transferencia de conocimiento}
 
-Ana facilitó 3 sesiones de 90 minutos cada una donde se habló sobre arquitectura, patrones de integración y debugging de casos críticos. En la Tabla \ref{tab:transferencia-conocimiento} se presentan las sesiones realizadas.
+Ana facilitó 3 sesiones de 90 minutos cada una donde se habló sobre arquitectura, patrones de integración y depuración (\textit{debugging}) de casos críticos. En la Tabla~\ref{tab:transferencia-conocimiento} se presentan las sesiones realizadas.
 
 \begingroup
 \scriptsize
@@ -395,82 +343,74 @@ Ana facilitó 3 sesiones de 90 minutos cada una donde se habló sobre arquitectu
 \setlength{\LTright}{0pt}
 
 \begin{longtable}{
-  >{\Centering\hspace{0pt}}p{1.8cm}     % Sesión
-  >{\RaggedRight\hspace{0pt}}p{9.6cm}   % Tema
-  >{\RaggedRight\hspace{0pt}}p{3.8cm}   % Participantes
-  }
+    >{\Centering\hspace{0pt}}p{1.8cm}     % Sesión
+    >{\RaggedRight\hspace{0pt}}p{9.6cm}   % Tema
+    >{\RaggedRight\hspace{0pt}}p{3.8cm}   % Participantes
+    }
 
-  % --- ENCABEZADO PRIMERA PÁGINA ---
-  \caption{Sesiones de transferencia de conocimiento}
-  \label{tab:transferencia-conocimiento}                                                                                                             \\
-  \toprule
-  \textbf{Sesión} & \textbf{Tema}                                                                                           & \textbf{Participantes} \\
-  \midrule
-  \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Sesiones de transferencia de conocimiento}
+    \label{tab:transferencia-conocimiento}                                                                                                                      \\
+    \toprule
+    \textbf{Sesión} & \textbf{Tema}                                                                                                    & \textbf{Participantes} \\
+    \midrule
+    \endfirsthead
 
-  % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-  \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                            \\
-  \toprule
-  \textbf{Sesión} & \textbf{Tema}                                                                                           & \textbf{Participantes} \\
-  \midrule
-  \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                     \\
+    \toprule
+    \textbf{Sesión} & \textbf{Tema}                                                                                                    & \textbf{Participantes} \\
+    \midrule
+    \endhead
 
-  % --- PIE INTERMEDIO ---
-  \midrule
-  \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                    \\
-  \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                             \\
+    \endfoot
 
-  % --- PIE FINAL ---
-  \bottomrule
-  \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-  1
-                  & Arquitectura del módulo de inventarios
-                  & Todo el equipo                                                                                                                   \\
-
-  2
-                  & Patrones de integración con ERP (Enterprise Resource Planning, Planificación de Recursos Empresariales)
-                  & Carlos, Pedro                                                                                                                    \\
-
-  3
-                  & Debugging de casos críticos
-                  & Miguel, Sara                                                                                                                     \\
+    1               & Arquitectura del módulo de inventarios                                                                           & Todo el equipo         \\
+    2               & Patrones de integración con ERP (\textit{Enterprise Resource Planning}, Planificación de Recursos Empresariales) & Carlos, Pedro          \\
+    3               & Depuración (\textit{debugging}) de casos críticos                                                                & Miguel, Sara           \\
 \end{longtable}
 \endgroup
 
 Resultado:
 \begin{itemize}
-  \item Bus factor del módulo crítico pasó de 1 (solo Ana) a 3 (Ana + Carlos + Miguel).
-  \item Ana reportó ``alivio'' por no ser la única responsable.
-  \item Se creó wiki con 12 páginas de documentación técnica.
+    \item El \textit{truck factor} del módulo crítico pasó de 1 (solo Ana) a 3 (Ana + Carlos + Miguel).
+    \item Ana reportó ``alivio'' por no ser la única responsable.
+    \item Se creó una \textit{wiki} con 12 páginas de documentación técnica.
 \end{itemize}
 
 \subsection{Evento inesperado: Crisis de deadline}
 
-Día 7: El PO anunció que un cliente importante necesitaba una feature para el día 10 (3 días antes del fin de Sprint).
+Día 7: El PO anunció que un cliente importante necesitaba una \textit{feature} para el día 10 (3 días antes del fin de \textit{Sprint}).
 
 \begin{escenario}
-  \textbf{Product Owner}:
-  \begin{quote}
-    ``Necesitamos priorizar esta iniciativa. Es crítica para el cliente.''
-  \end{quote}
-  \textbf{Social Guide (Laura)}:
-  \begin{quote}
-    ``El Health Score actual es 6.1. El equipo puede absorber presión temporal. Sin embargo, propongo reducir el Social Sprint Backlog a 5 SSP cancelando una sesión de transferencia de conocimiento, para liberar capacidad técnica.''
-  \end{quote}
-  \textbf{Equipo}:
-  \begin{quote}
-    Acepta la propuesta.
-  \end{quote}
-  La sesión de transferencia número 3 se re-programa para el Sprint 3.
+    \textbf{Product Owner}:
+    \begin{quote}
+        ``Necesitamos priorizar esta iniciativa. Es crítica para el cliente.''
+    \end{quote}
+    \textbf{Social Guide (Laura)}:
+    \begin{quote}
+        ``El \textit{Health Score} actual es 6,1. El equipo puede absorber la presión temporal. Sin embargo, propongo reducir el Social Sprint Backlog a 5 SSP cancelando una sesión de transferencia de conocimiento, para liberar capacidad técnica.''
+    \end{quote}
+    \textbf{Equipo}:
+    \begin{quote}
+        Acepta la propuesta.
+    \end{quote}
+    La sesión de transferencia número 3 se reprograma para el \textit{Sprint} 3.
 
 \end{escenario}
 
-Este escenario ilustra cómo SocialScrum permite flexibilidad: la salud social no es ``sagrada''; puede ajustarse cuando hay presión legítima, siempre que el Health Score lo permita.
+Este escenario ilustra cómo SocialScrum permite flexibilidad: la salud social no es ``sagrada''; puede ajustarse cuando hay presión legítima, siempre que el \textit{Health Score} lo permita.
 
 \subsection{Resultados Sprint 2}
 
-En la Tabla \ref{tab:resultados-sprint2} se presentan los resultados cuantitativos del Sprint 2.
+En la Tabla~\ref{tab:resultados-sprint2} se presentan los resultados cuantitativos del \textit{Sprint} 2.
 
 \begingroup
 \scriptsize
@@ -480,55 +420,40 @@ En la Tabla \ref{tab:resultados-sprint2} se presentan los resultados cuantitativ
 \setlength{\LTright}{0pt}
 
 \begin{longtable}{
-  >{\RaggedRight\hspace{0pt}}p{7.8cm}   % Métrica
-  >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 1
-  >{\Centering\hspace{0pt}}p{2.6cm}     % Sprint 2
-  >{\Centering\hspace{0pt}}p{2.4cm}     % Cambio
-  }
+    >{\RaggedRight\hspace{0pt}}p{7.8cm}   % Métrica
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 1
+    >{\Centering\hspace{0pt}}p{2.6cm}     % Sprint 2
+    >{\Centering\hspace{0pt}}p{2.4cm}     % Cambio
+    }
 
-  % --- ENCABEZADO PRIMERA PÁGINA ---
-  \caption{Resultados Sprint 2}
-  \label{tab:resultados-sprint2}                                                      \\
-  \toprule
-  \textbf{Métrica} & \textbf{Sprint 1}          & \textbf{Sprint 2} & \textbf{Cambio} \\
-  \midrule
-  \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Resultados del Sprint 2}
+    \label{tab:resultados-sprint2}                                                               \\
+    \toprule
+    \textbf{Métrica}          & \textbf{Sprint 1} & \textbf{Sprint 2}          & \textbf{Cambio} \\
+    \midrule
+    \endfirsthead
 
-  % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-  \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}             \\
-  \toprule
-  \textbf{Métrica} & \textbf{Sprint 1}          & \textbf{Sprint 2} & \textbf{Cambio} \\
-  \midrule
-  \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                      \\
+    \toprule
+    \textbf{Métrica}          & \textbf{Sprint 1} & \textbf{Sprint 2}          & \textbf{Cambio} \\
+    \midrule
+    \endhead
 
-  % --- PIE INTERMEDIO ---
-  \midrule
-  \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                     \\
-  \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                              \\
+    \endfoot
 
-  % --- PIE FINAL ---
-  \bottomrule
-  \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-  Health Score
-                   & 5.8
-                   & 6.4
-                   & +0.6                                                             \\
-
-  velocidad
-                   & 42
-                   & 45
-                   & +7\%                                                             \\
-
-  Smells activos
-                   & 3
-                   & 2
-                   & -1                                                               \\
-
-  Smells mitigados
-                   & 0
-                   & 1 (\textit{Radio Silence})
-                   & +1                                                               \\
+    \textit{Health Score}     & 5,8               & 6,4                        & +0,6            \\
+    Velocidad                 & 42                & 45                         & +7~\%           \\
+    \textit{Smells} activos   & 3                 & 2                          & -1              \\
+    \textit{Smells} mitigados & 0                 & 1 (\textit{Radio Silence}) & +1              \\
 \end{longtable}
 \endgroup
 
@@ -536,58 +461,58 @@ En la Tabla \ref{tab:resultados-sprint2} se presentan los resultados cuantitativ
 
 \subsection{Contexto}
 
-Health Score en 6.4 (zona ``En riesgo'' pero cerca de ``Saludable''). Dos smells activos: \textit{Organisational Silo} (FE-BE) y \textit{Lone Wolf} (reducido a Media).
+\textit{Health Score} en 6,4 (zona ``En riesgo'' pero cerca de ``Saludable''). Dos \textit{smells} activos: \textit{Organisational Silo} (FE-BE) y \textit{Lone Wolf} (reducido a Media).
 
 \textbf{Social Sprint Backlog}\mbox{}\\[-0.3\baselineskip]
 
-\textbf{Capacidad asignada}: (6 SSP de 50 SP = 12\%):
+\textbf{Capacidad asignada}: (6 SSP de 50 SP = 12~\%):
 \begin{itemize}
-  \item Completar sesión 3 de transferencia (2 SSP).
-  \item Ritual de sincronización FE-BE (Frontend-Backend) semanal (2 SSP).
-  \item Retrospectiva profunda de 3 Sprints (2 SSP).
+    \item Completar la sesión 3 de transferencia (2 SSP).
+    \item Ritual de sincronización FE-BE (\textit{Frontend-Backend}) semanal (2 SSP).
+    \item Retrospectiva profunda de 3 \textit{Sprints} (2 SSP).
 \end{itemize}
 
 \subsection{Intervención: Sincronización FE-BE}
 
-Se implementó reunión semanal de 30 minutos entre Frontend y Backend:
+Se implementó una reunión semanal de 30 minutos entre \textit{Frontend} y \textit{Backend}:
 
 \begin{itemize}
-  \item Agenda fija: ¿Qué cambios de API vienen? ¿Qué necesita FE de BE? ¿Dónde hay fricción?
-  \item Rotación de facilitador (FE una semana, BE la siguiente).
-  \item Output: Lista de dependencias para el Sprint Planning.
+    \item Agenda fija: ¿Qué cambios de API vienen? ¿Qué necesita el FE del BE? ¿Dónde hay fricción?
+    \item Rotación de facilitador (FE una semana, BE la siguiente).
+    \item \textit{Output}: Lista de dependencias para la \textit{Sprint Planning}.
 \end{itemize}
 
-Resultado: Integraciones tardías se redujeron de 4 por Sprint a 1.
+Resultado: Las integraciones tardías se redujeron de 4 por \textit{Sprint} a 1.
 
 \subsection{Retrospectiva de consolidación}
 
-Laura facilitó una retrospectiva extendida (2 horas) para evaluar los resultados obtenidos a lo largo de tres Sprints consecutivos.
+Laura facilitó una retrospectiva extendida (2 horas) para evaluar los resultados obtenidos a lo largo de tres \textit{Sprints} consecutivos.
 
 \paragraph{\normalfont{Aspectos que funcionaron.}}
 \begin{itemize}
-  \item El Social Daily Standup permitió detectar tensiones antes de que escalaran.
-  \item La sesión de alineación entre Carlos y Miguel evitó el bloqueo de una feature crítica.
-  \item La transferencia de conocimiento redujo la dependencia técnica de Ana.
-  \item El equipo comenzó a mencionar problemas de forma explícita en retrospectivas.
+    \item El \textit{Social Daily Standup} permitió detectar tensiones antes de que escalaran.
+    \item La sesión de alineación entre Carlos y Miguel evitó el bloqueo de una \textit{feature} crítica.
+    \item La transferencia de conocimiento redujo la dependencia técnica de Ana.
+    \item El equipo comenzó a mencionar problemas de forma explícita en las retrospectivas.
 \end{itemize}
 
 \paragraph{\normalfont{Aspectos que no funcionaron.}}
 \begin{itemize}
-  \item La sobrecarga inicial se percibió como elevada (la percepción mejoró en los Sprints 2 y 3).
-  \item Algunas preguntas del Social Daily Standup se volvieron rutinarias con el tiempo.
-  \item El Product Owner mostró resistencia inicial a asignar capacidad a ítems sociales.
+    \item La sobrecarga inicial se percibió como elevada (la percepción mejoró en los \textit{Sprints} 2 y 3).
+    \item Algunas preguntas del \textit{Social Daily Standup} se volvieron rutinarias con el tiempo.
+    \item El Product Owner mostró resistencia inicial a asignar capacidad a ítems sociales.
 \end{itemize}
 
 \paragraph{\normalfont{Ajustes acordados.}}
 \begin{itemize}
-  \item Reducir el Social Sprint Backlog al 10\% como nivel de mantenimiento.
-  \item Rotar la pregunta social semanalmente, en lugar de diariamente.
-  \item Incluir al Product Owner en una revisión mensual del Health Score.
+    \item Reducir el Social Sprint Backlog al 10~\% como nivel de mantenimiento.
+    \item Rotar la pregunta social semanalmente, en lugar de diariamente.
+    \item Incluir al Product Owner en una revisión mensual del \textit{Health Score}.
 \end{itemize}
 
 \subsection{Resultados Sprint 3}
 
-En la Tabla \ref{tab:resultados-sprint3} se presentan los resultados cuantitativos del Sprint 3.
+En la Tabla~\ref{tab:resultados-sprint3} se presentan los resultados cuantitativos del \textit{Sprint} 3.
 
 \begingroup
 \scriptsize
@@ -597,61 +522,46 @@ En la Tabla \ref{tab:resultados-sprint3} se presentan los resultados cuantitativ
 \setlength{\LTright}{0pt}
 
 \begin{longtable}{
-  >{\RaggedRight\hspace{0pt}}p{7.8cm}   % Métrica
-  >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 2
-  >{\Centering\hspace{0pt}}p{2.6cm}     % Sprint 3
-  >{\Centering\hspace{0pt}}p{2.4cm}     % Cambio
-  }
+    >{\RaggedRight\hspace{0pt}}p{7.8cm}   % Métrica
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 2
+    >{\Centering\hspace{0pt}}p{2.6cm}     % Sprint 3
+    >{\Centering\hspace{0pt}}p{2.4cm}     % Cambio
+    }
 
-  % --- ENCABEZADO PRIMERA PÁGINA ---
-  \caption{Resultados Sprint 3}
-  \label{tab:resultados-sprint3}                                             \\
-  \toprule
-  \textbf{Métrica} & \textbf{Sprint 2} & \textbf{Sprint 3} & \textbf{Cambio} \\
-  \midrule
-  \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Resultados del Sprint 3}
+    \label{tab:resultados-sprint3}                                                      \\
+    \toprule
+    \textbf{Métrica}          & \textbf{Sprint 2} & \textbf{Sprint 3} & \textbf{Cambio} \\
+    \midrule
+    \endfirsthead
 
-  % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-  \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}    \\
-  \toprule
-  \textbf{Métrica} & \textbf{Sprint 2} & \textbf{Sprint 3} & \textbf{Cambio} \\
-  \midrule
-  \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}             \\
+    \toprule
+    \textbf{Métrica}          & \textbf{Sprint 2} & \textbf{Sprint 3} & \textbf{Cambio} \\
+    \midrule
+    \endhead
 
-  % --- PIE INTERMEDIO ---
-  \midrule
-  \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}            \\
-  \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                     \\
+    \endfoot
 
-  % --- PIE FINAL ---
-  \bottomrule
-  \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-  Health Score
-                   & 6.4
-                   & 7.1
-                   & +0.7                                                    \\
-
-  velocidad
-                   & 45
-                   & 48
-                   & +6\%                                                    \\
-
-  Smells activos
-                   & 2
-                   & 1
-                   & -1                                                      \\
-
-  Smells mitigados
-                   & 1
-                   & 2
-                   & +1                                                      \\
+    \textit{Health Score}     & 6,4               & 7,1               & +0,7            \\
+    Velocidad                 & 45                & 48                & +6~\%           \\
+    \textit{Smells} activos   & 2                 & 1                 & -1              \\
+    \textit{Smells} mitigados & 1                 & 2                 & +1              \\
 \end{longtable}
 \endgroup
 
 \section{Resumen de resultados}
 
-Los resultados presentados son un resumen de la evolución del equipo Phoenix durante los tres Sprints de implementación de SocialScrum. En la Tabla \ref{tab:evolucion-phoenix} se sintetizan las métricas clave, y en la Figura \ref{fig:evolucion-health-score} se visualiza la mejora del Health Score a lo largo del tiempo.
+Los resultados presentados son un resumen de la evolución del equipo Phoenix durante los tres \textit{Sprints} de implementación de SocialScrum. En la Tabla~\ref{tab:evolucion-phoenix} se sintetizan las métricas clave, y en la Figura~\ref{fig:evolucion-health-score} se visualiza la mejora del \textit{Health Score} a lo largo del tiempo.
 
 \begingroup
 \scriptsize
@@ -661,107 +571,88 @@ Los resultados presentados son un resumen de la evolución del equipo Phoenix du
 \setlength{\LTright}{0pt}
 
 \begin{longtable}{
-  >{\RaggedRight\hspace{0pt}}p{6.0cm}   % Métrica
-  >{\Centering\hspace{0pt}}p{2.0cm}     % Inicial
-  >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 1
-  >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 2
-  >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 3
-  }
+    >{\RaggedRight\hspace{0pt}}p{6.0cm}   % Métrica
+    >{\Centering\hspace{0pt}}p{2.0cm}     % Inicial
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 1
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 2
+    >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 3
+    }
 
-  % --- ENCABEZADO PRIMERA PÁGINA ---
-  \caption{Evolución del equipo Phoenix en tres Sprints}
-  \label{tab:evolucion-phoenix}                                                                   \\
-  \toprule
-  \textbf{Métrica} & \textbf{Inicial} & \textbf{Sprint 1} & \textbf{Sprint 2} & \textbf{Sprint 3} \\
-  \midrule
-  \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Evolución del equipo Phoenix en tres Sprints}
+    \label{tab:evolucion-phoenix}                                                                          \\
+    \toprule
+    \textbf{Métrica}        & \textbf{Inicial} & \textbf{Sprint 1} & \textbf{Sprint 2} & \textbf{Sprint 3} \\
+    \midrule
+    \endfirsthead
 
-  % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-  \multicolumn{5}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                         \\
-  \toprule
-  \textbf{Métrica} & \textbf{Inicial} & \textbf{Sprint 1} & \textbf{Sprint 2} & \textbf{Sprint 3} \\
-  \midrule
-  \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{5}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                \\
+    \toprule
+    \textbf{Métrica}        & \textbf{Inicial} & \textbf{Sprint 1} & \textbf{Sprint 2} & \textbf{Sprint 3} \\
+    \midrule
+    \endhead
 
-  % --- PIE INTERMEDIO ---
-  \midrule
-  \multicolumn{5}{r}{\textit{Continúa en la siguiente página...}}                                 \\
-  \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{5}{r}{\textit{Continúa en la siguiente página...}}                                        \\
+    \endfoot
 
-  % --- PIE FINAL ---
-  \bottomrule
-  \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-  Health Score
-                   & 5.2
-                   & 5.8
-                   & 6.4
-                   & 7.1                                                                          \\
-
-  velocidad (SP)
-                   & 38
-                   & 42
-                   & 45
-                   & 48                                                                           \\
-
-  Smells activos
-                   & 3
-                   & 3
-                   & 2
-                   & 1                                                                            \\
-
-  Capacidad social (\%)
-                   & 0\%
-                   & 16\%
-                   & 20\%
-                   & 12\%                                                                         \\
+    \textit{Health Score}   & 5,2              & 5,8               & 6,4               & 7,1               \\
+    Velocidad (SP)          & 38               & 42                & 45                & 48                \\
+    \textit{Smells} activos & 3                & 3                 & 2                 & 1                 \\
+    Capacidad social (~\%)  & 0~\%             & 16~\%             & 20~\%             & 12~\%             \\
 \end{longtable}
 \endgroup
 
 \begin{figure}[h]
-  \centering
-  \begin{tikzpicture}[scale=0.9]
-    % Ejes
-    \draw[thick, -stealth] (0,0) -- (10,0) node[right, font=\footnotesize] {Sprints};
-    \draw[thick, -stealth] (0,0) -- (0,6) node[above, font=\footnotesize] {Health Score};
+    \centering
+    \begin{tikzpicture}[scale=0.9]
+        % Ejes
+        \draw[thick, -stealth] (0,0) -- (10,0) node[right, font=\footnotesize] {Sprints};
+        \draw[thick, -stealth] (0,0) -- (0,6) node[above, font=\footnotesize] {\textit{Health Score}};
 
-    % Lineas de zona
-    \fill[red!10] (0,0) rectangle (10,2.45);
-    \fill[yellow!10] (0,2.45) rectangle (10,3.45);
-    \fill[green!10] (0,3.45) rectangle (10,5);
+        % Lineas de zona
+        \fill[red!10] (0,0) rectangle (10,2.45);
+        \fill[yellow!10] (0,2.45) rectangle (10,3.45);
+        \fill[green!10] (0,3.45) rectangle (10,5);
 
-    % Etiquetas de zona
-    \node[font=\tiny, gray] at (0.8, 1.2) {Critico};
-    \node[font=\tiny, gray] at (0.8, 2.9) {Riesgo};
-    \node[font=\tiny, gray] at (0.8, 4.2) {Saludable};
+        % Etiquetas de zona
+        \node[font=\tiny, gray] at (0.8, 1.2) {Crítico};
+        \node[font=\tiny, gray] at (0.8, 2.9) {Riesgo};
+        \node[font=\tiny, gray] at (0.8, 4.2) {Saludable};
 
-    % Escala Y
-    \node[font=\tiny] at (-0.3, 0) {1};
-    \node[font=\tiny] at (-0.3, 2.45) {5};
-    \node[font=\tiny] at (-0.3, 3.45) {7};
-    \node[font=\tiny] at (-0.3, 5) {10};
+        % Escala Y
+        \node[font=\tiny] at (-0.3, 0) {1};
+        \node[font=\tiny] at (-0.3, 2.45) {5};
+        \node[font=\tiny] at (-0.3, 3.45) {7};
+        \node[font=\tiny] at (-0.3, 5) {10};
 
-    % Puntos de datos (escalados: 5.2->2.6, 5.8->2.9, 6.4->3.2, 7.1->3.55)
-    \fill[blue!70] (1,2.6) circle (0.12) node[above, font=\tiny] {5.2};
-    \fill[blue!70] (3.5,2.9) circle (0.12) node[above, font=\tiny] {5.8};
-    \fill[blue!70] (6,3.2) circle (0.12) node[above, font=\tiny] {6.4};
-    \fill[blue!70] (8.5,3.55) circle (0.12) node[above, font=\tiny] {7.1};
+        % Puntos de datos (escalados: 5.2->2.6, 5.8->2.9, 6.4->3.2, 7.1->3.55)
+        \fill[blue!70] (1,2.6) circle (0.12) node[above, font=\tiny] {5,2};
+        \fill[blue!70] (3.5,2.9) circle (0.12) node[above, font=\tiny] {5,8};
+        \fill[blue!70] (6,3.2) circle (0.12) node[above, font=\tiny] {6,4};
+        \fill[blue!70] (8.5,3.55) circle (0.12) node[above, font=\tiny] {7,1};
 
-    % Linea de conexión
-    \draw[thick, blue!70] (1,2.6) -- (3.5,2.9) -- (6,3.2) -- (8.5,3.55);
+        % Linea de conexión
+        \draw[thick, blue!70] (1,2.6) -- (3.5,2.9) -- (6,3.2) -- (8.5,3.55);
 
-    % Etiquetas de Sprint
-    \node[font=\tiny] at (1, -0.4) {Inicial};
-    \node[font=\tiny] at (3.5, -0.4) {Sprint 1};
-    \node[font=\tiny] at (6, -0.4) {Sprint 2};
-    \node[font=\tiny] at (8.5, -0.4) {Sprint 3};
+        % Etiquetas de Sprint
+        \node[font=\tiny] at (1, -0.4) {Inicial};
+        \node[font=\tiny] at (3.5, -0.4) {Sprint 1};
+        \node[font=\tiny] at (6, -0.4) {Sprint 2};
+        \node[font=\tiny] at (8.5, -0.4) {Sprint 3};
 
-    % Flecha de tendencia
-    \draw[-stealth, thick, green!60!black] (9, 2.6) -- (9, 3.55);
-    \node[font=\tiny, green!60!black, align=center] at (9.5, 3.1) {+1.9\\puntos};
-  \end{tikzpicture}
-  \caption{Evolución del Health Score del equipo Phoenix}
-  \label{fig:evolucion-health-score}
+        % Flecha de tendencia
+        \draw[-stealth, thick, green!60!black] (9, 2.6) -- (9, 3.55);
+        \node[font=\tiny, green!60!black, align=center] at (9.5, 3.1) {+1,9\\puntos};
+    \end{tikzpicture}
+    \caption{Evolución del \textit{Health Score} del equipo Phoenix}
+    \label{fig:evolucion-health-score}
 \end{figure}
 
 \section{Lecciones aprendidas}
@@ -771,28 +662,23 @@ Durante la implementación de SocialScrum en el equipo Phoenix, se identificaron
 \subsection{Factores de éxito}
 
 \begin{enumerate}
-  \item \textbf{Compromiso visible del liderazgo}: El CTO aprobó dedicar hasta 20\% de capacidad a items sociales en los primeros Sprints.
-
-  \item \textbf{Intervención temprana en conflicto}: La sesión Carlos-Miguel en Sprint 1 evitó que el conflicto bloqueara una feature crítica.
-
-  \item \textbf{Flexibilidad ante presión}: Sprint 2 demostró que SocialScrum puede adaptarse a deadlines urgentes sin abandonar completamente la agenda social.
-
-  \item \textbf{Transferencia de conocimiento proactiva}: Reducir el bus factor de Ana benefició tanto la salud social como la resiliencia técnica.
+    \item \textbf{Compromiso visible del liderazgo}: El CTO aprobó dedicar hasta el 20~\% de la capacidad a ítems sociales en los primeros \textit{Sprints}.
+    \item \textbf{Intervención temprana en el conflicto}: La sesión Carlos-Miguel en el \textit{Sprint} 1 evitó que el conflicto bloqueara una \textit{feature} crítica.
+    \item \textbf{Flexibilidad ante la presión}: El \textit{Sprint} 2 demostró que SocialScrum puede adaptarse a \textit{deadlines} urgentes sin abandonar completamente la agenda social.
+    \item \textbf{Transferencia de conocimiento proactiva}: Reducir el \textit{truck factor} de Ana benefició tanto a la salud social como a la resiliencia técnica.
 \end{enumerate}
 
 \subsection{Dificultades encontradas}
 
 \begin{enumerate}
-  \item \textbf{Resistencia inicial del PO}: Percibía los SSP como ``tiempo robado'' al desarrollo. Se resolvió mostrando correlación velocidad-Health Score.
-
-  \item \textbf{Fatiga de preguntas sociales}: El equipo se ``acostumbró'' a las preguntas del Daily. Se resolvió rotando preguntas semanalmente.
-
-  \item \textbf{Dificultad para cuantificar ROI}: Es difícil probar causalidad entre intervenciones sociales y mejora de velocidad. Se aceptó correlación como evidencia suficiente.
+    \item \textbf{Resistencia inicial del PO}: Percibía los SSP como ``tiempo robado'' al desarrollo. Se resolvió mostrando la correlación entre la velocidad y el \textit{Health Score}.
+    \item \textbf{Fatiga de las preguntas sociales}: El equipo se ``acostumbró'' a las preguntas de la \textit{Daily}. Se resolvió rotando las preguntas semanalmente.
+    \item \textbf{Dificultad para cuantificar el ROI}: Es difícil probar una causalidad directa entre las intervenciones sociales y la mejora de la velocidad. Se aceptó la correlación como evidencia suficiente.
 \end{enumerate}
 
 \subsection{Recomendaciones para otros equipos}
 
-En la Tabla \ref{tab:recomendaciones-phoenix} se resumen recomendaciones prácticas basadas en la experiencia del equipo Phoenix.
+En la Tabla~\ref{tab:recomendaciones-phoenix} se resumen las recomendaciones prácticas basadas en la experiencia del equipo Phoenix.
 
 \begingroup
 \scriptsize
@@ -802,49 +688,40 @@ En la Tabla \ref{tab:recomendaciones-phoenix} se resumen recomendaciones prácti
 \setlength{\LTright}{0pt}
 
 \begin{longtable}{
-  >{\RaggedRight\hspace{0pt}}p{5.5cm}   % Recomendación
-  >{\RaggedRight\hspace{0pt}}p{10.0cm}   % Justificación
-  }
+    >{\RaggedRight\hspace{0pt}}p{5.5cm}   % Recomendación
+    >{\RaggedRight\hspace{0pt}}p{10.0cm}  % Justificación
+    }
 
-  % --- ENCABEZADO PRIMERA PÁGINA ---
-  \caption{Recomendaciones basadas en la simulación del equipo Phoenix}
-  \label{tab:recomendaciones-phoenix}                                                                                                                \\
-  \toprule
-  \textbf{Recomendación} & \textbf{Justificación}                                                                                                    \\
-  \midrule
-  \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Recomendaciones basadas en la simulación del equipo Phoenix}
+    \label{tab:recomendaciones-phoenix}                                                                                                                                           \\
+    \toprule
+    \textbf{Recomendación}                      & \textbf{Justificación}                                                                                                          \\
+    \midrule
+    \endfirsthead
 
-  % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-  \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                            \\
-  \toprule
-  \textbf{Recomendación} & \textbf{Justificación}                                                                                                    \\
-  \midrule
-  \endhead
+    % --- ENCABEZADO SIGUIENTES PÁGINAS ---
+    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                       \\
+    \toprule
+    \textbf{Recomendación}                      & \textbf{Justificación}                                                                                                          \\
+    \midrule
+    \endhead
 
-  % --- PIE INTERMEDIO ---
-  \midrule
-  \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                                                                    \\
-  \endfoot
+    % --- PIE INTERMEDIO ---
+    \midrule
+    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                                                                                               \\
+    \endfoot
 
-  % --- PIE FINAL ---
-  \bottomrule
-  \endlastfoot
+    % --- PIE FINAL ---
+    \bottomrule
+    \endlastfoot
 
-  Empezar con 15--20\% de capacidad social
-                         & Permite intervenciones significativas sin colapsar la velocidad. Reducir a 10\% una vez estabilizado el equipo.           \\
-
-  Priorizar conflictos activos
-                         & Son los factores que más bloquean el trabajo. Resolverlos temprano libera capacidad para acciones preventivas.            \\
-
-  Medir Health Score semanalmente
-                         & Permite detectar deterioro antes de que se convierta en crisis. La medición mensual es insuficiente en equipos en riesgo. \\
-
-  Involucrar al PO desde el Sprint 0
-                         & La resistencia inicial es predecible. La educación temprana facilita entender la correlación entre salud y productividad. \\
-
-  Documentar intervenciones
-                         & Permite aprender qué prácticas funcionan para el equipo específico y justificar inversiones futuras.                      \\
+    Empezar con 15--20~\% de capacidad social   & Permite intervenciones significativas sin colapsar la velocidad. Reducir al 10~\% una vez estabilizado el equipo.               \\
+    Priorizar conflictos activos                & Son los factores que más bloquean el trabajo. Resolverlos temprano libera capacidad para acciones preventivas.                  \\
+    Medir \textit{Health Score} semanalmente    & Permite detectar el deterioro antes de que se convierta en crisis. La medición mensual es insuficiente en equipos en riesgo.    \\
+    Involucrar al PO desde el \textit{Sprint} 0 & La resistencia inicial es predecible. La educación temprana facilita entender la correlación entre la salud y la productividad. \\
+    Documentar intervenciones                   & Permite aprender qué prácticas funcionan para el equipo específico y justificar inversiones futuras.                            \\
 \end{longtable}
 \endgroup
 
-La simulación del equipo Phoenix demuestra que SocialScrum puede implementarse de forma incremental, con resultados medibles en 3 Sprints. La mejora del Health Score de 5.2 a 7.1 (+36\%) coincidió con un aumento de velocidad de 38 a 48 SP (+26\%). Aunque la correlación no prueba causalidad, la consistencia de ambas tendencias sugiere que abordar la deuda social tiene beneficios tanto para el bienestar del equipo como para su productividad.
+La simulación proyectada del equipo Phoenix ilustra cómo SocialScrum podría implementarse de forma incremental a lo largo de 3 \textit{Sprints}. En el escenario simulado, el \textit{Health Score} proyectado evolucionó de 5,2 a 7,1 (+36~\%) y la velocidad de 38 a 48 SP (+26~\%). No obstante, es imperativo reiterar que estos datos son \textbf{cifras ficticias basadas en proyecciones narrativas}, no en métricas recolectadas en un entorno productivo real. Si bien la consistencia de ambas tendencias en la simulación sugiere que abordar la deuda social podría tener beneficios tanto para el bienestar del equipo como para su productividad, esta hipótesis requiere confirmación mediante intervenciones empíricas en equipos reales, lo cual constituye la línea de trabajo futuro prioritaria de esta investigación.
