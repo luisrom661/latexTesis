@@ -3,9 +3,9 @@
 
 \section{Principio de No-Sobrecarga: Integración sin agregar tiempo}
 
-Una preocupación frecuente ante cualquier extensión metodológica es el tiempo adicional que consume. Esta sección demuestra que SocialScrum, implementado correctamente, agrega una sobrecarga mínima: aproximadamente 45 minutos cada dos semanas, equivalente al 0.6~\% del tiempo total del \textit{Sprint}.
+Una preocupación frecuente ante cualquier extensión metodológica es el tiempo adicional que consume. Esta sección demuestra que \gls{socialscrum}, implementado correctamente, agrega una sobrecarga mínima: aproximadamente 45 minutos cada dos semanas, equivalente al 0.6~\% del tiempo total del \textit{Sprint}.
 
-El principio fundamental es \textbf{integración, no adición}: los componentes sociales de SocialScrum se incorporan a los eventos Scrum existentes, no crean reuniones nuevas.
+El principio fundamental es \textbf{integración, no adición}: los componentes sociales de SocialScrum se incorporan a los eventos \gls{scrum} existentes, no crean reuniones nuevas.
 
 \subsection{Sobrecarga temporal por evento}
 
@@ -16,42 +16,47 @@ El principio fundamental es \textbf{integración, no adición}: los componentes 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{3.5cm}   % Col 1: Evento
-    >{\Centering\hspace{0pt}}p{2.5cm}     % Col 2: Scrum estándar
-    >{\Centering\hspace{0pt}}p{2.5cm}     % Col 3: SocialScrum
-    >{\Centering\hspace{0pt}}p{2.5cm}     % Col 4: Sobrecarga
-    >{\Centering\hspace{0pt}}p{2.0cm}     % Col 5: % Aumento
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{5.1cm}|   % Col 1: Evento
+    >{\Centering\hspace{0pt}}p{2.5cm}|     % Col 2: Scrum estándar
+    >{\Centering\hspace{0pt}}p{2.5cm}|     % Col 3: SocialScrum
+    >{\Centering\hspace{0pt}}p{2.5cm}|     % Col 4: Sobrecarga
+    >{\Centering\hspace{0pt}}p{2.0cm}|     % Col 5: % Aumento
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Sobrecarga temporal de SocialScrum por evento} \label{tab:sobrecarga-temporal}                                                                    \\
-    \toprule
+    \hline
     \textbf{Evento}                      & \textbf{Scrum estándar} & \textbf{SocialScrum} & \textbf{Sobrecarga} (redistribución interna) & \textbf{\% Aumento} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{5}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                    \\
-    \toprule
+    \hline
+    \multicolumn{5}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                    \\
+    \hline
     \textbf{Evento}                      & \textbf{Scrum estándar} & \textbf{SocialScrum} & \textbf{Sobrecarga} (redistribución interna) & \textbf{\% Aumento} \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{5}{r}{\textit{Continúa en la siguiente página...}}                                                                                            \\
+    \hline
+    \multicolumn{5}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                            \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     Social \textit{Sprint Planning}      & 4 horas                 & 4 h 15 min           & +15 min                                      & +6~\%               \\
+    \hline
     Social \textit{Daily Standup} (x10)  & 150 min total           & 170 min total        & +20 min                                      & +13~\%              \\
+    \hline
     Social \textit{Sprint Review}        & 2 horas                 & 2 h 10 min           & +10 min                                      & +8~\%               \\
+    \hline
     Social \textit{Sprint Retrospective} & 1.5 horas               & 1.5 horas            & +0 min                                       & 0~\%                \\
-    \midrule
+    \hline
     \textbf{Total por \textit{Sprint}}   & \textbf{10 horas}       & \textbf{10 h 45 min} & \textbf{+45 min}                             & \textbf{+7.5~\%}    \\
 \end{longtable}
 \endgroup
@@ -65,38 +70,43 @@ El principio fundamental es \textbf{integración, no adición}: los componentes 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{3.5cm}   % Col 1: Evento
-    >{\RaggedRight\hspace{0pt}}p{7.5cm}   % Col 2: Cambio en SocialScrum
-    >{\Centering\hspace{0pt}}p{2.5cm}     % Col 3: Tiempo adicional
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{3.5cm}|   % Col 1: Evento
+    >{\RaggedRight\hspace{0pt}}p{9.2cm}|   % Col 2: Cambio en SocialScrum
+    >{\Centering\hspace{0pt}}p{2.5cm}|     % Col 3: Tiempo adicional
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Detalle de cambios por evento} \label{tab:detalle-overhead}                                                                                                                        \\
-    \toprule
+    \hline
     \textbf{Evento}                         & \textbf{Cambio en SocialScrum}                                                                                        & \textbf{Tiempo adicional} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                     \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                     \\
+    \hline
     \textbf{Evento}                         & \textbf{Cambio en SocialScrum}                                                                                        & \textbf{Tiempo adicional} \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                             \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                             \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
-    Social \textit{Sprint Planning}         & Tema 3: Riesgos sociales (\textit{Health Score}, \gls{community-smells} activos e ítems sociales)                     & +15 min                   \\
+    Social \textit{Sprint Planning}         & Tema 3: Riesgos sociales (\gls{health-score}, \gls{community-smells} activos e ítems sociales)                        & +15 min                   \\
+    \hline
     Social \textit{Daily Standup} (por día) & Pregunta final: ``¿Hay algún impedimento social hoy?'' (solo identificar, no resolver)                                & +2--3 min/día             \\
+    \hline
     Social \textit{Sprint Review}           & Sección dedicada a la evaluación de la dinámica social y la correlación entre el \textit{Health Score} y la velocidad & +10 min                   \\
+    \hline
     Social \textit{Sprint Retrospective}    & Redistribución del tiempo: inspección técnica (30 min), inspección social (45 min) y definición de acciones (15 min)  & +0 min                    \\
 \end{longtable}
 \endgroup
@@ -119,38 +129,43 @@ Algunos ítems sociales requieren sesiones fuera de los eventos estándar (media
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{3.0cm}   % Col 1: Optimización
-    >{\RaggedRight\hspace{0pt}}p{7.5cm}   % Col 2: Descripción
-    >{\RaggedRight\hspace{0pt}}p{3.0cm}   % Col 3: Ahorro
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{3.0cm}|   % Col 1: Optimización
+    >{\RaggedRight\hspace{0pt}}p{9.2cm}|   % Col 2: Descripción
+    >{\RaggedRight\hspace{0pt}}p{3.0cm}|   % Col 3: Ahorro
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Optimizaciones para reducir la sobrecarga} \label{tab:optimizaciones-overhead}                                                                                                                                                                                          \\
-    \toprule
+    \hline
     \textbf{Optimización}    & \textbf{Descripción}                                                                                                                                                                                              & \textbf{Ahorro}                   \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                          \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                          \\
+    \hline
     \textbf{Optimización}    & \textbf{Descripción}                                                                                                                                                                                              & \textbf{Ahorro}                   \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                  \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                  \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     \textit{Daily} asíncrona & Reemplazar la \textit{Daily} síncrona por un formato escrito en Slack o Teams (campos: \textit{DONE, TODO, BLOCK, SOCIAL})                                                                                        & Elimina 15--18 min/día de reunión \\
+    \hline
     Retros alternadas        & \textit{Sprint} impar: énfasis técnico (50/25 min). \textit{Sprint} par: énfasis social (25/50 min)                                                                                                               & Reduce la fatiga de retrospectiva \\
+    \hline
     Social Guide rotativo    & En equipos de 5--7 personas, rotar el rol cada \textit{Sprint}. Dedicación aproximada: 10~\% del tiempo cuando le corresponde                                                                                     & Distribuye la carga entre todos   \\
+    \hline
     Integración primero      & Jerarquía de integración: \textit{Daily} $\rightarrow$ \textit{Planning} $\rightarrow$ \textit{Review} $\rightarrow$ \textit{Retrospective}. Solo crear una sesión adicional si no cabe en los eventos existentes & Minimiza sesiones adicionales     \\
 \end{longtable}
 \endgroup
@@ -176,40 +191,43 @@ El retorno de inversión se estima en dólares y pesos colombianos con una conve
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{3.0cm}   % Col 1: Inversión (anual)
-    >{\Centering\hspace{0pt}}p{1.5cm}     % Col 2: Horas
-    >{\RaggedRight\hspace{0pt}}p{4.0cm}   % Col 3: Detalle
-    >{\Centering\hspace{0pt}}p{2.0cm}     % Col 4: Costo (USD)
-    >{\Centering\hspace{0pt}}p{3.0cm}     % Col 5: Costo (COP)
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{3.0cm}|   % Col 1: Inversión (anual)
+    >{\Centering\hspace{0pt}}p{1.5cm}|     % Col 2: Horas
+    >{\RaggedRight\hspace{0pt}}p{5.1cm}|   % Col 3: Detalle
+    >{\Centering\hspace{0pt}}p{2.0cm}|     % Col 4: Costo (USD)
+    >{\Centering\hspace{0pt}}p{3.0cm}|     % Col 5: Costo (COP)
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Inversión anual estimada en sobrecarga de SocialScrum} \label{tab:inversion-anual}                                                   \\
-    \toprule
+    \hline
     \textbf{Inversión (anual)} & \textbf{Horas} & \textbf{Detalle}                       & \textbf{Costo (USD)} & \textbf{Costo (COP)}            \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{5}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                       \\
-    \toprule
+    \hline
+    \multicolumn{5}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                       \\
+    \hline
     \textbf{Inversión (anual)} & \textbf{Horas} & \textbf{Detalle}                       & \textbf{Costo (USD)} & \textbf{Costo (COP)}            \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{5}{r}{\textit{Continúa en la siguiente página...}}                                                                               \\
+    \hline
+    \multicolumn{5}{|r|}{\textit{Continúa en la siguiente página...}}                                                                               \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     Sobrecarga de reuniones    & 19.5 h         & 45 min $\times$ 26 \textit{Sprints}    & \$975                & $\sim$3\,900\,000 COP           \\
+    \hline
     Sesiones adicionales       & 130 h          & $\sim$5 h $\times$ 26 \textit{Sprints} & \$6\,500             & $\sim$26\,000\,000 COP          \\
-    \midrule
+    \hline
     \textbf{Total}             & \textbf{150 h} & Costo anual estimado                   & \textbf{\$7\,500}    & \textbf{$\sim$30\,000\,000 COP} \\
 \end{longtable}
 \endgroup
@@ -221,36 +239,40 @@ El retorno de inversión se estima en dólares y pesos colombianos con una conve
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{4.5cm}   % Col 1: Retorno (anual)
-    >{\RaggedRight\hspace{0pt}}p{9.5cm}   % Col 2: Valor estimado
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{4.5cm}|   % Col 1: Retorno (anual)
+    >{\RaggedRight\hspace{0pt}}p{11.0cm}|  % Col 2: Valor estimado
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Análisis de ROI de SocialScrum} \label{tab:roi-socialscrum}                                   \\
-    \toprule
+    \hline
     \textbf{Retorno (anual)}  & \textbf{Valor estimado}                                                    \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                \\
-    \toprule
+    \hline
+    \multicolumn{2}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                \\
+    \hline
     \textbf{Retorno (anual)}  & \textbf{Valor estimado}                                                    \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                        \\
+    \hline
+    \multicolumn{2}{|r|}{\textit{Continúa en la siguiente página...}}                                        \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     1 renuncia evitada        & \$50\,000--\$100\,000 dólares (50--200~\% del salario anual)               \\
+    \hline
     Mejora de velocidad 10~\% & 104 SP adicionales (4 SP por \textit{Sprint} $\times$ 26 \textit{Sprints}) \\
+    \hline
     Conflictos resueltos      & Más de 50 horas de fricción evitada                                        \\
 \end{longtable}
 \endgroup

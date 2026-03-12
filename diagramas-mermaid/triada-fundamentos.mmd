@@ -1,0 +1,62 @@
+graph LR
+    %% ═══════════════════════════════════════════════════
+    %%  Tríada de Fundamentos Teóricos
+    %%  Fuente: Elaboración propia
+    %% ═══════════════════════════════════════════════════
+
+    classDef headerPilar fill:#2C3E50,stroke:#1A252F,stroke-width:2px,color:#FFFFFF,font-weight:bold
+    classDef refTeorica fill:#34495E,stroke:#2C3E50,stroke-width:1px,color:#ECF0F1,font-style:italic
+    classDef itemP1 fill:#F7F3ED,stroke:#8B7D6B,stroke-width:1.5px,color:#2C3E50
+    classDef itemP2 fill:#EDF2F7,stroke:#6B7D8B,stroke-width:1.5px,color:#2C3E50
+    classDef itemP3 fill:#EDF7F0,stroke:#6B8B73,stroke-width:1.5px,color:#2C3E50
+
+    %% ── Pilar 1: Sintomatología ──
+    subgraph P1[" "]
+        direction TB
+        H1["Pilar 1: Sintomatología"]:::headerPilar
+        R1["Olores Comunitarios<br/><i>Tamburri et al., 2013</i>"]:::refTeorica
+        S1["Silencio Radial"]:::itemP1
+        S2["Silos Organizacionales"]:::itemP1
+        S3["Lobo Solitario"]:::itemP1
+        H1 --> R1
+        R1 --> S1
+        R1 --> S2
+        R1 --> S3
+    end
+
+    %% ── Pilar 2: Motor Psicológico ──
+    subgraph P2[" "]
+        direction TB
+        H2["Pilar 2: Motor Psicológico"]:::headerPilar
+        R2["Teoría de la Autodeterminación<br/><i>Deci & Ryan, 2000</i>"]:::refTeorica
+        N1["Autonomía"]:::itemP2
+        N2["Competencia"]:::itemP2
+        N3["Relacionalidad"]:::itemP2
+        H2 --> R2
+        R2 --> N1
+        R2 --> N2
+        R2 --> N3
+    end
+
+    %% ── Pilar 3: Métrica de Cohesión ──
+    subgraph P3[" "]
+        direction TB
+        H3["Pilar 3: Métrica de Cohesión"]:::headerPilar
+        R3["Modelo de Confianza<br/><i>Mayer et al., 1995</i>"]:::refTeorica
+        D1["Habilidad"]:::itemP3
+        D2["Benevolencia"]:::itemP3
+        D3["Integridad"]:::itemP3
+        H3 --> R3
+        R3 --> D1
+        R3 --> D2
+        R3 --> D3
+    end
+
+    %% ── Sinergia bidireccional entre pilares ──
+    P1 <--"retroalimenta"--> P2
+    P2 <--"retroalimenta"--> P3
+
+    %% ── Estilos de subgrafos ──
+    style P1 fill:#FDFCFA,stroke:#8B7D6B,stroke-width:2px,rx:4,ry:4
+    style P2 fill:#FAFCFD,stroke:#6B7D8B,stroke-width:2px,rx:4,ry:4
+    style P3 fill:#FAFDFB,stroke:#6B8B73,stroke-width:2px,rx:4,ry:4

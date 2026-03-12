@@ -156,5 +156,6 @@
     "-m",
     "-w"
   ],
-  "snyk.advanced.autoSelectOrganization": true
+  "snyk.advanced.autoSelectOrganization": true,
+  "latex-workshop.latex.outDir": "build"
 }

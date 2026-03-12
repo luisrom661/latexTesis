@@ -14,7 +14,7 @@
 \makeatother
 \label{chap:capitulo3}
 
-Este capítulo introduce \gls{socialscrum}, un proceso ágil que nace como una adaptación del marco Scrum, pensado especialmente para abordar la \gls{deuda-social} que suele surgir dentro de los equipos de desarrollo de software.
+Este capítulo introduce \gls{socialscrum}, un proceso ágil que nace como una adaptación del marco \gls{scrum}, pensado especialmente para abordar la \gls{deuda-social} que suele surgir dentro de los equipos de desarrollo de software.
 A lo largo de las siguientes páginas, se exploran las razones que dieron origen a esta propuesta, el modelo conceptual que la respalda, los fundamentos teóricos que la sostienen y, finalmente, el diseño completo del proceso: sus roles, eventos y artefactos.
 
 \section{Introducción}
@@ -100,7 +100,7 @@ El Social Guide es la figura central de SocialScrum y su misión es cuidar la di
 Sus responsabilidades principales incluyen:
 
 \begin{itemize}
-    \item \textbf{Identificación y análisis de \gls{community-smells}:} Detecta patrones como el aislamiento, la falta de cooperación o decisiones socio-técnicas poco informadas \cite{saeeda2024nontechnicaldebt}. Para ello, utiliza herramientas como el \gls{sna} y otras técnicas que ayudan a evaluar la salud de la comunidad de desarrollo.
+    \item \textbf{Identificación y análisis de olores comunitarios:} Detecta patrones como el aislamiento, la falta de cooperación o decisiones socio-técnicas poco informadas \cite{saeeda2024nontechnicaldebt}. Para ello, utiliza herramientas como el SNA y otras técnicas que ayudan a evaluar la salud de la comunidad de desarrollo.
 
     \item \textbf{Facilitación de estrategias de mitigación:} Diseña y aplica acciones específicas para atender los problemas detectados, fomentando una comunicación abierta, un entorno de \gls{seguridad-psicologica} y relaciones basadas en el respeto mutuo \cite{saeeda2024nontechnicaldebt, martini2019agiledebt}.
 
@@ -140,47 +140,53 @@ Para clarificar la complementariedad de ambos roles y evitar la percepción de r
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{4.0cm}
-    >{\RaggedRight\hspace{0pt}}p{5.5cm}
-    >{\RaggedRight\hspace{0pt}}p{5.5cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{4.0cm}|
+    >{\RaggedRight\hspace{0pt}}p{5.5cm}|
+    >{\RaggedRight\hspace{0pt}}p{5.5cm}|
     }
 
     \caption{Comparación funcional: Scrum Master vs. Social Guide}
     \label{tab:sm-vs-sg}                                                                                                                                       \\
-    \toprule
+    \hline
     \textbf{Dimensión} & \textbf{Scrum Master}                                                                                         & \textbf{Social Guide} \\
-    \midrule
+    \hline
     \endfirsthead
 
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                    \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                  \\
+    \hline
     \textbf{Dimensión} & \textbf{Scrum Master}                                                                                         & \textbf{Social Guide} \\
-    \midrule
+    \hline
     \endhead
 
-    \bottomrule
+    \hline
     \endlastfoot
 
     Foco principal
                        & Proceso ágil, flujo de trabajo e impedimentos técnicos/organizacionales.
                        & Clima emocional, dinámicas interpersonales y salud social del equipo.                                                                 \\
+    \hline
 
     Responsabilidad sobre el proceso
                        & Facilitar Scrum: eventos, artefactos, mejora continua del flujo de entrega.
                        & Operar SocialScrum: eventos sociales, artefactos sociales, mejora del bienestar colectivo.                                            \\
+    \hline
 
     Responsabilidad sobre salud emocional
                        & Indirecta: promueve un entorno de trabajo efectivo como parte de su coaching.
-                       & Directa: detecta \gls{community-smells}, facilita mediaciones y monitorea el Health Score.                                            \\
+                       & Directa: detecta olores comunitarios, facilita mediaciones y monitorea el Health Score.                                               \\
+    \hline
 
     Métricas que gestiona
                        & Velocidad, burndown, lead time, impedimentos técnicos.
-                       & Health Score, Registro de \gls{community-smells}, Social Story Points.                                                                \\
+                       & Health Score, Registro de olores comunitarios, \gls{social-story-points}.                                                             \\
+    \hline
 
     Relación con stakeholders
                        & Interfaz con la organización para eliminar impedimentos y proteger al equipo.
                        & Informa al equipo y al Scrum Master; reporta métricas agregadas y anonimizadas.                                                       \\
+    \hline
 
     Confidencialidad de datos
                        & No aplica formalmente; trabaja con información del proceso visible para todos.
@@ -214,53 +220,61 @@ La Tabla \ref{tab:eventos_adaptados} ilustra cómo cada ceremonia se convierte e
 
 \begingroup
 \scriptsize
+\setlength{\LTleft}{0pt} % Alinear tabla a la izquierda
+\setlength{\LTright}{0pt} % Permitir que la tabla ocupe espacio a la derecha
+\setlength{\tabcolsep}{4pt} % Ajuste de espacio entre columnas
 \renewcommand{\arraystretch}{1.4}
 
-\begin{longtable}[H]{
-    >{\RaggedRight\hspace{0pt}}p{4.2cm}   % Evento
-    >{\RaggedRight\hspace{0pt}}p{11.0cm}  % Adaptación en SocialScrum
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{4.2cm}|   % Evento
+    >{\RaggedRight\hspace{0pt}}p{11.3cm}|  % Adaptación en SocialScrum
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Eventos de Scrum adaptados en SocialScrum}
     \label{tab:eventos_adaptados}                                                                                                                                                                                                                                                        \\
-    \toprule
+    \hline
     \textbf{Evento}                      & \textbf{Adaptación en SocialScrum}                                                                                                                                                                                                            \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                              \\
-    \toprule
+    \hline
+    \multicolumn{2}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                            \\
+    \hline
     \textbf{Evento}                      & \textbf{Adaptación en SocialScrum}                                                                                                                                                                                                            \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                      \\
+    \hline
+    \multicolumn{2}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                    \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     \textbf{Social Sprint Planning}      &
-    Se incorpora una \textbf{Revisión de Riesgos Sociales}, liderada por el Social Guide. En esta etapa, el equipo analiza si su estado social actual —medido mediante el Health Score y los \gls{community-smells} activos— le permite comprometerse con tareas de alta complejidad. Se identifican posibles obstáculos sociales y se definen acciones preventivas que se integran directamente en el \textit{Social Sprint Backlog} \cite{schwaber2020scrum}.
+    Se incorpora una \textbf{Revisión de Riesgos Sociales}, liderada por el Social Guide. En esta etapa, el equipo analiza si su estado social actual —medido mediante el Health Score y los olores comunitarios activos— le permite comprometerse con tareas de alta complejidad. Se identifican posibles obstáculos sociales y se definen acciones preventivas que se integran directamente en el \textit{Social Sprint Backlog} \cite{schwaber2020scrum}.
     Esta práctica fortalece la \textbf{autonomía} del equipo al permitirle reconocer su capacidad real, y promueve la \textbf{integridad} al hacer visibles sus compromisos sociales.                                                                                                    \\[1pt]
+    \hline
 
     \textbf{Social Daily Standup}        &
     Se añade una pregunta breve pero significativa: ``¿Hay algún impedimento social?''.
     El Social Guide observa las dinámicas del equipo —quién participa, quién se mantiene en silencio, el tono emocional del grupo— como señales tempranas de posibles tensiones. Si surgen fricciones, se documentan para abordarlas fuera del Daily, respetando el \textit{time-boxing} \cite{saeeda2024nontechnicaldebt}.
     Este enfoque normaliza la conversación sobre dificultades interpersonales y fomenta una transparencia constante en las relaciones del equipo.                                                                                                                                        \\[1pt]
+    \hline
 
     \textbf{Social Sprint Review}        &
     Además de presentar el Increment, se dedican entre 5 y 7 minutos a una \textbf{Evaluación de la Dinámica del Equipo}.
-    El Social Guide comparte de forma breve la evolución de las métricas sociales —como SNA o distribución de conocimiento—, los \gls{community-smells} mitigados o nuevos, y cómo las interacciones influyeron en la entrega.
+    El Social Guide comparte de forma breve la evolución de las métricas sociales —como SNA o distribución de conocimiento—, los olores comunitarios mitigados o nuevos, y cómo las interacciones influyeron en la entrega.
     Este espacio permite que las partes interesadas (\textit{stakeholders}) comprendan que la salud social también incide en el valor del producto \cite{schwaber2020scrum}, visibilizando un aspecto a menudo ignorado y mostrando una preocupación genuina por el bienestar colectivo. \\[1pt]
+    \hline
 
     \textbf{Social Sprint Retrospective} &
-    Se convierte en el núcleo de la gestión social. El Social Guide lidera una sección específica (de 20 a 30 minutos) estructurada en cuatro fases: revisión del registro de \gls{community-smells}, análisis de causas raíz (por ejemplo, con la técnica de los \gls{five-whys}), diseño de experimentos de mejora con hipótesis comprobables y priorización de las acciones resultantes para el siguiente Sprint.
+    Se convierte en el núcleo de la gestión social. El Social Guide lidera una sección específica (de 20 a 30 minutos) estructurada en cuatro fases: revisión del registro de olores comunitarios, análisis de causas raíz (por ejemplo, con la técnica de los \gls{five-whys}), diseño de experimentos de mejora con hipótesis comprobables y priorización de las acciones resultantes para el siguiente Sprint.
     Las mejoras sociales más importantes se formalizan con responsables, métricas de éxito y criterios de evaluación \cite{martini2019agiledebt}.
     Este evento encarna el ciclo completo de inspección, adaptación y nueva transparencia, y requiere tanto coraje para abordar los temas difíciles como compromiso para sostener los cambios en el tiempo.                                                                              \\
 \end{longtable}
@@ -277,51 +291,56 @@ La Tabla \ref{tab:eventos-tiempo} presenta una estimación del tiempo adicional 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
-    >{\RaggedRight\hspace{0pt}}p{3.7cm}   % Evento
-    >{\Centering\hspace{0pt}}p{2.6cm}     % Tiempo estimado
-    >{\Centering\hspace{0pt}}p{2.7cm}     % Sobrecarga social
-    >{\RaggedRight\hspace{0pt}}p{5.7cm}   % Facilitador
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{3.7cm}|   % Evento
+    >{\Centering\hspace{0pt}}p{2.6cm}|     % Tiempo estimado
+    >{\Centering\hspace{0pt}}p{2.7cm}|     % Sobrecarga social
+    >{\RaggedRight\hspace{0pt}}p{5.9cm}|   % Facilitador
     }
 
     % --- ENCABEZADO PRIMERA PÁGINA ---
     \caption{Sobrecarga temporal de los eventos sociales en SocialScrum}
     \label{tab:eventos-tiempo}                                                                                                                                                                                       \\
-    \toprule
+    \hline
     \textbf{Evento} & \textbf{Tiempo estimado}                                                                                                                   & \textbf{Sobrecarga social} & \textbf{Facilitador} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- ENCABEZADO PÁGINAS SIGUIENTES ---
-    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                          \\
-    \toprule
+    \hline
+    \multicolumn{4}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                        \\
+    \hline
     \textbf{Evento} & \textbf{Tiempo estimado}                                                                                                                   & \textbf{Sobrecarga social} & \textbf{Facilitador} \\
-    \midrule
+    \hline
     \endhead
 
     % --- PIE PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                  \\
+    \hline
+    \multicolumn{4}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                \\
+    \hline
     \endfoot
 
     % --- PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     Social Daily Standup
                     & 15 min
                     & +2--3 min
                     & Social Guide (1 pregunta)                                                                                                                                                                      \\
+    \hline
 
     Social Sprint Planning
                     & 4 h
                     & +15 min
                     & Social Guide (revisión de riesgos sociales)                                                                                                                                                    \\
+    \hline
 
     Social Sprint Review
                     & 2 h
                     & +10 min
                     & Social Guide (evaluación del Health Score)                                                                                                                                                     \\
+    \hline
 
     Social Sprint Retrospective
                     & 1.5 h
@@ -334,7 +353,7 @@ El principio de No Sobrecarga establece que las adaptaciones de SocialScrum debe
 
 El \textbf{Social Sprint Retrospective} es, sin duda, el evento que mayor protagonismo tiene dentro del ciclo de gestión social, ya que marca el cierre natural del proceso y el punto de partida para nuevas mejoras. A diferencia de las retrospectivas tradicionales donde los temas humanos suelen abordarse solo de manera tangencial, aquí se convierten en el eje central de la conversación, con una estructura clara, propósito definido y un enfoque deliberado en el bienestar colectivo.
 
-La Figura \ref{fig:sprint_retrospective_social1} ilustra el flujo completo. El proceso comienza con la presentación del Social Guide, quien comparte tanto datos cuantitativos como métricas del Sprint y tendencias del Health Score además de observaciones cualitativas sobre las interacciones del equipo. A partir de esta base, el grupo analiza de forma colaborativa las causas de los \gls{community-smells} identificados, evitando soluciones rápidas o paliativas.
+La Figura \ref{fig:sprint_retrospective_social1} ilustra el flujo completo. El proceso comienza con la presentación del Social Guide, quien comparte tanto datos cuantitativos como métricas del Sprint y tendencias del Health Score además de observaciones cualitativas sobre las interacciones del equipo. A partir de esta base, el grupo analiza de forma colaborativa las causas de los olores comunitarios identificados, evitando soluciones rápidas o paliativas.
 Las acciones resultantes se formulan como experimentos con hipótesis claras, métricas de éxito y criterios definidos para decidir si continuar, ajustar o descartar el cambio. Esta lógica experimental refleja el espíritu empírico y de aprendizaje continuo que caracteriza a SocialScrum.
 
 En este flujo, todos los roles tienen un papel activo y complementario. El Social Guide aporta el diagnóstico analítico y orienta la conversación hacia los aspectos relacionales; el Scrum Master facilita los diálogos difíciles y protege el ambiente psicológico del grupo; los Developers proponen soluciones prácticas y contextualizadas; y el Product Owner actualiza el \textit{Social Product Backlog} con las acciones resultantes.
@@ -371,41 +390,47 @@ La Tabla \ref{tab:artefactos_adaptados} ilustra cómo cada artefacto se enriquec
 
 \begingroup
 \scriptsize
+\setlength{\LTleft}{0pt} % Alinear tabla a la izquierda
+\setlength{\LTright}{0pt} % Permitir que la tabla ocupe espacio a la derecha
+\setlength{\tabcolsep}{4pt} % Ajuste de espacio entre columnas
 \renewcommand{\arraystretch}{1.4}
 
-\begin{longtable}[H]{
-    >{\RaggedRight\hspace{0pt}}p{4.0cm}   % Artefacto
-    >{\RaggedRight\hspace{0pt}}p{11.2cm}  % Adaptación en SocialScrum
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{4.0cm}|   % Artefacto
+    >{\RaggedRight\hspace{0pt}}p{11.5cm}|  % Adaptación en SocialScrum
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Artefactos de Scrum adaptados en SocialScrum}
     \label{tab:artefactos_adaptados}                                                                                                                                                                                                                              \\
-    \toprule
+    \hline
     \textbf{Artefacto}       & \textbf{Adaptación en SocialScrum}                                                                                                                                                                                                 \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                       \\
-    \toprule
+    \hline
+    \multicolumn{2}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                     \\
+    \hline
     \textbf{Artefacto}       & \textbf{Adaptación en SocialScrum}                                                                                                                                                                                                 \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                               \\
+    \hline
+    \multicolumn{2}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                             \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     \textbf{Product Backlog} &
-    Se amplía con elementos de Deuda Social o habilitadores de salud del equipo: iniciativas destinadas a mejorar la comunicación, reducir \gls{community-smells} persistentes o fortalecer las habilidades sociales del grupo (por ejemplo: ``Establecer protocolos de \textit{code review} no tóxicos para mitigar \gls{cs-priggish-members}'').
-    El Product Owner los prioriza junto al Social Guide considerando cuatro criterios: el \gls{health-score} actual del equipo, la severidad del smell, el impacto en la velocidad y la viabilidad de mitigación \cite{saeeda2024nontechnicaldebt}.
+    Se amplía con elementos de Deuda Social o habilitadores de salud del equipo: iniciativas destinadas a mejorar la comunicación, reducir olores comunitarios persistentes o fortalecer las habilidades sociales del grupo (por ejemplo: ``Establecer protocolos de \textit{code review} no tóxicos para mitigar \gls{cs-priggish-members}'').
+    El Product Owner los prioriza junto al Social Guide considerando cuatro criterios: el Health Score actual del equipo, la severidad del smell, el impacto en la velocidad y la viabilidad de mitigación \cite{saeeda2024nontechnicaldebt}.
     Este enfoque reconoce que cuidar la salud social también es entregar valor, no una distracción. Refuerza la capacidad del equipo para gestionar su propia complejidad (habilidad) y fomenta la mejora continua mediante herramientas concretas (competencia). \\[1pt]
+    \hline
 
     \textbf{Sprint Backlog}  &
     Integra explícitamente las acciones de mitigación social como ítems formales, con descripción clara, responsables asignados, esfuerzo estimado y criterios de aceptación definidos.
@@ -419,29 +444,30 @@ La Tabla \ref{tab:artefactos_adaptados} ilustra cómo cada artefacto se enriquec
 
     Esta visibilidad asegura que el trabajo social no sea ``invisible'', sino parte integral del compromiso del Sprint \cite{saeeda2024nontechnicaldebt}.
     Formaliza la responsabilidad colectiva (compromiso) y potencia la autonomía del equipo para definir cómo abordar sus propios retos interpersonales.                                                                                                           \\[1pt]
+    \hline
 
     \textbf{Increment}       &
-    Además de cumplir con la \gls{definition-of-done} técnica, cada Increment se evalúa también por su impacto en la \gls{salud-social}.
-    El \gls{social-guide} participa en la definición de criterios de sostenibilidad social, respondiendo preguntas como: ¿el trabajo se completó sin generar \gls{burnout}? ¿sin crear nuevos \gls{community-smells} (por ejemplo, \gls{cs-black-cloud} por falta de documentación)? ¿mejoraron las dinámicas de colaboración?
-    Se analizan indicadores como variaciones en el \gls{health-score}, aparición o reducción de \gls{community-smells}, distribución del conocimiento usando \gls{sna} o niveles de carga emocional (horas extra, rotación).
+    Además de cumplir con la Definition of Done técnica, cada Increment se evalúa también por su impacto en la \gls{salud-social}.
+    El Social Guide participa en la definición de criterios de sostenibilidad social, respondiendo preguntas como: ¿el trabajo se completó sin generar burnout? ¿sin crear nuevos olores comunitarios (por ejemplo, \gls{cs-black-cloud} por falta de documentación)? ¿mejoraron las dinámicas de colaboración?
+    Se analizan indicadores como variaciones en el Health Score, aparición o reducción de olores comunitarios, distribución del conocimiento usando SNA o niveles de carga emocional (horas extra, rotación).
     Un Increment que cumple lo técnico pero deteriora el bienestar del equipo debe considerarse deuda social acumulada \cite{saeeda2024nontechnicaldebt}.
     Este equilibrio entre entrega técnica y sostenibilidad humana fortalece el valor de foco y refleja la relacionalidad del equipo al medir su cohesión y colaboración efectiva.                                                                                 \\
 \end{longtable}
 \endgroup
 
-\paragraph{Artefactos complementarios específicos de SocialScrum}
+\paragraph{Artefactos complementarios específicos de SocialScrum.}
 
 Además de los artefactos adaptados, SocialScrum incorpora tres artefactos complementarios diseñados específicamente para gestionar la deuda social de manera estructurada y continua:
 
 \begin{enumerate}
     \item \textbf{Registro de Community Smells:}
-          Un registro centralizado donde se documentan los \gls{community-smells} detectados, junto con su fecha, categoría, nivel de severidad, estado actual, acciones tomadas y resultados obtenidos.
-          Este registro no es de uso privado del \gls{social-guide}; por el contrario, es completamente transparente para el equipo, bajo la premisa de que ``lo que no se mide, no se gestiona''.
+          Un registro centralizado donde se documentan los olores comunitarios detectados, junto con su fecha, categoría, nivel de severidad, estado actual, acciones tomadas y resultados obtenidos.
+          Este registro no es de uso privado del Social Guide; por el contrario, es completamente transparente para el equipo, bajo la premisa de que ``lo que no se mide, no se gestiona''.
           Cumple también una función de memoria organizacional, evitando la llamada \textit{amnesia social} —cuando se olvidan problemas ya resueltos y se vuelven a repetir—, además de permitir el análisis de tendencias a lo largo del tiempo.
 
     \item \textbf{Dashboard de Métricas Sociales:}
-          Una visualización en tiempo real de los principales indicadores de la salud del equipo: evolución del \gls{health-score}, distribución de conocimiento usando \gls{sna}, señales tempranas de \gls{burnout} (por ejemplo, exceso de horas extra o variaciones en la velocidad individual), índice de seguridad psicológica (a partir de encuestas cada 2 o 3 Sprints) y equilibrio en la participación en la toma de decisiones.
-          Estas métricas complementan la visión cualitativa del \gls{social-guide}, ayudando a detectar patrones o anomalías antes de que el problema escale, por ejemplo, un miembro que pasa de tener alta participación a permanecer en silencio.
+          Una visualización en tiempo real de los principales indicadores de la salud del equipo: evolución del Health Score, distribución de conocimiento usando SNA, señales tempranas de burnout (por ejemplo, exceso de horas extra o variaciones en la velocidad individual), índice de seguridad psicológica (a partir de encuestas cada 2 o 3 Sprints) y equilibrio en la participación en la toma de decisiones.
+          Estas métricas complementan la visión cualitativa del Social Guide, ayudando a detectar patrones o anomalías antes de que el problema escale, por ejemplo, un miembro que pasa de tener alta participación a permanecer en silencio.
 
     \item \textbf{Catálogo de Estrategias Probadas:}
           Un repositorio evolutivo donde se registran los experimentos realizados: el \textit{smell} abordado, la estrategia implementada, el contexto del equipo, los resultados obtenidos (éxito, fracaso o mixto) y los aprendizajes derivados.
@@ -479,12 +505,12 @@ Durante el diseño de SocialScrum se analizaron marcos teóricos alternativos, c
 No obstante, la \acrfull{tad} fue elegida por tres razones clave que la hacen especialmente pertinente para comprender y gestionar la deuda social:
 
 En primer lugar, a diferencia de teorías basadas en incentivos externos —como la Teoría de las Expectativas de Vroom \cite{vroom1964work}—, la \acrfull{tad} explica por qué las personas pueden actuar sin necesidad de recompensas extrínsecas, impulsadas por el valor intrínseco de la tarea misma \cite{ryan_self-determination_2000}.
-Esta diferencia es crucial: identificar \gls{community-smells} implica un acto de vulnerabilidad voluntaria, no una respuesta condicionada por incentivos formales.
+Esta diferencia es crucial: identificar olores comunitarios implica un acto de vulnerabilidad voluntaria, no una respuesta condicionada por incentivos formales.
 
 Pensémoslo así:
 
 \begin{itemize}
-    \item Los \gls{community-smells} no se identifican a través de \acrfull{kpi} tradicionales ni mediante sistemas de recompensas.
+    \item Los olores comunitarios no se identifican a través de \acrfull{kpi} tradicionales ni mediante sistemas de recompensas.
     \item Detectar problemas sociales dentro del equipo exige vulnerabilidad voluntaria, no simplemente el cumplimiento de objetivos.
     \item Mitigar la deuda social de forma sostenible requiere compromiso genuino, no una adhesión superficial por cumplimiento.
 \end{itemize}
@@ -505,7 +531,7 @@ La falta de autonomía suele traducirse en agotamiento emocional y pérdida de m
 Cuando los equipos no tienen voz en las decisiones que afectan su trabajo cotidiano, la deuda social se acumula de forma silenciosa: los miembros se desconectan, trabajan de manera mecánica y dejan de proponer mejoras.
 \gls{community-smells} como \gls{cs-solution-defiance} o \gls{cs-organizational-rigidity} son síntomas claros de entornos donde la autonomía ha sido limitada o erosionada con el tiempo.
 
-En SocialScrum, la autonomía se protege a través de la autoorganización genuina: los equipos deciden qué \gls{community-smells} priorizar, cómo diseñar sus estrategias de mitigación y qué compromisos sociales incorporar en el \textit{Social Sprint Backlog}.
+En SocialScrum, la autonomía se protege a través de la autoorganización genuina: los equipos deciden qué olores comunitarios priorizar, cómo diseñar sus estrategias de mitigación y qué compromisos sociales incorporar en el \textit{Social Sprint Backlog}.
 El Social Guide actúa como facilitador del proceso, pero no como figura de autoridad. De esta manera, el equipo se mantiene como el verdadero responsable y dueño de su salud social.
 
 \subsubsection{Competencia}
@@ -516,7 +542,7 @@ No implica perfección, sino la vivencia constante de crecimiento, aprendizaje y
 En los equipos de desarrollo, la falta de competencia suele manifestarse como una sensación de ineficacia profesional: la impresión de que, por más esfuerzo que se invierta, el trabajo no avanza o carece de impacto real \cite{tulili2022burnout}.
 Esta frustración alimenta directamente la deuda social, pues los miembros comienzan a dudar de sus capacidades, evitan pedir ayuda o colaborar por temor a exponerse, y poco a poco se aíslan del grupo.
 
-SocialScrum aborda esta necesidad a través de diversas estrategias: fomenta el \gls{pair-programming} y las sesiones de conocimiento compartido, para que los miembros fortalezcan sus habilidades en un entorno de apoyo y aprendizaje mutuo; incorpora en las retrospectivas espacios para reconocer y celebrar los avances sociales, no solo los técnicos; y promueve la transparencia sobre las competencias individuales y colectivas, evitando la cultura del ``fingir saber''.
+SocialScrum aborda esta necesidad a través de diversas estrategias: fomenta el pair programming y las sesiones de conocimiento compartido, para que los miembros fortalezcan sus habilidades en un entorno de apoyo y aprendizaje mutuo; incorpora en las retrospectivas espacios para reconocer y celebrar los avances sociales, no solo los técnicos; y promueve la transparencia sobre las competencias individuales y colectivas, evitando la cultura del ``fingir saber''.
 
 Cuando la competencia se cultiva y se satisface, los equipos desarrollan una confianza mutua basada en habilidades reales y observables, lo que fortalece tanto la colaboración como el sentido de eficacia colectiva.
 
@@ -528,8 +554,8 @@ Implica reconocer que importamos a otros y que los demás también nos importan;
 Cuando esta necesidad se frustra, emergen el cinismo y el distanciamiento emocional, dos de los síntomas más característicos del \textit{burnout} \cite{tulili2022burnout}.
 En entornos donde los miembros se sienten aislados, invisibles o tratados como piezas reemplazables, la deuda social tiende a volverse crónica: las personas reducen su compromiso, evitan las conversaciones difíciles y terminan aceptando la indiferencia como norma.
 
-\gls{community-smells} como \gls{cs-social-isolation}, \gls{cs-lone-wolf} o \gls{cs-toxic-relationships} son expresiones directas de esta carencia de relacionalidad.
-SocialScrum busca revertirla fortaleciendo los espacios de vínculo humano —por ejemplo, a través de la Social Sprint Retrospective, donde el equipo reflexiona sobre cómo se siente trabajando junto, no solo sobre lo que entrega.
+Los \gls{community-smells} como \gls{cs-social-isolation}, \gls{cs-lone-wolf} o \gls{cs-toxic-relationships} son expresiones directas de esta carencia de relacionalidad.
+SocialScrum busca revertirla fortaleciendo los espacios de vínculo humano; por ejemplo, a través de la Social Sprint Retrospective, donde el equipo reflexiona sobre cómo se siente trabajando junto, no solo sobre lo que entrega.
 
 En este punto, el valor de Respeto y el modelo de Confianza se entrelazan de manera natural: solo en un entorno donde las personas se sienten valoradas, escuchadas y cuidadas es posible construir relaciones auténticas que sostengan la colaboración y el bienestar colectivo a largo plazo.
 
@@ -541,7 +567,7 @@ Según este modelo, la confianza se entiende como la disposición a ser vulnerab
 Este enfoque resulta especialmente relevante en equipos de desarrollo de software, donde la colaboración efectiva depende no solo del conocimiento técnico, sino también de la calidad de las relaciones humanas.
 
 \begin{itemize}
-    \item Los \gls{community-smells} impactan tanto la confianza técnica —``¿puedo contar con que esta persona hará bien su trabajo?''— como la confianza social —``¿le importa genuinamente el bienestar del equipo?''—.
+    \item Los olores comunitarios impactan tanto la confianza técnica —``¿puedo contar con que esta persona hará bien su trabajo?''— como la confianza social —``¿le importa genuinamente el bienestar del equipo?''—.
     \item La deuda social no surge únicamente de errores técnicos o conflictos interpersonales, sino de la interacción entre ambos niveles: cuando la competencia profesional y la empatía relacional dejan de estar alineadas, la colaboración se erosiona gradualmente.
 \end{itemize}
 
@@ -556,7 +582,7 @@ En los equipos de desarrollo, la habilidad técnica constituye la base inicial d
 Cuando un miembro demuestra de forma consistente su capacidad para resolver problemas complejos, escribir código limpio o diseñar soluciones sólidas, los demás comienzan a confiar en su criterio y ejecución técnica.
 No obstante, la habilidad —si se ejerce de forma aislada— no garantiza la confianza plena: un desarrollador sumamente competente pero que acapara conocimiento, subestima a los juniors o ignora las contribuciones ajenas puede terminar debilitando la confianza social y fragmentando la colaboración.
 
-SocialScrum promueve el fortalecimiento de esta dimensión a través de prácticas como el \gls{pair-programming}, las sesiones de intercambio de conocimiento y la documentación accesible y compartida.
+SocialScrum promueve el fortalecimiento de esta dimensión a través de prácticas como el pair programming, las sesiones de intercambio de conocimiento y la documentación accesible y compartida.
 Estas acciones no solo elevan las competencias individuales, sino que visibilizan la habilidad técnica de cada miembro ante el resto del equipo, permitiendo que la confianza se fundamente en evidencia observable y no en percepciones o jerarquías implícitas.
 
 \subsubsection{Benevolencia (Benevolence)}
@@ -568,7 +594,7 @@ Esta dimensión es fundamental para el desarrollo de la confianza afectiva, aque
 En el contexto de SocialScrum, la benevolencia se traduce en el valor de Respeto y en un conjunto de estrategias destinadas a contrarrestar el cinismo y la desconexión emocional, factores estrechamente relacionados con el \textit{burnout} \cite{tulili2022burnout}.
 
 Cuando los miembros del equipo perciben que sus compañeros actúan con benevolencia —que se interesan genuinamente por su bienestar, que ofrecen ayuda sin esperar retribución, que reconocen los logros de otros con sinceridad—, la confianza se consolida y la colaboración se vuelve más sólida y duradera.
-Por el contrario, \gls{community-smells} como \gls{cs-toxic-relationships} o \gls{cs-priggish-members} evidencian la erosión de esta dimensión, pues revelan entornos donde predomina la competencia egoísta, la desconfianza o la falta de empatía.
+Por el contrario, olores comunitarios como Toxic Relationships o Priggish Members evidencian la erosión de esta dimensión, pues revelan entornos donde predomina la competencia egoísta, la desconfianza o la falta de empatía.
 
 \subsubsection{Integridad (Integrity)}
 
@@ -591,13 +617,13 @@ El Social Guide encarna esta dimensión al modelar integridad en su propio actua
 
 El modelo de Mayer et al. \cite{mayer_integrative_1995} diferencia claramente la confianza, que implica vulnerabilidad y apertura voluntaria, de la cooperación, que puede nacer de la presión, el control o la conveniencia \cite{mayer_integrative_1995}.
 Esta distinción es esencial en SocialScrum, pues aclara por qué un equipo puede parecer funcional en la superficie —colabora, entrega resultados— y, sin embargo, acumular deuda social bajo una cooperación forzada.
-Solo cuando existe confianza genuina —basada en integridad y benevolencia— pueden emerger conversaciones honestas sobre problemas interpersonales, lo que a su vez permite detectar y abordar \gls{community-smells} de raíz.
+Solo cuando existe confianza genuina —basada en integridad y benevolencia— pueden emerger conversaciones honestas sobre problemas interpersonales, lo que a su vez permite detectar y abordar olores comunitarios de raíz.
 La seguridad psicológica, entendida como la libertad para expresar preocupaciones sin miedo a represalias, es un reflejo directo de esa confianza auténtica, no de una coordinación mecánica o por obligación.
 
 El estudio de Wilson et al. \cite{wilson_all_2006} valida empíricamente el modelo de Mayer en equipos virtuales y distribuidos, entornos hoy predominantes en el desarrollo de software.
 Sus hallazgos evidencian que la confianza basada en la habilidad puede surgir rápidamente —incluso entre personas que apenas se conocen—, pero la confianza que proviene de la benevolencia y la integridad requiere tiempo, consistencia y experiencias compartidas.
 En estos contextos, la calidad de la comunicación —su tono, empatía y coherencia— es determinante para mantener la confianza.
-De ahí que \gls{community-smells} como \gls{cs-radio-silence} o \gls{cs-org-silo} resulten tan nocivos: interrumpen los flujos comunicativos y debilitan los lazos interpersonales que sostienen la colaboración y la confianza en equipos distribuidos.
+De ahí que olores comunitarios como Radio Silence o Organizational Silo resulten tan nocivos: interrumpen los flujos comunicativos y debilitan los lazos interpersonales que sostienen la colaboración y la confianza en equipos distribuidos.
 
 A diferencia de otros enfoques más teóricos o difíciles de aterrizar, el modelo de confianza propuesto por Mayer et al. resulta mucho más claro y aplicable. Sus tres dimensiones —Habilidad, Benevolencia e Integridad (H-B-I)— no solo facilitan entender la confianza dentro de una organización, sino que también permiten medirla y trabajar sobre ella de manera práctica \cite{mayer_integrative_1995}.
 
@@ -605,7 +631,7 @@ En el marco de SocialScrum, esta precisión conceptual se convierte en acciones 
 
 \begin{itemize}
     \item El Social Guide puede detectar con claridad cuál de las tres dimensiones está debilitada o afectando la dinámica del equipo.
-    \item Las estrategias para mejorar la confianza pueden diseñarse de forma más intencionada; por ejemplo, implementar sesiones de \gls{pair-programming} para reforzar la percepción de habilidad, o promover retrospectivas más abiertas y sinceras para fortalecer la benevolencia.
+    \item Las estrategias para mejorar la confianza pueden diseñarse de forma más intencionada; por ejemplo, implementar sesiones de pair programming para reforzar la percepción de habilidad, o promover retrospectivas más abiertas y sinceras para fortalecer la benevolencia.
     \item Además, es posible hacer un seguimiento constante del progreso en cada dimensión, obteniendo así una lectura más completa y continua del estado social del equipo.
 \end{itemize}
 
@@ -636,7 +662,7 @@ En SocialScrum, este valor cobra especial importancia durante la \textit{Social 
 La apertura está estrechamente ligada al principio de transparencia, uno de los pilares fundamentales de Scrum, que exige que tanto el proceso como el trabajo sean visibles para todos los involucrados \cite{wilson_all_2006,schwaber2020scrum}.
 Este valor resulta esencial para prevenir la acumulación de deuda social, ya que dicha deuda suele crecer cuando se pierde la transparencia en los aspectos no técnicos, como las interacciones humanas o las decisiones socio-técnicas que afectan la colaboración \cite{schwaber2020scrum,tamburri2013socialdebt}.
 Además, el modo en que se comunica el equipo también influye en la confianza: los mensajes cargados de tensión o tono negativo tienden a ralentizar el desarrollo de la confianza en entornos mediados por tecnología, mientras que una comunicación de apoyo, empática y coherente la fortalece \cite{wilson_all_2006}.
-En este sentido, SocialScrum promueve la apertura al hacer visibles los \gls{community-smells}, las fricciones interpersonales y cualquier señal de deterioro en las relaciones, convirtiendo lo invisible en un punto de reflexión y mejora compartida.
+En este sentido, SocialScrum promueve la apertura al hacer visibles los olores comunitarios, las fricciones interpersonales y cualquier señal de deterioro en las relaciones, convirtiendo lo invisible en un punto de reflexión y mejora compartida.
 
 \subsubsection{Respeto (Respect)}
 El respeto se conecta directamente con la necesidad de relacionalidad propuesta por la \acrfull{tad} y con la benevolencia del modelo de confianza.
@@ -646,7 +672,7 @@ Asimismo, el respeto actúa como un antídoto frente al lenguaje descortés y la
 
 \subsubsection{Compromiso (Commitment)}
 El compromiso del equipo con los objetivos del Sprint y con la mejora continua es un pilar fundamental para prevenir y abordar la deuda social.
-En SocialScrum, este compromiso va más allá del cumplimiento técnico: implica una participación activa y genuina en la identificación y mitigación de los \gls{community-smells}, así como en el fortalecimiento del bienestar colectivo \cite{caballero2022communitysmells}.
+En SocialScrum, este compromiso va más allá del cumplimiento técnico: implica una participación activa y genuina en la identificación y mitigación de los olores comunitarios, así como en el fortalecimiento del bienestar colectivo \cite{caballero2022communitysmells}.
 Cuando todos los miembros del equipo se comprometen con un propósito común —no solo con las metas del producto, sino también con la salud emocional del grupo—, se genera un sentido compartido de responsabilidad que refuerza la cohesión, la confianza y la resiliencia del equipo frente a los desafíos cotidianos.
 
 \subsubsection{Foco (Focus)}
@@ -664,61 +690,67 @@ La Tabla \ref{tab:valores_smells} muestra cómo cada valor de Scrum actúa como 
 \setlength{\LTleft}{0pt}    % pega la longtable al margen izquierdo del bloque de texto
 \setlength{\LTright}{0pt}   % pega la longtable al margen derecho del bloque de texto
 
-\begin{longtable}[H]{
-    >{\RaggedRight\hspace{0pt}}p{2.5cm}   % Valor Scrum
-    >{\RaggedRight\hspace{0pt}}p{4.4cm}   % Community Smells mitigados
-    >{\RaggedRight\hspace{0pt}}p{3.4cm}   % Dimensión afectada
-    >{\RaggedRight\hspace{0pt}}p{4.6cm}   % Mecanismo en SocialScrum
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{2.5cm}|   % Valor Scrum
+    >{\RaggedRight\hspace{0pt}}p{4.4cm}|   % Community Smells mitigados
+    >{\RaggedRight\hspace{0pt}}p{3.4cm}|   % Dimensión afectada
+    >{\RaggedRight\hspace{0pt}}p{4.6cm}|   % Mecanismo en SocialScrum
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Community smells mitigados por cada valor de Scrum en SocialScrum \cite{caballero2022communitysmells}}
-    \label{tab:valores_smells}                                                                                                                                                                                                                                                                                    \\
-    \toprule
-    \textbf{Valor Scrum} & \textbf{Community Smells mitigados}                                                                                                                                                                                  & \textbf{Dimensión afectada} & \textbf{Mecanismo en SocialScrum} \\
-    \midrule
+    \label{tab:valores_smells}                                                                                                                                                                                                                                                                  \\
+    \hline
+    \textbf{Valor Scrum} & \textbf{Community Smells mitigados}                                                                                                                                                                & \textbf{Dimensión afectada} & \textbf{Mecanismo en SocialScrum} \\
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                       \\
-    \toprule
-    \textbf{Valor Scrum} & \textbf{Community Smells mitigados}                                                                                                                                                                                  & \textbf{Dimensión afectada} & \textbf{Mecanismo en SocialScrum} \\
-    \midrule
+    \hline
+    \multicolumn{4}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                   \\
+    \hline
+    \textbf{Valor Scrum} & \textbf{Community Smells mitigados}                                                                                                                                                                & \textbf{Dimensión afectada} & \textbf{Mecanismo en SocialScrum} \\
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                               \\
+    \hline
+    \multicolumn{4}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                           \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     \textbf{Coraje}
-                         & \gls{cs-radio-silence}, \gls{cs-sharing-villainy}, \gls{cs-lack-conflict-resolution}, \gls{cs-decision-incommunicability}, \gls{cs-newbie-ignored}
+                         & \gls{cs-sharing-villainy}, \gls{cs-lack-conflict-resolution}, \gls{cs-decision-incommunicability}, \gls{cs-newbie-ignored}, Radio Silence
                          & Comunicación y transparencia
-                         & Social Sprint Retrospective como espacio protegido; modelado de liderazgo; canales seguros para expresar tensiones.                                                                                                                                                                    \\
+                         & Social Sprint Retrospective como espacio protegido; modelado de liderazgo; canales seguros para expresar tensiones.                                                                                                                                                  \\
+    \hline
 
     \textbf{Apertura}
-                         & \gls{cs-radio-silence}, \gls{cs-org-silo}, \gls{cs-cognitive-distance}, \gls{cs-black-cloud}, \gls{cs-information-island}, \gls{cs-missing-link}, \gls{cs-documentation-silo}
+                         & Radio Silence, Organizational Silo, \gls{cs-cognitive-distance}, Black Cloud, \gls{cs-information-island}, \gls{cs-missing-link}, \gls{cs-documentation-silo}
                          & Visibilidad de información y conocimiento
-                         & Social Product Backlog visible; métricas sociales compartidas; documentación accesible; canales abiertos de comunicación.                                                                                                                                                              \\
+                         & Social Product Backlog visible; métricas sociales compartidas; documentación accesible; canales abiertos de comunicación.                                                                                                                                            \\
+    \hline
 
     \textbf{Respeto}
-                         & \gls{cs-priggish-members}, \gls{cs-lone-wolf}, \gls{cs-social-isolation}, \gls{cs-toxic-relationships}, \gls{cs-power-holder}, \gls{cs-bottleneck}, \gls{cs-dismissiveness}, \gls{cs-unfriendly-environment}
+                         & Priggish Members, Lone Wolf, Social Isolation, Toxic Relationships, \gls{cs-power-holder}, \gls{cs-bottleneck}, \gls{cs-dismissiveness}, \gls{cs-unfriendly-environment}
                          & Relacionalidad y benevolencia
-                         & Código de conducta explícito; rotación de roles; feedback estructurado y empático; políticas contra el acoso o la intimidación.                                                                                                                                                        \\
+                         & Código de conducta explícito; rotación de roles; feedback estructurado y empático; políticas contra el acoso o la intimidación.                                                                                                                                      \\
+    \hline
 
     \textbf{Compromiso}
-                         & \gls{cs-dissensus}, \gls{cs-solution-defiance}, \gls{cs-prima-donnas}, \gls{cs-organizational-rigidity}, \gls{cs-truck-factor}, \gls{cs-unhealthy-contribution}, \gls{cs-absent-stakeholder}, \gls{cs-disengagement}
+                         & \gls{cs-dissensus}, Solution Defiance, \gls{cs-prima-donnas}, Organizational Rigidity, \gls{cs-truck-factor}, \gls{cs-unhealthy-contribution}, \gls{cs-absent-stakeholder}, \gls{cs-disengagement}
                          & Responsabilidad colectiva y participación
-                         & Social Sprint Backlog con ownership; Definition of Done con criterios sociales; distribución equitativa del conocimiento; participación activa en decisiones.                                                                                                                          \\
+                         & Social Sprint Backlog con ownership; Definition of Done con criterios sociales; distribución equitativa del conocimiento; participación activa en decisiones.                                                                                                        \\
+    \hline
 
     \textbf{Foco}
-                         & \gls{cs-work-exhaustion}, \gls{cs-inefficacy}, \gls{cs-org-silo} (intraequipo), \gls{cs-cognitive-distance}, \gls{cs-overload}, \gls{cs-time-wasted}, \gls{cs-scattered-development}
+                         & \gls{cs-work-exhaustion}, \gls{cs-inefficacy}, Organizational Silo (intraequipo), Cognitive Distance, \gls{cs-overload}, \gls{cs-time-wasted}, \gls{cs-scattered-development}
                          & Equilibrio, priorización y carga de trabajo
-                         & Capacidad reservada para salud social; Sprint Goal dual (técnico + social); métricas balanceadas; límites WIP con enfoque social.                                                                                                                                                      \\
+                         & Capacidad reservada para salud social; Sprint Goal dual (técnico + social); métricas balanceadas; límites WIP con enfoque social.                                                                                                                                    \\
 \end{longtable}
 \endgroup
 
@@ -755,49 +787,57 @@ El marco enfrenta este desafío transformando lo difuso en explícito a través 
 
 \begingroup
 \scriptsize
+\setlength{\LTleft}{0pt} % Alinear tabla a la izquierda
+\setlength{\LTright}{0pt} % Permitir que la tabla ocupe espacio a la derecha
+\setlength{\tabcolsep}{4pt} % Ajuste de espacio entre columnas
 \renewcommand{\arraystretch}{1.4}
 
-\begin{longtable}[H]{
-    >{\RaggedRight\hspace{0pt}}p{4.2cm}   % Estrategia
-    >{\RaggedRight\hspace{0pt}}p{5.5cm}   % Función
-    >{\RaggedRight\hspace{0pt}}p{5.0cm}   % Qué visibiliza
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{4.2cm}|   % Estrategia
+    >{\RaggedRight\hspace{0pt}}p{6.0cm}|   % Función
+    >{\RaggedRight\hspace{0pt}}p{5.0cm}|   % Qué visibiliza
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Estrategias de transparencia social en SocialScrum}
     \label{tab:transparencia_mecanismos}                                                                                                            \\
-    \toprule
+    \hline
     \textbf{Estrategia} & \textbf{Función}                                                                                & \textbf{Qué visibiliza} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                         \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                       \\
+    \hline
     \textbf{Estrategia} & \textbf{Función}                                                                                & \textbf{Qué visibiliza} \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                 \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                                                               \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     Artefactos sociales explícitos
                         & Formalizan los problemas sociales como work items con el mismo estatus que la deuda técnica.
                         & Community smells, acciones de mitigación y responsabilidades compartidas.                                                 \\
+    \hline
 
     Métricas sociales objetivas
                         & Cuantifican dinámicas cualitativas mediante indicadores observables.
                         & Patrones de comunicación, distribución de conocimiento y señales tempranas de deterioro social.                           \\
+    \hline
 
     Espacios formales de revelación
                         & Institucionalizan momentos seguros para exponer impedimentos sociales.
                         & Fricciones cotidianas, salud del Sprint e impacto en la entrega.                                                          \\
+    \hline
 
     Mecanismos de revelación segura
                         & Permiten visibilidad colectiva sin inhibir el reporte de temas sensibles.
@@ -843,51 +883,56 @@ En la Tabla \ref{tab:inspeccion_cadencias} se resumen estas cadencias, sus focos
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{2.4cm}   % Cadencia
-    >{\RaggedRight\hspace{0pt}}p{3.6cm}   % Foco
-    >{\RaggedRight\hspace{0pt}}p{4.7cm}   % Fenómenos detectables
-    >{\RaggedRight\hspace{0pt}}p{4.2cm}   % Métodos
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{2.4cm}|   % Cadencia
+    >{\RaggedRight\hspace{0pt}}p{3.6cm}|   % Foco
+    >{\RaggedRight\hspace{0pt}}p{4.7cm}|   % Fenómenos detectables
+    >{\RaggedRight\hspace{0pt}}p{4.2cm}|   % Métodos
     }
 
     % --- ENCABEZADO PRIMERA PÁGINA ---
     \caption{Cadencias de inspección social en SocialScrum}
     \label{tab:inspeccion_cadencias}                                                                                                              \\
-    \toprule
+    \hline
     \textbf{Cadencia} & \textbf{Foco}                                                         & \textbf{Fenómenos detectables} & \textbf{Métodos} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                       \\
-    \toprule
+    \hline
+    \multicolumn{4}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                     \\
+    \hline
     \textbf{Cadencia} & \textbf{Foco}                                                         & \textbf{Fenómenos detectables} & \textbf{Métodos} \\
-    \midrule
+    \hline
     \endhead
 
     % --- PIE INTERMEDIO ---
-    \midrule
-    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                                               \\
+    \hline
+    \multicolumn{4}{|r|}{\textit{Continúa en la siguiente página...}}                                                                             \\
+    \hline
     \endfoot
 
     % --- PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     Diaria
                       & Impedimentos inmediatos
                       & Fricciones, bloqueos de comunicación, conflictos emergentes
                       & Observación directa, indagación estructurada.                                                                             \\
+    \hline
 
     Por Sprint
                       & Evolución de smells y eficacia de intervenciones
                       & Nuevos smells, cambios en severidad, efectos secundarios
                       & Análisis de métricas, revisión de causas raíz.                                                                            \\
+    \hline
 
     Por Release
                       & Tendencias de largo plazo
                       & Deterioro sostenido, patrones recurrentes, riesgo de \textit{burnout}
                       & Instrumentos validados, evaluaciones longitudinales.                                                                      \\
+    \hline
 
     Continua
                       & Anomalías en patrones
@@ -930,49 +975,57 @@ La Tabla \ref{tab:estrategias_mitigacion} no pretende ser un recetario, sino un 
 
 \begingroup
 \scriptsize
+\setlength{\LTleft}{0pt} % Alinear tabla a la izquierda
+\setlength{\LTright}{0pt} % Permitir que la tabla ocupe espacio a la derecha
+\setlength{\tabcolsep}{4pt} % Ajuste de espacio entre columnas
 \renewcommand{\arraystretch}{1.4}
 
-\begin{longtable}[H]{
-    >{\RaggedRight\hspace{0pt}}p{3.8cm}   % Categoría
-    >{\RaggedRight\hspace{0pt}}p{5.5cm}   % Naturaleza del problema
-    >{\RaggedRight\hspace{0pt}}p{5.5cm}   % Familias de intervención
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{3.8cm}|   % Categoría
+    >{\RaggedRight\hspace{0pt}}p{5.5cm}|   % Naturaleza del problema
+    >{\RaggedRight\hspace{0pt}}p{5.9cm}|   % Familias de intervención
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Familias de estrategias de mitigación por categoría de community smell}
     \label{tab:estrategias_mitigacion}                                                                                                                                              \\
-    \toprule
+    \hline
     \textbf{Categoría} & \textbf{Naturaleza del problema}                                                                                       & \textbf{Familias de intervención} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                         \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                       \\
+    \hline
     \textbf{Categoría} & \textbf{Naturaleza del problema}                                                                                       & \textbf{Familias de intervención} \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                 \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                               \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     Comunicación
                        & Flujos bloqueados o distorsionados
                        & Canales estructurados, redistribución de intermediación, protocolos asíncronos \cite{wilson_all_2006}.                                                     \\
+    \hline
 
     Conocimiento
                        & Distribución desigual de expertise
                        & Transferencia por inmersión, incentivos para documentación, rotación de funciones \cite{caballero2022communitysmells}.                                     \\
+    \hline
 
     Relacional
                        & Deterioro de vínculos o exclusión
                        & Mediación, normas explícitas, construcción de propósito compartido \cite{tulili2022burnout}.                                                               \\
+    \hline
 
     Organizacional
                        & Impedimentos estructurales
@@ -993,49 +1046,52 @@ Aplicado de manera consistente —en distintas cadencias (diaria, Sprint, Releas
 
 \begingroup
 \scriptsize
+\setlength{\LTleft}{0pt} % Alinear tabla a la izquierda
+\setlength{\LTright}{0pt} % Permitir que la tabla ocupe espacio a la derecha
+\setlength{\tabcolsep}{4pt} % Ajuste de espacio entre columnas
 \renewcommand{\arraystretch}{1.4}
 
-\begin{longtable}[H]{
-    >{\RaggedRight\hspace{0pt}}p{3.7cm}   % Principio ausente
-    >{\RaggedRight\hspace{0pt}}p{6.0cm}   % Patrón de fallo
-    >{\RaggedRight\hspace{0pt}}p{5.0cm}   % Evidencia empírica
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{3.7cm}|   % Principio ausente
+    >{\RaggedRight\hspace{0pt}}p{6.5cm}|   % Patrón de fallo
+    >{\RaggedRight\hspace{0pt}}p{5.0cm}|   % Evidencia empírica
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Consecuencias de la ausencia de principios empíricos en la gestión de la deuda social}
     \label{tab:consecuencias_ausencia}                                                                                                                                                                                                                                             \\
-    \toprule
+    \hline
     \textbf{Principio ausente} & \textbf{Patrón de fallo}                                                                                                                                                                                            & \textbf{Evidencia empírica} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                        \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                      \\
+    \hline
     \textbf{Principio ausente} & \textbf{Patrón de fallo}                                                                                                                                                                                            & \textbf{Evidencia empírica} \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                              \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     \textbf{Transparencia}
                                & Acumulación silenciosa de disfunciones hasta la crisis; normalización de comportamientos nocivos.
                                & Silos no detectados que derivan en re-arquitecturas completas \cite{tamburri2015insights}; ``ambiente de miedo'' institucionalizado en Boeing \cite{saeeda2024nontechnicaldebt}.                                                                  \\
-
-    \addlinespace
+    \hline
 
     \textbf{Inspección}
                                & \textit{Burnout} como desenlace no anticipado; escalamiento exponencial de los costos humanos y técnicos.
                                & Estudios muestran que el \textit{burnout} presentaba señales meses antes sin inspección continua \cite{tulili2022burnout}; detección tardía implica costos significativamente mayores \cite{dreesen2021socialdebt}.                               \\
-
-    \addlinespace
+    \hline
 
     \textbf{Adaptación}
                                & Intervenciones contraproducentes; persistencia de síntomas por aplicar soluciones superficiales.
@@ -1177,7 +1233,7 @@ Por eso, las salvaguardas éticas no pueden verse como simples recomendaciones o
 
 Toda la información compartida durante los eventos sociales —como el Social Daily Standup, la Social Sprint Retrospective o las sesiones de mediación— debe manejarse con total confidencialidad. Ningún dato puede usarse para evaluaciones de desempeño, decisiones de contratación o despido, ni para ninguna acción que afecte la situación laboral de una persona.
 
-Ahora bien, esta confidencialidad no significa mantener un secreto absoluto, sino actuar con un criterio contextual. El Social Guide puede, por ejemplo, comunicar información general o agregada —como el puntaje promedio de salud del equipo (Health Score) o la aparición de ciertos \gls{community-smells}—, pero jamás debe revelar detalles que permitan identificar a alguien o exponer declaraciones personales.
+Ahora bien, esta confidencialidad no significa mantener un secreto absoluto, sino actuar con un criterio contextual. El Social Guide puede, por ejemplo, comunicar información general o agregada —como el puntaje promedio de salud del equipo (Health Score) o la aparición de ciertos olores comunitarios—, pero jamás debe revelar detalles que permitan identificar a alguien o exponer declaraciones personales.
 
 \textbf{Lo que debe mantenerse confidencial:}
 \begin{itemize}
@@ -1190,7 +1246,7 @@ Ahora bien, esta confidencialidad no significa mantener un secreto absoluto, sin
 \textbf{Lo que sí puede compartirse (datos agregados):}
 \begin{itemize}
     \item Promedio del Health Score del equipo (``El equipo tiene un puntaje de 4.2 sobre 10'').
-    \item \gls{community-smells} generales, sin mencionar nombres ni casos específicos (``El equipo muestra señales de aislamiento social'').
+    \item Olores comunitarios generales, sin mencionar nombres ni casos específicos (``El equipo muestra señales de aislamiento social'').
     \item Tendencias a lo largo del tiempo (``La cohesión ha mejorado en los últimos tres sprints'').
     \item Necesidades de intervención sin señalar individuos (``El equipo podría beneficiarse de un taller de cohesión'').
 \end{itemize}
@@ -1204,20 +1260,20 @@ La tabla~\ref{tab:confidencial-reportable-cap3} operacionaliza esta distinción 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{6.5cm}
-    >{\RaggedRight\hspace{0pt}}p{9cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{6.5cm}|
+    >{\RaggedRight\hspace{0pt}}p{9cm}|
     }
     \caption{Información confidencial vs.\ reportable} \label{tab:confidencial-reportable-cap3}                            \\
-    \toprule
+    \hline
     \textbf{Confidencial (NO reportable)}        & \textbf{Reportable (datos agregados)}                                   \\
-    \midrule \endfirsthead
-    \bottomrule \endlastfoot
-    Declaraciones individuales en retrospectivas & Health Score promedio del equipo                                        \\ \midrule
-    Conflictos interpersonales con nombres       & ``El equipo presenta aislamiento social'' (sin nombres)                 \\ \midrule
-    Estado emocional de personas específicas     & ``Se detectó \textit{burnout} en el equipo'' (sin identificar personas) \\ \midrule
-    Intención de renuncia de alguien             & ``Riesgo de rotación elevado'' (dato agregado)                          \\ \midrule
-    Críticas a gerencia por persona              & ``El equipo reporta fricción con \textit{stakeholders}''                \\ \midrule
+    \hline \endfirsthead
+    \hline \endlastfoot
+    Declaraciones individuales en retrospectivas & Health Score promedio del equipo                                        \\ \hline
+    Conflictos interpersonales con nombres       & ``El equipo presenta aislamiento social'' (sin nombres)                 \\ \hline
+    Estado emocional de personas específicas     & ``Se detectó \textit{burnout} en el equipo'' (sin identificar personas) \\ \hline
+    Intención de renuncia de alguien             & ``Riesgo de rotación elevado'' (dato agregado)                          \\ \hline
+    Críticas a gerencia por persona              & ``El equipo reporta fricción con \textit{stakeholders}''                \\ \hline
     Detalles de mediaciones 1:1                  & ``Se realizó mediación; conflicto en proceso de resolución''            \\
 \end{longtable}
 \endgroup
@@ -1244,7 +1300,7 @@ Cuando la organización necesita intervenir —por ejemplo, para ofrecer un tall
 Antes de poner en marcha SocialScrum, el equipo debe otorgar su consentimiento informado de manera explícita. Esto implica que cada miembro entiende con claridad:
 
 \begin{itemize}
-    \item Qué tipo de información se recopilará (Health Score, \gls{community-smells}, reflexiones surgidas en las retrospectivas).
+    \item Qué tipo de información se recopilará (Health Score, olores comunitarios, reflexiones surgidas en las retrospectivas).
     \item Para qué se usará esa información (exclusivamente para la mejora interna del equipo, nunca con fines de evaluación).
     \item Quién tendrá acceso a ella (solo el Social Guide y el propio equipo, sin intervención externa).
     \item Qué salvaguardas existen para proteger la privacidad (confidencialidad, anonimización de los reportes).
@@ -1255,11 +1311,11 @@ El consentimiento no debe verse como un simple requisito administrativo. Es, en 
 
 \subsection{Anonimización en reportes y métricas}
 
-Cuando el Social Guide comparte métricas o \gls{community-smells} a nivel organizacional, debe anonimizar toda la información para que ninguna persona pueda ser identificada. Por ejemplo:
+Cuando el Social Guide comparte métricas o olores comunitarios a nivel organizacional, debe anonimizar toda la información para que ninguna persona pueda ser identificada. Por ejemplo:
 
 \begin{itemize}
     \item \textbf{Prohibido:} ``El desarrollador A muestra signos de \textit{burnout} (agotamiento emocional 9/10)''.
-    \item \textbf{Permitido:} ``El equipo presenta un Olor Comunitario activo: \textit{Work Exhaustion}. El Health Score promedio es de 4.2/10, y el valor ``Foco'' se encuentra en estado crítico (3/10)''.
+    \item \textbf{Permitido:} ``El equipo presenta un olor comunitario activo: \textit{Work Exhaustion}. El Health Score promedio es de 4.2/10, y el valor ``Foco'' se encuentra en estado crítico (3/10)''.
 \end{itemize}
 
 Esta anonimización no le quita valor a la información ni reduce su utilidad. La organización sigue pudiendo identificar que hay un problema y tomar medidas —como ajustar la carga de trabajo, ofrecer apoyo o facilitar espacios de mediación—. Lo que se protege, en esencia, es la identidad de las personas, evitando que una vulnerabilidad individual se convierta en una fuente de riesgo laboral.
@@ -1274,7 +1330,7 @@ Las salvaguardas éticas existen precisamente para evitar esto. Al asegurar que 
 
 \subsection{Derecho de auditoría del equipo}
 
-El equipo tiene pleno derecho a revisar cualquier reporte o métrica que el Social Guide planee compartir fuera del grupo. En otras palabras, antes de comunicar el Health Score o un Olor Comunitario a nivel organizacional, el Social Guide debe mostrar al equipo exactamente qué información se va a divulgar y en qué formato.
+El equipo tiene pleno derecho a revisar cualquier reporte o métrica que el Social Guide planee compartir fuera del grupo. En otras palabras, antes de comunicar el Health Score o un olor comunitario a nivel organizacional, el Social Guide debe mostrar al equipo exactamente qué información se va a divulgar y en qué formato.
 
 Esta auditoría cumple dos propósitos esenciales:
 
@@ -1304,7 +1360,7 @@ La implementación detallada de estas salvaguardas —incluyendo plantillas de a
 \label{sec:diseno_modelo_socialscrum}
 
 La Figura \ref{fig:arquitectura_integrada_final} ilustra la arquitectura conceptual de SocialScrum, organizada en cuatro capas interdependientes que muestran cómo los fundamentos teóricos se traducen en mecanismos operacionales capaces de prevenir y mitigar la deuda social dentro de los equipos de desarrollo.
-Esta arquitectura en capas permite que el modelo escale coherentemente desde los fundamentos teóricos (motivación, confianza y valores) hasta el impacto medible en la práctica (prevención de \gls{community-smells}, fortalecimiento de la cohesión, sostenibilidad y bienestar).
+Esta arquitectura en capas permite que el modelo escale coherentemente desde los fundamentos teóricos (motivación, confianza y valores) hasta el impacto medible en la práctica (prevención de olores comunitarios, fortalecimiento de la cohesión, sostenibilidad y bienestar).
 
 \begin{figure}[!htbp]
     \centering
@@ -1412,44 +1468,36 @@ Su efectividad depende de una adaptación consciente a la realidad de cada equip
 
 Las herramientas y tecnologías que facilitan esta adaptación a diferentes contextos ---incluyendo configuraciones para distintas plataformas de gestión y plantillas operacionales--- se describen en el Capítulo~\ref{chap:capitulo4}, Sección~\ref{sec:herramientas-tecnologia-soporte}.
 
-\section{Limitaciones reconocidas}
-\label{sec:limitaciones-reconocidas}
+\section{Alcance y condiciones de aplicabilidad}
+\label{sec:alcance-condiciones-aplicabilidad}
 
-SocialScrum no es una fórmula mágica ni una ``bala de plata''.
-Su efectividad depende, en gran medida, del contexto organizacional en el que se implemente. De hecho, hay situaciones donde el modelo encuentra límites estructurales que es necesario reconocer con honestidad y sin maquillarlos:
+SocialScrum no pretende ser una solución universal.
+Como todo marco de trabajo, opera bajo condiciones específicas que determinan su viabilidad.
+Esta sección explicita los prerrequisitos organizacionales y las restricciones de diseño que delimitan el alcance del modelo; las limitaciones metodológicas de la investigación ---incluyendo la ausencia de validación empírica y la calibración de instrumentos--- se abordan en el Capítulo~\ref{chap:capitulo6}, Sección~\ref{sec:limitaciones}.
 
-\paragraph{Contextos organizacionales severamente tóxicos.}
-En entornos donde predominan la desconfianza sistémica, el abuso jerárquico o una comunicación totalmente fracturada, SocialScrum solo puede actuar de forma limitada. Puede ayudar a reducir el impacto individual y fomentar pequeños espacios de seguridad dentro de ciertos sub-equipos, pero no tiene la capacidad de erradicar la toxicidad organizacional desde la raíz.
+\paragraph{Prerrequisito de entorno organizacional mínimamente funcional.}
+SocialScrum requiere un nivel base de funcionamiento organizacional para operar.
+En entornos donde predominan la desconfianza sistémica, el abuso jerárquico o una comunicación totalmente fracturada, el modelo solo puede actuar de forma limitada: puede fomentar pequeños espacios de seguridad dentro de ciertos sub-equipos, pero no tiene la capacidad de erradicar la toxicidad organizacional desde la raíz.
+Por tanto, la implementación debe focalizarse en aquellos equipos cuyo liderazgo esté genuinamente comprometido con el cambio, sin esperar que el modelo por sí solo transforme una cultura disfuncional.
 
-En estos escenarios, la implementación debe centrarse en aquellos equipos cuyo liderazgo esté genuinamente comprometido con el cambio, evitando caer en la falsa expectativa de que el modelo por sí solo ``arreglará'' una cultura disfuncional. Sin una transformación real a nivel ejecutivo, cualquier intento se quedará corto.
+\paragraph{Patrocinio ejecutivo como condición necesaria.}
+El Social Guide solo puede desempeñar su labor de manera efectiva si cuenta con un respaldo real y explícito de los niveles ejecutivos (CTO, VP de Ingeniería, CEO).
+Cuando la alta dirección no garantiza la confidencialidad de los reportes, no asigna recursos para intervenciones o usa la información con fines punitivos, el modelo pierde su base de confianza.
+Las salvaguardas éticas descritas en la Sección~\ref{sec:salvaguardas_eticas} mitigan este riesgo, pero presuponen un compromiso ejecutivo que no puede ser sustituido por mecanismos internos del marco.
 
-\paragraph{Requisito de patrocinio ejecutivo genuino.}
-El Social Guide solo puede desempeñar su labor de manera efectiva si cuenta con un respaldo real y explícito de los niveles ejecutivos (CTO, VP de Ingeniería, CEO). Cuando la alta dirección no garantiza la confidencialidad de los reportes, no asigna recursos para intervenciones o, peor aún, usa la información con fines punitivos, SocialScrum se derrumba y da paso al ``teatro social'': los equipos comienzan a aparentar bienestar mientras esconden los problemas de fondo. Sin un compromiso ejecutivo claro y tangible, SocialScrum no debe implementarse.
-
-\paragraph{Riesgo de ``teatro social'' y simulación de bienestar.}
-Cuando los equipos sienten que hablar de sus problemas puede traer consecuencias negativas —como presión para ``arreglar'' el equipo de inmediato, intervenciones excesivas o evaluaciones de desempeño afectadas—, desarrollan mecanismos de defensa que vacían de sentido el modelo. Empiezan a reportar métricas positivas, evitan discutir los conflictos reales durante las retrospectivas y proyectan una imagen de cohesión que no refleja su realidad interna.
-
-Este riesgo solo puede prevenirse a través de salvaguardas éticas firmes y de una coherencia constante entre lo que la organización promete y lo que realmente hace. Sin esa congruencia, la transparencia se vuelve una puesta en escena más.
-
-\paragraph{Escalabilidad no lineal y costo del Social Guide.}
-A diferencia del Scrum Master que puede acompañar a varios equipos al mismo tiempo, el Social Guide necesita involucrarse de forma profunda en la realidad particular de cada grupo. Por eso, la escalabilidad de SocialScrum no es lineal: gestionar la deuda social de diez equipos no se resuelve simplemente contratando diez Social Guides, sino construyendo una cultura organizacional donde los principios del modelo estén verdaderamente integrados.
-
-En estructuras grandes, el costo inicial puede ser alto, pero debe entenderse como una inversión estratégica que solo da frutos con visión y compromiso a largo plazo.
-
-\paragraph{Tensiones operacionales inherentes: ¿Quién cuida al vigilante?}
-SocialScrum no elimina los conflictos estructurales dentro de una organización; simplemente los hace visibles. Algunos de ellos son especialmente delicados:
+\paragraph{Tensiones operacionales inherentes.}
+SocialScrum hace visibles conflictos estructurales que ya existen en la organización, pero no los elimina por sí mismo.
+Dos tensiones merecen atención explícita como condiciones de diseño:
 
 \begin{itemize}
-    \item \textbf{Product Owner vs. Social Guide:} ¿Qué pasa cuando el Product Owner exige ``entregar ya'', mientras el Social Guide alerta que el equipo está emocionalmente al límite? El modelo puede mostrar datos claros —como un Health Score en estado crítico—, pero la decisión de priorizar el bienestar sobre la entrega sigue dependiendo de instancias de liderazgo que SocialScrum no controla.
-    \item \textbf{Supervisión del Social Guide:} ¿Y si el propio CTO, quien supervisa al Social Guide, forma parte del problema? Si la toxicidad proviene del liderazgo técnico, el Social Guide se enfrenta a un conflicto de interés que no puede resolver desde dentro. En estos casos, se necesita escalar la situación a niveles ejecutivos superiores o, si no hay otra opción, recurrir a Recursos Humanos bajo garantías explícitas de no represalia.
+    \item \textbf{Product Owner vs. Social Guide:} cuando el Product Owner exige ``entregar ya'' y el Social Guide alerta que el equipo está emocionalmente al límite, el modelo puede mostrar datos claros ---como un Health Score en estado crítico---, pero la decisión de priorizar el bienestar sobre la entrega depende de instancias de liderazgo que SocialScrum no controla.
+    \item \textbf{Supervisión del Social Guide:} si el propio CTO que supervisa al Social Guide forma parte del problema, se genera un conflicto de interés que el marco no puede resolver internamente. En estos casos, el diseño contempla la escalación a niveles ejecutivos superiores o, como último recurso, a Recursos Humanos bajo garantías explícitas de no represalia.
 \end{itemize}
 
-\paragraph{Dependencia de competencias especializadas.}
-El rol del Social Guide exige una combinación poco común: sensibilidad humana, rigor analítico y conocimiento técnico. No todos los psicólogos organizacionales entienden los entornos de desarrollo de software, ni todos los Scrum Masters tienen formación en dinámicas de grupo. Esta carencia de perfiles híbridos limita, de manera natural, la adopción del modelo en el corto plazo.
-
-Una estrategia de mitigación consiste en que, durante las fases tempranas de adopción, la organización recurra a consultores externos ---psicólogos organizacionales o especialistas en recursos humanos con experiencia en equipos técnicos--- que acompañen y capaciten a un Scrum Master maduro para asumir progresivamente las funciones del Social Guide. De este modo, la barrera de entrada se reduce sin comprometer la calidad de la gestión social.
-
-Sin embargo, estas limitaciones no invalidan la propuesta. Lo que sí demandan es honestidad organizacional: SocialScrum solo funciona cuando existen condiciones básicas de confianza, autonomía y apoyo desde la dirección. Si esos cimientos no están, intentar implementarlo puede generar más frustración que progreso.
+\paragraph{Disponibilidad del perfil de Social Guide.}
+El rol exige una combinación poco común de sensibilidad humana, rigor analítico y conocimiento técnico.
+No todos los psicólogos organizacionales comprenden los entornos de desarrollo de software, ni todos los Scrum Masters tienen formación en dinámicas de grupo.
+Como estrategia de mitigación, el modelo contempla que, durante las fases tempranas de adopción, la organización recurra a consultores externos ---psicólogos organizacionales o especialistas en recursos humanos con experiencia en equipos técnicos--- que acompañen y capaciten a un Scrum Master maduro para asumir progresivamente las funciones del Social Guide.
 
 \section{Conclusiones del capítulo}
 \label{sec:conclusiones_capitulo3}

@@ -3,7 +3,7 @@
 
 \section[Declaración de Confidencialidad]{Declaración de Confidencialidad y\\Compromiso Ético}
 
-Yo, \underline{\hspace{6cm}} (nombre completo del Social Guide), en mi rol de \textbf{Social Guide} del equipo \underline{\hspace{5cm}} (nombre del equipo), me comprometo formalmente a cumplir con los principios éticos y salvaguardas de confidencialidad descritos a continuación, en el marco de la implementación de SocialScrum.
+Yo, \underline{\hspace{6cm}} (nombre completo del Social Guide), en mi rol de \textbf{\gls{social-guide}} del equipo \underline{\hspace{5cm}} (nombre del equipo), me comprometo formalmente a cumplir con los principios éticos y salvaguardas de confidencialidad descritos a continuación, en el marco de la implementación de \gls{socialscrum}.
 
 \subsection{Confidencialidad absoluta de información individual}
 
@@ -12,13 +12,13 @@ Yo, \underline{\hspace{6cm}} (nombre completo del Social Guide), en mi rol de \t
           \begin{itemize}
               \item Comentarios realizados durante eventos sociales (Social Daily Standup, Social Sprint Retrospective, sesiones de mediación).
               \item Conflictos interpersonales descritos por miembros del equipo.
-              \item Información relacionada con el estado emocional, \textit{burnout}, desmotivación o vulnerabilidades personales.
+              \item Información relacionada con el estado emocional, \gls{burnout}, desmotivación o vulnerabilidades personales.
               \item Cualquier dato que pueda revelar directa o indirectamente la identidad de un miembro del equipo.
           \end{itemize}
 
     \item \textbf{Solo reportaré información agregada y anonimizada}, como:
           \begin{itemize}
-              \item El Health Score promedio del equipo (escala 1–10).
+              \item El \gls{health-score} promedio del equipo (escala 1–10).
               \item \gls{community-smells} identificados a nivel de equipo, sin atribuir responsabilidades individuales.
               \item Tendencias de salud social a lo largo del tiempo.
               \item Necesidades de intervención organizacional sin mencionar casos particulares.
@@ -38,42 +38,44 @@ Yo, \underline{\hspace{6cm}} (nombre completo del Social Guide), en mi rol de \t
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
-    >{\RaggedRight\hspace{0pt}}p{2.8cm}
-    >{\Centering\hspace{0pt}}p{2.5cm}
-    >{\RaggedRight\hspace{0pt}}p{6.9cm}
-    >{\Centering\hspace{0pt}}p{2.5cm}
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{2.8cm}|
+    >{\Centering\hspace{0pt}}p{2.5cm}|
+    >{\RaggedRight\hspace{0pt}}p{6.9cm}|
+    >{\Centering\hspace{0pt}}p{2.5cm}|
     }
 
-    \caption{Reportes del Social Guide.} \label{tab:reportes-social-guide}                                                                                                     \\
-    \toprule
-    \textbf{Tipo}                                                                                              & \textbf{Frecuencia} & \textbf{Contenido} & \textbf{Audiencia} \\
-    \midrule
+    \caption{Reportes del Social Guide.} \label{tab:reportes-social-guide}                                                                                                  \\
+    \hline
+    \textbf{Tipo}                                                                                           & \textbf{Frecuencia} & \textbf{Contenido} & \textbf{Audiencia} \\
+    \hline
     \endfirsthead
 
-    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                    \\
-    \toprule
-    \textbf{Tipo}                                                                                              & \textbf{Frecuencia} & \textbf{Contenido} & \textbf{Audiencia} \\
-    \midrule
+    \hline
+    \multicolumn{4}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                               \\
+    \hline
+    \textbf{Tipo}                                                                                           & \textbf{Frecuencia} & \textbf{Contenido} & \textbf{Audiencia} \\
+    \hline
     \endhead
 
-    \midrule
-    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                                                                            \\
+    \hline
+    \multicolumn{4}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                       \\
+    \hline
     \endfoot
 
-    \bottomrule
+    \hline
     \endlastfoot
 
-    Interno al equipo                                                                                          &
-    Cada Sprint                                                                                                &
-    Health Score del equipo, \gls{community-smells} activos y acciones sociales completadas durante el Sprint. &
-    Equipo                                                                                                                                                                     \\
-    \midrule
+    Interno al equipo                                                                                       &
+    Cada Sprint                                                                                             &
+    Health Score del equipo, olores comunitarios activos y acciones sociales completadas durante el Sprint. &
+    Equipo                                                                                                                                                                  \\
+    \hline
 
-    Ejecutivo                                                                                                  &
-    Mensual                                                                                                    &
-    Health Score promedio, \gls{community-smells} críticos y solicitudes de recursos o apoyo organizacional.   &
-    CTO, Scrum Master                                                                                                                                                          \\
+    Ejecutivo                                                                                               &
+    Mensual                                                                                                 &
+    Health Score promedio, olores comunitarios críticos y solicitudes de recursos o apoyo organizacional.   &
+    CTO, Scrum Master                                                                                                                                                       \\
 \end{longtable}
 \endgroup
 
@@ -105,50 +107,52 @@ Todos los reportes son \textbf{agregados y anónimos}. No identifican a personas
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
-    >{\RaggedRight\hspace{0pt}}p{7.2cm}
-    >{\Centering\hspace{0pt}}p{3cm}
-    >{\RaggedRight\hspace{0pt}}p{5cm}
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{7.2cm}|
+    >{\Centering\hspace{0pt}}p{3cm}|
+    >{\RaggedRight\hspace{0pt}}p{5cm}|
     }
 
     \caption{Dedicación del Social Guide según contexto.} \label{tab:dedicacion-social-guide} \\
-    \toprule
+    \hline
     \textbf{Contexto}                                 & \textbf{Dedicación} & \textbf{Modelo} \\
-    \midrule
+    \hline
     \endfirsthead
 
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                   \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                 \\
+    \hline
     \textbf{Contexto}                                 & \textbf{Dedicación} & \textbf{Modelo} \\
-    \midrule
+    \hline
     \endhead
 
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                           \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                         \\
+    \hline
     \endfoot
 
-    \bottomrule
+    \hline
     \endlastfoot
 
     Equipo de 5--7 personas con Health Score $\geq 7$ &
     10--20~\%                                         &
     Rol rotativo                                                                              \\
-    \midrule
+    \hline
 
     Equipo de 5--7 personas con Health Score $< 7$    &
     30--40~\%                                         &
     Rol parcial                                                                               \\
-    \midrule
+    \hline
 
     Equipo de 8--15 personas                          &
     30--70~\%                                         &
     Rol parcial o casi completo                                                               \\
-    \midrule
+    \hline
 
     Equipo de 16 o más personas                       &
     80--100~\%                                        &
     Tiempo completo                                                                           \\
-    \midrule
+    \hline
 
     Múltiples equipos                                 &
     100~\%                                            &
@@ -194,7 +198,7 @@ Siempre que la ley lo permita, \textbf{informaré al equipo} cuando deba suspend
 
 \subsection{Seguridad psicológica, auditoría y mejora continua}
 
-Me comprometo a proteger la seguridad psicológica del equipo, actuando con integridad y facilitando sin imponer. El equipo tiene derecho a revisar cualquier reporte antes de su difusión, auditar mi cumplimiento en cualquier momento y solicitar mi remoción inmediata si detecta una violación. Me comprometo a participar en auditorías semestrales independientes, recibir retroalimentación del equipo y mantener formación continua en ética y facilitación. Los fundamentos detallados de estas salvaguardas se describen en el Capítulo~\ref{chap:capitulo3}, Sección~\ref{sec:salvaguardas_eticas}.
+Me comprometo a proteger la \gls{seguridad-psicologica} del equipo, actuando con integridad y facilitando sin imponer. El equipo tiene derecho a revisar cualquier reporte antes de su difusión, auditar mi cumplimiento en cualquier momento y solicitar mi remoción inmediata si detecta una violación. Me comprometo a participar en auditorías semestrales independientes, recibir retroalimentación del equipo y mantener formación continua en ética y facilitación. Los fundamentos detallados de estas salvaguardas se describen en el Capítulo~\ref{chap:capitulo3}, Sección~\ref{sec:salvaguardas_eticas}.
 
 \subsection{Consecuencias de la violación de este acuerdo}
 
@@ -211,15 +215,23 @@ Reconozco que, si incumplo alguno de los principios establecidos:
 
 \noindent
 \textbf{Firma del Social Guide:} \underline{\hspace{6cm}} \\[0.5cm]
+
 \textbf{Nombre completo:} \underline{\hspace{6cm}} \\[0.5cm]
+
 \textbf{Fecha:} \underline{\hspace{4cm}} \\[1cm]
+
 
 \noindent
 \textbf{Testigo (Scrum Master):} \underline{\hspace{6cm}} \\[0.5cm]
+
 \textbf{Nombre completo:} \underline{\hspace{6cm}} \\[0.5cm]
+
 \textbf{Fecha:} \underline{\hspace{4cm}} \\[1cm]
+
 
 \noindent
 \textbf{Testigo (CTO/VP Ingeniería):} \underline{\hspace{6cm}} \\[0.5cm]
+
 \textbf{Nombre completo:} \underline{\hspace{6cm}} \\[0.5cm]
+
 \textbf{Fecha:} \underline{\hspace{4cm}} \\

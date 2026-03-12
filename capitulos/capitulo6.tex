@@ -1,5 +1,5 @@
-\chapter*{CAPÍTULO 6. Conclusiones, publicaciones, recomendaciones y trabajos futuros}
-\addcontentsline{toc}{chapter}{CAPÍTULO 6. Conclusiones, publicaciones, recomendaciones y trabajos futuros}
+\chapter*{CAPÍTULO 6. Conclusiones, recomendaciones y trabajo futuro}
+\addcontentsline{toc}{chapter}{CAPÍTULO 6. Conclusiones, recomendaciones y trabajo futuro}
 \setcounter{chapter}{6}
 \setcounter{section}{0}
 \setcounter{subsection}{0}
@@ -19,11 +19,11 @@
 En este capítulo se presentan las conclusiones de la investigación, las limitaciones identificadas, las publicaciones derivadas, las recomendaciones, las líneas de trabajo futuro y una reflexión final.
 
 % ============================================================
-\section{Cumplimiento de los objetivos de investigación}
+\section{Análisis de los objetivos de investigación}
 \label{sec:analisis-objetivos-investigacion}
 % ============================================================
 
-De manera general, la investigación logró diseñar y validar conceptualmente el modelo propuesto, cumpliendo satisfactoriamente con los hitos trazados. La Tabla~\ref{tab:cumplimiento-objetivos} sintetiza el grado de cumplimiento de cada objetivo planteado en el Capítulo~\ref{chap:capitulo1}.
+A lo largo del proceso investigativo se abordaron los objetivos planteados en el Capítulo~\ref{chap:capitulo1}. La Tabla~\ref{tab:analisis-objetivos} sintetiza el análisis de cada uno de ellos, describiendo los resultados obtenidos y la evidencia asociada.
 
 \begingroup
 \scriptsize
@@ -32,48 +32,53 @@ De manera general, la investigación logró diseñar y validar conceptualmente e
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
-    >{\RaggedRight\hspace{0pt}}p{4.3cm} % Objetivo
-    >{\RaggedRight\hspace{0pt}}p{5.4cm} % Resultado
-    >{\RaggedRight\hspace{0pt}}p{5.3cm} % Evidencia
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{4.3cm}| % Objetivo
+    >{\RaggedRight\hspace{0pt}}p{5.4cm}| % Resultado
+    >{\RaggedRight\hspace{0pt}}p{5.3cm}| % Evidencia
     }
 
-    \caption{Cumplimiento de los objetivos de investigación}
-    \label{tab:cumplimiento-objetivos}                                                                                                                                                                                                                                                                                                                                                        \\
+    \caption{Análisis de los objetivos de investigación}
+    \label{tab:analisis-objetivos}                                                                                                                                                                                                                                                                                                                                                  \\
 
-    \toprule
-    \textbf{Objetivo} & \textbf{Resultado}                                                                                                                                                                                                                                                                                                                               & \textbf{Evidencia} \\
-    \midrule
+    \hline
+    \textbf{Objetivo} & \textbf{Resultado}                                                                                                                                                                                                                                                                                                                     & \textbf{Evidencia} \\
+    \hline
     \endfirsthead
 
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                                                                   \\
-    \toprule
-    \textbf{Objetivo} & \textbf{Resultado}                                                                                                                                                                                                                                                                                                                               & \textbf{Evidencia} \\
-    \midrule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                                                         \\
+    \hline
+    \textbf{Objetivo} & \textbf{Resultado}                                                                                                                                                                                                                                                                                                                     & \textbf{Evidencia} \\
+    \hline
     \endhead
 
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                                                                           \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                                                                 \\
+    \hline
     \endfoot
 
-    \bottomrule
+    \hline
     \endlastfoot
 
-    \textbf{General:} Definir un proceso ágil para gestionar la deuda social, basado en Scrum.
-                      & Cumplido. Se diseñó el modelo SocialScrum como extensión socio-técnica de Scrum.
-                      & Capítulo~\ref{chap:capitulo3} y Capítulo~\ref{chap:capitulo4}. Validación conceptual en Capítulo~\ref{chap:capitulo5}.                                                                                                                                                                                                                                                \\
+    \textbf{General:} Definir un proceso ágil para gestionar la \gls{deuda-social}, basado en \gls{scrum}.
+                      & Se diseñó el modelo \gls{socialscrum} como extensión socio-técnica de Scrum.
+                      & Capítulo~\ref{chap:capitulo3} y Capítulo~\ref{chap:capitulo4}. Validación conceptual en Capítulo~\ref{chap:capitulo5}.                                                                                                                                                                                                                                      \\
 
+    \hline
     \textbf{OE1:} Identificar elementos fundamentales mediante análisis de la literatura.
-                      & Cumplido. Se identificaron y categorizaron \gls{community-smells} en cuatro categorías, se documentó su impacto en métricas técnicas y se evidenció la ausencia de mecanismos explícitos en marcos ágiles.
-                      & RSL presentada en Capítulo~\ref{chap:capitulo2} y Anexo~\ref{anexo:a}.                                                                                                                                                                                                                                                                                                \\
+                      & Se identificaron y categorizaron \gls{community-smells} en cuatro categorías, se documentó su impacto en métricas técnicas y se evidenció la ausencia de mecanismos explícitos en marcos ágiles.
+                      & RSL presentada en Capítulo~\ref{chap:capitulo2} y Anexo~\ref{anexo:a}.                                                                                                                                                                                                                                                                                      \\
 
+    \hline
     \textbf{OE2:} Construir un proceso basado en Scrum incorporando los elementos del OE1.
-                      & Cumplido. Se definieron fundamentos conceptuales (Capítulo~\ref{chap:capitulo3}) y operacionalización completa (Capítulo~\ref{chap:capitulo4}): rol del Social Guide, Health Score, artefactos sociales, SSP, eventos adaptados y salvaguardas éticas.
-                      & Capítulo~\ref{chap:capitulo3} y Capítulo~\ref{chap:capitulo4}. Simulación en Anexo~\ref{anexo:simulacion-socialscrum}.                                                                                                                                                                                                                                                \\
+                      & Se definieron fundamentos conceptuales (Capítulo~\ref{chap:capitulo3}) y operacionalización completa (Capítulo~\ref{chap:capitulo4}): rol del \gls{social-guide}, \gls{health-score}, artefactos sociales, SSP, eventos adaptados y salvaguardas éticas.
+                      & Capítulo~\ref{chap:capitulo3} y Capítulo~\ref{chap:capitulo4}. Simulación en Anexo~\ref{anexo:simulacion-socialscrum}.                                                                                                                                                                                                                                      \\
 
+    \hline
     \textbf{OE3:} Evaluar el proceso mediante juicio de expertos y coeficiente estadístico.
-                      & Cumplido. Se evaluó con 6 expertos usando $\kappa_{\text{free}}$ de Randolph y se identificaron oportunidades de mejora. Los resultados mostraron acuerdo moderado a casi perfecto en claridad e idoneidad, pero completitud (P4, $\kappa_{\text{free}} = 0{,}08$) y factibilidad (P11, $\kappa_{\text{free}} = 0{,}00$) no alcanzaron consenso.
-                      & Capítulo~\ref{chap:capitulo5}.                                                                                                                                                                                                                                                                                                                                        \\
+                      & Se evaluó con 6 expertos usando $\kappa_{\text{free}}$ de Randolph y se identificaron oportunidades de mejora. Los resultados mostraron acuerdo moderado a casi perfecto en claridad e idoneidad, pero completitud (P4, $\kappa_{\text{free}} = 0{,}08$) y factibilidad (P11, $\kappa_{\text{free}} = 0{,}00$) no alcanzaron consenso.
+                      & Capítulo~\ref{chap:capitulo5}.                                                                                                                                                                                                                                                                                                                              \\
 \end{longtable}
 \endgroup
 
@@ -85,13 +90,13 @@ De manera general, la investigación logró diseñar y validar conceptualmente e
 A partir del trabajo realizado, se presentan las siguientes conclusiones:
 
 \begin{enumerate}
-    \item \textbf{La deuda social es un problema real y documentado en equipos ágiles, pero insuficientemente abordado.} La RSL confirmó que los \gls{community-smells} afectan la productividad, la calidad del software y el bienestar del equipo, y que los marcos ágiles existentes carecen de mecanismos explícitos para gestionarlos.
+    \item \textbf{La deuda social es un problema real y documentado en equipos ágiles, pero insuficientemente abordado.} La RSL confirmó que los olores comunitarios afectan la productividad, la calidad del software y el bienestar del equipo, y que los marcos ágiles existentes carecen de mecanismos explícitos para gestionarlos.
 
-    \item \textbf{El modelo SocialScrum demuestra que es conceptualmente posible integrar la gestión de la deuda social en Scrum.} El modelo adapta eventos, artefactos y roles de Scrum para incorporar una dimensión social. La cobertura de los 33 indicadores de AgilityPRO respalda su alineación conceptual con los principios ágiles, aunque dicha verificación fue realizada por los propios diseñadores del artefacto.
+    \item \textbf{El modelo SocialScrum demuestra que es conceptualmente posible integrar la gestión de la deuda social en Scrum.} El modelo adapta eventos, artefactos y roles de Scrum para incorporar una dimensión social. La cobertura de los 33 indicadores de \gls{agilitypro} respalda su alineación conceptual con los principios ágiles, aunque dicha verificación fue realizada por los propios diseñadores del artefacto, pero posteriormente evaluada por los expertos.
 
     \item \textbf{El rol de Social Guide es una contribución diferenciadora cuya viabilidad operativa enfrenta barreras significativas.} Su perfil híbrido (psicología organizacional + conocimiento técnico) fue validado como pertinente por los expertos (P9: $Mdn = 5{,}0$), pero resulta poco común en los mercados laborales, lo cual representa un desafío de adopción en el contexto actual.
 
-    \item \textbf{Las métricas sociales propuestas constituyen aproximaciones heurísticas que requieren validación psicométrica.} Tanto el Health Score como los Social Story Points representan simplificaciones conscientes de fenómenos complejos; su validez de constructo y confiabilidad no han sido demostradas.
+    \item \textbf{Las métricas sociales propuestas constituyen aproximaciones heurísticas que requieren validación psicométrica.} Tanto el Health Score como los \gls{social-story-points} representan simplificaciones conscientes de fenómenos complejos; su validez de constructo y confiabilidad no han sido demostradas aún.
 
     \item \textbf{La validación por juicio de expertos respalda parcialmente la viabilidad conceptual, pero no permite extraer conclusiones categóricas.} La factibilidad de implementación (P11, $\kappa_{\text{free}} = 0{,}00$) y la completitud (P4, $\kappa_{\text{free}} = 0{,}08$) no alcanzaron consenso estadístico. SocialScrum es, en su estado actual, un modelo exploratorio que requiere validación empírica antes de considerarse apto para intervención en equipos reales.
 
@@ -103,8 +108,10 @@ A partir del trabajo realizado, se presentan las siguientes conclusiones:
 \label{sec:limitaciones}
 % ============================================================
 
+El modelo SocialScrum opera bajo condiciones de aplicabilidad específicas ---como la existencia de un entorno organizacional mínimamente funcional, el respaldo ejecutivo explícito y la disponibilidad de un profesional con el perfil del Social Guide---, las cuales fueron analizadas en la Sección~\ref{sec:alcance-condiciones-aplicabilidad} del Capítulo~\ref{chap:capitulo3}. Las limitaciones que se presentan a continuación son de naturaleza distinta: corresponden al plano metodológico de la investigación.
+
 \begin{enumerate}
-    \item \textbf{Ausencia de validación empírica:} SocialScrum no ha sido implementado en equipos reales. La investigación no logró ejecutar la intervención empírica originalmente planteada (Investigación-Acción) y transitó hacia \gls{dsr} en fase \textit{ex ante} \cite{hevner2004designscience, peffers2007dsrm, wieringa2014dsr}, lo que confina todas las conclusiones al plano conceptual.
+    \item \textbf{Ausencia de validación empírica:} SocialScrum no ha sido implementado en equipos reales. La investigación no logró ejecutar la intervención empírica originalmente planteada (Investigación-Acción) y transitó hacia \gls{dsr} en fase de diseño previo \cite{hevner2004designscience, peffers2007dsrm, wieringa2014dsr}, lo que confina todas las conclusiones al plano conceptual.
 
     \item \textbf{Instrumentos de medición no validados psicométricamente:} Las escalas del Health Score no han sido sometidas a pruebas de validez de constructo ni de confiabilidad test-retest \cite{nunnally1994psychometric}. Al ser el eje sobre el cual pivotan las decisiones de priorización e intervención del modelo, esto representa una limitación seria.
 
@@ -112,11 +119,11 @@ A partir del trabajo realizado, se presentan las siguientes conclusiones:
 
     \item \textbf{Parámetros operativos y cuantitativos no calibrados empíricamente:} Los porcentajes de capacidad social (10--20~\%), las zonas de respuesta del Health Score y los umbrales de rotación constituyen decisiones de diseño, no estándares empíricos. Su calibración para distintos contextos requiere estudios piloto con métricas longitudinales.
 
-    \item \textbf{Autoevaluación de agilidad (AgilityPRO):} La verificación de cobertura de los 33 indicadores fue realizada por los propios diseñadores del artefacto, lo que constituye un conflicto de interés evaluativo. Su confirmación requiere auditoría empírica independiente.
-
     \item \textbf{Sensibilidad del coeficiente de concordancia:} Con $k = 5$ categorías y $N = 6$ evaluadores, el $\kappa_{\text{free}}$ tiende a producir valores conservadores ($P_e = 0{,}20$). La aplicación de métricas complementarias como el coeficiente $W$ de Kendall \cite{Kendall1948} con muestras más amplias fortalecería la evidencia.
 
     \item \textbf{Ausencia de un modelo financiero de Retorno de Inversión (ROI):} La reducción de capacidad técnica propuesta (10--20~\% del Sprint) carece de un análisis económico que demuestre su viabilidad financiera frente a las presiones de Time-to-Market.
+
+    \item \textbf{Modelo sin incorporación de mejoras derivadas de la validación:} La versión de SocialScrum presentada en esta monografía (Capítulos~\ref{chap:capitulo3} y \ref{chap:capitulo4}) corresponde a la versión conceptual inicial, la misma que fue sometida a evaluación por parte de los expertos (ver Anexo~\ref{anexo:contextualizacion}). Las oportunidades de mejora y recomendaciones identificadas en el Capítulo~\ref{chap:capitulo5} no fueron incorporadas al modelo, debido a que la investigación no completó una segunda iteración del ciclo de diseño de \gls{dsr}. Dichas mejoras se documentan como insumos para trabajo futuro (ver Sección~\ref{sec:trabajos-futuros}).
 \end{enumerate}
 
 % ============================================================
@@ -124,12 +131,12 @@ A partir del trabajo realizado, se presentan las siguientes conclusiones:
 \label{sec:publicaciones}
 % ============================================================
 
-Como resultado del proceso de investigación, se generaron las siguientes producciones académicas:
+Como resultado de la fase de exploración del estado del arte, la cual fundamenta teóricamente la propuesta del modelo SocialScrum, se generaron las siguientes producciones académicas enfocadas en la deuda social:
 
 \begin{enumerate}
-    \item \textbf{Revisión sistemática de la literatura (RSL):} Se elaboró una RSL sobre la gestión de la deuda social en el desarrollo de software ágil, la cual sintetiza el estado del arte y fundamenta la propuesta de SocialScrum (ver Anexo~\ref{anexo:a}).
+    \item \textbf{Revisión Sistemática de la Literatura (RSL):} Documento metodológico que detalla el protocolo de investigación, las estrategias de búsqueda, la evaluación de calidad de las fuentes y el análisis de las estrategias para la gestión de la deuda social en el desarrollo de software ágil (ver Anexo~\ref{anexo:a}).
 
-    \item \textbf{Artículo publicado en la revista AmiTIC:} Se publicó un artículo titulado \textit{``Social Debt in Agile Software Development''} en la revista AmiTIC, el cual presenta los resultados preliminares de la investigación y la propuesta del modelo SocialScrum (ver Anexo~\ref{anexo:b}).
+    \item \textbf{Artículo de conferencia (AmITIC 2025):} Artículo científico titulado \textit{``Social Debt in Agile Software Development''} \cite{romero2025social}, publicado en las memorias del IEEE VII Congreso Internacional en Inteligencia Ambiental, Ingeniería de Software y Salud Electrónica y Móvil (AmITIC). Este documento sintetiza los hallazgos de la RSL, clasificando los olores comunitarios derivados de disfunciones sociotécnicas y delineando estrategias de mitigación en entornos ágiles. Disponible en: \url{https://ieeexplore.ieee.org/abstract/document/11214613} (ver Anexo~\ref{anexo:b}).
 \end{enumerate}
 
 % ============================================================
@@ -147,7 +154,7 @@ Como resultado del proceso de investigación, se generaron las siguientes produc
     \item \textbf{Proteger la confidencialidad desde el inicio}, estableciendo formalmente la separación entre los datos del Social Guide y los procesos de evaluación de desempeño de Recursos Humanos.
 
     \item \textbf{Utilizar el Health Score como guía, no como objetivo}, para orientar decisiones de priorización sin generar presión artificial sobre el equipo.
-    \item
+
     \item \textbf{Implementar estrategias de mitigación para cubrir el rol de Social Guide}, especialmente en fases tempranas de adopción. Dado que el perfil híbrido requerido es poco común, se recomienda recurrir a consultores externos de recursos humanos o psicólogos organizacionales. Estos profesionales pueden acompañar y capacitar a un Scrum Master experimentado en las competencias sociales requeridas, reduciendo así la barrera de entrada al rol.
 \end{enumerate}
 
@@ -156,13 +163,13 @@ Como resultado del proceso de investigación, se generaron las siguientes produc
 \begin{enumerate}
     \item \textbf{Priorizar la validación empírica} mediante implementaciones piloto en organizaciones reales, con diferentes tamaños de equipo, industrias y contextos culturales.
 
-    \item \textbf{Desarrollar y validar psicométricamente los instrumentos de medición} (Health Score, detección de \gls{community-smells}), incluyendo validez de constructo, confiabilidad y sensibilidad al cambio.
+    \item \textbf{Desarrollar y validar psicométricamente los instrumentos de medición} (Health Score, detección de olores comunitarios), incluyendo validez de constructo, confiabilidad y sensibilidad al cambio.
 
     \item \textbf{Conformar paneles de validación multidisciplinarios} que incluyan psicólogos organizacionales y especialistas en ciencias sociales, además de ingenieros de software.
 \end{enumerate}
 
 % ============================================================
-\section{Trabajos futuros}
+\section{Trabajo futuro}
 \label{sec:trabajos-futuros}
 % ============================================================
 

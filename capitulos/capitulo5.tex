@@ -1,4 +1,4 @@
-﻿\chapter*{CAPÍTULO 5. Validación del modelo SocialScrum mediante la técnica de juicio de expertos}
+\chapter*{CAPÍTULO 5. Validación del modelo SocialScrum mediante la técnica de juicio de expertos}
 \addcontentsline{toc}{chapter}{CAPÍTULO 5. Validación del modelo SocialScrum mediante la técnica de juicio de expertos}
 \setcounter{chapter}{5}
 \setcounter{section}{0}
@@ -16,136 +16,148 @@
 
 \setlength{\parindent}{0pt}
 
-Este capítulo presenta la validación del modelo SocialScrum, con el fin de analizar su coherencia y alineación con los principios de la agilidad. La validación se aborda desde una perspectiva conceptual, considerando tanto la evaluación de la agilidad del modelo como la valoración experta de su diseño, previo a una eventual implementación empírica en contextos organizacionales reales.
+Este capítulo presenta la validación del modelo \gls{socialscrum} con el fin de analizar su coherencia y alineación con los principios de la agilidad. La validación se aborda desde una perspectiva conceptual, considerando tanto la evaluación de la agilidad del modelo como la valoración experta de su diseño.
 
-Es importante señalar que SocialScrum prioriza deliberadamente los factores sociales y organizacionales del trabajo en equipo por encima de prácticas técnicas específicas de ingeniería de software. En consecuencia, los resultados de esta validación deben interpretarse como una validación conceptual del modelo desde la perspectiva ágil, quedando la evaluación de su desempeño técnico y operativo como una línea de trabajo futuro.
+Es importante señalar que SocialScrum prioriza deliberadamente los factores sociales y organizacionales del trabajo en equipo por encima de prácticas técnicas específicas de Ingeniería de Software. En consecuencia, los resultados de esta validación deben interpretarse como una validación conceptual del modelo desde la perspectiva ágil, quedando la evaluación de su desempeño técnico y operativo como una línea de trabajo futuro.
 La estructura de este capítulo, ilustrada en la Figura \ref{fig:estructura-capitulo5}, se organiza de la siguiente manera: en primer lugar, se presenta la estrategia de validación y los criterios de evaluación considerados (claridad, completitud, idoneidad, facilidad de uso y agilidad); posteriormente, se describe el diseño del instrumento de validación; a continuación, se detalla el perfil y selección de los expertos participantes, seguido por el protocolo de validación; finalmente, se presentan los resultados cuantitativos y cualitativos obtenidos, así como el análisis del desempeño del modelo y las recomendaciones de mejora.
 
 \begin{figure}[!htbp]
-   \centering
-   \includegraphics[width=0.8\textwidth]{recursos/capitulo5/estructura-capitulo5.png}
-   \caption{Estructura del Capítulo 5: Validación del modelo SocialScrum}
-   \label{fig:estructura-capitulo5}
+    \centering
+    \includegraphics[width=0.8\textwidth]{recursos/capitulo5/estructura-capitulo5.png}
+    \caption{Estructura del Capítulo 5: Validación del modelo SocialScrum}
+    \label{fig:estructura-capitulo5}
 \end{figure}
 
 
 
 \section{Estrategia de validación del modelo SocialScrum}
-Dado que SocialScrum propone una extensión socio-técnica de Scrum, la estrategia de validación se centró en contrastar su viabilidad conceptual y pertinencia operativa mediante una evaluación técnica de contenido por juicio de expertos. Para ello, el modelo se sometió a cinco criterios de calidad ---claridad, completitud, idoneidad, facilidad de uso y agilidad---, detallados en la Sección~\ref{sec:criterios-evaluacion}, a través de un instrumento estructurado que combina preguntas cerradas con escala Likert y preguntas abiertas para capturar valoraciones tanto cuantitativas como cualitativas.
+Dado que SocialScrum propone una extensión socio-técnica de \gls{scrum}, la estrategia de validación se centró en contrastar su viabilidad conceptual y pertinencia operativa mediante una evaluación técnica de contenido por juicio de expertos. Para ello, el modelo se sometió a cinco criterios de calidad ---claridad, completitud, idoneidad, facilidad de uso y agilidad---, detallados en la Sección~\ref{sec:criterios-evaluacion}, a través de un instrumento estructurado que combina preguntas cerradas con escala Likert y preguntas abiertas para capturar valoraciones tanto cuantitativas como cualitativas.
 
 \section{Criterios de evaluación considerados}
 \label{sec:criterios-evaluacion}
 \subsection{Criterios de evaluación}
-Se definieron cinco criterios para guiar la valoración por parte de los expertos, abarcando la coherencia del modelo con los principios ágiles, su aplicabilidad práctica y su capacidad para mejorar la colaboración en equipos de desarrollo. Cada criterio se describe en la Tabla~\ref{tab:criterios-evaluacion}:
+Se establecieron cinco criterios para guiar la valoración por parte de los expertos, abarcando la coherencia del modelo con los principios ágiles, su aplicabilidad práctica y su capacidad para mejorar la colaboración en equipos de desarrollo. Cada criterio se describe en la Tabla~\ref{tab:criterios-evaluacion}:
 
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
 \setlength{\tabcolsep}{3pt}
 
-\begin{longtable}[H]{
-   >{\RaggedRight\hspace{0pt}}p{3.6cm}   % Col 1: Criterio
-   >{\RaggedRight\hspace{0pt}}p{\dimexpr\textwidth-4.0cm\relax} % Col 2: Descripción (autoajustada)
-   }
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{3.6cm}|   % Col 1: Criterio
+    >{\RaggedRight\hspace{0pt}}p{\dimexpr\textwidth-4.0cm\relax}| % Col 2: Descripción (autoajustada)
+    }
 
-   % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-   \caption{Criterios de evaluación y número de preguntas en el instrumento de validación}
-   \label{tab:criterios-evaluacion}                                                                                                                                                                              \\
+    % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
+    \caption{Criterios de evaluación y número de preguntas en el instrumento de validación}
+    \label{tab:criterios-evaluacion}                                                                                                                                                                               \\
 
-   \toprule
-   \textbf{Criterio} & \textbf{Descripción}                                                                                                                                                                      \\
-   \midrule
-   \endfirsthead
+    \hline
+    \textbf{Criterio} & \textbf{Descripción}                                                                                                                                                                       \\
+    \hline
+    \endfirsthead
 
-   % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-   \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                       \\
-   \toprule
-   \textbf{Criterio} & \textbf{Descripción}                                                                                                                                                                      \\
-   \midrule
-   \endhead
+    % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
+    \hline
+    \multicolumn{2}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                      \\
+    \hline
+    \textbf{Criterio} & \textbf{Descripción}                                                                                                                                                                       \\
+    \hline
+    \endhead
 
-   % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-   \midrule
-   \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                               \\
-   \endfoot
+    % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
+    \hline
+    \multicolumn{2}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                              \\
+    \hline
+    \endfoot
 
-   % --- 4. PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- 4. PIE FINAL ---
+    \hline
+    \endlastfoot
 
-   % --- CONTENIDO ---
-   Claridad
-                     & Permite verificar si los conceptos, roles (especialmente el Social Guide) y procesos están definidos de forma precisa, con una semántica adecuada que evite ambigüedades en la ejecución. \\
+    % --- CONTENIDO ---
+    Claridad
+                      & Permite verificar si los conceptos, roles (especialmente el Social Guide) y procesos están definidos de forma precisa, con una semántica adecuada que evite ambigüedades en la ejecución.  \\
 
-   Completitud
-                     & Evalúa si el modelo abarca todas las dimensiones necesarias para la gestión de la deuda social, integrando adecuadamente los eventos adaptados y los artefactos sociales requeridos.      \\
+    \hline
+    Completitud
+                      & Evalúa si el modelo abarca todas las dimensiones necesarias para la gestión de la \gls{deuda-social}, integrando adecuadamente los eventos adaptados y los artefactos sociales requeridos. \\
 
-   Idoneidad
-                     & Valora la pertinencia de la propuesta frente a las necesidades reales de los equipos de desarrollo y su capacidad para abordar problemas de mejora en entornos de software.               \\
+    \hline
+    Idoneidad
+                      & Valora la pertinencia de la propuesta frente a las necesidades reales de los equipos de desarrollo y su capacidad para abordar problemas de mejora en entornos de software.                \\
 
-   Facilidad de uso
-                     & Determina si los protocolos y herramientas propuestas pueden ser implementados de manera sencilla por el equipo, sin generar una complejidad técnica o administrativa innecesaria.        \\
+    \hline
+    Facilidad de uso
+                      & Determina si los protocolos y herramientas propuestas pueden ser implementados de manera sencilla por el equipo, sin generar una complejidad técnica o administrativa innecesaria.         \\
 
-   Agilidad
-                     & Evalúa si el modelo preserva los principios del Manifiesto Ágil (iteración, inspección, adaptación, ritmo sostenible) pese a la incorporación de la dimensión social.                     \\
+    \hline
+    Agilidad
+                      & Evalúa si el modelo preserva los principios del Manifiesto Ágil (iteración, inspección, adaptación, ritmo sostenible) pese a la incorporación de la dimensión social.                      \\
 \end{longtable}
 \endgroup
 
 
 \subsection{Escala de medición}
 \label{sec:escala-medicion}
-Para la evaluación cuantitativa, se utilizó una escala Likert de 1 a 5 puntos, donde 1 representaba ``Totalmente en desacuerdo'' y 5 ``Totalmente de acuerdo''. Esto permitió a los expertos expresar su grado de acuerdo o desacuerdo con afirmaciones relacionadas con cada criterio de evaluación. La escala se definió de la siguiente manera en la Tabla~\ref{tab:estructura-instrumento}:
+Para la evaluación cuantitativa, se utilizó una escala Likert de 1 a 5 puntos, donde 1 representaba ``Totalmente en desacuerdo'' y 5 ``Totalmente de acuerdo''. Esto permitió a los expertos expresar su grado de acuerdo o desacuerdo con afirmaciones relacionadas con cada criterio de evaluación. La escala se presenta de la siguiente manera en la Tabla~\ref{tab:estructura-instrumento}:
 
 \begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.4}
 \setlength{\tabcolsep}{3pt}
 
-\begin{longtable}[H]{
-   >{\RaggedRight\hspace{0pt}}p{\dimexpr\textwidth-2.2cm-2\tabcolsep\relax}
-   >{\Centering\hspace{0pt}}p{2.0cm}
-   }
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{\dimexpr\textwidth-2.2cm-2\tabcolsep\relax}|
+    >{\Centering\hspace{0pt}}p{2.0cm}|
+    }
 
-   % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-   \caption{Estructura del instrumento de evaluación}
-   \label{tab:estructura-instrumento}                                      \\
+    % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
+    \caption{Estructura del instrumento de evaluación}
+    \label{tab:estructura-instrumento}                                        \\
 
-   \toprule
-   \textbf{Interpretación} & \textbf{Valor}                                \\
-   \midrule
-   \endfirsthead
+    \hline
+    \textbf{Interpretación} & \textbf{Valor}                                  \\
+    \hline
+    \endfirsthead
 
-   % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-   \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}} \\
-   \toprule
-   \textbf{Interpretación} & \textbf{Valor}                                \\
-   \midrule
-   \endhead
+    % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
+    \hline
+    \multicolumn{2}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}} \\
+    \hline
+    \textbf{Interpretación} & \textbf{Valor}                                  \\
+    \hline
+    \endhead
 
-   % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-   \midrule
-   \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}         \\
-   \endfoot
+    % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
+    \hline
+    \multicolumn{2}{|r|}{\textit{Continúa en la siguiente página...}}         \\
+    \hline
+    \endfoot
 
-   % --- 4. PIE FINAL ---
-   \bottomrule
-   \endlastfoot
+    % --- 4. PIE FINAL ---
+    \hline
+    \endlastfoot
 
-   % --- CONTENIDO ---
-   Totalmente en desacuerdo
-                           & 1                                             \\
+    % --- CONTENIDO ---
+    Totalmente en desacuerdo
+                            & 1                                               \\
 
-   En desacuerdo
-                           & 2                                             \\
+    \hline
+    En desacuerdo
+                            & 2                                               \\
 
-   Ni de acuerdo ni en desacuerdo
-                           & 3                                             \\
+    \hline
+    Ni de acuerdo ni en desacuerdo
+                            & 3                                               \\
 
-   De acuerdo
-                           & 4                                             \\
+    \hline
+    De acuerdo
+                            & 4                                               \\
 
-   Totalmente de acuerdo
-                           & 5                                             \\
+    \hline
+    Totalmente de acuerdo
+                            & 5                                               \\
 \end{longtable}
 \endgroup
 
@@ -157,7 +169,9 @@ El instrumento de evaluación del marco ágil SocialScrum se estructuró como un
 preguntas cerradas fueron diseñadas para ser valoradas por los expertos en función de cinco criterios de calidad: claridad, completitud, idoneidad, facilidad de uso y agilidad, utilizando la escala Likert (ver Sección~\ref{sec:escala-medicion}). Las preguntas abiertas permitieron a los expertos proporcionar comentarios cualitativos y sugerencias de mejora.
 
 \subsection{Preguntas formuladas}
-A continuación, en la Tabla~\ref{tab:preguntas-instrumento-evaluacion} se presenta el cuestionario dividido en Parte A (preguntas cerradas con escala Likert de 5 puntos), y Parte B (preguntas abiertas). Cada pregunta está identificada con un código (P1–P15 para ítems Likert, PA1–PA2 para abiertas):
+A continuación, en la Tabla~\ref{tab:preguntas-instrumento-evaluacion} se presenta el cuestionario dividido en Parte A (preguntas cerradas con escala Likert de 5 puntos), y Parte B (preguntas abiertas). Cada pregunta está identificada con un código (P1–P15 para ítems Likert y PA1–PA2 para abiertas):
+
+\smallskip
 
 \begingroup
 \scriptsize
@@ -166,77 +180,93 @@ A continuación, en la Tabla~\ref{tab:preguntas-instrumento-evaluacion} se prese
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
-   >{\RaggedRight\hspace{0pt}}p{1.2cm} % Id.
-   >{\RaggedRight\hspace{0pt}}p{2.8cm} % Criterio
-   >{\RaggedRight\hspace{0pt}}p{\dimexpr\textwidth-1.2cm-2.8cm-6\tabcolsep\relax} % Pregunta
-   }
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{1.2cm}| % Id.
+    >{\RaggedRight\hspace{0pt}}p{2.8cm}| % Criterio
+    >{\RaggedRight\hspace{0pt}}p{\dimexpr\textwidth-1.2cm-2.8cm-6\tabcolsep\relax}| % Pregunta
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Preguntas del instrumento de evaluación}
-   \label{tab:preguntas-instrumento-evaluacion}                                                                                                                                                                                                                                                                                         \\
-   \toprule
-   \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                                 \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Preguntas del instrumento de evaluación}
+    \label{tab:preguntas-instrumento-evaluacion}                                                                                                                                                                                                                                                                                         \\
+    \hline
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                                 \\
+    \hline
+    \endfirsthead
 
-   % --- ENCABEZADO PÁGINAS SIGUIENTES ---
-   \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                              \\
-   \toprule
-   \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                                 \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO PÁGINAS SIGUIENTES ---
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                            \\
+    \hline
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                                 \\
+    \hline
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                      \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                    \\
+    \hline
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \multicolumn{3}{l}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.), Pregunta Cerrada (P) y Pregunta Abierta (PA).}}                                                                                                                                                                                                   \\
-   \endlastfoot
+    % --- PIE FINAL ---
+    \hline
+    \multicolumn{3}{|l|}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.), Pregunta Cerrada (P) y Pregunta Abierta (PA).}}                                                                                                                                                                                                 \\
+    \hline
+    \endlastfoot
 
-   % =========================
-   % PARTE A
-   % =========================
-   \multicolumn{3}{c}{\textbf{Parte A – Preguntas Cerradas}}                                                                                                                                                                                                                                                                            \\* \nopagebreak
-   \midrule
+    % =========================
+    % PARTE A
+    % =========================
+    \multicolumn{3}{|c|}{\textbf{Parte A – Preguntas Cerradas}}                                                                                                                                                                                                                                                                          \\* \nopagebreak
+    \hline
 
-   P1           & Claridad          & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos?                                                                                                                                                                                                                   \\
-   P2           & Claridad          & ¿El rol del Social Guide está claramente diferenciado de otros roles (por ejemplo, con el Scrum Master, Product Owner o el departamento de RR. HH.) evitando conflictos de autoridad?                                                                                                             \\
-   P3           & Claridad          & ¿El modelo establece mecanismos claros de gobernanza para resolver desacuerdos entre el Social Guide y otros roles (por ejemplo: protocolo de escalamiento PO-Social Guide, mediación del Scrum Master o arbitraje del CTO), evitando impactos negativos en la toma de decisiones del equipo?     \\
-   \midrule
-   P4           & Completitud       & ¿Cree que el modelo SocialScrum cubre todos los aspectos necesarios para la gestión ágil de proyectos?                                                                                                                                                                                            \\
-   P5           & Completitud       & ¿Los artefactos sociales introducidos (por ejemplo, el Social Product Backlog, las historias de usuario sociales y el registro de community smells) están bien definidos y facilitan el seguimiento de la salud del equipo?                                                                       \\
-   P6           & Completitud       & ¿El modelo incluye mecanismos de auditoría y transparencia que permiten al equipo verificar la actuación del Social Guide, previniendo posibles abusos de autoridad o desviaciones éticas?                                                                                                        \\
-   \midrule
-   P7           & Idoneidad         & ¿Considera que SocialScrum aborda de manera pertinente las necesidades reales de los equipos de desarrollo de software ágil en cuanto a la gestión de la deuda social (por ejemplo, la detección de community smells, la mitigación de tensiones interpersonales y la mejora de la colaboración)? \\
-   P8           & Idoneidad         & ¿Los mecanismos de inspección y adaptación social propuestos por SocialScrum (como el Health Score, el Registro de Community Smells y las retrospectivas sociales) son adecuados para identificar y mitigar los problemas socio-técnicos que generan deuda social en los equipos?                 \\
-   P9           & Idoneidad         & ¿El rol del Social Guide, tal como está definido en SocialScrum, resulta pertinente y necesario para facilitar la gestión de la deuda social, cubriendo funciones que no son atendidas por los roles existentes en Scrum (Scrum Master, Product Owner, Developers)?                               \\
-   \midrule
-   P10          & Facilidad de Uso  & ¿El perfil y las competencias del Social Guide están claramente definidos y son viables, complementando los roles existentes en el equipo sin solapamiento de responsabilidades?                                                                                                                  \\
-   P11          & Facilidad de Uso  & ¿La implementación de SocialScrum en equipos ágiles reales es factible y no requiere cambios organizacionales o culturales impracticables?                                                                                                                                                        \\
-   P12          & Facilidad de Uso  & ¿La sobrecarga operacional de SocialScrum es sostenible para equipos ágiles a mediano/largo plazo?                                                                                                                                                                                                \\
+    P1           & Claridad          & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos?                                                                                                                                                                                                                   \\
+    \hline
+    P2           & Claridad          & ¿El rol del Social Guide está claramente diferenciado de otros roles (por ejemplo, con el Scrum Master, Product Owner o el departamento de RR. HH.) evitando conflictos de autoridad?                                                                                                             \\
+    \hline
+    P3           & Claridad          & ¿El modelo establece mecanismos claros de gobernanza para resolver desacuerdos entre el Social Guide y otros roles (por ejemplo: protocolo de escalamiento PO-Social Guide, mediación del Scrum Master o arbitraje del CTO), evitando impactos negativos en la toma de decisiones del equipo?     \\
+    \hline
+    P4           & Completitud       & ¿Cree que el modelo SocialScrum cubre todos los aspectos necesarios para la gestión ágil de proyectos?                                                                                                                                                                                            \\
+    \hline
+    P5           & Completitud       & ¿Los artefactos sociales introducidos (por ejemplo, el Social Product Backlog, las historias de usuario sociales y el registro de community smells) están bien definidos y facilitan el seguimiento de la salud del equipo?                                                                       \\
+    \hline
+    P6           & Completitud       & ¿El modelo incluye mecanismos de auditoría y transparencia que permiten al equipo verificar la actuación del Social Guide, previniendo posibles abusos de autoridad o desviaciones éticas?                                                                                                        \\
+    \hline
+    P7           & Idoneidad         & ¿Considera que SocialScrum aborda de manera pertinente las necesidades reales de los equipos de desarrollo de software ágil en cuanto a la gestión de la deuda social (por ejemplo, la detección de community smells, la mitigación de tensiones interpersonales y la mejora de la colaboración)? \\
+    \hline
+    P8           & Idoneidad         & ¿Los mecanismos de inspección y adaptación social propuestos por SocialScrum (como el Health Score, el Registro de Community Smells y las retrospectivas sociales) son adecuados para identificar y mitigar los problemas socio-técnicos que generan deuda social en los equipos?                 \\
+    \hline
+    P9           & Idoneidad         & ¿El rol del Social Guide, tal como está definido en SocialScrum, resulta pertinente y necesario para facilitar la gestión de la deuda social, cubriendo funciones que no son atendidas por los roles existentes en Scrum (Scrum Master, Product Owner, Developers)?                               \\
+    \hline
+    P10          & Facilidad de Uso  & ¿El perfil y las competencias del Social Guide están claramente definidos y son viables, complementando los roles existentes en el equipo sin solapamiento de responsabilidades?                                                                                                                  \\
+    \hline
+    P11          & Facilidad de Uso  & ¿La implementación de SocialScrum en equipos ágiles reales es factible y no requiere cambios organizacionales o culturales impracticables?                                                                                                                                                        \\
+    \hline
+    P12          & Facilidad de Uso  & ¿La sobrecarga operacional de SocialScrum es sostenible para equipos ágiles a mediano/largo plazo?                                                                                                                                                                                                \\
 
-   % =========================
-   % AGILIDAD
-   % =========================
-   \midrule
+    \hline
+    % =========================
+    % AGILIDAD
+    % =========================
+    \hline
 
-   P13          & Agilidad          & ¿Considera que SocialScrum preserva los principios del Manifiesto Ágil (iteración, inspección, adaptación) sin comprometerlos por la incorporación de la dimensión social?                                                                                                                        \\
-   P14          & Agilidad          & ¿Los eventos adaptados de SocialScrum (Social Sprint Planning, Social Daily Standup, Social Sprint Review y Social Sprint Retrospective) mantienen la cadencia iterativa y la mejora continua propias de un marco ágil?                                                                           \\
-   P15          & Agilidad          & ¿El modelo SocialScrum permite mantener un ritmo de entrega sostenible y predecible al integrar los ítems sociales en el flujo de trabajo del equipo ágil?                                                                                                                                        \\
+    P13          & Agilidad          & ¿Considera que SocialScrum preserva los principios del Manifiesto Ágil (iteración, inspección, adaptación) sin comprometerlos por la incorporación de la dimensión social?                                                                                                                        \\
+    \hline
+    P14          & Agilidad          & ¿Los eventos adaptados de SocialScrum (Social Sprint Planning, Social Daily Standup, Social Sprint Review y Social Sprint Retrospective) mantienen la cadencia iterativa y la mejora continua propias de un marco ágil?                                                                           \\
+    \hline
+    P15          & Agilidad          & ¿El modelo SocialScrum permite mantener un ritmo de entrega sostenible y predecible al integrar los ítems sociales en el flujo de trabajo del equipo ágil?                                                                                                                                        \\
 
-   % =========================
-   % PARTE B
-   % =========================
-   \midrule
-   \multicolumn{3}{c}{\textbf{Parte B – Preguntas Abiertas}}                                                                                                                                                                                                                                                                            \\* \nopagebreak
-   \midrule
+    \hline
+    % =========================
+    % PARTE B
+    % =========================
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Parte B – Preguntas Abiertas}}                                                                                                                                                                                                                                                                          \\* \nopagebreak
+    \hline
 
-   PA1          & ---               & ¿Qué elementos del modelo SocialScrum considera usted que faltan o están poco desarrollados?                                                                                                                                                                                                      \\
-   PA2          & ---               & ¿Qué sugerencias de mejora específicas propondría para el modelo SocialScrum? Justifique su respuesta con fundamentos teóricos o prácticos.                                                                                                                                                       \\
+    PA1          & ---               & ¿Qué elementos del modelo SocialScrum considera usted que faltan o están poco desarrollados?                                                                                                                                                                                                      \\
+    \hline
+    PA2          & ---               & ¿Qué sugerencias de mejora específicas propondría para el modelo SocialScrum? Justifique su respuesta con fundamentos teóricos o prácticos.                                                                                                                                                       \\
 \end{longtable}
 \endgroup
 
@@ -248,15 +278,15 @@ El objetivo principal de esta validación es evaluar la adecuación del modelo S
 \subsection{Perfilamiento de los participantes}
 Se seleccionaron expertos con experiencia en metodologías ágiles, desarrollo de software y gestión de proyectos. Los criterios de selección incluyeron:
 \begin{itemize}
-   \item Experiencia académica o profesional en el área de desarrollo de software.
-   \item Experiencia mínima de 2 años en la aplicación de metodologías ágiles.
-   \item Participación en proyectos ágiles.
-   \item Conocimiento en herramientas de colaboración y gestión de proyectos ágiles.
-   \item Preferiblemente, experiencia en equipos distribuidos o remotos.
+    \item Experiencia académica o profesional en el área de desarrollo de software.
+    \item Experiencia mínima de 2 años en la aplicación de metodologías ágiles.
+    \item Participación en proyectos ágiles.
+    \item Conocimiento en herramientas de colaboración y gestión de proyectos ágiles.
+    \item Preferiblemente, experiencia en equipos distribuidos o remotos.
 \end{itemize}
 
 \subsection{Selección de participantes}
-Se contactó a 8 expertos potenciales a través de redes profesionales y académicas. De estos, 6 aceptaron participar en el proceso de validación. Los participantes provinieron de diversas industrias, incluyendo desarrollo de software, consultoría ágil y educación en Ingeniería de Software. A continuación, se presenta un resumen del perfil de los expertos participantes (ver Tabla~\ref{tab:perfil-expertos}). Para garantizar la validez científica de la muestra seleccionada, se consideraron los criterios establecidos por Adillah \textit{et al.} \cite{Adillah2022}, quienes señalan que para validar la claridad y aplicabilidad de instrumentos, una muestra de entre 3 y 5 expertos es suficiente si cuentan con el perfil adecuado. Al contar con 6 expertos participantes, la presente validación supera el estándar mínimo recomendado. Asimismo, Wulandari y Raharjo \cite{wulandari2023ifejm} resaltan la importancia del juicio de expertos para validar propuestas metodológicas en entornos ágiles que aún no han sido implementadas en contextos reales, lo cual justifica la idoneidad de este enfoque para el modelo SocialScrum.
+Se contactó a 8 expertos potenciales a través de redes profesionales y académicas. De estos, 6 aceptaron participar en el proceso de validación. Los participantes provinieron de empresas de desarrollo de software, consultoría ágil y educación en Ingeniería de Software. A continuación, se presenta un resumen del perfil de los expertos participantes (ver Tabla~\ref{tab:perfil-expertos}). Para garantizar la validez científica de la muestra seleccionada, se consideraron los criterios establecidos por Adillah \textit{et al.} \cite{Adillah2022}, quienes señalan que para validar la claridad y aplicabilidad de instrumentos, una muestra de entre 3 y 5 expertos es suficiente si cuentan con el perfil adecuado. Al contar con 6 expertos participantes, la presente validación supera el estándar mínimo recomendado. Asimismo, Wulandari y Raharjo \cite{wulandari2023ifejm} resaltan la importancia del juicio de expertos para validar propuestas metodológicas en entornos ágiles que aún no han sido implementadas en contextos reales, lo cual justifica la idoneidad de este enfoque para el modelo SocialScrum.
 
 \begingroup
 \scriptsize
@@ -268,47 +298,57 @@ Se contactó a 8 expertos potenciales a través de redes profesionales y académ
 % Columna centrada SOLO para datos cortos
 \newcolumntype{C}{>{\centering\arraybackslash}p}
 
-\begin{longtable}{
-      C{1.2cm}   % Id.
-      Y{3.4cm}   % Último título
-      C{2.4cm}   % Años de experiencia
-      Y{4.4cm}   % Cargo actual
-      Y{3.6cm}   % Metodologías
-   }
+\begin{longtable}{|
+        C{1.2cm}|   % Id.
+        Y{3.4cm}|   % Último título
+        C{2.4cm}|   % Años de experiencia
+        Y{4.4cm}|   % Cargo actual
+        Y{3.6cm}|   % Metodologías
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Perfil de los expertos participantes en la validación del modelo SocialScrum}
-   \label{tab:perfil-expertos}                                                                                                                                    \\
-   \toprule
-   \textbf{Id.} & \textbf{Último título obtenido} & \textbf{Años de experiencia} & \textbf{Cargo actual}                 & \textbf{Metodologías ágiles conocidas} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Perfil de los expertos participantes en la validación del modelo SocialScrum}
+    \label{tab:perfil-expertos}                                                                                                                                    \\
+    \hline
+    \textbf{Id.} & \textbf{Último título obtenido} & \textbf{Años de experiencia} & \textbf{Cargo actual}                 & \textbf{Metodologías ágiles conocidas} \\
+    \hline
+    \endfirsthead
 
-   % --- ENCABEZADO PÁGINAS SIGUIENTES ---
-   \multicolumn{5}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                        \\
-   \toprule
-   \textbf{Id.} & \textbf{Último título obtenido} & \textbf{Años de experiencia} & \textbf{Cargo actual}                 & \textbf{Metodologías ágiles conocidas} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO PÁGINAS SIGUIENTES ---
+    \hline
+    \multicolumn{5}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                      \\
+    \hline
+    \textbf{Id.} & \textbf{Último título obtenido} & \textbf{Años de experiencia} & \textbf{Cargo actual}                 & \textbf{Metodologías ágiles conocidas} \\
+    \hline
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{5}{r}{\textit{Continúa en la siguiente página...}}                                                                                                \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \hline
+    \multicolumn{5}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                              \\
+    \hline
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \multicolumn{5}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (Id.) y Experto (E).}}                                                            \\
-   \endlastfoot
+    % --- PIE FINAL ---
+    \hline
+    \multicolumn{5}{|l|}{\footnotesize \textit{Acrónimos utilizados: Identificador (Id.) y Experto (E).}}                                                          \\
+    \hline
+    \endlastfoot
 
-   E1           & Ingeniero de sistemas           & 3 años                       & Desarrollador Semi-Senior de software & Scrum, Kanban                          \\
-   E2           & Ingeniero de sistemas           & 3 años                       & Desarrollador Semi-Senior de software & Scrum                                  \\
-   E3           & Ingeniero de sistemas           & 3 años                       & Desarrollador Semi-Senior de software & Scrum                                  \\
-   E4           & Ingeniero de sistemas           & 4 años                       & Desarrollador de Producto             & Scrum                                  \\
-   E5           & Ingeniero de sistemas           & 4 años                       & Desarrollador Semi-Senior de software & Scrum                                  \\
-   E6           & Ingeniero en sistemas           & 4 años                       & Desarrollador Semi-Senior de software & Scrum, Kanban, XP                      \\
-   % E7           & (Dummy) Ingeniero de    & 3 años                       & Desarrollador Semi-Senior de software & Scrum, Lean                            \\
-   % E8           & (Dummy) Ingeniero de sistemas   & 5 años                       & Desarrollador Senior de software      & Scrum, Kanban, XP, Lean                \\
+    E1           & Ingeniero de sistemas           & 3 años                       & Desarrollador Semi-Senior de software & Scrum, Kanban                          \\
+    \hline
+    E2           & Ingeniero de sistemas           & 3 años                       & Desarrollador Semi-Senior de software & Scrum                                  \\
+    \hline
+    E3           & Ingeniero de sistemas           & 3 años                       & Desarrollador Semi-Senior de software & Scrum                                  \\
+    \hline
+    E4           & Ingeniero de sistemas           & 4 años                       & Desarrollador de Producto             & Scrum                                  \\
+    \hline
+    E5           & Ingeniero de sistemas           & 4 años                       & Desarrollador Semi-Senior de software & Scrum                                  \\
+    \hline
+    E6           & Ingeniero en sistemas           & 4 años                       & Desarrollador Semi-Senior de software & Scrum, Kanban, XP                      \\
+    \hline
+    % E7           & (Dummy) Ingeniero de    & 3 años                       & Desarrollador Semi-Senior de software & Scrum, Lean                            \\
+    \hline
+    % E8           & (Dummy) Ingeniero de sistemas   & 5 años                       & Desarrollador Senior de software      & Scrum, Kanban, XP, Lean                \\
 \end{longtable}
 \endgroup
 
@@ -331,77 +371,90 @@ La lectura de la Tabla~\ref{tab:resultados-cuantitativos} evidencia que, en tér
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
-   >{\RaggedRight\hspace{0pt}}p{1.2cm} % Id.
-   >{\RaggedRight\hspace{0pt}}p{2.2cm} % Criterio
-   >{\RaggedRight\hspace{0pt}}p{6.9cm} % Pregunta
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 5
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 4
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 3
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 2
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 1
-   }
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{1.2cm}| % Id.
+    >{\RaggedRight\hspace{0pt}}p{2.2cm}| % Criterio
+    >{\RaggedRight\hspace{0pt}}p{6.9cm}| % Pregunta
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 5
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 4
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 3
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 2
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 1
+    }
 
-   % --- ENCABEZADO ---
-   \caption{Resultados de preguntas del instrumento de evaluación}
-   \label{tab:resultados-cuantitativos}                                                                                                                                                                                                                                                                                                                                                                        \\
-   \toprule
-   \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                                       &
-   \multicolumn{5}{c}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                                                                                                           \\
-   \cmidrule(lr){4-8}
-                &                   &                                                                                                                                                                                                                                                                                                         & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO ---
+    \caption{Resultados de preguntas del instrumento de evaluación}
+    \label{tab:resultados-cuantitativos}                                                                                                                                                                                                                                                                                                                                                                        \\
+    \hline
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                                       &
+    \multicolumn{5}{|c|}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                                                                                                         \\
+    \hline
+                 &                   &                                                                                                                                                                                                                                                                                                         & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
+    \hline
+    \endfirsthead
 
-   % --- ENCABEZADO CONTINUACIÓN ---
-   \multicolumn{8}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                                                                                     \\
-   \toprule
-   \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                                       &
-   \multicolumn{5}{c}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                                                                                                           \\
-   \cmidrule(lr){4-8}
-                &                   &                                                                                                                                                                                                                                                                                                         & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO CONTINUACIÓN ---
+    \hline
+    \multicolumn{8}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                                                                                   \\
+    \hline
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                                       &
+    \multicolumn{5}{|c|}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                                                                                                         \\
+    \hline
+                 &                   &                                                                                                                                                                                                                                                                                                         & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
+    \hline
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{8}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                                                                                             \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \hline
+    \multicolumn{8}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                                                                                           \\
+    \hline
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \multicolumn{8}{l}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.) y Pregunta Cerrada (P).}}                                                                                                                                                                                                                                                                                                 \\
-   \endlastfoot
+    % --- PIE FINAL ---
+    \hline
+    \multicolumn{8}{|l|}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.) y Pregunta Cerrada (P).}}                                                                                                                                                                                                                                                                                               \\
+    \hline
+    \endlastfoot
 
-   % --- CONTENIDO (SOLO PREGUNTAS CERRADAS) ---
+    % --- CONTENIDO (SOLO PREGUNTAS CERRADAS) ---
 
-   P1           & Claridad          & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos?                                                                                                                                                                                                                         & 6          & 0          & 0          & 0          & 0          \\
-   P2           & Claridad          & ¿El rol del Social Guide está claramente diferenciado de otros roles (por ejemplo, con el Scrum Master, Product Owner o el departamento de RR. HH.) evitando conflictos de autoridad?                                                                                                                   & 3          & 3          & 0          & 0          & 0          \\
-   P3           & Claridad          & ¿El modelo establece mecanismos claros de gobernanza para resolver desacuerdos entre el Social Guide y otros roles (por ejemplo: protocolo de escalamiento PO-Social Guide, mediación del Scrum Master o arbitraje del CTO), evitando impactos negativos en la toma de decisiones del equipo?           & 2          & 4          & 0          & 0          & 0          \\
+    P1           & Claridad          & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos?                                                                                                                                                                                                                         & 6          & 0          & 0          & 0          & 0          \\
+    \hline
+    P2           & Claridad          & ¿El rol del Social Guide está claramente diferenciado de otros roles (por ejemplo, con el Scrum Master, Product Owner o el departamento de RR. HH.) evitando conflictos de autoridad?                                                                                                                   & 3          & 3          & 0          & 0          & 0          \\
+    \hline
+    P3           & Claridad          & ¿El modelo establece mecanismos claros de gobernanza para resolver desacuerdos entre el Social Guide y otros roles (por ejemplo: protocolo de escalamiento PO-Social Guide, mediación del Scrum Master o arbitraje del CTO), evitando impactos negativos en la toma de decisiones del equipo?           & 2          & 4          & 0          & 0          & 0          \\
 
-   \midrule
+    \hline
 
-   P4           & Completitud       & ¿Cree que el modelo SocialScrum cubre todos los aspectos necesarios para la gestión ágil de proyectos?                                                                                                                                                                                                  & 3          & 2          & 1          & 0          & 0          \\
-   P5           & Completitud       & ¿Los artefactos sociales introducidos (por ejemplo, el Social Product Backlog, las historias de usuario sociales y el registro de community smells) están bien definidos y facilitan el seguimiento de la salud del equipo?                                                                             & 5          & 1          & 0          & 0          & 0          \\
-   P6           & Completitud       & ¿El modelo incluye mecanismos de auditoría y transparencia que permiten al equipo verificar la actuación del Social Guide, previniendo posibles abusos de autoridad o desviaciones éticas?                                                                                                              & 4          & 2          & 0          & 0          & 0          \\
+    P4           & Completitud       & ¿Cree que el modelo SocialScrum cubre todos los aspectos necesarios para la gestión ágil de proyectos?                                                                                                                                                                                                  & 3          & 2          & 1          & 0          & 0          \\
+    \hline
+    P5           & Completitud       & ¿Los artefactos sociales introducidos (por ejemplo, el Social Product Backlog, las historias de usuario sociales y el registro de community smells) están bien definidos y facilitan el seguimiento de la salud del equipo?                                                                             & 5          & 1          & 0          & 0          & 0          \\
+    \hline
+    P6           & Completitud       & ¿El modelo incluye mecanismos de auditoría y transparencia que permiten al equipo verificar la actuación del Social Guide, previniendo posibles abusos de autoridad o desviaciones éticas?                                                                                                              & 4          & 2          & 0          & 0          & 0          \\
 
-   \midrule
+    \hline
 
-   P7           & Idoneidad         & ¿Considera que SocialScrum aborda de manera pertinente las necesidades reales de los equipos de desarrollo de software ágil en cuanto a la gestión de la deuda social (por ejemplo, la detección de \gls{community-smells}, la mitigación de tensiones interpersonales y la mejora de la colaboración)? & 5          & 1          & 0          & 0          & 0          \\
-   P8           & Idoneidad         & ¿Los mecanismos de inspección y adaptación social propuestos por SocialScrum (como el Health Score, el Registro de \gls{community-smells} y las retrospectivas sociales) son adecuados para identificar y mitigar los problemas socio-técnicos que generan deuda social en los equipos?                 & 5          & 1          & 0          & 0          & 0          \\
-   P9           & Idoneidad         & ¿El rol del Social Guide, tal como está definido en SocialScrum, resulta pertinente y necesario para facilitar la gestión de la deuda social, cubriendo funciones que no son atendidas por los roles existentes en Scrum (Scrum Master, Product Owner, Developers)?                                     & 4          & 2          & 0          & 0          & 0          \\
+    P7           & Idoneidad         & ¿Considera que SocialScrum aborda de manera pertinente las necesidades reales de los equipos de desarrollo de software ágil en cuanto a la gestión de la deuda social (por ejemplo, la detección de \gls{community-smells}, la mitigación de tensiones interpersonales y la mejora de la colaboración)? & 5          & 1          & 0          & 0          & 0          \\
+    \hline
+    P8           & Idoneidad         & ¿Los mecanismos de inspección y adaptación social propuestos por SocialScrum (como el Health Score, el Registro de olores comunitarios y las retrospectivas sociales) son adecuados para identificar y mitigar los problemas socio-técnicos que generan deuda social en los equipos?                    & 5          & 1          & 0          & 0          & 0          \\
+    \hline
+    P9           & Idoneidad         & ¿El rol del Social Guide, tal como está definido en SocialScrum, resulta pertinente y necesario para facilitar la gestión de la deuda social, cubriendo funciones que no son atendidas por los roles existentes en Scrum (Scrum Master, Product Owner, Developers)?                                     & 4          & 2          & 0          & 0          & 0          \\
 
-   \midrule
+    \hline
 
-   P10          & Facilidad de Uso  & ¿El perfil y las competencias del Social Guide están claramente definidos y son viables, complementando los roles existentes en el equipo sin solapamiento de responsabilidades?                                                                                                                        & 4          & 1          & 1          & 0          & 0          \\
-   P11          & Facilidad de Uso  & ¿La implementación de SocialScrum en equipos ágiles reales es factible y no requiere cambios organizacionales o culturales impracticables?                                                                                                                                                              & 2          & 2          & 2          & 0          & 0          \\
-   P12          & Facilidad de Uso  & ¿La sobrecarga operacional de SocialScrum es sostenible para equipos ágiles a mediano/largo plazo?                                                                                                                                                                                                      & 2          & 4          & 0          & 0          & 0          \\
+    P10          & Facilidad de Uso  & ¿El perfil y las competencias del Social Guide están claramente definidos y son viables, complementando los roles existentes en el equipo sin solapamiento de responsabilidades?                                                                                                                        & 4          & 1          & 1          & 0          & 0          \\
+    \hline
+    P11          & Facilidad de Uso  & ¿La implementación de SocialScrum en equipos ágiles reales es factible y no requiere cambios organizacionales o culturales impracticables?                                                                                                                                                              & 2          & 2          & 2          & 0          & 0          \\
+    \hline
+    P12          & Facilidad de Uso  & ¿La sobrecarga operacional de SocialScrum es sostenible para equipos ágiles a mediano/largo plazo?                                                                                                                                                                                                      & 2          & 4          & 0          & 0          & 0          \\
 
-   \midrule
+    \hline
 
-   P13          & Agilidad          & ¿Considera que SocialScrum preserva los principios del Manifiesto Ágil (iteración, inspección, adaptación) sin comprometerlos por la incorporación de la dimensión social?                                                                                                                              & 4          & 2          & 0          & 0          & 0          \\
-   P14          & Agilidad          & ¿Los eventos adaptados de SocialScrum (Social Sprint Planning, Social Daily Standup, Social Sprint Review y Social Sprint Retrospective) mantienen la cadencia iterativa y la mejora continua propias de un marco ágil?                                                                                 & 4          & 2          & 0          & 0          & 0          \\
-   P15          & Agilidad          & ¿El modelo SocialScrum permite mantener un ritmo de entrega sostenible y predecible al integrar los ítems sociales en el flujo de trabajo del equipo ágil?                                                                                                                                              & 1          & 5          & 0          & 0          & 0          \\
+    P13          & Agilidad          & ¿Considera que SocialScrum preserva los principios del Manifiesto Ágil (iteración, inspección, adaptación) sin comprometerlos por la incorporación de la dimensión social?                                                                                                                              & 4          & 2          & 0          & 0          & 0          \\
+    \hline
+    P14          & Agilidad          & ¿Los eventos adaptados de SocialScrum (Social Sprint Planning, Social Daily Standup, Social Sprint Review y Social Sprint Retrospective) mantienen la cadencia iterativa y la mejora continua propias de un marco ágil?                                                                                 & 4          & 2          & 0          & 0          & 0          \\
+    \hline
+    P15          & Agilidad          & ¿El modelo SocialScrum permite mantener un ritmo de entrega sostenible y predecible al integrar los ítems sociales en el flujo de trabajo del equipo ágil?                                                                                                                                              & 1          & 5          & 0          & 0          & 0          \\
 \end{longtable}
 \endgroup
 
@@ -409,29 +462,29 @@ La lectura de la Tabla~\ref{tab:resultados-cuantitativos} evidencia que, en tér
 
 Para determinar la tendencia central y el grado de concordancia inter-evaluador, se procedió de la siguiente manera:
 \begin{enumerate}
-   \item \textbf{Tabulación:} Se organizó una matriz de datos con 15 filas (preguntas) y 5 columnas (niveles de la escala Likert), donde cada celda contiene el número de respuestas recibidas para cada nivel de la escala.
-   \item \textbf{Escalamiento:} Se asignaron valores numéricos del 1 al 5 según la escala Likert definida.
-   \item \textbf{Cálculo de la mediana ($Mdn$):} Como medida de tendencia central se utilizó la mediana, la cual representa el valor que divide en dos mitades iguales el conjunto ordenado de calificaciones. Para datos agrupados por frecuencias, la mediana se determina identificando la categoría en la que se acumula el 50~\% de las observaciones:
-         \begin{equation}
-            Mdn = L + \left(\frac{\frac{N}{2} - F_{a}}{f_{m}}\right) \times h
-            \label{eq:mediana}
-         \end{equation}
-         donde $L$ es el límite inferior de la clase mediana, $N$ es el número total de observaciones ($N = 6$), $F_{a}$ es la frecuencia acumulada anterior a la clase mediana, $f_{m}$ es la frecuencia de la clase mediana y $h$ es la amplitud del intervalo. Dado que la escala Likert es discreta con valores enteros de 1 a 5, la mediana se obtiene directamente como el valor central de las calificaciones ordenadas. La mediana resulta más apropiada que la media aritmética para datos ordinales, ya que no supone equidistancia entre las categorías de la escala \cite{jamieson2004}.
-   \item \textbf{Cálculo del Coeficiente Kappa Marginal Libre ($\kappa_{\text{free}}$):} Para evaluar el grado de concordancia entre los evaluadores se utilizó el Coeficiente Kappa Marginal Libre (\textit{multirater free-marginal kappa}) propuesto por Randolph \cite{randolph2005}. Este coeficiente presenta una ventaja respecto al Kappa de Fleiss, ya que no asume distribuciones marginales fijas, lo cual resulta adecuado cuando los evaluadores no están restringidos a asignar un número predeterminado de casos a cada categoría. El cálculo se realizó en dos pasos:
+    \item \textbf{Tabulación:} Se organizó una matriz de datos con 15 filas (preguntas) y 5 columnas (niveles de la escala Likert), donde cada celda contiene el número de respuestas recibidas para cada nivel de la escala.
+    \item \textbf{Escalamiento:} Se asignaron valores numéricos del 1 al 5 según la escala Likert definida.
+    \item \textbf{Cálculo de la mediana ($Mdn$):} Como medida de tendencia central se utilizó la mediana, la cual representa el valor que divide en dos mitades iguales el conjunto ordenado de calificaciones. Para datos agrupados por frecuencias, la mediana se determina identificando la categoría en la que se acumula el 50~\% de las observaciones:
+          \begin{equation}
+              Mdn = L + \left(\frac{\frac{N}{2} - F_{a}}{f_{m}}\right) \times h
+              \label{eq:mediana}
+          \end{equation}
+          donde $L$ es el límite inferior de la clase mediana, $N$ es el número total de observaciones ($N = 6$), $F_{a}$ es la frecuencia acumulada anterior a la clase mediana, $f_{m}$ es la frecuencia de la clase mediana y $h$ es la amplitud del intervalo. Dado que la escala Likert es discreta con valores enteros de 1 a 5, la mediana se obtiene directamente como el valor central de las calificaciones ordenadas. La mediana resulta más apropiada que la media aritmética para datos ordinales, ya que no supone equidistancia entre las categorías de la escala según S. Jamieson \cite{jamieson2004}.
+    \item \textbf{Cálculo del Coeficiente Kappa Marginal Libre ($\kappa_{\text{free}}$):} Para evaluar el grado de concordancia entre los evaluadores se utilizó el Coeficiente Kappa Marginal Libre (\textit{multirater free-marginal kappa}) propuesto por Randolph \cite{randolph2005}. Este coeficiente presenta una ventaja respecto al Kappa de Fleiss, ya que no asume distribuciones marginales fijas, lo cual resulta adecuado cuando los evaluadores no están restringidos a asignar un número predeterminado de casos a cada categoría. El cálculo se realizó en dos pasos:
 
-         Primero, se obtuvo la proporción de acuerdo observado ($P_a$) para cada pregunta:
-         \begin{equation}
-            P_a = \frac{1}{N(N-1)} \sum_{j=1}^{k} n_j (n_j - 1)
-            \label{eq:pa_kappa}
-         \end{equation}
-         donde $N$ es el número de evaluadores ($N = 6$), $k$ es el número de categorías de la escala ($k = 5$) y $n_j$ es el número de evaluadores que asignaron la categoría $j$ a la pregunta evaluada.
+          Primero, se obtuvo la proporción de acuerdo observado ($P_a$) para cada pregunta:
+          \begin{equation}
+              P_a = \frac{1}{N(N-1)} \sum_{j=1}^{k} n_j (n_j - 1)
+              \label{eq:pa_kappa}
+          \end{equation}
+          donde $N$ es el número de evaluadores ($N = 6$), $k$ es el número de categorías de la escala ($k = 5$) y $n_j$ es el número de evaluadores que asignaron la categoría $j$ a la pregunta evaluada.
 
-         Segundo, se calculó el coeficiente $\kappa_{\text{free}}$:
-         \begin{equation}
-            \kappa_{\text{free}} = \frac{P_a - P_e}{1 - P_e}
-            \label{eq:kappa_free}
-         \end{equation}
-         donde $P_e = \frac{1}{k}$ es la probabilidad de acuerdo esperado por azar bajo el supuesto de márgenes libres. Con $k = 5$ categorías, $P_e = 0{,}20$.
+          Segundo, se calculó el coeficiente $\kappa_{\text{free}}$:
+          \begin{equation}
+              \kappa_{\text{free}} = \frac{P_a - P_e}{1 - P_e}
+              \label{eq:kappa_free}
+          \end{equation}
+          donde $P_e = \frac{1}{k}$ es la probabilidad de acuerdo esperado por azar bajo el supuesto de márgenes libres. Con $k = 5$ categorías, $P_e = 0{,}20$.
 \end{enumerate}
 
 \subsubsection{Interpretación de resultados}
@@ -439,12 +492,12 @@ Para determinar la tendencia central y el grado de concordancia inter-evaluador,
 
 La interpretación de los valores de $\kappa_{\text{free}}$ se realizó según la escala propuesta por Landis y Koch \cite{landis1977}, ampliamente utilizada en estudios de concordancia inter-evaluador:
 \begin{itemize}
-   \item \textbf{Acuerdo casi perfecto:} $\kappa_{\text{free}} \geq 0{,}81$: Los evaluadores coinciden en la misma categoría de forma prácticamente unánime.
-   \item \textbf{Acuerdo sustancial:} $0{,}61 \leq \kappa_{\text{free}} < 0{,}81$: Existe una concordancia elevada que supera ampliamente el azar.
-   \item \textbf{Acuerdo moderado:} $0{,}41 \leq \kappa_{\text{free}} < 0{,}61$: La concordancia es moderada y superior al azar.
-   \item \textbf{Acuerdo justo:} $0{,}21 \leq \kappa_{\text{free}} < 0{,}41$: Existe concordancia, aunque limitada.
-   \item \textbf{Acuerdo leve:} $0{,}01 \leq \kappa_{\text{free}} < 0{,}21$: La concordancia es mínima, cercana al nivel esperado por azar.
-   \item \textbf{Sin acuerdo:} $\kappa_{\text{free}} \leq 0{,}00$: No se observa concordancia más allá del azar.
+    \item \textbf{Acuerdo casi perfecto:} $\kappa_{\text{free}} \geq 0{,}81$: Los evaluadores coinciden en la misma categoría de forma prácticamente unánime.
+    \item \textbf{Acuerdo sustancial:} $0{,}61 \leq \kappa_{\text{free}} < 0{,}81$: Existe una concordancia elevada que supera ampliamente el azar.
+    \item \textbf{Acuerdo moderado:} $0{,}41 \leq \kappa_{\text{free}} < 0{,}61$: La concordancia es moderada y superior al azar.
+    \item \textbf{Acuerdo justo:} $0{,}21 \leq \kappa_{\text{free}} < 0{,}41$: Existe concordancia, aunque limitada.
+    \item \textbf{Acuerdo leve:} $0{,}01 \leq \kappa_{\text{free}} < 0{,}21$: La concordancia es mínima, cercana al nivel esperado por azar.
+    \item \textbf{Sin acuerdo:} $\kappa_{\text{free}} \leq 0{,}00$: No se observa concordancia más allá del azar.
 \end{itemize}
 
 Es importante señalar que, con $k = 5$ categorías de respuesta y $N = 6$ evaluadores, el coeficiente $\kappa_{\text{free}}$ tiende a producir valores conservadores, ya que la probabilidad de acuerdo esperado por azar ($P_e = 0{,}20$) resulta relativamente alta. En consecuencia, valores de $\kappa_{\text{free}}$ moderados o justos no indican necesariamente desacuerdo entre los expertos, sino que reflejan la sensibilidad del coeficiente ante la dispersión inherente a escalas con múltiples categorías y un número reducido de evaluadores. Por ello, la interpretación del $\kappa_{\text{free}}$ se complementa con el análisis de la mediana y la distribución de frecuencias de las respuestas.
@@ -461,61 +514,77 @@ En la Tabla~\ref{tab:resultados_preguntas-estadistica} se presentan los resultad
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
-   >{\Centering\hspace{0pt}}p{1.5cm}   % Pregunta
-   >{\Centering\hspace{0pt}}p{0.55cm}  % Escala 5 (TA)
-   >{\Centering\hspace{0pt}}p{0.55cm}  % Escala 4 (A)
-   >{\Centering\hspace{0pt}}p{0.55cm}  % Escala 3 (N)
-   >{\Centering\hspace{0pt}}p{0.55cm}  % Escala 2 (D)
-   >{\Centering\hspace{0pt}}p{0.55cm}  % Escala 1 (TD)
-   >{\Centering\hspace{0pt}}p{1.5cm}   % Mediana
-   >{\Centering\hspace{0pt}}p{1.7cm}   % kappa_free
-   >{\Centering\hspace{0pt}}p{6.9cm} % Interpretación kappa
-   }
-   % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-   \caption{Resultados de evaluación por pregunta: mediana y concordancia inter-evaluador.} \label{tab:resultados_preguntas-estadistica}                                                                              \\
-   \toprule
-   \textbf{Pregunta}                                 &
-   \multicolumn{5}{c}{\textbf{Respuestas por nivel}} &
-   \textbf{Mediana ($Mdn$)}                          & \textbf{$\kappa_{\text{free}}$} & \textbf{Interpretación ($\kappa_{\text{free}}$)}                                                                             \\
-   \cmidrule(lr){2-6}
-                                                     & \textbf{5}                      & \textbf{4}                                       & \textbf{3} & \textbf{2} & \textbf{1} &     &      &                       \\
-   \midrule
-   \endfirsthead
-   % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-   \multicolumn{9}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                            \\
-   \toprule
-   \textbf{Pregunta}                                 &
-   \multicolumn{5}{c}{\textbf{Respuestas por nivel}} &
-   \textbf{Mediana ($Mdn$)}                          & \textbf{$\kappa_{\text{free}}$} & \textbf{Interpretación ($\kappa_{\text{free}}$)}                                                                             \\
-   \cmidrule(lr){2-6}
-                                                     & \textbf{5}                      & \textbf{4}                                       & \textbf{3} & \textbf{2} & \textbf{1} &     &      &                       \\
-   \midrule
-   \endhead
-   % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-   \midrule
-   \multicolumn{9}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                    \\
-   \endfoot
-   % --- 4. PIE FINAL ---
-   \bottomrule
-   \multicolumn{9}{p{14.5cm}}{\footnotesize\textit{Acrónimos utilizados: Mediana ($Mdn$), Coeficiente Kappa Marginal Libre ($\kappa_{\text{free}}$) y Pregunta Cerrada (P).}}                                         \\
-   \endlastfoot
-   % --- CONTENIDO ---
-   P1                                                & 6                               & 0                                                & 0          & 0          & 0          & 5,0 & 1,00 & Acuerdo casi perfecto \\
-   P2                                                & 3                               & 3                                                & 0          & 0          & 0          & 4,5 & 0,25 & Acuerdo justo         \\
-   P3                                                & 2                               & 4                                                & 0          & 0          & 0          & 4,0 & 0,33 & Acuerdo justo         \\
-   P4                                                & 3                               & 2                                                & 1          & 0          & 0          & 4,5 & 0,08 & Acuerdo leve          \\
-   P5                                                & 5                               & 1                                                & 0          & 0          & 0          & 5,0 & 0,58 & Acuerdo moderado      \\
-   P6                                                & 4                               & 2                                                & 0          & 0          & 0          & 5,0 & 0,33 & Acuerdo justo         \\
-   P7                                                & 5                               & 1                                                & 0          & 0          & 0          & 5,0 & 0,58 & Acuerdo moderado      \\
-   P8                                                & 5                               & 1                                                & 0          & 0          & 0          & 5,0 & 0,58 & Acuerdo moderado      \\
-   P9                                                & 4                               & 2                                                & 0          & 0          & 0          & 5,0 & 0,33 & Acuerdo justo         \\
-   P10                                               & 4                               & 1                                                & 1          & 0          & 0          & 5,0 & 0,25 & Acuerdo justo         \\
-   P11                                               & 2                               & 2                                                & 2          & 0          & 0          & 4,0 & 0,00 & Sin acuerdo           \\
-   P12                                               & 2                               & 4                                                & 0          & 0          & 0          & 4,0 & 0,33 & Acuerdo justo         \\
-   P13                                               & 4                               & 2                                                & 0          & 0          & 0          & 5,0 & 0,33 & Acuerdo justo         \\
-   P14                                               & 4                               & 2                                                & 0          & 0          & 0          & 5,0 & 0,33 & Acuerdo justo         \\
-   P15                                               & 1                               & 5                                                & 0          & 0          & 0          & 4,0 & 0,58 & Acuerdo moderado      \\
+\begin{longtable}[H]{|
+    >{\Centering\hspace{0pt}}p{1.5cm}|   % Pregunta
+    >{\Centering\hspace{0pt}}p{0.55cm}|  % Escala 5 (TA)
+    >{\Centering\hspace{0pt}}p{0.55cm}|  % Escala 4 (A)
+    >{\Centering\hspace{0pt}}p{0.55cm}|  % Escala 3 (N)
+    >{\Centering\hspace{0pt}}p{0.55cm}|  % Escala 2 (D)
+    >{\Centering\hspace{0pt}}p{0.55cm}|  % Escala 1 (TD)
+    >{\Centering\hspace{0pt}}p{1.5cm}|   % Mediana
+    >{\Centering\hspace{0pt}}p{1.7cm}|   % kappa_free
+    >{\Centering\hspace{0pt}}p{6.9cm}| % Interpretación kappa
+    }
+    % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
+    \caption{Resultados de evaluación por pregunta: mediana y concordancia inter-evaluador.} \label{tab:resultados_preguntas-estadistica}                                                                                \\
+    \hline
+    \textbf{Pregunta}                                   &
+    \multicolumn{5}{|c|}{\textbf{Respuestas por nivel}} &
+    \textbf{Mediana ($Mdn$)}                            & \textbf{$\kappa_{\text{free}}$} & \textbf{Interpretación ($\kappa_{\text{free}}$)}                                                                             \\
+    \hline
+                                                        & \textbf{5}                      & \textbf{4}                                       & \textbf{3} & \textbf{2} & \textbf{1} &     &      &                       \\
+    \hline
+    \endfirsthead
+    % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
+    \multicolumn{9}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                            \\
+    \hline
+    \textbf{Pregunta}                                   &
+    \multicolumn{5}{|c|}{\textbf{Respuestas por nivel}} &
+    \textbf{Mediana ($Mdn$)}                            & \textbf{$\kappa_{\text{free}}$} & \textbf{Interpretación ($\kappa_{\text{free}}$)}                                                                             \\
+    \hline
+                                                        & \textbf{5}                      & \textbf{4}                                       & \textbf{3} & \textbf{2} & \textbf{1} &     &      &                       \\
+    \hline
+    \endhead
+    % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
+    \hline
+    \multicolumn{9}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                    \\
+    \hline
+    \endfoot
+    % --- 4. PIE FINAL ---
+    \hline
+    \multicolumn{9}{|p{14.5cm}|}{\footnotesize\textit{Acrónimos utilizados: Mediana ($Mdn$), Coeficiente Kappa Marginal Libre ($\kappa_{\text{free}}$) y Pregunta Cerrada (P).}}                                         \\
+    \hline
+    \endlastfoot
+    % --- CONTENIDO ---
+    P1                                                  & 6                               & 0                                                & 0          & 0          & 0          & 5,0 & 1,00 & Acuerdo casi perfecto \\
+    \hline
+    P2                                                  & 3                               & 3                                                & 0          & 0          & 0          & 4,5 & 0,25 & Acuerdo justo         \\
+    \hline
+    P3                                                  & 2                               & 4                                                & 0          & 0          & 0          & 4,0 & 0,33 & Acuerdo justo         \\
+    \hline
+    P4                                                  & 3                               & 2                                                & 1          & 0          & 0          & 4,5 & 0,08 & Acuerdo leve          \\
+    \hline
+    P5                                                  & 5                               & 1                                                & 0          & 0          & 0          & 5,0 & 0,58 & Acuerdo moderado      \\
+    \hline
+    P6                                                  & 4                               & 2                                                & 0          & 0          & 0          & 5,0 & 0,33 & Acuerdo justo         \\
+    \hline
+    P7                                                  & 5                               & 1                                                & 0          & 0          & 0          & 5,0 & 0,58 & Acuerdo moderado      \\
+    \hline
+    P8                                                  & 5                               & 1                                                & 0          & 0          & 0          & 5,0 & 0,58 & Acuerdo moderado      \\
+    \hline
+    P9                                                  & 4                               & 2                                                & 0          & 0          & 0          & 5,0 & 0,33 & Acuerdo justo         \\
+    \hline
+    P10                                                 & 4                               & 1                                                & 1          & 0          & 0          & 5,0 & 0,25 & Acuerdo justo         \\
+    \hline
+    P11                                                 & 2                               & 2                                                & 2          & 0          & 0          & 4,0 & 0,00 & Sin acuerdo           \\
+    \hline
+    P12                                                 & 2                               & 4                                                & 0          & 0          & 0          & 4,0 & 0,33 & Acuerdo justo         \\
+    \hline
+    P13                                                 & 4                               & 2                                                & 0          & 0          & 0          & 5,0 & 0,33 & Acuerdo justo         \\
+    \hline
+    P14                                                 & 4                               & 2                                                & 0          & 0          & 0          & 5,0 & 0,33 & Acuerdo justo         \\
+    \hline
+    P15                                                 & 1                               & 5                                                & 0          & 0          & 0          & 4,0 & 0,58 & Acuerdo moderado      \\
 \end{longtable}
 \endgroup
 
@@ -538,53 +607,60 @@ En la Tabla~\ref{tab:resultados-preguntas-claridad} se detallan los resultados e
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
-   >{\RaggedRight\hspace{0pt}}p{1.2cm} % Id.
-   >{\RaggedRight\hspace{0pt}}p{2.2cm} % Criterio
-   >{\RaggedRight\hspace{0pt}}p{6.9cm} % Pregunta
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 5
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 4
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 3
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 2
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 1
-   }
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{1.2cm}| % Id.
+    >{\RaggedRight\hspace{0pt}}p{2.0cm}| % Criterio
+    >{\RaggedRight\hspace{0pt}}p{6.9cm}| % Pregunta
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 5
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 4
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 3
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 2
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 1
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Resultados de preguntas del criterio: Claridad}
-   \label{tab:resultados-preguntas-claridad}                                                                                                                                                                                                                                                                                                                                                         \\
-   \toprule
-   \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                             &
-   \multicolumn{5}{c}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                                                                                                 \\
-   \cline{4-8}
-                &                   &                                                                                                                                                                                                                                                                                               & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Resultados de preguntas del criterio: Claridad}
+    \label{tab:resultados-preguntas-claridad}                                                                                                                                                                                                                                                                                                                                                         \\
+    \hline
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                             &
+    \multicolumn{5}{|c|}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                                                                                               \\
+    \hline
+    \cline{4-8}
+                 &                   &                                                                                                                                                                                                                                                                                               & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
+    \hline
+    \endfirsthead
 
-   % --- ENCABEZADO PÁGINAS SIGUIENTES ---
-   \multicolumn{8}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                                                                           \\
-   \toprule
-   \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                             &
-   \multicolumn{5}{c}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                                                                                                 \\
-   \cline{4-8}
-                &                   &                                                                                                                                                                                                                                                                                               & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO PÁGINAS SIGUIENTES ---
+    \hline
+    \multicolumn{8}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                                                                         \\
+    \hline
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                             &
+    \multicolumn{5}{|c|}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                                                                                               \\
+    \hline
+    \cline{4-8}
+                 &                   &                                                                                                                                                                                                                                                                                               & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
+    \hline
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{8}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                                                                                   \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \hline
+    \multicolumn{8}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                                                                                 \\
+    \hline
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \multicolumn{8}{l}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.) y Pregunta Cerrada (P).}}                                                                                                                                                                                                                                                                                       \\
-   \endlastfoot
+    % --- PIE FINAL ---
+    \hline
+    \multicolumn{8}{|l|}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.) y Pregunta Cerrada (P).}}                                                                                                                                                                                                                                                                                     \\
+    \hline
+    \endlastfoot
 
-   % --- CONTENIDO (SOLO PREGUNTAS CERRADAS) ---
+    % --- CONTENIDO (SOLO PREGUNTAS CERRADAS) ---
 
-   P1           & Claridad          & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos?                                                                                                                                                                                                               & 6          & 0          & 0          & 0          & 0          \\
-   P2           & Claridad          & ¿El rol del Social Guide está claramente diferenciado de otros roles (por ejemplo, con el Scrum Master, Product Owner o el departamento de RR. HH.) evitando conflictos de autoridad?                                                                                                         & 3          & 3          & 0          & 0          & 0          \\
-   P3           & Claridad          & ¿El modelo establece mecanismos claros de gobernanza para resolver desacuerdos entre el Social Guide y otros roles (por ejemplo: protocolo de escalamiento PO-Social Guide, mediación del Scrum Master o arbitraje del CTO), evitando impactos negativos en la toma de decisiones del equipo? & 2          & 4          & 0          & 0          & 0          \\
+    P1           & Claridad          & ¿Considera que los conceptos del modelo SocialScrum están claramente definidos?                                                                                                                                                                                                               & 6          & 0          & 0          & 0          & 0          \\
+    \hline
+    P2           & Claridad          & ¿El rol del Social Guide está claramente diferenciado de otros roles (por ejemplo, con el Scrum Master, Product Owner o el departamento de RR. HH.) evitando conflictos de autoridad?                                                                                                         & 3          & 3          & 0          & 0          & 0          \\
+    \hline
+    P3           & Claridad          & ¿El modelo establece mecanismos claros de gobernanza para resolver desacuerdos entre el Social Guide y otros roles (por ejemplo: protocolo de escalamiento PO-Social Guide, mediación del Scrum Master o arbitraje del CTO), evitando impactos negativos en la toma de decisiones del equipo? & 2          & 4          & 0          & 0          & 0          \\
 \end{longtable}
 \endgroup
 
@@ -603,53 +679,60 @@ La Tabla~\ref{tab:resultados-preguntas-completitud} presenta los resultados espe
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
-   >{\RaggedRight\hspace{0pt}}p{1.2cm} % Id.
-   >{\RaggedRight\hspace{0pt}}p{2.2cm} % Criterio
-   >{\RaggedRight\hspace{0pt}}p{6.9cm} % Pregunta
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 5
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 4
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 3
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 2
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 1
-   }
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{1.2cm}| % Id.
+    >{\RaggedRight\hspace{0pt}}p{2.0cm}| % Criterio
+    >{\RaggedRight\hspace{0pt}}p{6.9cm}| % Pregunta
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 5
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 4
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 3
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 2
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 1
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Resultados de preguntas del criterio: Completitud}
-   \label{tab:resultados-preguntas-completitud}                                                                                                                                                                                                                                                                                    \\
-   \toprule
-   \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                           &
-   \multicolumn{5}{c}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                               \\
-   \cline{4-8}
-                &                   &                                                                                                                                                                                                                             & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Resultados de preguntas del criterio: Completitud}
+    \label{tab:resultados-preguntas-completitud}                                                                                                                                                                                                                                                                                    \\
+    \hline
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                           &
+    \multicolumn{5}{|c|}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                             \\
+    \hline
+    \cline{4-8}
+                 &                   &                                                                                                                                                                                                                             & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
+    \hline
+    \endfirsthead
 
-   % --- ENCABEZADO PÁGINAS SIGUIENTES ---
-   \multicolumn{8}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                         \\
-   \toprule
-   \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                           &
-   \multicolumn{5}{c}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                               \\
-   \cline{4-8}
-                &                   &                                                                                                                                                                                                                             & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO PÁGINAS SIGUIENTES ---
+    \hline
+    \multicolumn{8}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                       \\
+    \hline
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                           &
+    \multicolumn{5}{|c|}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                             \\
+    \hline
+    \cline{4-8}
+                 &                   &                                                                                                                                                                                                                             & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
+    \hline
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{8}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                 \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \hline
+    \multicolumn{8}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                               \\
+    \hline
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \multicolumn{8}{l}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.) y Pregunta Cerrada (P).}}                                                                                                                                                                                                                     \\
-   \endlastfoot
+    % --- PIE FINAL ---
+    \hline
+    \multicolumn{8}{|l|}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.) y Pregunta Cerrada (P).}}                                                                                                                                                                                                                   \\
+    \hline
+    \endlastfoot
 
-   % --- CONTENIDO (SOLO PREGUNTAS CERRADAS) ---
+    % --- CONTENIDO (SOLO PREGUNTAS CERRADAS) ---
 
-   P4           & Completitud       & ¿Cree que el modelo SocialScrum cubre todos los aspectos necesarios para la gestión ágil de proyectos?                                                                                                                      & 3          & 2          & 1          & 0          & 0          \\
-   P5           & Completitud       & ¿Los artefactos sociales introducidos (por ejemplo, el Social Product Backlog, las historias de usuario sociales y el registro de community smells) están bien definidos y facilitan el seguimiento de la salud del equipo? & 5          & 1          & 0          & 0          & 0          \\
-   P6           & Completitud       & ¿El modelo incluye mecanismos de auditoría y transparencia que permiten al equipo verificar la actuación del Social Guide, previniendo posibles abusos de autoridad o desviaciones éticas?                                  & 4          & 2          & 0          & 0          & 0          \\
+    P4           & Completitud       & ¿Cree que el modelo SocialScrum cubre todos los aspectos necesarios para la gestión ágil de proyectos?                                                                                                                      & 3          & 2          & 1          & 0          & 0          \\
+    \hline
+    P5           & Completitud       & ¿Los artefactos sociales introducidos (por ejemplo, el Social Product Backlog, las historias de usuario sociales y el registro de community smells) están bien definidos y facilitan el seguimiento de la salud del equipo? & 5          & 1          & 0          & 0          & 0          \\
+    \hline
+    P6           & Completitud       & ¿El modelo incluye mecanismos de auditoría y transparencia que permiten al equipo verificar la actuación del Social Guide, previniendo posibles abusos de autoridad o desviaciones éticas?                                  & 4          & 2          & 0          & 0          & 0          \\
 \end{longtable}
 \endgroup
 
@@ -667,53 +750,60 @@ La Tabla~\ref{tab:resultados-preguntas-idoneidad} muestra los resultados especí
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
-   >{\RaggedRight\hspace{0pt}}p{1.2cm} % Id.
-   >{\RaggedRight\hspace{0pt}}p{2.2cm} % Criterio
-   >{\RaggedRight\hspace{0pt}}p{6.9cm} % Pregunta
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 5
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 4
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 3
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 2
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 1
-   }
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{1.2cm}| % Id.
+    >{\RaggedRight\hspace{0pt}}p{2.0cm}| % Criterio
+    >{\RaggedRight\hspace{0pt}}p{6.9cm}| % Pregunta
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 5
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 4
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 3
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 2
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 1
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Resultados de preguntas del criterio: Idoneidad}
-   \label{tab:resultados-preguntas-idoneidad}                                                                                                                                                                                                                                                                                                                                                                  \\
-   \toprule
-   \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                                       &
-   \multicolumn{5}{c}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                                                                                                           \\
-   \cline{4-8}
-                &                   &                                                                                                                                                                                                                                                                                                         & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Resultados de preguntas del criterio: Idoneidad}
+    \label{tab:resultados-preguntas-idoneidad}                                                                                                                                                                                                                                                                                                                                                               \\
+    \hline
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                                    &
+    \multicolumn{5}{|c|}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                                                                                                      \\
+    \hline
+    \cline{4-8}
+                 &                   &                                                                                                                                                                                                                                                                                                      & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
+    \hline
+    \endfirsthead
 
-   % --- ENCABEZADO PÁGINAS SIGUIENTES ---
-   \multicolumn{8}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                                                                                     \\
-   \toprule
-   \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                                       &
-   \multicolumn{5}{c}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                                                                                                           \\
-   \cline{4-8}
-                &                   &                                                                                                                                                                                                                                                                                                         & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO PÁGINAS SIGUIENTES ---
+    \hline
+    \multicolumn{8}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                                                                                \\
+    \hline
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                                                                                                    &
+    \multicolumn{5}{|c|}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                                                                                                      \\
+    \hline
+    \cline{4-8}
+                 &                   &                                                                                                                                                                                                                                                                                                      & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
+    \hline
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{8}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                                                                                             \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \hline
+    \multicolumn{8}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                                                                                        \\
+    \hline
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \multicolumn{8}{l}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.) y Pregunta Cerrada (P).}}                                                                                                                                                                                                                                                                                                 \\
-   \endlastfoot
+    % --- PIE FINAL ---
+    \hline
+    \multicolumn{8}{|l|}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.) y Pregunta Cerrada (P).}}                                                                                                                                                                                                                                                                                            \\
+    \hline
+    \endlastfoot
 
-   % --- CONTENIDO (SOLO PREGUNTAS CERRADAS) ---
+    % --- CONTENIDO (SOLO PREGUNTAS CERRADAS) ---
 
-   P7           & Idoneidad         & ¿Considera que SocialScrum aborda de manera pertinente las necesidades reales de los equipos de desarrollo de software ágil en cuanto a la gestión de la deuda social (por ejemplo, la detección de \gls{community-smells}, la mitigación de tensiones interpersonales y la mejora de la colaboración)? & 5          & 1          & 0          & 0          & 0          \\
-   P8           & Idoneidad         & ¿Los mecanismos de inspección y adaptación social propuestos por SocialScrum (como el Health Score, el Registro de \gls{community-smells} y las retrospectivas sociales) son adecuados para identificar y mitigar los problemas socio-técnicos que generan deuda social en los equipos?                 & 5          & 1          & 0          & 0          & 0          \\
-   P9           & Idoneidad         & ¿El rol del Social Guide, tal como está definido en SocialScrum, resulta pertinente y necesario para facilitar la gestión de la deuda social, cubriendo funciones que no son atendidas por los roles existentes en Scrum (Scrum Master, Product Owner, Developers)?                                     & 4          & 2          & 0          & 0          & 0          \\
+    P7           & Idoneidad         & ¿Considera que SocialScrum aborda de manera pertinente las necesidades reales de los equipos de desarrollo de software ágil en cuanto a la gestión de la deuda social (por ejemplo, la detección de olores comunitarios, la mitigación de tensiones interpersonales y la mejora de la colaboración)? & 5          & 1          & 0          & 0          & 0          \\
+    \hline
+    P8           & Idoneidad         & ¿Los mecanismos de inspección y adaptación social propuestos por SocialScrum (como el Health Score, el Registro de olores comunitarios y las retrospectivas sociales) son adecuados para identificar y mitigar los problemas socio-técnicos que generan deuda social en los equipos?                 & 5          & 1          & 0          & 0          & 0          \\
+    \hline
+    P9           & Idoneidad         & ¿El rol del Social Guide, tal como está definido en SocialScrum, resulta pertinente y necesario para facilitar la gestión de la deuda social, cubriendo funciones que no son atendidas por los roles existentes en Scrum (Scrum Master, Product Owner, Developers)?                                  & 4          & 2          & 0          & 0          & 0          \\
 \end{longtable}
 \endgroup
 
@@ -734,53 +824,60 @@ La Tabla~\ref{tab:resultados-preguntas-facilidad-uso} detalla los resultados esp
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
-   >{\RaggedRight\hspace{0pt}}p{1.2cm} % Id.
-   >{\RaggedRight\hspace{0pt}}p{2.2cm} % Criterio
-   >{\RaggedRight\hspace{0pt}}p{6.9cm} % Pregunta
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 5
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 4
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 3
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 2
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 1
-   }
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{1.2cm}| % Id.
+    >{\RaggedRight\hspace{0pt}}p{2.0cm}| % Criterio
+    >{\RaggedRight\hspace{0pt}}p{6.9cm}| % Pregunta
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 5
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 4
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 3
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 2
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 1
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Resultados de preguntas del criterio: Facilidad de uso}
-   \label{tab:resultados-preguntas-facilidad-uso}                                                                                                                                                                                                                                       \\
-   \toprule
-   \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                &
-   \multicolumn{5}{c}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                    \\
-   \cline{4-8}
-                &                   &                                                                                                                                                                                  & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Resultados de preguntas del criterio: Facilidad de uso}
+    \label{tab:resultados-preguntas-facilidad-uso}                                                                                                                                                                                                                                       \\
+    \hline
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                &
+    \multicolumn{5}{|c|}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                  \\
+    \hline
+    \cline{4-8}
+                 &                   &                                                                                                                                                                                  & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
+    \hline
+    \endfirsthead
 
-   % --- ENCABEZADO PÁGINAS SIGUIENTES ---
-   \multicolumn{8}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                              \\
-   \toprule
-   \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                &
-   \multicolumn{5}{c}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                    \\
-   \cline{4-8}
-                &                   &                                                                                                                                                                                  & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO PÁGINAS SIGUIENTES ---
+    \hline
+    \multicolumn{8}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                            \\
+    \hline
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                &
+    \multicolumn{5}{|c|}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                  \\
+    \hline
+    \cline{4-8}
+                 &                   &                                                                                                                                                                                  & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
+    \hline
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{8}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                      \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \hline
+    \multicolumn{8}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                    \\
+    \hline
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \multicolumn{8}{l}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.) y Pregunta Cerrada (P).}}                                                                                                                                                                          \\
-   \endlastfoot
+    % --- PIE FINAL ---
+    \hline
+    \multicolumn{8}{|l|}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.) y Pregunta Cerrada (P).}}                                                                                                                                                                        \\
+    \hline
+    \endlastfoot
 
-   % --- CONTENIDO (SOLO PREGUNTAS CERRADAS) ---
+    % --- CONTENIDO (SOLO PREGUNTAS CERRADAS) ---
 
-   P10          & Facilidad de Uso  & ¿El perfil y las competencias del Social Guide están claramente definidos y son viables, complementando los roles existentes en el equipo sin solapamiento de responsabilidades? & 4          & 1          & 1          & 0          & 0          \\
-   P11          & Facilidad de Uso  & ¿La implementación de SocialScrum en equipos ágiles reales es factible y no requiere cambios organizacionales o culturales impracticables?                                       & 2          & 2          & 2          & 0          & 0          \\
-   P12          & Facilidad de Uso  & ¿La sobrecarga operacional de SocialScrum es sostenible para equipos ágiles a mediano/largo plazo?                                                                               & 2          & 4          & 0          & 0          & 0          \\
+    P10          & Facilidad de Uso  & ¿El perfil y las competencias del Social Guide están claramente definidos y son viables, complementando los roles existentes en el equipo sin solapamiento de responsabilidades? & 4          & 1          & 1          & 0          & 0          \\
+    \hline
+    P11          & Facilidad de Uso  & ¿La implementación de SocialScrum en equipos ágiles reales es factible y no requiere cambios organizacionales o culturales impracticables?                                       & 2          & 2          & 2          & 0          & 0          \\
+    \hline
+    P12          & Facilidad de Uso  & ¿La sobrecarga operacional de SocialScrum es sostenible para equipos ágiles a mediano/largo plazo?                                                                               & 2          & 4          & 0          & 0          & 0          \\
 \end{longtable}
 \endgroup
 
@@ -799,53 +896,60 @@ La Tabla~\ref{tab:resultados-preguntas-agilidad} presenta los resultados especí
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}[H]{
-   >{\RaggedRight\hspace{0pt}}p{1.2cm} % Id.
-   >{\RaggedRight\hspace{0pt}}p{2.2cm} % Criterio
-   >{\RaggedRight\hspace{0pt}}p{6.9cm} % Pregunta
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 5
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 4
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 3
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 2
-   >{\Centering\hspace{0pt}}p{0.7cm} % Escala 1
-   }
+\begin{longtable}[H]{|
+    >{\RaggedRight\hspace{0pt}}p{1.2cm}| % Id.
+    >{\RaggedRight\hspace{0pt}}p{2.0cm}| % Criterio
+    >{\RaggedRight\hspace{0pt}}p{6.9cm}| % Pregunta
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 5
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 4
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 3
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 2
+    >{\Centering\hspace{0pt}}p{0.7cm}| % Escala 1
+    }
 
-   % --- ENCABEZADO PRIMERA PÁGINA ---
-   \caption{Resultados de preguntas del criterio: Agilidad}
-   \label{tab:resultados-preguntas-agilidad}                                                                                                                                                                                                                                                                                   \\
-   \toprule
-   \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                       &
-   \multicolumn{5}{c}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                           \\
-   \cline{4-8}
-                &                   &                                                                                                                                                                                                                         & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
-   \midrule
-   \endfirsthead
+    % --- ENCABEZADO PRIMERA PÁGINA ---
+    \caption{Resultados de preguntas del criterio: Agilidad}
+    \label{tab:resultados-preguntas-agilidad}                                                                                                                                                                                                                                                                                   \\
+    \hline
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                       &
+    \multicolumn{5}{|c|}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                         \\
+    \hline
+    \cline{4-8}
+                 &                   &                                                                                                                                                                                                                         & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
+    \hline
+    \endfirsthead
 
-   % --- ENCABEZADO PÁGINAS SIGUIENTES ---
-   \multicolumn{8}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                     \\
-   \toprule
-   \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                       &
-   \multicolumn{5}{c}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                           \\
-   \cline{4-8}
-                &                   &                                                                                                                                                                                                                         & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
-   \midrule
-   \endhead
+    % --- ENCABEZADO PÁGINAS SIGUIENTES ---
+    \hline
+    \multicolumn{8}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                   \\
+    \hline
+    \textbf{Id.} & \textbf{Criterio} & \textbf{Pregunta}                                                                                                                                                                                                       &
+    \multicolumn{5}{|c|}{\textbf{Respuestas por nivel}}                                                                                                                                                                                                                                                                         \\
+    \hline
+    \cline{4-8}
+                 &                   &                                                                                                                                                                                                                         & \textbf{5} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{1} \\
+    \hline
+    \endhead
 
-   % --- PIE INTERMEDIO ---
-   \midrule
-   \multicolumn{8}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                             \\
-   \endfoot
+    % --- PIE INTERMEDIO ---
+    \hline
+    \multicolumn{8}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                           \\
+    \hline
+    \endfoot
 
-   % --- PIE FINAL ---
-   \bottomrule
-   \multicolumn{8}{l}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.) y Pregunta Cerrada (P).}}                                                                                                                                                                                                                 \\
-   \endlastfoot
+    % --- PIE FINAL ---
+    \hline
+    \multicolumn{8}{|l|}{\footnotesize\textit{Acrónimos utilizados: Identificador (Id.) y Pregunta Cerrada (P).}}                                                                                                                                                                                                               \\
+    \hline
+    \endlastfoot
 
-   % --- CONTENIDO ---
+    % --- CONTENIDO ---
 
-   P13          & Agilidad          & ¿Considera que SocialScrum preserva los principios del Manifiesto Ágil (iteración, inspección, adaptación) sin comprometerlos por la incorporación de la dimensión social?                                              & 4          & 2          & 0          & 0          & 0          \\
-   P14          & Agilidad          & ¿Los eventos adaptados de SocialScrum (Social Sprint Planning, Social Daily Standup, Social Sprint Review y Social Sprint Retrospective) mantienen la cadencia iterativa y la mejora continua propias de un marco ágil? & 4          & 2          & 0          & 0          & 0          \\
-   P15          & Agilidad          & ¿El modelo SocialScrum permite mantener un ritmo de entrega sostenible y predecible al integrar los ítems sociales en el flujo de trabajo del equipo ágil?                                                              & 1          & 5          & 0          & 0          & 0          \\
+    P13          & Agilidad          & ¿Considera que SocialScrum preserva los principios del Manifiesto Ágil (iteración, inspección, adaptación) sin comprometerlos por la incorporación de la dimensión social?                                              & 4          & 2          & 0          & 0          & 0          \\
+    \hline
+    P14          & Agilidad          & ¿Los eventos adaptados de SocialScrum (Social Sprint Planning, Social Daily Standup, Social Sprint Review y Social Sprint Retrospective) mantienen la cadencia iterativa y la mejora continua propias de un marco ágil? & 4          & 2          & 0          & 0          & 0          \\
+    \hline
+    P15          & Agilidad          & ¿El modelo SocialScrum permite mantener un ritmo de entrega sostenible y predecible al integrar los ítems sociales en el flujo de trabajo del equipo ágil?                                                              & 1          & 5          & 0          & 0          & 0          \\
 \end{longtable}
 \endgroup
 
@@ -863,23 +967,25 @@ Las respuestas de los expertos han proporcionado una visión integral sobre el d
 El análisis estadístico de las respuestas cerradas, junto con las observaciones cualitativas de los expertos, ha permitido identificar varias fortalezas clave del modelo SocialScrum:
 
 \begin{itemize}
-   \item \textbf{Claridad conceptual}: La pregunta P1 obtuvo unanimidad ($Mdn = 5{,}0$; $\kappa_{\text{free}} = 1{,}00$), confirmando que los conceptos del modelo están claramente definidos con acuerdo casi perfecto. Las tres preguntas del criterio de claridad (P1--P3) alcanzaron medianas de 4,0 a 5,0, con todas las respuestas concentradas en las categorías 4 y 5.
-   \item \textbf{Pertinencia e idoneidad}: Las preguntas del criterio de idoneidad (P7--P9) obtuvieron medianas de 5,0, con $\kappa_{\text{free}}$ entre 0,33 y 0,58 (acuerdo justo a moderado), validando que SocialScrum aborda de manera pertinente las necesidades reales de los equipos ágiles en la gestión de la deuda social.
-   \item \textbf{Solidez de los artefactos sociales}: La pregunta P5 ($Mdn = 5{,}0$; $\kappa_{\text{free}} = 0{,}58$) muestra acuerdo moderado, indicando que los artefactos sociales introducidos están bien definidos y facilitan el seguimiento de la salud del equipo.
-   \item \textbf{Alineación con principios ágiles}: Las preguntas del criterio de agilidad (P13--P15) alcanzaron medianas entre 4,0 y 5,0 con acuerdo justo a moderado ($\kappa_{\text{free}}$ entre 0,33 y 0,58), confirmando que SocialScrum preserva los principios del Manifiesto Ágil al integrar la dimensión social.
-   \item \textbf{Mecanismos de transparencia}: La pregunta P6 ($Mdn = 5{,}0$; $\kappa_{\text{free}} = 0{,}33$) indica que los mecanismos de auditoría y transparencia del modelo son valorados positivamente por los expertos, con acuerdo justo.
+    \item \textbf{Claridad conceptual}: La pregunta P1 obtuvo unanimidad ($Mdn = 5{,}0$; $\kappa_{\text{free}} = 1{,}00$), confirmando que los conceptos del modelo están claramente definidos con acuerdo casi perfecto. Las tres preguntas del criterio de claridad (P1--P3) alcanzaron medianas de 4,0 a 5,0, con todas las respuestas concentradas en las categorías 4 y 5.
+    \item \textbf{Pertinencia e idoneidad}: Las preguntas del criterio de idoneidad (P7--P9) obtuvieron medianas de 5,0, con $\kappa_{\text{free}}$ entre 0,33 y 0,58 (acuerdo justo a moderado), validando que SocialScrum aborda de manera pertinente las necesidades reales de los equipos ágiles en la gestión de la deuda social.
+    \item \textbf{Solidez de los artefactos sociales}: La pregunta P5 ($Mdn = 5{,}0$; $\kappa_{\text{free}} = 0{,}58$) muestra acuerdo moderado, indicando que los artefactos sociales introducidos están bien definidos y facilitan el seguimiento de la salud del equipo.
+    \item \textbf{Alineación con principios ágiles}: Las preguntas del criterio de agilidad (P13--P15) alcanzaron medianas entre 4,0 y 5,0 con acuerdo justo a moderado ($\kappa_{\text{free}}$ entre 0,33 y 0,58), confirmando que SocialScrum preserva los principios del Manifiesto Ágil al integrar la dimensión social.
+    \item \textbf{Mecanismos de transparencia}: La pregunta P6 ($Mdn = 5{,}0$; $\kappa_{\text{free}} = 0{,}33$) indica que los mecanismos de auditoría y transparencia del modelo son valorados positivamente por los expertos, con acuerdo justo.
 \end{itemize}
 
 \subsection{Debilidades del modelo SocialScrum}
 A pesar de las fortalezas identificadas, la triangulación entre el análisis cuantitativo y las respuestas abiertas (ver Tabla~\ref{tab:categorias-cualitativas}) permite identificar los aspectos del modelo que requieren mayor atención y que constituyen las principales debilidades reveladas por la evaluación:
 
 \begin{itemize}
-   \item \textbf{Factibilidad de implementación}: La pregunta P11 obtuvo la mediana más baja del instrumento ($Mdn = 4{,}0$; $\kappa_{\text{free}} = 0{,}00$), con respuestas distribuidas uniformemente entre las escalas 5, 4 y 3. Este coeficiente de concordancia nulo indica que la probabilidad de acuerdo observado entre los evaluadores fue igual a la probabilidad de acuerdo esperado por azar, lo que significa que \textbf{los expertos no lograron un consenso estadísticamente significativo sobre la factibilidad de implementación de SocialScrum en equipos reales}. En consecuencia, no es posible emitir una conclusión definitiva sobre la viabilidad industrial del modelo a partir de estos datos. Las respuestas abiertas confirman esta incertidumbre: tres expertos (E1, E5 y E6) señalaron la necesidad de validación empírica en contextos reales (C1), y E6 advirtió que la dependencia de prerrequisitos organizacionales estrictos limita la adopción del modelo en entornos inmaduros (C6).
-   \item \textbf{Completitud general del modelo}: La pregunta P4 ($Mdn = 4{,}5$; $\kappa_{\text{free}} = 0{,}08$) presentó acuerdo leve, un nivel de concordancia apenas superior al esperado por azar. Aunque la mediana se sitúa en el rango positivo, \textbf{la dispersión de las respuestas impide afirmar que existe consenso sobre la cobertura completa del modelo}. Las respuestas cualitativas revelan áreas específicas no cubiertas: la gestión de interrupciones y protección del estado de flujo durante las intervenciones sociales (C4), la ausencia de un catálogo de estrategias tácticas para mitigar community smells (C5) y la falta de protocolos de mediación (C3).
-   \item \textbf{Viabilidad del perfil del Social Guide}: La pregunta P10 ($Mdn = 5{,}0$; $\kappa_{\text{free}} = 0{,}25$) presentó acuerdo justo, lo que refleja que, si bien el perfil es mayoritariamente aceptado, la presencia de una respuesta en el nivel intermedio (3) indica que su definición podría afinarse. Las respuestas abiertas precisan esta debilidad: E3 señaló la ausencia de rutas de formación para nuevos Social Guides (C2), y E4 planteó la necesidad de definir protocolos de ejecución que regulen cuándo y cómo intervenir sin fragmentar la jornada de desarrollo.
+    \item \textbf{Factibilidad de implementación}: La pregunta P11 obtuvo la mediana más baja del instrumento ($Mdn = 4{,}0$; $\kappa_{\text{free}} = 0{,}00$), con respuestas distribuidas uniformemente entre las escalas 5, 4 y 3. Este coeficiente de concordancia nulo indica que la probabilidad de acuerdo observado entre los evaluadores fue igual a la probabilidad de acuerdo esperado por azar, lo que significa que \textbf{los expertos no lograron un consenso estadísticamente significativo sobre la factibilidad de implementación de SocialScrum en equipos reales}. En consecuencia, no es posible emitir una conclusión definitiva sobre la viabilidad industrial del modelo a partir de estos datos. Las respuestas abiertas confirman esta incertidumbre: tres expertos (E1, E5 y E6) señalaron la necesidad de validación empírica en contextos reales (C1), y E6 advirtió que la dependencia de prerrequisitos organizacionales estrictos limita la adopción del modelo en entornos inmaduros (C6).
+    \item \textbf{Completitud general del modelo}: La pregunta P4 ($Mdn = 4{,}5$; $\kappa_{\text{free}} = 0{,}08$) presentó acuerdo leve, un nivel de concordancia apenas superior al esperado por azar. Aunque la mediana se sitúa en el rango positivo, \textbf{la dispersión de las respuestas impide afirmar que existe consenso sobre la cobertura completa del modelo}. Las respuestas cualitativas revelan áreas específicas no cubiertas: la gestión de interrupciones y protección del estado de flujo durante las intervenciones sociales (C4), la ausencia de un catálogo de estrategias tácticas para mitigar community smells (C5) y la falta de protocolos de mediación (C3).
+    \item \textbf{Viabilidad del perfil del Social Guide}: La pregunta P10 ($Mdn = 5{,}0$; $\kappa_{\text{free}} = 0{,}25$) presentó acuerdo justo, lo que refleja que, si bien el perfil es mayoritariamente aceptado, la presencia de una respuesta en el nivel intermedio (3) indica que su definición podría afinarse. Las respuestas abiertas precisan esta debilidad: E3 señaló la ausencia de rutas de formación para nuevos Social Guides (C2), y E4 planteó la necesidad de definir protocolos de ejecución que regulen cuándo y cómo intervenir sin fragmentar la jornada de desarrollo.
 \end{itemize}
 
 \subsection{Oportunidades de mejora}
+
+Es importante precisar que las oportunidades de mejora y recomendaciones que se presentan a continuación \textbf{no fueron incorporadas} a la versión del modelo SocialScrum descrita en los Capítulos~\ref{chap:capitulo3} y \ref{chap:capitulo4}. La versión que se presenta en esta monografía corresponde a la versión conceptual inicial, la misma que fue sometida a evaluación por parte de los expertos y cuya contextualización se encuentra documentada en el Anexo~\ref{anexo:contextualizacion}. En consecuencia, las mejoras aquí identificadas constituyen insumos para futuras iteraciones del ciclo de diseño dentro del enfoque de la investigación \gls{dsr}, tal como se detalla en la Sección~\ref{sec:trabajos-futuros} del Capítulo~\ref{chap:capitulo6}.
 
 A partir de las debilidades identificadas, la Tabla~\ref{tab:sintesis_consenso} sintetiza el estado de concordancia alcanzado en el instrumento según el Coeficiente Kappa Marginal Libre. Como se observa, la pregunta P1 alcanzó acuerdo casi perfecto, cuatro preguntas lograron acuerdo moderado y ocho preguntas presentaron acuerdo justo. Las preguntas P4 y P11, asociadas a las debilidades descritas, registraron los niveles más bajos de concordancia.
 
@@ -890,54 +996,62 @@ A partir de las debilidades identificadas, la Tabla~\ref{tab:sintesis_consenso} 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-   >{\RaggedRight\hspace{0pt}}p{3.3cm}
-   >{\Centering\hspace{0pt}}p{2.5cm}
-   >{\Centering\hspace{0pt}}p{3.0cm}
-   >{\Centering\hspace{0pt}}p{6.3cm}
-   }
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{3.3cm}|
+    >{\Centering\hspace{0pt}}p{2.5cm}|
+    >{\Centering\hspace{0pt}}p{3.0cm}|
+    >{\Centering\hspace{0pt}}p{6.3cm}|
+    }
 
-   \caption{Síntesis del estado de concordancia inter-evaluador.} \label{tab:sintesis_consenso}                                     \\
-   \toprule
-   \textbf{Pregunta}                  & \textbf{Mediana ($Mdn$)} & \textbf{$\kappa_{\text{free}}$} & \textbf{Nivel de concordancia} \\
-   \midrule
-   \endfirsthead
+    \caption{Síntesis del estado de concordancia inter-evaluador.} \label{tab:sintesis_consenso}                                     \\
+    \hline
+    \textbf{Pregunta}                  & \textbf{Mediana ($Mdn$)} & \textbf{$\kappa_{\text{free}}$} & \textbf{Nivel de concordancia} \\
+    \hline
+    \endfirsthead
 
-   \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                          \\
-   \toprule
-   \textbf{Pregunta}                  & \textbf{Mediana ($Mdn$)} & \textbf{$\kappa_{\text{free}}$} & \textbf{Nivel de concordancia} \\
-   \midrule
-   \endhead
+    \hline
+    \multicolumn{4}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                        \\
+    \hline
+    \textbf{Pregunta}                  & \textbf{Mediana ($Mdn$)} & \textbf{$\kappa_{\text{free}}$} & \textbf{Nivel de concordancia} \\
+    \hline
+    \endhead
 
-   \midrule
-   \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                                  \\
-   \endfoot
+    \hline
+    \multicolumn{4}{|r|}{\textit{Continúa en la siguiente página...}}                                                                \\
+    \hline
+    \endfoot
 
-   \bottomrule
-   \endlastfoot
+    \hline
+    \endlastfoot
 
-   P1                                 & 5,0                      & 1,00                            & Acuerdo casi perfecto          \\
-   P5, P7, P8, P15                    & 4,0--5,0                 & 0,58                            & Acuerdo moderado               \\
-   P2, P3, P6, P9, P10, P12, P13, P14 & 4,0--5,0                 & 0,25--0,33                      & Acuerdo justo                  \\
-   P4                                 & 4,5                      & 0,08                            & Acuerdo leve                   \\
-   P11                                & 4,0                      & 0,00                            & Sin acuerdo                    \\
+    P1                                 & 5,0                      & 1,00                            & Acuerdo casi perfecto          \\
+    \hline
+    P5, P7, P8, P15                    & 4,0--5,0                 & 0,58                            & Acuerdo moderado               \\
+    \hline
+    P2, P3, P6, P9, P10, P12, P13, P14 & 4,0--5,0                 & 0,25--0,33                      & Acuerdo justo                  \\
+    \hline
+    P4                                 & 4,5                      & 0,08                            & Acuerdo leve                   \\
+    \hline
+    P11                                & 4,0                      & 0,00                            & Sin acuerdo                    \\
 \end{longtable}
 \endgroup
 
-Es necesario contextualizar estos resultados desde una perspectiva estadística. El Coeficiente Kappa Marginal Libre de Randolph \cite{randolph2005} presenta una sensibilidad inherente cuando la muestra de evaluadores es reducida ($N = 6$) y el número de categorías de respuesta es amplio ($k = 5$ en escala Likert). En estas condiciones, la probabilidad de acuerdo esperado por azar ($P_e = 1/k = 0{,}20$) resulta relativamente alta, lo que penaliza el coeficiente y produce valores conservadores incluso cuando las respuestas se concentran en el espectro positivo de la escala \cite{randolph2005}. Así, un $\kappa_{\text{free}} = 0{,}00$ con una mediana de 4,0 no implica necesariamente que los expertos consideren el modelo inviable, sino que, aunque la totalidad de los evaluadores se situó en el rango positivo (nadie otorgó calificaciones de 1 o 2), difirieron en el gradiente exacto de viabilidad (entre 3, 4 y 5). No obstante, esta contextualización no invalida la señal de alerta: \textbf{la ausencia de consenso en la factibilidad de implementación (P11) y la completitud (P4) constituye una limitación que debe ser asumida con transparencia, y que impide sostener conclusiones categóricas sobre la aplicabilidad industrial del modelo a partir exclusivamente de estos datos}.
+Es necesario contextualizar estos resultados desde una perspectiva estadística. El Coeficiente Kappa Marginal Libre de Randolph \cite{randolph2005} presenta una sensibilidad inherente cuando la muestra de evaluadores es reducida ($N = 6$) y el número de categorías de respuesta es amplio ($k = 5$ en escala Likert). En estas condiciones, la probabilidad de acuerdo esperado por azar ($P_e = 1/k = 0{,}20$) resulta relativamente alta, lo que penaliza el coeficiente y produce valores conservadores incluso cuando las respuestas se concentran en el espectro positivo de la escala \cite{randolph2005}. Así, un $\kappa_{\text{free}} = 0{,}00$ con una mediana de 4,0 no implica necesariamente que los expertos consideren el modelo inviable, sino que, aunque la totalidad de los evaluadores se situó en el rango positivo (nadie otorgó calificaciones de 1 o 2), difirieron en el gradiente exacto de viabilidad (entre 3, 4 y 5). No obstante, esta contextualización no invalida la señal de alerta: la ausencia de consenso en la factibilidad de implementación (P11) y la completitud (P4) constituye una limitación que debe ser asumida con transparencia, y que impide sostener conclusiones categóricas sobre la aplicabilidad industrial del modelo a partir exclusivamente de estos datos.
 
 Con base en estas observaciones cuantitativas y en las categorías emergentes del análisis cualitativo (ver Tabla~\ref{tab:categorias-cualitativas}), se proponen las siguientes recomendaciones de mejora para el modelo SocialScrum:
 
 \begin{itemize}
-   \item \textbf{Guías de adopción progresiva (C6)}: Dado que P11 ($\kappa_{\text{free}} = 0{,}00$) registra ausencia de concordancia y tres expertos (E2, E5, E6) coincidieron en la necesidad de niveles progresivos de implementación, se recomienda desarrollar un marco de madurez con etapas graduales (Inicial, Intermedio, Avanzado) que facilite la adopción del modelo en organizaciones con distintos niveles de preparación, siguiendo la línea sugerida por E6 en referencia a marcos como Kotter \cite{kotter1996leading}, CMMI \cite{cmmidev13} y SAFe \cite{SafeFramework}.
-   \item \textbf{Refinamiento del perfil del Social Guide (C2)}: El acuerdo justo observado en P10 ($\kappa_{\text{free}} = 0{,}25$), sumado a las observaciones de E3 y E4, sugiere la necesidad de incorporar rutas de formación para nuevos Social Guides, definir protocolos de ejecución que regulen el \textit{timing} de las intervenciones y establecer de forma explícita la complementariedad del rol con los existentes en Scrum.
-   \item \textbf{Ampliación de la cobertura operativa del modelo (C3, C4, C5)}: La pregunta P4 ($\kappa_{\text{free}} = 0{,}08$), con acuerdo leve, indica que el modelo podría beneficiarse de tres complementos específicos identificados en las respuestas abiertas: protocolos de mediación y escalamiento de conflictos (C3), mecanismos de protección del estado de flujo durante las intervenciones sociales (C4), y un catálogo de dinámicas validadas con métricas de impacto asociadas para la mitigación de community smells (C5).
-   \item \textbf{Validación empírica mediante estudios piloto (C1)}: La categoría más recurrente en las respuestas abiertas (E1, E5, E6) señala la necesidad de aplicar el modelo en contextos organizacionales reales. E5 sugirió complementar el Health Score con indicadores longitudinales y métricas de rotación o ausentismo, lo cual fortalecería la evidencia de efectividad del modelo.
+    \item \textbf{Guías de adopción progresiva (C6)}: Dado que P11 ($\kappa_{\text{free}} = 0{,}00$) registra ausencia de concordancia y tres expertos (E2, E5, E6) coincidieron en la necesidad de niveles progresivos de implementación, se recomienda desarrollar un marco de madurez con etapas graduales (Inicial, Intermedio, Avanzado) que facilite la adopción del modelo en organizaciones con distintos niveles de preparación, siguiendo la línea sugerida por E6 en referencia a marcos como Kotter \cite{kotter1996leading}, CMMI \cite{cmmidev13} y SAFe \cite{SafeFramework}.
+    \item \textbf{Refinamiento del perfil del Social Guide (C2)}: El acuerdo justo observado en P10 ($\kappa_{\text{free}} = 0{,}25$), sumado a las observaciones de E3 y E4, sugiere la necesidad de incorporar rutas de formación para nuevos Social Guides, definir protocolos de ejecución que regulen el \textit{timing} de las intervenciones y establecer de forma explícita la complementariedad del rol con los existentes en Scrum.
+    \item \textbf{Ampliación de la cobertura operativa del modelo (C3, C4, C5)}: La pregunta P4 ($\kappa_{\text{free}} = 0{,}08$), con acuerdo leve, indica que el modelo podría beneficiarse de tres complementos específicos identificados en las respuestas abiertas: protocolos de mediación y escalamiento de conflictos (C3), mecanismos de protección del estado de flujo durante las intervenciones sociales (C4), y un catálogo de dinámicas validadas con métricas de impacto asociadas para la mitigación de community smells (C5).
+    \item \textbf{Validación empírica mediante estudios piloto (C1)}: La categoría más recurrente en las respuestas abiertas (E1, E5, E6) señala la necesidad de aplicar el modelo en contextos organizacionales reales. E5 sugirió complementar el Health Score con indicadores longitudinales y métricas de rotación o ausentismo, lo cual fortalecería la evidencia de efectividad del modelo.
 \end{itemize}
 
 \subsection{Síntesis de la validación}
-En síntesis, la validación del modelo SocialScrum por parte de 6 expertos presenta un panorama dual que debe interpretarse sin sesgos de confirmación. A nivel cuantitativo, la mediana general de las 15 preguntas cerradas se sitúa en 5,0, con todas las respuestas del instrumento concentradas en las categorías positivas de la escala (3, 4 y 5), sin que se registrara calificación alguna en los niveles bajos (1 y 2), lo que indica una percepción general favorable hacia el modelo. Sin embargo, la mediana como medida de tendencia central oculta la dispersión y la varianza de las respuestas, por lo que su interpretación debe complementarse necesariamente con el análisis de concordancia inter-evaluador.
+La validación del modelo SocialScrum por parte de 6 expertos presenta un panorama dual que debe interpretarse sin sesgos de confirmación. A nivel cuantitativo, la mediana general de las 15 preguntas cerradas se sitúa en 5,0, con todas las respuestas del instrumento concentradas en las categorías positivas de la escala (3, 4 y 5), sin que se registrara calificación alguna en los niveles bajos (1 y 2), lo que indica una percepción general favorable hacia el modelo. Sin embargo, la mediana como medida de tendencia central oculta la dispersión y la varianza de las respuestas, por lo que su interpretación debe complementarse necesariamente con el análisis de concordancia inter-evaluador.
 
-El Coeficiente Kappa Marginal Libre de Randolph \cite{randolph2005} revela una distribución heterogénea del consenso: P1 alcanzó acuerdo casi perfecto ($\kappa_{\text{free}} = 1{,}00$) en claridad conceptual, cuatro preguntas lograron acuerdo moderado ($\kappa_{\text{free}} = 0{,}58$) y ocho preguntas presentaron acuerdo justo ($0{,}25 \leq \kappa_{\text{free}} \leq 0{,}33$). No obstante, las preguntas P4 ($\kappa_{\text{free}} = 0{,}08$, completitud) y P11 ($\kappa_{\text{free}} = 0{,}00$, factibilidad de implementación) registraron niveles de concordancia que no superan el umbral del azar. Esto significa que \textbf{los expertos no alcanzaron consenso estadístico sobre si el modelo cubre todos los aspectos necesarios ni sobre si su implementación en equipos reales es factible sin cambios impracticables}. Si bien la naturaleza penalizadora del $\kappa_{\text{free}}$ con muestras reducidas ($N = 6$) y escalas amplias ($k = 5$) debe considerarse como factor atenuante, estos resultados impiden sustentar conclusiones categóricas sobre la viabilidad industrial del modelo y señalan áreas concretas que requieren refinamiento iterativo antes de una implementación empírica.
+El Coeficiente Kappa Marginal Libre de Randolph \cite{randolph2005} revela una distribución heterogénea del consenso: P1 alcanzó acuerdo casi perfecto ($\kappa_{\text{free}} = 1{,}00$) en claridad conceptual, cuatro preguntas lograron acuerdo moderado ($\kappa_{\text{free}} = 0{,}58$) y ocho preguntas presentaron acuerdo justo ($0{,}25 \leq \kappa_{\text{free}} \leq 0{,}33$). No obstante, las preguntas P4 ($\kappa_{\text{free}} = 0{,}08$, completitud) y P11 ($\kappa_{\text{free}} = 0{,}00$, factibilidad de implementación) registraron niveles de concordancia que no superan el umbral del azar. Esto significa que los expertos no alcanzaron consenso estadístico sobre si el modelo cubre todos los aspectos necesarios ni sobre si su implementación en equipos reales es factible sin cambios impracticables. Si bien la naturaleza penalizadora del $\kappa_{\text{free}}$ con muestras reducidas ($N = 6$) y escalas amplias ($k = 5$) debe considerarse como factor atenuante, estos resultados impiden sustentar conclusiones categóricas sobre la viabilidad industrial del modelo y señalan áreas concretas que requieren refinamiento iterativo antes de una implementación empírica.
 
 A nivel cualitativo, el análisis temático de las respuestas abiertas identificó seis categorías emergentes (C1--C6) que convergen con los hallazgos cuantitativos: las preguntas con menor concordancia inter-evaluador coinciden con los señalamientos más recurrentes de los expertos, lo que refuerza la consistencia interna de los resultados. Esta convergencia confirma que la factibilidad de implementación y la completitud del modelo constituyen las áreas prioritarias de mejora, y que SocialScrum debe reposicionarse como un modelo exploratorio cuya validación conceptual parcial sienta las bases para futuras iteraciones de diseño y validación empírica.
+
+En síntesis, la versión de SocialScrum que se presenta en esta monografía (Capítulos~\ref{chap:capitulo3} y \ref{chap:capitulo4}) corresponde a la versión conceptual inicial sometida a evaluación (ver Anexo~\ref{anexo:contextualizacion}), sin incorporar las mejoras derivadas de la validación por expertos. Las recomendaciones formuladas en esta sección se registran como insumos documentados para una futura iteración del ciclo de diseño.

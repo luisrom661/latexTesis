@@ -1,7 +1,7 @@
 \chapter{Protocolos Operativos de Gobernanza y Ética del Social Guide}
 \label{anexo:protocolos-eticos}
 
-Este anexo presenta los protocolos operativos para la gobernanza ética del Social Guide, complementando los fundamentos del Capítulo~\ref{chap:capitulo3}, Sección~\ref{sec:salvaguardas_eticas} y las directrices del Capítulo~\ref{chap:capitulo4}. Los principios aquí descritos no son sugerencias; son \textbf{condiciones necesarias}. Una organización que implementa SocialScrum sin estas salvaguardas convierte el marco en una herramienta de vigilancia, no de salud social~\cite{edmondson2018fearless, edmondson1999psychological}.
+Este anexo presenta los protocolos operativos para la gobernanza ética del \gls{social-guide}, complementando los fundamentos del Capítulo~\ref{chap:capitulo3}, Sección~\ref{sec:salvaguardas_eticas} y las directrices del Capítulo~\ref{chap:capitulo4}. Los principios aquí descritos no son sugerencias; son \textbf{condiciones necesarias}. Una organización que implementa \gls{socialscrum} sin estas salvaguardas convierte el marco en una herramienta de vigilancia, no de salud social~\cite{edmondson2018fearless, edmondson1999psychological}.
 
 \section{Confidencialidad y protección de datos}
 
@@ -24,20 +24,20 @@ La Tabla~\ref{tab:confidencial-reportable} de referencia rápida de información
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{6.5cm}
-    >{\RaggedRight\hspace{0pt}}p{9cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{6.5cm}|
+    >{\RaggedRight\hspace{0pt}}p{9cm}|
     }
     \caption{Información confidencial vs. reportable.} \label{tab:confidencial-reportable}                                 \\
-    \toprule
+    \hline
     \textbf{Confidencial (NO reportable)}        & \textbf{Reportable (datos agregados)}                                   \\
-    \midrule \endfirsthead
-    \bottomrule \endlastfoot
-    Declaraciones individuales en retrospectivas & Health Score promedio del equipo                                        \\ \midrule
-    Conflictos interpersonales con nombres       & ``El equipo presenta aislamiento social'' (sin nombres)                 \\ \midrule
-    Estado emocional de personas específicas     & ``Se detectó \textit{burnout} en el equipo'' (sin identificar personas) \\ \midrule
-    Intención de renuncia de alguien             & ``Riesgo de rotación elevado'' (dato agregado)                          \\ \midrule
-    Críticas a gerencia por persona              & ``El equipo reporta fricción con \textit{stakeholders}''                \\ \midrule
+    \hline \endfirsthead
+    \hline \endlastfoot
+    Declaraciones individuales en retrospectivas & \gls{health-score} promedio del equipo                                  \\ \hline
+    Conflictos interpersonales con nombres       & ``El equipo presenta aislamiento social'' (sin nombres)                 \\ \hline
+    Estado emocional de personas específicas     & ``Se detectó \textit{burnout} en el equipo'' (sin identificar personas) \\ \hline
+    Intención de renuncia de alguien             & ``Riesgo de rotación elevado'' (dato agregado)                          \\ \hline
+    Críticas a gerencia por persona              & ``El equipo reporta fricción con \textit{stakeholders}''                \\ \hline
     Detalles de mediaciones 1:1                  & ``Se realizó mediación; conflicto en proceso de resolución''            \\
 \end{longtable}
 \endgroup
@@ -53,18 +53,18 @@ La Tabla~\ref{tab:confidencial-reportable} de referencia rápida de información
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{4cm}
-    >{\RaggedRight\hspace{0pt}}p{11.5cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{4cm}|
+    >{\RaggedRight\hspace{0pt}}p{11.5cm}|
     }
     \caption{Requisitos técnicos de almacenamiento seguro.} \label{tab:almacenamiento-tecnico}                                                 \\
-    \toprule
+    \hline
     \textbf{Requisito}  & \textbf{Implementación}                                                                                              \\
-    \midrule \endfirsthead
-    \bottomrule \endlastfoot
-    Cifrado en reposo   & AES-256 o equivalente; bases de datos con \textit{Transparent Data Encryption} (TDE).                                \\ \midrule
-    Cifrado en tránsito & HTTPS obligatorio; TLS~1.2 o superior.                                                                               \\ \midrule
-    Ubicación física    & Servidores en jurisdicciones con protección adecuada (GDPR si aplica); nunca en dispositivos personales sin cifrado. \\ \midrule
+    \hline \endfirsthead
+    \hline \endlastfoot
+    Cifrado en reposo   & AES-256 o equivalente; bases de datos con \textit{Transparent Data Encryption} (TDE).                                \\ \hline
+    Cifrado en tránsito & HTTPS obligatorio; TLS~1.2 o superior.                                                                               \\ \hline
+    Ubicación física    & Servidores en jurisdicciones con protección adecuada (GDPR si aplica); nunca en dispositivos personales sin cifrado. \\ \hline
     Separación lógica   & Base de datos separada de RR. HH. y de sistemas de evaluaciones de desempeño, sin acceso cruzado.                    \\
 \end{longtable}
 \endgroup
@@ -78,19 +78,19 @@ La Tabla~\ref{tab:confidencial-reportable} de referencia rápida de información
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{4cm}
-    >{\RaggedRight\hspace{0pt}}p{11.5cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{4cm}|
+    >{\RaggedRight\hspace{0pt}}p{11.5cm}|
     }
     \caption{Matriz de acceso a datos de SocialScrum.} \label{tab:matriz-acceso-socialscrum} \\
-    \toprule
+    \hline
     \textbf{Rol}       & \textbf{Acceso permitido}                                           \\
-    \midrule \endfirsthead
-    \bottomrule \endlastfoot
-    Social Guide       & Acceso completo (lectura y escritura).                              \\ \midrule
-    Scrum Master       & Métricas agregadas (solo lectura).                                  \\ \midrule
-    CTO                & Métricas agregadas (solo lectura).                                  \\ \midrule
-    RR. HH. / Managers & Ninguno (acceso prohibido).                                         \\ \midrule
+    \hline \endfirsthead
+    \hline \endlastfoot
+    Social Guide       & Acceso completo (lectura y escritura).                              \\ \hline
+    Scrum Master       & Métricas agregadas (solo lectura).                                  \\ \hline
+    CTO                & Métricas agregadas (solo lectura).                                  \\ \hline
+    RR. HH. / Managers & Ninguno (acceso prohibido).                                         \\ \hline
     Auditor externo    & Solo lectura, limitado al periodo de auditoría.                     \\
 \end{longtable}
 \endgroup
@@ -164,24 +164,24 @@ Cuando el PO y el SG tienen visiones incompatibles sobre la priorización del Sp
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{5.5cm}
-    >{\Centering\hspace{0pt}}p{4cm}
-    >{\RaggedRight\hspace{0pt}}p{5.5cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{5.5cm}|
+    >{\Centering\hspace{0pt}}p{4cm}|
+    >{\RaggedRight\hspace{0pt}}p{5.5cm}|
     }
     \caption{Criterios de decisión en conflicto PO--SG.} \label{tab:criterios-conflicto}                                   \\
-    \toprule
+    \hline
     \textbf{Escenario}                      & \textbf{Recomendación}        & \textbf{Justificación}                       \\
-    \midrule \endfirsthead
-    \bottomrule \endlastfoot
-    HS $>$ 7, \textit{deadline} contractual & Priorizar técnico             & Equipo sano puede absorber presión temporal. \\ \midrule
-    HS $<$ 4, \textit{deadline} flexible    & Priorizar social              & Equipo en crisis no entrega calidad.         \\ \midrule
-    HS 4--6, \textit{deadline} crítico      & Balance 50/50 o caso por caso & Zona gris; evaluar riesgo específico.        \\ \midrule
-    \textit{Burnout} activo documentado     & Siempre priorizar social      & Ignorar \textit{burnout} garantiza rotación. \\
+    \hline \endfirsthead
+    \hline \endlastfoot
+    HS $>$ 7, \textit{deadline} contractual & Priorizar técnico             & Equipo sano puede absorber presión temporal. \\ \hline
+    HS $<$ 4, \textit{deadline} flexible    & Priorizar social              & Equipo en crisis no entrega calidad.         \\ \hline
+    HS 4--6, \textit{deadline} crítico      & Balance 50/50 o caso por caso & Zona gris; evaluar riesgo específico.        \\ \hline
+    \gls{burnout} activo documentado        & Siempre priorizar social      & Ignorar \textit{burnout} garantiza rotación. \\
 \end{longtable}
 \endgroup
 
-Si el mismo conflicto ocurre 3+ veces en 6~meses, indica un problema sistémico: si el PO siempre gana, revisar la autoridad formal del SG; si el SG siempre gana, revisar la comunicación con los \textit{stakeholders}; si siempre escala al CTO, programar una sesión de alineación de roles.
+Si el mismo conflicto ocurre 3+ veces en 6~meses, indica un problema sistémico: si el PO siempre gana, revisar la autoridad formal del SG; si el SG siempre gana, revisar la comunicación con los \glspl{stakeholders}; si siempre escala al CTO, programar una sesión de alineación de roles.
 
 \section{Protocolo de continuidad del Social Guide}
 
@@ -241,19 +241,19 @@ El ``Teatro Social'' ocurre cuando el equipo simula bienestar mientras los probl
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{4.5cm}
-    >{\RaggedRight\hspace{0pt}}p{10.8cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{4.5cm}|
+    >{\RaggedRight\hspace{0pt}}p{10.8cm}|
     }
     \caption{Síntomas del ``Teatro Social''.} \label{tab:sintomas-teatro}                                \\
-    \toprule
+    \hline
     \textbf{Síntoma}             & \textbf{Descripción}                                                  \\
-    \midrule \endfirsthead
-    \bottomrule \endlastfoot
-    HS artificialmente alto      & Valores entre 8--10 sin variación, incluso con problemas visibles.    \\ \midrule
-    Retrospectivas sin sustancia & ``Todo bien'', ``sin comentarios''; ausencia de crítica constructiva. \\ \midrule
-    Discrepancia con la realidad & HS de 9/10 mientras la velocidad cae o hay rotación elevada.          \\ \midrule
-    Participación forzada        & Respuestas rápidas sin reflexión real.                                \\ \midrule
+    \hline \endfirsthead
+    \hline \endlastfoot
+    HS artificialmente alto      & Valores entre 8--10 sin variación, incluso con problemas visibles.    \\ \hline
+    Retrospectivas sin sustancia & ``Todo bien'', ``sin comentarios''; ausencia de crítica constructiva. \\ \hline
+    Discrepancia con la realidad & HS de 9/10 mientras la velocidad cae o hay rotación elevada.          \\ \hline
+    Participación forzada        & Respuestas rápidas sin reflexión real.                                \\ \hline
     Miedo a ser diferentes       & Nadie puntúa bajo porque ``todos puntúan alto''.                      \\
 \end{longtable}
 \endgroup
@@ -273,20 +273,20 @@ Las causas principales son: (1)~\textbf{miedo a represalias} (historial de infor
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{3.5cm}
-    >{\RaggedRight\hspace{0pt}}p{4.5cm}
-    >{\RaggedRight\hspace{0pt}}p{7cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{3.5cm}|
+    >{\RaggedRight\hspace{0pt}}p{4.5cm}|
+    >{\RaggedRight\hspace{0pt}}p{7cm}|
     }
     \caption{Validación cruzada del Health Score.} \label{tab:validacion-cruzada}                          \\
-    \toprule
+    \hline
     \textbf{Health Score} & \textbf{Indicador objetivo}   & \textbf{Interpretación}                        \\
-    \midrule \endfirsthead
-    \bottomrule \endlastfoot
-    Alto (8+)             & Velocidad estable o creciente & Consistente: probablemente real.               \\ \midrule
-    Alto (8+)             & Velocidad cayendo             & Inconsistente: posible ``Teatro Social''.      \\ \midrule
-    Alto (8+)             & Rotación reciente             & Inconsistente: requiere investigación.         \\ \midrule
-    Bajo ($<$4)           & Velocidad baja                & Consistente: el equipo está siendo honesto.    \\ \midrule
+    \hline \endfirsthead
+    \hline \endlastfoot
+    Alto (8+)             & Velocidad estable o creciente & Consistente: probablemente real.               \\ \hline
+    Alto (8+)             & Velocidad cayendo             & Inconsistente: posible ``Teatro Social''.      \\ \hline
+    Alto (8+)             & Rotación reciente             & Inconsistente: requiere investigación.         \\ \hline
+    Bajo ($<$4)           & Velocidad baja                & Consistente: el equipo está siendo honesto.    \\ \hline
     Bajo ($<$4)           & Velocidad alta                & Inusual: equipo muy crítico o problema oculto. \\
 \end{longtable}
 \endgroup

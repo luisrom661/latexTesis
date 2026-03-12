@@ -1,7 +1,7 @@
 \chapter{Sistema de Estimación Social (SSP)}
 \label{anexo:sistema-estimacion-social}
 
-\section{Sistema de estimación de ítems sociales (Social Story Points)}
+\section{Sistema de estimación de ítems sociales (\glspl{social-story-points})}
 
 La Sección~\ref{sec:sistema-estimacion-ssp} del Capítulo~\ref{chap:capitulo4} presenta la escala SSP, la fórmula de cálculo y la tabla de referencia rápida. Este anexo complementa esa presentación con la metodología detallada de estimación en 3~pasos, la matriz completa de severidad y las mejores prácticas de calibración.
 
@@ -16,45 +16,49 @@ La escala SSP utiliza los mismos valores Fibonacci: 1, 2, 3, 5, 8 y 13. Valores 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\Centering\hspace{0pt}}p{1.5cm}     % Col 1: SSP
-    >{\Centering\hspace{0pt}}p{2.5cm}     % Col 2: Duración
-    >{\RaggedRight\hspace{0pt}}p{4.5cm}   % Col 3: Tipo de intervención
-    >{\RaggedRight\hspace{0pt}}p{4.5cm}   % Col 4: Ejemplo
+\begin{longtable}{|
+    >{\Centering\hspace{0pt}}p{1.5cm}|     % Col 1: SSP
+    >{\Centering\hspace{0pt}}p{2.5cm}|     % Col 2: Duración
+    >{\RaggedRight\hspace{0pt}}p{6.4cm}|   % Col 3: Tipo de intervención
+    >{\RaggedRight\hspace{0pt}}p{4.5cm}|   % Col 4: Ejemplo
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-    \caption{Escala de Social Story Points (SSP)} \label{tab:escala-SSP}                                                                   \\
-    \toprule
-    \textbf{SSP} & \textbf{Duración} & \textbf{Tipo de intervención}                        & \textbf{Ejemplo}                             \\
-    \midrule
+    \caption{Escala de Social Story Points (SSP)} \label{tab:escala-SSP}                                                                \\
+    \hline
+    \textbf{SSP} & \textbf{Duración} & \textbf{Tipo de intervención}                        & \textbf{Ejemplo}                          \\
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                \\
-    \toprule
-    \textbf{SSP} & \textbf{Duración} & \textbf{Tipo de intervención}                        & \textbf{Ejemplo}                             \\
-    \midrule
+    \hline
+    \multicolumn{4}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                             \\
+    \hline
+    \textbf{SSP} & \textbf{Duración} & \textbf{Tipo de intervención}                        & \textbf{Ejemplo}                          \\
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                                        \\
+    \hline
+    \multicolumn{4}{|r|}{\textit{Continúa en la siguiente página...}}                                                                     \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
-    1--2         & 1--4 horas        & Conversación facilitada, ajuste menor                & \textit{Feedback} rápido, norma simple       \\
-    3--5         & 4 h--2 días       & \textit{Workshop}, mediación, retrospectiva profunda & Código de conducta, mediación bilateral      \\
-    8--13        & 2 días--1 semana  & Intervención organizacional, crisis                  & Cambio de liderazgo, \textit{burnout} severo \\
+    1--2         & 1--4 horas        & Conversación facilitada, ajuste menor                & \textit{Feedback} rápido, norma simple    \\
+    \hline
+    3--5         & 4 h--2 días       & \textit{Workshop}, mediación, retrospectiva profunda & Código de conducta, mediación bilateral   \\
+    \hline
+    8--13        & 2 días--1 semana  & Intervención organizacional, crisis                  & Cambio de liderazgo, \gls{burnout} severo \\
 \end{longtable}
 \endgroup
 
 \subsection{Metodología de estimación en 3 pasos}
 
-La estimación SSP sigue un proceso de tres pasos: identificar el Olor Comunitario, evaluar severidad, y evaluar complejidad de intervención.
+La estimación SSP sigue un proceso de tres pasos: identificar el \gls{community-smells}, evaluar severidad, y evaluar complejidad de intervención.
 
 \begingroup
 \scriptsize
@@ -63,38 +67,42 @@ La estimación SSP sigue un proceso de tres pasos: identificar el Olor Comunitar
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\Centering\hspace{0pt}}p{1.0cm}     % Col 1: Paso
-    >{\RaggedRight\hspace{0pt}}p{3.5cm}   % Col 2: Criterio
-    >{\RaggedRight\hspace{0pt}}p{4.5cm}   % Col 3: Entrada
-    >{\RaggedRight\hspace{0pt}}p{4.5cm}   % Col 4: Salida
+\begin{longtable}{|
+    >{\Centering\hspace{0pt}}p{1.0cm}|     % Col 1: Paso
+    >{\RaggedRight\hspace{0pt}}p{3.5cm}|   % Col 2: Criterio
+    >{\RaggedRight\hspace{0pt}}p{5.9cm}|   % Col 3: Entrada
+    >{\RaggedRight\hspace{0pt}}p{4.5cm}|   % Col 4: Salida
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Proceso de estimación de SSP} \label{tab:proceso-SSP}                                                          \\
-    \toprule
+    \hline
     \textbf{Paso} & \textbf{Criterio}          & \textbf{Entrada}                      & \textbf{Salida}                    \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                 \\
-    \toprule
+    \hline
+    \multicolumn{4}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                 \\
+    \hline
     \textbf{Paso} & \textbf{Criterio}          & \textbf{Entrada}                      & \textbf{Salida}                    \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                         \\
+    \hline
+    \multicolumn{4}{|r|}{\textit{Continúa en la siguiente página...}}                                                         \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     1             & Identificar \textit{smell} & Registro de \textit{Community Smells} & Tipo específico confirmado         \\
-    2             & Evaluar severidad          & \textit{Health Score} y observación   & Leve / Moderada / Severa / Crítica \\
+    \hline
+    2             & Evaluar severidad          & \gls{health-score} y observación      & Leve / Moderada / Severa / Crítica \\
+    \hline
     3             & Evaluar complejidad        & Alcance, facilitación y sesiones      & Baja (+0) / Media (+1) / Alta (+2) \\
 \end{longtable}
 \endgroup
@@ -108,38 +116,43 @@ La estimación SSP sigue un proceso de tres pasos: identificar el Olor Comunitar
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{2.5cm}   % Col 1: Severidad
-    >{\RaggedRight\hspace{0pt}}p{8.5cm}   % Col 2: Indicadores
-    >{\Centering\hspace{0pt}}p{2.5cm}     % Col 3: SSP base
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{2.5cm}|   % Col 1: Severidad
+    >{\RaggedRight\hspace{0pt}}p{10.2cm}|   % Col 2: Indicadores
+    >{\Centering\hspace{0pt}}p{2.5cm}|     % Col 3: SSP base
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Niveles de severidad y SSP base} \label{tab:severidad-SSP}                                     \\
-    \toprule
+    \hline
     \textbf{Severidad} & \textbf{Indicadores}                                           & \textbf{SSP base} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                 \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                 \\
+    \hline
     \textbf{Severidad} & \textbf{Indicadores}                                           & \textbf{SSP base} \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                         \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                         \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     Leve               & Afecta 1--2 personas ocasionalmente; no impacta la entrega     & 1--2              \\
+    \hline
     Moderada           & Afecta 3--5 personas; retrasos menores; tensión visible        & 3--5              \\
+    \hline
     Severa             & Afecta al equipo entero; riesgo de rotación; calidad degradada & 5--8              \\
+    \hline
     Crítica            & Equipo disfuncional; rotación inminente; proyecto en riesgo    & 8--13             \\
 \end{longtable}
 \endgroup
@@ -161,43 +174,52 @@ La estimación SSP sigue un proceso de tres pasos: identificar el Olor Comunitar
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{4.0cm}   % Col 1: Community smell
-    >{\Centering\hspace{0pt}}p{2.5cm}     % Col 2: Severidad típica
-    >{\RaggedRight\hspace{0pt}}p{5.0cm}   % Col 3: Intervención típica
-    >{\Centering\hspace{0pt}}p{1.5cm}     % Col 4: SSP
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{4.0cm}|   % Col 1: Community smell
+    >{\Centering\hspace{0pt}}p{2.5cm}|     % Col 2: Severidad típica
+    >{\RaggedRight\hspace{0pt}}p{6.9cm}|   % Col 3: Intervención típica
+    >{\Centering\hspace{0pt}}p{1.5cm}|     % Col 4: SSP
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-    \caption{Referencia rápida de estimación SSP por Olor Comunitario} \label{tab:referencia-SSP}                                \\
-    \toprule
+    \caption{Referencia rápida de estimación SSP por olor comunitario} \label{tab:referencia-SSP}                                \\
+    \hline
     \textbf{\textit{Community smell}} & \textbf{Severidad típica} & \textbf{Intervención típica}                  & \textbf{SSP} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                      \\
-    \toprule
+    \hline
+    \multicolumn{4}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                      \\
+    \hline
     \textbf{\textit{Community smell}} & \textbf{Severidad típica} & \textbf{Intervención típica}                  & \textbf{SSP} \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                              \\
+    \hline
+    \multicolumn{4}{|r|}{\textit{Continúa en la siguiente página...}}                                                              \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     \textit{Radio Silence}            & Moderada                  & \textit{Workshop} y ajuste de proceso         & 3--5         \\
+    \hline
     \textit{Lone Wolf}                & Leve--Moderada            & Mediación y reintegración                     & 3--5         \\
+    \hline
     Conflicto interpersonal leve      & Leve                      & Mediación bilateral simple                    & 3            \\
+    \hline
     Conflicto interpersonal severo    & Severa                    & Mediación intensiva y seguimiento             & 8            \\
+    \hline
     \textit{Burnout} leve / moderado  & Leve--Moderada            & Conversación y ajuste de carga                & 2--5         \\
+    \hline
     \textit{Burnout} severo           & Severa--Crítica           & Intervención de crisis                        & 13           \\
+    \hline
     Inseguridad psicológica           & Moderada--Severa          & \textit{Workshop} y retrospectiva facilitada  & 5--8         \\
+    \hline
     \textit{Knowledge hoarding}       & Moderada                  & Documentación y transferencia de conocimiento & 3--5         \\
 \end{longtable}
 \endgroup
@@ -213,39 +235,42 @@ El principio fundamental es: \textbf{1 SSP $\approx$ 1 SP}. Ambos tipos de ítem
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{3.0cm}   % Col 1: Tipo
-    >{\RaggedRight\hspace{0pt}}p{7.0cm}   % Col 2: Ítems ejemplo
-    >{\Centering\hspace{0pt}}p{2.0cm}     % Col 3: Puntos
-    >{\Centering\hspace{0pt}}p{2.0cm}     % Col 4: Total
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{3.0cm}|   % Col 1: Tipo
+    >{\RaggedRight\hspace{0pt}}p{7.9cm}|   % Col 2: Ítems ejemplo
+    >{\Centering\hspace{0pt}}p{2.0cm}|     % Col 3: Puntos
+    >{\Centering\hspace{0pt}}p{2.0cm}|     % Col 4: Total
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Ejemplo de cálculo de capacidad combinada} \label{tab:capacidad-combinada}                                                                              \\
-    \toprule
+    \hline
     \textbf{Tipo}                          & \textbf{Ítems ejemplo}                                                           & \textbf{Puntos} & \textbf{Total}     \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                          \\
-    \toprule
+    \hline
+    \multicolumn{4}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                          \\
+    \hline
     \textbf{Tipo}                          & \textbf{Ítems ejemplo}                                                           & \textbf{Puntos} & \textbf{Total}     \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                                                                  \\
+    \hline
+    \multicolumn{4}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                  \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     Técnico                                & \textit{Feature} A (13 SP) + \textit{Feature} B (8 SP) + \textit{Bug fix} (5 SP) & 26 SP           &                    \\
+    \hline
     Social                                 & Mediación de conflicto (5 SSP) + \textit{daily} asíncrona (3 SSP)                & 8 SSP           &                    \\
-    \midrule
+    \hline
     \textbf{Capacidad del \textit{Sprint}} &                                                                                  &                 & \textbf{34 puntos} \\
 \end{longtable}
 \endgroup

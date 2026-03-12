@@ -14,55 +14,74 @@ La matriz presenta las combinaciones más comunes de valores altos (7--10), medi
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\Centering\hspace{0pt}}p{0.8cm}     % Col 1: #
-    >{\Centering\hspace{0pt}}p{1.5cm}     % Col 2: Valor
-    >{\Centering\hspace{0pt}}p{1.5cm}     % Col 3: Técnica
-    >{\Centering\hspace{0pt}}p{1.5cm}     % Col 4: Social
-    >{\Centering\hspace{0pt}}p{2.2cm}     % Col 5: Prioridad
-    >{\RaggedRight\hspace{0pt}}p{5.5cm}   % Col 6: Decisión típica
+\begin{longtable}{|
+    >{\Centering\hspace{0pt}}p{0.8cm}|     % Col 1: #
+    >{\Centering\hspace{0pt}}p{1.5cm}|     % Col 2: Valor
+    >{\Centering\hspace{0pt}}p{1.5cm}|     % Col 3: Técnica
+    >{\Centering\hspace{0pt}}p{1.5cm}|     % Col 4: Social
+    >{\Centering\hspace{0pt}}p{2.2cm}|     % Col 5: Prioridad
+    >{\RaggedRight\hspace{0pt}}p{6.7cm}|   % Col 6: Decisión típica
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Matriz de 18 escenarios de priorización} \label{tab:matriz-priorizacion}                                                                                   \\
-    \toprule
+    \hline
     \textbf{\#} & \textbf{Valor} & \textbf{Técnica} & \textbf{Social} & \textbf{Prioridad}  & \textbf{Decisión típica}                                                  \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{6}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                             \\
-    \toprule
+    \hline
+    \multicolumn{6}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                           \\
+    \hline
     \textbf{\#} & \textbf{Valor} & \textbf{Técnica} & \textbf{Social} & \textbf{Prioridad}  & \textbf{Decisión típica}                                                  \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{6}{r}{\textit{Continúa en la siguiente página...}}                                                                                                     \\
+    \hline
+    \multicolumn{6}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                   \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     1           & Alto           & Alto             & Bajo            & \textbf{Máxima}     & Entregar inmediatamente. El equipo sano puede absorber la complejidad.    \\
+    \hline
     2           & Alto           & Bajo             & Alto            & \textbf{Alta}       & Mitigar lo social primero. Un equipo en crisis no entrega calidad.        \\
+    \hline
     3           & Bajo           & Alto             & Alto            & \textbf{Alta}       & Resolver ambos en paralelo. La urgencia técnica y social no compiten.     \\
+    \hline
     4           & Alto           & Alto             & Alto            & \textbf{Escalar}    & Crisis total. Escalar al CTO para una decisión organizacional.            \\
+    \hline
     5           & Alto           & Medio            & Medio           & \textbf{Alta}       & Entregar con precaución. Monitorear la salud durante la implementación.   \\
+    \hline
     6           & Medio          & Alto             & Medio           & \textbf{Alta}       & Resolver lo técnico primero. La deuda técnica bloquea el progreso.        \\
+    \hline
     7           & Medio          & Medio            & Alto            & \textbf{Alta}       & Resolver lo social primero. Un equipo en crisis contamina todo lo demás.  \\
+    \hline
     8           & Alto           & Bajo             & Alto            & \textbf{Media-Alta} & Balancear: MVP de la \textit{feature} más intervención social.            \\
+    \hline
     9           & Bajo           & Alto             & Bajo            & \textbf{Media}      & Resolver lo técnico. Importante aunque no genere valor inmediato.         \\
+    \hline
     10          & Bajo           & Bajo             & Alto            & \textbf{Media}      & Resolver lo social. La salud del equipo es un prerrequisito.              \\
+    \hline
     11          & Alto           & Alto             & Bajo            & \textbf{Media-Alta} & Entregar. Equipo sano; aprovechar la capacidad disponible.                \\
+    \hline
     12          & Bajo           & Bajo             & Bajo            & \textbf{Baja}       & Posponer. No hay urgencias ni impacto inmediato.                          \\
+    \hline
     13          & Alto           & Bajo             & Bajo            & \textbf{Alta}       & Entregar. \textit{Feature} valiosa sin impedimentos relevantes.           \\
+    \hline
     14          & Bajo           & Alto             & Bajo            & \textbf{Media}      & Resolver lo técnico. Deuda urgente aunque el valor sea bajo.              \\
+    \hline
     15          & Bajo           & Bajo             & Alto            & \textbf{Media}      & Resolver lo social. El equipo necesita atención prioritaria.              \\
+    \hline
     16          & Medio          & Medio            & Medio           & \textbf{Media}      & Caso por caso. Todo es moderado; decidir según el contexto.               \\
+    \hline
     17          & Alto           & Bajo             & Alto            & \textbf{Alta}       & \textit{Feature} y social en paralelo. MVP mientras se atiende al equipo. \\
+    \hline
     18          & Alto           & Alto             & Bajo            & \textbf{Alta}       & Resolver lo técnico primero. Bug crítico bloqueante; equipo sano.         \\
 \end{longtable}
 \endgroup
@@ -80,50 +99,55 @@ La priorización ocurre durante la \textit{Social Sprint Planning} (15--20~min, 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{3.0cm}   % Col 1: Rol
-    >{\RaggedRight\hspace{0pt}}p{3.0cm}   % Col 2: Dimensión
-    >{\RaggedRight\hspace{0pt}}p{8.0cm}   % Col 3: Autoridad
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{3.0cm}|   % Col 1: Rol
+    >{\RaggedRight\hspace{0pt}}p{3.0cm}|   % Col 2: Dimensión
+    >{\RaggedRight\hspace{0pt}}p{9.2cm}|   % Col 3: Autoridad
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-    \caption{Autoridad de cada rol en la priorización} \label{tab:autoridad-roles}                         \\
-    \toprule
-    \textbf{Rol}  & \textbf{Dimensión} & \textbf{Autoridad}                                                \\
-    \midrule
+    \caption{Autoridad de cada rol en la priorización} \label{tab:autoridad-roles}                              \\
+    \hline
+    \textbf{Rol}       & \textbf{Dimensión} & \textbf{Autoridad}                                                \\
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                \\
-    \toprule
-    \textbf{Rol}  & \textbf{Dimensión} & \textbf{Autoridad}                                                \\
-    \midrule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                   \\
+    \hline
+    \textbf{Rol}       & \textbf{Dimensión} & \textbf{Autoridad}                                                \\
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                        \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                           \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
-    Product Owner & Valor de Negocio   & Decide \textbf{qué} entregar al cliente.                          \\
-    Scrum Master  & Proceso            & Decide \textbf{cómo} trabajar. Protege el marco Scrum.            \\
-    Social Guide  & Salud Social       & Decide \textbf{cuándo} el equipo puede comprometerse.             \\
-    Dev Team      & Urgencia Técnica   & Decide \textbf{cuánto} es factible. Advierte sobre deuda técnica. \\
+    Product Owner      & Valor de Negocio   & Decide \textbf{qué} entregar al cliente.                          \\
+    \hline
+    Scrum Master       & Proceso            & Decide \textbf{cómo} trabajar. Protege el marco \gls{scrum}.      \\
+    \hline
+    \gls{social-guide} & Salud Social       & Decide \textbf{cuándo} el equipo puede comprometerse.             \\
+    \hline
+    Dev Team           & Urgencia Técnica   & Decide \textbf{cuánto} es factible. Advierte sobre deuda técnica. \\
 \end{longtable}
 \endgroup
 
 \subsection{Protocolo de priorización paso a paso}
 
 \begin{description}[nosep, leftmargin=1.2cm, style=nextline]
-    \item[Paso 1: Estado del equipo (5 min)] El Social Guide comparte el \textit{Health Score}, las dimensiones problemáticas, los \gls{community-smells} activos, la tendencia y la capacidad estimada (Tabla~\ref{tab:diagnostico-social-guide}). Si el HS es crítico, los pasos siguientes se ajustan.
+    \item[Paso 1: Estado del equipo (5 min)] El Social Guide comparte el \gls{health-score}, las dimensiones problemáticas, los \gls{community-smells} activos, la tendencia y la capacidad estimada (Tabla~\ref{tab:diagnostico-social-guide}). Si el HS es crítico, los pasos siguientes se ajustan.
 
     \item[Paso 2: \textit{Features} priorizadas (5 min)] El PO presenta los ítems de mayor valor (Tabla~\ref{tab:features-priorizadas-valor}), proponiendo más de los que caben en el \textit{Sprint} para permitir flexibilidad.
 
-    \item[Paso 3: Ítems sociales (5 min)] Si el HS lo indica, el SG propone intervenciones con estimación en \textit{Social Story Points} (Tabla~\ref{tab:propuesta-social-guide}). Si el HS es saludable ($\geq 8$), no se requieren ítems sociales.
+    \item[Paso 3: Ítems sociales (5 min)] Si el HS lo indica, el SG propone intervenciones con estimación en \glspl{social-story-points} (Tabla~\ref{tab:propuesta-social-guide}). Si el HS es saludable ($\geq 8$), no se requieren ítems sociales.
 
     \item[Paso 4: Discusión colaborativa (5--10 min)] Los cuatro roles dialogan para llegar a un \textit{Sprint Backlog} consensuado (Tabla~\ref{tab:decision-sprint-dialogo}).
 \end{description}
@@ -135,39 +159,45 @@ La priorización ocurre durante la \textit{Social Sprint Planning} (15--20~min, 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{4.5cm}   % Col 1: Indicador
-    >{\RaggedRight\hspace{0pt}}p{9.0cm}   % Col 2: Estado
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{4.5cm}|   % Col 1: Indicador
+    >{\RaggedRight\hspace{0pt}}p{11.0cm}|  % Col 2: Estado
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-    \caption{Ejemplo de diagnóstico del Social Guide} \label{tab:diagnostico-social-guide}  \\
-    \toprule
-    \textbf{Indicador}             & \textbf{Estado}                                        \\
-    \midrule
+    \caption{Ejemplo de diagnóstico del Social Guide} \label{tab:diagnostico-social-guide} \\
+    \hline
+    \textbf{Indicador}           & \textbf{Estado}                                         \\
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                 \\
-    \toprule
-    \textbf{Indicador}             & \textbf{Estado}                                        \\
-    \midrule
+    \hline
+    \multicolumn{2}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}              \\
+    \hline
+    \textbf{Indicador}           & \textbf{Estado}                                         \\
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                         \\
+    \hline
+    \multicolumn{2}{|r|}{\textit{Continúa en la siguiente página...}}                      \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
-    \textit{Health Score} actual   & 6.2/10 (zona: en riesgo)                               \\
-    Dimensiones bajas              & Coraje (4.5), Foco (5.1)                               \\
-    \gls{community-smells} activos & \textit{Radio Silence} (moderado)                      \\
-    Tendencia                      & Mejorando (5.1 en el \textit{Sprint} anterior)         \\
-    Capacidad estimada             & $\approx$80~\% de la normal (32 SP vs.\ 40 SP típicos) \\
+    \textit{Health Score} actual & 6.2/10 (zona: en riesgo)                                \\
+    \hline
+    Dimensiones bajas            & Coraje (4.5), Foco (5.1)                                \\
+    \hline
+    Olores comunitarios activos  & \textit{Radio Silence} (moderado)                       \\
+    \hline
+    Tendencia                    & Mejorando (5.1 en el \textit{Sprint} anterior)          \\
+    \hline
+    Capacidad estimada           & $\approx$80~\% de la normal (32 SP vs.\ 40 SP típicos)  \\
 \end{longtable}
 \endgroup
 
@@ -178,39 +208,45 @@ La priorización ocurre durante la \textit{Social Sprint Planning} (15--20~min, 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\Centering\hspace{0pt}}p{1.0cm}     % Col 1: #
-    >{\RaggedRight\hspace{0pt}}p{9.0cm}   % Col 2: Feature
-    >{\Centering\hspace{0pt}}p{2.5cm}     % Col 3: Valor
+\begin{longtable}{|
+    >{\Centering\hspace{0pt}}p{1.0cm}|     % Col 1: #
+    >{\RaggedRight\hspace{0pt}}p{11.7cm}|  % Col 2: Feature
+    >{\Centering\hspace{0pt}}p{2.5cm}|     % Col 3: Valor
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Ejemplo de \textit{features} priorizadas por valor de negocio (PO)} \label{tab:features-priorizadas-valor} \\
-    \toprule
+    \hline
     \textbf{\#} & \textbf{\textit{Feature}}       & \textbf{Valor}                                                      \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                             \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                           \\
+    \hline
     \textbf{\#} & \textbf{\textit{Feature}}       & \textbf{Valor}                                                      \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                     \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                                   \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     1           & Integración con API de Pagos    & 9/10                                                                \\
+    \hline
     2           & \textit{Dashboard} de Analytics & 7/10                                                                \\
+    \hline
     3           & Notificaciones \textit{push}    & 8/10                                                                \\
+    \hline
     4           & Mejora de UX en \textit{login}  & 5/10                                                                \\
+    \hline
     5           & Exportar reportes a PDF         & 6/10                                                                \\
 \end{longtable}
 \endgroup
@@ -222,36 +258,39 @@ La priorización ocurre durante la \textit{Social Sprint Planning} (15--20~min, 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\Centering\hspace{0pt}}p{1.0cm}     % Col 1: #
-    >{\RaggedRight\hspace{0pt}}p{8.5cm}   % Col 2: Intervención propuesta
-    >{\Centering\hspace{0pt}}p{3.0cm}     % Col 3: Esfuerzo (SSP)
+\begin{longtable}{|
+    >{\Centering\hspace{0pt}}p{1.0cm}|     % Col 1: #
+    >{\RaggedRight\hspace{0pt}}p{11.2cm}|  % Col 2: Intervención propuesta
+    >{\Centering\hspace{0pt}}p{3.0cm}|     % Col 3: Esfuerzo (SSP)
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Ejemplo de propuesta de intervención del Social Guide (HS 6.2)} \label{tab:propuesta-social-guide} \\
-    \toprule
+    \hline
     \textbf{\#} & \textbf{Intervención propuesta}                        & \textbf{Esfuerzo (SSP)}              \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                     \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                   \\
+    \hline
     \textbf{\#} & \textbf{Intervención propuesta}                        & \textbf{Esfuerzo (SSP)}              \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                             \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                           \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     1           & Mediación Dev--QA para resolver \textit{Radio Silence} & 5                                    \\
+    \hline
     2           & Establecer protocolo de \textit{daily} asíncrona       & 3                                    \\
 \end{longtable}
 \endgroup
@@ -265,47 +304,52 @@ La priorización ocurre durante la \textit{Social Sprint Planning} (15--20~min, 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{7.0cm}   % Col 1: Ítem comprometido
-    >{\Centering\hspace{0pt}}p{3.0cm}     % Col 2: Tipo
-    >{\Centering\hspace{0pt}}p{3.0cm}     % Col 3: Esfuerzo
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{9.2cm}|   % Col 1: Ítem comprometido
+    >{\Centering\hspace{0pt}}p{3.0cm}|     % Col 2: Tipo
+    >{\Centering\hspace{0pt}}p{3.0cm}|     % Col 3: Esfuerzo
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Compromiso final del Sprint tras diálogo de priorización} \label{tab:decision-sprint-dialogo} \\
-    \toprule
+    \hline
     \textbf{Ítem comprometido}            & \textbf{Tipo}      & \textbf{Esfuerzo}                         \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                              \\
+    \hline
     \textbf{Ítem comprometido}            & \textbf{Tipo}      & \textbf{Esfuerzo}                         \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                        \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                      \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     Integración con API de Pagos          & Técnico            & 13 SP                                     \\
+    \hline
     Mediación Dev--QA                     & Social             & 5 SSP                                     \\
+    \hline
     \textit{Dashboard} de Analytics (MVP) & Técnico            & 8 SP                                      \\
+    \hline
     \textit{Daily} asíncrona              & Social             & 3 SSP                                     \\
-    \midrule
-    \multicolumn{2}{r}{\textbf{Total}}    & \textbf{29 puntos}                                             \\
+    \hline
+    \multicolumn{2}{|r|}{\textbf{Total}}  & \textbf{29 puntos}                                             \\
 \end{longtable}
 \endgroup
 
 \subsection{Conversión entre SSP y SP}
 
-SocialScrum establece una equivalencia aproximada: $1\;\text{SSP} \approx 1\;\text{SP}$. Ambos tipos de ítems consumen tiempo y atención del equipo y pueden sumarse para calcular la capacidad total del \textit{Sprint}. Cada equipo calibra esta equivalencia según su contexto. La tabla~\ref{tab:decision-sprint-dialogo} ilustra un ejemplo de compromiso final que combina ambos tipos de puntos.
+\gls{socialscrum} establece una equivalencia aproximada: $1\;\text{SSP} \approx 1\;\text{SP}$. Ambos tipos de ítems consumen tiempo y atención del equipo y pueden sumarse para calcular la capacidad total del \textit{Sprint}. Cada equipo calibra esta equivalencia según su contexto. La tabla~\ref{tab:decision-sprint-dialogo} ilustra un ejemplo de compromiso final que combina ambos tipos de puntos.
 
 \subsection{Protocolo de discrepancia}
 
@@ -327,38 +371,44 @@ Cuando PO, SG y SM no logran consenso, se activa un protocolo de resolución est
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{4.5cm}   % Col 1: Indicador
-    >{\RaggedRight\hspace{0pt}}p{9.0cm}   % Col 2: Estado
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{4.5cm}|   % Col 1: Indicador
+    >{\RaggedRight\hspace{0pt}}p{11.0cm}|  % Col 2: Estado
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Diagnóstico social inicial del equipo Alpha} \label{tab:diagnostico-alpha}         \\
-    \toprule
+    \hline
     \textbf{Indicador}        & \textbf{Estado}                                                 \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                     \\
-    \toprule
+    \hline
+    \multicolumn{2}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                   \\
+    \hline
     \textbf{Indicador}        & \textbf{Estado}                                                 \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                             \\
+    \hline
+    \multicolumn{2}{|r|}{\textit{Continúa en la siguiente página...}}                           \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     \textit{Health Score}     & 6.8/10 (zona en riesgo, límite superior)                        \\
+    \hline
     Dimensiones               & Apertura 7.2, Compromiso 7.0, Respeto 7.5, Foco 5.8, Coraje 6.5 \\
+    \hline
     \textit{Community smells} & \textit{Context Switching} (moderado)                           \\
+    \hline
     Tendencia                 & Estable (6.7 en el \textit{Sprint} anterior)                    \\
+    \hline
     Capacidad estimada        & 90~\% $\rightarrow$ 36 SP de 40 típicos                         \\
 \end{longtable}
 \endgroup
@@ -372,44 +422,52 @@ Tras el diálogo de priorización, el PO presentó 5 \textit{features} técnicas
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{7.0cm}   % Col 1: Ítem
-    >{\Centering\hspace{0pt}}p{3.0cm}     % Col 2: Tipo
-    >{\Centering\hspace{0pt}}p{3.0cm}     % Col 3: Puntos
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{9.2cm}|   % Col 1: Ítem
+    >{\Centering\hspace{0pt}}p{3.0cm}|     % Col 2: Tipo
+    >{\Centering\hspace{0pt}}p{3.0cm}|     % Col 3: Puntos
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
-    \caption{Sprint Backlog final --- Equipo Alpha} \label{tab:sprint-backlog-alpha}    \\
-    \toprule
-    \textbf{Ítem}                                   & \textbf{Tipo}   & \textbf{Puntos} \\
-    \midrule
+    \caption{Sprint Backlog final --- Equipo Alpha} \label{tab:sprint-backlog-alpha}      \\
+    \hline
+    \textbf{Ítem}                                     & \textbf{Tipo}   & \textbf{Puntos} \\
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}             \\
-    \toprule
-    \textbf{Ítem}                                   & \textbf{Tipo}   & \textbf{Puntos} \\
-    \midrule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}             \\
+    \hline
+    \textbf{Ítem}                                     & \textbf{Tipo}   & \textbf{Puntos} \\
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                     \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                     \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
-    Migración Auth                                  & Técnico         & 13 SP           \\
-    API Partners                                    & Técnico         & 8 SP            \\
-    Optimización de \textit{queries}                & Técnico         & 5 SP            \\
-    Mejora \textit{dashboard} admin                 & Técnico         & 5 SP            \\
-    \textit{Focus Fridays}                          & Social          & 3 SSP           \\
-    \midrule
-    \multicolumn{2}{r}{\textbf{Total comprometido}} & \textbf{34 pts}                   \\
-    \multicolumn{2}{r}{\textbf{Capacidad}}          & \textbf{36 SP}                    \\
-    \multicolumn{2}{r}{\textbf{Margen}}             & \textbf{2 SP}                     \\
+    Migración Auth                                    & Técnico         & 13 SP           \\
+    \hline
+    API Partners                                      & Técnico         & 8 SP            \\
+    \hline
+    Optimización de \textit{queries}                  & Técnico         & 5 SP            \\
+    \hline
+    Mejora \textit{dashboard} admin                   & Técnico         & 5 SP            \\
+    \hline
+    \textit{Focus Fridays}                            & Social          & 3 SSP           \\
+    \hline
+    \multicolumn{2}{|r|}{\textbf{Total comprometido}} & \textbf{34 pts}                   \\
+    \hline
+    \multicolumn{2}{|r|}{\textbf{Capacidad}}          & \textbf{36 SP}                    \\
+    \hline
+    \multicolumn{2}{|r|}{\textbf{Margen}}             & \textbf{2 SP}                     \\
 \end{longtable}
 \endgroup
 

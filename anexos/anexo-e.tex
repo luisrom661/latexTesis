@@ -1,7 +1,7 @@
 \chapter{Herramientas y Tecnología de Soporte para SocialScrum}
 \label{anexo:herramientas}
 
-Este anexo presenta las adaptaciones contextuales, herramientas tecnológicas y plantillas operacionales recomendadas para implementar SocialScrum en diversos entornos.
+Este anexo presenta las adaptaciones contextuales, herramientas tecnológicas y plantillas operacionales recomendadas para implementar \gls{socialscrum} en diversos entornos.
 
 \section{Adaptación contextual y escalabilidad}
 
@@ -18,27 +18,28 @@ La Tabla~\ref{tab:config-por-tamano} resume la configuración recomendada según
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{3.5cm}
-    >{\RaggedRight\hspace{0pt}}p{3.2cm}
-    >{\RaggedRight\hspace{0pt}}p{3.5cm}
-    >{\RaggedRight\hspace{0pt}}p{4.6cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{3.5cm}|
+    >{\RaggedRight\hspace{0pt}}p{3.2cm}|
+    >{\RaggedRight\hspace{0pt}}p{3.5cm}|
+    >{\RaggedRight\hspace{0pt}}p{4.6cm}|
     }
     \caption{Configuración de SocialScrum por tamaño de equipo.} \label{tab:config-por-tamano}                      \\
-    \toprule
+    \hline
     \textbf{Aspecto}     & \textbf{Pequeño (5--7)}   & \textbf{Mediano (8--15)}  & \textbf{Grande (16+)}            \\
-    \midrule \endfirsthead
-    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                         \\
-    \toprule
+    \hline \endfirsthead
+    \hline
+    \multicolumn{4}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                         \\
+    \hline
     \textbf{Aspecto}     & \textbf{Pequeño (5--7)}   & \textbf{Mediano (8--15)}  & \textbf{Grande (16+)}            \\
-    \midrule \endhead
-    \midrule \multicolumn{4}{r}{\textit{Continúa...}}                                                               \\ \endfoot
-    \bottomrule \endlastfoot
-    Social Guide         & Rol rotativo (10~\%)      & Dedicación 50~\%          & Dedicación 100~\%                \\ \midrule
-    Health Score         & 3 dimensiones             & 5 dimensiones             & 5 dim. + agregado organizacional \\ \midrule
-    Social Retrospective & 15 min integrada          & 30--45 min                & Por subgrupo + general           \\ \midrule
-    Sobrecarga/Sprint    & 2,0--2,5 h                & 21--29 h                  & 40+ h                            \\ \midrule
-    Auditoría            & SM informal               & Auditor externo semestral & Auditor externo semestral        \\ \midrule
+    \hline \endhead
+    \hline \multicolumn{4}{|r|}{\textit{Continúa...}}                                                               \\ \hline \endfoot
+    \hline \endlastfoot
+    \gls{social-guide}   & Rol rotativo (10~\%)      & Dedicación 50~\%          & Dedicación 100~\%                \\ \hline
+    \gls{health-score}   & 3 dimensiones             & 5 dimensiones             & 5 dim. + agregado organizacional \\ \hline
+    Social Retrospective & 15 min integrada          & 30--45 min                & Por subgrupo + general           \\ \hline
+    Sobrecarga/Sprint    & 2,0--2,5 h                & 21--29 h                  & 40+ h                            \\ \hline
+    Auditoría            & SM informal               & Auditor externo semestral & Auditor externo semestral        \\ \hline
     Escalamiento         & Si HS $<$ 4 por 3 Sprints & Si HS $<$ 4 por 2 Sprints & Siempre dedicado                 \\
 \end{longtable}
 \endgroup
@@ -56,27 +57,28 @@ El principio para equipos híbridos es \textit{remote-first}: todas las práctic
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{3.7cm}
-    >{\RaggedRight\hspace{0pt}}p{3.4cm}
-    >{\RaggedRight\hspace{0pt}}p{3.5cm}
-    >{\RaggedRight\hspace{0pt}}p{4.2cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{3.7cm}|
+    >{\RaggedRight\hspace{0pt}}p{3.4cm}|
+    >{\RaggedRight\hspace{0pt}}p{3.5cm}|
+    >{\RaggedRight\hspace{0pt}}p{4.2cm}|
     }
     \caption{Adaptaciones de SocialScrum según modalidad de trabajo.} \label{tab:adaptaciones-modalidad}                              \\
-    \toprule
+    \hline
     \textbf{Aspecto}     & \textbf{Co-localizado}           & \textbf{Distribuido}                  & \textbf{Híbrido}                \\
-    \midrule \endfirsthead
-    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                           \\
-    \toprule
+    \hline \endfirsthead
+    \hline
+    \multicolumn{4}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                           \\
+    \hline
     \textbf{Aspecto}     & \textbf{Co-localizado}           & \textbf{Distribuido}                  & \textbf{Híbrido}                \\
-    \midrule \endhead
-    \midrule \multicolumn{4}{r}{\textit{Continúa...}}                                                                                 \\ \endfoot
-    \bottomrule \endlastfoot
-    Social Daily Standup & Presencial, 15--18 min           & Asíncrono (Slack) o videollamada      & \textit{Remote-first}           \\ \midrule
-    Social Retrospective & Presencial con \textit{post-its} & Digital (Miro) + videollamada         & Digital para todos              \\ \midrule
-    Observación          & Directa y contextual             & Patrones en Slack y 1:1 virtuales     & Combinada (señales digitales)   \\ \midrule
-    Cohesión             & Almuerzos y eventos presenciales & \textit{Coffee chats} virtuales       & Ambas, priorizando inclusividad \\ \midrule
-    Mediación            & Preferentemente presencial       & Videollamada; presencial si necesario & Según contexto                  \\ \midrule
+    \hline \endhead
+    \hline \multicolumn{4}{|r|}{\textit{Continúa...}}                                                                                 \\ \hline \endfoot
+    \hline \endlastfoot
+    Social Daily Standup & Presencial, 15--18 min           & Asíncrono (Slack) o videollamada      & \textit{Remote-first}           \\ \hline
+    Social Retrospective & Presencial con \textit{post-its} & Digital (Miro) + videollamada         & Digital para todos              \\ \hline
+    Observación          & Directa y contextual             & Patrones en Slack y 1:1 virtuales     & Combinada (señales digitales)   \\ \hline
+    Cohesión             & Almuerzos y eventos presenciales & \textit{Coffee chats} virtuales       & Ambas, priorizando inclusividad \\ \hline
+    Mediación            & Preferentemente presencial       & Videollamada; presencial si necesario & Según contexto                  \\ \hline
     Health Score         & En la retrospectiva              & Formulario asíncrono + discusión      & Formulario asíncrono para todos \\
 \end{longtable}
 \endgroup
@@ -96,25 +98,26 @@ La configuración de SocialScrum en herramientas como Jira o Azure DevOps requie
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{3.5cm}
-    >{\RaggedRight\hspace{0pt}}p{3.5cm}
-    >{\RaggedRight\hspace{0pt}}p{8.2cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{3.5cm}|
+    >{\RaggedRight\hspace{0pt}}p{3.5cm}|
+    >{\RaggedRight\hspace{0pt}}p{8.2cm}|
     }
     \caption{Campos personalizados para SocialScrum en herramientas de gestión.} \label{tab:jira-custom-fields-anexo} \\
-    \toprule
+    \hline
     \textbf{Campo}        & \textbf{Tipo} & \textbf{Descripción}                                                      \\
-    \midrule \endfirsthead
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                           \\
-    \toprule
+    \hline \endfirsthead
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                           \\
+    \hline
     \textbf{Campo}        & \textbf{Tipo} & \textbf{Descripción}                                                      \\
-    \midrule \endhead
-    \bottomrule \endlastfoot
-    Item Type             & Select        & TECHNICAL / SOCIAL                                                        \\ \midrule
-    Social Points (SSP)   & Number        & Escala 1--13, solo para ítems sociales                                    \\ \midrule
-    Community Smell       & Select        & \textit{Radio Silence}, \textit{Conflict}, \textit{Burnout}, etc.         \\ \midrule
-    Health Dimension      & Multi-select  & Apertura, Respeto, Coraje, Compromiso, Foco                               \\ \midrule
-    Social Guide Assigned & User picker   & Responsable del ítem social                                               \\ \midrule
+    \hline \endhead
+    \hline \endlastfoot
+    Item Type             & Select        & TECHNICAL / SOCIAL                                                        \\ \hline
+    Social Points (SSP)   & Number        & Escala 1--13, solo para ítems sociales                                    \\ \hline
+    Community Smell       & Select        & \textit{Radio Silence}, \textit{Conflict}, \textit{Burnout}, etc.         \\ \hline
+    Health Dimension      & Multi-select  & Apertura, Respeto, Coraje, Compromiso, Foco                               \\ \hline
+    Social Guide Assigned & User picker   & Responsable del ítem social                                               \\ \hline
     Severity              & Select        & Leve, Moderada, Severa, Crítica                                           \\
 \end{longtable}
 \endgroup
@@ -146,22 +149,22 @@ Las siguientes plantillas estandarizan la captura de información en SocialScrum
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{3.8cm}
-    >{\RaggedRight\hspace{0pt}}p{3cm}
-    >{\RaggedRight\hspace{0pt}}p{8cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{3.8cm}|
+    >{\RaggedRight\hspace{0pt}}p{3cm}|
+    >{\RaggedRight\hspace{0pt}}p{8.4cm}|
     }
-    \caption{Resumen de plantillas operacionales de SocialScrum.} \label{tab:resumen-plantillas}                                                                                                                                                                    \\
-    \toprule
-    \textbf{Plantilla}        & \textbf{Frecuencia} & \textbf{Secciones principales}                                                                                                                                                                                \\
-    \midrule \endfirsthead
-    \bottomrule \endlastfoot
-    User Story Social         & Por ítem            & Contexto del \textit{smell} (tipo, severidad, detección, impacto en HS), criterios de aceptación, hipótesis de causa raíz (\gls{five-whys}), estrategia de intervención, confidencialidad, estimación en SSP. \\ \midrule
-    Mediación de conflictos   & Por conflicto       & Partes involucradas, contexto, sesiones 1:1, sesión conjunta, acuerdos firmados, métricas de éxito (encuesta $\geq 6$/10 + mejora en HS).                                                                     \\ \midrule
-    Health Score Dashboard    & Semanal             & 5 dimensiones con tendencia y \textit{smells} activos, promedio de HS, capacidad estimada, correlación con métricas técnicas (velocidad, defectos).                                                           \\ \midrule
-    Retrospectiva social      & Por Sprint          & Pre-retro (HS actual, ítems pendientes), análisis de \textit{smells}, nuevos temas, acciones propuestas con SSP, HS esperado para Sprint N+1, notas confidenciales.                                           \\ \midrule
-    Reporte para stakeholders & Mensual             & Resumen ejecutivo, tendencia de 3~meses, ítems completados, presupuesto social (\% de capacidad), riesgos/mitigaciones, recomendación (continuar/ajustar/escalar).                                            \\ \midrule
-    Registro de olores        & Continuo            & Identificación (Sprint, evento, detector), definición (manifestación, causa raíz, tipo, severidad), acción tomada (ítem social, SSP, estrategia), resolución y post-mortem.                                   \\
+    \caption{Resumen de plantillas operacionales de SocialScrum.} \label{tab:resumen-plantillas}                                                                                                                                                                            \\
+    \hline
+    \textbf{Plantilla}                & \textbf{Frecuencia} & \textbf{Secciones principales}                                                                                                                                                                                \\
+    \hline \endfirsthead
+    \hline \endlastfoot
+    User Story Social                 & Por ítem            & Contexto del \textit{smell} (tipo, severidad, detección, impacto en HS), criterios de aceptación, hipótesis de causa raíz (\gls{five-whys}), estrategia de intervención, confidencialidad, estimación en SSP. \\ \hline
+    Mediación de conflictos           & Por conflicto       & Partes involucradas, contexto, sesiones 1:1, sesión conjunta, acuerdos firmados, métricas de éxito (encuesta $\geq 6$/10 + mejora en HS).                                                                     \\ \hline
+    Health Score Dashboard            & Semanal             & 5 dimensiones con tendencia y \textit{smells} activos, promedio de HS, capacidad estimada, correlación con métricas técnicas (velocidad, defectos).                                                           \\ \hline
+    Retrospectiva social              & Por Sprint          & Pre-retro (HS actual, ítems pendientes), análisis de \textit{smells}, nuevos temas, acciones propuestas con SSP, HS esperado para Sprint N+1, notas confidenciales.                                           \\ \hline
+    Reporte para \glspl{stakeholders} & Mensual             & Resumen ejecutivo, tendencia de 3~meses, ítems completados, presupuesto social (\% de capacidad), riesgos/mitigaciones, recomendación (continuar/ajustar/escalar).                                            \\ \hline
+    Registro de olores                & Continuo            & Identificación (Sprint, evento, detector), definición (manifestación, causa raíz, tipo, severidad), acción tomada (ítem social, SSP, estrategia), resolución y post-mortem.                                   \\
 \end{longtable}
 \endgroup
 
@@ -172,7 +175,7 @@ Cada \textit{User Story} social incluye un título con el formato \texttt{[SOCIA
 \begin{enumerate}[nosep]
     \item \textbf{Contexto del smell:} tipo, severidad (Leve/Moderada/Severa/Crítica), quién y cuándo lo detectó, manifestación observable (sin juicios de valor), personas y roles afectados, dimensión de HS afectada con \textit{score} actual y objetivo.
     \item \textbf{Criterios de aceptación:} mejora de HS en la dimensión objetivo, desaparición del comportamiento observable, satisfacción post-intervención $\geq 7$/10.
-    \item \textbf{Hipótesis de causa raíz:} aplicación de \gls{five-whys} sobre la manifestación.
+    \item \textbf{Hipótesis de causa raíz:} aplicación de los cinco porqués sobre la manifestación.
     \item \textbf{Estrategia de intervención:} tipo (facilitación, mediación, *coaching*, estructural o escalamiento), pasos propuestos y métricas de seguimiento.
     \item \textbf{Confidencialidad:} nivel (público/equipo/confidencial) y restricciones de acceso.
     \item \textbf{Estimación:} desglose en horas (diagnóstico, sesiones 1:1, facilitación grupal, seguimiento) convertido a SSP (1~SSP = 2~horas).
@@ -185,7 +188,7 @@ La plantilla de mediación es de confidencialidad alta (solo para el Social Guid
     \item \textbf{Partes involucradas:} identificación por iniciales/código y número de observadores afectados.
     \item \textbf{Contexto:} origen del conflicto, primera manifestación, eventos agravantes e impacto en la comunicación, colaboración y entregas.
     \item \textbf{Sesiones:} 1:1 con cada parte, sesión conjunta de mediación, documentación de acuerdos firmados y seguimiento programado.
-    \item \textbf{\textit{Definition of Done}:} proceso documentado, acuerdos consentidos y comunicados (sin detalles privados), seguimiento programado.
+    \item \textbf{\gls{definition-of-done}:} proceso documentado, acuerdos consentidos y comunicados (sin detalles privados), seguimiento programado.
     \item \textbf{Métricas de éxito:} encuesta a ambas partes con un resultado $\geq 6$/10 y mejora del HS en la dimensión afectada.
 \end{enumerate}
 
@@ -200,19 +203,19 @@ La Tabla~\ref{tab:alertas} presenta las alertas recomendadas para monitorear la 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{4cm}
-    >{\RaggedRight\hspace{0pt}}p{6.5cm}
-    >{\RaggedRight\hspace{0pt}}p{4.3cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{4cm}|
+    >{\RaggedRight\hspace{0pt}}p{6.9cm}|
+    >{\RaggedRight\hspace{0pt}}p{4.3cm}|
     }
     \caption{Alertas automatizadas para SocialScrum.} \label{tab:alertas}                                     \\
-    \toprule
+    \hline
     \textbf{Alerta}           & \textbf{Condición}                           & \textbf{Canal de notificación} \\
-    \midrule \endfirsthead
-    \bottomrule \endlastfoot
-    HS Crítico                & HS Promedio $< 4{,}0$                        & Slack + Email a CTO            \\ \midrule
-    Dimensión en caída        & Cualquier dim. baja $> 2$ puntos en 1 Sprint & Slack \#social-guide           \\ \midrule
-    Smell crítico sin asignar & Severity = Crítica en Backlog $> 48$~h       & Email a Social Guide           \\ \midrule
+    \hline \endfirsthead
+    \hline \endlastfoot
+    HS Crítico                & HS Promedio $< 4{,}0$                        & Slack + Email a CTO            \\ \hline
+    Dimensión en caída        & Cualquier dim. baja $> 2$ puntos en 1 Sprint & Slack \#social-guide           \\ \hline
+    Smell crítico sin asignar & Severity = Crítica en Backlog $> 48$~h       & Email a Social Guide           \\ \hline
     Capacidad social excedida & SSP en Sprint $> 20~\%$ de capacidad total   & Slack \#scrum-master           \\
 \end{longtable}
 \endgroup

@@ -3,16 +3,16 @@
 
 \setlength{\parindent}{0pt}
 
-\section{Guía para la presentación inicial de SocialScrum}
+\section{Guía para la presentación inicial de \gls{socialscrum}}
 
 \subsection{Estructura de la presentación (45 minutos)}
 
 La presentación contextualiza el modelo, alinea expectativas y asegura el apoyo necesario. Se divide en cuatro bloques:
 
 \begin{description}[nosep, leftmargin=1.2cm, style=nextline]
-    \item[Contexto y justificación (10 min)] Compartir evidencia del impacto de la dinámica social en el rendimiento: datos propios del equipo (rotación, velocidad, defectos) y evidencia investigativa sobre deuda social~\cite{tamburri2013socialdebt, saeeda2024nontechnicaldebt}. El objetivo es que todos entiendan el ``porqué'' antes del ``cómo''.
+    \item[Contexto y justificación (10 min)] Compartir evidencia del impacto de la dinámica social en el rendimiento: datos propios del equipo (rotación, velocidad, defectos) y evidencia investigativa sobre \gls{deuda-social}~\cite{tamburri2013socialdebt, saeeda2024nontechnicaldebt}. El objetivo es que todos entiendan el ``porqué'' antes del ``cómo''.
 
-    \item[Explicación del modelo (15 min)] Presentar roles (Social Guide, SM, PO), eventos adaptados (Daily, Planning, Review, Retrospective con componentes sociales) y artefactos nuevos (Social Product Backlog, Health Score, Registro de \textit{Smells}). Enfatizar que \textbf{SocialScrum NO agrega reuniones nuevas}: todo se integra a eventos existentes (Principio de No-Sobrecarga).
+    \item[Explicación del modelo (15 min)] Presentar roles (\gls{social-guide}, SM, PO), eventos adaptados (Daily, Planning, Review, Retrospective con componentes sociales) y artefactos nuevos (Social Product Backlog, \gls{health-score}, Registro de \textit{Smells}). Enfatizar que \textbf{SocialScrum NO agrega reuniones nuevas}: todo se integra a eventos existentes (Principio de No-Sobrecarga).
 
     \item[Salvaguardas éticas (10 min)] Explicar las protecciones: confidencialidad absoluta de información individual, separación total entre Health Score y evaluaciones de desempeño, estructura de reporte (SG reporta a CTO/SM, nunca a RR. HH.) y derecho de auditoría del equipo sobre cualquier reporte externo.
 
@@ -32,36 +32,36 @@ La Sección~\ref{sec:programa-capacitacion-sg} del Capítulo~\ref{chap:capitulo4
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{2.2cm}
-    >{\Centering\hspace{0pt}}p{1.5cm}
-    >{\RaggedRight\hspace{0pt}}p{7cm}
-    >{\RaggedRight\hspace{0pt}}p{4.5cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{2.2cm}|
+    >{\Centering\hspace{0pt}}p{1.2cm}|
+    >{\RaggedRight\hspace{0pt}}p{7cm}|
+    >{\RaggedRight\hspace{0pt}}p{4.5cm}|
     }
-    \caption{Programa de capacitación del Social Guide.} \label{tab:capacitacion-sg}                                           \\
-    \toprule
-    \textbf{Fase}                                               & \textbf{Horas} & \textbf{Contenido} & \textbf{Evaluación}    \\
-    \midrule \endfirsthead
-    \bottomrule \endlastfoot
+    \caption{Programa de capacitación del Social Guide.} \label{tab:capacitacion-sg}                                                 \\
+    \hline
+    \textbf{Fase}                                               & \textbf{Horas} & \textbf{Contenido} & \textbf{Evaluación}          \\
+    \hline \endfirsthead
+    \hline \endlastfoot
     1. Fundamentos teóricos (Sem.\ 1--2)                        & 8              &
     S1: \acrfull{tad} (operación en equipos, \textit{checklist}).
     S2: Confianza Mayer (diagnóstico, entrevista).
     S3: \gls{community-smells} (catálogo, registro).
     S4: Valores Scrum $\times$ \textit{smells}.                 &
-    Quiz 30~min, $\geq 80~\%$                                                                                                  \\ \midrule
+    Quiz 30~min, $\geq 80~\%$                                                                                                        \\ \hline
 
     2. Facilitación y mediación (Sem.\ 3--4)                    & 12             &
     S1--2: Retrospectivas sociales (protocolo 4 fases).
     S3--4: CNV (observación, sentimientos, necesidades, peticiones).
     S5--6: Conversaciones difíciles (validación, legitimación). &
-    Retrospectiva observada por SM + evaluador; rúbrica $\geq 3/5$ en seguridad psicológica, preguntas generativas y síntesis. \\ \midrule
+    Retrospectiva observada por SM + evaluador; rúbrica $\geq 3/5$ en \gls{seguridad-psicologica}, preguntas generativas y síntesis. \\ \hline
 
     3. Medición y análisis (Sem.\ 5--6)                         & 8              &
     S1: Health Score (dimensiones, cálculo).
     S2: Instrumentos (Likert, entrevistas, SNA).
     S3: Análisis cualitativo (codificación).
     S4: Generación de reporte.                                  &
-    Analizar 10 encuestas; producir HS + 3 \textit{smells} detectados.                                                         \\ \midrule
+    Analizar 10 encuestas; producir HS + 3 \textit{smells} detectados.                                                               \\ \hline
 
     4. Ética y salvaguardas (Sem.\ 2--4, intercalado)           & 12             &
     S1: Confidencialidad vs.\ reportable.
@@ -70,7 +70,7 @@ La Sección~\ref{sec:programa-capacitacion-sg} del Capítulo~\ref{chap:capitulo4
     S4: Teatro Social.
     S5: Casos éticos complejos (\textit{role-plays}).
     S6: Auditoría y responsabilidad.                            &
-    Cuestionario ético (50 preguntas); \textit{role-play} observado.                                                           \\
+    Cuestionario ético (50 preguntas); \textit{role-play} observado.                                                                 \\
 \end{longtable}
 \endgroup
 
@@ -93,18 +93,18 @@ El seguimiento es progresivo: supervisión semanal durante los primeros 2~meses,
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{4cm}
-    >{\RaggedRight\hspace{0pt}}p{11cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{4cm}|
+    >{\RaggedRight\hspace{0pt}}p{11.5cm}|
     }
     \caption{Tipos de preguntas sociales para el Daily.} \label{tab:preguntas-daily-social} \\
-    \toprule
+    \hline
     \textbf{Tipo}  & \textbf{Ejemplo de pregunta}                                           \\
-    \midrule \endfirsthead
-    \bottomrule \endlastfoot
-    Estado general & ``En una palabra, ¿cómo te sientes respecto al trabajo en equipo?''    \\ \midrule
-    Colaboración   & ``¿Hay algo que necesites de alguien y no estés recibiendo?''          \\ \midrule
-    Reconocimiento & ``¿Alguien te ayudó de forma que quieras reconocer?''                  \\ \midrule
+    \hline \endfirsthead
+    \hline \endlastfoot
+    Estado general & ``En una palabra, ¿cómo te sientes respecto al trabajo en equipo?''    \\ \hline
+    Colaboración   & ``¿Hay algo que necesites de alguien y no estés recibiendo?''          \\ \hline
+    Reconocimiento & ``¿Alguien te ayudó de forma que quieras reconocer?''                  \\ \hline
     Tensión        & ``¿Hay algo que te genere tensión y quieras mencionar?''               \\
 \end{longtable}
 \endgroup
@@ -118,19 +118,19 @@ El seguimiento es progresivo: supervisión semanal durante los primeros 2~meses,
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{3.5cm}
-    >{\Centering\hspace{0pt}}p{2cm}
-    >{\RaggedRight\hspace{0pt}}p{4cm}
-    >{\RaggedRight\hspace{0pt}}p{5.3cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{3.5cm}|
+    >{\Centering\hspace{0pt}}p{2cm}|
+    >{\RaggedRight\hspace{0pt}}p{4cm}|
+    >{\RaggedRight\hspace{0pt}}p{5.3cm}|
     }
     \caption{Ejemplo de registro de riesgos sociales del Sprint.} \label{tab:riesgos-sociales-sprint}                                                                  \\
-    \toprule
+    \hline
     \textbf{Riesgo identificado}                    & \textbf{Prob.} & \textbf{Impacto potencial}       & \textbf{Mitigación acordada}                                 \\
-    \midrule \endfirsthead
-    \bottomrule \endlastfoot
-    Conflicto entre Ana y Carlos en módulo de pagos & Alta           & Bloqueo de funcionalidad crítica & Sesión de alineación previa al trabajo conjunto.             \\ \midrule
-    Dependencia única de Miguel en backend          & Media          & Retraso significativo si ausente & \gls{pair-programming} 2~h/día con Laura para transferencia. \\ \midrule
+    \hline \endfirsthead
+    \hline \endlastfoot
+    Conflicto entre Ana y Carlos en módulo de pagos & Alta           & Bloqueo de funcionalidad crítica & Sesión de alineación previa al trabajo conjunto.             \\ \hline
+    Dependencia única de Miguel en backend          & Media          & Retraso significativo si ausente & \gls{pair-programming} 2~h/día con Laura para transferencia. \\ \hline
     Fatiga generalizada (HS 5,8)                    & Alta           & Reducción de velocidad 20--30~\% & Reducción del compromiso del Sprint a 38 puntos.             \\
 \end{longtable}
 \endgroup
@@ -146,19 +146,19 @@ El seguimiento es progresivo: supervisión semanal durante los primeros 2~meses,
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{4.5cm}
-    >{\Centering\hspace{0pt}}p{2.5cm}
-    >{\RaggedRight\hspace{0pt}}p{8cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{4.5cm}|
+    >{\Centering\hspace{0pt}}p{2.5cm}|
+    >{\RaggedRight\hspace{0pt}}p{8cm}|
     }
     \caption{Elementos de la evaluación de salud social.} \label{tab:elementos-evaluacion-salud}                           \\
-    \toprule
+    \hline
     \textbf{Elemento}                     & \textbf{Tiempo} & \textbf{Descripción}                                         \\
-    \midrule \endfirsthead
-    \bottomrule \endlastfoot
-    Health Score actual vs.\ anterior     & 2 min           & Comparación y explicación de cambios significativos.         \\ \midrule
-    \gls{community-smells} abordados      & 3 min           & Revisión de ítems sociales completados e impacto observable. \\ \midrule
-    Riesgos materializados vs.\ mitigados & 3 min           & Análisis del registro de riesgos del Sprint Planning.        \\ \midrule
+    \hline \endfirsthead
+    \hline \endlastfoot
+    Health Score actual vs.\ anterior     & 2 min           & Comparación y explicación de cambios significativos.         \\ \hline
+    Olores comunitarios abordados         & 3 min           & Revisión de ítems sociales completados e impacto observable. \\ \hline
+    Riesgos materializados vs.\ mitigados & 3 min           & Análisis del registro de riesgos del Sprint Planning.        \\ \hline
     Tendencias y proyección               & 2 min           & ¿La salud social mejora, empeora o se mantiene estable?      \\
 \end{longtable}
 \endgroup
@@ -170,14 +170,14 @@ El seguimiento es progresivo: supervisión semanal durante los primeros 2~meses,
 
     \item[Fase 2: Recolección de datos] Se utilizan cuatro cuadrantes sociales (colaboración positiva/problemática, comunicación efectiva/deficiente); cada persona escribe notas basadas en eventos concretos. Alternativa: línea de tiempo emocional del Sprint.
 
-    \item[Fase 3: Análisis de patrones] Selección de 2--3 temas prioritarios por votación por puntos. Análisis de causa raíz con \gls{five-whys} adaptado al contexto social. Redirigir señalamientos hacia condiciones sistémicas. Mapeo a \gls{community-smells} del catálogo.
+    \item[Fase 3: Análisis de patrones] Selección de 2--3 temas prioritarios por votación por puntos. Análisis de causa raíz con \gls{five-whys} adaptado al contexto social. Redirigir señalamientos hacia condiciones sistémicas. Mapeo a olores comunitarios del catálogo.
 
     \item[Fase 4: Generación de compromisos] Acciones SMART, estimación en SSP, priorización por severidad/esfuerzo. Formalización como ítems del Social Product Backlog (título, \textit{smell}, acción, responsable, métrica de éxito, estimación).
 \end{description}
 
 \subsubsection{Cierre y documentación}
 
-Resumen de compromisos (2~min), \textit{check-out} emocional (3~min), agradecimiento (1~min). En 24~horas, el SG publica un resumen interno (temas, causas raíz, acciones); los \textit{stakeholders} solo reciben información de alto nivel.
+Resumen de compromisos (2~min), \textit{check-out} emocional (3~min), agradecimiento (1~min). En 24~horas, el SG publica un resumen interno (temas, causas raíz, acciones); los \glspl{stakeholders} solo reciben información de alto nivel.
 
 \subsubsection{Frecuencia}
 
@@ -192,18 +192,18 @@ Dos modelos: (1)~\textbf{integrado} ---cada Retrospective incluye componentes t�
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{5.5cm}
-    >{\RaggedRight\hspace{0pt}}p{9.9cm}
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{5.5cm}|
+    >{\RaggedRight\hspace{0pt}}p{9.9cm}|
     }
     \caption{Manejo de situaciones difíciles en la Social Sprint Retrospective.} \label{tab:situaciones-dificiles-retro}                \\
-    \toprule
+    \hline
     \textbf{Situación}                   & \textbf{Respuesta del Social Guide}                                                          \\
-    \midrule \endfirsthead
-    \bottomrule \endlastfoot
-    Conflicto abierto entre dos personas & Contener, proponer conversación privada posterior y continuar con el resto.                  \\ \midrule
-    Silencio prolongado                  & Normalizar, ofrecer mecanismos anónimos; si persiste, cerrar y programar encuentros 1:1.     \\ \midrule
-    Expresión emocional intensa          & Validar la emoción, evitar presionar, ofrecer seguimiento posterior.                         \\ \midrule
+    \hline \endfirsthead
+    \hline \endlastfoot
+    Conflicto abierto entre dos personas & Contener, proponer conversación privada posterior y continuar con el resto.                  \\ \hline
+    Silencio prolongado                  & Normalizar, ofrecer mecanismos anónimos; si persiste, cerrar y programar encuentros 1:1.     \\ \hline
+    Expresión emocional intensa          & Validar la emoción, evitar presionar, ofrecer seguimiento posterior.                         \\ \hline
     Señalamiento de culpables            & Redirigir hacia condiciones sistémicas: ``¿Qué condiciones permitieron que esto ocurriera?'' \\
 \end{longtable}
 \endgroup

@@ -14,13 +14,13 @@
 \makeatother
 \label{chap:capitulo2}
 
-En este capítulo se presentan las bases conceptuales que sustentan la investigación, abordando los conceptos clave relacionados con la deuda social, la comunicación, colaboración y coordinación (3C), el compromiso organizacional, el síndrome de Burnout y el marco de trabajo Scrum. Estos conceptos son fundamentales para comprender el contexto en el que se desarrolla la aplicación de SocialScrum en equipos de desarrollo de software ágil.
+En este capítulo se presentan las bases conceptuales que sustentan la investigación y los trabajos relacionados identificados mediante una \acrfull{rsl}. En la primera sección se abordan los conceptos clave relacionados con la deuda social, el síndrome de Burnout, el marco de trabajo \gls{scrum} y la \gls{dsr}. En la segunda sección se describe el protocolo de investigación de la RSL, los hallazgos más relevantes y las brechas existentes que motivan la propuesta de \gls{socialscrum}.
 
 % ------- SECCIÓN 1: DEUDA SOCIAL EN EL DESARROLLO DE SOFTWARE -------
 \section{Marco teórico}
 \subsection{Deuda social en el desarrollo de software}
 
-La deuda social se describe como la acumulación de costos imprevistos, o potenciales costos, en proyectos de software, generando así un conjunto de decisiones sociotécnicas deficientes que resultan de procesos de desarrollo subóptimos \cite{caballero2022communitysmells}. Dicho de otro modo, a medida que se toman decisiones erróneas de manera constante, los efectos negativos de la deuda social en los equipos de desarrollo de software se vuelven más pronunciados, y mientras estas malas decisiones persistan, sus efectos se intensificarán con el tiempo \cite{caballero2021thesis}. Este concepto, que proviene de la sociología —donde originalmente se usaba para explicar cómo las obligaciones sociales pueden afectar las relaciones interpersonales— ha sido adoptado por los investigadores en ingeniería de software para describir fenómenos similares dentro de los equipos de desarrollo y sus organizaciones \cite{caballero2022communitysmells}.
+La \gls{deuda-social} se describe como la acumulación de costos imprevistos, o potenciales costos, en proyectos de software, generando así un conjunto de decisiones sociotécnicas deficientes que resultan de procesos de desarrollo subóptimos \cite{caballero2022communitysmells}. Dicho de otro modo, a medida que se toman decisiones erróneas de manera constante, los efectos negativos de la deuda social en los equipos de desarrollo de software se vuelven más pronunciados, y mientras estas malas decisiones persistan, sus efectos se intensificarán con el tiempo \cite{caballero2021thesis}. Este concepto, que proviene de la sociología —donde originalmente se usaba para explicar cómo las obligaciones sociales pueden afectar las relaciones interpersonales— ha sido adoptado por los investigadores en ingeniería de software para describir fenómenos similares dentro de los equipos de desarrollo y sus organizaciones \cite{caballero2022communitysmells}.
 
 \subsubsection{Analogía y distinción con la deuda técnica}
 La deuda social es, en muchos sentidos, análoga a la deuda técnica \cite{tamburri2015insights}. Ambas representan el estado de las organizaciones de software como resultado de decisiones acumuladas —que, si bien pueden ofrecer beneficios a corto plazo— generan un ``interés'' que se manifiesta como costos adicionales a medio y largo plazo \cite{martini2019agiledebt}. No obstante, existe una diferencia fundamental:
@@ -30,7 +30,7 @@ La deuda social es, en muchos sentidos, análoga a la deuda técnica \cite{tambu
 \end{itemize}
 
 \subsubsection{Community smells (olores comunitarios)}
-La acumulación de deuda social se inicia con una o más decisiones sociotécnicas equivocadas \cite{caballero2022communitysmells}. La presencia de \gls{community-smells} es un indicador clave de que algo no funciona correctamente dentro de los equipos \cite{caballero2022communitysmells}. Estos \gls{community-smells} son, en esencia, antipatrones sociotécnicos \cite{caballero2022communitysmells}, definidos como ``conjuntos de circunstancias organizacionales y sociales, con relaciones causales implícitas’’ \cite{caballero2022communitysmells}, \cite{tamburri2015insights}. Cuando estos \gls{community-smells} persisten, se genera una acumulación de deuda social \cite{caballero2022communitysmells}. Las fuentes identificadas de estos \gls{community-smells} son diversas y se manifiestan a través de modelos de causa y efecto, por ejemplo:
+La acumulación de deuda social se inicia con una o más decisiones sociotécnicas equivocadas \cite{caballero2022communitysmells}. La presencia de \gls{community-smells} es un indicador clave de que algo no funciona correctamente dentro de los equipos \cite{caballero2022communitysmells}. Estos olores comunitarios son, en esencia, antipatrones sociotécnicos \cite{caballero2022communitysmells}, definidos como ``conjuntos de circunstancias organizacionales y sociales, con relaciones causales implícitas’’ \cite{caballero2022communitysmells}, \cite{tamburri2015insights}. Cuando estos olores comunitarios persisten, se genera una acumulación de deuda social \cite{caballero2022communitysmells}. Las fuentes identificadas de estos olores comunitarios son diversas y se manifiestan a través de modelos de causa y efecto, por ejemplo:
 \begin{itemize}
     \item Decisiones inadecuadas de gestión de la información que resultan en una arquitectura por ósmosis, donde los desarrolladores no tienen acceso a información arquitectónica clave, lo que lleva a la frustración y al desperdicio de tiempo \cite{caballero2022communitysmells}.
     \item Problemas de coordinación de tareas en equipos aislados, conocidos como \gls{cs-org-silo}, que dificultan la comunicación y la cooperación efectiva \cite{caballero2022communitysmells}.
@@ -49,13 +49,13 @@ La deuda social tiene un impacto profundo y multifacético en los equipos de des
 \end{itemize}
 
 \subsubsection{Desafíos en la medición y gestión de la deuda social}
-Pese a su clara importancia, los investigadores aún enfrentan el desafío de expresar los efectos de la deuda social en términos monetarios precisos \cite{caballero2022communitysmells}. Aunque marcos como DAHLIA \cite{caballero2022communitysmells}, \cite{tamburri2019software} han intentado cuantificar la deuda social, principalmente en relación con la ininteligibilidad arquitectónica, se requiere más investigación empírica para generalizar estas medidas a la vasta gama de \gls{community-smells} \cite{caballero2022communitysmells}. Por lo tanto, las organizaciones necesitan abordar las decisiones sociotécnicas deficientes y ``saldar'' esta deuda social a través de estrategias de gestión que incluyen enfoques organizacionales, marcos, modelos, herramientas y directrices \cite{caballero2022communitysmells}.
+Pese a su clara importancia, los investigadores aún enfrentan el desafío de expresar los efectos de la deuda social en términos monetarios precisos \cite{caballero2022communitysmells}. Aunque marcos como DAHLIA \cite{caballero2022communitysmells}, \cite{tamburri2019software} han intentado cuantificar la deuda social, principalmente en relación con la ininteligibilidad arquitectónica, se requiere más investigación empírica para generalizar estas medidas a la vasta gama de olores comunitarios \cite{caballero2022communitysmells}. Por lo tanto, las organizaciones necesitan abordar las decisiones sociotécnicas deficientes y ``saldar'' esta deuda social a través de estrategias de gestión que incluyen enfoques organizacionales, marcos, modelos, herramientas y directrices \cite{caballero2022communitysmells}.
 
 % ------- SECCIÓN 2: SÍNDROME DE BURNOUT -------
 
 \subsection{Síndrome de Burnout}
 
-El Síndrome de Burnout, descrito inicialmente en 1974 por el psicólogo Herbert Freudenberger \cite{tulili2022burnout}, es un síndrome relacionado con el trabajo que se manifiesta como agotamiento emocional, despersonalización, sobrecarga laboral y una percepción de escasez de logros personales \cite{tulili2022burnout}. Como bien señalan las investigaciones, su alcance trasciende ámbitos específicos —arquitectura, sector educativo, administración pública o ventas— \cite{tulili2022burnout} para manifestarse como un fenómeno epidémico en entornos STEM (Science, Technology, Engineering y Mathematics). Dicho de otro modo, su omnipresencia y sus repercusiones son un factor crítico que obstaculiza el avance profesional y subyace al estrés laboral en los diversos campos en general \cite{tulili2022burnout}.
+El Síndrome de \Gls{burnout}, descrito inicialmente en 1974 por el psicólogo Herbert Freudenberger \cite{tulili2022burnout}, es un síndrome relacionado con el trabajo que se manifiesta como agotamiento emocional, despersonalización, sobrecarga laboral y una percepción de escasez de logros personales \cite{tulili2022burnout}. Como bien señalan las investigaciones, su alcance trasciende ámbitos específicos —arquitectura, sector educativo, administración pública o ventas— \cite{tulili2022burnout} para manifestarse como un fenómeno epidémico en entornos STEM (Science, Technology, Engineering y Mathematics). Dicho de otro modo, su omnipresencia y sus repercusiones son un factor crítico que obstaculiza el avance profesional y subyace al estrés laboral en los diversos campos en general \cite{tulili2022burnout}.
 En la ingeniería de software (SE) y, sobre todo con respecto a la deuda social, el burnout no es una excepción. De hecho, informes recientes, especialmente tras la pandemia de COVID-19, han puesto de manifiesto que más del 80~\% de los desarrolladores encuestados han experimentado o están experimentando alguna forma de burnout \cite{tulili2022burnout}. La Organización Mundial de la Salud (OMS) ha clasificado el burnout como un fenómeno ocupacional en las ediciones 10ª y 11ª de la Clasificación Internacional de Enfermedades (ICD-10, ICD-11), lo que intensifica su gravedad y el reconocimiento de su impacto en la salud mental en el ámbito laboral \cite{tulili2022burnout}.
 Los estudios han explorado a fondo las causas y consecuencias del burnout entre los equipos de desarrollo. Las consecuencias fundamentales reportadas del burnout incluyen:
 \begin{itemize}
@@ -81,49 +81,14 @@ Scrum es un marco de trabajo ligero que ayuda a las personas, equipos y organiza
 
 Su arquitectura se basa en equipos reducidos y autogestionados que operan mediante ciclos iterativos denominados \textit{Sprints}, con una duración máxima de un mes, priorizando la entrega incremental de valor. A diferencia de otras metodologías, Scrum no prescribe herramientas técnicas específicas; su esencia radica en proveer un esqueleto mínimo que catalice la colaboración y la mejora progresiva \cite{takeuchi1986new}.
 
-\paragraph{Pilares empíricos.} El núcleo operativo de Scrum reside en la tríada de transparencia, inspección y adaptación \cite{schwaber2020scrum}. La \textit{transparencia} requiere que los aspectos significativos del proceso sean visibles para los responsables del resultado. La \textit{inspección} implica que los artefactos y el progreso hacia los objetivos se examinen con frecuencia para detectar variaciones indeseadas. La \textit{adaptación} demanda que, cuando se detectan desviaciones, el proceso o el producto se ajusten lo antes posible.
-
-\paragraph{Valores.} La Scrum Guide 2020 establece cinco valores fundamentales: \textit{compromiso}, \textit{enfoque}, \textit{apertura}, \textit{respeto} y \textit{coraje} \cite{schwaber2020scrum}. Estos valores proporcionan la base cultural sobre la cual los pilares empíricos pueden funcionar y son especialmente relevantes para esta investigación, ya que SocialScrum los extiende para abordar la dimensión social del equipo (ver Capítulo~\ref{chap:capitulo3}).
-
-\paragraph{Roles.} En Scrum, tres responsabilidades vertebran su estructura \cite{schwaber2020scrum}:
-
-\begin{itemize}[nosep]
-    \item \textbf{Product Owner:} responsable de maximizar el valor del producto y gestionar el Product Backlog.
-    \item \textbf{Scrum Master:} responsable de la efectividad del Scrum Team, facilitando los procesos y eliminando impedimentos.
-    \item \textbf{Developers:} profesionales que crean cualquier aspecto del Incremento utilizable en cada Sprint.
-\end{itemize}
-
-La Scrum Guide 2020 enfatiza que el Scrum Team es una unidad cohesionada sin sub-equipos ni jerarquías, con un tamaño recomendado de 10 o menos personas \cite{schwaber2020scrum}.
-
-\paragraph{Eventos.} Scrum define cinco eventos formales que crean regularidad y minimizan la necesidad de reuniones no definidas \cite{schwaber2020scrum}:
-
-\begin{itemize}[nosep]
-    \item \textbf{Sprint:} contenedor de todos los demás eventos; ciclo de trabajo con duración fija (1--4 semanas).
-    \item \textbf{Sprint Planning:} sesión donde el equipo define el objetivo del Sprint y selecciona los elementos del Product Backlog a trabajar.
-    \item \textbf{Daily Scrum:} reunión diaria de 15 minutos (máximo) donde los Developers inspeccionan el progreso hacia el Sprint Goal y adaptan el Sprint Backlog.
-    \item \textbf{Sprint Review:} inspección del Incremento resultante con los stakeholders para adaptar el Product Backlog.
-    \item \textbf{Sprint Retrospective:} espacio para que el Scrum Team reflexione sobre su forma de trabajar e identifique mejoras para el próximo Sprint.
-\end{itemize}
-
-\paragraph{Artefactos.} Scrum utiliza tres artefactos principales, cada uno con un compromiso asociado que proporciona transparencia y foco \cite{schwaber2020scrum}:
-
-\begin{itemize}[nosep]
-    \item \textbf{Product Backlog} (compromiso: Product Goal): lista ordenada de todo lo necesario para mejorar el producto.
-    \item \textbf{Sprint Backlog} (compromiso: Sprint Goal): conjunto de elementos seleccionados para el Sprint más el plan para entregarlos.
-    \item \textbf{Incremento} (compromiso: Definition of Done): suma de todos los elementos completados que cumplen la Definición de Terminado.
-\end{itemize}
-
-\subsubsection{Adaptación de Scrum para la gestión de la deuda social}
-Si bien Scrum no fue diseñado específicamente para gestionar la deuda social, su estructura y principios ofrecen puntos de extensión naturales para abordarla. Los eventos de Scrum, particularmente la Daily Scrum y la Sprint Retrospective, constituyen espacios donde los impedimentos sociales pueden hacerse visibles. El rol del Scrum Master, centrado en facilitar la efectividad del equipo, se alinea con la necesidad de mediar en dinámicas interpersonales. Y los pilares de transparencia e inspección pueden extenderse para incluir no solo el progreso técnico, sino también la salud relacional del equipo. En el Capítulo~\ref{chap:capitulo3} se presenta en detalle cómo SocialScrum extiende cada uno de estos elementos para incorporar la gestión sistemática de la deuda social.
-
 \subsection{Ciencia del Diseño (Design Science Research)}
 \label{sec:dsr}
 
-La \gls{dsr} es un paradigma de investigación ampliamente reconocido en los sistemas de información y la ingeniería de software, cuyo objetivo central es la creación y evaluación rigurosa de artefactos como modelos, métodos, constructos o instancias, que resuelvan problemas organizacionales identificados \cite{hevner2004designscience}. A diferencia de las ciencias del comportamiento, que buscan describir y explicar fenómenos, la DSR se orienta a \textit{prescribir} soluciones innovadoras, evaluando su utilidad y eficacia mediante procesos iterativos de diseño y validación.
+La investigación de la \gls{dsr} es un paradigma de investigación ampliamente reconocido en los sistemas de información y la ingeniería de software, cuyo objetivo central es la creación y evaluación rigurosa de artefactos como modelos, métodos, constructos o instancias, que resuelvan problemas organizacionales identificados \cite{hevner2004designscience}. A diferencia de las ciencias del comportamiento, que buscan describir y explicar fenómenos, la DSR se orienta a \textit{prescribir} soluciones innovadoras, evaluando su utilidad y eficacia mediante procesos iterativos de diseño y validación.
 
 Peffers \textit{et al.} \cite{peffers2007dsrm} proponen un modelo de proceso ampliamente adoptado que estructura la DSR en seis fases: (1) identificación del problema y motivación, (2) definición de los objetivos de la solución, (3) diseño y desarrollo del artefacto, (4) demostración, (5) evaluación, y (6) comunicación de resultados. Una característica clave de este modelo es que la evaluación del artefacto puede realizarse de múltiples formas desde la evaluación conceptual por expertos hasta la experimentación empírica en contextos reales dependiendo del grado de madurez del artefacto y de las restricciones del entorno de investigación.
 
-Wieringa \cite{wieringa2014dsr} amplía esta perspectiva al distinguir entre la validación \textit{ex ante} (evaluación del diseño antes de su implementación) y la validación \textit{ex post} (evaluación tras la implementación en un contexto real). Esta distinción resulta especialmente relevante para la presente investigación, ya que SocialScrum involucra variables sensibles de salud mental y clima laboral, lo que justifica la realización de una validación conceptual rigurosa como paso previo y necesario antes de una intervención empírica en equipos de desarrollo reales.
+Wieringa \cite{wieringa2014dsr} amplía esta perspectiva al distinguir entre la validación previa a la implementación y la validación posterior a la implementación en un contexto real. Esta distinción resulta especialmente relevante para la presente investigación, ya que SocialScrum involucra variables sensibles de salud mental y clima laboral, lo que justifica la realización de una validación conceptual rigurosa como paso previo y necesario antes de una intervención empírica en equipos de desarrollo reales.
 
 En el contexto de esta tesis, la DSR proporciona el marco metodológico que guía la construcción y evaluación del artefacto SocialScrum. Las fases ejecutadas (identificación del problema mediante RSL, diseño y construcción del modelo, evaluación mediante juicio de expertos y comunicación de resultados) se corresponden con las etapas del proceso de Peffers \textit{et al.} \cite{peffers2007dsrm}, como se detalla en la Sección~\ref{sec:metodo-investigacion} del Capítulo~\ref{chap:capitulo1}.
 
@@ -150,43 +115,52 @@ La búsqueda manual reveló que las frases clave ``social debt'' y ``agile softw
 
 \begingroup
 \scriptsize % Fuente ligeramente reducida
+\setlength{\LTleft}{0pt} % Alinear tabla a la izquierda
+\setlength{\LTright}{0pt} % Permitir que la tabla ocupe espacio a la derecha
+\setlength{\tabcolsep}{4pt} % Ajuste de espacio entre columnas
 \renewcommand{\arraystretch}{1.4} % Mayor espacio entre filas para facilitar la lectura
 
-\begin{longtable}[H]{
-    >{\Centering\hspace{0pt}}p{0.8cm}      % Col 1: No.
-    >{\RaggedRight\hspace{0pt}}p{9.0cm}    % Col 2: Cadena de búsqueda 
-    >{\Centering\hspace{0pt}}p{2.5cm}      % Col 3: Fuente 
-    >{\Centering\hspace{0pt}}p{2.0cm}      % Col 4: Estado 
+\begin{longtable}[H]{|
+    >{\Centering\hspace{0pt}}p{0.8cm}|      % Col 1: No.
+    >{\RaggedRight\hspace{0pt}}p{9.6cm}|    % Col 2: Cadena de búsqueda 
+    >{\Centering\hspace{0pt}}p{2.5cm}|      % Col 3: Fuente 
+    >{\Centering\hspace{0pt}}p{2.0cm}|      % Col 4: Estado 
     }
 
     % --- 1. ENCABEZADO PARA LA PRIMERA PÁGINA ---
     \caption{Cadenas de búsqueda utilizadas en la revisión sistemática} \label{tab:cadenas-busqueda}                                        \\
-    \toprule
+    \hline
     \textbf{No.} & \textbf{Cadena de búsqueda}                                                          & \textbf{Fuente} & \textbf{Estado} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- 2. ENCABEZADO PARA PÁGINAS SIGUIENTES ---
-    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                 \\
-    \toprule
+    \hline
+    \multicolumn{4}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                               \\
+    \hline
     \textbf{No.} & \textbf{Cadena de búsqueda}                                                          & \textbf{Fuente} & \textbf{Estado} \\
-    \midrule
+    \hline
     \endhead
 
     % --- 3. PIE PARA PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                                                                         \\
+    \hline
+    \multicolumn{4}{|r|}{\textit{Continúa en la siguiente página...}}                                                                       \\
+    \hline
     \endfoot
 
     % --- 4. PIE FINAL ---
-    \bottomrule
-    \multicolumn{4}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No)}}                                                     \\
+    \hline
+    \multicolumn{4}{|l|}{\footnotesize \textit{Acrónimos utilizados: Identificador (No)}}                                                   \\
+    \hline
     \endlastfoot
 
     % --- CONTENIDO ---
     1            & ``social debt'' AND ``agile software development''                                   & Google Scholar  & Incluida        \\
+    \hline
     2            & (``Full Text Only'':social debt) AND (``Full Text Only'':agile software development) & IEEE Xplore     & Incluida        \\
+    \hline
     3            & ‘‘social debt’ AND ‘agile software development’’                                     & SpringerLink    & Incluida        \\
+    \hline
     4            & ‘social debt’ AND ‘agile software development’                                       & Science Direct  & Incluida        \\
 \end{longtable}
 \endgroup
@@ -201,13 +175,13 @@ La cadena de búsqueda se aplicó a una ventana de tiempo desde 2013 hasta 2024,
 \setlength{\LTright}{0pt} % Permitir que la tabla ocupe espacio a la derecha
 \setlength{\tabcolsep}{5pt} % Ajuste de espacio entre columnas
 \renewcommand{\arraystretch}{1.4} % Mayor espacio entre filas
-\begin{longtable}[H]{
-    >{\Centering\hspace{0pt}}p{0.8cm}   % Col 1: No.
-    >{\RaggedRight\hspace{0pt}}p{4.8cm} % Col 2: Motor de búsqueda (Aumentado para llenar ancho)
-    >{\Centering\hspace{0pt}}p{1.8cm}   % Col 3: Encontrados
-    >{\Centering\hspace{0pt}}p{1.8cm}   % Col 4: Relevantes
-    >{\Centering\hspace{0pt}}p{2.2cm}   % Col 5: Relevantes repetidos
-    >{\Centering\hspace{0pt}}p{2.5cm}   % Col 6: Primarios seleccionados
+\begin{longtable}[H]{|
+    >{\Centering\hspace{0pt}}p{0.8cm}|   % Col 1: No.
+    >{\RaggedRight\hspace{0pt}}p{4.8cm}| % Col 2: Motor de búsqueda (Aumentado para llenar ancho)
+    >{\Centering\hspace{0pt}}p{1.8cm}|   % Col 3: Encontrados
+    >{\Centering\hspace{0pt}}p{1.8cm}|   % Col 4: Relevantes
+    >{\Centering\hspace{0pt}}p{2.2cm}|   % Col 5: Relevantes repetidos
+    >{\Centering\hspace{0pt}}p{2.5cm}|   % Col 6: Primarios seleccionados
     }
     % --- CÁLCULO DE ANCHOS ---
     % Objetivo: ~16.5 - 17cm (Ancho texto A4 típico con márgenes 2.5cm)
@@ -215,34 +189,40 @@ La cadena de búsqueda se aplicó a una ventana de tiempo desde 2013 hasta 2024,
 
     % Encabezado primera página
     \caption{Resultados por motor de búsqueda en la revisión sistemática} \label{tab:resultados-busqueda-longtable}                                           \\
-    \toprule
+    \hline
     \textbf{No.} & \textbf{Motor de búsqueda} & \textbf{Encontrados} & \textbf{Relevantes} & \textbf{Relevantes repetidos} & \textbf{Primarios seleccionados} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % Encabezado páginas siguientes
-    \multicolumn{6}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                   \\
-    \toprule
+    \hline
+    \multicolumn{6}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                 \\
+    \hline
     \textbf{No.} & \textbf{Motor de búsqueda} & \textbf{Encontrados} & \textbf{Relevantes} & \textbf{Relevantes repetidos} & \textbf{Primarios seleccionados} \\
-    \midrule
+    \hline
     \endhead
 
     % Pie páginas intermedias
-    \midrule
-    \multicolumn{6}{r}{\textit{Continúa en la siguiente página...}}                                                                                           \\
+    \hline
+    \multicolumn{6}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                         \\
+    \hline
     \endfoot
 
     % Pie final
-    \bottomrule
-    \multicolumn{6}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No)}}                                                                       \\
+    \hline
+    \multicolumn{6}{|l|}{\footnotesize \textit{Acrónimos utilizados: Identificador (No)}}                                                                     \\
+    \hline
     \endlastfoot
 
     % CONTENIDO
     1            & Google Scholar             & 130                  & 15                  & 0                             & 8                                \\
+    \hline
     2            & IEEE Xplore                & 28                   & 3                   & 0                             & 0                                \\
+    \hline
     3            & Science Direct             & 5                    & 0                   & 0                             & 0                                \\
+    \hline
     4            & SpringerLink               & 35                   & 2                   & 0                             & 0                                \\
-    \midrule
+    \hline
                  & \textbf{Total}             & \textbf{198}         & \textbf{20}         & \textbf{0}                    & \textbf{8}                       \\
 \end{longtable}
 \endgroup
@@ -252,55 +232,65 @@ En la Tabla \ref{tab:preguntas-investigacion-longtable} se presentan las pregunt
 
 \begingroup
 \scriptsize
+\setlength{\LTleft}{0pt} % Alinear tabla a la izquierda
+\setlength{\LTright}{0pt} % Permitir que la tabla ocupe espacio a la derecha
+\setlength{\tabcolsep}{4pt} % Ajuste de espacio entre columnas
 \renewcommand{\arraystretch}{1.4}
 
-\begin{longtable}[H]{
-    >{\Centering\hspace{0pt}}p{0.7cm}     % Id.
-    >{\RaggedRight\hspace{0pt}}p{7.5cm}   % Pregunta de investigación
-    >{\RaggedRight\hspace{0pt}}p{6.5cm}   % Motivación
+\begin{longtable}[H]{|
+    >{\Centering\hspace{0pt}}p{0.7cm}|     % Id.
+    >{\RaggedRight\hspace{0pt}}p{8.0cm}|   % Pregunta de investigación
+    >{\RaggedRight\hspace{0pt}}p{6.5cm}|   % Motivación
     }
 
     % --- ENCABEZADO PRIMERA PÁGINA ---
     \caption{Preguntas de investigación definidas}
     \label{tab:preguntas-investigacion-longtable}                                                                                                                                                                                                                           \\
-    \toprule
+    \hline
     \textbf{Id.}                                                                                                                                                                                                 & \textbf{Pregunta de investigación} & \textbf{Motivación} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- ENCABEZADO PÁGINAS SIGUIENTES ---
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                 \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                               \\
+    \hline
     \textbf{Id.}                                                                                                                                                                                                 & \textbf{Pregunta de investigación} & \textbf{Motivación} \\
-    \midrule
+    \hline
     \endhead
 
     % --- PIE PÁGINAS INTERMEDIAS ---
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                         \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                       \\
+    \hline
     \endfoot
 
     % --- PIE FINAL ---
-    \bottomrule
-    \multicolumn{3}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (Id), Pregunta de investigación (PI)}}                                                                                                                                                     \\
+    \hline
+    \multicolumn{3}{|l|}{\footnotesize \textit{Acrónimos utilizados: Identificador (Id), Pregunta de investigación (PI)}}                                                                                                                                                   \\
+    \hline
     \endlastfoot
 
     % --- CONTENIDO ---
     PI1                                                                                                                                                                                                          &
     ¿Cuáles son los estudios primarios más citados que han proporcionado según la evidencia aportes importantes e influyentes en el contexto de la gestión de la deuda social en el desarrollo de software ágil? &
     Identificar y evaluar los estudios fundamentales que han tenido un impacto significativo en el campo de la gestión de la deuda social en el desarrollo de software ágil.                                                                                                \\
+    \hline
 
     PI2                                                                                                                                                                                                          &
     ¿Cuál es la distribución de tiempo de publicación de los estudios primarios relevantes con respecto a la deuda social en el desarrollo de software ágil?                                                     &
     Comprender cómo ha evolucionado el interés y el conocimiento sobre la deuda social en el contexto del desarrollo de software ágil a lo largo del tiempo.                                                                                                                \\
+    \hline
 
     PI3                                                                                                                                                                                                          &
     ¿Cuáles son las investigaciones o propuestas desarrolladas cuya idea central sea la gestión de la deuda social en el desarrollo de software ágil hasta la fecha?                                             &
     Identificar y analizar las contribuciones académicas y propuestas prácticas que se han centrado específicamente en la gestión de la deuda social en el desarrollo de software ágil.                                                                                     \\
+    \hline
 
     PI4                                                                                                                                                                                                          &
     ¿Cuáles son los principales desafíos y oportunidades para la investigación futura sobre la deuda social en el desarrollo de software ágil?                                                                   &
     Identificar las barreras y las posibles áreas de crecimiento en el estudio de la deuda social en el desarrollo de software ágil.                                                                                                                                        \\
+    \hline
 
     PI5                                                                                                                                                                                                          &
     ¿Cuáles son las prácticas o enfoques que abordan de manera exitosa la gestión de la deuda social en el desarrollo de software ágil?                                                                          &
@@ -324,52 +314,58 @@ Dressen \textit{et al.} \cite{dreesen2021socialdebt} sugieren una estrategia par
 
 \begingroup
 \scriptsize
+\setlength{\LTleft}{0pt} % Alinear tabla a la izquierda
+\setlength{\LTright}{0pt} % Permitir que la tabla ocupe espacio a la derecha
+\setlength{\tabcolsep}{4pt} % Ajuste de espacio entre columnas
 \renewcommand{\arraystretch}{1.4}
 
-\begin{longtable}{
-    >{\Centering\hspace{0pt}}p{0.7cm}
-    >{\RaggedRight\hspace{0pt}}p{4.0cm}
-    >{\RaggedRight\hspace{0pt}}p{10.0cm}
+\begin{longtable}{|
+    >{\Centering\hspace{0pt}}p{0.7cm}|
+    >{\RaggedRight\hspace{0pt}}p{4.0cm}|
+    >{\RaggedRight\hspace{0pt}}p{10.5cm}|
     }
 
     \caption{Enfoques de mitigación de la deuda social en equipos de desarrollo de software ágil distribuido}
     \label{tab:enfoques_mitigacion}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \\
-    \toprule
+    \hline
     \textbf{No.}                                                                            & \textbf{Enfoque de mitigación} & \textbf{Descripción}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \\
-    \midrule
+    \hline
     \endfirsthead
 
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               \\
+    \hline
     \textbf{No.}                                                                            & \textbf{Enfoque de mitigación} & \textbf{Descripción}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \\
-    \midrule
+    \hline
     \endhead
 
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       \\
+    \hline
     \endfoot
 
-    \bottomrule
-    \multicolumn{3}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     \\
+    \hline
+    \multicolumn{3}{|l|}{\footnotesize \textit{Acrónimos utilizados: Identificador (No)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   \\
+    \hline
     \endlastfoot
 
     1                                                                                       &
     Comunicación honesta y abierta                                                          &
     Es fundamental en equipos de desarrollo de software ágil distribuido para mitigar la deuda social. La comunicación honesta y abierta se define por su franqueza y transparencia, lo que ayuda a construir confianza mutua entre los miembros del equipo. Esta confianza facilita la resolución efectiva de conflictos sociales, ya que los miembros del equipo pueden abordar los problemas directamente. En última instancia, esta comunicación directa contribuye a crear un ambiente de trabajo constructivo y ayuda a reducir la acumulación de deuda social en el equipo.                                                                                                                          \\
 
-    \midrule
+    \hline
 
     2                                                                                       &
     Intensidad de la comunicación relacionada con las tareas                                &
     Se refiere a la naturaleza altamente enfocada y orientada a objetivos de la interacción en el trabajo remoto. Las interacciones y la comunicación no son aleatorias, sino que están determinadas o preparadas de antemano para completar tareas específicas, reduciendo las distracciones. Este enfoque intensificado en la comunicación relacionada con las tareas puede ayudar a mitigar el efecto de los factores que contribuyen a la deuda social en equipos de desarrollo de software ágil distribuido (\gls{asd}).                                                                                                                                                                               \\
 
-    \midrule
+    \hline
 
     3                                                                                       &
     Intensidad de la colaboración relacionada con las tareas con respecto a la colaboración &
     Se refiere a cómo las interacciones durante el trabajo remoto están altamente enfocadas en tareas y objetivos específicos. Esto significa que todas las acciones colaborativas están orientadas a completar la tarea en cuestión, reduciendo las distracciones. Este enfoque intensificado en la colaboración relacionada con las tareas puede tener un efecto tanto en promover como en mitigar la deuda social en equipos de desarrollo de software ágil distribuidos. Por un lado, puede conducir a una comunicación más directa y eficiente, pero por otro, puede resultar en una falta de interacción informal que es importante para la construcción de relaciones y la resolución de conflictos. \\
 
-    \midrule
+    \hline
 
     4                                                                                       &
     Costos iniciales reducidos para iniciar interacciones o comunicaciones                  &
@@ -377,80 +373,86 @@ Dressen \textit{et al.} \cite{dreesen2021socialdebt} sugieren una estrategia par
 \end{longtable}
 \endgroup
 
-Por otra parte, Saeeda \textit{et al.} \cite{saeeda2024multivocal} llevaron a cabo un estudio exhaustivo sobre varios tipos de deuda no técnica, incluyendo la deuda social, explorando sus causas y proponiendo múltiples estrategias para su mitigación. Identifican que las causas de la deuda social derivan de tres factores principales: limitaciones sociales, desafíos organizacionales y dinámicas comunitarias. A partir de estos factores, se delinean ocho estrategias basadas en evidencias de la literatura científica y gris para reducir la deuda social, como se puede visualizar en la Tabla \ref{tab:estrategias_mitigacion_enfoque} las cuales son:
+Por otra parte, Saeeda \textit{et al.} \cite{saeeda2024multivocal} llevaron a cabo un estudio exhaustivo sobre varios tipos de \gls{non-technical-debt}, incluyendo la deuda social, explorando sus causas y proponiendo múltiples estrategias para su mitigación. Identifican que las causas de la deuda social derivan de tres factores principales: limitaciones sociales, desafíos organizacionales y dinámicas comunitarias. A partir de estos factores, se delinean ocho estrategias basadas en evidencias de la literatura científica y gris para reducir la deuda social, como se puede visualizar en la Tabla \ref{tab:estrategias_mitigacion_enfoque} las cuales son:
 
 \begingroup
 \scriptsize
+\setlength{\LTleft}{0pt} % Alinear tabla a la izquierda
+\setlength{\LTright}{0pt} % Permitir que la tabla ocupe espacio a la derecha
+\setlength{\tabcolsep}{4pt} % Ajuste de espacio entre columnas
 \renewcommand{\arraystretch}{1.4}
 
-\begin{longtable}{
-    >{\Centering\hspace{0pt}}p{0.7cm}
-    >{\RaggedRight\hspace{0pt}}p{4.0cm}
-    >{\RaggedRight\hspace{0pt}}p{10.0cm}
+\begin{longtable}{|
+    >{\Centering\hspace{0pt}}p{0.7cm}|
+    >{\RaggedRight\hspace{0pt}}p{4.0cm}|
+    >{\RaggedRight\hspace{0pt}}p{10.5cm}|
     }
 
     \caption{Estrategias de mitigación de la deuda social en equipos de desarrollo de software}
     \label{tab:estrategias_mitigacion_enfoque}                                                                                                                                                                                                                                                                                                                \\
-    \toprule
+    \hline
     \textbf{No.}                                                                & \textbf{Estrategias de mitigación} & \textbf{Descripción}                                                                                                                                                                                                                   \\
-    \midrule
+    \hline
     \endfirsthead
 
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                                   \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                                                                                                                                                                                                 \\
+    \hline
     \textbf{No.}                                                                & \textbf{Estrategias de mitigación} & \textbf{Descripción}                                                                                                                                                                                                                   \\
-    \midrule
+    \hline
     \endhead
 
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                                           \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                                                                                                                                                                                                         \\
+    \hline
     \endfoot
 
-    \bottomrule
-    \multicolumn{3}{l}{\footnotesize \textit{Acrónimos utilizados: Identificador (No)}}                                                                                                                                                                                                                                                                       \\
+    \hline
+    \multicolumn{3}{|l|}{\footnotesize \textit{Acrónimos utilizados: Identificador (No)}}                                                                                                                                                                                                                                                                     \\
+    \hline
     \endlastfoot
 
     1                                                                           &
-    Análisis de redes sociales                                                  &
+    \Gls{sna}                                                                   &
     Emplear el análisis de redes para entender mejor la deuda.                                                                                                                                                                                                                                                                                                \\
 
-    \midrule
+    \hline
 
     2                                                                           &
     Comunicación colaborativa                                                   &
     Promover una comunicación efectiva dentro del equipo.                                                                                                                                                                                                                                                                                                     \\
 
-    \midrule
+    \hline
 
     3                                                                           &
     Gestión de la composición del equipo y mejora de decisiones arquitectónicas &
     Establecer directrices claras para la formación de equipos y la toma de decisiones arquitectónicas.                                                                                                                                                                                                                                                       \\
 
-    \midrule
+    \hline
 
     4                                                                           &
     Entornos de trabajo híbridos                                                &
     Fomentar entornos que combinen modalidades presenciales y remotas.                                                                                                                                                                                                                                                                                        \\
 
-    \midrule
+    \hline
 
     5                                                                           &
     Métricas para la comunicabilidad de la arquitectura del software            &
     Desarrollar y aplicar métricas específicas que faciliten la comprensión arquitectónica.                                                                                                                                                                                                                                                                   \\
 
-    \midrule
+    \hline
 
     6                                                                           &
     Marcos de trabajo para la mitigación de la deuda social                     &
     Implementar marcos como CAFFEA, que combina el desarrollo de software ágil con el desarrollo y manejo continuo de la arquitectura de software, especialmente en empresas grandes con líneas de productos complejos.                                                                                                                                       \\
 
-    \midrule
+    \hline
 
     7                                                                           &
     Tácticas arquitectónicas y frameworks sociotécnicos                         &
     El enfoque DAHLIA, que incluye la popularidad y la conciencia en las decisiones, junto con el marco de calidad sociotécnica.                                                                                                                                                                                                                              \\
 
-    \midrule
+    \hline
 
     8                                                                           &
     Herramientas específicas                                                    &

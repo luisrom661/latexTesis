@@ -5,10 +5,10 @@
     La siguiente simulación constituye un ejercicio de demostración operativa basado en datos proyectados y patrones documentales, \textbf{no} en métricas recolectadas en un entorno productivo real. Los valores numéricos presentados (\textit{Health Score}, velocidad del \textit{Sprint}, \textit{Social Story Points}) son cifras ilustrativas diseñadas para mostrar la mecánica de integración de los componentes de SocialScrum. Este anexo no debe interpretarse como evidencia empírica de la efectividad del modelo, sino como una herramienta heurística que sienta las bases paramétricas para que futuras investigaciones puedan replicar el ensayo en contextos organizacionales reales mediante ciclos de Investigación-Acción.
 \end{tcolorbox}
 
-Este anexo presenta una simulación proyectada que ilustra la aplicación de SocialScrum durante tres \textit{Sprints} consecutivos. El escenario se basa en patrones observados en equipos reales de desarrollo, aunque los nombres, detalles específicos y métricas son ficticios. El propósito es ilustrar cómo los componentes del marco ---eventos adaptados, artefactos sociales, sistema de medición y rol del Social Guide--- se integrarían en la práctica diaria de un equipo.
+Este anexo presenta una simulación proyectada que ilustra la aplicación de \gls{socialscrum} durante tres \textit{Sprints} consecutivos. El escenario se basa en patrones observados en equipos reales de desarrollo, aunque los nombres, detalles específicos y métricas son ficticios. El propósito es ilustrar cómo los componentes del marco ---eventos adaptados, artefactos sociales, sistema de medición y rol del \gls{social-guide}--- se integrarían en la práctica diaria de un equipo.
 
 \section{Contexto del equipo}
-El equipo Phoenix es un equipo Scrum de 7 personas que desarrolla una plataforma SaaS de gestión de inventarios. Tiene 18 meses de experiencia con Scrum estándar, pero ha enfrentado problemas de comunicación y colaboración que han afectado su productividad y moral. En la Tabla~\ref{tab:perfil-phoenix} se presenta su perfil detallado.
+El equipo Phoenix es un equipo \gls{scrum} de 7 personas que desarrolla una plataforma SaaS de gestión de inventarios. Tiene 18 meses de experiencia con Scrum estándar, pero ha enfrentado problemas de comunicación y colaboración que han afectado su productividad y moral. En la Tabla~\ref{tab:perfil-phoenix} se presenta su perfil detallado.
 
 \begingroup
 \scriptsize
@@ -16,41 +16,49 @@ El equipo Phoenix es un equipo Scrum de 7 personas que desarrolla una plataforma
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{5.2cm}   % Col 1: Característica
-    >{\RaggedRight\hspace{0pt}}p{10.0cm}  % Col 2: Descripción
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{5.2cm}|   % Col 1: Característica
+    >{\RaggedRight\hspace{0pt}}p{10.3cm}|  % Col 2: Descripción
     }
 
     % --- ENCABEZADO PRIMERA PÁGINA ---
     \caption{Perfil del equipo Phoenix}
     \label{tab:perfil-phoenix}                                                                              \\
-    \toprule
+    \hline
     \textbf{Característica}      & \textbf{Descripción}                                                     \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                 \\
-    \toprule
+    \hline
+    \multicolumn{2}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                               \\
+    \hline
     \textbf{Característica}      & \textbf{Descripción}                                                     \\
-    \midrule
+    \hline
     \endhead
 
     % --- PIE INTERMEDIO ---
-    \midrule
-    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                         \\
+    \hline
+    \multicolumn{2}{|r|}{\textit{Continúa en la siguiente página...}}                                       \\
+    \hline
     \endfoot
 
     % --- PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     Nombre del equipo            & Equipo Phoenix                                                           \\
+    \hline
     Tamaño                       & 7 personas (1 Product Owner, 1 Scrum Master, 5 desarrolladores)          \\
+    \hline
     Producto                     & Plataforma SaaS de gestión de inventarios                                \\
+    \hline
     Modalidad                    & Híbrida (3 días en oficina, 2 días remotos)                              \\
+    \hline
     Duración del \textit{Sprint} & 2 semanas                                                                \\
+    \hline
     Madurez en Scrum             & 18 meses practicando Scrum estándar                                      \\
+    \hline
     Social Guide                 & Laura (Scrum Master con capacitación adicional; rol compartido al 50~\%) \\
 \end{longtable}
 \endgroup
@@ -78,42 +86,48 @@ Laura realizó el diagnóstico inicial usando las herramientas de SocialScrum co
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{0.18\textwidth}  % Dimensión
-    >{\Centering\hspace{0pt}}p{0.15\textwidth}   % Puntuación
-    >{\RaggedRight\hspace{0pt}}p{0.60\textwidth} % Observación
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{0.18\textwidth}|  % Dimensión
+    >{\Centering\hspace{0pt}}p{0.15\textwidth}|   % Puntuación
+    >{\RaggedRight\hspace{0pt}}p{0.62\textwidth}| % Observación
     }
 
     % --- ENCABEZADO PRIMERA PÁGINA ---
-    \caption{\textit{Health Score} inicial del equipo Phoenix}
+    \caption{\gls{health-score} inicial del equipo Phoenix}
     \label{tab:health-score-inicial}                                                                                          \\
-    \toprule
+    \hline
     \textbf{Dimensión}             & \textbf{Puntuación} & \textbf{Observación}                                               \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                   \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                 \\
+    \hline
     \textbf{Dimensión}             & \textbf{Puntuación} & \textbf{Observación}                                               \\
-    \midrule
+    \hline
     \endhead
 
     % --- PIE INTERMEDIO ---
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                           \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                                         \\
+    \hline
     \endfoot
 
     % --- PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     Apertura                       & 4,8                 & Los problemas se ocultan hasta el último momento                   \\
+    \hline
     Compromiso                     & 6,2                 & Aceptable, pero es frecuente la actitud de ``ese no es mi código'' \\
+    \hline
     Respeto                        & 5,1                 & Tensión visible entre Carlos y Miguel                              \\
+    \hline
     Foco                           & 5,5                 & Interrupciones frecuentes y cambio constante de contexto           \\
+    \hline
     Coraje                         & 4,2                 & Nadie menciona explícitamente el conflicto entre Carlos y Miguel   \\
-    \midrule
+    \hline
     \textbf{\textit{Health Score}} & \textbf{5,2}        & \textbf{Zona ``en riesgo''}                                        \\
 \end{longtable}
 \endgroup
@@ -135,7 +149,7 @@ Durante la \textit{Planning}, Laura facilitó la revisión de riesgos sociales:
     \textbf{Laura (Social Guide)}:
     \begin{quote}
         ``Antes de estimar, revisemos el contexto social.
-        El \textit{Health Score} es 5,2 y tenemos tres \gls{community-smells} activos.
+        El \textit{Health Score} es 5,2 y tenemos tres olores comunitarios activos.
         ¿Ven algún riesgo para este \textit{Sprint}?''
     \end{quote}
 
@@ -182,38 +196,42 @@ En este nuevo evento se implementó la pregunta social diaria, donde los miembro
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\Centering\hspace{0pt}}p{1.6cm}     % Día
-    >{\RaggedRight\hspace{0pt}}p{4.6cm}   % Pregunta
-    >{\RaggedRight\hspace{0pt}}p{8.9cm}   % Señal detectada
+\begin{longtable}{|
+    >{\Centering\hspace{0pt}}p{1.6cm}|     % Día
+    >{\RaggedRight\hspace{0pt}}p{4.6cm}|   % Pregunta
+    >{\RaggedRight\hspace{0pt}}p{8.9cm}|   % Señal detectada
     }
 
     % --- ENCABEZADO PRIMERA PÁGINA ---
     \caption{Señales detectadas en los \textit{Social Daily Standups} – Sprint 1}
     \label{tab:daily-sprint1}                                                     \\
-    \toprule
+    \hline
     \textbf{Día} & \textbf{Pregunta} & \textbf{Señal detectada}                   \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}       \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}     \\
+    \hline
     \textbf{Día} & \textbf{Pregunta} & \textbf{Señal detectada}                   \\
-    \midrule
+    \hline
     \endhead
 
     % --- PIE INTERMEDIO ---
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}               \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}             \\
+    \hline
     \endfoot
 
     % --- PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     3            & ¿Cómo te sientes? & Miguel: ``Tenso'' (post-sesión con Carlos) \\
+    \hline
     5            & ¿Necesitas algo?  & Ana: ``Ayuda con la documentación''        \\
+    \hline
     8            & ¿Quién te ayudó?  & Carlos: ``Miguel me explicó el módulo''    \\
 \end{longtable}
 \endgroup
@@ -278,40 +296,45 @@ En la Tabla~\ref{tab:resultados-sprint1} se presentan los resultados cuantitativ
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{7.8cm}   % Métrica
-    >{\Centering\hspace{0pt}}p{2.2cm}     % Antes
-    >{\Centering\hspace{0pt}}p{2.6cm}     % Sprint 1
-    >{\Centering\hspace{0pt}}p{2.2cm}     % Cambio
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{7.8cm}|   % Métrica
+    >{\Centering\hspace{0pt}}p{2.2cm}|     % Antes
+    >{\Centering\hspace{0pt}}p{2.6cm}|     % Sprint 1
+    >{\Centering\hspace{0pt}}p{2.2cm}|     % Cambio
     }
 
     % --- ENCABEZADO PRIMERA PÁGINA ---
     \caption{Resultados del Sprint 1}
     \label{tab:resultados-sprint1}                                                        \\
-    \toprule
+    \hline
     \textbf{Métrica}               & \textbf{Antes} & \textbf{Sprint 1} & \textbf{Cambio} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}               \\
-    \toprule
+    \hline
+    \multicolumn{4}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}             \\
+    \hline
     \textbf{Métrica}               & \textbf{Antes} & \textbf{Sprint 1} & \textbf{Cambio} \\
-    \midrule
+    \hline
     \endhead
 
     % --- PIE INTERMEDIO ---
-    \midrule
-    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                       \\
+    \hline
+    \multicolumn{4}{|r|}{\textit{Continúa en la siguiente página...}}                     \\
+    \hline
     \endfoot
 
     % --- PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     \textit{Health Score}          & 5,2            & 5,8               & +0,6            \\
+    \hline
     Velocidad (SP completados)     & 38             & 42                & +10~\%          \\
+    \hline
     \textit{Smells} activos        & 3              & 3                 & =               \\
+    \hline
     \textit{Smells} en observación & 0              & 1                 & +1              \\
 \end{longtable}
 \endgroup
@@ -342,38 +365,42 @@ Ana facilitó 3 sesiones de 90 minutos cada una donde se habló sobre arquitectu
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\Centering\hspace{0pt}}p{1.8cm}     % Sesión
-    >{\RaggedRight\hspace{0pt}}p{9.6cm}   % Tema
-    >{\RaggedRight\hspace{0pt}}p{3.8cm}   % Participantes
+\begin{longtable}{|
+    >{\Centering\hspace{0pt}}p{1.8cm}|     % Sesión
+    >{\RaggedRight\hspace{0pt}}p{9.6cm}|   % Tema
+    >{\RaggedRight\hspace{0pt}}p{3.8cm}|   % Participantes
     }
 
     % --- ENCABEZADO PRIMERA PÁGINA ---
     \caption{Sesiones de transferencia de conocimiento}
     \label{tab:transferencia-conocimiento}                                                                                                                      \\
-    \toprule
+    \hline
     \textbf{Sesión} & \textbf{Tema}                                                                                                    & \textbf{Participantes} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-    \multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                     \\
-    \toprule
+    \hline
+    \multicolumn{3}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                   \\
+    \hline
     \textbf{Sesión} & \textbf{Tema}                                                                                                    & \textbf{Participantes} \\
-    \midrule
+    \hline
     \endhead
 
     % --- PIE INTERMEDIO ---
-    \midrule
-    \multicolumn{3}{r}{\textit{Continúa en la siguiente página...}}                                                                                             \\
+    \hline
+    \multicolumn{3}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                           \\
+    \hline
     \endfoot
 
     % --- PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     1               & Arquitectura del módulo de inventarios                                                                           & Todo el equipo         \\
+    \hline
     2               & Patrones de integración con ERP (\textit{Enterprise Resource Planning}, Planificación de Recursos Empresariales) & Carlos, Pedro          \\
+    \hline
     3               & Depuración (\textit{debugging}) de casos críticos                                                                & Miguel, Sara           \\
 \end{longtable}
 \endgroup
@@ -419,40 +446,45 @@ En la Tabla~\ref{tab:resultados-sprint2} se presentan los resultados cuantitativ
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{7.8cm}   % Métrica
-    >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 1
-    >{\Centering\hspace{0pt}}p{2.6cm}     % Sprint 2
-    >{\Centering\hspace{0pt}}p{2.4cm}     % Cambio
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{7.8cm}|   % Métrica
+    >{\Centering\hspace{0pt}}p{2.2cm}|     % Sprint 1
+    >{\Centering\hspace{0pt}}p{2.6cm}|     % Sprint 2
+    >{\Centering\hspace{0pt}}p{2.4cm}|     % Cambio
     }
 
     % --- ENCABEZADO PRIMERA PÁGINA ---
     \caption{Resultados del Sprint 2}
     \label{tab:resultados-sprint2}                                                               \\
-    \toprule
+    \hline
     \textbf{Métrica}          & \textbf{Sprint 1} & \textbf{Sprint 2}          & \textbf{Cambio} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                      \\
-    \toprule
+    \hline
+    \multicolumn{4}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                    \\
+    \hline
     \textbf{Métrica}          & \textbf{Sprint 1} & \textbf{Sprint 2}          & \textbf{Cambio} \\
-    \midrule
+    \hline
     \endhead
 
     % --- PIE INTERMEDIO ---
-    \midrule
-    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                              \\
+    \hline
+    \multicolumn{4}{|r|}{\textit{Continúa en la siguiente página...}}                            \\
+    \hline
     \endfoot
 
     % --- PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     \textit{Health Score}     & 5,8               & 6,4                        & +0,6            \\
+    \hline
     Velocidad                 & 42                & 45                         & +7~\%           \\
+    \hline
     \textit{Smells} activos   & 3                 & 2                          & -1              \\
+    \hline
     \textit{Smells} mitigados & 0                 & 1 (\textit{Radio Silence}) & +1              \\
 \end{longtable}
 \endgroup
@@ -521,40 +553,45 @@ En la Tabla~\ref{tab:resultados-sprint3} se presentan los resultados cuantitativ
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{7.8cm}   % Métrica
-    >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 2
-    >{\Centering\hspace{0pt}}p{2.6cm}     % Sprint 3
-    >{\Centering\hspace{0pt}}p{2.4cm}     % Cambio
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{7.8cm}|   % Métrica
+    >{\Centering\hspace{0pt}}p{2.2cm}|     % Sprint 2
+    >{\Centering\hspace{0pt}}p{2.6cm}|     % Sprint 3
+    >{\Centering\hspace{0pt}}p{2.4cm}|     % Cambio
     }
 
     % --- ENCABEZADO PRIMERA PÁGINA ---
     \caption{Resultados del Sprint 3}
     \label{tab:resultados-sprint3}                                                      \\
-    \toprule
+    \hline
     \textbf{Métrica}          & \textbf{Sprint 2} & \textbf{Sprint 3} & \textbf{Cambio} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-    \multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}             \\
-    \toprule
+    \hline
+    \multicolumn{4}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}           \\
+    \hline
     \textbf{Métrica}          & \textbf{Sprint 2} & \textbf{Sprint 3} & \textbf{Cambio} \\
-    \midrule
+    \hline
     \endhead
 
     % --- PIE INTERMEDIO ---
-    \midrule
-    \multicolumn{4}{r}{\textit{Continúa en la siguiente página...}}                     \\
+    \hline
+    \multicolumn{4}{|r|}{\textit{Continúa en la siguiente página...}}                   \\
+    \hline
     \endfoot
 
     % --- PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     \textit{Health Score}     & 6,4               & 7,1               & +0,7            \\
+    \hline
     Velocidad                 & 45                & 48                & +6~\%           \\
+    \hline
     \textit{Smells} activos   & 2                 & 1                 & -1              \\
+    \hline
     \textit{Smells} mitigados & 1                 & 2                 & +1              \\
 \end{longtable}
 \endgroup
@@ -570,41 +607,46 @@ Los resultados presentados son un resumen de la evolución del equipo Phoenix du
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{6.0cm}   % Métrica
-    >{\Centering\hspace{0pt}}p{2.0cm}     % Inicial
-    >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 1
-    >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 2
-    >{\Centering\hspace{0pt}}p{2.2cm}     % Sprint 3
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{6.0cm}|   % Métrica
+    >{\Centering\hspace{0pt}}p{2.0cm}|     % Inicial
+    >{\Centering\hspace{0pt}}p{2.2cm}|     % Sprint 1
+    >{\Centering\hspace{0pt}}p{2.2cm}|     % Sprint 2
+    >{\Centering\hspace{0pt}}p{2.2cm}|     % Sprint 3
     }
 
     % --- ENCABEZADO PRIMERA PÁGINA ---
     \caption{Evolución del equipo Phoenix en tres Sprints}
     \label{tab:evolucion-phoenix}                                                                          \\
-    \toprule
+    \hline
     \textbf{Métrica}        & \textbf{Inicial} & \textbf{Sprint 1} & \textbf{Sprint 2} & \textbf{Sprint 3} \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-    \multicolumn{5}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                \\
-    \toprule
+    \hline
+    \multicolumn{5}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                              \\
+    \hline
     \textbf{Métrica}        & \textbf{Inicial} & \textbf{Sprint 1} & \textbf{Sprint 2} & \textbf{Sprint 3} \\
-    \midrule
+    \hline
     \endhead
 
     % --- PIE INTERMEDIO ---
-    \midrule
-    \multicolumn{5}{r}{\textit{Continúa en la siguiente página...}}                                        \\
+    \hline
+    \multicolumn{5}{|r|}{\textit{Continúa en la siguiente página...}}                                      \\
+    \hline
     \endfoot
 
     % --- PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     \textit{Health Score}   & 5,2              & 5,8               & 6,4               & 7,1               \\
+    \hline
     Velocidad (SP)          & 38               & 42                & 45                & 48                \\
+    \hline
     \textit{Smells} activos & 3                & 3                 & 2                 & 1                 \\
+    \hline
     Capacidad social (~\%)  & 0~\%             & 16~\%             & 20~\%             & 12~\%             \\
 \end{longtable}
 \endgroup
@@ -687,39 +729,45 @@ En la Tabla~\ref{tab:recomendaciones-phoenix} se resumen las recomendaciones pr�
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
 
-\begin{longtable}{
-    >{\RaggedRight\hspace{0pt}}p{5.5cm}   % Recomendación
-    >{\RaggedRight\hspace{0pt}}p{10.0cm}  % Justificación
+\begin{longtable}{|
+    >{\RaggedRight\hspace{0pt}}p{5.5cm}|   % Recomendación
+    >{\RaggedRight\hspace{0pt}}p{10.0cm}|  % Justificación
     }
 
     % --- ENCABEZADO PRIMERA PÁGINA ---
     \caption{Recomendaciones basadas en la simulación del equipo Phoenix}
     \label{tab:recomendaciones-phoenix}                                                                                                                                           \\
-    \toprule
+    \hline
     \textbf{Recomendación}                      & \textbf{Justificación}                                                                                                          \\
-    \midrule
+    \hline
     \endfirsthead
 
     % --- ENCABEZADO SIGUIENTES PÁGINAS ---
-    \multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                       \\
-    \toprule
+    \hline
+    \multicolumn{2}{|c|}{{\bfseries \tablename\ \thetable{} -- Continuación}}                                                                                                     \\
+    \hline
     \textbf{Recomendación}                      & \textbf{Justificación}                                                                                                          \\
-    \midrule
+    \hline
     \endhead
 
     % --- PIE INTERMEDIO ---
-    \midrule
-    \multicolumn{2}{r}{\textit{Continúa en la siguiente página...}}                                                                                                               \\
+    \hline
+    \multicolumn{2}{|r|}{\textit{Continúa en la siguiente página...}}                                                                                                             \\
+    \hline
     \endfoot
 
     % --- PIE FINAL ---
-    \bottomrule
+    \hline
     \endlastfoot
 
     Empezar con 15--20~\% de capacidad social   & Permite intervenciones significativas sin colapsar la velocidad. Reducir al 10~\% una vez estabilizado el equipo.               \\
+    \hline
     Priorizar conflictos activos                & Son los factores que más bloquean el trabajo. Resolverlos temprano libera capacidad para acciones preventivas.                  \\
+    \hline
     Medir \textit{Health Score} semanalmente    & Permite detectar el deterioro antes de que se convierta en crisis. La medición mensual es insuficiente en equipos en riesgo.    \\
+    \hline
     Involucrar al PO desde el \textit{Sprint} 0 & La resistencia inicial es predecible. La educación temprana facilita entender la correlación entre la salud y la productividad. \\
+    \hline
     Documentar intervenciones                   & Permite aprender qué prácticas funcionan para el equipo específico y justificar inversiones futuras.                            \\
 \end{longtable}
 \endgroup
